@@ -1,0 +1,627 @@
+openapi: 3.0.1
+info:
+  title: Systems Administration1
+  description: sd.Description
+  version: 10.0.0
+paths:
+  /SystemsAdministration/{systemsadministrationId}/Capture:
+    put:
+      tags:
+      - CR - ITSystemAdministrativePlan
+      summary: CaCR Capture IT System Administrative Plan activity or event related information
+      description: CaCR Capture IT System Administrative Plan activity or event related information
+      parameters:
+      - $ref: '#/components/parameters/SystemsAdministrationID'
+      requestBody:
+        $ref: '#/components/requestBodies/ITSystemAdministrativePlan'
+      responses:
+        200:
+          description: Success
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ITSystemAdministrativePlan'
+  /SystemsAdministration/{systemsadministrationId}/Control:
+    put:
+      tags:
+      - CR - ITSystemAdministrativePlan
+      summary: CoCR Control the processing of IT System Administrative Plan
+      description: CoCR Control the processing of IT System Administrative Plan
+      parameters:
+      - $ref: '#/components/parameters/SystemsAdministrationID'
+      requestBody:
+        $ref: '#/components/requestBodies/ITSystemAdministrativePlan'
+      responses:
+        200:
+          description: Success
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ITSystemAdministrativePlan'
+  /SystemsAdministration/{systemsadministrationId}/CR ITSystem Administrative Plan Instance Record:
+    f14d4a5d-2b02-eb11-82be-0632752cdf09:
+      tags:
+      - CR - etc.aspectsofITSystemAdministrativePlanprocessing
+      summary: EcCR Accept
+      description: EcCR Accept
+      parameters:
+      - $ref: '#/components/parameters/SystemsAdministrationID'
+      responses:
+        200:
+          description: Success
+          content:
+            application/json:
+              schema:
+                type: boolean
+                example: true
+  /SystemsAdministration/{systemsadministrationId}/Grant:
+    put:
+      tags:
+      - CR - ITSystemAdministrativePlan
+      summary: GrCR Obtain permission to act in relation to IT System Administrative Plan
+      description: GrCR Obtain permission to act in relation to IT System Administrative Plan
+      parameters:
+      - $ref: '#/components/parameters/SystemsAdministrationID'
+      requestBody:
+        $ref: '#/components/requestBodies/ITSystemAdministrativePlan'
+      responses:
+        200:
+          description: Success
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ITSystemAdministrativePlan'
+  /SystemsAdministration/Initiate:
+    post:
+      tags:
+      - CR - ITSystemAdministrativePlan
+      summary: InCR Instantiate a new IT System Administrative Plan
+      description: InCR Instantiate a new IT System Administrative Plan
+      parameters: []
+      requestBody:
+        $ref: '#/components/requestBodies/ITSystemAdministrativePlan'
+      responses:
+        200:
+          description: Success
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ITSystemAdministrativePlan'
+  /SystemsAdministration/{systemsadministrationId}/Retrieve:
+    get:
+      tags:
+      - CR - ITSystemAdministrativePlan
+      summary: ReCR Retrieve details about any aspect of IT System Administrative Plan
+      description: ReCR Retrieve details about any aspect of IT System Administrative Plan
+      parameters:
+      - $ref: '#/components/parameters/SystemsAdministrationID'
+      responses:
+        200:
+          description: Success
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ITSystemAdministrativePlan'
+  /SystemsAdministration/{systemsadministrationId}/Request:
+    put:
+      tags:
+      - CR - ITSystemAdministrativePlan
+      summary: RqCR Request manual intervention or a decision with respect to IT System Administrative Plan
+      description: RqCR Request manual intervention or a decision with respect to IT System Administrative Plan
+      parameters:
+      - $ref: '#/components/parameters/SystemsAdministrationID'
+      requestBody:
+        $ref: '#/components/requestBodies/ITSystemAdministrativePlan'
+      responses:
+        200:
+          description: Success
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ITSystemAdministrativePlan'
+  /SystemsAdministration/{systemsadministrationId}/Update:
+    put:
+      tags:
+      - CR - ITSystemAdministrativePlan
+      summary: UpCR Update details relating to IT System Administrative Plan
+      description: UpCR Update details relating to IT System Administrative Plan
+      parameters:
+      - $ref: '#/components/parameters/SystemsAdministrationID'
+      requestBody:
+        $ref: '#/components/requestBodies/ITSystemAdministrativePlan'
+      responses:
+        200:
+          description: Success
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ITSystemAdministrativePlan'
+  /SystemsAdministration/{systemsadministrationId}/Assurance/{assuranceId}/Capture:
+    put:
+      tags:
+      - BQ - Assurance
+      summary: CaBQ Capture Assurance activity or event related information
+      description: CaBQ Capture Assurance activity or event related information
+      parameters:
+      - $ref: '#/components/parameters/SystemsAdministrationID'
+      - $ref: '#/components/parameters/AssuranceID'
+      requestBody:
+        $ref: '#/components/requestBodies/Assurance'
+      responses:
+        200:
+          description: Success
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Assurance'
+  /SystemsAdministration/{systemsadministrationId}/CapacityPlanningandResilience/{capacityplanningandresilienceId}/Capture:
+    put:
+      tags:
+      - BQ - CapacityPlanningandResilience
+      summary: CaBQ Capture Capacity Planning and Resilience activity or event related information
+      description: CaBQ Capture Capacity Planning and Resilience activity or event related information
+      parameters:
+      - $ref: '#/components/parameters/SystemsAdministrationID'
+      - $ref: '#/components/parameters/CapacityPlanningandResilienceID'
+      requestBody:
+        $ref: '#/components/requestBodies/CapacityPlanningandResilience'
+      responses:
+        200:
+          description: Success
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/CapacityPlanningandResilience'
+  /SystemsAdministration/{systemsadministrationId}/Configuration/{configurationId}/Capture:
+    put:
+      tags:
+      - BQ - Configuration
+      summary: CaBQ Capture Configuration activity or event related information
+      description: CaBQ Capture Configuration activity or event related information
+      parameters:
+      - $ref: '#/components/parameters/SystemsAdministrationID'
+      - $ref: '#/components/parameters/ConfigurationID'
+      requestBody:
+        $ref: '#/components/requestBodies/Configuration'
+      responses:
+        200:
+          description: Success
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Configuration'
+  /SystemsAdministration/{systemsadministrationId}/Inventory/{inventoryId}/Capture:
+    put:
+      tags:
+      - BQ - Inventory
+      summary: CaBQ Capture Inventory activity or event related information
+      description: CaBQ Capture Inventory activity or event related information
+      parameters:
+      - $ref: '#/components/parameters/SystemsAdministrationID'
+      - $ref: '#/components/parameters/InventoryID'
+      requestBody:
+        $ref: '#/components/requestBodies/Inventory'
+      responses:
+        200:
+          description: Success
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Inventory'
+  /SystemsAdministration/{systemsadministrationId}/Assurance/{assuranceId}/Retrieve:
+    get:
+      tags:
+      - BQ - Assurance
+      summary: ReBQ Retrieve details about any aspect of Assurance
+      description: ReBQ Retrieve details about any aspect of Assurance
+      parameters:
+      - $ref: '#/components/parameters/SystemsAdministrationID'
+      - $ref: '#/components/parameters/AssuranceID'
+      responses:
+        200:
+          description: Success
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Assurance'
+  /SystemsAdministration/{systemsadministrationId}/CapacityPlanningandResilience/{capacityplanningandresilienceId}/Retrieve:
+    get:
+      tags:
+      - BQ - CapacityPlanningandResilience
+      summary: ReBQ Retrieve details about any aspect of Capacity Planning and Resilience
+      description: ReBQ Retrieve details about any aspect of Capacity Planning and Resilience
+      parameters:
+      - $ref: '#/components/parameters/SystemsAdministrationID'
+      - $ref: '#/components/parameters/CapacityPlanningandResilienceID'
+      responses:
+        200:
+          description: Success
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/CapacityPlanningandResilience'
+  /SystemsAdministration/{systemsadministrationId}/Configuration/{configurationId}/Retrieve:
+    get:
+      tags:
+      - BQ - Configuration
+      summary: ReBQ Retrieve details about any aspect of Configuration
+      description: ReBQ Retrieve details about any aspect of Configuration
+      parameters:
+      - $ref: '#/components/parameters/SystemsAdministrationID'
+      - $ref: '#/components/parameters/ConfigurationID'
+      responses:
+        200:
+          description: Success
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Configuration'
+  /SystemsAdministration/{systemsadministrationId}/Inventory/{inventoryId}/Retrieve:
+    get:
+      tags:
+      - BQ - Inventory
+      summary: ReBQ Retrieve details about any aspect of Inventory
+      description: ReBQ Retrieve details about any aspect of Inventory
+      parameters:
+      - $ref: '#/components/parameters/SystemsAdministrationID'
+      - $ref: '#/components/parameters/InventoryID'
+      responses:
+        200:
+          description: Success
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Inventory'
+  /SystemsAdministration/{systemsadministrationId}/Assurance/{assuranceId}/Request:
+    put:
+      tags:
+      - BQ - Assurance
+      summary: RqBQ Request manual intervention or a decision with respect to Assurance
+      description: RqBQ Request manual intervention or a decision with respect to Assurance
+      parameters:
+      - $ref: '#/components/parameters/SystemsAdministrationID'
+      - $ref: '#/components/parameters/AssuranceID'
+      requestBody:
+        $ref: '#/components/requestBodies/Assurance'
+      responses:
+        200:
+          description: Success
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Assurance'
+  /SystemsAdministration/{systemsadministrationId}/CapacityPlanningandResilience/{capacityplanningandresilienceId}/Request:
+    put:
+      tags:
+      - BQ - CapacityPlanningandResilience
+      summary: RqBQ Request manual intervention or a decision with respect to Capacity Planning and Resilience
+      description: RqBQ Request manual intervention or a decision with respect to Capacity Planning and Resilience
+      parameters:
+      - $ref: '#/components/parameters/SystemsAdministrationID'
+      - $ref: '#/components/parameters/CapacityPlanningandResilienceID'
+      requestBody:
+        $ref: '#/components/requestBodies/CapacityPlanningandResilience'
+      responses:
+        200:
+          description: Success
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/CapacityPlanningandResilience'
+  /SystemsAdministration/{systemsadministrationId}/Configuration/{configurationId}/Request:
+    put:
+      tags:
+      - BQ - Configuration
+      summary: RqBQ Request manual intervention or a decision with respect to Configuration
+      description: RqBQ Request manual intervention or a decision with respect to Configuration
+      parameters:
+      - $ref: '#/components/parameters/SystemsAdministrationID'
+      - $ref: '#/components/parameters/ConfigurationID'
+      requestBody:
+        $ref: '#/components/requestBodies/Configuration'
+      responses:
+        200:
+          description: Success
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Configuration'
+  /SystemsAdministration/{systemsadministrationId}/Inventory/{inventoryId}/Request:
+    put:
+      tags:
+      - BQ - Inventory
+      summary: RqBQ Request manual intervention or a decision with respect to Inventory
+      description: RqBQ Request manual intervention or a decision with respect to Inventory
+      parameters:
+      - $ref: '#/components/parameters/SystemsAdministrationID'
+      - $ref: '#/components/parameters/InventoryID'
+      requestBody:
+        $ref: '#/components/requestBodies/Inventory'
+      responses:
+        200:
+          description: Success
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Inventory'
+  /SystemsAdministration/{systemsadministrationId}/Assurance/{assuranceId}/Update:
+    put:
+      tags:
+      - BQ - Assurance
+      summary: UpBQ Update details relating to Assurance
+      description: UpBQ Update details relating to Assurance
+      parameters:
+      - $ref: '#/components/parameters/SystemsAdministrationID'
+      - $ref: '#/components/parameters/AssuranceID'
+      requestBody:
+        $ref: '#/components/requestBodies/Assurance'
+      responses:
+        200:
+          description: Success
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Assurance'
+  /SystemsAdministration/{systemsadministrationId}/CapacityPlanningandResilience/{capacityplanningandresilienceId}/Update:
+    put:
+      tags:
+      - BQ - CapacityPlanningandResilience
+      summary: UpBQ Update details relating to Capacity Planning and Resilience
+      description: UpBQ Update details relating to Capacity Planning and Resilience
+      parameters:
+      - $ref: '#/components/parameters/SystemsAdministrationID'
+      - $ref: '#/components/parameters/CapacityPlanningandResilienceID'
+      requestBody:
+        $ref: '#/components/requestBodies/CapacityPlanningandResilience'
+      responses:
+        200:
+          description: Success
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/CapacityPlanningandResilience'
+  /SystemsAdministration/{systemsadministrationId}/Configuration/{configurationId}/Update:
+    put:
+      tags:
+      - BQ - Configuration
+      summary: UpBQ Update details relating to Configuration
+      description: UpBQ Update details relating to Configuration
+      parameters:
+      - $ref: '#/components/parameters/SystemsAdministrationID'
+      - $ref: '#/components/parameters/ConfigurationID'
+      requestBody:
+        $ref: '#/components/requestBodies/Configuration'
+      responses:
+        200:
+          description: Success
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Configuration'
+  /SystemsAdministration/{systemsadministrationId}/Inventory/{inventoryId}/Update:
+    put:
+      tags:
+      - BQ - Inventory
+      summary: UpBQ Update details relating to Inventory
+      description: UpBQ Update details relating to Inventory
+      parameters:
+      - $ref: '#/components/parameters/SystemsAdministrationID'
+      - $ref: '#/components/parameters/InventoryID'
+      requestBody:
+        $ref: '#/components/requestBodies/Inventory'
+      responses:
+        200:
+          description: Success
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Inventory'
+components:
+  schemas:
+    ITSystemAdministrativePlan:
+      type: object
+      properties:
+        Handleandassignthedaytodayactivities:
+          type: object
+        ITSystemAdministrativePlanBudgetType:
+          type: object
+        ITSystemAdministrativePlanBudget:
+          type: object
+        ITSystemAdministrativePlanAssignment:
+          type: object
+        ITSystemAdministrativePlanPlan:
+          type: object
+        ITSystemAdministrativePlanReference:
+          type: object
+    Inventory:
+      type: object
+      properties:
+        Handleandassignthedaytodayactivities:
+          type: object
+        InventoryPreconditions:
+          type: object
+        InventoryBusinessUnit/EmployeeReference:
+          type: object
+        InventoryWorkSchedule:
+          type: object
+        BusinessService:
+          type: object
+        InventoryPostconditions:
+          type: object
+        InventoryServiceType:
+          type: object
+        InventoryServiceDescription:
+          type: object
+        InventoryServiceInputsandOuputs:
+          type: object
+        InventoryServiceWorkProduct:
+          type: object
+        InventoryServiceName:
+          type: object
+    Assurance:
+      type: object
+      properties:
+        Handleandassignthedaytodayactivities:
+          type: object
+        AssurancePreconditions:
+          type: object
+        AssuranceBusinessUnit/EmployeeReference:
+          type: object
+        AssuranceWorkSchedule:
+          type: object
+        CollateralItemAssurance:
+          type: object
+        AssurancePostconditions:
+          type: object
+        AssuranceCollateralItemAssuranceServiceType:
+          type: object
+        AssuranceCollateralItemAssuranceServiceDescription:
+          type: object
+        AssuranceCollateralItemAssuranceServiceInputsandOuputs:
+          type: object
+        AssuranceCollateralItemAssuranceServiceWorkProduct:
+          type: object
+        AssuranceCollateralItemAssuranceServiceName:
+          type: object
+    SystemsAdministrationOutcome:
+      type: object
+      properties:
+        SystemsAdministrationPerformanceAnalysis:
+          type: object
+        SystemsAdministrationActivityAnalysis:
+          type: object
+        SystemsAdministrationAdministrativePlan:
+          type: object
+        SystemsAdministrationAdministrationTask:
+          type: object
+    CapacityPlanningandResilience:
+      type: object
+      properties:
+        Handleandassignthedaytodayactivities:
+          type: object
+        CapacityPlanningandResiliencePreconditions:
+          type: object
+        CapacityPlanningandResilienceBusinessUnit/EmployeeReference:
+          type: object
+        CapacityPlanningandResilienceWorkSchedule:
+          type: object
+        CapacityPlanningandResilience:
+          type: object
+        CapacityPlanningandResiliencePostconditions:
+          type: object
+        CapacityPlanningandResilienceCapacityPlanningandResilienceServiceType:
+          type: object
+        CapacityPlanningandResilienceCapacityPlanningandResilienceServiceDescription:
+          type: object
+        CapacityPlanningandResilienceCapacityPlanningandResilienceServiceInputsandOuputs:
+          type: object
+        CapacityPlanningandResilienceCapacityPlanningandResilienceServiceWorkProduct:
+          type: object
+        CapacityPlanningandResilienceCapacityPlanningandResilienceServiceName:
+          type: object
+    Configuration:
+      type: object
+      properties:
+        Handleandassignthedaytodayactivities:
+          type: object
+        ConfigurationPreconditions:
+          type: object
+        ConfigurationBusinessUnit/EmployeeReference:
+          type: object
+        ConfigurationWorkSchedule:
+          type: object
+        SystemsConfigurationAdministration:
+          type: object
+        ConfigurationPostconditions:
+          type: object
+        ConfigurationSystemsConfigurationAdministrationServiceType:
+          type: object
+        ConfigurationSystemsConfigurationAdministrationServiceDescription:
+          type: object
+        ConfigurationSystemsConfigurationAdministrationServiceInputsandOuputs:
+          type: object
+        ConfigurationSystemsConfigurationAdministrationServiceWorkProduct:
+          type: object
+        ConfigurationSystemsConfigurationAdministrationServiceName:
+          type: object
+  parameters:
+    SystemsAdministrationID:
+      name: systemsadministrationId
+      in: path
+      required: true
+      style: simple
+      explode: false
+      schema:
+        type: string
+    InventoryID:
+      name: inventoryId
+      in: path
+      required: true
+      style: simple
+      explode: false
+      schema:
+        type: string
+    AssuranceID:
+      name: assuranceId
+      in: path
+      required: true
+      style: simple
+      explode: false
+      schema:
+        type: string
+    SystemsAdministrationOutcomeID:
+      name: systemsadministrationoutcomeId
+      in: path
+      required: true
+      style: simple
+      explode: false
+      schema:
+        type: string
+    CapacityPlanningandResilienceID:
+      name: capacityplanningandresilienceId
+      in: path
+      required: true
+      style: simple
+      explode: false
+      schema:
+        type: string
+    ConfigurationID:
+      name: configurationId
+      in: path
+      required: true
+      style: simple
+      explode: false
+      schema:
+        type: string
+  requestBodies:
+    ITSystemAdministrativePlan:
+      required: true
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/ITSystemAdministrativePlan'
+    Assurance:
+      required: true
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/Assurance'
+    CapacityPlanningandResilience:
+      required: true
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/CapacityPlanningandResilience'
+    Configuration:
+      required: true
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/Configuration'
+    Inventory:
+      required: true
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/Inventory'
+...

@@ -1,0 +1,537 @@
+openapi: 3.0.1
+info:
+  title: Standing Order 1
+  description: ''
+  version: 10.0.0
+servers:
+- description: SwaggerHub API Auto Mocking
+  url: https://virtserver.swaggerhub.com/B154/StandingOrder/10.0.0
+paths:
+  /StandingOrder/{standingorderId}/Control:
+    put:
+      tags:
+      - CR - StandingOrderArrangement
+      summary: CoCR Control the processing of Standing Order Arrangement
+      description: CoCR Control the processing of Standing Order Arrangement
+      operationId: Control
+      parameters:
+      - $ref: '#/components/parameters/StandingOrderID'
+      requestBody:
+        $ref: '#/components/requestBodies/StandingOrderArrangement'
+      responses:
+        200:
+          description: Success
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/StandingOrderArrangement'
+        400:
+          $ref: '#/components/responses/BadRequestError'
+        401:
+          $ref: '#/components/responses/UnauthorizedError'
+        403:
+          $ref: '#/components/responses/ForbiddenError'
+        404:
+          $ref: '#/components/responses/NotFoundError'
+        429:
+          $ref: '#/components/responses/TooManyRequestsError'
+        500:
+          $ref: '#/components/responses/InternalServerError'
+  /StandingOrder/{standingorderId}/Exchange:
+    put:
+      tags:
+      - CR - StandingOrderArrangement
+      summary: EcCR Accept, verify, etc. aspects of Standing Order Arrangement processing
+      description: EcCR Accept, verify, etc. aspects of Standing Order Arrangement processing
+      operationId: Exchange
+      parameters:
+      - $ref: '#/components/parameters/StandingOrderID'
+      requestBody:
+        $ref: '#/components/requestBodies/StandingOrderArrangement'
+      responses:
+        200:
+          description: Success
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/StandingOrderArrangement'
+        400:
+          $ref: '#/components/responses/BadRequestError'
+        401:
+          $ref: '#/components/responses/UnauthorizedError'
+        403:
+          $ref: '#/components/responses/ForbiddenError'
+        404:
+          $ref: '#/components/responses/NotFoundError'
+        429:
+          $ref: '#/components/responses/TooManyRequestsError'
+        500:
+          $ref: '#/components/responses/InternalServerError'
+  /StandingOrder/{standingorderId}/Execute:
+    put:
+      tags:
+      - CR - StandingOrderArrangement
+      summary: ExCR Execute an available automated action for Standing Order Arrangement
+      description: ExCR Execute an available automated action for Standing Order Arrangement
+      operationId: Execute
+      parameters:
+      - $ref: '#/components/parameters/StandingOrderID'
+      requestBody:
+        $ref: '#/components/requestBodies/StandingOrderArrangement'
+      responses:
+        200:
+          description: Success
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/StandingOrderArrangement'
+        400:
+          $ref: '#/components/responses/BadRequestError'
+        401:
+          $ref: '#/components/responses/UnauthorizedError'
+        403:
+          $ref: '#/components/responses/ForbiddenError'
+        404:
+          $ref: '#/components/responses/NotFoundError'
+        429:
+          $ref: '#/components/responses/TooManyRequestsError'
+        500:
+          $ref: '#/components/responses/InternalServerError'
+  /StandingOrder/Initiate:
+    post:
+      tags:
+      - CR - StandingOrderArrangement
+      summary: InCR Instantiate a new Standing Order Arrangement
+      description: InCR Instantiate a new Standing Order Arrangement
+      operationId: Initiate
+      parameters: []
+      requestBody:
+        $ref: '#/components/requestBodies/StandingOrderArrangement'
+      responses:
+        200:
+          description: Success
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/StandingOrderArrangement'
+        400:
+          $ref: '#/components/responses/BadRequestError'
+        401:
+          $ref: '#/components/responses/UnauthorizedError'
+        403:
+          $ref: '#/components/responses/ForbiddenError'
+        404:
+          $ref: '#/components/responses/NotFoundError'
+        429:
+          $ref: '#/components/responses/TooManyRequestsError'
+        500:
+          $ref: '#/components/responses/InternalServerError'
+  /StandingOrder/{standingorderId}/Retrieve:
+    get:
+      tags:
+      - CR - StandingOrderArrangement
+      summary: ReCR Retrieve details about any aspect of Standing Order Arrangement
+      description: ReCR Retrieve details about any aspect of Standing Order Arrangement
+      operationId: Retrieve
+      parameters:
+      - $ref: '#/components/parameters/StandingOrderID'
+      responses:
+        200:
+          description: Success
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/StandingOrderArrangement'
+        400:
+          $ref: '#/components/responses/BadRequestError'
+        401:
+          $ref: '#/components/responses/UnauthorizedError'
+        403:
+          $ref: '#/components/responses/ForbiddenError'
+        404:
+          $ref: '#/components/responses/NotFoundError'
+        429:
+          $ref: '#/components/responses/TooManyRequestsError'
+        500:
+          $ref: '#/components/responses/InternalServerError'
+  /StandingOrder/{standingorderId}/Request:
+    put:
+      tags:
+      - CR - StandingOrderArrangement
+      summary: RqCR Request manual intervention or a decision with respect to Standing Order Arrangement
+      description: RqCR Request manual intervention or a decision with respect to Standing Order Arrangement
+      operationId: Request
+      parameters:
+      - $ref: '#/components/parameters/StandingOrderID'
+      requestBody:
+        $ref: '#/components/requestBodies/StandingOrderArrangement'
+      responses:
+        200:
+          description: Success
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/StandingOrderArrangement'
+        400:
+          $ref: '#/components/responses/BadRequestError'
+        401:
+          $ref: '#/components/responses/UnauthorizedError'
+        403:
+          $ref: '#/components/responses/ForbiddenError'
+        404:
+          $ref: '#/components/responses/NotFoundError'
+        429:
+          $ref: '#/components/responses/TooManyRequestsError'
+        500:
+          $ref: '#/components/responses/InternalServerError'
+  /StandingOrder/{standingorderId}/Update:
+    put:
+      tags:
+      - CR - StandingOrderArrangement
+      summary: UpCR Update details relating to Standing Order Arrangement
+      description: UpCR Update details relating to Standing Order Arrangement
+      operationId: Update
+      parameters:
+      - $ref: '#/components/parameters/StandingOrderID'
+      requestBody:
+        $ref: '#/components/requestBodies/StandingOrderArrangement'
+      responses:
+        200:
+          description: Success
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/StandingOrderArrangement'
+        400:
+          $ref: '#/components/responses/BadRequestError'
+        401:
+          $ref: '#/components/responses/UnauthorizedError'
+        403:
+          $ref: '#/components/responses/ForbiddenError'
+        404:
+          $ref: '#/components/responses/NotFoundError'
+        429:
+          $ref: '#/components/responses/TooManyRequestsError'
+        500:
+          $ref: '#/components/responses/InternalServerError'
+  /StandingOrder/{standingorderId}/StandingOrderPayment/{standingorderpaymentId}/Exchange:
+    put:
+      tags:
+      - BQ - StandingOrderPayment
+      summary: EcBQ Accept, verify, etc. aspects of Standing Order Payment processing
+      description: EcBQ Accept, verify, etc. aspects of Standing Order Payment processing
+      operationId: ExchangeStandingOrderPayment
+      parameters:
+      - $ref: '#/components/parameters/StandingOrderID'
+      - $ref: '#/components/parameters/StandingOrderPaymentID'
+      requestBody:
+        $ref: '#/components/requestBodies/StandingOrderPayment'
+      responses:
+        200:
+          description: Success
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/StandingOrderPayment'
+        400:
+          $ref: '#/components/responses/BadRequestError'
+        401:
+          $ref: '#/components/responses/UnauthorizedError'
+        403:
+          $ref: '#/components/responses/ForbiddenError'
+        404:
+          $ref: '#/components/responses/NotFoundError'
+        429:
+          $ref: '#/components/responses/TooManyRequestsError'
+        500:
+          $ref: '#/components/responses/InternalServerError'
+  /StandingOrder/{standingorderId}/StandingOrderPayment/Initiate:
+    post:
+      tags:
+      - BQ - StandingOrderPayment
+      summary: InBQ Instantiate a new Standing Order Payment
+      description: InBQ Instantiate a new Standing Order Payment
+      operationId: InitiateStandingOrderPayment
+      parameters:
+      - $ref: '#/components/parameters/StandingOrderID'
+      requestBody:
+        $ref: '#/components/requestBodies/StandingOrderPayment'
+      responses:
+        200:
+          description: Success
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/StandingOrderPayment'
+        400:
+          $ref: '#/components/responses/BadRequestError'
+        401:
+          $ref: '#/components/responses/UnauthorizedError'
+        403:
+          $ref: '#/components/responses/ForbiddenError'
+        404:
+          $ref: '#/components/responses/NotFoundError'
+        429:
+          $ref: '#/components/responses/TooManyRequestsError'
+        500:
+          $ref: '#/components/responses/InternalServerError'
+  /StandingOrder/{standingorderId}/StandingOrderPayment/{standingorderpaymentId}/Retrieve:
+    get:
+      tags:
+      - BQ - StandingOrderPayment
+      summary: ReBQ Retrieve details about any aspect of Standing Order Payment
+      description: ReBQ Retrieve details about any aspect of Standing Order Payment
+      operationId: RetrieveStandingOrderPayment
+      parameters:
+      - $ref: '#/components/parameters/StandingOrderID'
+      - $ref: '#/components/parameters/StandingOrderPaymentID'
+      responses:
+        200:
+          description: Success
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/StandingOrderPayment'
+        400:
+          $ref: '#/components/responses/BadRequestError'
+        401:
+          $ref: '#/components/responses/UnauthorizedError'
+        403:
+          $ref: '#/components/responses/ForbiddenError'
+        404:
+          $ref: '#/components/responses/NotFoundError'
+        429:
+          $ref: '#/components/responses/TooManyRequestsError'
+        500:
+          $ref: '#/components/responses/InternalServerError'
+  /StandingOrder/{standingorderId}/StandingOrderPayment/{standingorderpaymentId}/Update:
+    put:
+      tags:
+      - BQ - StandingOrderPayment
+      summary: UpBQ Update details relating to Standing Order Payment
+      description: UpBQ Update details relating to Standing Order Payment
+      operationId: UpdateStandingOrderPayment
+      parameters:
+      - $ref: '#/components/parameters/StandingOrderID'
+      - $ref: '#/components/parameters/StandingOrderPaymentID'
+      requestBody:
+        $ref: '#/components/requestBodies/StandingOrderPayment'
+      responses:
+        200:
+          description: Success
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/StandingOrderPayment'
+        400:
+          $ref: '#/components/responses/BadRequestError'
+        401:
+          $ref: '#/components/responses/UnauthorizedError'
+        403:
+          $ref: '#/components/responses/ForbiddenError'
+        404:
+          $ref: '#/components/responses/NotFoundError'
+        429:
+          $ref: '#/components/responses/TooManyRequestsError'
+        500:
+          $ref: '#/components/responses/InternalServerError'
+components:
+  schemas:
+    StandingOrderArrangement:
+      type: object
+      properties:
+        ? >-
+          Fulfillanyscheduledandad-hocobligationsunderaservicearrangement,mosttypicallyforafinancialproductorfacilitywithinStandingOrder.
+
+          Example:Performthescheduled(e.g.statements,standingorders)andad-hocOrrequested(e.g.balanceinquiries,fundtransfers)fulfillmenttasksforacustomercurrentaccountfacility.
+        : type: string
+        StandingOrderArrangementParameterType:
+          type: string
+        StandingOrderArrangementSelectedOption:
+          type: string
+        StandingOrderArrangementType:
+          type: string
+        StandingOrderArrangementCalendar:
+          type: string
+        StandingOrderArrangementStatus:
+          type: string
+        StandingOrderArrangementAssociatedParty:
+          type: object
+        StandingOrderArrangementCurrency:
+          type: string
+        StandingOrderArrangementRegulationReference:
+          type: string
+        StandingOrderArrangementRegulationType:
+          type: string
+        StandingOrderArrangementJurisdiction:
+          type: object
+        StandingOrderArrangementBookingLocation:
+          type: object
+        StandingOrderArrangementAccountType:
+          type: string
+        StandingOrderArrangementAccountReference:
+          type: string
+        StandingOrderArrangementCustomerReference:
+          type: object
+        StandingOrderArrangementPosition:
+          type: string
+        StandingOrderArrangementProductReference:
+          type: string
+        StandingOrderArrangementPositionLimit:
+          type: string
+        FeeAccountReference:
+          type: string
+        CounterpartyCustomerReference:
+          type: string
+        CounterpartyAccountReference:
+          type: string
+        CounterpartyExternalAccountCode:
+          type: string
+        PrincipalAmount:
+          type: string
+        FeeAmount:
+          type: string
+        PaymentDetailsDescription:
+          type: string
+        StartDate:
+          type: string
+        EndDate:
+          type: string
+        PeriodicityDescription:
+          type: string
+        DayNumberInPeriodicityDescription:
+          type: string
+    StandingOrderPayment:
+      type: object
+      properties:
+        ? >-
+          Fulfillanyscheduledandad-hocobligationsunderaservicearrangement,mosttypicallyforafinancialproductorfacilitywithinStandingOrder.
+
+          Example:Performthescheduled(e.g.statements,standingorders)andad-hoc/requested(e.g.balanceinquiries,fundtransfers)fulfillmenttasksforacustomercurrentaccountfacility.
+        : type: string
+        StandingOrderPaymentPreconditions:
+          type: object
+        StandingOrderPaymentFeatureSchedule:
+          type: object
+        BusinessService:
+          type: object
+        StandingOrderPaymentPostconditions:
+          type: object
+        StandingOrderPaymentServiceType:
+          type: string
+        StandingOrderPaymentServiceDescription:
+          type: string
+        StandingOrderPaymentServiceInputsandOuputs:
+          type: string
+        StandingOrderPaymentServiceWorkProduct:
+          type: object
+        StandingOrderPaymentServiceName:
+          type: string
+        StandingOrderExecutionDate:
+          type: string
+        StandingOrderExecutionResultType:
+          type: string
+        StandingOrderExecutionNotExecutedReasonDescription:
+          type: string
+        StandingOrderExecutionPrincipalAmount:
+          type: string
+        StandingOrderExecutionFeeAmount:
+          type: string
+    StandingOrderOutcome:
+      type: object
+      properties:
+        StandingOrderFinancialFacility:
+          type: string
+        StandingOrderWorkProduct:
+          type: string
+    HTTPError:
+      type: object
+      properties:
+        status_code:
+          type: string
+        status:
+          type: string
+        message:
+          type: string
+  parameters:
+    StandingOrderID:
+      name: standingorderId
+      in: path
+      required: true
+      style: simple
+      explode: false
+      schema:
+        type: string
+    StandingOrderPaymentID:
+      name: standingorderpaymentId
+      in: path
+      required: true
+      style: simple
+      explode: false
+      schema:
+        type: string
+    StandingOrderOutcomeID:
+      name: standingorderoutcomeId
+      in: path
+      required: true
+      style: simple
+      explode: false
+      schema:
+        type: string
+  requestBodies:
+    StandingOrderArrangement:
+      required: true
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/StandingOrderArrangement'
+    StandingOrderPayment:
+      required: true
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/StandingOrderPayment'
+  responses:
+    HTTPError:
+      description: Bad Request
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/HTTPError'
+    BadRequestError:
+      description: Bad Request
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/HTTPError'
+    UnauthorizedError:
+      description: Unauthorized
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/HTTPError'
+    ForbiddenError:
+      description: Forbidden
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/HTTPError'
+    NotFoundError:
+      description: Not Found
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/HTTPError'
+    TooManyRequestsError:
+      description: Too Many Requests
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/HTTPError'
+    InternalServerError:
+      description: Internal Server Error
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/HTTPError'
+...

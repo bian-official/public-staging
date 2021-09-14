@@ -1,0 +1,132 @@
+openapi: 3.0.1
+info:
+  title: Underwriting1
+  description: sd.Description
+  version: 10.0.0
+paths:
+  /Underwriting/Evaluate:
+    post:
+      tags:
+      - CR - UnderwritingAssessment
+      summary: EvCR Evaluate an underwriting decision
+      description: EvCR Evaluate an underwriting decision
+      parameters: []
+      requestBody:
+        $ref: '#/components/requestBodies/UnderwritingAssessment'
+      responses:
+        200:
+          description: Success
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/UnderwritingAssessment'
+  /Underwriting/{underwritingId}/Update:
+    put:
+      tags:
+      - CR - UnderwritingAssessment
+      summary: UpCR Update details for an underwriting assessment
+      description: UpCR Update details for an underwriting assessment
+      parameters:
+      - $ref: '#/components/parameters/UnderwritingID'
+      requestBody:
+        $ref: '#/components/requestBodies/UnderwritingAssessment'
+      responses:
+        200:
+          description: Success
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/UnderwritingAssessment'
+  /Underwriting/{underwritingId}/Retrieve:
+    get:
+      tags:
+      - CR - UnderwritingAssessment
+      summary: ReCR Retrieve details about an underwriting assessment
+      description: ReCR Retrieve details about an underwriting assessment
+      parameters:
+      - $ref: '#/components/parameters/UnderwritingID'
+      responses:
+        200:
+          description: Success
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/UnderwritingAssessment'
+components:
+  schemas:
+    UnderwritingAssessment:
+      type: object
+      properties:
+        UnderwritingAssessment:
+          type: object
+        UnderwritingGuidelines:
+          type: object
+        RequiredCustomerEmploymentHistoryDetails:
+          type: object
+        RequiredCustomerDebtOrAssetStatement:
+          type: object
+        RequiredCustomerCreditAssessment:
+          type: object
+        RequiredCollateralCoverage:
+          type: object
+        RequiredCustomerProductandServicePaymentHistory:
+          type: object
+        RequiredCustomerDocuments:
+          type: object
+        ProposedTransactionDetails:
+          type: object
+        ProductInstanceReference:
+          type: object
+        ProposedLoanTerms:
+          type: object
+        ProposedLoanAmount:
+          type: object
+        LoanPurpose:
+          type: object
+        CustomerReference:
+          type: object
+        CustomerReferenceDetails:
+          type: object
+        CustomerProductEligibilityTerms:
+          type: object
+        CustomerEmploymentHistory:
+          type: object
+        CustomerIncomeStatement:
+          type: object
+        CustomerDebtStatement:
+          type: object
+        CustomerAssetStatement:
+          type: object
+        CustomerCreditAssessment:
+          type: object
+        CustomerProductandServicePaymentHistory:
+          type: object
+        CollateralItemReference:
+          type: object
+        CollateralItemType:
+          type: object
+        CollateralItemValuation:
+          type: object
+        DocumentReference:
+          type: object
+        UnderwritingAssessmentDecision:
+          type: object
+        UnderwritingAssessmentWorkProduct:
+          type: object
+  parameters:
+    UnderwritingID:
+      name: underwritingId
+      in: path
+      required: true
+      style: simple
+      explode: false
+      schema:
+        type: string
+  requestBodies:
+    UnderwritingAssessment:
+      required: true
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/UnderwritingAssessment'
+...

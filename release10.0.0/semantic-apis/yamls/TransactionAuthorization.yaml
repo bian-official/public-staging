@@ -1,0 +1,182 @@
+openapi: 3.0.1
+info:
+  title: Transaction Authorization
+  description: sd.Description
+  version: 10.0.0
+paths:
+  /TransactionAuthorization/Evaluate:
+    post:
+      tags:
+      - CR - InteractiveTransactionAssessment
+      summary: EvCR Evaluate a proposed interactive transaction for authorization
+      description: EvCR Evaluate a proposed interactive transaction for authorization
+      parameters: []
+      requestBody:
+        $ref: '#/components/requestBodies/InteractiveTransactionAssessment'
+      responses:
+        200:
+          description: Success
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/InteractiveTransactionAssessment'
+  /TransactionAuthorization/{transactionauthorizationId}/Update:
+    put:
+      tags:
+      - CR - InteractiveTransactionAssessment
+      summary: UpCR Update details of a proposed transaction for authorization
+      description: UpCR Update details of a proposed transaction for authorization
+      parameters:
+      - $ref: '#/components/parameters/TransactionAuthorizationID'
+      requestBody:
+        $ref: '#/components/requestBodies/InteractiveTransactionAssessment'
+      responses:
+        200:
+          description: Success
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/InteractiveTransactionAssessment'
+  /TransactionAuthorization/{transactionauthorizationId}/Execute:
+    put:
+      tags:
+      - CR - InteractiveTransactionAssessment
+      summary: ExCR Execute an automated action for transaction authorization (e.g. upload data)
+      description: ExCR Execute an automated action for transaction authorization (e.g. upload data)
+      parameters:
+      - $ref: '#/components/parameters/TransactionAuthorizationID'
+      requestBody:
+        $ref: '#/components/requestBodies/InteractiveTransactionAssessment'
+      responses:
+        200:
+          description: Success
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/InteractiveTransactionAssessment'
+  /TransactionAuthorization/{transactionauthorizationId}/Request:
+    put:
+      tags:
+      - CR - InteractiveTransactionAssessment
+      summary: RqCR Request manual intervention (e.g. engage a specialist)
+      description: RqCR Request manual intervention (e.g. engage a specialist)
+      parameters:
+      - $ref: '#/components/parameters/TransactionAuthorizationID'
+      requestBody:
+        $ref: '#/components/requestBodies/InteractiveTransactionAssessment'
+      responses:
+        200:
+          description: Success
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/InteractiveTransactionAssessment'
+  /TransactionAuthorization/{transactionauthorizationId}/Retrieve:
+    get:
+      tags:
+      - CR - InteractiveTransactionAssessment
+      summary: ReCR Retrieve details about an interactive transaction authorization
+      description: ReCR Retrieve details about an interactive transaction authorization
+      parameters:
+      - $ref: '#/components/parameters/TransactionAuthorizationID'
+      responses:
+        200:
+          description: Success
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/InteractiveTransactionAssessment'
+components:
+  schemas:
+    InteractiveTransactionAssessment:
+      type: object
+      properties:
+        InteractiveTransactionAssessment:
+          type: object
+        CustomerReference:
+          type: object
+        EmployeeReference:
+          type: object
+        ProductReference:
+          type: object
+        ProductInstanceReference:
+          type: object
+        ProposedTransactionType:
+          type: object
+        ProposedTransactionValue:
+          type: object
+        CustomerContactRecordReference:
+          type: object
+        CustomerContactRecord:
+          type: object
+        CustomerContactRecordCustomerReference:
+          type: object
+        CustomerContactRecordContactDevice:
+          type: object
+        CustomerContactRecordAuthenticationStatus(asobtainedbySD-ContactHandler):
+          type: object
+        CustomerContactRecordRoutingSelectionStatus:
+          type: object
+        CustomerContactRecordMenuSelection:
+          type: object
+        CustomerContactRecordServicingRequest:
+          type: object
+        CustomerContactRecordServicingEventHistory:
+          type: object
+        CustomerContactRecordServicingPositionReference:
+          type: object
+        CustomerContactRecordServicingResourceReference:
+          type: object
+        CustomerContactRecordActivityRecord:
+          type: object
+        CustomerSessionDialogueReference:
+          type: object
+        CustomerSessionDialogueRecord:
+          type: object
+        SessionDialogueType:
+          type: object
+        SessionDialogueScript:
+          type: object
+        SessionDialogueLogReference:
+          type: object
+        SessionDialogueLog:
+          type: object
+        SessionDialogueSessionMechanism:
+          type: object
+        SessionDialogueRecordSessionStartOrEndTime:
+          type: object
+        SessionDialogueResult:
+          type: object
+        CustomerContactRecordDuration:
+          type: object
+        CustomerContactActivityRecord:
+          type: object
+        CustomerContactResult:
+          type: object
+        ChannelActivityHistoryReportReference:
+          type: object
+        ChannelActivityHistoryReportFromOrto:
+          type: object
+        ChannelActivityHistoryReport:
+          type: object
+        TransactionAuthorizationGuidance:
+          type: object
+        TransactionAuthorizationResult:
+          type: object
+  parameters:
+    TransactionAuthorizationID:
+      name: transactionauthorizationId
+      in: path
+      required: true
+      style: simple
+      explode: false
+      schema:
+        type: string
+  requestBodies:
+    InteractiveTransactionAssessment:
+      required: true
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/InteractiveTransactionAssessment'
+...

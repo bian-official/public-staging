@@ -1,0 +1,137 @@
+openapi: 3.0.1
+info:
+  title: Transaction Engine
+  description: sd.Description
+  version: 10.0.0
+paths:
+  /TransactionEngine/Initiate:
+    post:
+      tags:
+      - CR - TransactionScheduleArrangement
+      summary: InCR Initiate delegated transaction processing for a product instance
+      description: InCR Initiate delegated transaction processing for a product instance
+      parameters: []
+      requestBody:
+        $ref: '#/components/requestBodies/TransactionScheduleArrangement'
+      responses:
+        200:
+          description: Success
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/TransactionScheduleArrangement'
+  /TransactionEngine/{transactionengineId}/Update:
+    put:
+      tags:
+      - CR - TransactionScheduleArrangement
+      summary: UpCR Update details for an active transaction processing arrangement
+      description: UpCR Update details for an active transaction processing arrangement
+      parameters:
+      - $ref: '#/components/parameters/TransactionEngineID'
+      requestBody:
+        $ref: '#/components/requestBodies/TransactionScheduleArrangement'
+      responses:
+        200:
+          description: Success
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/TransactionScheduleArrangement'
+  /TransactionEngine/{transactionengineId}/Execute:
+    put:
+      tags:
+      - CR - TransactionScheduleArrangement
+      summary: ExCR Execute an automated function for a transaction processing arrangement
+      description: ExCR Execute an automated function for a transaction processing arrangement
+      parameters:
+      - $ref: '#/components/parameters/TransactionEngineID'
+      requestBody:
+        $ref: '#/components/requestBodies/TransactionScheduleArrangement'
+      responses:
+        200:
+          description: Success
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/TransactionScheduleArrangement'
+  /TransactionEngine/{transactionengineId}/Retrieve:
+    get:
+      tags:
+      - CR - TransactionScheduleArrangement
+      summary: ReCR Retrieve details about delegated transaction processing for a product instance
+      description: ReCR Retrieve details about delegated transaction processing for a product instance
+      parameters:
+      - $ref: '#/components/parameters/TransactionEngineID'
+      responses:
+        200:
+          description: Success
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/TransactionScheduleArrangement'
+components:
+  schemas:
+    TransactionScheduleArrangement:
+      type: object
+      properties:
+        TransactionScheduleArrangement:
+          type: object
+        ProductInstanceReference:
+          type: object
+        ProductandServiceType:
+          type: object
+        TransactionScheduleFulfillmentSchedule:
+          type: object
+        TransactionScheduleWorkTaskRecord:
+          type: object
+        TransactionScheduleWorkTaskType:
+          type: object
+        TransactionScheduleWorkTaskDescription:
+          type: object
+        TransactionScheduleWorkTaskWorkProducts:
+          type: object
+        DocumentDirectoryEntryInstanceReference:
+          type: object
+        TransactionScheduleWorkTaskResult:
+          type: object
+        TransactionScheduleTaskFeeTransaction:
+          type: object
+        TransactionScheduleWorkTaskFeeTransactionDescription:
+          type: object
+        TransactionScheduleWorkTaskFeeTransactionType:
+          type: object
+        TransactionScheduleWorkTaskFeeTransactionCharge:
+          type: object
+        TransactionScheduleFinancialTransaction:
+          type: object
+        TransactionScheduleFinancialTransactionProductInstanceReference:
+          type: object
+        TransactionScheduleFinancialTransactionType:
+          type: object
+        TransactionScheduleFinancialTransactionDescription:
+          type: object
+        TransactionScheduleFinancialTransactionAmount:
+          type: object
+        CorrespondenceInstanceReference:
+          type: object
+        DateType:
+          type: object
+        Date:
+          type: object
+  parameters:
+    TransactionEngineID:
+      name: transactionengineId
+      in: path
+      required: true
+      style: simple
+      explode: false
+      schema:
+        type: string
+  requestBodies:
+    TransactionScheduleArrangement:
+      required: true
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/TransactionScheduleArrangement'
+...
