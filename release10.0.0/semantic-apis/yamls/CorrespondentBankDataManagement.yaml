@@ -1,29 +1,30 @@
 openapi: 3.0.1
 info:
-  title: Underwriting
-  description: This service domain manages the underwriting decision process for products as appropriate (including many loan types and some insurance products)
+  title: Correspondent Bank Data Management
+  description: This service domain maintains correspondent bank reference details. This includes correspondent bank payment parameters in particular bank limits and capturing transaction activity to track reciprocity
   version: 10.0.0
 servers:
 - description: SwaggerHub API Auto Mocking
-  url: https://virtserver.swaggerhub.com/B154/Underwriting/10.0.0
+  url: https://virtserver.swaggerhub.com/B154/CorrespondentBankDataManagement/10.0.0
 paths:
-  /Underwriting/Evaluate:
+  /CorrespondentBankDataManagement/Register:
     post:
       tags:
-      - CR - UnderwritingAssessment
-      summary: EvCR Evaluate an underwriting decision
-      description: EvCR Evaluate an underwriting decision
-      operationId: Evaluate
+      - CR - CorrespondentBankDirectoryEntry
+      summary: InCR Register a new correspondent bank in the catalog
+      description: InCR Register a new correspondent bank in the catalog
+      operationId: Register
       parameters: []
       requestBody:
-        $ref: '#/components/requestBodies/UnderwritingAssessment'
+        $ref: '#/components/requestBodies/CorrespondentBankDirectoryEntry'
       responses:
         200:
           description: Success
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/UnderwritingAssessment'
+                type: boolean
+                example: true
         400:
           $ref: '#/components/responses/BadRequestError'
         401:
@@ -36,24 +37,24 @@ paths:
           $ref: '#/components/responses/TooManyRequestsError'
         500:
           $ref: '#/components/responses/InternalServerError'
-  /Underwriting/{underwritingId}/Update:
+  /CorrespondentBankDataManagement/{correspondentbankdatamanagementId}/Update:
     put:
       tags:
-      - CR - UnderwritingAssessment
-      summary: UpCR Update details for an underwriting assessment
-      description: UpCR Update details for an underwriting assessment
+      - CR - CorrespondentBankDirectoryEntry
+      summary: UpCR Update details of a correspondent bank in the catalog
+      description: UpCR Update details of a correspondent bank in the catalog
       operationId: Update
       parameters:
-      - $ref: '#/components/parameters/UnderwritingID'
+      - $ref: '#/components/parameters/CorrespondentBankDataManagementID'
       requestBody:
-        $ref: '#/components/requestBodies/UnderwritingAssessment'
+        $ref: '#/components/requestBodies/CorrespondentBankDirectoryEntry'
       responses:
         200:
           description: Success
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/UnderwritingAssessment'
+                $ref: '#/components/schemas/CorrespondentBankDirectoryEntry'
         400:
           $ref: '#/components/responses/BadRequestError'
         401:
@@ -66,22 +67,52 @@ paths:
           $ref: '#/components/responses/TooManyRequestsError'
         500:
           $ref: '#/components/responses/InternalServerError'
-  /Underwriting/{underwritingId}/Retrieve:
-    get:
+  /CorrespondentBankDataManagement/{correspondentbankdatamanagementId}/Request:
+    put:
       tags:
-      - CR - UnderwritingAssessment
-      summary: ReCR Retrieve details about an underwriting assessment
-      description: ReCR Retrieve details about an underwriting assessment
-      operationId: Retrieve
+      - CR - CorrespondentBankDirectoryEntry
+      summary: RqCR Request that an existing entry is updated or revised
+      description: RqCR Request that an existing entry is updated or revised
+      operationId: Request
       parameters:
-      - $ref: '#/components/parameters/UnderwritingID'
+      - $ref: '#/components/parameters/CorrespondentBankDataManagementID'
+      requestBody:
+        $ref: '#/components/requestBodies/CorrespondentBankDirectoryEntry'
       responses:
         200:
           description: Success
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/UnderwritingAssessment'
+                $ref: '#/components/schemas/CorrespondentBankDirectoryEntry'
+        400:
+          $ref: '#/components/responses/BadRequestError'
+        401:
+          $ref: '#/components/responses/UnauthorizedError'
+        403:
+          $ref: '#/components/responses/ForbiddenError'
+        404:
+          $ref: '#/components/responses/NotFoundError'
+        429:
+          $ref: '#/components/responses/TooManyRequestsError'
+        500:
+          $ref: '#/components/responses/InternalServerError'
+  /CorrespondentBankDataManagement/{correspondentbankdatamanagementId}/Retrieve:
+    get:
+      tags:
+      - CR - CorrespondentBankDirectoryEntry
+      summary: ReCR Retrieve correspondent bank details from the catalog
+      description: ReCR Retrieve correspondent bank details from the catalog
+      operationId: Retrieve
+      parameters:
+      - $ref: '#/components/parameters/CorrespondentBankDataManagementID'
+      responses:
+        200:
+          description: Success
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/CorrespondentBankDirectoryEntry'
         400:
           $ref: '#/components/responses/BadRequestError'
         401:
@@ -96,62 +127,28 @@ paths:
           $ref: '#/components/responses/InternalServerError'
 components:
   schemas:
-    UnderwritingAssessment:
+    CorrespondentBankDirectoryEntry:
       type: object
       properties:
-        UnderwritingGuidelines:
-          type: string
-        RequiredCustomerEmploymentHistoryDetails:
-          type: string
-        RequiredCustomerDebtOrAssetStatement:
-          type: string
-        RequiredCustomerCreditAssessment:
-          type: string
-        RequiredCollateralCoverage:
-          type: string
-        RequiredCustomerProductandServicePaymentHistory:
-          type: string
-        RequiredCustomerDocuments:
-          type: string
-        ProposedTransactionDetails:
-          type: string
-        ProductInstanceReference:
+        CorrespondentBankReference:
           type: object
-        ProposedLoanTerms:
+        ClearingOrSortCodes:
           type: string
-        ProposedLoanAmount:
-          type: number
-        LoanPurpose:
+        ContactAddresses:
           type: string
-        CustomerReference:
+        LegalEntityIdentifiers:
+          type: string
+        BankHierarchy:
+          type: string
+        HolidayOrTimezoneSchedule:
+          type: string
+        VostroAccountReference:
           type: object
-        CustomerReferenceDetails:
+        NostroMirrorAccountReference:
           type: object
-        CustomerProductEligibilityTerms:
-          type: string
-        CustomerEmploymentHistory:
-          type: string
-        CustomerIncomeStatement:
-          type: string
-        CustomerDebtStatement:
-          type: string
-        CustomerAssetStatement:
-          type: string
-        CustomerCreditAssessment:
-          type: string
-        CustomerProductandServicePaymentHistory:
-          type: string
-        CollateralItemReference:
+        CorrespondentBankAgreementReference:
           type: object
-        CollateralItemType:
-          type: string
-        CollateralItemValuation:
-          type: string
-        DocumentReference:
-          type: object
-        UnderwritingAssessmentDecision:
-          type: string
-        UnderwritingAssessmentWorkProduct:
+        CorrespondentBankAgreement:
           type: string
     HTTPError:
       type: object
@@ -163,8 +160,8 @@ components:
         message:
           type: string
   parameters:
-    UnderwritingID:
-      name: underwritingId
+    CorrespondentBankDataManagementID:
+      name: correspondentbankdatamanagementId
       in: path
       required: true
       style: simple
@@ -172,12 +169,12 @@ components:
       schema:
         type: string
   requestBodies:
-    UnderwritingAssessment:
+    CorrespondentBankDirectoryEntry:
       required: true
       content:
         application/json:
           schema:
-            $ref: '#/components/schemas/UnderwritingAssessment'
+            $ref: '#/components/schemas/CorrespondentBankDirectoryEntry'
   responses:
     HTTPError:
       description: Bad Request

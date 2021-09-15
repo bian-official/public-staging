@@ -1,29 +1,29 @@
 openapi: 3.0.1
 info:
-  title: Transaction Engine
-  description: Orchestrate a schedule of payment transaction and reporting activities for the fulfillment of certain long term instruments or structured facilities
+  title: Financial Market Research
+  description: The service domain consolidates external financial market research
   version: 10.0.0
 servers:
 - description: SwaggerHub API Auto Mocking
-  url: https://virtserver.swaggerhub.com/B154/TransactionEngine/10.0.0
+  url: https://virtserver.swaggerhub.com/B154/FinancialMarketResearch/10.0.0
 paths:
-  /TransactionEngine/Initiate:
+  /FinancialMarketResearch/Register:
     post:
       tags:
-      - CR - TransactionScheduleArrangement
-      summary: InCR Initiate delegated transaction processing for a product instance
-      description: InCR Initiate delegated transaction processing for a product instance
-      operationId: Initiate
+      - CR - FinancialMarketResearchDirectoryEntry
+      summary: InCR Register or establish a financial market research viewpoint
+      description: InCR Register or establish a financial market research viewpoint
+      operationId: Register
       parameters: []
       requestBody:
-        $ref: '#/components/requestBodies/TransactionScheduleArrangement'
+        $ref: '#/components/requestBodies/FinancialMarketResearchDirectoryEntry'
       responses:
         200:
           description: Success
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/TransactionScheduleArrangement'
+                $ref: '#/components/schemas/FinancialMarketResearchDirectoryEntry'
         400:
           $ref: '#/components/responses/BadRequestError'
         401:
@@ -36,24 +36,24 @@ paths:
           $ref: '#/components/responses/TooManyRequestsError'
         500:
           $ref: '#/components/responses/InternalServerError'
-  /TransactionEngine/{transactionengineId}/Update:
+  /FinancialMarketResearch/{financialmarketresearchId}/Update:
     put:
       tags:
-      - CR - TransactionScheduleArrangement
-      summary: UpCR Update details for an active transaction processing arrangement
-      description: UpCR Update details for an active transaction processing arrangement
+      - CR - FinancialMarketResearchDirectoryEntry
+      summary: UpCR Update the details or make-up of a financial market research viewpoint
+      description: UpCR Update the details or make-up of a financial market research viewpoint
       operationId: Update
       parameters:
-      - $ref: '#/components/parameters/TransactionEngineID'
+      - $ref: '#/components/parameters/FinancialMarketResearchID'
       requestBody:
-        $ref: '#/components/requestBodies/TransactionScheduleArrangement'
+        $ref: '#/components/requestBodies/FinancialMarketResearchDirectoryEntry'
       responses:
         200:
           description: Success
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/TransactionScheduleArrangement'
+                $ref: '#/components/schemas/FinancialMarketResearchDirectoryEntry'
         400:
           $ref: '#/components/responses/BadRequestError'
         401:
@@ -66,24 +66,24 @@ paths:
           $ref: '#/components/responses/TooManyRequestsError'
         500:
           $ref: '#/components/responses/InternalServerError'
-  /TransactionEngine/{transactionengineId}/Execute:
+  /FinancialMarketResearch/{financialmarketresearchId}/Execute:
     put:
       tags:
-      - CR - TransactionScheduleArrangement
-      summary: ExCR Execute an automated function for a transaction processing arrangement
-      description: ExCR Execute an automated function for a transaction processing arrangement
+      - CR - FinancialMarketResearchDirectoryEntry
+      summary: ExCR Automatically extract details of a maintained financial market research viewpoint
+      description: ExCR Automatically extract details of a maintained financial market research viewpoint
       operationId: Execute
       parameters:
-      - $ref: '#/components/parameters/TransactionEngineID'
+      - $ref: '#/components/parameters/FinancialMarketResearchID'
       requestBody:
-        $ref: '#/components/requestBodies/TransactionScheduleArrangement'
+        $ref: '#/components/requestBodies/FinancialMarketResearchDirectoryEntry'
       responses:
         200:
           description: Success
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/TransactionScheduleArrangement'
+                $ref: '#/components/schemas/FinancialMarketResearchDirectoryEntry'
         400:
           $ref: '#/components/responses/BadRequestError'
         401:
@@ -96,22 +96,52 @@ paths:
           $ref: '#/components/responses/TooManyRequestsError'
         500:
           $ref: '#/components/responses/InternalServerError'
-  /TransactionEngine/{transactionengineId}/Retrieve:
-    get:
+  /FinancialMarketResearch/{financialmarketresearchId}/Request:
+    put:
       tags:
-      - CR - TransactionScheduleArrangement
-      summary: ReCR Retrieve details about delegated transaction processing for a product instance
-      description: ReCR Retrieve details about delegated transaction processing for a product instance
-      operationId: Retrieve
+      - CR - FinancialMarketResearchDirectoryEntry
+      summary: RqCR Request a viewpoint is refreshed or adjusted in some manner
+      description: RqCR Request a viewpoint is refreshed or adjusted in some manner
+      operationId: Request
       parameters:
-      - $ref: '#/components/parameters/TransactionEngineID'
+      - $ref: '#/components/parameters/FinancialMarketResearchID'
+      requestBody:
+        $ref: '#/components/requestBodies/FinancialMarketResearchDirectoryEntry'
       responses:
         200:
           description: Success
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/TransactionScheduleArrangement'
+                $ref: '#/components/schemas/FinancialMarketResearchDirectoryEntry'
+        400:
+          $ref: '#/components/responses/BadRequestError'
+        401:
+          $ref: '#/components/responses/UnauthorizedError'
+        403:
+          $ref: '#/components/responses/ForbiddenError'
+        404:
+          $ref: '#/components/responses/NotFoundError'
+        429:
+          $ref: '#/components/responses/TooManyRequestsError'
+        500:
+          $ref: '#/components/responses/InternalServerError'
+  /FinancialMarketResearch/{financialmarketresearchId}/Retrieve:
+    get:
+      tags:
+      - CR - FinancialMarketResearchDirectoryEntry
+      summary: ReCR Retrieve details about and the content of a maintained financial market research viewpoint
+      description: ReCR Retrieve details about and the content of a maintained financial market research viewpoint
+      operationId: Retrieve
+      parameters:
+      - $ref: '#/components/parameters/FinancialMarketResearchID'
+      responses:
+        200:
+          description: Success
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/FinancialMarketResearchDirectoryEntry'
         400:
           $ref: '#/components/responses/BadRequestError'
         401:
@@ -126,51 +156,29 @@ paths:
           $ref: '#/components/responses/InternalServerError'
 components:
   schemas:
-    TransactionScheduleArrangement:
+    FinancialMarketResearchDirectoryEntry:
       type: object
       properties:
-        ProductInstanceReference:
+        FinancialMarketResearchViewpointType:
+          type: string
+        FinancialMarketResearchViewpointDescription:
+          type: string
+        ReferencedFinancialMarketResearchRecord:
+          type: string
+        FinancialMarketResearchReportTypeReference:
+          type: string
+        FinancialMarketResearchReportTypeDefinition:
+          type: string
+        FinancialMarketResearchReportVersionOrPeriod:
+          type: string
+        FinancialMarketResearchReport:
+          type: string
+        FinancialMarketResearchViewpointUsage:
+          type: string
+        FinancialMarketResearchReportRequest:
+          type: string
+        EmployeeOrBusinessUnitReference:
           type: object
-        ProductandServiceType:
-          type: string
-        TransactionScheduleFulfillmentSchedule:
-          type: string
-        TransactionScheduleWorkTaskRecord:
-          type: string
-        TransactionScheduleWorkTaskType:
-          type: string
-        TransactionScheduleWorkTaskDescription:
-          type: string
-        TransactionScheduleWorkTaskWorkProducts:
-          type: string
-        DocumentDirectoryEntryInstanceReference:
-          type: object
-        TransactionScheduleWorkTaskResult:
-          type: string
-        TransactionScheduleTaskFeeTransaction:
-          type: string
-        TransactionScheduleWorkTaskFeeTransactionDescription:
-          type: string
-        TransactionScheduleWorkTaskFeeTransactionType:
-          type: string
-        TransactionScheduleWorkTaskFeeTransactionCharge:
-          type: string
-        TransactionScheduleFinancialTransaction:
-          type: string
-        TransactionScheduleFinancialTransactionProductInstanceReference:
-          type: object
-        TransactionScheduleFinancialTransactionType:
-          type: string
-        TransactionScheduleFinancialTransactionDescription:
-          type: string
-        TransactionScheduleFinancialTransactionAmount:
-          type: number
-        CorrespondenceInstanceReference:
-          type: object
-        DateType:
-          type: string
-        Date:
-          type: string
     HTTPError:
       type: object
       properties:
@@ -181,8 +189,8 @@ components:
         message:
           type: string
   parameters:
-    TransactionEngineID:
-      name: transactionengineId
+    FinancialMarketResearchID:
+      name: financialmarketresearchId
       in: path
       required: true
       style: simple
@@ -190,12 +198,12 @@ components:
       schema:
         type: string
   requestBodies:
-    TransactionScheduleArrangement:
+    FinancialMarketResearchDirectoryEntry:
       required: true
       content:
         application/json:
           schema:
-            $ref: '#/components/schemas/TransactionScheduleArrangement'
+            $ref: '#/components/schemas/FinancialMarketResearchDirectoryEntry'
   responses:
     HTTPError:
       description: Bad Request

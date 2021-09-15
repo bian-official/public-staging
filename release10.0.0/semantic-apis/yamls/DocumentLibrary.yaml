@@ -1,29 +1,29 @@
 openapi: 3.0.1
 info:
-  title: Underwriting
-  description: This service domain manages the underwriting decision process for products as appropriate (including many loan types and some insurance products)
+  title: Document Library
+  description: This service domain captures, classifies, stores, maintains and retrieves any material document in any media as appropriate. It includes both electronic and physical distribution services
   version: 10.0.0
 servers:
 - description: SwaggerHub API Auto Mocking
-  url: https://virtserver.swaggerhub.com/B154/Underwriting/10.0.0
+  url: https://virtserver.swaggerhub.com/B154/DocumentLibrary/10.0.0
 paths:
-  /Underwriting/Evaluate:
+  /DocumentLibrary/Register:
     post:
       tags:
-      - CR - UnderwritingAssessment
-      summary: EvCR Evaluate an underwriting decision
-      description: EvCR Evaluate an underwriting decision
-      operationId: Evaluate
+      - CR - DocumentDirectoryEntry
+      summary: InCR Register a document in the central catalog
+      description: InCR Register a document in the central catalog
+      operationId: Register
       parameters: []
       requestBody:
-        $ref: '#/components/requestBodies/UnderwritingAssessment'
+        $ref: '#/components/requestBodies/DocumentDirectoryEntry'
       responses:
         200:
           description: Success
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/UnderwritingAssessment'
+                $ref: '#/components/schemas/DocumentDirectoryEntry'
         400:
           $ref: '#/components/responses/BadRequestError'
         401:
@@ -36,24 +36,24 @@ paths:
           $ref: '#/components/responses/TooManyRequestsError'
         500:
           $ref: '#/components/responses/InternalServerError'
-  /Underwriting/{underwritingId}/Update:
+  /DocumentLibrary/{documentlibraryId}/Update:
     put:
       tags:
-      - CR - UnderwritingAssessment
-      summary: UpCR Update details for an underwriting assessment
-      description: UpCR Update details for an underwriting assessment
+      - CR - DocumentDirectoryEntry
+      summary: UpCR Update details about a document in the catalog
+      description: UpCR Update details about a document in the catalog
       operationId: Update
       parameters:
-      - $ref: '#/components/parameters/UnderwritingID'
+      - $ref: '#/components/parameters/DocumentLibraryID'
       requestBody:
-        $ref: '#/components/requestBodies/UnderwritingAssessment'
+        $ref: '#/components/requestBodies/DocumentDirectoryEntry'
       responses:
         200:
           description: Success
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/UnderwritingAssessment'
+                $ref: '#/components/schemas/DocumentDirectoryEntry'
         400:
           $ref: '#/components/responses/BadRequestError'
         401:
@@ -66,22 +66,52 @@ paths:
           $ref: '#/components/responses/TooManyRequestsError'
         500:
           $ref: '#/components/responses/InternalServerError'
-  /Underwriting/{underwritingId}/Retrieve:
-    get:
+  /DocumentLibrary/{documentlibraryId}/Request:
+    put:
       tags:
-      - CR - UnderwritingAssessment
-      summary: ReCR Retrieve details about an underwriting assessment
-      description: ReCR Retrieve details about an underwriting assessment
-      operationId: Retrieve
+      - CR - DocumentDirectoryEntry
+      summary: RqCR Request provisioning of a document (from arranging initial capture to subsequent access)
+      description: RqCR Request provisioning of a document (from arranging initial capture to subsequent access)
+      operationId: Request
       parameters:
-      - $ref: '#/components/parameters/UnderwritingID'
+      - $ref: '#/components/parameters/DocumentLibraryID'
+      requestBody:
+        $ref: '#/components/requestBodies/DocumentDirectoryEntry'
       responses:
         200:
           description: Success
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/UnderwritingAssessment'
+                $ref: '#/components/schemas/DocumentDirectoryEntry'
+        400:
+          $ref: '#/components/responses/BadRequestError'
+        401:
+          $ref: '#/components/responses/UnauthorizedError'
+        403:
+          $ref: '#/components/responses/ForbiddenError'
+        404:
+          $ref: '#/components/responses/NotFoundError'
+        429:
+          $ref: '#/components/responses/TooManyRequestsError'
+        500:
+          $ref: '#/components/responses/InternalServerError'
+  /DocumentLibrary/{documentlibraryId}/Retrieve:
+    get:
+      tags:
+      - CR - DocumentDirectoryEntry
+      summary: ReCR Retrieve details about a document
+      description: ReCR Retrieve details about a document
+      operationId: Retrieve
+      parameters:
+      - $ref: '#/components/parameters/DocumentLibraryID'
+      responses:
+        200:
+          description: Success
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/DocumentDirectoryEntry'
         400:
           $ref: '#/components/responses/BadRequestError'
         401:
@@ -96,62 +126,74 @@ paths:
           $ref: '#/components/responses/InternalServerError'
 components:
   schemas:
-    UnderwritingAssessment:
+    DocumentDirectoryEntry:
       type: object
       properties:
-        UnderwritingGuidelines:
+        DocumentName:
           type: string
-        RequiredCustomerEmploymentHistoryDetails:
-          type: string
-        RequiredCustomerDebtOrAssetStatement:
-          type: string
-        RequiredCustomerCreditAssessment:
-          type: string
-        RequiredCollateralCoverage:
-          type: string
-        RequiredCustomerProductandServicePaymentHistory:
-          type: string
-        RequiredCustomerDocuments:
-          type: string
-        ProposedTransactionDetails:
-          type: string
-        ProductInstanceReference:
+        LocationReference:
           type: object
-        ProposedLoanTerms:
-          type: string
-        ProposedLoanAmount:
-          type: number
-        LoanPurpose:
-          type: string
-        CustomerReference:
+        BusinessUnitOrEmployeeReference:
           type: object
-        CustomerReferenceDetails:
+        ProductandServiceReference:
           type: object
-        CustomerProductEligibilityTerms:
-          type: string
-        CustomerEmploymentHistory:
-          type: string
-        CustomerIncomeStatement:
-          type: string
-        CustomerDebtStatement:
-          type: string
-        CustomerAssetStatement:
-          type: string
-        CustomerCreditAssessment:
-          type: string
-        CustomerProductandServicePaymentHistory:
-          type: string
-        CollateralItemReference:
+        ProductandServiceActionReference:
           type: object
-        CollateralItemType:
+        DocumentCreationDate:
           type: string
-        CollateralItemValuation:
+        DocumentCaptureDateOrTime:
           type: string
-        DocumentReference:
+        DocumentTypeOrDescription:
+          type: string
+        DocumentContent:
+          type: string
+        DocumentProvisioningHistory:
+          type: string
+        DocumentProvisioningRequest:
+          type: string
+        DocumentProvisioningSchedule:
+          type: string
+        DocumentProvisioningResult:
+          type: string
+        DocumentVersionHistory:
+          type: string
+        DocumentVersion:
+          type: string
+        DocumentVersionDate:
+          type: string
+        DocumentVerificationHistory:
+          type: string
+        DocumentVerificationTaskDescription:
+          type: string
+        DocumentVerificationServiceProviderReference:
           type: object
-        UnderwritingAssessmentDecision:
+        DocumentVerificationTaskResult:
           type: string
-        UnderwritingAssessmentWorkProduct:
+        DocumentAmendmentHistory:
+          type: string
+        DocumentAmendmentDescription:
+          type: string
+        DocumentAmendmentResult:
+          type: string
+        DocumentUpdateHistory:
+          type: string
+        DocumentUpdateDescription:
+          type: string
+        DocumentUpdateResult:
+          type: string
+        DocumentArchivingHistory:
+          type: string
+        DocumentArchivingAction:
+          type: string
+        DocumentArchiveReference:
+          type: object
+        DocumentMediaOrFormat:
+          type: string
+        DocumentSubjectReference:
+          type: object
+        DocumentLocation:
+          type: string
+        DocumentStatus:
           type: string
     HTTPError:
       type: object
@@ -163,8 +205,8 @@ components:
         message:
           type: string
   parameters:
-    UnderwritingID:
-      name: underwritingId
+    DocumentLibraryID:
+      name: documentlibraryId
       in: path
       required: true
       style: simple
@@ -172,12 +214,12 @@ components:
       schema:
         type: string
   requestBodies:
-    UnderwritingAssessment:
+    DocumentDirectoryEntry:
       required: true
       content:
         application/json:
           schema:
-            $ref: '#/components/schemas/UnderwritingAssessment'
+            $ref: '#/components/schemas/DocumentDirectoryEntry'
   responses:
     HTTPError:
       description: Bad Request

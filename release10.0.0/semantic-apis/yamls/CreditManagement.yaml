@@ -1,29 +1,29 @@
 openapi: 3.0.1
 info:
-  title: Underwriting
-  description: This service domain manages the underwriting decision process for products as appropriate (including many loan types and some insurance products)
+  title: Credit Management
+  description: This service domain provides a bank-wide/oversight function to qualify credit pricing for offered products and services to reflect the bank's appetite to write the business. This decision can override the standard product pricing procedure
   version: 10.0.0
 servers:
 - description: SwaggerHub API Auto Mocking
-  url: https://virtserver.swaggerhub.com/B154/Underwriting/10.0.0
+  url: https://virtserver.swaggerhub.com/B154/CreditManagement/10.0.0
 paths:
-  /Underwriting/Evaluate:
+  /CreditManagement/Evaluate:
     post:
       tags:
-      - CR - UnderwritingAssessment
-      summary: EvCR Evaluate an underwriting decision
-      description: EvCR Evaluate an underwriting decision
+      - CR - CreditPricingAssessment
+      summary: EvCR Evaluate a proposed transaction pricing against group credit policy
+      description: EvCR Evaluate a proposed transaction pricing against group credit policy
       operationId: Evaluate
       parameters: []
       requestBody:
-        $ref: '#/components/requestBodies/UnderwritingAssessment'
+        $ref: '#/components/requestBodies/CreditPricingAssessment'
       responses:
         200:
           description: Success
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/UnderwritingAssessment'
+                $ref: '#/components/schemas/CreditPricingAssessment'
         400:
           $ref: '#/components/responses/BadRequestError'
         401:
@@ -36,24 +36,24 @@ paths:
           $ref: '#/components/responses/TooManyRequestsError'
         500:
           $ref: '#/components/responses/InternalServerError'
-  /Underwriting/{underwritingId}/Update:
+  /CreditManagement/{creditmanagementId}/Update:
     put:
       tags:
-      - CR - UnderwritingAssessment
-      summary: UpCR Update details for an underwriting assessment
-      description: UpCR Update details for an underwriting assessment
+      - CR - CreditPricingAssessment
+      summary: UpCR Update details of an active credit pricing assessment
+      description: UpCR Update details of an active credit pricing assessment
       operationId: Update
       parameters:
-      - $ref: '#/components/parameters/UnderwritingID'
+      - $ref: '#/components/parameters/CreditManagementID'
       requestBody:
-        $ref: '#/components/requestBodies/UnderwritingAssessment'
+        $ref: '#/components/requestBodies/CreditPricingAssessment'
       responses:
         200:
           description: Success
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/UnderwritingAssessment'
+                $ref: '#/components/schemas/CreditPricingAssessment'
         400:
           $ref: '#/components/responses/BadRequestError'
         401:
@@ -66,22 +66,22 @@ paths:
           $ref: '#/components/responses/TooManyRequestsError'
         500:
           $ref: '#/components/responses/InternalServerError'
-  /Underwriting/{underwritingId}/Retrieve:
+  /CreditManagement/{creditmanagementId}/Retrieve:
     get:
       tags:
-      - CR - UnderwritingAssessment
-      summary: ReCR Retrieve details about an underwriting assessment
-      description: ReCR Retrieve details about an underwriting assessment
+      - CR - CreditPricingAssessment
+      summary: ReCR Retrieve details about a credit pricing assessment
+      description: ReCR Retrieve details about a credit pricing assessment
       operationId: Retrieve
       parameters:
-      - $ref: '#/components/parameters/UnderwritingID'
+      - $ref: '#/components/parameters/CreditManagementID'
       responses:
         200:
           description: Success
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/UnderwritingAssessment'
+                $ref: '#/components/schemas/CreditPricingAssessment'
         400:
           $ref: '#/components/responses/BadRequestError'
         401:
@@ -96,62 +96,30 @@ paths:
           $ref: '#/components/responses/InternalServerError'
 components:
   schemas:
-    UnderwritingAssessment:
+    CreditPricingAssessment:
       type: object
       properties:
-        UnderwritingGuidelines:
-          type: string
-        RequiredCustomerEmploymentHistoryDetails:
-          type: string
-        RequiredCustomerDebtOrAssetStatement:
-          type: string
-        RequiredCustomerCreditAssessment:
-          type: string
-        RequiredCollateralCoverage:
-          type: string
-        RequiredCustomerProductandServicePaymentHistory:
-          type: string
-        RequiredCustomerDocuments:
-          type: string
-        ProposedTransactionDetails:
-          type: string
-        ProductInstanceReference:
+        BusinessUnitReference:
           type: object
-        ProposedLoanTerms:
-          type: string
-        ProposedLoanAmount:
-          type: number
-        LoanPurpose:
-          type: string
         CustomerReference:
           type: object
-        CustomerReferenceDetails:
+        SectorReference:
           type: object
-        CustomerProductEligibilityTerms:
+        ProductType:
           type: string
-        CustomerEmploymentHistory:
-          type: string
-        CustomerIncomeStatement:
-          type: string
-        CustomerDebtStatement:
-          type: string
-        CustomerAssetStatement:
-          type: string
-        CustomerCreditAssessment:
-          type: string
-        CustomerProductandServicePaymentHistory:
-          type: string
-        CollateralItemReference:
+        ProposedTransactionReference:
           type: object
-        CollateralItemType:
+        ProposedTransactionRecord:
           type: string
-        CollateralItemValuation:
+        ProposedTransactionType:
           type: string
-        DocumentReference:
-          type: object
-        UnderwritingAssessmentDecision:
+        ProposedTransactionAmount:
+          type: number
+        ProposedTransactionRecordDate:
           type: string
-        UnderwritingAssessmentWorkProduct:
+        ProposedTransactionBookingEntity:
+          type: string
+        ProposedTransactionCreditPricingAssessment:
           type: string
     HTTPError:
       type: object
@@ -163,8 +131,8 @@ components:
         message:
           type: string
   parameters:
-    UnderwritingID:
-      name: underwritingId
+    CreditManagementID:
+      name: creditmanagementId
       in: path
       required: true
       style: simple
@@ -172,12 +140,12 @@ components:
       schema:
         type: string
   requestBodies:
-    UnderwritingAssessment:
+    CreditPricingAssessment:
       required: true
       content:
         application/json:
           schema:
-            $ref: '#/components/schemas/UnderwritingAssessment'
+            $ref: '#/components/schemas/CreditPricingAssessment'
   responses:
     HTTPError:
       description: Bad Request

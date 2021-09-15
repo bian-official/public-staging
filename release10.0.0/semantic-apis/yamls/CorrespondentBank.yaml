@@ -1,0 +1,835 @@
+openapi: 3.0.1
+info:
+  title: Correspondent Bank
+  description: This service domain fulfils correspondent banking arrangements between the bank and its correspondent banking partners. &nbsp;This includes handling the clearing and settlement of payments to/from the correspondent banks, typically using the SWIFT payment network.
+  version: 10.0.0
+servers:
+- description: SwaggerHub API Auto Mocking
+  url: https://virtserver.swaggerhub.com/B154/CorrespondentBank/10.0.0
+paths:
+  /CorrespondentBank/Initiate:
+    post:
+      tags:
+      - CR - CorrespondentBankArrangement
+      summary: InCR Initialize a correspondent fulfillment arrangement
+      description: InCR Initialize a correspondent fulfillment arrangement
+      operationId: Initiate
+      parameters: []
+      requestBody:
+        $ref: '#/components/requestBodies/CorrespondentBankArrangement'
+      responses:
+        200:
+          description: Success
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/CorrespondentBankArrangement'
+        400:
+          $ref: '#/components/responses/BadRequestError'
+        401:
+          $ref: '#/components/responses/UnauthorizedError'
+        403:
+          $ref: '#/components/responses/ForbiddenError'
+        404:
+          $ref: '#/components/responses/NotFoundError'
+        429:
+          $ref: '#/components/responses/TooManyRequestsError'
+        500:
+          $ref: '#/components/responses/InternalServerError'
+  /CorrespondentBank/{correspondentbankId}/Update:
+    put:
+      tags:
+      - CR - CorrespondentBankArrangement
+      summary: UpCR Update details of e correspondent fulfillment arrangement
+      description: UpCR Update details of e correspondent fulfillment arrangement
+      operationId: Update
+      parameters:
+      - $ref: '#/components/parameters/CorrespondentBankID'
+      requestBody:
+        $ref: '#/components/requestBodies/UpdateCorrespondentBankArrangementRequest'
+      responses:
+        200:
+          description: Success
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/UpdateCorrespondentBankArrangementResponse'
+        400:
+          $ref: '#/components/responses/BadRequestError'
+        401:
+          $ref: '#/components/responses/UnauthorizedError'
+        403:
+          $ref: '#/components/responses/ForbiddenError'
+        404:
+          $ref: '#/components/responses/NotFoundError'
+        429:
+          $ref: '#/components/responses/TooManyRequestsError'
+        500:
+          $ref: '#/components/responses/InternalServerError'
+  /CorrespondentBank/{correspondentbankId}/Retrieve:
+    get:
+      tags:
+      - CR - CorrespondentBankArrangement
+      summary: ReCR Retrieve details about a correspondent fulfillment arrangement
+      description: ReCR Retrieve details about a correspondent fulfillment arrangement
+      operationId: Retrieve
+      parameters:
+      - $ref: '#/components/parameters/CorrespondentBankID'
+      responses:
+        200:
+          description: Success
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/RetrieveCorrespondentBankArrangementResponse'
+        400:
+          $ref: '#/components/responses/BadRequestError'
+        401:
+          $ref: '#/components/responses/UnauthorizedError'
+        403:
+          $ref: '#/components/responses/ForbiddenError'
+        404:
+          $ref: '#/components/responses/NotFoundError'
+        429:
+          $ref: '#/components/responses/TooManyRequestsError'
+        500:
+          $ref: '#/components/responses/InternalServerError'
+  /CorrespondentBank/{correspondentbankId}/Request:
+    put:
+      tags:
+      - CR - CorrespondentBankArrangement
+      summary: RqBQ Request reconciliation processing for a correspondent
+      description: RqBQ Request reconciliation processing for a correspondent
+      operationId: Request
+      parameters:
+      - $ref: '#/components/parameters/CorrespondentBankID'
+      responses:
+        200:
+          description: Success
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Reconciliations'
+        400:
+          $ref: '#/components/responses/BadRequestError'
+        401:
+          $ref: '#/components/responses/UnauthorizedError'
+        403:
+          $ref: '#/components/responses/ForbiddenError'
+        404:
+          $ref: '#/components/responses/NotFoundError'
+        429:
+          $ref: '#/components/responses/TooManyRequestsError'
+        500:
+          $ref: '#/components/responses/InternalServerError'
+  /CorrespondentBank/{correspondentbankId}/InboundPayments/{inboundpaymentsId}/Update:
+    put:
+      tags:
+      - BQ - InboundPayments
+      summary: UpBQ Update inbound payment transactions for a correspondent
+      description: UpBQ Update inbound payment transactions for a correspondent
+      operationId: UpdateInboundPayments
+      parameters:
+      - $ref: '#/components/parameters/CorrespondentBankID'
+      - $ref: '#/components/parameters/InboundPaymentsID'
+      requestBody:
+        $ref: '#/components/requestBodies/InboundPayments'
+      responses:
+        200:
+          description: Success
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/InboundPayments'
+        400:
+          $ref: '#/components/responses/BadRequestError'
+        401:
+          $ref: '#/components/responses/UnauthorizedError'
+        403:
+          $ref: '#/components/responses/ForbiddenError'
+        404:
+          $ref: '#/components/responses/NotFoundError'
+        429:
+          $ref: '#/components/responses/TooManyRequestsError'
+        500:
+          $ref: '#/components/responses/InternalServerError'
+  /CorrespondentBank/{correspondentbankId}/InboundPayments/{inboundpaymentsId}/Execute:
+    put:
+      tags:
+      - BQ - InboundPayments
+      summary: ExBQ Execute inbound payment transactions from a correspondent
+      description: ExBQ Execute inbound payment transactions from a correspondent
+      operationId: ExecuteInboundPayments
+      parameters:
+      - $ref: '#/components/parameters/CorrespondentBankID'
+      - $ref: '#/components/parameters/InboundPaymentsID'
+      requestBody:
+        $ref: '#/components/requestBodies/InboundPayments'
+      responses:
+        200:
+          description: Success
+          content:
+            application/json:
+              schema:
+                type: boolean
+                example: true
+        400:
+          $ref: '#/components/responses/BadRequestError'
+        401:
+          $ref: '#/components/responses/UnauthorizedError'
+        403:
+          $ref: '#/components/responses/ForbiddenError'
+        404:
+          $ref: '#/components/responses/NotFoundError'
+        429:
+          $ref: '#/components/responses/TooManyRequestsError'
+        500:
+          $ref: '#/components/responses/InternalServerError'
+  /CorrespondentBank/{correspondentbankId}/InboundPayments/{inboundpaymentsId}/Retrieve:
+    get:
+      tags:
+      - BQ - InboundPayments
+      summary: ReBQ Retrieve details about inbound payments
+      description: ReBQ Retrieve details about inbound payments
+      operationId: RetrieveInboundPayments
+      parameters:
+      - $ref: '#/components/parameters/CorrespondentBankID'
+      - $ref: '#/components/parameters/InboundPaymentsID'
+      responses:
+        200:
+          description: Success
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/RetrieveInboundPaymentsResponse'
+        400:
+          $ref: '#/components/responses/BadRequestError'
+        401:
+          $ref: '#/components/responses/UnauthorizedError'
+        403:
+          $ref: '#/components/responses/ForbiddenError'
+        404:
+          $ref: '#/components/responses/NotFoundError'
+        429:
+          $ref: '#/components/responses/TooManyRequestsError'
+        500:
+          $ref: '#/components/responses/InternalServerError'
+  /CorrespondentBank/{correspondentbankId}/OutboundPayments/{outboundpaymentsId}/Update:
+    put:
+      tags:
+      - BQ - OutboundPayments
+      summary: UpBQ Update outbound payment transactions to a correspondent
+      description: UpBQ Update outbound payment transactions to a correspondent
+      operationId: UpdateOutboundPayments
+      parameters:
+      - $ref: '#/components/parameters/CorrespondentBankID'
+      - $ref: '#/components/parameters/OutboundPaymentsID'
+      requestBody:
+        $ref: '#/components/requestBodies/OutboundPayments'
+      responses:
+        200:
+          description: Success
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/OutboundPayments'
+        400:
+          $ref: '#/components/responses/BadRequestError'
+        401:
+          $ref: '#/components/responses/UnauthorizedError'
+        403:
+          $ref: '#/components/responses/ForbiddenError'
+        404:
+          $ref: '#/components/responses/NotFoundError'
+        429:
+          $ref: '#/components/responses/TooManyRequestsError'
+        500:
+          $ref: '#/components/responses/InternalServerError'
+  /CorrespondentBank/{correspondentbankId}/OutboundPayments/{outboundpaymentsId}/Execute:
+    put:
+      tags:
+      - BQ - OutboundPayments
+      summary: ExBQ Execute outbound payment transactions to a correspondent
+      description: ExBQ Execute outbound payment transactions to a correspondent
+      operationId: ExecuteOutboundPayments
+      parameters:
+      - $ref: '#/components/parameters/CorrespondentBankID'
+      - $ref: '#/components/parameters/OutboundPaymentsID'
+      requestBody:
+        $ref: '#/components/requestBodies/OutboundPayments'
+      responses:
+        200:
+          description: Success
+          content:
+            application/json:
+              schema:
+                type: boolean
+                example: true
+        400:
+          $ref: '#/components/responses/BadRequestError'
+        401:
+          $ref: '#/components/responses/UnauthorizedError'
+        403:
+          $ref: '#/components/responses/ForbiddenError'
+        404:
+          $ref: '#/components/responses/NotFoundError'
+        429:
+          $ref: '#/components/responses/TooManyRequestsError'
+        500:
+          $ref: '#/components/responses/InternalServerError'
+  /CorrespondentBank/{correspondentbankId}/OutboundPayments/{outboundpaymentsId}/Retrieve:
+    get:
+      tags:
+      - BQ - OutboundPayments
+      summary: ReBQ Retrieve details about outbound payments
+      description: ReBQ Retrieve details about outbound payments
+      operationId: RetrieveOutboundPayments
+      parameters:
+      - $ref: '#/components/parameters/CorrespondentBankID'
+      - $ref: '#/components/parameters/OutboundPaymentsID'
+      responses:
+        200:
+          description: Success
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/RetrieveOutboundPaymentsResponse'
+        400:
+          $ref: '#/components/responses/BadRequestError'
+        401:
+          $ref: '#/components/responses/UnauthorizedError'
+        403:
+          $ref: '#/components/responses/ForbiddenError'
+        404:
+          $ref: '#/components/responses/NotFoundError'
+        429:
+          $ref: '#/components/responses/TooManyRequestsError'
+        500:
+          $ref: '#/components/responses/InternalServerError'
+  /CorrespondentBank/{correspondentbankId}/ClearingandSettlement/{clearingandsettlementId}/Update:
+    put:
+      tags:
+      - BQ - ClearingandSettlement
+      summary: UpBQ Update a clearing and settlement transaction
+      description: UpBQ Update a clearing and settlement transaction
+      operationId: UpdateClearingandSettlement
+      parameters:
+      - $ref: '#/components/parameters/CorrespondentBankID'
+      - $ref: '#/components/parameters/ClearingandSettlementID'
+      requestBody:
+        $ref: '#/components/requestBodies/ClearingandSettlement'
+      responses:
+        200:
+          description: Success
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ClearingandSettlement'
+        400:
+          $ref: '#/components/responses/BadRequestError'
+        401:
+          $ref: '#/components/responses/UnauthorizedError'
+        403:
+          $ref: '#/components/responses/ForbiddenError'
+        404:
+          $ref: '#/components/responses/NotFoundError'
+        429:
+          $ref: '#/components/responses/TooManyRequestsError'
+        500:
+          $ref: '#/components/responses/InternalServerError'
+  /CorrespondentBank/{correspondentbankId}/ClearingandSettlement/{clearingandsettlementId}/Request:
+    put:
+      tags:
+      - BQ - ClearingandSettlement
+      summary: RqBQ Request clearing and settlement processing for a correspondent
+      description: RqBQ Request clearing and settlement processing for a correspondent
+      operationId: RequestClearingandSettlement
+      parameters:
+      - $ref: '#/components/parameters/CorrespondentBankID'
+      - $ref: '#/components/parameters/ClearingandSettlementID'
+      requestBody:
+        $ref: '#/components/requestBodies/ClearingandSettlement'
+      responses:
+        200:
+          description: Success
+          content:
+            application/json:
+              schema:
+                type: boolean
+                example: true
+        400:
+          $ref: '#/components/responses/BadRequestError'
+        401:
+          $ref: '#/components/responses/UnauthorizedError'
+        403:
+          $ref: '#/components/responses/ForbiddenError'
+        404:
+          $ref: '#/components/responses/NotFoundError'
+        429:
+          $ref: '#/components/responses/TooManyRequestsError'
+        500:
+          $ref: '#/components/responses/InternalServerError'
+  /CorrespondentBank/{correspondentbankId}/ClearingandSettlement/{clearingandsettlementId}/Retrieve:
+    get:
+      tags:
+      - BQ - ClearingandSettlement
+      summary: ReBQ Retrieve details about clearing and settlement activity with a correspondent
+      description: ReBQ Retrieve details about clearing and settlement activity with a correspondent
+      operationId: RetrieveClearingandSettlement
+      parameters:
+      - $ref: '#/components/parameters/CorrespondentBankID'
+      - $ref: '#/components/parameters/ClearingandSettlementID'
+      responses:
+        200:
+          description: Success
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/RetrieveClearingandSettlementResponse'
+        400:
+          $ref: '#/components/responses/BadRequestError'
+        401:
+          $ref: '#/components/responses/UnauthorizedError'
+        403:
+          $ref: '#/components/responses/ForbiddenError'
+        404:
+          $ref: '#/components/responses/NotFoundError'
+        429:
+          $ref: '#/components/responses/TooManyRequestsError'
+        500:
+          $ref: '#/components/responses/InternalServerError'
+components:
+  schemas:
+    CorrespondentBankArrangement:
+      type: object
+      properties:
+        CorrespondentBankArrangementReference:
+          type: object
+        CorrespondentBankArrangement:
+          type: string
+        CorrespondentBankServicingSchedule:
+          type: string
+        HolidayOrTimezoneSchedule:
+          type: string
+        VostroAccountReference:
+          type: object
+        NostroMirrorAccountReference:
+          type: object
+    ClearingandSettlement:
+      type: object
+      properties:
+        CorrespondentBankClearingArrangementReference:
+          type: object
+        CorrespondentBankClearingArrangementClearingInstructions:
+          type: string
+        CorrespondentBankClearingArrangementSettlementInstructions:
+          type: string
+        MirrorNostroAccountReference:
+          type: object
+        ClearingTransaction:
+          type: string
+        SettlementTransaction:
+          type: string
+    InboundPayments:
+      type: object
+      properties:
+        CorrespondentTransactionRecord:
+          type: string
+        SWIFTTransactionReference:
+          type: object
+        PayerBankReference:
+          type: object
+        PayerReference:
+          type: object
+        CorrespondedBankReference:
+          type: object
+        PayerProductInstanceReference:
+          type: object
+        PayeeReference:
+          type: object
+        PayeeProductInstanceReference:
+          type: object
+        PayeeBankReference:
+          type: object
+        SpecialInstructions:
+          type: string
+        Amount:
+          type: string
+        Currency:
+          type: string
+        DateType:
+          type: string
+        Date:
+          type: string
+    Reconciliations:
+      type: object
+      properties:
+        CorrespondentBankReconciliationTaskReference:
+          type: object
+        CorrespondentBankReconciliationTaskWorkProducts:
+          type: string
+        CorrespondentBankReconciliationTaskResult:
+          type: string
+    OutboundPayments:
+      type: object
+      properties:
+        CorrespondentTransactionRecord:
+          type: string
+        SWIFTTransactionReference:
+          type: object
+        PayerBankReference:
+          type: object
+        PayerReference:
+          type: object
+        CorrespondedBankReference:
+          type: object
+        PayerProductInstanceReference:
+          type: object
+        PayeeReference:
+          type: object
+        PayeeProductInstanceReference:
+          type: object
+        PayeeBankReference:
+          type: object
+        SpecialInstructions:
+          type: string
+        Amount:
+          type: string
+        Currency:
+          type: string
+        DateType:
+          type: string
+        Date:
+          type: string
+    HTTPError:
+      type: object
+      properties:
+        status_code:
+          type: string
+        status:
+          type: string
+        message:
+          type: string
+    UpdateCorrespondentBankArrangementRequest:
+      type: object
+      properties:
+        CorrespondentBankArrangement:
+          type: object
+          properties:
+            CorrespondentBankArrangementReference:
+              type: object
+            CorrespondentBankServicingSchedule:
+              type: string
+            HolidayOrTimezoneSchedule:
+              type: string
+            VostroAccountReference:
+              type: object
+            NostroMirrorAccountReference:
+              type: object
+        Reconciliations:
+          type: object
+          properties:
+            CorrespondentBankReconciliationTaskReference:
+              type: object
+            CorrespondentBankReconciliationTaskWorkProducts:
+              type: string
+            CorrespondentBankReconciliationTaskResult:
+              type: string
+    UpdateCorrespondentBankArrangementResponse:
+      type: object
+      properties:
+        CorrespondentBankArrangement:
+          type: object
+          properties:
+            CorrespondentBankServicingSchedule:
+              type: string
+            HolidayOrTimezoneSchedule:
+              type: string
+            VostroAccountReference:
+              type: object
+            NostroMirrorAccountReference:
+              type: object
+        Reconciliations:
+          type: object
+          properties:
+            CorrespondentBankReconciliationTaskReference:
+              type: object
+            CorrespondentBankReconciliationTaskWorkProducts:
+              type: string
+            CorrespondentBankReconciliationTaskResult:
+              type: string
+    RetrieveCorrespondentBankArrangementResponse:
+      type: object
+      properties:
+        CorrespondentBankArrangement:
+          type: object
+          properties:
+            CorrespondentBankArrangementReference:
+              type: object
+            CorrespondentBankServicingSchedule:
+              type: string
+            HolidayOrTimezoneSchedule:
+              type: string
+            VostroAccountReference:
+              type: object
+            NostroMirrorAccountReference:
+              type: object
+        InboundPayments:
+          type: object
+          properties:
+            PayerBankReference:
+              type: object
+            PayerReference:
+              type: object
+            CorrespondedBankReference:
+              type: object
+            PayeeReference:
+              type: object
+            PayeeProductInstanceReference:
+              type: object
+            PayeeBankReference:
+              type: object
+            SpecialInstructions:
+              type: string
+            Currency:
+              type: string
+            DateType:
+              type: string
+        Reconciliations:
+          type: object
+          properties:
+            CorrespondentBankReconciliationTaskReference:
+              type: object
+            CorrespondentBankReconciliationTaskWorkProducts:
+              type: string
+            CorrespondentBankReconciliationTaskResult:
+              type: string
+    RetrieveInboundPaymentsResponse:
+      type: object
+      properties:
+        CorrespondentBankArrangement:
+          type: object
+          properties:
+            CorrespondentBankArrangementReference:
+              type: object
+            CorrespondentBankServicingSchedule:
+              type: string
+            HolidayOrTimezoneSchedule:
+              type: string
+            VostroAccountReference:
+              type: object
+            NostroMirrorAccountReference:
+              type: object
+        InboundPayments:
+          type: object
+          properties:
+            CorrespondentTransactionRecord:
+              type: string
+            SWIFTTransactionReference:
+              type: object
+            PayerBankReference:
+              type: object
+            PayerReference:
+              type: object
+            CorrespondedBankReference:
+              type: object
+            PayerProductInstanceReference:
+              type: object
+            PayeeReference:
+              type: object
+            PayeeProductInstanceReference:
+              type: object
+            PayeeBankReference:
+              type: object
+            SpecialInstructions:
+              type: string
+            Amount:
+              type: string
+            Currency:
+              type: string
+            DateType:
+              type: string
+    RetrieveOutboundPaymentsResponse:
+      type: object
+      properties:
+        CorrespondentBankArrangement:
+          type: object
+          properties:
+            CorrespondentBankArrangementReference:
+              type: object
+            CorrespondentBankServicingSchedule:
+              type: string
+            HolidayOrTimezoneSchedule:
+              type: string
+            VostroAccountReference:
+              type: object
+            NostroMirrorAccountReference:
+              type: object
+        OutboundPayments:
+          type: object
+          properties:
+            CorrespondentTransactionRecord:
+              type: string
+            SWIFTTransactionReference:
+              type: object
+            PayerBankReference:
+              type: object
+            PayerReference:
+              type: object
+            CorrespondedBankReference:
+              type: object
+            PayerProductInstanceReference:
+              type: object
+            PayeeReference:
+              type: object
+            PayeeProductInstanceReference:
+              type: object
+            PayeeBankReference:
+              type: object
+            SpecialInstructions:
+              type: string
+            Amount:
+              type: string
+            Currency:
+              type: string
+            DateType:
+              type: string
+    RetrieveClearingandSettlementResponse:
+      type: object
+      properties:
+        CorrespondentBankArrangement:
+          type: object
+          properties:
+            CorrespondentBankArrangementReference:
+              type: object
+            CorrespondentBankServicingSchedule:
+              type: string
+            HolidayOrTimezoneSchedule:
+              type: string
+            VostroAccountReference:
+              type: object
+            NostroMirrorAccountReference:
+              type: object
+        ClearingandSettlement:
+          type: object
+          properties:
+            ClearingTransaction:
+              type: string
+            SettlementTransaction:
+              type: string
+  parameters:
+    CorrespondentBankID:
+      name: correspondentbankId
+      in: path
+      required: true
+      style: simple
+      explode: false
+      schema:
+        type: string
+    ClearingandSettlementID:
+      name: clearingandsettlementId
+      in: path
+      required: true
+      style: simple
+      explode: false
+      schema:
+        type: string
+    InboundPaymentsID:
+      name: inboundpaymentsId
+      in: path
+      required: true
+      style: simple
+      explode: false
+      schema:
+        type: string
+    ReconciliationsID:
+      name: reconciliationsId
+      in: path
+      required: true
+      style: simple
+      explode: false
+      schema:
+        type: string
+    OutboundPaymentsID:
+      name: outboundpaymentsId
+      in: path
+      required: true
+      style: simple
+      explode: false
+      schema:
+        type: string
+  requestBodies:
+    CorrespondentBankArrangement:
+      required: true
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/CorrespondentBankArrangement'
+    UpdateCorrespondentBankArrangementRequest:
+      required: true
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/UpdateCorrespondentBankArrangementRequest'
+    InboundPayments:
+      required: true
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/InboundPayments'
+    OutboundPayments:
+      required: true
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/OutboundPayments'
+    ClearingandSettlement:
+      required: true
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/ClearingandSettlement'
+  responses:
+    HTTPError:
+      description: Bad Request
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/HTTPError'
+    BadRequestError:
+      description: Bad Request
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/HTTPError'
+    UnauthorizedError:
+      description: Unauthorized
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/HTTPError'
+    ForbiddenError:
+      description: Forbidden
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/HTTPError'
+    NotFoundError:
+      description: Not Found
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/HTTPError'
+    TooManyRequestsError:
+      description: Too Many Requests
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/HTTPError'
+    InternalServerError:
+      description: Internal Server Error
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/HTTPError'
+...

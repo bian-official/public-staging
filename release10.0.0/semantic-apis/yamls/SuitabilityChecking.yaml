@@ -1,29 +1,29 @@
 openapi: 3.0.1
 info:
-  title: Underwriting
-  description: This service domain manages the underwriting decision process for products as appropriate (including many loan types and some insurance products)
+  title: Suitability Checking
+  description: Confirm that all involved counterparties are suitable for a proposed market trade.
   version: 10.0.0
 servers:
 - description: SwaggerHub API Auto Mocking
-  url: https://virtserver.swaggerhub.com/B154/Underwriting/10.0.0
+  url: https://virtserver.swaggerhub.com/B154/SuitabilityChecking/10.0.0
 paths:
-  /Underwriting/Evaluate:
+  /SuitabilityChecking/Evaluate:
     post:
       tags:
-      - CR - UnderwritingAssessment
-      summary: EvCR Evaluate an underwriting decision
-      description: EvCR Evaluate an underwriting decision
+      - CR - SuitabilityAssessment
+      summary: EvCR Evaluate the suitability of a proposed transaction
+      description: EvCR Evaluate the suitability of a proposed transaction
       operationId: Evaluate
       parameters: []
       requestBody:
-        $ref: '#/components/requestBodies/UnderwritingAssessment'
+        $ref: '#/components/requestBodies/SuitabilityAssessment'
       responses:
         200:
           description: Success
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/UnderwritingAssessment'
+                $ref: '#/components/schemas/SuitabilityAssessment'
         400:
           $ref: '#/components/responses/BadRequestError'
         401:
@@ -36,24 +36,24 @@ paths:
           $ref: '#/components/responses/TooManyRequestsError'
         500:
           $ref: '#/components/responses/InternalServerError'
-  /Underwriting/{underwritingId}/Update:
+  /SuitabilityChecking/{suitabilitycheckingId}/Update:
     put:
       tags:
-      - CR - UnderwritingAssessment
-      summary: UpCR Update details for an underwriting assessment
-      description: UpCR Update details for an underwriting assessment
+      - CR - SuitabilityAssessment
+      summary: UpCR Update details of a suitability evaluation
+      description: UpCR Update details of a suitability evaluation
       operationId: Update
       parameters:
-      - $ref: '#/components/parameters/UnderwritingID'
+      - $ref: '#/components/parameters/SuitabilityCheckingID'
       requestBody:
-        $ref: '#/components/requestBodies/UnderwritingAssessment'
+        $ref: '#/components/requestBodies/SuitabilityAssessment'
       responses:
         200:
           description: Success
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/UnderwritingAssessment'
+                $ref: '#/components/schemas/SuitabilityAssessment'
         400:
           $ref: '#/components/responses/BadRequestError'
         401:
@@ -66,22 +66,52 @@ paths:
           $ref: '#/components/responses/TooManyRequestsError'
         500:
           $ref: '#/components/responses/InternalServerError'
-  /Underwriting/{underwritingId}/Retrieve:
-    get:
+  /SuitabilityChecking/{suitabilitycheckingId}/Request:
+    put:
       tags:
-      - CR - UnderwritingAssessment
-      summary: ReCR Retrieve details about an underwriting assessment
-      description: ReCR Retrieve details about an underwriting assessment
-      operationId: Retrieve
+      - CR - SuitabilityAssessment
+      summary: RqCR Request manual intervention into an active evaluation
+      description: RqCR Request manual intervention into an active evaluation
+      operationId: Request
       parameters:
-      - $ref: '#/components/parameters/UnderwritingID'
+      - $ref: '#/components/parameters/SuitabilityCheckingID'
+      requestBody:
+        $ref: '#/components/requestBodies/SuitabilityAssessment'
       responses:
         200:
           description: Success
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/UnderwritingAssessment'
+                $ref: '#/components/schemas/SuitabilityAssessment'
+        400:
+          $ref: '#/components/responses/BadRequestError'
+        401:
+          $ref: '#/components/responses/UnauthorizedError'
+        403:
+          $ref: '#/components/responses/ForbiddenError'
+        404:
+          $ref: '#/components/responses/NotFoundError'
+        429:
+          $ref: '#/components/responses/TooManyRequestsError'
+        500:
+          $ref: '#/components/responses/InternalServerError'
+  /SuitabilityChecking/{suitabilitycheckingId}/Retrieve:
+    get:
+      tags:
+      - CR - SuitabilityAssessment
+      summary: ReCR Retrieve details about a suitability evaluation
+      description: ReCR Retrieve details about a suitability evaluation
+      operationId: Retrieve
+      parameters:
+      - $ref: '#/components/parameters/SuitabilityCheckingID'
+      responses:
+        200:
+          description: Success
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/SuitabilityAssessment'
         400:
           $ref: '#/components/responses/BadRequestError'
         401:
@@ -96,62 +126,40 @@ paths:
           $ref: '#/components/responses/InternalServerError'
 components:
   schemas:
-    UnderwritingAssessment:
+    SuitabilityAssessment:
       type: object
       properties:
-        UnderwritingGuidelines:
-          type: string
-        RequiredCustomerEmploymentHistoryDetails:
-          type: string
-        RequiredCustomerDebtOrAssetStatement:
-          type: string
-        RequiredCustomerCreditAssessment:
-          type: string
-        RequiredCollateralCoverage:
-          type: string
-        RequiredCustomerProductandServicePaymentHistory:
-          type: string
-        RequiredCustomerDocuments:
-          type: string
-        ProposedTransactionDetails:
-          type: string
-        ProductInstanceReference:
+        EmployeeOrBusinessUnitReference:
           type: object
-        ProposedLoanTerms:
-          type: string
-        ProposedLoanAmount:
-          type: number
-        LoanPurpose:
-          type: string
         CustomerReference:
           type: object
-        CustomerReferenceDetails:
+        MarketOrderType:
+          type: string
+        InvestmentPortfolioInstanceReference:
           type: object
-        CustomerProductEligibilityTerms:
+        CustomerMarketOrderProcessingInstruction:
           type: string
-        CustomerEmploymentHistory:
+        ProposedMarketOrderTransaction:
           type: string
-        CustomerIncomeStatement:
-          type: string
-        CustomerDebtStatement:
-          type: string
-        CustomerAssetStatement:
-          type: string
-        CustomerCreditAssessment:
-          type: string
-        CustomerProductandServicePaymentHistory:
-          type: string
-        CollateralItemReference:
+        InvestmentAccountArrangementInstanceReference:
           type: object
-        CollateralItemType:
+        SecurityType:
           type: string
-        CollateralItemValuation:
+        Amount:
           type: string
-        DocumentReference:
+        DateType:
+          type: string
+        Date:
+          type: string
+        SuitabilityAssessmentType:
+          type: string
+        DocumentDirectoryEntryInstanceReference:
           type: object
-        UnderwritingAssessmentDecision:
+        CorrespondenceInstanceReference:
+          type: object
+        SuitabilityComplianceAssessmentWorkProducts:
           type: string
-        UnderwritingAssessmentWorkProduct:
+        SuitabilityComplianceAssessmentResult:
           type: string
     HTTPError:
       type: object
@@ -163,8 +171,8 @@ components:
         message:
           type: string
   parameters:
-    UnderwritingID:
-      name: underwritingId
+    SuitabilityCheckingID:
+      name: suitabilitycheckingId
       in: path
       required: true
       style: simple
@@ -172,12 +180,12 @@ components:
       schema:
         type: string
   requestBodies:
-    UnderwritingAssessment:
+    SuitabilityAssessment:
       required: true
       content:
         application/json:
           schema:
-            $ref: '#/components/schemas/UnderwritingAssessment'
+            $ref: '#/components/schemas/SuitabilityAssessment'
   responses:
     HTTPError:
       description: Bad Request

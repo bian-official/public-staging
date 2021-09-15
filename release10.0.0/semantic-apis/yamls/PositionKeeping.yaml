@@ -1,29 +1,29 @@
 openapi: 3.0.1
 info:
-  title: Transaction Authorization
-  description: This service domain handles risk based authorization for interactive customer transactions. This combines the context (channel) transaction, customer details and recent activity analysis as appropriate. The authorization may require a specific level of party/customer authentication to get approval.
+  title: Position Keeping
+  description: This service domain maintains a financial transaction log to support production. Reconciled financial transactions are subsequently posted to the accounting systems
   version: 10.0.0
 servers:
 - description: SwaggerHub API Auto Mocking
-  url: https://virtserver.swaggerhub.com/B154/TransactionAuthorization/10.0.0
+  url: https://virtserver.swaggerhub.com/B154/PositionKeeping/10.0.0
 paths:
-  /TransactionAuthorization/Evaluate:
+  /PositionKeeping/Initiate:
     post:
       tags:
-      - CR - InteractiveTransactionAssessment
-      summary: EvCR Evaluate a proposed interactive transaction for authorization
-      description: EvCR Evaluate a proposed interactive transaction for authorization
-      operationId: Evaluate
+      - CR - FinancialPositionLog
+      summary: InCR Initiate a position keeping transaction log
+      description: InCR Initiate a position keeping transaction log
+      operationId: Initiate
       parameters: []
       requestBody:
-        $ref: '#/components/requestBodies/InteractiveTransactionAssessment'
+        $ref: '#/components/requestBodies/FinancialPositionLog'
       responses:
         200:
           description: Success
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/InteractiveTransactionAssessment'
+                $ref: '#/components/schemas/FinancialPositionLog'
         400:
           $ref: '#/components/responses/BadRequestError'
         401:
@@ -36,24 +36,24 @@ paths:
           $ref: '#/components/responses/TooManyRequestsError'
         500:
           $ref: '#/components/responses/InternalServerError'
-  /TransactionAuthorization/{transactionauthorizationId}/Update:
+  /PositionKeeping/{positionkeepingId}/Update:
     put:
       tags:
-      - CR - InteractiveTransactionAssessment
-      summary: UpCR Update details of a proposed transaction for authorization
-      description: UpCR Update details of a proposed transaction for authorization
+      - CR - FinancialPositionLog
+      summary: UpCR Update details for an active financial transaction log, including reflecting an account block
+      description: UpCR Update details for an active financial transaction log, including reflecting an account block
       operationId: Update
       parameters:
-      - $ref: '#/components/parameters/TransactionAuthorizationID'
+      - $ref: '#/components/parameters/PositionKeepingID'
       requestBody:
-        $ref: '#/components/requestBodies/InteractiveTransactionAssessment'
+        $ref: '#/components/requestBodies/FinancialPositionLog'
       responses:
         200:
           description: Success
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/InteractiveTransactionAssessment'
+                $ref: '#/components/schemas/FinancialPositionLog'
         400:
           $ref: '#/components/responses/BadRequestError'
         401:
@@ -66,82 +66,114 @@ paths:
           $ref: '#/components/responses/TooManyRequestsError'
         500:
           $ref: '#/components/responses/InternalServerError'
-  /TransactionAuthorization/{transactionauthorizationId}/Execute:
-    put:
-      tags:
-      - CR - InteractiveTransactionAssessment
-      summary: ExCR Execute an automated action for transaction authorization (e.g. upload data)
-      description: ExCR Execute an automated action for transaction authorization (e.g. upload data)
-      operationId: Execute
-      parameters:
-      - $ref: '#/components/parameters/TransactionAuthorizationID'
-      requestBody:
-        $ref: '#/components/requestBodies/InteractiveTransactionAssessment'
-      responses:
-        200:
-          description: Success
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/InteractiveTransactionAssessment'
-        400:
-          $ref: '#/components/responses/BadRequestError'
-        401:
-          $ref: '#/components/responses/UnauthorizedError'
-        403:
-          $ref: '#/components/responses/ForbiddenError'
-        404:
-          $ref: '#/components/responses/NotFoundError'
-        429:
-          $ref: '#/components/responses/TooManyRequestsError'
-        500:
-          $ref: '#/components/responses/InternalServerError'
-  /TransactionAuthorization/{transactionauthorizationId}/Request:
-    put:
-      tags:
-      - CR - InteractiveTransactionAssessment
-      summary: RqCR Request manual intervention (e.g. engage a specialist)
-      description: RqCR Request manual intervention (e.g. engage a specialist)
-      operationId: Request
-      parameters:
-      - $ref: '#/components/parameters/TransactionAuthorizationID'
-      requestBody:
-        $ref: '#/components/requestBodies/InteractiveTransactionAssessment'
-      responses:
-        200:
-          description: Success
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/InteractiveTransactionAssessment'
-        400:
-          $ref: '#/components/responses/BadRequestError'
-        401:
-          $ref: '#/components/responses/UnauthorizedError'
-        403:
-          $ref: '#/components/responses/ForbiddenError'
-        404:
-          $ref: '#/components/responses/NotFoundError'
-        429:
-          $ref: '#/components/responses/TooManyRequestsError'
-        500:
-          $ref: '#/components/responses/InternalServerError'
-  /TransactionAuthorization/{transactionauthorizationId}/Retrieve:
+  /PositionKeeping/{positionkeepingId}/Retrieve:
     get:
       tags:
-      - CR - InteractiveTransactionAssessment
-      summary: ReCR Retrieve details about an interactive transaction authorization
-      description: ReCR Retrieve details about an interactive transaction authorization
+      - CR - FinancialPositionLog
+      summary: ReCR Retrieve information about the log
+      description: ReCR Retrieve information about the log
       operationId: Retrieve
       parameters:
-      - $ref: '#/components/parameters/TransactionAuthorizationID'
+      - $ref: '#/components/parameters/PositionKeepingID'
       responses:
         200:
           description: Success
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/InteractiveTransactionAssessment'
+                $ref: '#/components/schemas/FinancialPositionLog'
+        400:
+          $ref: '#/components/responses/BadRequestError'
+        401:
+          $ref: '#/components/responses/UnauthorizedError'
+        403:
+          $ref: '#/components/responses/ForbiddenError'
+        404:
+          $ref: '#/components/responses/NotFoundError'
+        429:
+          $ref: '#/components/responses/TooManyRequestsError'
+        500:
+          $ref: '#/components/responses/InternalServerError'
+  /PositionKeeping/{positionkeepingId}/FinancialTransactionCapture/{financialtransactioncaptureId}/Update:
+    put:
+      tags:
+      - BQ - FinancialTransactionCapture
+      summary: UpBQ Update details of a captured financial transaction
+      description: UpBQ Update details of a captured financial transaction
+      operationId: UpdateFinancialTransactionCapture
+      parameters:
+      - $ref: '#/components/parameters/PositionKeepingID'
+      - $ref: '#/components/parameters/FinancialTransactionCaptureID'
+      requestBody:
+        $ref: '#/components/requestBodies/FinancialTransactionCapture'
+      responses:
+        200:
+          description: Success
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/FinancialTransactionCapture'
+        400:
+          $ref: '#/components/responses/BadRequestError'
+        401:
+          $ref: '#/components/responses/UnauthorizedError'
+        403:
+          $ref: '#/components/responses/ForbiddenError'
+        404:
+          $ref: '#/components/responses/NotFoundError'
+        429:
+          $ref: '#/components/responses/TooManyRequestsError'
+        500:
+          $ref: '#/components/responses/InternalServerError'
+  /PositionKeeping/{positionkeepingId}/FinancialTransactionCapture/{financialtransactioncaptureId}/Capture:
+    put:
+      tags:
+      - BQ - FinancialTransactionCapture
+      summary: CaBQ Capture details of a financial transaction in the log
+      description: CaBQ Capture details of a financial transaction in the log
+      operationId: CaptureFinancialTransactionCapture
+      parameters:
+      - $ref: '#/components/parameters/PositionKeepingID'
+      - $ref: '#/components/parameters/FinancialTransactionCaptureID'
+      requestBody:
+        $ref: '#/components/requestBodies/FinancialTransactionCapture'
+      responses:
+        200:
+          description: Success
+          content:
+            application/json:
+              schema:
+                type: boolean
+                example: true
+        400:
+          $ref: '#/components/responses/BadRequestError'
+        401:
+          $ref: '#/components/responses/UnauthorizedError'
+        403:
+          $ref: '#/components/responses/ForbiddenError'
+        404:
+          $ref: '#/components/responses/NotFoundError'
+        429:
+          $ref: '#/components/responses/TooManyRequestsError'
+        500:
+          $ref: '#/components/responses/InternalServerError'
+  /PositionKeeping/{positionkeepingId}/FinancialTransactionCapture/{financialtransactioncaptureId}/Retrieve:
+    get:
+      tags:
+      - BQ - FinancialTransactionCapture
+      summary: ReBQ Retrieve details of financial transactions captured in the log
+      description: ReBQ Retrieve details of financial transactions captured in the log
+      operationId: RetrieveFinancialTransactionCapture
+      parameters:
+      - $ref: '#/components/parameters/PositionKeepingID'
+      - $ref: '#/components/parameters/FinancialTransactionCaptureID'
+      responses:
+        200:
+          description: Success
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/FinancialTransactionCapture'
         400:
           $ref: '#/components/responses/BadRequestError'
         401:
@@ -156,78 +188,61 @@ paths:
           $ref: '#/components/responses/InternalServerError'
 components:
   schemas:
-    InteractiveTransactionAssessment:
+    FinancialPositionLog:
       type: object
       properties:
-        CustomerReference:
-          type: object
-        EmployeeReference:
-          type: object
-        ProductReference:
-          type: object
+        TransactionLogType:
+          type: string
         ProductInstanceReference:
           type: object
-        ProposedTransactionType:
-          type: string
-        ProposedTransactionValue:
-          type: string
-        CustomerContactRecordReference:
+        CustomerReference:
           type: object
-        CustomerContactRecord:
-          type: string
-        CustomerContactRecordCustomerReference:
+        CounterpartyReference:
           type: object
-        CustomerContactRecordContactDevice:
+        BaseCurrency:
           type: string
-        CustomerContactRecordAuthenticationStatus(asobtainedbySD-ContactHandler):
+        InterestApplicationRecord:
           type: string
-        CustomerContactRecordRoutingSelectionStatus:
+        InterestTransaction:
           type: string
-        CustomerContactRecordMenuSelection:
+        TransactionDescription:
           type: string
-        CustomerContactRecordServicingRequest:
+        TransactionRateType:
           type: string
-        CustomerContactRecordServicingEventHistory:
+        TransactionInterestCharge:
           type: string
-        CustomerContactRecordServicingPositionReference:
-          type: object
-        CustomerContactRecordServicingResourceReference:
-          type: object
-        CustomerContactRecordActivityRecord:
+        ManagedPositionLimits:
           type: string
-        CustomerSessionDialogueReference:
-          type: object
-        CustomerSessionDialogueRecord:
+        PositionLimitType:
           type: string
-        SessionDialogueType:
+        PositionLimitSettings:
           type: string
-        SessionDialogueScript:
+        PositionLimitValue:
           type: string
-        SessionDialogueLogReference:
-          type: object
-        SessionDialogueLog:
+        AmountBlock:
           type: string
-        SessionDialogueSessionMechanism:
+        AmountBlockType:
           type: string
-        SessionDialogueRecordSessionStartOrEndTime:
+        Priority:
           type: string
-        SessionDialogueResult:
+        Amount:
           type: string
-        CustomerContactRecordDuration:
+        DateType:
           type: string
-        CustomerContactActivityRecord:
+        Date:
           type: string
-        CustomerContactResult:
+        InitiationDate:
           type: string
-        ChannelActivityHistoryReportReference:
-          type: object
-        ChannelActivityHistoryReportFromOrto:
+        Status:
           type: string
-        ChannelActivityHistoryReport:
+    FinancialTransactionCapture:
+      type: object
+      properties:
+        PostingDescription:
           type: string
-        TransactionAuthorizationGuidance:
+        PostingTransaction:
           type: string
-        TransactionAuthorizationResult:
+        PostingValueDate:
           type: string
     HTTPError:
       type: object
@@ -239,8 +254,16 @@ components:
         message:
           type: string
   parameters:
-    TransactionAuthorizationID:
-      name: transactionauthorizationId
+    PositionKeepingID:
+      name: positionkeepingId
+      in: path
+      required: true
+      style: simple
+      explode: false
+      schema:
+        type: string
+    FinancialTransactionCaptureID:
+      name: financialtransactioncaptureId
       in: path
       required: true
       style: simple
@@ -248,12 +271,18 @@ components:
       schema:
         type: string
   requestBodies:
-    InteractiveTransactionAssessment:
+    FinancialPositionLog:
       required: true
       content:
         application/json:
           schema:
-            $ref: '#/components/schemas/InteractiveTransactionAssessment'
+            $ref: '#/components/schemas/FinancialPositionLog'
+    FinancialTransactionCapture:
+      required: true
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/FinancialTransactionCapture'
   responses:
     HTTPError:
       description: Bad Request
