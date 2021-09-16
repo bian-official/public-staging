@@ -340,13 +340,13 @@ components:
       type: object
       properties:
         CustomerReference:
-          type: string
+          type: object
         LegalEntityReference:
-          type: string
+          type: object
         ProductandServiceType:
           type: string
         ProductInstanceReference:
-          type: string
+          type: object
         AgreementType:
           type: string
         AgreementJurisdiction:
@@ -356,18 +356,18 @@ components:
         AgreementSignatoriesOrResponsibleParties:
           type: string
         DocumentDirectoryEntryInstanceReference:
-          type: string
+          type: object
         CustomerAgreementReference:
-          type: string
+          type: object
         PartyLife-cycleManagementReference:
-          type: string
+          type: object
     RegulatoryTerms:
       type: object
       properties:
         RegulatoryAuthority:
           type: string
         ApplicableRegulationReference:
-          type: string
+          type: object
         ApplicableRegulationInterpretation:
           type: string
     PolicyTerms:
@@ -376,7 +376,7 @@ components:
         BankPolicy-RuleType:
           type: string
         ApplicableBankPolicy-RuleReference:
-          type: string
+          type: object
         ApplicableBankPolicy-RuleInterpretation:
           type: string
     LegalTerms:
@@ -385,7 +385,7 @@ components:
         Jurisdiction:
           type: string
         ApplicableLawReference:
-          type: string
+          type: object
         ApplicableLawInterpretation:
           type: string
     HTTPError:

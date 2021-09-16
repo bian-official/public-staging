@@ -673,9 +673,9 @@ components:
       type: object
       properties:
         CustomerReference:
-          type: string
+          type: object
         ProductInstanceReference:
-          type: string
+          type: object
         IssuedDeviceType:
           type: string
         AssociatedPermissions:
@@ -736,7 +736,7 @@ components:
         VersionNumber:
           type: string
         CustomerCustomizationReference:
-          type: string
+          type: object
         Deliverymethod:
           type: string
         IssueLocation:

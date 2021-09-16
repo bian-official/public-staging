@@ -131,7 +131,7 @@ components:
       type: object
       properties:
         CorrespondentBankReference:
-          type: string
+          type: object
         ClearingOrSortCodes:
           type: string
         ContactAddresses:
@@ -143,11 +143,11 @@ components:
         HolidayOrTimezoneSchedule:
           type: string
         VostroAccountReference:
-          type: string
+          type: object
         NostroMirrorAccountReference:
-          type: string
+          type: object
         CorrespondentBankAgreementReference:
-          type: string
+          type: object
         CorrespondentBankAgreement:
           type: string
     HTTPError:

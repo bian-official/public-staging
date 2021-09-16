@@ -675,8 +675,6 @@ components:
     AssetSecuritizationTransaction:
       type: object
       properties:
-        '':
-          type: string
         AssetSecuritizationTransactionParameterType:
           type: string
         AssetSecuritizationTransactionSelectedOption:
@@ -709,7 +707,7 @@ components:
         AssetSecuritizationOptions:
           type: string
         AssetSecuritizationRates:
-          type: string
+          type: object
         AssetSecuritizationSettlement:
           type: string
         AssetSecuritizationWorkProduct:
@@ -717,14 +715,12 @@ components:
     Securitization:
       type: object
       properties:
-        '':
-          type: string
         SecuritizationPreconditions:
           type: string
         SecuritizationTaskSchedule:
           type: string
         BusinessService:
-          type: string
+          type: object
         SecuritizationPostconditions:
           type: string
         SecuritizationServiceType:
@@ -740,14 +736,12 @@ components:
     Selection:
       type: object
       properties:
-        '':
-          type: string
         SelectionPreconditions:
           type: string
         SelectionTaskSchedule:
           type: string
         AssetSelection:
-          type: string
+          type: object
         SelectionPostconditions:
           type: string
         SelectionAssetSelectionServiceType:
@@ -763,14 +757,12 @@ components:
     Placement:
       type: object
       properties:
-        '':
-          type: string
         PlacementPreconditions:
           type: string
         PlacementTaskSchedule:
           type: string
         BusinessService:
-          type: string
+          type: object
         PlacementPostconditions:
           type: string
         PlacementServiceType:

@@ -365,13 +365,13 @@ components:
       type: object
       properties:
         NetworkReference:
-          type: string
+          type: object
         ParticipantAcquirerBankReference:
-          type: string
+          type: object
         ParticipantAcquirerBankClearingandSettlementTerms:
           type: string
         ParticipantIssuerBankReference:
-          type: string
+          type: object
         ParticipantIssuerBankClearingandSettlementTerms:
           type: string
         CardClearingProcessType:
@@ -384,15 +384,15 @@ components:
       type: object
       properties:
         CardTransactionRecordReference:
-          type: string
+          type: object
         CardTransactionProductInstanceReference:
-          type: string
+          type: object
         CardTransactionNetworkReference:
-          type: string
+          type: object
         CardTransactionIssuingBankReference:
-          type: string
+          type: object
         CardTransactionMerchantAcquiringBankReference:
-          type: string
+          type: object
         CardTransactionType:
           type: string
         CardTransactionCurrency:
@@ -400,13 +400,13 @@ components:
         CardTransactionAmountType:
           type: string
         CardTransactionAmount:
-          type: string
+          type: number
         CardTransactionMerchantReference:
-          type: string
+          type: object
         CardTransactionLocationReference:
-          type: string
+          type: object
         CardTransactionProductandServiceReference:
-          type: string
+          type: object
         CardTransactionDate/Time:
           type: string
         CardTransactionFXConversionCharge:
@@ -441,7 +441,7 @@ components:
       type: object
       properties:
         FXConversionRatesandFees:
-          type: string
+          type: object
         FXConversionTaskResult:
           type: string
     Reconciliation:

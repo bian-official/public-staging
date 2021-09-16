@@ -192,24 +192,24 @@ components:
       type: object
       properties:
         CustomerReference:
-          type: string
+          type: object
         Date:
           type: string
     Event:
       type: object
       properties:
         EmployeeReference:
-          type: string
+          type: object
         ProductReference:
-          type: string
+          type: object
         ProductInstanceReference:
-          type: string
+          type: object
         CustomerContactRecordReference:
-          type: string
+          type: object
         CustomerContactRecord:
           type: string
         CustomerContactRecordCustomerReference:
-          type: string
+          type: object
         CustomerContactRecordContactDevice:
           type: string
         CustomerContactRecordAuthenticationStatus:
@@ -223,13 +223,13 @@ components:
         CustomerContactRecordServicingEventHistory:
           type: string
         CustomerContactRecordServicingPositionReference:
-          type: string
+          type: object
         CustomerContactRecordServicingResourceReference:
-          type: string
+          type: object
         CustomerContactRecordActivityRecord:
           type: string
         CustomerSessionDialogueReference:
-          type: string
+          type: object
         CustomerSessionDialogueRecord:
           type: string
         CustomerContactRecordDuration:
@@ -239,7 +239,7 @@ components:
         CustomerContactResult:
           type: string
         ChannelActivityHistoryReportReference:
-          type: string
+          type: object
         ChannelActivityHistoryReportFrom/to:
           type: string
         ChannelActivityHistoryReport:

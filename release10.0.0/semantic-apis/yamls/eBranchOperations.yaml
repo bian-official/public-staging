@@ -258,9 +258,9 @@ components:
         EBranchProductionIssueRecord:
           type: string
         EmployeeOrBusinessUnitReference:
-          type: string
+          type: object
         CustomerContactRecordReference:
-          type: string
+          type: object
         ProductionIssueType:
           type: string
         ProductionIssueDescription:
@@ -275,13 +275,13 @@ components:
       type: object
       properties:
         Employee/BusinessUnitReference:
-          type: string
+          type: object
         CustomerContactRecordReference:
-          type: string
+          type: object
         CustomerSessionDialogueRecord:
           type: string
         EBranchCustomerDeviceReference:
-          type: string
+          type: object
         EBranchOutboundConnectionStartTime:
           type: string
         EBranchOutboundConnectionDuration:
@@ -290,7 +290,7 @@ components:
       type: object
       properties:
         EBranchDeviceReference:
-          type: string
+          type: object
         EBranchDevicePropertyValue:
           type: string
         EBranchInboundConnectionStartTime:
@@ -298,7 +298,7 @@ components:
         EBranchInboundConnectionDuration:
           type: string
         EBranchInboundConnectionContactRecordReference:
-          type: string
+          type: object
     HTTPError:
       type: object
       properties:

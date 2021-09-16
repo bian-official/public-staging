@@ -190,15 +190,15 @@ components:
       type: object
       properties:
         ProductInstanceReference:
-          type: string
+          type: object
         UnderlyingProductInstanceReference:
-          type: string
+          type: object
         CustomerReference:
-          type: string
+          type: object
         BankBranchOrLocationReference:
-          type: string
+          type: object
         TaxReference:
-          type: string
+          type: object
         EntitlementOptionDefinition:
           type: string
         EntitlementOptionSetting:
@@ -245,7 +245,7 @@ components:
         OperationalTermAugmentedCashFlows:
           type: string
         PaymentInitiationTransactionInstanceReference:
-          type: string
+          type: object
     HTTPError:
       type: object
       properties:

@@ -857,8 +857,6 @@ components:
     ATMNetworkOperatingSession:
       type: object
       properties:
-        '':
-          type: string
         ATMNetworkOperatingSessionSchedule:
           type: string
         ATMNetworkOperatingSessionStatus:
@@ -866,9 +864,9 @@ components:
         ATMNetworkOperatingSessionUsageLog:
           type: string
         ATMNetworkOperatingSessionReference:
-          type: string
+          type: object
         ATMNetworkOperatingSessionServiceProviderReference:
-          type: string
+          type: object
         ATMNetworkOperatingSessionType:
           type: string
         ATMNetworkOperatingSessionServiceProviderSchedule:
@@ -880,14 +878,12 @@ components:
     FinancialDocumentHandling:
       type: object
       properties:
-        '':
-          type: string
         FinancialDocumentHandlingPreconditions:
           type: string
         FinancialDocumentHandlingFunctionSchedule:
           type: string
         DocumentGenerationandHandling:
-          type: string
+          type: object
         DocumentGenerationandHandlingServiceType:
           type: string
         DocumentGenerationandHandlingServiceDescription:
@@ -908,14 +904,12 @@ components:
     NetworkOperation:
       type: object
       properties:
-        '':
-          type: string
         NetworkOperationPreconditions:
           type: string
         NetworkOperationFunctionSchedule:
           type: string
         NetworkOperation:
-          type: string
+          type: object
         NetworkOperationServiceType:
           type: string
         NetworkOperationServiceDescription:
@@ -929,14 +923,12 @@ components:
     DeviceTracking:
       type: object
       properties:
-        '':
-          type: string
         DeviceTrackingPreconditions:
           type: string
         DeviceTrackingFunctionSchedule:
           type: string
         DeviceTracking:
-          type: string
+          type: object
         DeviceTrackingServiceType:
           type: string
         DeviceTrackingServiceDescription:
@@ -950,14 +942,12 @@ components:
     CashDistribution:
       type: object
       properties:
-        '':
-          type: string
         CashDistributionPreconditions:
           type: string
         CashDistributionFunctionSchedule:
           type: string
         CashDistribution:
-          type: string
+          type: object
         CashDistributionServiceType:
           type: string
         CashDistributionServiceDescription:
@@ -971,14 +961,12 @@ components:
     FinancialTransactionCapture:
       type: object
       properties:
-        '':
-          type: string
         FinancialTransactionCapturePreconditions:
           type: string
         FinancialTransactionCaptureFunctionSchedule:
           type: string
         BusinessService:
-          type: string
+          type: object
         ServiceType:
           type: string
         ServiceDescription:

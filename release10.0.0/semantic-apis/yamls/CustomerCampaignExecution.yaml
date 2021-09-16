@@ -376,7 +376,7 @@ components:
         CustomerCampaignDescription:
           type: string
         EmployeeOrBusinessUnitReference:
-          type: string
+          type: object
         CustomerCampaignProcedureSet-up:
           type: string
         CustomerCampaignProcedureVersionNumber:
@@ -398,7 +398,7 @@ components:
         CustomerCampaignProcedureLeadandOpportunityDescription:
           type: string
         LeadandOpportunityProcedureInstanceReference:
-          type: string
+          type: object
     AnalysisFeedback:
       type: object
       properties:
@@ -416,7 +416,7 @@ components:
         CustomerCampaignProcedureWorkTaskWorkProducts:
           type: string
         DocumentDirectoryEntryInstanceReference:
-          type: string
+          type: object
         CustomerCampaignProcedureWorkTaskResult:
           type: string
         CustomerCampaignProcedureWorkTaskDate-Time:
@@ -427,9 +427,9 @@ components:
         CustomerCampaignSelectionCriteria:
           type: string
         CustomerCampaignCandidateEmployee/BusinessUnitReference:
-          type: string
+          type: object
         CustomerCampaignCandidateReference:
-          type: string
+          type: object
     HTTPError:
       type: object
       properties:

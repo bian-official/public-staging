@@ -370,7 +370,7 @@ components:
       type: object
       properties:
         PartyReference:
-          type: string
+          type: object
         AgreementType:
           type: string
         AgreementJurisdiction:
@@ -380,14 +380,14 @@ components:
         AgreementSignaturesOrResponsibleParties:
           type: string
         DocumentDirectoryEntryInstanceReference:
-          type: string
+          type: object
     PolicyTerms:
       type: object
       properties:
         BankPolicy-RuleType:
           type: string
         ApplicableBankPolicy-RuleReference:
-          type: string
+          type: object
         ApplicableBankPolicy-RuleInterpretation:
           type: string
     LegalTerms:
@@ -396,7 +396,7 @@ components:
         Jurisdiction:
           type: string
         ApplicableLawReference:
-          type: string
+          type: object
         ApplicableLawInterpretation:
           type: string
     RegulatoryTerms:
@@ -405,7 +405,7 @@ components:
         RegulatoryAuthority:
           type: string
         ApplicableRegulationReference:
-          type: string
+          type: object
         ApplicableRegulationInterpretation:
           type: string
     HTTPError:

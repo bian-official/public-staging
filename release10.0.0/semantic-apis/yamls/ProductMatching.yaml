@@ -579,8 +579,6 @@ components:
     Product/CustomerCombinationAssessment:
       type: object
       properties:
-        '':
-          type: string
         ProductOrCustomerCombinationAssessmentParameterType:
           type: string
         ProductOrCustomerCombinationAssessmentSelectedOption:
@@ -588,7 +586,7 @@ components:
         ProductOrCustomerCombinationAssessmentType:
           type: string
         ProductOrCustomerCombinationAssessmentReference:
-          type: string
+          type: object
         ProductOrCustomerCombinationAssessmentRequest:
           type: string
         ProductOrCustomerCombinationAssessmentSchedule:
@@ -600,14 +598,12 @@ components:
         ProductOrCustomerCombinationAssessmentAssociatedParty:
           type: string
         ProductOrCustomerCombinationAssessmentServiceProviderReference:
-          type: string
+          type: object
         ProductOrCustomerCombinationAssessmentRequesterReference:
-          type: string
+          type: object
     BankandCampaignAlignment:
       type: object
       properties:
-        '':
-          type: string
         BankandCampaignAlignmentPreconditions:
           type: string
         BankandCampaignAlignmentAnalysisSchedule:
@@ -615,7 +611,7 @@ components:
         BankandCampaignAlignmentVersionNumber:
           type: string
         BankandCampaignAlignment:
-          type: string
+          type: object
         BankandCampaignAlignmentServiceType:
           type: string
         BankandCampaignAlignmentServiceDescription:
@@ -629,8 +625,6 @@ components:
     ProductEligibility:
       type: object
       properties:
-        '':
-          type: string
         ProductEligibilityPreconditions:
           type: string
         ProductEligibilityAnalysisSchedule:
@@ -638,7 +632,7 @@ components:
         ProductEligibilityVersionNumber:
           type: string
         ProductEligibility:
-          type: string
+          type: object
         ProductEligibilityServiceType:
           type: string
         ProductEligibilityServiceDescription:
@@ -652,8 +646,6 @@ components:
     ProductTypeSelection:
       type: object
       properties:
-        '':
-          type: string
         ProductTypeSelectionPreconditions:
           type: string
         ProductTypeSelectionAnalysisSchedule:
@@ -661,7 +653,7 @@ components:
         ProductTypeSelectionVersionNumber:
           type: string
         ProductTypeSelection:
-          type: string
+          type: object
         ProductTypeSelectionServiceType:
           type: string
         ProductTypeSelectionServiceDescription:
@@ -675,8 +667,6 @@ components:
     ContextCriteria:
       type: object
       properties:
-        '':
-          type: string
         ContextCriteriaPreconditions:
           type: string
         ContextCriteriaAnalysisSchedule:
@@ -684,7 +674,7 @@ components:
         ContextCriteriaVersionNumber:
           type: string
         ContextCriteria:
-          type: string
+          type: object
         ContextCriteriaServiceType:
           type: string
         ContextCriteriaServiceDescription:

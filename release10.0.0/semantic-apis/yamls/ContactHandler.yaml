@@ -399,17 +399,17 @@ components:
       type: object
       properties:
         CustomerContactInboundorOutboundIndicator:
-          type: string
+          type: boolean
         eBranchOperatingSessionReference:
-          type: string
+          type: object
         AdvancedVoiceServiceOperatingSessionReference:
-          type: string
+          type: object
         CustomerContactRecordReference:
-          type: string
+          type: object
         CustomerContactRecord:
           type: string
         CustomerContactRecordCustomerReference:
-          type: string
+          type: object
         CustomerContactRecordContactDevice:
           type: string
         CustomerContactRecordAuthenticationStatus:
@@ -423,13 +423,13 @@ components:
         CustomerContactRecordServicingEventHistory:
           type: string
         CustomerContactRecordServicingPositionReference:
-          type: string
+          type: object
         CustomerContactRecordServicingResourceReference:
-          type: string
+          type: object
         CustomerContactRecordActivityRecord:
           type: string
         CustomerSessionDialogueReference:
-          type: string
+          type: object
         CustomerSessionDialogueRecord:
           type: string
         CustomerContactRecordDuration:

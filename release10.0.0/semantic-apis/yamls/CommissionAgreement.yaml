@@ -433,8 +433,6 @@ components:
     EmployeeCommissionAgreement:
       type: object
       properties:
-        '':
-          type: string
         EmployeeCommissionAgreementParameterType:
           type: string
         EmployeeCommissionAgreementSelectedOption:
@@ -442,7 +440,7 @@ components:
         EmployeeCommissionAgreementType:
           type: string
         EmployeeCommissionAgreementReference:
-          type: string
+          type: object
         EmployeeCommissionAgreementRequest:
           type: string
         EmployeeCommissionAgreementSchedule:
@@ -452,30 +450,28 @@ components:
         EmployeeCommissionAgreementAssociatedParty:
           type: string
         EmployeeCommissionAgreementCustomerReference:
-          type: string
+          type: object
         EmployeeCommissionAgreementObligation:
           type: string
         EmployeeCommissionAgreementEntitlement:
           type: string
         EmployeeCommissionAgreementRegulationReference:
-          type: string
+          type: object
         EmployeeCommissionAgreementRegulationType:
           type: string
         EmployeeCommissionAgreementJurisdiction:
           type: string
         EmployeeCommissionAgreementAccountReference:
-          type: string
+          type: object
     CommissionTerms:
       type: object
       properties:
-        '':
-          type: string
         CommissionTermsPreconditions:
           type: string
         CommissionTermsTermSchedule:
           type: string
         CommissionTerms:
-          type: string
+          type: object
         CommissionTermsServiceType:
           type: string
         CommissionTermsServiceDescription:

@@ -130,19 +130,19 @@ components:
       type: object
       properties:
         EmployeeOrBusinessUnitReference:
-          type: string
+          type: object
         CustomerReference:
-          type: string
+          type: object
         MarketOrderType:
           type: string
         InvestmentPortfolioInstanceReference:
-          type: string
+          type: object
         CustomerMarketOrderProcessingInstruction:
           type: string
         ProposedMarketOrderTransaction:
           type: string
         InvestmentAccountArrangementInstanceReference:
-          type: string
+          type: object
         SecurityType:
           type: string
         Amount:
@@ -154,9 +154,9 @@ components:
         SuitabilityAssessmentType:
           type: string
         DocumentDirectoryEntryInstanceReference:
-          type: string
+          type: object
         CorrespondenceInstanceReference:
-          type: string
+          type: object
         SuitabilityComplianceAssessmentWorkProducts:
           type: string
         SuitabilityComplianceAssessmentResult:

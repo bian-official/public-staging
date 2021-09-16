@@ -672,8 +672,6 @@ components:
     AccountsReceivableProcedure:
       type: object
       properties:
-        '':
-          type: string
         AccountsReceivableProcedureParameterType:
           type: string
         AccountsReceivableProcedureSelectedOption:
@@ -685,17 +683,17 @@ components:
         AccountsReceivableProcedureStatus:
           type: string
         AccountsReceivableProcedureReference:
-          type: string
+          type: object
         AccountsReceivableProcedureBusinessUnitReference:
-          type: string
+          type: object
         AccountsReceivableProcedureServiceProviderReference:
-          type: string
+          type: object
         AccountsReceivableProcedureFinancialFacilityReference:
-          type: string
+          type: object
         AccountsReceivableProcedureEmployeeReference:
-          type: string
+          type: object
         AccountsReceivableProcedureCustomerReference:
-          type: string
+          type: object
         AccountsReceivableProcedureType:
           type: string
         AccountsReceivableProcedureServiceProviderSchedule:
@@ -713,20 +711,18 @@ components:
         AccountsReceivableProcedureFinancialTransactionArrangement:
           type: string
         AccountsReceivableProcedureCustomerAgreementReference:
-          type: string
+          type: object
     Resolution:
       type: object
       properties:
-        '':
-          type: string
         ResolutionPreconditions:
           type: string
         ResolutionBusinessUnit/EmployeeReference:
-          type: string
+          type: object
         ResolutionWorkSchedule:
           type: string
         BusinessService:
-          type: string
+          type: object
         ResolutionPostconditions:
           type: string
         ResolutionServiceType:
@@ -742,16 +738,14 @@ components:
     ReceivablesEvaluation:
       type: object
       properties:
-        '':
-          type: string
         ReceivablesEvaluationPreconditions:
           type: string
         ReceivablesEvaluationBusinessUnit/EmployeeReference:
-          type: string
+          type: object
         ReceivablesEvaluationWorkSchedule:
           type: string
         ReceivablesEvaluation:
-          type: string
+          type: object
         ReceivablesEvaluationPostconditions:
           type: string
         ReceivablesEvaluationReceivablesEvaluationServiceType:
@@ -767,16 +761,14 @@ components:
     CustomerNegotiation:
       type: object
       properties:
-        '':
-          type: string
         CustomerNegotiationPreconditions:
           type: string
         CustomerNegotiationBusinessUnit/EmployeeReference:
-          type: string
+          type: object
         CustomerNegotiationWorkSchedule:
           type: string
         PaymentNegotation:
-          type: string
+          type: object
         CustomerNegotiationPostconditions:
           type: string
         CustomerNegotiationPaymentNegotationServiceType:
@@ -792,16 +784,14 @@ components:
     Payment:
       type: object
       properties:
-        '':
-          type: string
         PaymentPreconditions:
           type: string
         PaymentBusinessUnit/EmployeeReference:
-          type: string
+          type: object
         PaymentWorkSchedule:
           type: string
         BusinessService:
-          type: string
+          type: object
         PaymentPostconditions:
           type: string
         PaymentServiceType:

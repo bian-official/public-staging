@@ -404,32 +404,32 @@ components:
       type: object
       properties:
         MarketInformationFeedServiceReference:
-          type: string
+          type: object
         MarketInformationFeedServiceProfile:
           type: string
     FeedUpload:
       type: object
       properties:
         MarketInformationFeedServiceRecordReference:
-          type: string
+          type: object
         MarketInformationFeedServiceRecord:
           type: string
     InternalPublication:
       type: object
       properties:
         InternalInformationFeedServiceReference:
-          type: string
+          type: object
         InternalInformationFeedServiceProfile:
           type: string
         InternalInformationFeedServiceRecordReference:
-          type: string
+          type: object
         InternalInformationFeedServiceRecord:
           type: string
     Distribution:
       type: object
       properties:
         MarketDataSwitchUserAccessRightsRecordReference:
-          type: string
+          type: object
         MarketDataSwitchUserAccessRightsRecord:
           type: string
         MarketDataSwitchServiceUserSessionRecord:

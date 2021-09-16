@@ -612,8 +612,6 @@ components:
     FiduciaryRelationshipArrangement:
       type: object
       properties:
-        '':
-          type: string
         FiduciaryRelationshipArrangementParameterType:
           type: string
         FiduciaryRelationshipArrangementSelectedOption:
@@ -621,7 +619,7 @@ components:
         FiduciaryRelationshipArrangementType:
           type: string
         FiduciaryRelationshipArrangementReference:
-          type: string
+          type: object
         FiduciaryRelationshipArrangementSchedule:
           type: string
         FiduciaryRelationshipArrangementStatus:
@@ -629,7 +627,7 @@ components:
         FiduciaryRelationshipArrangementCurrency:
           type: string
         FiduciaryRelationshipArrangementRegulationReference:
-          type: string
+          type: object
         FiduciaryRelationshipArrangementRegulationType:
           type: string
         FiduciaryRelationshipArrangementJurisdiction:
@@ -639,18 +637,16 @@ components:
         FiduciaryRelationshipArrangementAccountType:
           type: string
         FiduciaryRelationshipArrangementAccountReference:
-          type: string
+          type: object
     Fulfillment:
       type: object
       properties:
-        '':
-          type: string
         FulfillmentPreconditions:
           type: string
         FulfillmentFeatureSchedule:
           type: string
         FiduciaryArrangementFulfillment:
-          type: string
+          type: object
         FulfillmentPostconditions:
           type: string
         FulfillmentFiduciaryArrangementFulfillmentServiceType:
@@ -666,14 +662,12 @@ components:
     AssessmentandReporting:
       type: object
       properties:
-        '':
-          type: string
         AssessmentandReportingPreconditions:
           type: string
         AssessmentandReportingFeatureSchedule:
           type: string
         AnalysisandReporting:
-          type: string
+          type: object
         AssessmentandReportingPostconditions:
           type: string
         AssessmentandReportingAnalysisandReportingServiceType:
@@ -696,14 +690,12 @@ components:
     Fees:
       type: object
       properties:
-        '':
-          type: string
         FeesPreconditions:
           type: string
         FeesFeatureSchedule:
           type: string
         BusinessService:
-          type: string
+          type: object
         FeesPostconditions:
           type: string
         FeesServiceType:
@@ -719,14 +711,12 @@ components:
     Agreement:
       type: object
       properties:
-        '':
-          type: string
         AgreementPreconditions:
           type: string
         AgreementFeatureSchedule:
           type: string
         BusinessService:
-          type: string
+          type: object
         AgreementPostconditions:
           type: string
         AgreementServiceType:

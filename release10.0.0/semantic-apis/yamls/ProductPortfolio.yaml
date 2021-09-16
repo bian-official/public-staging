@@ -300,7 +300,7 @@ components:
         ProductAnalysisReportingDate:
           type: string
         DocumentDirectoryEntryInstanceReference:
-          type: string
+          type: object
     PerformanceAnalysis:
       type: object
       properties:
@@ -311,7 +311,7 @@ components:
         ProductPerformanceRequestSpecification:
           type: string
         ProductPerformanceModelReference:
-          type: string
+          type: object
         ProductPerformanceProductandServiceActivityReport:
           type: string
         ProductPerformanceFinancialMarketResearchReport:

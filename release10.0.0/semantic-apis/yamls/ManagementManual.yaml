@@ -945,8 +945,6 @@ components:
     ManagementManualSpecification:
       type: object
       properties:
-        '':
-          type: string
         ManagementManualSpecificationParameterType:
           type: string
         ManagementManualSpecificationSelectedOption:
@@ -962,12 +960,10 @@ components:
         ManagementManualSpecificationFeedback:
           type: string
         ManagementManualSpecificationServiceProviderReference:
-          type: string
+          type: object
     OperationalSecurityProceduresandGuidelines:
       type: object
       properties:
-        '':
-          type: string
         OperationalSecurityProceduresandGuidelinesPreconditions:
           type: string
         OperationalSecurityProceduresandGuidelinesSpecificationSchedule:
@@ -975,7 +971,7 @@ components:
         OperationalSecurityProceduresandGuidelinesVersionNumber:
           type: string
         OperationalSecurityProceduresandGuidelines:
-          type: string
+          type: object
         OperationalSecurityProceduresandGuidelinesServiceType:
           type: string
         OperationalSecurityProceduresandGuidelinesServiceDescription:
@@ -989,8 +985,6 @@ components:
     OperationalandProductionProceduresandGuidelines:
       type: object
       properties:
-        '':
-          type: string
         OperationalandProductionProceduresandGuidelinesPreconditions:
           type: string
         OperationalandProductionProceduresandGuidelinesSpecificationSchedule:
@@ -998,7 +992,7 @@ components:
         OperationalandProductionProceduresandGuidelinesVersionNumber:
           type: string
         OperationalandProductionProceduresandGuidelines:
-          type: string
+          type: object
         OperationalandProductionProceduresandGuidelinesServiceType:
           type: string
         OperationalandProductionProceduresandGuidelinesServiceDescription:
@@ -1012,8 +1006,6 @@ components:
     EmploymentRelatedProceduresandGuidelines:
       type: object
       properties:
-        '':
-          type: string
         EmploymentRelatedProceduresandGuidelinesPreconditions:
           type: string
         EmploymentRelatedProceduresandGuidelinesSpecificationSchedule:
@@ -1021,7 +1013,7 @@ components:
         EmploymentRelatedProceduresandGuidelinesVersionNumber:
           type: string
         EmploymentRelatedProceduresandGuidelines:
-          type: string
+          type: object
         EmploymentRelatedProceduresandGuidelinesServiceType:
           type: string
         EmploymentRelatedProceduresandGuidelinesServiceDescription:
@@ -1035,8 +1027,6 @@ components:
     StaffManagementProceduresandGuidelines:
       type: object
       properties:
-        '':
-          type: string
         StaffManagementProceduresandGuidelinesPreconditions:
           type: string
         StaffManagementProceduresandGuidelinesSpecificationSchedule:
@@ -1044,7 +1034,7 @@ components:
         StaffManagementProceduresandGuidelinesVersionNumber:
           type: string
         StaffManagementProceduresandGuidelines:
-          type: string
+          type: object
         StaffManagementProceduresandGuidelinesServiceType:
           type: string
         StaffManagementProceduresandGuidelinesServiceDescription:
@@ -1069,8 +1059,6 @@ components:
     LegalandRegulatoryObligationsandGuidelines:
       type: object
       properties:
-        '':
-          type: string
         LegalandRegulatoryObligationsandGuidelinesPreconditions:
           type: string
         LegalandRegulatoryObligationsandGuidelinesSpecificationSchedule:
@@ -1078,7 +1066,7 @@ components:
         LegalandRegulatoryObligationsandGuidelinesVersionNumber:
           type: string
         LegalandRegulatoryObligationsandGuidelines:
-          type: string
+          type: object
         LegalandRegulatoryObligationsandGuidelinesServiceType:
           type: string
         LegalandRegulatoryObligationsandGuidelinesServiceDescription:
@@ -1092,8 +1080,6 @@ components:
     CompanyMissionandPolicies:
       type: object
       properties:
-        '':
-          type: string
         CompanyMissionandPoliciesPreconditions:
           type: string
         CompanyMissionandPoliciesSpecificationSchedule:
@@ -1101,7 +1087,7 @@ components:
         CompanyMissionandPoliciesVersionNumber:
           type: string
         CompanyMissionandPolicies:
-          type: string
+          type: object
         CompanyMissionandPoliciesServiceType:
           type: string
         CompanyMissionandPoliciesServiceDescription:

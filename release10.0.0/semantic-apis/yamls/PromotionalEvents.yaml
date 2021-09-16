@@ -517,7 +517,7 @@ components:
         MarketTrackingWorkTask:
           type: string
         GeneralMarketResearchDirectoryEntryInstanceReference:
-          type: string
+          type: object
         MarketTrackingWorkTaskWorkProducts:
           type: string
         MarketTrackingWorkTaskResult:
@@ -528,11 +528,11 @@ components:
       type: object
       properties:
         PromotionalEventParticipationInstanceReference:
-          type: string
+          type: object
         PromotionalEventSponsorshipBudget:
           type: string
         Employee/BusinessUnitReference:
-          type: string
+          type: object
         PromotionalEventExecutionSchedule:
           type: string
         PromotionalEventResult:

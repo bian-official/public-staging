@@ -132,15 +132,15 @@ components:
         RegulatoryAssessmentType:
           type: string
         BusinessUnitReference:
-          type: string
+          type: object
         ProductandServiceReference:
-          type: string
+          type: object
         CustomerReference:
-          type: string
+          type: object
         RegulatoryAuthorityReference:
-          type: string
+          type: object
         RegulationReference:
-          type: string
+          type: object
         RegulationDefinition:
           type: string
         RegulationComplianceandReportingRequirements:
@@ -152,7 +152,7 @@ components:
         RegulationGuideline:
           type: string
         DocumentReference:
-          type: string
+          type: object
         RegulatoryAssessmentWorkProducts:
           type: string
         RegulatoryAssessmentResult:

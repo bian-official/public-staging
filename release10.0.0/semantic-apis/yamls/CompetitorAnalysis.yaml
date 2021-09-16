@@ -136,13 +136,13 @@ components:
         CompetitorAnalysisGuidance:
           type: string
         CompetitorAnalysisAlgorithmReference:
-          type: string
+          type: object
         CompetitorAnalysisRequestRecord:
           type: string
         CompetitorAnalysisRequest:
           type: string
         EmployeeOrBusinessUnitReference:
-          type: string
+          type: object
         CompetitorAnalysisRequestWorkProducts:
           type: string
         CompetitorAnalysisRequestResult:
@@ -161,7 +161,7 @@ components:
         AnalysisAlgorithmSpecification:
           type: string
         AnalysisAlgorithmReferencedMarketResearchRecord:
-          type: string
+          type: object
         MarketResearchReportTypeReference:
           type: string
         MarketResearchReportTypeDefinition:

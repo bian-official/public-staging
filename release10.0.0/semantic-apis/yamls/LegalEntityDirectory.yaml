@@ -343,9 +343,9 @@ components:
       type: object
       properties:
         LegalEntityReference:
-          type: string
+          type: object
         PartyReference:
-          type: string
+          type: object
         DateType:
           type: string
         Date:
@@ -372,7 +372,7 @@ components:
         PrimaryRegulator:
           type: string
         TaxReference:
-          type: string
+          type: object
         ContactRole:
           type: string
         ContactAddress/Details:
@@ -381,15 +381,15 @@ components:
       type: object
       properties:
         LegalEntityAssociationReference:
-          type: string
+          type: object
         LegalEntityAssociationType:
           type: string
         LegalEntityAssociationObligation:
           type: string
         ParentLegalEntityReference:
-          type: string
+          type: object
         SubsidiaryLegalEntityReference:
-          type: string
+          type: object
         ShareholdingProfile:
           type: string
     Profile:
@@ -402,7 +402,7 @@ components:
         OrganizationEconomicIntent:
           type: string
         OrganizationGrowthRate:
-          type: string
+          type: object
         OrganizationProfitability/Stocks:
           type: string
         OrganizationRevenue/Turnover:

@@ -828,12 +828,10 @@ components:
     BranchLocationManagementPlan:
       type: object
       properties:
-        '':
-          type: string
         BranchLocationManagementPlanType:
           type: string
         BranchLocationManagementPlanReference:
-          type: string
+          type: object
         BranchLocationManagementPlanBudgetType:
           type: string
         BranchLocationManagementPlanBudget:
@@ -847,16 +845,14 @@ components:
     ProductandServicePlanning:
       type: object
       properties:
-        '':
-          type: string
         ProductandServicePlanningPreconditions:
           type: string
         ProductandServicePlanningBusinessUnit/EmployeeReference:
-          type: string
+          type: object
         ProductandServicePlanningWorkSchedule:
           type: string
         ProductandServicePlanning:
-          type: string
+          type: object
         ProductandServicePlanningPostconditions:
           type: string
         ProductandServicePlanningProductandServicePlanningServiceType:
@@ -872,16 +868,14 @@ components:
     CustomerLiaison:
       type: object
       properties:
-        '':
-          type: string
         CustomerLiaisonPreconditions:
           type: string
         CustomerLiaisonBusinessUnit/EmployeeReference:
-          type: string
+          type: object
         CustomerLiaisonWorkSchedule:
           type: string
         CustomerLiaison:
-          type: string
+          type: object
         CustomerLiaisonPostconditions:
           type: string
         CustomerLiaisonCustomerLiaisonServiceType:
@@ -897,16 +891,14 @@ components:
     Troubleshooting:
       type: object
       properties:
-        '':
-          type: string
         TroubleshootingPreconditions:
           type: string
         TroubleshootingBusinessUnit/EmployeeReference:
-          type: string
+          type: object
         TroubleshootingWorkSchedule:
           type: string
         BusinessService:
-          type: string
+          type: object
         TroubleshootingPostconditions:
           type: string
         TroubleshootingServiceType:
@@ -922,16 +914,14 @@ components:
     StaffandLocationPlanning:
       type: object
       properties:
-        '':
-          type: string
         StaffandLocationPlanningPreconditions:
           type: string
         StaffandLocationPlanningBusinessUnit/EmployeeReference:
-          type: string
+          type: object
         StaffandLocationPlanningWorkSchedule:
           type: string
         StaffandLocationPlanning:
-          type: string
+          type: object
         StaffandLocationPlanningPostconditions:
           type: string
         StaffandLocationPlanningStaffandLocationPlanningServiceType:

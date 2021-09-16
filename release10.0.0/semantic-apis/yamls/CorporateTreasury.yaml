@@ -325,22 +325,22 @@ components:
         CapitalOrWholesaleMarketTransactions:
           type: string
         CurrencyandRateRiskAnalysis:
-          type: string
+          type: object
     BankRates:
       type: object
       properties:
         BankRateType:
           type: string
         BankRateValue:
-          type: string
+          type: object
         BankRateValueDate:
           type: string
         BankRateValueHistory:
-          type: string
+          type: object
         BankRateRecordReference:
-          type: string
+          type: object
         BankRateRecord:
-          type: string
+          type: object
         BankRateRecordDate:
           type: string
     Liquidity:
@@ -360,7 +360,7 @@ components:
         BankSecuritizationPoliciesandguidelines:
           type: string
         SecuritizationTrancheReference:
-          type: string
+          type: object
         SecuritizationTrancheRecord:
           type: string
         SecuritizationTask:

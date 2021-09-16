@@ -221,17 +221,17 @@ components:
         FraudCaseType:
           type: string
         ProductInstanceReference:
-          type: string
+          type: object
         CustomerReference:
-          type: string
+          type: object
         MerchantReference:
-          type: string
+          type: object
         InterstedPartyReference:
-          type: string
+          type: object
         ContactReference:
-          type: string
+          type: object
         TransactionReference:
-          type: string
+          type: object
         TransactionRecord:
           type: string
         CaseLocation:
@@ -239,7 +239,7 @@ components:
         Date:
           type: string
         EmployeeOrBusinessUnitReference:
-          type: string
+          type: object
         FraudCaseWorkProducts:
           type: string
         FraudCaseResolutionSchedule:
@@ -252,17 +252,17 @@ components:
         FraudCaseResolutionRecord:
           type: string
         Employee/BusinessUnitReference:
-          type: string
+          type: object
         CorrespondenceReference:
-          type: string
+          type: object
         Adjustment/ChargebackReference:
-          type: string
+          type: object
         ConsortiaReportingInstanceReference:
-          type: string
+          type: object
         DocumentDirectoryEntryInstanceReference:
-          type: string
+          type: object
         PaymentOrderReference:
-          type: string
+          type: object
     CaseAnalysis:
       type: object
       properties:
@@ -272,15 +272,15 @@ components:
       type: object
       properties:
         CustomerAgreementReference:
-          type: string
+          type: object
         CustomerAgreement:
           type: string
         MerchantAgreementReference:
-          type: string
+          type: object
         MerchantAgreement:
           type: string
         InterestedPartyAgreementReference:
-          type: string
+          type: object
         InterestedPartyAgreement:
           type: string
         FraudCaseDeterminationRecord:

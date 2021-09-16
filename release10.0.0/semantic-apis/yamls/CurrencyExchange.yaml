@@ -551,8 +551,6 @@ components:
     CurrencyExchangeTransaction:
       type: object
       properties:
-        '':
-          type: string
         CurrencyExchangeTransactionParameterType:
           type: string
         CurrencyExchangeTransactionSelectedOption:
@@ -568,14 +566,12 @@ components:
     FXTransactionCapture:
       type: object
       properties:
-        '':
-          type: string
         FXTransactionCapturePreconditions:
           type: string
         FXTransactionCaptureTaskSchedule:
           type: string
         FXTransactionCapture:
-          type: string
+          type: object
         FXTransactionCapturePostconditions:
           type: string
         FXTransactionCaptureFXTransactionCaptureServiceType:
@@ -591,14 +587,12 @@ components:
     DocumentHandling:
       type: object
       properties:
-        '':
-          type: string
         DocumentHandlingPreconditions:
           type: string
         DocumentHandlingTaskSchedule:
           type: string
         DocumentServices:
-          type: string
+          type: object
         DocumentHandlingPostconditions:
           type: string
         DocumentHandlingDocumentServicesServiceType:
@@ -631,7 +625,7 @@ components:
         CurrencyExchangeOptions:
           type: string
         CurrencyExchangeRates:
-          type: string
+          type: object
         CurrencyExchangeSettlement:
           type: string
         CurrencyExchangeWorkProduct:
@@ -639,14 +633,12 @@ components:
     FXTransactionPricing:
       type: object
       properties:
-        '':
-          type: string
         FXTransactionPricingPreconditions:
           type: string
         FXTransactionPricingTaskSchedule:
           type: string
         OTCFXTransactionPricing:
-          type: string
+          type: object
         FXTransactionPricingPostconditions:
           type: string
         FXTransactionPricingOTCFXTransactionPricingServiceType:

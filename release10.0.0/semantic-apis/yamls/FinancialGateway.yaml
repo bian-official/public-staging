@@ -260,9 +260,9 @@ components:
         FinancialGatewayServiceSessionIssueRecord:
           type: string
         EmployeeOrBusinessUnitReference:
-          type: string
+          type: object
         MessageReference:
-          type: string
+          type: object
         ProductionIssueType:
           type: string
         ProductionIssueDescription:

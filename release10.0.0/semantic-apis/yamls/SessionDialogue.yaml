@@ -910,11 +910,11 @@ components:
       type: object
       properties:
         CustomerReference:
-          type: string
+          type: object
         EmployeeReference:
-          type: string
+          type: object
         ServicingPositionReference:
-          type: string
+          type: object
         SessionMechanism:
           type: string
         SessionStartOrEndTime:
@@ -926,7 +926,7 @@ components:
         SessionDialogueScript:
           type: string
         SessionDialogueLogReference:
-          type: string
+          type: object
         SessionDialogueLog:
           type: string
         SessionDialogueResult:
@@ -967,7 +967,7 @@ components:
       type: object
       properties:
         ProductInstanceReference:
-          type: string
+          type: object
         ProductandServiceTaskResult:
           type: string
     Sales:
@@ -999,7 +999,7 @@ components:
       type: object
       properties:
         ProductInstanceReference:
-          type: string
+          type: object
         CustomerCaseType:
           type: string
         CaseTaskResult:

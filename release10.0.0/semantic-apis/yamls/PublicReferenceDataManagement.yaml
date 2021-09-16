@@ -278,8 +278,6 @@ components:
     GlobalStandardSpecification:
       type: object
       properties:
-        '':
-          type: string
         GlobalStandardSpecificationParameterType:
           type: string
         GlobalStandardSpecificationSelectedOption:
@@ -295,41 +293,39 @@ components:
         GlobalStandardSpecificationFeedback:
           type: string
         GlobalStandardSpecificationServiceProviderReference:
-          type: string
+          type: object
     PublicReferenceDataManagementOutcome:
       type: object
       properties:
         PublicReferenceDataManagementTask:
-          type: string
+          type: object
         PublicReferenceDataManagementDesign:
-          type: string
+          type: object
         PublicReferenceDataManagementWorkProduct:
-          type: string
+          type: object
         PublicReferenceDataManagementImpactAnalysis:
-          type: string
+          type: object
     GlobalReferenceData:
       type: object
       properties:
-        '':
-          type: string
         GlobalReferenceDataPreconditions:
-          type: string
+          type: object
         GlobalReferenceDataSpecificationSchedule:
-          type: string
+          type: object
         GlobalReferenceDataVersionNumber:
-          type: string
+          type: object
         ExternalReferenceData:
-          type: string
+          type: object
         ExternalReferenceDataServiceType:
           type: string
         ExternalReferenceDataServiceDescription:
-          type: string
+          type: object
         ExternalReferenceDataServiceInputsandOuputs:
-          type: string
+          type: object
         ExternalReferenceDataServiceWorkProduct:
-          type: string
+          type: object
         ExternalReferenceDataServiceName:
-          type: string
+          type: object
     HTTPError:
       type: object
       properties:

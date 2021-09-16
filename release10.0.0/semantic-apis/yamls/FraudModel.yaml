@@ -351,11 +351,11 @@ components:
         FraudModelDeployment:
           type: string
         EmployeeOrBusinessUnitReference:
-          type: string
+          type: object
         FraudModelDeploymentConfiguration:
           type: string
         FraudModelDeploymentTaskReference:
-          type: string
+          type: object
         FraudModelDeploymentTaskRecord:
           type: string
         FraudModelStatus:
@@ -381,11 +381,11 @@ components:
       type: object
       properties:
         FraudModelDesignTaskReference:
-          type: string
+          type: object
         FraudModelDesignTaskRecord:
           type: string
         Customer/MarketDataServiceReference:
-          type: string
+          type: object
         Customer/MarketDataRecord:
           type: string
         FraudModelFeedbackRecord:
@@ -396,23 +396,23 @@ components:
       type: object
       properties:
         FraudModelTestReference:
-          type: string
+          type: object
         FraudModelTestType:
           type: string
         FraudModelTestHarnessReference:
-          type: string
+          type: object
         FraudModelTestResult:
           type: string
         FraudModelTestingTaskReference:
-          type: string
+          type: object
         FraudModelTestingTaskRecord:
           type: string
         FraudModelComplianceTaskReference:
-          type: string
+          type: object
         FraudModelComplianceTaskRecord:
           type: string
         FraudModelComplianceTestReference:
-          type: string
+          type: object
         FraudModelComplianceTestType:
           type: string
     HTTPError:

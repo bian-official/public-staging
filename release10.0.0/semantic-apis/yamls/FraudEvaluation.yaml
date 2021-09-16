@@ -128,7 +128,7 @@ components:
       type: object
       properties:
         ProductProductionSessionReference:
-          type: string
+          type: object
         FraudEvaluationTestProfile:
           type: string
         FraudEvaluationEnsembleTechniqueType:
@@ -140,7 +140,7 @@ components:
         FraudEvaluationProductionAnomalyRecord:
           type: string
         FraudEvaluationProductionAnomalyProductionTransactionReference:
-          type: string
+          type: object
     RuleSetsandDecisionTrees:
       type: object
       properties:

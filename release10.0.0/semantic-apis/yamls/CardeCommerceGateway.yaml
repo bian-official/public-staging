@@ -380,14 +380,14 @@ components:
       type: object
       properties:
         eCommerceTransactionInstanceReference:
-          type: string
+          type: object
         eCommerceTransactionAuthorizationResponse:
           type: string
     CardAuthentication:
       type: object
       properties:
         eCommerceTransactionInstanceReference:
-          type: string
+          type: object
         eCommerceTransactionAuthenticationResponse:
           type: string
     TransactionBatch:
@@ -396,24 +396,24 @@ components:
         eCommerceBatchTransactionDate/Time:
           type: string
         TransactionMerchantReference:
-          type: string
+          type: object
         eCommerceBatchTransactionRecord:
           type: string
     CardTransaction:
       type: object
       properties:
         ProductInstanceReference:
-          type: string
+          type: object
         CustomerReference:
-          type: string
+          type: object
         Cardexpirationdate:
           type: string
         CardCVV:
           type: string
         CardIssuingBankReference:
-          type: string
+          type: object
         MerchantAcquiringBankReference:
-          type: string
+          type: object
         eCommerceTransactionType:
           type: string
         eCommerceTransactionCurrency:
@@ -421,13 +421,13 @@ components:
         eCommerceTransactionAmountType:
           type: string
         eCommerceTransactionAmount:
-          type: string
+          type: number
         eCommerceTransactionMerchantReference:
-          type: string
+          type: object
         eCommerceTransactionLocationReference:
-          type: string
+          type: object
         eCommerceTransactionProductandServiceReference:
-          type: string
+          type: object
         eCommerceTransactionDate/Time:
           type: string
     HTTPError:

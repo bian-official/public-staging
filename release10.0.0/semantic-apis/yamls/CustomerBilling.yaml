@@ -373,11 +373,11 @@ components:
         CustomerBillingTransactionDescription:
           type: string
         CustomerReference:
-          type: string
+          type: object
         ProductInstanceReference:
-          type: string
+          type: object
         CustomerAgreementReference:
-          type: string
+          type: object
         CustomerBillingProductandServiceOrActionDescription:
           type: string
         CustomerBillingParty:
@@ -389,7 +389,7 @@ components:
         CustomerBillingStatement:
           type: string
         CustomerBillingAmount:
-          type: string
+          type: number
         CustomerBillingPaymentDueDate:
           type: string
         CustomerBillingPaymentDetails:
@@ -404,9 +404,9 @@ components:
         InvoiceDate:
           type: string
         DocumentDirectoryEntryInstanceReference:
-          type: string
+          type: object
         CorrespondenceInstanceReference:
-          type: string
+          type: object
         Invoice:
           type: string
         InvoicingWorkProduct:
@@ -415,7 +415,7 @@ components:
       type: object
       properties:
         PaymentTransactionReference:
-          type: string
+          type: object
         PaymentTransaction:
           type: string
     TrackingandReminders:

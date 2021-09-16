@@ -469,18 +469,18 @@ components:
       type: object
       properties:
         ServicingPositionReference:
-          type: string
+          type: object
         EmployeeOrBusinessUnitReference:
-          type: string
+          type: object
     Issue:
       type: object
       properties:
         ServicingPositionReference:
-          type: string
+          type: object
         ServicingPositionSessionReference:
-          type: string
+          type: object
         Employee/BusinessUnitReference:
-          type: string
+          type: object
         ProductionIssueType:
           type: string
         ProductionIssueDescription:
@@ -495,7 +495,7 @@ components:
         ServicingFacilityType:
           type: string
         ServicingFacilityInstanceReference:
-          type: string
+          type: object
     Assignment:
       type: object
       properties:
@@ -511,7 +511,7 @@ components:
         SessionStart/EndTime:
           type: string
         CustomerContactReference:
-          type: string
+          type: object
         SessionMechanism:
           type: string
         ServicingFacilityType:
@@ -523,7 +523,7 @@ components:
         SessionDialogueScript:
           type: string
         SessionDialogueLogReference:
-          type: string
+          type: object
         SessionDialogueLog:
           type: string
         SessionDialogueResult:

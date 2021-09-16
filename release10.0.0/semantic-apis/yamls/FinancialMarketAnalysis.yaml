@@ -311,8 +311,6 @@ components:
     FinancialMarketAnalysis:
       type: object
       properties:
-        '':
-          type: string
         FinancialMarketAnalysisParameterType:
           type: string
         FinancialMarketAnalysisSelectedOption:
@@ -326,7 +324,7 @@ components:
         FinancialMarketAnalysisUsageLog:
           type: string
         FinancialMarketAnalysisRequesterReference:
-          type: string
+          type: object
     FinancialMarketAnalysisOutcome:
       type: object
       properties:
@@ -337,8 +335,6 @@ components:
     FinancialMarketInsight:
       type: object
       properties:
-        '':
-          type: string
         FinancialMarketInsightPreconditions:
           type: string
         FinancialMarketInsightAnalysisSchedule:
@@ -346,7 +342,7 @@ components:
         FinancialMarketInsightVersionNumber:
           type: string
         FinancialMarketAnalysis:
-          type: string
+          type: object
         FinancialMarketAnalysisServiceType:
           type: string
         FinancialMarketAnalysisServiceDescription:

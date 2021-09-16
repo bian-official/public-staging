@@ -1232,17 +1232,17 @@ components:
         VirtualAccountArrangement<SubjectArea>Type:
           type: string
         VirtualAccountArrangement<SubjectArea>Reference:
-          type: string
+          type: object
         VirtualAccountArrangementSchedule:
           type: string
         VirtualAccountArrangementStatus:
           type: string
         VirtualAccountArrangementReference:
-          type: string
+          type: object
         VirtualAccountArrangementCurrency:
           type: string
         VirtualAccountArrangementRegulationReference:
-          type: string
+          type: object
         VirtualAccountArrangementRegulationType:
           type: string
         VirtualAccountArrangementJurisdiction:
@@ -1252,7 +1252,7 @@ components:
         VirtualAccountArrangementAccountType:
           type: string
         VirtualAccountArrangementAccountReference:
-          type: string
+          type: object
     Fee:
       type: object
       properties:
@@ -1261,7 +1261,7 @@ components:
         FeeFeatureSchedule:
           type: string
         BusinessService:
-          type: string
+          type: object
         FeePostconditions:
           type: string
         FeeServiceType:
@@ -1282,7 +1282,7 @@ components:
         StandingOrderFeatureSchedule:
           type: string
         BusinessService:
-          type: string
+          type: object
         StandingOrderPostconditions:
           type: string
         StandingOrderServiceType:
@@ -1310,7 +1310,7 @@ components:
         StatementFeatureSchedule:
           type: string
         BusinessService:
-          type: string
+          type: object
         StatementPostconditions:
           type: string
         StatementServiceType:
@@ -1331,7 +1331,7 @@ components:
         InterestFeatureSchedule:
           type: string
         BusinessService:
-          type: string
+          type: object
         InterestPostconditions:
           type: string
         InterestServiceType:
@@ -1352,7 +1352,7 @@ components:
         CreditTransferFeatureSchedule:
           type: string
         BusinessService:
-          type: string
+          type: object
         CreditTransferPostconditions:
           type: string
         CreditTransferServiceType:
@@ -1373,7 +1373,7 @@ components:
         DirectDebitFeatureSchedule:
           type: string
         BusinessService:
-          type: string
+          type: object
         DirectDebitPostconditions:
           type: string
         DirectDebitServiceType:

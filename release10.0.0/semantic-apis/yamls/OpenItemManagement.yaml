@@ -284,9 +284,9 @@ components:
         OpenItemDescription:
           type: string
         ProductInstanceReference:
-          type: string
+          type: object
         PartyReference:
-          type: string
+          type: object
         LoanRepaymentSchedule:
           type: string
         LoanOutstandingBalance:
@@ -299,7 +299,7 @@ components:
       type: object
       properties:
         CustomerBillingProcedureInstanceReference:
-          type: string
+          type: object
         CustomerBillingParty:
           type: string
         CustomerBillingAddress:
@@ -309,20 +309,20 @@ components:
         CustomerBillingStatement:
           type: string
         CustomerBillingAmount:
-          type: string
+          type: number
     Repayment:
       type: object
       properties:
         TransactionPayerReference:
-          type: string
+          type: object
         TransactionPayerProductInstanceReference:
-          type: string
+          type: object
         TransactionPayerBankReference:
-          type: string
+          type: object
         TransactionType:
           type: string
         TransactionAmount:
-          type: string
+          type: number
         TransactionCurrency:
           type: string
         TransactionDate:

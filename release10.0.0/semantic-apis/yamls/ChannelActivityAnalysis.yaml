@@ -507,7 +507,7 @@ components:
         ChannelActivityCustomerFraudAnalysisAlgorithmSpecification:
           type: string
         ChannelActivityCustomerFraudAnalysisReference:
-          type: string
+          type: object
         ChannelActivityCustomerFraudAnalysisResult:
           type: string
     Bot:
@@ -516,7 +516,7 @@ components:
         ChannelActivityBotDetectionAnalysisAlgorithmSpecification:
           type: string
         ChannelActivityBotDetectionAnalysisReference:
-          type: string
+          type: object
         ChannelActivityBotDetectionAnalysisResult:
           type: string
     MerchantFraud:
@@ -525,7 +525,7 @@ components:
         ChannelActivityMerchantFraudAnalysisAlgorithmSpecification:
           type: string
         ChannelActivityMerchantFraudAnalysisReference:
-          type: string
+          type: object
         ChannelActivityMerchantFraudAnalysisResult:
           type: string
     MerchantBehavior:
@@ -534,7 +534,7 @@ components:
         ChannelActivityMerchantBehaviorAnalysisAlgorithmSpecification:
           type: string
         ChannelActivityMerchantBehaviorAnalysisReference:
-          type: string
+          type: object
         ChannelActivityMerchantBehaviorAnalysisResult:
           type: string
     DeviceError:
@@ -543,7 +543,7 @@ components:
         ChannelActivityDeviceErrorDetectionAnalysisAlgorithmSpecification:
           type: string
         ChannelActivityDeviceErrorDetectionAnalysisReference:
-          type: string
+          type: object
         ChannelActivityDeviceErrorDetectionAnalysisResult:
           type: string
     CustomerBehavior:
@@ -552,7 +552,7 @@ components:
         ChannelActivityCustomerBehaviorAnalysisAlgorithmSpecification:
           type: string
         ChannelActivityCustomerBehaviorAnalysisReference:
-          type: string
+          type: object
         ChannelActivityCustomerBehaviorAnalysisResult:
           type: string
     HTTPError:

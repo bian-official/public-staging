@@ -580,8 +580,6 @@ components:
     DirectDebitArrangement:
       type: object
       properties:
-        '':
-          type: string
         DirectDebitArrangementParameterType:
           type: string
         DirectDebitArrangementSelectedOption:
@@ -589,7 +587,7 @@ components:
         DirectDebitArrangementType:
           type: string
         DirectDebitArrangementReference:
-          type: string
+          type: object
         DirectDebitArrangementSchedule:
           type: string
         DirectDebitArrangementStatus:
@@ -597,7 +595,7 @@ components:
         DirectDebitArrangementCurrency:
           type: string
         DirectDebitArrangementRegulationReference:
-          type: string
+          type: object
         DirectDebitArrangementRegulationType:
           type: string
         DirectDebitArrangementJurisdiction:
@@ -607,18 +605,16 @@ components:
         DirectDebitArrangementAccountType:
           type: string
         DirectDebitArrangementAccountReference:
-          type: string
+          type: object
     Reporting:
       type: object
       properties:
-        '':
-          type: string
         ReportingPreconditions:
           type: string
         ReportingFeatureSchedule:
           type: string
         BusinessService:
-          type: string
+          type: object
         ReportingPostconditions:
           type: string
         ReportingServiceType:
@@ -634,14 +630,12 @@ components:
     FundsAvailableCheck:
       type: object
       properties:
-        '':
-          type: string
         FundsAvailableCheckPreconditions:
           type: string
         FundsAvailableCheckFeatureSchedule:
           type: string
         FundsAvailableCheck:
-          type: string
+          type: object
         FundsAvailableCheckPostconditions:
           type: string
         FundsAvailableCheckFundsAvailableCheckServiceType:
@@ -657,14 +651,12 @@ components:
     PaymentInitiation:
       type: object
       properties:
-        '':
-          type: string
         PaymentInitiationPreconditions:
           type: string
         PaymentInitiationFeatureSchedule:
           type: string
         DirectDebitPaymentInitiation:
-          type: string
+          type: object
         PaymentInitiationPostconditions:
           type: string
         PaymentInitiationDirectDebitPaymentInitiationServiceType:
@@ -680,14 +672,12 @@ components:
     VerifyMandate:
       type: object
       properties:
-        '':
-          type: string
         VerifyMandatePreconditions:
           type: string
         VerifyMandateFeatureSchedule:
           type: string
         DirectDebitMandateCheck:
-          type: string
+          type: object
         VerifyMandatePostconditions:
           type: string
         VerifyMandateDirectDebitMandateCheckServiceType:
@@ -703,14 +693,12 @@ components:
     PaymentTracking:
       type: object
       properties:
-        '':
-          type: string
         PaymentTrackingPreconditions:
           type: string
         PaymentTrackingFeatureSchedule:
           type: string
         DirectDebitPaymentTracking:
-          type: string
+          type: object
         PaymentTrackingPostconditions:
           type: string
         PaymentTrackingDirectDebitPaymentTrackingServiceType:

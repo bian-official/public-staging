@@ -431,8 +431,6 @@ components:
     RewardPointsTransaction:
       type: object
       properties:
-        '':
-          type: string
         RewardPointsTransactionParameterType:
           type: string
         RewardPointsTransactionSelectedOption:
@@ -465,7 +463,7 @@ components:
         RewardPointsAwardsAndRedemptionOptions:
           type: string
         RewardPointsAwardsAndRedemptionRates:
-          type: string
+          type: object
         RewardPointsAwardsAndRedemptionSettlement:
           type: string
         RewardPointsAwardsAndRedemptionWorkProduct:
@@ -473,14 +471,12 @@ components:
     Award:
       type: object
       properties:
-        '':
-          type: string
         AwardPreconditions:
           type: string
         AwardTaskSchedule:
           type: string
         Awards:
-          type: string
+          type: object
         AwardPostconditions:
           type: string
         AwardAwardsServiceType:
@@ -496,14 +492,12 @@ components:
     Redemption:
       type: object
       properties:
-        '':
-          type: string
         RedemptionPreconditions:
           type: string
         RedemptionTaskSchedule:
           type: string
         AwardsRedemption:
-          type: string
+          type: object
         RedemptionPostconditions:
           type: string
         RedemptionAwardsRedemptionServiceType:

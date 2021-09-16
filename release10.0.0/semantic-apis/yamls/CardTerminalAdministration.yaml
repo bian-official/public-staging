@@ -253,7 +253,7 @@ components:
       type: object
       properties:
         CardPOSDeviceReference:
-          type: string
+          type: object
         CardPOSDeviceIdentifier:
           type: string
         CardPOSDeviceType:
@@ -276,7 +276,7 @@ components:
       type: object
       properties:
         MerchantReference:
-          type: string
+          type: object
         MerchantType:
           type: string
         MerchantLocation:

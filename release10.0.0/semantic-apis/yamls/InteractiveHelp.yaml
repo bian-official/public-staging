@@ -155,7 +155,7 @@ components:
         HelpSelectionFeedback:
           type: string
         Employee/BusinessUnitReference:
-          type: string
+          type: object
         Date/Time:
           type: string
     HTTPError:

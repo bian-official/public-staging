@@ -335,7 +335,7 @@ components:
       type: object
       properties:
         BusinessDevelopmentInitiativeBusinessUnitReference:
-          type: string
+          type: object
         BusinessDevelopmentInitiativeType:
           type: string
         BusinessDevelopmentInitiativeDescription:
@@ -347,9 +347,9 @@ components:
         BusinessDevelopmentInitiativeResult:
           type: string
         DocumentDirectoryEntryInstanceReference:
-          type: string
+          type: object
         CorrespondenceInstanceReference:
-          type: string
+          type: object
         DateType:
           type: string
         Date:

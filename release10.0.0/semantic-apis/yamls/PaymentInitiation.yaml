@@ -191,25 +191,25 @@ components:
         RecurringPaymentRecord:
           type: string
         RecurringPaymentCustomerReference:
-          type: string
+          type: object
         RecurringPaymentReference:
-          type: string
+          type: object
         CustomerReference:
-          type: string
+          type: object
         PaymentTransaction:
           type: string
         PayerReference:
-          type: string
+          type: object
         PayerBankReference:
-          type: string
+          type: object
         PayerProductInstanceReference:
-          type: string
+          type: object
         PayeeReference:
-          type: string
+          type: object
         PayeeBankReference:
-          type: string
+          type: object
         PayeeProductInstanceReference:
-          type: string
+          type: object
         Amount:
           type: string
         Currency:
@@ -225,7 +225,7 @@ components:
         PaymentPurpose:
           type: string
         DocumentDirectoryEntryInstanceReference:
-          type: string
+          type: object
         DocumentContent:
           type: string
     Compliance:
@@ -241,7 +241,7 @@ components:
       type: object
       properties:
         PaymentOrderProcedureInstanceReference:
-          type: string
+          type: object
         PaymentOrderProcedureInstanceStatus:
           type: string
         OrderInitiationTaskResult:

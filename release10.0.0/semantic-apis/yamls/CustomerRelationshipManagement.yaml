@@ -433,9 +433,9 @@ components:
       type: object
       properties:
         CustomerReference:
-          type: string
+          type: object
         EmployeeOrBusinessUnitReference:
-          type: string
+          type: object
         CustomerRelationshipRatingType:
           type: string
         CustomerRelationshipRating:
@@ -468,7 +468,7 @@ components:
         CustomerRelationshipContactDate:
           type: string
         EmployeeReference:
-          type: string
+          type: object
         CustomerRelationshipContactType:
           type: string
         CustomerRelationshipContactResult:
@@ -479,9 +479,9 @@ components:
         RelationshipIncidentRecord:
           type: string
         Employee/BusinessUnitReference:
-          type: string
+          type: object
         ProductandServiceActivityReference:
-          type: string
+          type: object
         CustomerIncidentType:
           type: string
         CustomerIncidentDescription:
@@ -500,7 +500,7 @@ components:
         CustomerRelationshipDevelopmentPlan:
           type: string
         Employee/BusinessUnitReference:
-          type: string
+          type: object
         CustomerDevelopmentWorkProduct:
           type: string
         CustomerDevelopmentTaskResult:

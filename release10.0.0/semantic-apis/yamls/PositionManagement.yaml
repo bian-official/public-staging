@@ -282,7 +282,7 @@ components:
         PositionType:
           type: string
         PositionCustomerReference:
-          type: string
+          type: object
         PositionSector:
           type: string
         PositionProductType:
@@ -294,11 +294,11 @@ components:
         PositionValue:
           type: string
         PositionNotificationArrangementReference:
-          type: string
+          type: object
         PositionNotificationArrangementRecord:
           type: string
         PositionNotificationBusinessUnitReference:
-          type: string
+          type: object
         PositionNotificationDetails:
           type: string
         PositionNotificationRecord:
@@ -307,13 +307,13 @@ components:
       type: object
       properties:
         TransactionReference:
-          type: string
+          type: object
         TransactionType:
           type: string
         TransactionRecord:
           type: string
         TransactionAmount:
-          type: string
+          type: number
         TransactionDate:
           type: string
         TransactionBookingEntity:
@@ -324,13 +324,13 @@ components:
       type: object
       properties:
         TrialTransactionReference:
-          type: string
+          type: object
         TrialTransactionType:
           type: string
         TrialTransactionRecord:
           type: string
         TrialTransactionAmount:
-          type: string
+          type: number
         TrialTransactionDate:
           type: string
         TrialTransactionBookingEntity:

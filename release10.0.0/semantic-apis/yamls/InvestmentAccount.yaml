@@ -401,13 +401,13 @@ components:
       type: object
       properties:
         ProductInstanceReference:
-          type: string
+          type: object
         InvestmentAccountNumber:
           type: string
         CustomerReference:
-          type: string
+          type: object
         BankBranchOrLocationReference:
-          type: string
+          type: object
         LinkedCashAccount:
           type: string
         LinkType:
@@ -423,9 +423,9 @@ components:
         InstrumentType:
           type: string
         InstrumentReference:
-          type: string
+          type: object
         TradingMarketplaceReference:
-          type: string
+          type: object
         InstrumentPositionRecord:
           type: string
         InstrumentPositionLimitType:
@@ -443,7 +443,7 @@ components:
         InstrumentEventDate:
           type: string
         TaxReference:
-          type: string
+          type: object
         EntitlementOptionDefinition:
           type: string
         EntitlementOptionSetting:
@@ -476,7 +476,7 @@ components:
         CorporateActionWorkProducts:
           type: string
         DocumentDirectoryEntryInstanceReference:
-          type: string
+          type: object
         CorporateActionTransactionResult:
           type: string
         CorporateActionTransactionDate:
@@ -501,7 +501,7 @@ components:
         TransactionFeeCharge:
           type: string
         PaymentOrderProcedureInstanceReference:
-          type: string
+          type: object
         FeeProjectionsandCommitments:
           type: string
         ProjectedTransactionDescription:
@@ -511,7 +511,7 @@ components:
         ProjectedTransactionFeeCharge:
           type: string
         FeeAccrualAmount:
-          type: string
+          type: number
         AccrualFeeType:
           type: string
         AccrualFeeCharge:
@@ -526,25 +526,25 @@ components:
         SecuritiesDepositTransaction:
           type: string
         SecuritiesDepositTransactionSourceReference:
-          type: string
+          type: object
         SecuritiesDepositTransactionDepositType:
           type: string
         SecuritiesDepositTransactionDescription:
           type: string
         SecuritiesDepositTransactionAmount:
-          type: string
+          type: number
         SecuritiesDepositTransactionDate:
           type: string
         SecuritiesWithdrawalTransaction:
           type: string
         SecuritiesWithdrawalTransactionSourceReference:
-          type: string
+          type: object
         SecuritiesWithdrawalTransactionWithdrawalType:
           type: string
         SecuritiesWithdrawalTransactionDescription:
           type: string
         SecuritiesWithdrawalTransactionAmount:
-          type: string
+          type: number
         SecuritiesWithdrawalTransactionDate:
           type: string
     HTTPError:

@@ -436,7 +436,7 @@ components:
       type: object
       properties:
         CustomerReference:
-          type: string
+          type: object
     Alert:
       type: object
       properties:

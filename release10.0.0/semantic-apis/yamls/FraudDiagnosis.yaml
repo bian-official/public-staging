@@ -218,7 +218,7 @@ components:
       type: object
       properties:
         ProductProductionSessionReference:
-          type: string
+          type: object
         FraudDiagnosisEvaluationProfile:
           type: string
         FraudDiagnosisTransactionConsolidationRecord:
@@ -226,7 +226,7 @@ components:
         FraudEvaluationProductionAnomalyRecord:
           type: string
         FraudEvaluationProductionAnomalyProductionTransactionReference:
-          type: string
+          type: object
         FraudDiagnosisDetermination:
           type: string
         FraudDiagnosisRecommendation:
@@ -249,9 +249,9 @@ components:
       type: object
       properties:
         CustomerReference:
-          type: string
+          type: object
         OutboundContactReference:
-          type: string
+          type: object
         AnalystReviewAnalysisResult:
           type: string
         AnalystReviewWorkProduct:

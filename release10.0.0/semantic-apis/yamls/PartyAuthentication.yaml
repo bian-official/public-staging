@@ -514,9 +514,9 @@ components:
       type: object
       properties:
         CustomerReference:
-          type: string
+          type: object
         PartyReference:
-          type: string
+          type: object
         PartyAuthenticationAssessmentProfile:
           type: string
         AuthenticationType:
@@ -529,11 +529,11 @@ components:
       type: object
       properties:
         AuthenticationDocumentReference:
-          type: string
+          type: object
         AuthenticationDocumentContent:
           type: string
         DocumentDirectoryEntryInstanceReference:
-          type: string
+          type: object
         DocumentContent:
           type: string
         AuthenticationDocumentComparisonTestResult:
@@ -542,13 +542,13 @@ components:
       type: object
       properties:
         AuthenticationReferenceDataReference:
-          type: string
+          type: object
         AuthenticationReferenceDataType:
           type: string
         AuthenticationReferenceDataValue:
-          type: string
+          type: object
         AuthenticationPasswordReference:
-          type: string
+          type: object
         AuthenticationPasswordTemplate:
           type: string
         AuthenticationPasswordStoredValue:
@@ -563,7 +563,7 @@ components:
       type: object
       properties:
         AuthenticationSecretQuestionReference:
-          type: string
+          type: object
         AuthenticationSecretQuestionTemplate:
           type: string
         AuthenticationSecretQuestionValue:
@@ -578,7 +578,7 @@ components:
         AuthenticationBehaviorRecord:
           type: string
         RegisteredBehaviorInstanceReference:
-          type: string
+          type: object
         BehaviorTestResult:
           type: string
     Biometric:
@@ -589,18 +589,18 @@ components:
         AuthenticationBiometricRecord:
           type: string
         RegisteredBiometricInstanceReference:
-          type: string
+          type: object
         BiometricTestResult:
           type: string
     Device:
       type: object
       properties:
         AuthenticationDeviceReference:
-          type: string
+          type: object
         AuthenticationDevicePropertyValue:
           type: string
         IssuedDeviceInstanceReference:
-          type: string
+          type: object
         IssuedDevicePropertyValue:
           type: string
         DeviceTestResult:

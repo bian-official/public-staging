@@ -102,13 +102,13 @@ components:
         GuidelineComplianceAssessmentType:
           type: string
         BusinessUnitReference:
-          type: string
+          type: object
         ProductandServiceReference:
-          type: string
+          type: object
         CustomerReference:
-          type: string
+          type: object
         DocumentReference:
-          type: string
+          type: object
         GuidelineComplianceAssessmentWorkProducts:
           type: string
         GuidelineComplianceAssessmentResult:

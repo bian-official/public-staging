@@ -251,11 +251,11 @@ components:
       type: object
       properties:
         BankReference:
-          type: string
+          type: object
         BankDetails:
           type: string
         EmployeeOrBusinessUnitReference:
-          type: string
+          type: object
         BankRelationshipType:
           type: string
         BankRelationshipDescription:
@@ -276,13 +276,13 @@ components:
         BankRelationshipContactDate:
           type: string
         EmployeeReference:
-          type: string
+          type: object
         BankRelationshipContactType:
           type: string
         BankRelationshipContactResult:
           type: string
         DocumentDirectoryEntryInstanceReference:
-          type: string
+          type: object
     HTTPError:
       type: object
       properties:

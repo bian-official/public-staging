@@ -308,11 +308,11 @@ components:
       type: object
       properties:
         ProductInstanceReference:
-          type: string
+          type: object
         ProductandServiceType:
           type: string
         CustomerReference:
-          type: string
+          type: object
         CardType:
           type: string
         CardAccountStatus:
@@ -322,23 +322,23 @@ components:
         ConfigurationOrOptions:
           type: string
         TaxReference:
-          type: string
+          type: object
         BillingTransactions:
           type: string
         BillingTransactionReference:
-          type: string
+          type: object
         PaymentTransactions:
           type: string
         PaymentTransactionReference:
-          type: string
+          type: object
         ProductTransactions:
           type: string
         ProductTransactionReference:
-          type: string
+          type: object
         Statements:
           type: string
         StatementsReference:
-          type: string
+          type: object
         CardCollectionsProcessingSchedule:
           type: string
     PaymentTerms:
@@ -353,11 +353,11 @@ components:
         ContactResult:
           type: string
         DocumentDirectoryEntryInstanceReference:
-          type: string
+          type: object
         DocumentContent:
           type: string
         CorrespondenceInstanceReference:
-          type: string
+          type: object
         CorrespondenceContent:
           type: string
         CardCollectionsPaymentTermsRenegotiationDecision:
@@ -368,7 +368,7 @@ components:
       type: object
       properties:
         PaymentTransactionReference:
-          type: string
+          type: object
         PaymentTransaction:
           type: string
         CardCollectionsPaymentNotificationRecord:
@@ -384,11 +384,11 @@ components:
       type: object
       properties:
         CustomerCreditRatingAssessmentInstanceReference:
-          type: string
+          type: object
         CustomerCreditRatingAssessment:
           type: string
         CollectionAgencyReference:
-          type: string
+          type: object
         CollectionAgencyAgreement:
           type: string
         CardCollectionsAssignmentDecision:

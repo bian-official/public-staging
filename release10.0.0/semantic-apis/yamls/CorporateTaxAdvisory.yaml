@@ -372,17 +372,17 @@ components:
       type: object
       properties:
         ProductInstanceReference:
-          type: string
+          type: object
         CustomerReference:
-          type: string
+          type: object
         BankBranchOrLocationReference:
-          type: string
+          type: object
         EmployeeOrBusinessUnitReference:
-          type: string
+          type: object
         CorporateTaxAdvisoryWorkProducts:
           type: string
         DocumentDirectoryEntryInstanceReference:
-          type: string
+          type: object
         CorporateTaxAdviceSessionSchedule:
           type: string
         CorporateTaxAdviceConsolidationRecord:
@@ -395,11 +395,11 @@ components:
       type: object
       properties:
         ProductandServiceReference:
-          type: string
+          type: object
         SpecialistSupportTask:
           type: string
         SpecialistEmployee/BusinessUnitReference:
-          type: string
+          type: object
         SpecialistAdviceDescription:
           type: string
         SpecialistAdviceCharge:

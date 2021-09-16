@@ -254,19 +254,19 @@ components:
         ServicingResourceAllocationServiceSchedule:
           type: string
         ServicingResourceReference:
-          type: string
+          type: object
         ServicingResourceRecord:
           type: string
         ServicingResourceQualificationProfile:
           type: string
         ServicingPositionReference:
-          type: string
+          type: object
         ServicingResourceAvailabilitySchedule:
           type: string
         ServicingResourceStatus:
           type: string
         ServicingSessionReference:
-          type: string
+          type: object
     Allocation:
       type: object
       properties:

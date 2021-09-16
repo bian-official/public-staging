@@ -521,7 +521,7 @@ components:
       type: object
       properties:
         ACHReference:
-          type: string
+          type: object
         ACHAccessSchedule:
           type: string
     Warehousing:
@@ -533,30 +533,30 @@ components:
       type: object
       properties:
         OutboundACHTransactionBatchReference:
-          type: string
+          type: object
     InboundACH:
       type: object
       properties:
         InboundACHTransactionBatchReference:
-          type: string
+          type: object
         ACHPaymentTransactionReference:
-          type: string
+          type: object
         ACHPaymentTransactionRecord:
           type: string
         PaymentTransactionInitiatorReference:
-          type: string
+          type: object
         PayerReference:
-          type: string
+          type: object
         PayerBankReference:
-          type: string
+          type: object
         PayerProductInstanceReference:
-          type: string
+          type: object
         PayeeReference:
-          type: string
+          type: object
         PayeeProductInstanceReference:
-          type: string
+          type: object
         PayeeBankReference:
-          type: string
+          type: object
         SpecialInstructions:
           type: string
         Amount:
@@ -571,15 +571,15 @@ components:
       type: object
       properties:
         CorrespondentBankReference:
-          type: string
+          type: object
         CorrespondentBankClearingAgreementReference:
-          type: string
+          type: object
         CorrespondentBankClearingAgreementClearingInstructions:
           type: string
         CorrespondentBankClearingAgreementSettlementInstructions:
           type: string
         MirrorNostroAccountReference:
-          type: string
+          type: object
     Reconciliation:
       type: object
       properties:

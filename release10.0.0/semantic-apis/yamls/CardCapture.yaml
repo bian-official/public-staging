@@ -672,8 +672,6 @@ components:
     CreditChargeCardFinancialCaptureTransaction:
       type: object
       properties:
-        '':
-          type: string
         CreditChargeCardFinancialCaptureTransactionParameterType:
           type: string
         CreditChargeCardFinancialCaptureTransactionSelectedOption:
@@ -689,14 +687,12 @@ components:
     TransactionAuthorization:
       type: object
       properties:
-        '':
-          type: string
         TransactionAuthorizationPreconditions:
           type: string
         TransactionAuthorizationTaskSchedule:
           type: string
         BusinessService:
-          type: string
+          type: object
         TransactionAuthorizationPostconditions:
           type: string
         TransactionAuthorizationServiceType:
@@ -712,14 +708,12 @@ components:
     TransactionCapture:
       type: object
       properties:
-        '':
-          type: string
         TransactionCapturePreconditions:
           type: string
         TransactionCaptureTaskSchedule:
           type: string
         BusinessService:
-          type: string
+          type: object
         TransactionCapturePostconditions:
           type: string
         TransactionCaptureServiceType:
@@ -752,7 +746,7 @@ components:
         CardCaptureOptions:
           type: string
         CardCaptureRates:
-          type: string
+          type: object
         CardCaptureSettlement:
           type: string
         CardCaptureWorkProduct:
@@ -760,14 +754,12 @@ components:
     TransactionReversal:
       type: object
       properties:
-        '':
-          type: string
         TransactionReversalPreconditions:
           type: string
         TransactionReversalTaskSchedule:
           type: string
         CardTransactionReversal:
-          type: string
+          type: object
         TransactionReversalPostconditions:
           type: string
         TransactionReversalCardTransactionReversalServiceType:
@@ -783,14 +775,12 @@ components:
     TransactionConsolidation:
       type: object
       properties:
-        '':
-          type: string
         TransactionConsolidationPreconditions:
           type: string
         TransactionConsolidationTaskSchedule:
           type: string
         CardTransactionConsolidation:
-          type: string
+          type: object
         TransactionConsolidationPostconditions:
           type: string
         TransactionConsolidationCardTransactionConsolidationServiceType:

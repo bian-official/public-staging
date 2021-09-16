@@ -310,7 +310,7 @@ components:
       type: object
       properties:
         CustomerReference:
-          type: string
+          type: object
         CustomerCreditRatingStatusType:
           type: string
         CustomerCreditRatingSchedule:
@@ -318,7 +318,7 @@ components:
         CustomerCreditRatingAssessmentRecord:
           type: string
         AssessmentCustomerBehaviorModelReference:
-          type: string
+          type: object
         CreditRatingAssessmentType:
           type: string
         CreditRatingAssessmentDate:
@@ -341,7 +341,7 @@ components:
       type: object
       properties:
         ProductandServiceActivityReportReference:
-          type: string
+          type: object
         ProductandServiceActivityReportSchedule:
           type: string
         ProductandServiceActivityReport:
@@ -350,9 +350,9 @@ components:
       type: object
       properties:
         ProductInstanceReference:
-          type: string
+          type: object
         Employee/BusinessUnitReference:
-          type: string
+          type: object
         CustomerCreditAlertType:
           type: string
         CustomerCreditAlertDescription:

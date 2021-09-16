@@ -298,7 +298,7 @@ components:
         CustomerSegmentAnalysisReportingDate:
           type: string
         DocumentDirectoryEntryInstanceReference:
-          type: string
+          type: object
     PerformanceAnalysis:
       type: object
       properties:
@@ -309,7 +309,7 @@ components:
         CustomerSegmentPerformanceRequestSpecification:
           type: string
         CustomerSegmentPerformanceModelReference:
-          type: string
+          type: object
         CustomerSegmentPerformanceProductandServiceActivityReport:
           type: string
         CustomerSegmentPerformanceFinancialMarketResearchReport:

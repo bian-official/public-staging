@@ -465,7 +465,7 @@ components:
       type: object
       properties:
         CorrespondentBankArrangementReference:
-          type: string
+          type: object
         CorrespondentBankArrangement:
           type: string
         CorrespondentBankServicingSchedule:
@@ -473,30 +473,30 @@ components:
         HolidayOrTimezoneSchedule:
           type: string
         VostroAccountReference:
-          type: string
+          type: object
         NostroMirrorAccountReference:
-          type: string
+          type: object
     OutboundPayments:
       type: object
       properties:
         CorrespondentTransactionRecord:
           type: string
         SWIFTTransactionReference:
-          type: string
+          type: object
         PayerBankReference:
-          type: string
+          type: object
         PayerReference:
-          type: string
+          type: object
         CorrespondedBankReference:
-          type: string
+          type: object
         PayerProductInstanceReference:
-          type: string
+          type: object
         PayeeReference:
-          type: string
+          type: object
         PayeeProductInstanceReference:
-          type: string
+          type: object
         PayeeBankReference:
-          type: string
+          type: object
         SpecialInstructions:
           type: string
         Amount:
@@ -511,13 +511,13 @@ components:
       type: object
       properties:
         CorrespondentBankClearingArrangementReference:
-          type: string
+          type: object
         CorrespondentBankClearingArrangementClearingInstructions:
           type: string
         CorrespondentBankClearingArrangementSettlementInstructions:
           type: string
         MirrorNostroAccountReference:
-          type: string
+          type: object
         ClearingTransaction:
           type: string
         SettlementTransaction:
@@ -528,21 +528,21 @@ components:
         CorrespondentTransactionRecord:
           type: string
         SWIFTTransactionReference:
-          type: string
+          type: object
         PayerBankReference:
-          type: string
+          type: object
         PayerReference:
-          type: string
+          type: object
         CorrespondedBankReference:
-          type: string
+          type: object
         PayerProductInstanceReference:
-          type: string
+          type: object
         PayeeReference:
-          type: string
+          type: object
         PayeeProductInstanceReference:
-          type: string
+          type: object
         PayeeBankReference:
-          type: string
+          type: object
         SpecialInstructions:
           type: string
         Amount:
@@ -557,7 +557,7 @@ components:
       type: object
       properties:
         CorrespondentBankReconciliationTaskReference:
-          type: string
+          type: object
         CorrespondentBankReconciliationTaskWorkProducts:
           type: string
         CorrespondentBankReconciliationTaskResult:

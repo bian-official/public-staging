@@ -261,7 +261,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/RetrieveDisclosuresResponse'
+                $ref: '#/components/schemas/CustomerOfferProcedure'
         400:
           $ref: '#/components/responses/BadRequestError'
         401:
@@ -381,7 +381,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/RetrieveUnderwritingResponse'
+                $ref: '#/components/schemas/CustomerOfferProcedure'
         400:
           $ref: '#/components/responses/BadRequestError'
         401:
@@ -441,7 +441,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/RetrieveComplianceResponse'
+                $ref: '#/components/schemas/CustomerOfferProcedure'
         400:
           $ref: '#/components/responses/BadRequestError'
         401:
@@ -501,7 +501,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/RetrieveAuditResponse'
+                $ref: '#/components/schemas/CustomerOfferProcedure'
         400:
           $ref: '#/components/responses/BadRequestError'
         401:
@@ -561,7 +561,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/RetrieveCollateralResponse'
+                $ref: '#/components/schemas/CustomerOfferProcedure'
         400:
           $ref: '#/components/responses/BadRequestError'
         401:
@@ -681,7 +681,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/RetrieveCorrespondenceandDocumentsResponse'
+                $ref: '#/components/schemas/CustomerOfferProcedure'
         400:
           $ref: '#/components/responses/BadRequestError'
         401:
@@ -741,7 +741,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/RetrieveAgreementResponse'
+                $ref: '#/components/schemas/CustomerOfferProcedure'
         400:
           $ref: '#/components/responses/BadRequestError'
         401:
@@ -801,7 +801,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/RetrieveProductInitializationResponse'
+                $ref: '#/components/schemas/CustomerOfferProcedure'
         400:
           $ref: '#/components/responses/BadRequestError'
         401:
@@ -819,12 +819,10 @@ components:
     CustomerOfferProcedure:
       type: object
       properties:
-        '':
-          type: string
         CustomerReference:
-          type: string
+          type: object
         PartyReference:
-          type: string
+          type: object
         ProductandServiceType:
           type: string
         CustomerOfferProcessingSchedule:
@@ -834,7 +832,7 @@ components:
         CustomerOfferProcessingTaskType:
           type: string
         EmployeeOrBusinessUnitReference:
-          type: string
+          type: object
         CustomerOfferProcessingTaskWorkProducts:
           type: string
         CustomerOfferProcessingTaskResult:
@@ -845,18 +843,16 @@ components:
         CustomerOfferRequiredDocuments:
           type: string
         CorrespondenceInstanceReference:
-          type: string
+          type: object
         CorrespondenceContent:
           type: string
         DocumentDirectoryEntryInstanceReference:
-          type: string
+          type: object
         DocumentContent:
           type: string
     FacilityApplication:
       type: object
       properties:
-        '':
-          type: string
         FacilityOption:
           type: string
         FacilityOptionDescription:
@@ -876,8 +872,6 @@ components:
     Underwriting:
       type: object
       properties:
-        '':
-          type: string
         CustomerIncomeStatement:
           type: string
         CustomerDebtStatement:
@@ -885,12 +879,10 @@ components:
         CustomerAssetStatement:
           type: string
         UnderwritingAssessmentReference:
-          type: string
+          type: object
     Compliance:
       type: object
       properties:
-        '':
-          type: string
         RegulatoryComplianceCheckType:
           type: string
         RegulatoryComplianceCheckRequirement:
@@ -904,19 +896,15 @@ components:
     Credit:
       type: object
       properties:
-        '':
-          type: string
         CustomerCreditRating:
           type: string
         CreditAuthorizationDecisionReference:
-          type: string
+          type: object
         CreditAuthorizationDecision:
           type: string
     Audit:
       type: object
       properties:
-        '':
-          type: string
         GuidelineComplianceCheckType:
           type: string
         GuidelineComplianceCheckRequirement:
@@ -930,50 +918,40 @@ components:
     Disclosures:
       type: object
       properties:
-        '':
-          type: string
         DisclosureType:
           type: string
         DisclosureText/Description:
           type: string
         CustomerAcceptanceIndicator:
-          type: string
+          type: boolean
         DocumentReference(forcustomersignature/acceptancerecord):
-          type: string
+          type: object
     ProductInitialization:
       type: object
       properties:
-        '':
-          type: string
         ProductInstanceReference:
-          type: string
+          type: object
     Collateral:
       type: object
       properties:
-        '':
-          type: string
         CollateralRequirement:
           type: string
         CollateralEarmarkReference:
-          type: string
+          type: object
         CollateralAssetReference:
-          type: string
+          type: object
     Agreement:
       type: object
       properties:
-        '':
-          type: string
         CustomerAgreementInstanceReference:
-          type: string
+          type: object
         SalesProductAgreementInstanceReference:
-          type: string
+          type: object
     Booking:
       type: object
       properties:
-        '':
-          type: string
         BusinessUnitReference:
-          type: string
+          type: object
         Asset/LiabilityType:
           type: string
         Amount:
@@ -1258,41 +1236,6 @@ components:
               type: boolean
             DocumentReference(forcustomersignatureOracceptancerecord):
               type: object
-    RetrieveDisclosuresResponse:
-      type: object
-      properties:
-        CustomerOfferProcedure:
-          type: object
-          properties:
-            CustomerReference:
-              type: object
-            PartyReference:
-              type: object
-            ProductandServiceType:
-              type: string
-            CustomerOfferProcessingSchedule:
-              type: string
-            CustomerOfferProcessingTask:
-              type: string
-            CustomerOfferProcessingTaskType:
-              type: string
-            EmployeeOrBusinessUnitReference:
-              type: object
-            CustomerOfferProcessingTaskWorkProducts:
-              type: string
-            CustomerOfferProcessingTaskResult:
-              type: string
-        Disclosures:
-          type: object
-          properties:
-            DisclosureType:
-              type: string
-            DisclosureTextOrDescription:
-              type: string
-            CustomerAcceptanceIndicator:
-              type: boolean
-            DocumentReference(forcustomersignatureOracceptancerecord):
-              type: object
     UpdateCreditRequest:
       type: object
       properties:
@@ -1432,41 +1375,6 @@ components:
               type: string
             UnderwritingAssessmentReference:
               type: object
-    RetrieveUnderwritingResponse:
-      type: object
-      properties:
-        CustomerOfferProcedure:
-          type: object
-          properties:
-            CustomerReference:
-              type: object
-            PartyReference:
-              type: object
-            ProductandServiceType:
-              type: string
-            CustomerOfferProcessingSchedule:
-              type: string
-            CustomerOfferProcessingTask:
-              type: string
-            CustomerOfferProcessingTaskType:
-              type: string
-            EmployeeOrBusinessUnitReference:
-              type: object
-            CustomerOfferProcessingTaskWorkProducts:
-              type: string
-            CustomerOfferProcessingTaskResult:
-              type: string
-        Underwriting:
-          type: object
-          properties:
-            CustomerIncomeStatement:
-              type: string
-            CustomerDebtStatement:
-              type: string
-            CustomerAssetStatement:
-              type: string
-            UnderwritingAssessmentReference:
-              type: object
     UpdateComplianceRequest:
       type: object
       properties:
@@ -1504,43 +1412,6 @@ components:
         CustomerOfferProcedure:
           type: object
           properties:
-            CustomerOfferProcessingSchedule:
-              type: string
-            CustomerOfferProcessingTask:
-              type: string
-            CustomerOfferProcessingTaskType:
-              type: string
-            EmployeeOrBusinessUnitReference:
-              type: object
-            CustomerOfferProcessingTaskWorkProducts:
-              type: string
-            CustomerOfferProcessingTaskResult:
-              type: string
-        Compliance:
-          type: object
-          properties:
-            RegulatoryComplianceCheckType:
-              type: string
-            RegulatoryComplianceCheckRequirement:
-              type: string
-            RegulatoryComplianceCheckSubmission:
-              type: string
-            RegulatoryComplianceAdjustmentRequirement:
-              type: string
-            RegulatoryComplianceCheckAssessment:
-              type: string
-    RetrieveComplianceResponse:
-      type: object
-      properties:
-        CustomerOfferProcedure:
-          type: object
-          properties:
-            CustomerReference:
-              type: object
-            PartyReference:
-              type: object
-            ProductandServiceType:
-              type: string
             CustomerOfferProcessingSchedule:
               type: string
             CustomerOfferProcessingTask:
@@ -1628,43 +1499,6 @@ components:
               type: string
             GuidelineComplianceCheckAssessment:
               type: string
-    RetrieveAuditResponse:
-      type: object
-      properties:
-        CustomerOfferProcedure:
-          type: object
-          properties:
-            CustomerReference:
-              type: object
-            PartyReference:
-              type: object
-            ProductandServiceType:
-              type: string
-            CustomerOfferProcessingSchedule:
-              type: string
-            CustomerOfferProcessingTask:
-              type: string
-            CustomerOfferProcessingTaskType:
-              type: string
-            EmployeeOrBusinessUnitReference:
-              type: object
-            CustomerOfferProcessingTaskWorkProducts:
-              type: string
-            CustomerOfferProcessingTaskResult:
-              type: string
-        Audit:
-          type: object
-          properties:
-            GuidelineComplianceCheckType:
-              type: string
-            GuidelineComplianceCheckRequirement:
-              type: string
-            GuidelineComplianceCheckSubmission:
-              type: string
-            GuidelineComplianceAdjustmentRequirement:
-              type: string
-            GuidelineComplianceCheckAssessment:
-              type: string
     UpdateCollateralRequest:
       type: object
       properties:
@@ -1698,39 +1532,6 @@ components:
         CustomerOfferProcedure:
           type: object
           properties:
-            CustomerOfferProcessingSchedule:
-              type: string
-            CustomerOfferProcessingTask:
-              type: string
-            CustomerOfferProcessingTaskType:
-              type: string
-            EmployeeOrBusinessUnitReference:
-              type: object
-            CustomerOfferProcessingTaskWorkProducts:
-              type: string
-            CustomerOfferProcessingTaskResult:
-              type: string
-        Collateral:
-          type: object
-          properties:
-            CollateralRequirement:
-              type: string
-            CollateralEarmarkReference:
-              type: object
-            CollateralAssetReference:
-              type: object
-    RetrieveCollateralResponse:
-      type: object
-      properties:
-        CustomerOfferProcedure:
-          type: object
-          properties:
-            CustomerReference:
-              type: object
-            PartyReference:
-              type: object
-            ProductandServiceType:
-              type: string
             CustomerOfferProcessingSchedule:
               type: string
             CustomerOfferProcessingTask:
@@ -1895,43 +1696,6 @@ components:
               type: object
             DocumentContent:
               type: string
-    RetrieveCorrespondenceandDocumentsResponse:
-      type: object
-      properties:
-        CustomerOfferProcedure:
-          type: object
-          properties:
-            CustomerReference:
-              type: object
-            PartyReference:
-              type: object
-            ProductandServiceType:
-              type: string
-            CustomerOfferProcessingSchedule:
-              type: string
-            CustomerOfferProcessingTask:
-              type: string
-            CustomerOfferProcessingTaskType:
-              type: string
-            EmployeeOrBusinessUnitReference:
-              type: object
-            CustomerOfferProcessingTaskWorkProducts:
-              type: string
-            CustomerOfferProcessingTaskResult:
-              type: string
-        CorrespondenceandDocuments:
-          type: object
-          properties:
-            CustomerOfferRequiredDocuments:
-              type: string
-            CorrespondenceInstanceReference:
-              type: object
-            CorrespondenceContent:
-              type: string
-            DocumentDirectoryEntryInstanceReference:
-              type: object
-            DocumentContent:
-              type: string
     UpdateAgreementRequest:
       type: object
       properties:
@@ -1982,37 +1746,6 @@ components:
               type: object
             SalesProductAgreementInstanceReference:
               type: object
-    RetrieveAgreementResponse:
-      type: object
-      properties:
-        CustomerOfferProcedure:
-          type: object
-          properties:
-            CustomerReference:
-              type: object
-            PartyReference:
-              type: object
-            ProductandServiceType:
-              type: string
-            CustomerOfferProcessingSchedule:
-              type: string
-            CustomerOfferProcessingTask:
-              type: string
-            CustomerOfferProcessingTaskType:
-              type: string
-            EmployeeOrBusinessUnitReference:
-              type: object
-            CustomerOfferProcessingTaskWorkProducts:
-              type: string
-            CustomerOfferProcessingTaskResult:
-              type: string
-        Agreement:
-          type: object
-          properties:
-            CustomerAgreementInstanceReference:
-              type: object
-            SalesProductAgreementInstanceReference:
-              type: object
     UpdateProductInitializationRequest:
       type: object
       properties:
@@ -2042,35 +1775,6 @@ components:
         CustomerOfferProcedure:
           type: object
           properties:
-            CustomerOfferProcessingSchedule:
-              type: string
-            CustomerOfferProcessingTask:
-              type: string
-            CustomerOfferProcessingTaskType:
-              type: string
-            EmployeeOrBusinessUnitReference:
-              type: object
-            CustomerOfferProcessingTaskWorkProducts:
-              type: string
-            CustomerOfferProcessingTaskResult:
-              type: string
-        ProductInitialization:
-          type: object
-          properties:
-            ProductInstanceReference:
-              type: object
-    RetrieveProductInitializationResponse:
-      type: object
-      properties:
-        CustomerOfferProcedure:
-          type: object
-          properties:
-            CustomerReference:
-              type: object
-            PartyReference:
-              type: object
-            ProductandServiceType:
-              type: string
             CustomerOfferProcessingSchedule:
               type: string
             CustomerOfferProcessingTask:

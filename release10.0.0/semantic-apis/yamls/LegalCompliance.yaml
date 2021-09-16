@@ -132,15 +132,15 @@ components:
         LegalAssessmentType:
           type: string
         BusinessUnitReference:
-          type: string
+          type: object
         ProductandServiceReference:
-          type: string
+          type: object
         CustomerReference:
-          type: string
+          type: object
         JurisdictionReference:
-          type: string
+          type: object
         LawReference:
-          type: string
+          type: object
         LawDefinition:
           type: string
         LawComplianceandReportingRequirements:
@@ -152,7 +152,7 @@ components:
         LegalGuideline:
           type: string
         DocumentReference:
-          type: string
+          type: object
         LegalAssessmentWorkProducts:
           type: string
         LegalAssessmentResult:

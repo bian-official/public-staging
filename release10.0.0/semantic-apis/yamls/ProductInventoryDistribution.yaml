@@ -733,8 +733,6 @@ components:
     ProductInventoryDistributionAdministrativePlan:
       type: object
       properties:
-        '':
-          type: string
         ProductInventoryDistributionAdministrativePlanBudgetType:
           type: string
         ProductInventoryDistributionAdministrativePlanBudget:
@@ -744,20 +742,18 @@ components:
         ProductInventoryDistributionAdministrativePlanPlan:
           type: string
         ProductInventoryDistributionAdministrativePlanReference:
-          type: string
+          type: object
     Provisioning:
       type: object
       properties:
-        '':
-          type: string
         ProvisioningPreconditions:
           type: string
         ProvisioningBusinessUnit/EmployeeReference:
-          type: string
+          type: object
         ProvisioningWorkSchedule:
           type: string
         BusinessService:
-          type: string
+          type: object
         ProvisioningPostconditions:
           type: string
         ProvisioningServiceType:
@@ -773,16 +769,14 @@ components:
     Mailing:
       type: object
       properties:
-        '':
-          type: string
         MailingPreconditions:
           type: string
         MailingBusinessUnit/EmployeeReference:
-          type: string
+          type: object
         MailingWorkSchedule:
           type: string
         Mailing:
-          type: string
+          type: object
         MailingPostconditions:
           type: string
         MailingMailingServiceType:
@@ -798,16 +792,14 @@ components:
     Distribution:
       type: object
       properties:
-        '':
-          type: string
         DistributionPreconditions:
           type: string
         DistributionBusinessUnit/EmployeeReference:
-          type: string
+          type: object
         DistributionWorkSchedule:
           type: string
         BusinessService:
-          type: string
+          type: object
         DistributionPostconditions:
           type: string
         DistributionServiceType:
@@ -834,16 +826,14 @@ components:
     Oversight:
       type: object
       properties:
-        '':
-          type: string
         OversightPreconditions:
           type: string
         OversightBusinessUnit/EmployeeReference:
-          type: string
+          type: object
         OversightWorkSchedule:
           type: string
         AdministrativeOversight:
-          type: string
+          type: object
         OversightPostconditions:
           type: string
         OversightAdministrativeOversightServiceType:

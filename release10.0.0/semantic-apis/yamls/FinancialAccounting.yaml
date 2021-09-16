@@ -193,9 +193,9 @@ components:
         FinancialAccountType:
           type: string
         ProductandServiceReference:
-          type: string
+          type: object
         BusinessUnitReference:
-          type: string
+          type: object
         ChartofAccountOrBookingRules:
           type: string
         BaseCurrency:
@@ -208,7 +208,7 @@ components:
         PostingDirection:
           type: string
         PostingAmount(credit/debitpair):
-          type: string
+          type: number
         PostingValueDate:
           type: string
         PostingResult:

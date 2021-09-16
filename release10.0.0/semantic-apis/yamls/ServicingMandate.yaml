@@ -190,7 +190,7 @@ components:
       type: object
       properties:
         CustomerReference:
-          type: string
+          type: object
         ServicingMandateAgreementType:
           type: string
         ServicingMandateAgreementJurisdiction:
@@ -200,9 +200,9 @@ components:
         ServicingMandateAgreementResponsibleParties:
           type: string
         DocumentDirectoryEntryInstanceReference:
-          type: string
+          type: object
         ServicingMandateAgreementProductandServiceProfileReference:
-          type: string
+          type: object
         ServicingMandateAgreementProductandServiceProfile:
           type: string
         ProductandServiceType:
@@ -212,10 +212,8 @@ components:
     CustomerMandate:
       type: object
       properties:
-        '':
-          type: string
         CustomerReference:
-          type: string
+          type: object
         ServicingMandateAgreementCustomerProductandServiceProfile:
           type: string
         ProductandServiceType:

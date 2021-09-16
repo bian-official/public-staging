@@ -342,7 +342,7 @@ components:
       type: object
       properties:
         IntellectualPropertyAssetReference:
-          type: string
+          type: object
         IntellectualPropertyAssetRecord:
           type: string
         IntellectualPropertyAssetType:
@@ -358,7 +358,7 @@ components:
         IntellectualPropertyAssetValuation:
           type: string
         DocumentDirectoryEntryInstanceReference:
-          type: string
+          type: object
         DateType:
           type: string
         Date:
@@ -375,7 +375,7 @@ components:
         IntellectualPropertyAssetAssignmentDescription:
           type: string
         DocumentDirectoryEntryInstanceReference:
-          type: string
+          type: object
         IntellectualPropertyAssetAssignmentTransaction:
           type: string
     Maintenance:
@@ -384,9 +384,9 @@ components:
         IntellectualPropertyAssetMaintenanceSchedule:
           type: string
         IntellectualPropertyAssetProtectionReference:
-          type: string
+          type: object
         IntellectualPropertyAssetRegistrationReference:
-          type: string
+          type: object
         IntellectualPropertyAssetMaintenanceTaskRecord:
           type: string
         IntellectualPropertyAssetMaintenanceTaskType:
@@ -396,7 +396,7 @@ components:
         IntellectualPropertyAssetMaintenanceTaskWorkProducts:
           type: string
         DocumentDirectoryEntryInstanceReference:
-          type: string
+          type: object
         IntellectualPropertyAssetMaintenanceTransaction:
           type: string
     HTTPError:

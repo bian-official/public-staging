@@ -280,13 +280,13 @@ components:
       type: object
       properties:
         CustomerReference:
-          type: string
+          type: object
         CustomerTaxHandlingArrangementRecord:
           type: string
         TaxationJurisdictionReference:
-          type: string
+          type: object
         ApplicableTaxationRuleReference:
-          type: string
+          type: object
         ApplicableTaxationRuleDefinition:
           type: string
         CustomerTaxReportingSchedule:
@@ -295,7 +295,7 @@ components:
       type: object
       properties:
         ProductInstanceReference:
-          type: string
+          type: object
         ProductArrangementInstanceReportType:
           type: string
         ProductArrangementInstanceReport:
@@ -319,7 +319,7 @@ components:
       type: object
       properties:
         CustomerTaxReportInstanceReference:
-          type: string
+          type: object
         CustomerTaxReportType:
           type: string
         CustomerTaxReportPeriod:

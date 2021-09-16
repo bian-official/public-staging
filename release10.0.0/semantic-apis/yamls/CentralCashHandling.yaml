@@ -555,8 +555,6 @@ components:
     CentralCashAllocation:
       type: object
       properties:
-        '':
-          type: string
         CentralCashAllocationParameterType:
           type: string
         CentralCashAllocationSelectedOption:
@@ -572,13 +570,13 @@ components:
         CentralCashAllocationStatus:
           type: string
         CentralCashAllocationReference:
-          type: string
+          type: object
         CentralCashAllocationCustomerReference:
-          type: string
+          type: object
         CentralCashAllocationCurrency:
           type: string
         CentralCashAllocationRegulationReference:
-          type: string
+          type: object
         CentralCashAllocationRegulationType:
           type: string
         CentralCashAllocationJurisdiction:
@@ -588,20 +586,18 @@ components:
         CentralCashAllocationAccountType:
           type: string
         CentralCashAllocationAccountReference:
-          type: string
+          type: object
         CentralCashAllocationInstance:
           type: string
     ProjectionandAllocation:
       type: object
       properties:
-        '':
-          type: string
         ProjectionandAllocationPreconditions:
           type: string
         ProjectionandAllocationAllocationSchedule:
           type: string
         CashInventoryProjection:
-          type: string
+          type: object
         CashInventoryProjectionServiceType:
           type: string
         CashInventoryProjectionServiceDescription:
@@ -622,14 +618,12 @@ components:
     TrackingandAllocation:
       type: object
       properties:
-        '':
-          type: string
         TrackingandAllocationPreconditions:
           type: string
         TrackingandAllocationAllocationSchedule:
           type: string
         BusinessService:
-          type: string
+          type: object
         ServiceType:
           type: string
         ServiceDescription:

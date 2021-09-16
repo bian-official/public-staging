@@ -584,7 +584,7 @@ components:
         ServicingPositionConfigurationOrSet-up:
           type: string
         ServicingPositionReference:
-          type: string
+          type: object
         ServicingPositionType:
           type: string
         ServicingPositionLocation:
@@ -592,7 +592,7 @@ components:
         ServicingPositionFacilityType:
           type: string
         ServicingPositionFacilityReference:
-          type: string
+          type: object
         ServicingPositionSchedule:
           type: string
         ServicingPositionActivityReport:
@@ -611,23 +611,23 @@ components:
         ServicingCashHoldingRecord:
           type: string
         ServicingCashTransactionReference:
-          type: string
+          type: object
         ServicingCashTransactionRecord:
           type: string
         ProductInstanceReference:
-          type: string
+          type: object
     Interaction:
       type: object
       properties:
         CustomerSessionDialogueReference:
-          type: string
+          type: object
     Assisted:
       type: object
       properties:
         Employee/BusinessUnitReference:
-          type: string
+          type: object
         CustomerContactReference:
-          type: string
+          type: object
     Inventory:
       type: object
       properties:
@@ -641,7 +641,7 @@ components:
       type: object
       properties:
         BusinessUnitReference:
-          type: string
+          type: object
     HTTPError:
       type: object
       properties:

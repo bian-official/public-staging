@@ -859,8 +859,6 @@ components:
     ProductTrainingProcedure:
       type: object
       properties:
-        '':
-          type: string
         ProductTrainingProcedureParameterType:
           type: string
         ProductTrainingProcedureSelectedOption:
@@ -872,17 +870,17 @@ components:
         ProductTrainingProcedureStatus:
           type: string
         ProductTrainingProcedureReference:
-          type: string
+          type: object
         ProductTrainingProcedureBusinessUnitReference:
-          type: string
+          type: object
         ProductTrainingProcedureServiceProviderReference:
-          type: string
+          type: object
         ProductTrainingProcedureFinancialFacilityReference:
-          type: string
+          type: object
         ProductTrainingProcedureEmployeeReference:
-          type: string
+          type: object
         ProductTrainingProcedureCustomerReference:
-          type: string
+          type: object
         ProductTrainingProcedureType:
           type: string
         ProductTrainingProcedureServiceProviderSchedule:
@@ -900,20 +898,18 @@ components:
         ProductTrainingProcedureFinancialTransactionArrangement:
           type: string
         ProductTrainingProcedureCustomerAgreementReference:
-          type: string
+          type: object
     ServiceDelivery:
       type: object
       properties:
-        '':
-          type: string
         ServiceDeliveryPreconditions:
           type: string
         ServiceDeliveryBusinessUnit/EmployeeReference:
-          type: string
+          type: object
         ServiceDeliveryWorkSchedule:
           type: string
         ServiceDelivery:
-          type: string
+          type: object
         ServiceDeliveryPostconditions:
           type: string
         ServiceDeliveryServiceDeliveryServiceType:
@@ -929,16 +925,14 @@ components:
     ContentDevelopment:
       type: object
       properties:
-        '':
-          type: string
         ContentDevelopmentPreconditions:
           type: string
         ContentDevelopmentBusinessUnit/EmployeeReference:
-          type: string
+          type: object
         ContentDevelopmentWorkSchedule:
           type: string
         ContentDevelopment:
-          type: string
+          type: object
         ContentDevelopmentPostconditions:
           type: string
         ContentDevelopmentContentDevelopmentServiceType:
@@ -961,16 +955,14 @@ components:
     ServiceEvaluation:
       type: object
       properties:
-        '':
-          type: string
         ServiceEvaluationPreconditions:
           type: string
         ServiceEvaluationBusinessUnit/EmployeeReference:
-          type: string
+          type: object
         ServiceEvaluationWorkSchedule:
           type: string
         ServiceEvaluation:
-          type: string
+          type: object
         ServiceEvaluationPostconditions:
           type: string
         ServiceEvaluationServiceEvaluationServiceType:
@@ -986,16 +978,14 @@ components:
     ServiceScheduling:
       type: object
       properties:
-        '':
-          type: string
         ServiceSchedulingPreconditions:
           type: string
         ServiceSchedulingBusinessUnit/EmployeeReference:
-          type: string
+          type: object
         ServiceSchedulingWorkSchedule:
           type: string
         ServiceScheduling:
-          type: string
+          type: object
         ServiceSchedulingPostconditions:
           type: string
         ServiceSchedulingServiceSchedulingServiceType:

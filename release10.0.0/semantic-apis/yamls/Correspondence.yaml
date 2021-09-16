@@ -501,13 +501,13 @@ components:
       type: object
       properties:
         CorrespondenceSourceReference:
-          type: string
+          type: object
         CorrespondenceRecord:
           type: string
         CorrespondenceType:
           type: string
         CorrespondenceTemplateReference:
-          type: string
+          type: object
         CorrespondenceTemplateRecord:
           type: string
         CorrespondenceContent:
@@ -517,9 +517,9 @@ components:
         CorrespondenceAddressee:
           type: string
         CustomerReference:
-          type: string
+          type: object
         ChannelAccessPreferenceReference:
-          type: string
+          type: object
         ChannelAccessPreferenceProfile:
           type: string
         ChannelAccessChannel/DeviceType:
@@ -529,7 +529,7 @@ components:
         ProductandServiceType:
           type: string
         Employee/BusinessUnitReference:
-          type: string
+          type: object
         DateType:
           type: string
         Date:
@@ -538,7 +538,7 @@ components:
       type: object
       properties:
         InboundCorrespondenceInstanceReference:
-          type: string
+          type: object
         InboundCorrespondenceRecord:
           type: string
         InboundCorrespondenceType(e.g.unsolicitedmessage,product/servicerelated,complaint):
@@ -548,9 +548,9 @@ components:
         InboundCorrespondenceAddressee:
           type: string
         InboundCorrespondenceCustomerReference:
-          type: string
+          type: object
         InboundCorrespondenceEmployee/BusinessUnitReference:
-          type: string
+          type: object
         DateType:
           type: string
         Date:
@@ -561,7 +561,7 @@ components:
         ResponseDueDate:
           type: string
         ResponseCorrespondenceReference:
-          type: string
+          type: object
         ResponseCorrespondenceRecord:
           type: string
     BlockMailing:

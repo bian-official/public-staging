@@ -645,8 +645,6 @@ components:
     ProductCombinationArrangement:
       type: object
       properties:
-        '':
-          type: string
         ProductCombinationArrangementParameterType:
           type: string
         ProductCombinationArrangementSelectedOption:
@@ -654,7 +652,7 @@ components:
         ProductCombinationArrangementType:
           type: string
         ProductCombinationArrangementReference:
-          type: string
+          type: object
         ProductCombinationArrangementSchedule:
           type: string
         ProductCombinationArrangementStatus:
@@ -662,7 +660,7 @@ components:
         ProductCombinationArrangementCurrency:
           type: string
         ProductCombinationArrangementRegulationReference:
-          type: string
+          type: object
         ProductCombinationArrangementRegulationType:
           type: string
         ProductCombinationArrangementJurisdiction:
@@ -672,18 +670,16 @@ components:
         ProductCombinationArrangementAccountType:
           type: string
         ProductCombinationArrangementAccountReference:
-          type: string
+          type: object
     TransferPricing:
       type: object
       properties:
-        '':
-          type: string
         TransferPricingPreconditions:
           type: string
         TransferPricingFeatureSchedule:
           type: string
         ProductTransferPricing:
-          type: string
+          type: object
         TransferPricingPostconditions:
           type: string
         TransferPricingProductTransferPricingServiceType:
@@ -706,14 +702,12 @@ components:
     Fulfillment:
       type: object
       properties:
-        '':
-          type: string
         FulfillmentPreconditions:
           type: string
         FulfillmentFeatureSchedule:
           type: string
         FiduciaryArrangementFulfillment:
-          type: string
+          type: object
         FulfillmentPostconditions:
           type: string
         FulfillmentFiduciaryArrangementFulfillmentServiceType:
@@ -729,14 +723,12 @@ components:
     EmbeddedProductControl:
       type: object
       properties:
-        '':
-          type: string
         EmbeddedProductControlPreconditions:
           type: string
         EmbeddedProductControlFeatureSchedule:
           type: string
         CombinedProductControl:
-          type: string
+          type: object
         EmbeddedProductControlPostconditions:
           type: string
         EmbeddedProductControlCombinedProductControlServiceType:

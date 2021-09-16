@@ -310,7 +310,7 @@ components:
       type: object
       properties:
         CustomerReference:
-          type: string
+          type: object
         CustomerChannelAccessProfileRecord:
           type: string
         CustomerAccessAgreementValidFromOrToDate:
@@ -318,14 +318,14 @@ components:
         CustomerAccessAgreementSignaturesOrResponsibleParties:
           type: string
         DocumentDirectoryEntryInstanceReference:
-          type: string
+          type: object
     Preferences:
       type: object
       properties:
         ChannelAccessPreferencesRecord:
           type: string
         ChannelAccessPreferenceReference:
-          type: string
+          type: object
         ChannelAccessPreferenceType:
           type: string
         ChannelAccessPreferenceProfile:

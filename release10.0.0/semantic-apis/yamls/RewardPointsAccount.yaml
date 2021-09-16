@@ -491,8 +491,6 @@ components:
     RewardPointsLog:
       type: object
       properties:
-        '':
-          type: string
         RewardPointsLogParameterType:
           type: string
         RewardPointsLogSelectedOption:
@@ -506,11 +504,11 @@ components:
         RewardPointsLogUpdateLog:
           type: string
         RewardPointsLogReference:
-          type: string
+          type: object
         RewardPointsLogBusinessUnitReference:
-          type: string
+          type: object
         RewardPointsLogCustomerReference:
-          type: string
+          type: object
         RewardPointsLogServiceConfiguration:
           type: string
         RewardPointsLogPosition:
@@ -522,14 +520,12 @@ components:
     Expiration:
       type: object
       properties:
-        '':
-          type: string
         ExpirationPreconditions:
           type: string
         ExpirationEventSchedule:
           type: string
         LogEventExpiration:
-          type: string
+          type: object
         ExpirationPostconditions:
           type: string
         ExpirationLogEventExpirationServiceType:
@@ -545,14 +541,12 @@ components:
     Capture:
       type: object
       properties:
-        '':
-          type: string
         CapturePreconditions:
           type: string
         CaptureEventSchedule:
           type: string
         BusinessService:
-          type: string
+          type: object
         CapturePostconditions:
           type: string
         CaptureServiceType:

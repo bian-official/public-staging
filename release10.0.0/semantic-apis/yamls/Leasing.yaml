@@ -1365,8 +1365,6 @@ components:
     LeasingArrangement:
       type: object
       properties:
-        '':
-          type: string
         LeasingArrangementParameterType:
           type: string
         LeasingArrangementSelectedOption:
@@ -1374,7 +1372,7 @@ components:
         LeasingArrangementType:
           type: string
         LeasingArrangementReference:
-          type: string
+          type: object
         LeasingArrangementSchedule:
           type: string
         LeasingArrangementStatus:
@@ -1382,7 +1380,7 @@ components:
         LeasingArrangementCurrency:
           type: string
         LeasingArrangementRegulationReference:
-          type: string
+          type: object
         LeasingArrangementRegulationType:
           type: string
         LeasingArrangementJurisdiction:
@@ -1392,18 +1390,16 @@ components:
         LeasingArrangementAccountType:
           type: string
         LeasingArrangementAccountReference:
-          type: string
+          type: object
     FinancialInstrument:
       type: object
       properties:
-        '':
-          type: string
         FinancialInstrumentPreconditions:
           type: string
         FinancialInstrumentFeatureSchedule:
           type: string
         FinancialInstrument:
-          type: string
+          type: object
         FinancialInstrumentPostconditions:
           type: string
         FinancialInstrumentFinancialInstrumentServiceType:
@@ -1419,14 +1415,12 @@ components:
     FinancialAccounting:
       type: object
       properties:
-        '':
-          type: string
         FinancialAccountingPreconditions:
           type: string
         FinancialAccountingFeatureSchedule:
           type: string
         FinancialAccounting:
-          type: string
+          type: object
         FinancialAccountingPostconditions:
           type: string
         FinancialAccountingFinancialAccountingServiceType:
@@ -1442,14 +1436,12 @@ components:
     IssuedDevice:
       type: object
       properties:
-        '':
-          type: string
         IssuedDevicePreconditions:
           type: string
         IssuedDeviceFeatureSchedule:
           type: string
         BusinessService:
-          type: string
+          type: object
         IssuedDevicePostconditions:
           type: string
         IssuedDeviceServiceType:
@@ -1465,14 +1457,12 @@ components:
     CorporateAction:
       type: object
       properties:
-        '':
-          type: string
         CorporateActionPreconditions:
           type: string
         CorporateActionFeatureSchedule:
           type: string
         BS-CorporateActionProcessing:
-          type: string
+          type: object
         CorporateActionPostconditions:
           type: string
         CorporateActionBS-CorporateActionProcessingServiceType:
@@ -1488,14 +1478,12 @@ components:
     Deposits:
       type: object
       properties:
-        '':
-          type: string
         DepositsPreconditions:
           type: string
         DepositsFeatureSchedule:
           type: string
         DepositProcessing:
-          type: string
+          type: object
         DepositsPostconditions:
           type: string
         DepositsDepositProcessingServiceType:
@@ -1518,14 +1506,12 @@ components:
     Fees:
       type: object
       properties:
-        '':
-          type: string
         FeesPreconditions:
           type: string
         FeesFeatureSchedule:
           type: string
         BusinessService:
-          type: string
+          type: object
         FeesPostconditions:
           type: string
         FeesServiceType:
@@ -1541,14 +1527,12 @@ components:
     Collateral:
       type: object
       properties:
-        '':
-          type: string
         CollateralPreconditions:
           type: string
         CollateralFeatureSchedule:
           type: string
         BusinessService:
-          type: string
+          type: object
         CollateralPostconditions:
           type: string
         CollateralServiceType:
@@ -1564,14 +1548,12 @@ components:
     Lien:
       type: object
       properties:
-        '':
-          type: string
         LienPreconditions:
           type: string
         LienFeatureSchedule:
           type: string
         BusinessService:
-          type: string
+          type: object
         LienPostconditions:
           type: string
         LienServiceType:
@@ -1587,14 +1569,12 @@ components:
     Payments:
       type: object
       properties:
-        '':
-          type: string
         PaymentsPreconditions:
           type: string
         PaymentsFeatureSchedule:
           type: string
         BusinessService:
-          type: string
+          type: object
         PaymentsPostconditions:
           type: string
         PaymentsServiceType:
@@ -1610,14 +1590,12 @@ components:
     Interest:
       type: object
       properties:
-        '':
-          type: string
         InterestPreconditions:
           type: string
         InterestFeatureSchedule:
           type: string
         BusinessService:
-          type: string
+          type: object
         InterestPostconditions:
           type: string
         InterestServiceType:
@@ -1633,14 +1611,12 @@ components:
     Withdrawals:
       type: object
       properties:
-        '':
-          type: string
         WithdrawalsPreconditions:
           type: string
         WithdrawalsFeatureSchedule:
           type: string
         WithdrawalProcessing:
-          type: string
+          type: object
         WithdrawalsPostconditions:
           type: string
         WithdrawalsWithdrawalProcessingServiceType:
@@ -1657,13 +1633,13 @@ components:
       type: object
       properties:
         CorrespondentBankClearingArrangementReference:
-          type: string
+          type: object
         CorrespondentBankClearingArrangementClearingInstructions:
           type: string
         CorrespondentBankClearingArrangementSettlementInstructions:
           type: string
         MirrorNostroAccountReference:
-          type: string
+          type: object
         ClearingTransaction:
           type: string
         SettlementTransaction:
@@ -1671,14 +1647,12 @@ components:
     Sweep:
       type: object
       properties:
-        '':
-          type: string
         SweepPreconditions:
           type: string
         SweepFeatureSchedule:
           type: string
         BusinessService:
-          type: string
+          type: object
         SweepPostconditions:
           type: string
         SweepServiceType:

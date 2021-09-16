@@ -376,7 +376,7 @@ components:
         ProspectCampaignDescription:
           type: string
         EmployeeOrBusinessUnitReference:
-          type: string
+          type: object
         ProspectCampaignProcedureSet-up:
           type: string
         ProspectCampaignProcedureVersionNumber:
@@ -398,16 +398,16 @@ components:
         ProspectCampaignProcedureProspectIdentification:
           type: string
         PartyLifecycleManagementProcedureInstanceReference:
-          type: string
+          type: object
     CandidateSelection:
       type: object
       properties:
         ProspectCampaignSelectionCriteria:
           type: string
         ProspectCampaignCandidateEmployee/BusinessUnitReference:
-          type: string
+          type: object
         ProspectCampaignCandidateReference:
-          type: string
+          type: object
     AnalysisFeedback:
       type: object
       properties:
@@ -425,7 +425,7 @@ components:
         ProspectCampaignProcedureWorkTaskWorkProducts:
           type: string
         DocumentDirectoryEntryInstanceReference:
-          type: string
+          type: object
         ProspectCampaignProcedureWorkTaskResult:
           type: string
         ProspectCampaignProcedureWorkTaskDate-Time:

@@ -433,8 +433,6 @@ components:
     InternalAuditAssessment:
       type: object
       properties:
-        '':
-          type: string
         InternalAuditAssessmentParameterType:
           type: string
         InternalAuditAssessmentSelectedOption:
@@ -442,7 +440,7 @@ components:
         InternalAuditAssessmentType:
           type: string
         InternalAuditAssessmentReference:
-          type: string
+          type: object
         InternalAuditAssessmentRequest:
           type: string
         InternalAuditAssessmentSchedule:
@@ -452,14 +450,12 @@ components:
         InternalAuditAssessmentUsageLog:
           type: string
         InternalAuditAssessmentServiceProviderReference:
-          type: string
+          type: object
         InternalAuditAssessmentRequesterReference:
-          type: string
+          type: object
     Audit:
       type: object
       properties:
-        '':
-          type: string
         AuditPreconditions:
           type: string
         AuditAnalysisSchedule:
@@ -467,7 +463,7 @@ components:
         AuditVersionNumber:
           type: string
         BusinessService:
-          type: string
+          type: object
         ServiceType:
           type: string
         ServiceDescription:

@@ -579,8 +579,6 @@ components:
     ProductandServiceAssessment:
       type: object
       properties:
-        '':
-          type: string
         ProductandServiceAssessmentParameterType:
           type: string
         ProductandServiceAssessmentSelectedOption:
@@ -588,7 +586,7 @@ components:
         ProductandServiceAssessmentType:
           type: string
         ProductandServiceAssessmentReference:
-          type: string
+          type: object
         ProductandServiceAssessmentRequest:
           type: string
         ProductandServiceAssessmentSchedule:
@@ -600,14 +598,12 @@ components:
         ProductandServiceAssessmentAssociatedParty:
           type: string
         ProductandServiceAssessmentServiceProviderReference:
-          type: string
+          type: object
         ProductandServiceAssessmentRequesterReference:
-          type: string
+          type: object
     UsabilityChecks:
       type: object
       properties:
-        '':
-          type: string
         UsabilityChecksPreconditions:
           type: string
         UsabilityChecksAnalysisSchedule:
@@ -615,7 +611,7 @@ components:
         UsabilityChecksVersionNumber:
           type: string
         UsabilityChecks:
-          type: string
+          type: object
         UsabilityChecksServiceType:
           type: string
         UsabilityChecksServiceDescription:
@@ -636,8 +632,6 @@ components:
     ResiliencyandPerformanceChecks:
       type: object
       properties:
-        '':
-          type: string
         ResiliencyandPerformanceChecksPreconditions:
           type: string
         ResiliencyandPerformanceChecksAnalysisSchedule:
@@ -645,7 +639,7 @@ components:
         ResiliencyandPerformanceChecksVersionNumber:
           type: string
         ResiliencyandPerformanceChecks:
-          type: string
+          type: object
         ResiliencyandPerformanceChecksServiceType:
           type: string
         ResiliencyandPerformanceChecksServiceDescription:
@@ -659,8 +653,6 @@ components:
     FunctionalConsistencyChecks:
       type: object
       properties:
-        '':
-          type: string
         FunctionalConsistencyChecksPreconditions:
           type: string
         FunctionalConsistencyChecksAnalysisSchedule:
@@ -668,7 +660,7 @@ components:
         FunctionalConsistencyChecksVersionNumber:
           type: string
         FunctionalConsistencyChecks:
-          type: string
+          type: object
         FunctionalConsistencyChecksServiceType:
           type: string
         FunctionalConsistencyChecksServiceDescription:
@@ -682,8 +674,6 @@ components:
     ProcessingErrorandIntegrityChecks:
       type: object
       properties:
-        '':
-          type: string
         ProcessingErrorandIntegrityChecksPreconditions:
           type: string
         ProcessingErrorandIntegrityChecksAnalysisSchedule:
@@ -691,7 +681,7 @@ components:
         ProcessingErrorandIntegrityChecksVersionNumber:
           type: string
         ProcessingErrorandIntegrityChecks:
-          type: string
+          type: object
         ProcessingErrorandIntegrityChecksServiceType:
           type: string
         ProcessingErrorandIntegrityChecksServiceDescription:

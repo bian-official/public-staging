@@ -589,7 +589,7 @@ components:
         CustomerSurveyDescription:
           type: string
         EmployeeOrBusinessUnitReference:
-          type: string
+          type: object
         CustomerSurveyProcedureSet-up:
           type: string
         CustomerSurveyProcedureVersionNumber:
@@ -619,7 +619,7 @@ components:
         CustomerSurveySelectionCriteria:
           type: string
         CustomerSurveyCandidateReference:
-          type: string
+          type: object
     Execution:
       type: object
       properties:
@@ -630,7 +630,7 @@ components:
         CustomerSurveyExecutionWorkTaskWorkProducts:
           type: string
         DocumentDirectoryEntryInstanceReference:
-          type: string
+          type: object
         CustomerSurveyExecutionWorkTaskResult:
           type: string
         CustomerSurveyExecutionWorkTaskDate-Time:

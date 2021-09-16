@@ -546,7 +546,7 @@ components:
       type: object
       properties:
         CustomerReference:
-          type: string
+          type: object
         CustomerWorkbenchDeviceType:
           type: string
         CustomerWorkbenchDeviceRegistration:

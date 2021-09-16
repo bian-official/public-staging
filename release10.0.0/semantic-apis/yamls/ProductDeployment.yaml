@@ -822,7 +822,7 @@ components:
         ProductandServiceDeploymentITOperationsRequirementsWorkProducts:
           type: string
         DocumentDirectoryEntryInstanceReference:
-          type: string
+          type: object
         ProductandServiceDeploymentITOperationsRequirementsTaskSpecification:
           type: string
     Systems:
@@ -833,7 +833,7 @@ components:
         ProductandServiceDeploymentSystemsRequirementsWorkProducts:
           type: string
         DocumentDirectoryEntryInstanceReference:
-          type: string
+          type: object
         ProductandServiceDeploymentSystemsRequirementsTaskSpecification:
           type: string
     HROperations:
@@ -844,7 +844,7 @@ components:
         ProductandServiceDeploymentHROperationsRequirementsWorkProducts:
           type: string
         DocumentDirectoryEntryInstanceReference:
-          type: string
+          type: object
         ProductandServiceDeploymentHROperationsRequirementsTaskSpecification:
           type: string
     SalesandMarketing:
@@ -855,7 +855,7 @@ components:
         ProductandServiceDeploymentSalesandMarketingRequirementsWorkProducts:
           type: string
         DocumentDirectoryEntryInstanceReference:
-          type: string
+          type: object
         ProductandServiceDeploymentSalesandMarketingRequirementsTaskSpecification:
           type: string
     ProductionSupport:
@@ -866,7 +866,7 @@ components:
         ProductandServiceDeploymentProductionSupportRequirementsWorkProducts:
           type: string
         DocumentDirectoryEntryInstanceReference:
-          type: string
+          type: object
         ProductandServiceDeploymentProductionSupportRequirementsTaskSpecification:
           type: string
     Servicing:
@@ -877,7 +877,7 @@ components:
         ProductandServiceDeploymentServicingRequirementsWorkProducts:
           type: string
         DocumentDirectoryEntryInstanceReference:
-          type: string
+          type: object
         ProductandServiceDeploymentServicingRequirementsTaskSpecification:
           type: string
     Production:
@@ -888,7 +888,7 @@ components:
         ProductandServiceDeploymentProductionRequirementsWorkProducts:
           type: string
         DocumentDirectoryEntryInstanceReference:
-          type: string
+          type: object
         ProductandServiceDeploymentProductionRequirementsTaskSpecification:
           type: string
     HTTPError:

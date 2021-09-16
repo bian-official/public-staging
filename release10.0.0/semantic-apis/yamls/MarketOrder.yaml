@@ -218,23 +218,23 @@ components:
         MarketOrderInstructionType:
           type: string
         CustomerReference:
-          type: string
+          type: object
         EmployeeOrBusinessUnitReference:
-          type: string
+          type: object
         InvestmentPortfolioInstanceReference:
-          type: string
+          type: object
         CustomerMarketOrderProcessingInstruction:
           type: string
         DocumentDirectoryEntryInstanceReference:
-          type: string
+          type: object
         CorrespondenceInstanceReference:
-          type: string
+          type: object
         MarketOrderTransaction:
           type: string
         InvestmentAccountArrangementInstanceReference:
-          type: string
+          type: object
         CurrentAccountArrangementInstanceReference:
-          type: string
+          type: object
         MarketOrderType:
           type: string
         SecurityType:
@@ -254,7 +254,7 @@ components:
       type: object
       properties:
         MarketTradeTransactionInstanceReference:
-          type: string
+          type: object
         MarketTradeTransactionInstanceStatus:
           type: string
         MarketTradeInitiationTaskResult:

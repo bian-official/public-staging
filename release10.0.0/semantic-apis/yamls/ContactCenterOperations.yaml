@@ -497,7 +497,7 @@ components:
         CustomerServicingRepresentativeAllocationSchedule:
           type: string
         CustomerServicingRepresentativeReference:
-          type: string
+          type: object
         CustomerServicingRepresentativeRecord:
           type: string
         CustomerServicingRepresentativeQualificationProfile:
@@ -516,13 +516,13 @@ components:
         AssignmentCustomerServicingRepresentative:
           type: string
         AssignmentCustomerServicingPositionReference:
-          type: string
+          type: object
         AssignmentCustomerServicingPositionProfile:
           type: string
         AssignmentCustomerServicingPositionSchedule:
           type: string
         CustomerContactSessionProcedureInstanceReference:
-          type: string
+          type: object
     Troubleshooting:
       type: object
       properties:

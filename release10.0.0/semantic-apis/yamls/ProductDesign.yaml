@@ -411,11 +411,11 @@ components:
         ProductandServiceSpecificationDeployment:
           type: string
         EmployeeOrBusinessUnitReference:
-          type: string
+          type: object
         ProductandServiceSpecificationDeploymentConfiguration:
           type: string
         ProductandServiceSpecificationDeploymentTaskReference:
-          type: string
+          type: object
         ProductandServiceSpecificationDeploymentTaskRecord:
           type: string
         ProductandServiceSpecificationStatus:
@@ -432,11 +432,11 @@ components:
       type: object
       properties:
         ProductandServiceSpecificationDesignTaskReference:
-          type: string
+          type: object
         ProductandServiceSpecificationDesignTaskRecord:
           type: string
         MarketResearchDataServiceReference:
-          type: string
+          type: object
         MarketResearchDataRecord:
           type: string
         ProductandServiceFeedbackRecord:
@@ -456,23 +456,23 @@ components:
       type: object
       properties:
         ProductandServiceSpecificationTestReference:
-          type: string
+          type: object
         ProductandServiceSpecificationTestType:
           type: string
         ProductandServiceSpecificationTestHarnessReference:
-          type: string
+          type: object
         ProductandServiceSpecificationTestResult:
           type: string
         ProductandServiceSpecificationTestingTaskReference:
-          type: string
+          type: object
         ProductandServiceSpecificationTestingTaskRecord:
           type: string
         ProductandServiceSpecificationComplianceTaskReference:
-          type: string
+          type: object
         ProductandServiceSpecificationComplianceTaskRecord:
           type: string
         ProductandServiceSpecificationComplianceTestReference:
-          type: string
+          type: object
         ProductandServiceSpecificationComplianceTestType:
           type: string
     HTTPError:

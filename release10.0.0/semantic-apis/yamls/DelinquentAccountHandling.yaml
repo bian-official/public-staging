@@ -367,21 +367,21 @@ components:
       type: object
       properties:
         ProductInstanceReference:
-          type: string
+          type: object
         ProductAccountNumber:
           type: string
         ProductandServiceType:
           type: string
         CustomerReference:
-          type: string
+          type: object
         BankBranchOrLocationReference:
-          type: string
+          type: object
         IssuedDevice:
           type: string
         AccountCurrency:
           type: string
         TaxReference:
-          type: string
+          type: object
         Associations:
           type: string
         AssociationType:
@@ -389,7 +389,7 @@ components:
         AssociationObligationOrEntitlement:
           type: string
         AssociationReference:
-          type: string
+          type: object
         LinkedAccounts:
           type: string
         LinkType:
@@ -405,7 +405,7 @@ components:
         PositionLimitValue:
           type: string
         CollateralAssetAllocationInstanceReference:
-          type: string
+          type: object
         CollateralAssetAllocationProfile:
           type: string
         DateType:
@@ -415,25 +415,25 @@ components:
         BillingTransactions:
           type: string
         BillingTransactionReference:
-          type: string
+          type: object
         PaymentTransactions:
           type: string
         PaymentTransactionReference:
-          type: string
+          type: object
         ProductTransactions:
           type: string
         ProductTransactionReference:
-          type: string
+          type: object
         InterestTransactions:
           type: string
         InterestTransactionReference:
-          type: string
+          type: object
         FeeTransactions:
           type: string
         FeeTransactionReference:
-          type: string
+          type: object
         CreditPlanReference:
-          type: string
+          type: object
         CreditPlanType:
           type: string
         DelinquentAccountProcessingSchedule:
@@ -449,7 +449,7 @@ components:
       type: object
       properties:
         PaymentTransactionReference:
-          type: string
+          type: object
         PaymentTransaction:
           type: string
     Resolution:
@@ -473,11 +473,11 @@ components:
         ContactResult:
           type: string
         DocumentDirectoryEntryInstanceReference:
-          type: string
+          type: object
         DocumentContent:
           type: string
         CorrespondenceInstanceReference:
-          type: string
+          type: object
         CorrespondenceContent:
           type: string
         DelinquentAccountContactResult:

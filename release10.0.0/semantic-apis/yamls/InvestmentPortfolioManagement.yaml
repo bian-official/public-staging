@@ -378,7 +378,7 @@ components:
         InvestmentPortfolioPolicyLimitsandConstraints:
           type: string
         InvestmentPortfolioInstanceReference:
-          type: string
+          type: object
         InvestmentPortfolioHoldings:
           type: string
         InvestmentPortfolioSecurityType:

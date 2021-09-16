@@ -645,8 +645,6 @@ components:
     CashDistributionProcedure:
       type: object
       properties:
-        '':
-          type: string
         CashDistributionProcedureParameterType:
           type: string
         CashDistributionProcedureSelectedOption:
@@ -658,17 +656,17 @@ components:
         CashDistributionProcedureStatus:
           type: string
         CashDistributionProcedureReference:
-          type: string
+          type: object
         CashDistributionProcedureBusinessUnitReference:
-          type: string
+          type: object
         CashDistributionProcedureServiceProviderReference:
-          type: string
+          type: object
         CashDistributionProcedureFinancialFacilityReference:
-          type: string
+          type: object
         CashDistributionProcedureEmployeeReference:
-          type: string
+          type: object
         CashDistributionProcedureCustomerReference:
-          type: string
+          type: object
         CashDistributionProcedureType:
           type: string
         CashDistributionProcedureServiceProviderSchedule:
@@ -686,20 +684,18 @@ components:
         CashDistributionProcedureFinancialTransactionArrangement:
           type: string
         CashDistributionProcedureCustomerAgreementReference:
-          type: string
+          type: object
     InventoryDistributionOversight:
       type: object
       properties:
-        '':
-          type: string
         InventoryDistributionOversightPreconditions:
           type: string
         InventoryDistributionOversightBusinessUnit/EmployeeReference:
-          type: string
+          type: object
         InventoryDistributionOversightWorkSchedule:
           type: string
         InventoryDistributionOversight:
-          type: string
+          type: object
         InventoryDistributionOversightPostconditions:
           type: string
         InventoryDistributionOversightInventoryDistributionOversightServiceType:
@@ -722,16 +718,14 @@ components:
     DistributionPlanning:
       type: object
       properties:
-        '':
-          type: string
         DistributionPlanningPreconditions:
           type: string
         DistributionPlanningBusinessUnit/EmployeeReference:
-          type: string
+          type: object
         DistributionPlanningWorkSchedule:
           type: string
         DistributionPlanning:
-          type: string
+          type: object
         DistributionPlanningPostconditions:
           type: string
         DistributionPlanningDistributionPlanningServiceType:
@@ -747,16 +741,14 @@ components:
     DistributionVehicleAdministration:
       type: object
       properties:
-        '':
-          type: string
         DistributionVehicleAdministrationPreconditions:
           type: string
         DistributionVehicleAdministrationBusinessUnit/EmployeeReference:
-          type: string
+          type: object
         DistributionVehicleAdministrationWorkSchedule:
           type: string
         VehicleAdministration:
-          type: string
+          type: object
         DistributionVehicleAdministrationPostconditions:
           type: string
         DistributionVehicleAdministrationVehicleAdministrationServiceType:
@@ -772,16 +764,14 @@ components:
     InventoryProvisioning:
       type: object
       properties:
-        '':
-          type: string
         InventoryProvisioningPreconditions:
           type: string
         InventoryProvisioningBusinessUnit/EmployeeReference:
-          type: string
+          type: object
         InventoryProvisioningWorkSchedule:
           type: string
         InventoryProvisioning:
-          type: string
+          type: object
         InventoryProvisioningPostconditions:
           type: string
         InventoryProvisioningInventoryProvisioningServiceType:

@@ -307,25 +307,25 @@ components:
       type: object
       properties:
         NetworkReference:
-          type: string
+          type: object
         ParticipantAcquirerBankReference:
-          type: string
+          type: object
         ParticipantIssuerBankReference:
-          type: string
+          type: object
         CardTransactionRecord:
           type: string
         CardTransactionProductInstanceReference:
-          type: string
+          type: object
         CardHolderReference:
-          type: string
+          type: object
         CardTransactionIssuedDeviceReference:
-          type: string
+          type: object
         CardTransactionNetworkReference:
-          type: string
+          type: object
         CardTransactionIssuingBankReference:
-          type: string
+          type: object
         CardTransactionMerchantAcquiringBankReference:
-          type: string
+          type: object
         CardTransactionType:
           type: string
         CardTransactionCurrency:
@@ -333,13 +333,13 @@ components:
         CardTransactionAmountType:
           type: string
         CardTransactionAmount:
-          type: string
+          type: number
         CardTransactionMerchantReference:
-          type: string
+          type: object
         CardTransactionLocationReference:
-          type: string
+          type: object
         CardTransactionProductandServiceReference:
-          type: string
+          type: object
         CardTransactionDateOrTime:
           type: string
         CardTransactionFXConversionCharge:
@@ -374,13 +374,13 @@ components:
       type: object
       properties:
         CardTransactionProductInstanceReference:
-          type: string
+          type: object
         CardHolderAccountPassword:
           type: string
         IssuedDevicePIN:
           type: string
         AuthenticationSecretQuestionReference:
-          type: string
+          type: object
         AuthenticationSecretQuestionTemplate:
           type: string
         AuthenticationSecretQuestionValue:
@@ -391,7 +391,7 @@ components:
       type: object
       properties:
         NegativeFileReference:
-          type: string
+          type: object
         CardAccountStandInAuthorizationResult:
           type: string
     CreditCheck:

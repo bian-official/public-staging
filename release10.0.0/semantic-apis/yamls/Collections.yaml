@@ -732,8 +732,6 @@ components:
     CollateralAssetLiquidationProcedure:
       type: object
       properties:
-        '':
-          type: string
         CollateralAssetLiquidationProcedureParameterType:
           type: string
         CollateralAssetLiquidationProcedureSelectedOption:
@@ -745,17 +743,17 @@ components:
         CollateralAssetLiquidationProcedureStatus:
           type: string
         CollateralAssetLiquidationProcedureReference:
-          type: string
+          type: object
         CollateralAssetLiquidationProcedureBusinessUnitReference:
-          type: string
+          type: object
         CollateralAssetLiquidationProcedureServiceProviderReference:
-          type: string
+          type: object
         CollateralAssetLiquidationProcedureFinancialFacilityReference:
-          type: string
+          type: object
         CollateralAssetLiquidationProcedureEmployeeReference:
-          type: string
+          type: object
         CollateralAssetLiquidationProcedureCustomerReference:
-          type: string
+          type: object
         CollateralAssetLiquidationProcedureType:
           type: string
         CollateralAssetLiquidationProcedureServiceProviderSchedule:
@@ -773,20 +771,18 @@ components:
         CollateralAssetLiquidationProcedureFinancialTransactionArrangement:
           type: string
         CollateralAssetLiquidationProcedureCustomerAgreementReference:
-          type: string
+          type: object
     CollectionsAccountUpdate:
       type: object
       properties:
-        '':
-          type: string
         CollectionsAccountUpdatePreconditions:
           type: string
         CollectionsAccountUpdateBusinessUnit/EmployeeReference:
-          type: string
+          type: object
         CollectionsAccountUpdateWorkSchedule:
           type: string
         CollectionsAccountUpdate:
-          type: string
+          type: object
         CollectionsAccountUpdatePostconditions:
           type: string
         CollectionsAccountUpdateCollectionsAccountUpdateServiceType:
@@ -802,16 +798,14 @@ components:
     CollectionsAssessment:
       type: object
       properties:
-        '':
-          type: string
         CollectionsAssessmentPreconditions:
           type: string
         CollectionsAssessmentBusinessUnit/EmployeeReference:
-          type: string
+          type: object
         CollectionsAssessmentWorkSchedule:
           type: string
         CollectionsAssessment:
-          type: string
+          type: object
         CollectionsAssessmentPostconditions:
           type: string
         CollectionsAssessmentCollectionsAssessmentServiceType:
@@ -827,16 +821,14 @@ components:
     DebtFactoring:
       type: object
       properties:
-        '':
-          type: string
         DebtFactoringPreconditions:
           type: string
         DebtFactoringBusinessUnit/EmployeeReference:
-          type: string
+          type: object
         DebtFactoringWorkSchedule:
           type: string
         Factoring:
-          type: string
+          type: object
         DebtFactoringPostconditions:
           type: string
         DebtFactoringFactoringServiceType:
@@ -852,16 +844,14 @@ components:
     CollateralLiquidation:
       type: object
       properties:
-        '':
-          type: string
         CollateralLiquidationPreconditions:
           type: string
         CollateralLiquidationBusinessUnit/EmployeeReference:
-          type: string
+          type: object
         CollateralLiquidationWorkSchedule:
           type: string
         CollateralLiquidation:
-          type: string
+          type: object
         CollateralLiquidationPostconditions:
           type: string
         CollateralLiquidationCollateralLiquidationServiceType:
@@ -884,16 +874,14 @@ components:
     CollateralValuation:
       type: object
       properties:
-        '':
-          type: string
         CollateralValuationPreconditions:
           type: string
         CollateralValuationBusinessUnit/EmployeeReference:
-          type: string
+          type: object
         CollateralValuationWorkSchedule:
           type: string
         CollateralValuation:
-          type: string
+          type: object
         CollateralValuationPostconditions:
           type: string
         CollateralValuationCollateralValuationServiceType:

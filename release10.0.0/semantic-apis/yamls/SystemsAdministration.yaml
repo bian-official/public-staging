@@ -737,8 +737,6 @@ components:
     ITSystemAdministrativePlan:
       type: object
       properties:
-        '':
-          type: string
         ITSystemAdministrativePlanBudgetType:
           type: string
         ITSystemAdministrativePlanBudget:
@@ -748,20 +746,18 @@ components:
         ITSystemAdministrativePlanPlan:
           type: string
         ITSystemAdministrativePlanReference:
-          type: string
+          type: object
     Assurance:
       type: object
       properties:
-        '':
-          type: string
         AssurancePreconditions:
           type: string
         AssuranceBusinessUnit/EmployeeReference:
-          type: string
+          type: object
         AssuranceWorkSchedule:
           type: string
         CollateralItemAssurance:
-          type: string
+          type: object
         AssurancePostconditions:
           type: string
         AssuranceCollateralItemAssuranceServiceType:
@@ -777,16 +773,14 @@ components:
     Inventory:
       type: object
       properties:
-        '':
-          type: string
         InventoryPreconditions:
           type: string
         InventoryBusinessUnit/EmployeeReference:
-          type: string
+          type: object
         InventoryWorkSchedule:
           type: string
         BusinessService:
-          type: string
+          type: object
         InventoryPostconditions:
           type: string
         InventoryServiceType:
@@ -802,16 +796,14 @@ components:
     Configuration:
       type: object
       properties:
-        '':
-          type: string
         ConfigurationPreconditions:
           type: string
         ConfigurationBusinessUnit/EmployeeReference:
-          type: string
+          type: object
         ConfigurationWorkSchedule:
           type: string
         SystemsConfigurationAdministration:
-          type: string
+          type: object
         ConfigurationPostconditions:
           type: string
         ConfigurationSystemsConfigurationAdministrationServiceType:
@@ -838,16 +830,14 @@ components:
     CapacityPlanningandResilience:
       type: object
       properties:
-        '':
-          type: string
         CapacityPlanningandResiliencePreconditions:
           type: string
         CapacityPlanningandResilienceBusinessUnit/EmployeeReference:
-          type: string
+          type: object
         CapacityPlanningandResilienceWorkSchedule:
           type: string
         CapacityPlanningandResilience:
-          type: string
+          type: object
         CapacityPlanningandResiliencePostconditions:
           type: string
         CapacityPlanningandResilienceCapacityPlanningandResilienceServiceType:

@@ -539,9 +539,9 @@ components:
         CustomerCampaignPerformanceRecord:
           type: string
         CustomerCampaignProcedureInstanceReference:
-          type: string
+          type: object
         EmployeeOrBusinessUnitReference:
-          type: string
+          type: object
         CustomerCampaignProcedureSet-up:
           type: string
         CustomerCampaignProcedureVersionNumber:
@@ -556,11 +556,11 @@ components:
         MarketTrackingWorkTask:
           type: string
         GeneralMarketResearchDirectoryEntryInstanceReference:
-          type: string
+          type: object
         CompetitorAnalysisInstanceReference:
-          type: string
+          type: object
         CustomerSurveyProcedureInstanceReference:
-          type: string
+          type: object
         MarketTrackingWorkTaskWorkProducts:
           type: string
         MarketTrackingWorkTaskResult:

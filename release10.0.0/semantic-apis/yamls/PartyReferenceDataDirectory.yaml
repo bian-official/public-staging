@@ -403,7 +403,7 @@ components:
       type: object
       properties:
         PartyReference:
-          type: string
+          type: object
         DateType:
           type: string
         Date:
@@ -414,7 +414,7 @@ components:
         BankRelationType:
           type: string
         BusinessUnit/EmployeeReference:
-          type: string
+          type: object
     Demographics:
       type: object
       properties:
@@ -434,15 +434,15 @@ components:
       type: object
       properties:
         PartyLegalEntityReference:
-          type: string
+          type: object
         PartyName/Salutation:
           type: string
         GovernmentIssuedIdentityReference:
-          type: string
+          type: object
         GovernmentIssuedDocumentDetails:
           type: string
         DocumentDirectoryEntryInstanceReference:
-          type: string
+          type: object
         ResidencyStatus:
           type: string
         DateofBirth:
@@ -462,13 +462,13 @@ components:
         PoliticalExposureDescriptionRecord:
           type: string
         CorporateCustomerReference:
-          type: string
+          type: object
         CorporateCustomerLegalEntityReference:
-          type: string
+          type: object
         CorporateAddress:
           type: string
         CompanyOfficerReference:
-          type: string
+          type: object
         CompanyOfficerRole:
           type: string
         CustomerSinceDate:
@@ -477,9 +477,9 @@ components:
       type: object
       properties:
         EmployeeReference:
-          type: string
+          type: object
         AssociateReference:
-          type: string
+          type: object
         AssociateType:
           type: string
         AssociateObligation/DependencyDescription:
@@ -487,11 +487,11 @@ components:
         AssociationValidFrom/ToDate:
           type: string
         ProductInstanceReference:
-          type: string
+          type: object
         PreferredBeneficiary:
           type: string
         Proxy/Representative/PowerofAttorneyReference:
-          type: string
+          type: object
     HTTPError:
       type: object
       properties:

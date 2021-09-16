@@ -373,23 +373,23 @@ components:
         AccountRecoveryCaseType:
           type: string
         ProductInstanceReference:
-          type: string
+          type: object
         LinkedProductInstanceReference:
-          type: string
+          type: object
         CustomerReference:
-          type: string
+          type: object
         EmployeeOrBusinessUnitReference:
-          type: string
+          type: object
         AccountNumber:
           type: string
         BankBranchOrLocationReference:
-          type: string
+          type: object
         DateType:
           type: string
         Date:
           type: string
         InvolvedPartyReference:
-          type: string
+          type: object
         InvolvedPartyObligationOrEntitlement:
           type: string
         AccountType:
@@ -403,7 +403,7 @@ components:
         AllowedAccess:
           type: string
         TaxReference:
-          type: string
+          type: object
         AccountStatus:
           type: string
         CollateralAssetAllocationProfile:
@@ -417,7 +417,7 @@ components:
         AccountRecoveryCaseWorkProducts:
           type: string
         DocumentReference:
-          type: string
+          type: object
         CustomerCommentary:
           type: string
         AccountRecoveryCaseResolutionSchedule:
@@ -430,11 +430,11 @@ components:
         AccountRecoveryGuidelines:
           type: string
         CorrespondenceReference:
-          type: string
+          type: object
         CorrespondenceContent:
           type: string
         DocumentReference:
-          type: string
+          type: object
         DocumentContent:
           type: string
         AccountRecoveryCaseNegotiationTaskRecord:

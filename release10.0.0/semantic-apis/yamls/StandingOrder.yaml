@@ -340,8 +340,6 @@ components:
     StandingOrderArrangement:
       type: object
       properties:
-        '':
-          type: string
         StandingOrderArrangementParameterType:
           type: string
         StandingOrderArrangementSelectedOption:
@@ -353,7 +351,7 @@ components:
         StandingOrderArrangementStatus:
           type: string
         StandingOrderArrangementAssociatedParty:
-          type: string
+          type: object
         StandingOrderArrangementCurrency:
           type: string
         StandingOrderArrangementRegulationReference:
@@ -361,15 +359,15 @@ components:
         StandingOrderArrangementRegulationType:
           type: string
         StandingOrderArrangementJurisdiction:
-          type: string
+          type: object
         StandingOrderArrangementBookingLocation:
-          type: string
+          type: object
         StandingOrderArrangementAccountType:
           type: string
         StandingOrderArrangementAccountReference:
           type: string
         StandingOrderArrangementCustomerReference:
-          type: string
+          type: object
         StandingOrderArrangementPosition:
           type: string
         StandingOrderArrangementProductReference:
@@ -401,16 +399,14 @@ components:
     StandingOrderPayment:
       type: object
       properties:
-        '':
-          type: string
         StandingOrderPaymentPreconditions:
-          type: string
+          type: object
         StandingOrderPaymentFeatureSchedule:
-          type: string
+          type: object
         BusinessService:
-          type: string
+          type: object
         StandingOrderPaymentPostconditions:
-          type: string
+          type: object
         StandingOrderPaymentServiceType:
           type: string
         StandingOrderPaymentServiceDescription:
@@ -418,7 +414,7 @@ components:
         StandingOrderPaymentServiceInputsandOuputs:
           type: string
         StandingOrderPaymentServiceWorkProduct:
-          type: string
+          type: object
         StandingOrderPaymentServiceName:
           type: string
         StandingOrderExecutionDate:

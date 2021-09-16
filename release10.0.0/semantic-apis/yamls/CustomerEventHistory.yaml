@@ -653,22 +653,22 @@ components:
       type: object
       properties:
         CustomerReference:
-          type: string
+          type: object
     Sales:
       type: object
       properties:
         CustomerSalesEventType:
           type: string
         Employee/UnitReference:
-          type: string
+          type: object
         ProductandServiceType:
           type: string
         LeadandOpportunityReference:
-          type: string
+          type: object
         CustomerSalesEventRecord:
           type: string
         CommissionAgreementReference:
-          type: string
+          type: object
         Date/Time/Location:
           type: string
     Servicing:
@@ -677,7 +677,7 @@ components:
         CustomerServicingEventType:
           type: string
         CustomerContactRecordReference:
-          type: string
+          type: object
         AccessedProductandService:
           type: string
         Channel/DeviceType:
@@ -687,7 +687,7 @@ components:
         ContactResult:
           type: string
         Employee/UnitReference:
-          type: string
+          type: object
         CustomerServicingEventRecord:
           type: string
         Date/Time/Location:
@@ -698,7 +698,7 @@ components:
         CustomerRelationshipEventType:
           type: string
         Employee/UnitReference:
-          type: string
+          type: object
         CustomerRelationshipEventRecord:
           type: string
         CustomerRelationshipEventAction:
@@ -711,20 +711,20 @@ components:
         CustomerFraudCaseEventType:
           type: string
         CustomerContactRecordReference:
-          type: string
+          type: object
         AccessedProductandService:
           type: string
         Employee/UnitReference:
-          type: string
+          type: object
         FraudCaseReference:
-          type: string
+          type: object
         Date/Time/Location:
           type: string
     ProductProcessing:
       type: object
       properties:
         ProductInstanceReference:
-          type: string
+          type: object
         ProductAction/EventType:
           type: string
         ProductAction/EventDescription:
@@ -732,7 +732,7 @@ components:
         ProductAction/EventResult:
           type: string
         Employee/UnitReference:
-          type: string
+          type: object
         CustomerProductandServiceEventRecord:
           type: string
         Date/Time/Location:
@@ -743,9 +743,9 @@ components:
         CustomerLifeEventType:
           type: string
         CustomerContactRecordReference:
-          type: string
+          type: object
         Employee/UnitReference:
-          type: string
+          type: object
         CustomerLifeEventRecord:
           type: string
         Date/Time/Location:

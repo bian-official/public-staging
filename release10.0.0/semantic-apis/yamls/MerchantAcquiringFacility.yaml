@@ -493,17 +493,17 @@ components:
       type: object
       properties:
         ProductInstanceReference:
-          type: string
+          type: object
         CustomerReference:
-          type: string
+          type: object
         PartyReference:
-          type: string
+          type: object
         BankBranchOrLocationReference:
-          type: string
+          type: object
         AccountCurrency:
           type: string
         TaxReference:
-          type: string
+          type: object
         MerchantAcquiringFacilityOperationalTerms:
           type: string
         MerchantAcquiringFacilityPositionLimits:
@@ -518,21 +518,21 @@ components:
       type: object
       properties:
         CardTransactionRecordReference:
-          type: string
+          type: object
         ChargebackInstruction:
           type: string
         CardTransactionProductInstanceReference:
-          type: string
+          type: object
         CardHolderReference:
-          type: string
+          type: object
         CardTransactionIssuedDeviceReference:
-          type: string
+          type: object
         CardTransactionNetworkReference:
-          type: string
+          type: object
         CardTransactionIssuingBankReference:
-          type: string
+          type: object
         CardTransactionMerchantAcquiringBankReference:
-          type: string
+          type: object
         CardTransactionType:
           type: string
         CardTransactionCurrency:
@@ -540,13 +540,13 @@ components:
         CardTransactionAmountType:
           type: string
         CardTransactionAmount:
-          type: string
+          type: number
         CardTransactionMerchantReference:
-          type: string
+          type: object
         CardTransactionLocationReference:
-          type: string
+          type: object
         CardTransactionProductandServiceReference:
-          type: string
+          type: object
         CardTransactionDate/Time:
           type: string
         CardTransactionFXConversionCharge:
@@ -559,19 +559,19 @@ components:
       type: object
       properties:
         CardTransactionRecordReference:
-          type: string
+          type: object
         CardTransactionProductInstanceReference:
-          type: string
+          type: object
         CardHolderReference:
-          type: string
+          type: object
         CardTransactionIssuedDeviceReference:
-          type: string
+          type: object
         CardTransactionNetworkReference:
-          type: string
+          type: object
         CardTransactionIssuingBankReference:
-          type: string
+          type: object
         CardTransactionMerchantAcquiringBankReference:
-          type: string
+          type: object
         CardTransactionType:
           type: string
         CardTransactionCurrency:
@@ -579,13 +579,13 @@ components:
         CardTransactionAmountType:
           type: string
         CardTransactionAmount:
-          type: string
+          type: number
         CardTransactionMerchantReference:
-          type: string
+          type: object
         CardTransactionLocationReference:
-          type: string
+          type: object
         CardTransactionProductandServiceReference:
-          type: string
+          type: object
         CardTransactionDate/Time:
           type: string
         CardTransactionFXConversionCharge:
@@ -602,7 +602,7 @@ components:
         MerchantAcquiringAccountPostingPurpose:
           type: string
         MerchantAcquiringAccountPostingAmount:
-          type: string
+          type: number
         MerchantAcquiringAccountPostingValueDate:
           type: string
         MerchantAcquiringAccountPostingResult:
@@ -611,9 +611,9 @@ components:
       type: object
       properties:
         ParticipantMerchantAcquirerBankReference:
-          type: string
+          type: object
         ParticipantIssuerBankReference:
-          type: string
+          type: object
         CardFinancialSettlementServicePaymentAdviceRecord:
           type: string
         ParticipantPaymentTransaction:

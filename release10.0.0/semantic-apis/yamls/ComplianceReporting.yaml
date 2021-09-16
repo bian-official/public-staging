@@ -555,8 +555,6 @@ components:
     ComplianceReportingAdministrativePlan:
       type: object
       properties:
-        '':
-          type: string
         ComplianceReportingAdministrativePlanBudgetType:
           type: string
         ComplianceReportingAdministrativePlanBudget:
@@ -566,7 +564,7 @@ components:
         ComplianceReportingAdministrativePlanPlan:
           type: string
         ComplianceReportingAdministrativePlanReference:
-          type: string
+          type: object
     ComplianceReportingOutcome:
       type: object
       properties:
@@ -581,16 +579,14 @@ components:
     ComplianceAssessment:
       type: object
       properties:
-        '':
-          type: string
         ComplianceAssessmentPreconditions:
           type: string
         ComplianceAssessmentBusinessUnit/EmployeeReference:
-          type: string
+          type: object
         ComplianceAssessmentWorkSchedule:
           type: string
         AuditandReporting:
-          type: string
+          type: object
         ComplianceAssessmentPostconditions:
           type: string
         ComplianceAssessmentAuditandReportingServiceType:
@@ -606,16 +602,14 @@ components:
     Remediation:
       type: object
       properties:
-        '':
-          type: string
         RemediationPreconditions:
           type: string
         RemediationBusinessUnit/EmployeeReference:
-          type: string
+          type: object
         RemediationWorkSchedule:
           type: string
         RemediationAssurance:
-          type: string
+          type: object
         RemediationPostconditions:
           type: string
         RemediationRemediationAssuranceServiceType:
@@ -631,16 +625,14 @@ components:
     Consolidation:
       type: object
       properties:
-        '':
-          type: string
         ConsolidationPreconditions:
           type: string
         ConsolidationBusinessUnit/EmployeeReference:
-          type: string
+          type: object
         ConsolidationWorkSchedule:
           type: string
         BusinessService:
-          type: string
+          type: object
         ConsolidationPostconditions:
           type: string
         ConsolidationServiceType:

@@ -612,8 +612,6 @@ components:
     LeasingItemAdministrativePlan:
       type: object
       properties:
-        '':
-          type: string
         LeasingItemAdministrativePlanBudgetType:
           type: string
         LeasingItemAdministrativePlanBudget:
@@ -623,20 +621,18 @@ components:
         LeasingItemAdministrativePlan:
           type: string
         LeasingItemAdministrativePlanReference:
-          type: string
+          type: object
     Registration:
       type: object
       properties:
-        '':
-          type: string
         RegistrationPreconditions:
           type: string
         RegistrationBusinessUnit/EmployeeReference:
-          type: string
+          type: object
         RegistrationWorkSchedule:
           type: string
         CollateralRegistration:
-          type: string
+          type: object
         RegistrationPostconditions:
           type: string
         RegistrationCollateralRegistrationServiceType:
@@ -652,16 +648,14 @@ components:
     Valuation:
       type: object
       properties:
-        '':
-          type: string
         ValuationPreconditions:
           type: string
         ValuationBusinessUnit/EmployeeReference:
-          type: string
+          type: object
         ValuationWorkSchedule:
           type: string
         BusinessService:
-          type: string
+          type: object
         ValuationPostconditions:
           type: string
         ValuationServiceType:
@@ -677,16 +671,14 @@ components:
     Assurance:
       type: object
       properties:
-        '':
-          type: string
         AssurancePreconditions:
           type: string
         AssuranceBusinessUnit/EmployeeReference:
-          type: string
+          type: object
         AssuranceWorkSchedule:
           type: string
         CollateralItemAssurance:
-          type: string
+          type: object
         AssurancePostconditions:
           type: string
         AssuranceCollateralItemAssuranceServiceType:

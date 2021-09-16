@@ -411,11 +411,11 @@ components:
         CustomerBehaviorModelDeployment:
           type: string
         EmployeeOrBusinessUnitReference:
-          type: string
+          type: object
         CustomerBehaviorModelDeploymentConfiguration:
           type: string
         CustomerBehaviorModelDeploymentTaskReference:
-          type: string
+          type: object
         CustomerBehaviorModelDeploymentTaskRecord:
           type: string
         CustomerBehaviorModelStatus:
@@ -432,23 +432,23 @@ components:
       type: object
       properties:
         CustomerBehaviorModelTestReference:
-          type: string
+          type: object
         CustomerBehaviorModelTestType:
           type: string
         CustomerBehaviorModelTestHarnessReference:
-          type: string
+          type: object
         CustomerBehaviorModelTestResult:
           type: string
         CustomerBehaviorModelTestingTaskReference:
-          type: string
+          type: object
         CustomerBehaviorModelTestingTaskRecord:
           type: string
         CustomerBehaviorModelComplianceTaskReference:
-          type: string
+          type: object
         CustomerBehaviorModelComplianceTaskRecord:
           type: string
         CustomerBehaviorModelComplianceTestReference:
-          type: string
+          type: object
         CustomerBehaviorModelComplianceTestType:
           type: string
     Production:
@@ -464,11 +464,11 @@ components:
       type: object
       properties:
         CustomerBehaviorModelDesignTaskReference:
-          type: string
+          type: object
         CustomerBehaviorModelDesignTaskRecord:
           type: string
         Customer/MarketDataServiceReference:
-          type: string
+          type: object
         Customer/MarketDataRecord:
           type: string
         CustomerBehaviorModelFeedbackRecord:

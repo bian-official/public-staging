@@ -1134,8 +1134,6 @@ components:
     TechnologyStandardsSpecification:
       type: object
       properties:
-        '':
-          type: string
         TechnologyStandardsSpecificationParameterType:
           type: string
         TechnologyStandardsSpecificationSelectedOption:
@@ -1151,12 +1149,10 @@ components:
         TechnologyStandardsSpecificationFeedback:
           type: string
         TechnologyStandardsSpecificationServiceProviderReference:
-          type: string
+          type: object
     DevelopmentToolingandEnvironment:
       type: object
       properties:
-        '':
-          type: string
         DevelopmentToolingandEnvironmentPreconditions:
           type: string
         DevelopmentToolingandEnvironmentSpecificationSchedule:
@@ -1164,7 +1160,7 @@ components:
         DevelopmentToolingandEnvironmentVersionNumber:
           type: string
         DevelopmentToolingandEnvironment:
-          type: string
+          type: object
         DevelopmentToolingandEnvironmentServiceType:
           type: string
         DevelopmentToolingandEnvironmentServiceDescription:
@@ -1178,8 +1174,6 @@ components:
     ProductionEnvironmentandSupportServices:
       type: object
       properties:
-        '':
-          type: string
         ProductionEnvironmentandSupportServicesPreconditions:
           type: string
         ProductionEnvironmentandSupportServicesSpecificationSchedule:
@@ -1187,7 +1181,7 @@ components:
         ProductionEnvironmentandSupportServicesVersionNumber:
           type: string
         ProductionEnvironmentandSupportServices:
-          type: string
+          type: object
         ProductionEnvironmentandSupportServicesServiceType:
           type: string
         ProductionEnvironmentandSupportServicesServiceDescription:
@@ -1212,8 +1206,6 @@ components:
     ITPoliciesandGuidelines:
       type: object
       properties:
-        '':
-          type: string
         ITPoliciesandGuidelinesPreconditions:
           type: string
         ITPoliciesandGuidelinesSpecificationSchedule:
@@ -1221,7 +1213,7 @@ components:
         ITPoliciesandGuidelinesVersionNumber:
           type: string
         ITPoliciesandGuidelines:
-          type: string
+          type: object
         ITPoliciesandGuidelinesServiceType:
           type: string
         ITPoliciesandGuidelinesServiceDescription:
@@ -1235,8 +1227,6 @@ components:
     ProductionPlatformsandInfrastructure:
       type: object
       properties:
-        '':
-          type: string
         ProductionPlatformsandInfrastructurePreconditions:
           type: string
         ProductionPlatformsandInfrastructureSpecificationSchedule:
@@ -1244,7 +1234,7 @@ components:
         ProductionPlatformsandInfrastructureVersionNumber:
           type: string
         ProductionPlatformsandInfrastructure:
-          type: string
+          type: object
         ProductionPlatformsandInfrastructureServiceType:
           type: string
         ProductionPlatformsandInfrastructureServiceDescription:
@@ -1258,8 +1248,6 @@ components:
     ProductTestingandDeploymentMechanisms:
       type: object
       properties:
-        '':
-          type: string
         ProductTestingandDeploymentMechanismsPreconditions:
           type: string
         ProductTestingandDeploymentMechanismsSpecificationSchedule:
@@ -1267,7 +1255,7 @@ components:
         ProductTestingandDeploymentMechanismsVersionNumber:
           type: string
         ProductTestingandDeploymentMechanisms:
-          type: string
+          type: object
         ProductTestingandDeploymentMechanismsServiceType:
           type: string
         ProductTestingandDeploymentMechanismsServiceDescription:

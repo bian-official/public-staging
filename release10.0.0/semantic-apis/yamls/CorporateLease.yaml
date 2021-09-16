@@ -555,8 +555,6 @@ components:
     CorporateLeaseArrangement:
       type: object
       properties:
-        '':
-          type: string
         CorporateLeaseArrangementParameterType:
           type: string
         CorporateLeaseArrangementSelectedOption:
@@ -568,11 +566,11 @@ components:
         CorporateLeaseArrangementStatus:
           type: string
         CorporateLeaseArrangementReference:
-          type: string
+          type: object
         CorporateLeaseArrangementCurrency:
           type: string
         CorporateLeaseArrangementRegulationReference:
-          type: string
+          type: object
         CorporateLeaseArrangementRegulationType:
           type: string
         CorporateLeaseArrangementJurisdiction:
@@ -582,18 +580,16 @@ components:
         CorporateLeaseArrangementAccountType:
           type: string
         CorporateLeaseArrangementAccountReference:
-          type: string
+          type: object
     Fulfill:
       type: object
       properties:
-        '':
-          type: string
         FulfillPreconditions:
           type: string
         FulfillFeatureSchedule:
           type: string
         CorporateLeaseFulfillment:
-          type: string
+          type: object
         FulfillPostconditions:
           type: string
         FulfillCorporateLeaseFulfillmentServiceType:
@@ -609,14 +605,12 @@ components:
     Administer:
       type: object
       properties:
-        '':
-          type: string
         AdministerPreconditions:
           type: string
         AdministerFeatureSchedule:
           type: string
         CorporateLeaseAdministration:
-          type: string
+          type: object
         AdministerPostconditions:
           type: string
         AdministerCorporateLeaseAdministrationServiceType:

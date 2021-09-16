@@ -248,7 +248,7 @@ components:
         ProductionReleaseName:
           type: string
         EmployeeOrBusinessUnitReference:
-          type: string
+          type: object
         ProductionReleaseType:
           type: string
         ProductionReleaseDescription:
@@ -260,7 +260,7 @@ components:
         ProductionReleaseConsolidationRecord:
           type: string
         DocumentDirectoryEntryInstanceReference:
-          type: string
+          type: object
         DateType:
           type: string
         Date:

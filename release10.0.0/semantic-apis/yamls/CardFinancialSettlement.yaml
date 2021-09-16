@@ -340,7 +340,7 @@ components:
       type: object
       properties:
         NetworkReference:
-          type: string
+          type: object
         CardFinancialSettlementProcessType:
           type: string
         CardFinancialSettlementProcessDateOrTime:
@@ -348,9 +348,9 @@ components:
         CardFinancialSettlementServiceSchedule:
           type: string
         ParticipantAcquirerBankReference:
-          type: string
+          type: object
         ParticipantIssuerBankReference:
-          type: string
+          type: object
     Instruction:
       type: object
       properties:
@@ -367,15 +367,15 @@ components:
       type: object
       properties:
         CardTransactionRecordReference:
-          type: string
+          type: object
         CardTransactionRecord:
           type: string
         CardTransactionProductInstanceReference:
-          type: string
+          type: object
         CardTransactionIssuingBankReference:
-          type: string
+          type: object
         CardTransactionMerchantAcquiringBankReference:
-          type: string
+          type: object
         CardTransactionType:
           type: string
         CardTransactionCurrency:
@@ -383,13 +383,13 @@ components:
         CardTransactionAmountType:
           type: string
         CardTransactionAmount:
-          type: string
+          type: number
         CardTransactionMerchantReference:
-          type: string
+          type: object
         CardTransactionLocationReference:
-          type: string
+          type: object
         CardTransactionProductandServiceReference:
-          type: string
+          type: object
         CardTransactionDate/Time:
           type: string
     Processing:

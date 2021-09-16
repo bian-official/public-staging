@@ -522,8 +522,6 @@ components:
     CommissionTransaction:
       type: object
       properties:
-        '':
-          type: string
         CommissionTransactionParameterType:
           type: string
         CommissionTransactionSelectedOption:
@@ -539,14 +537,12 @@ components:
     Check:
       type: object
       properties:
-        '':
-          type: string
         CheckPreconditions:
           type: string
         CheckTaskSchedule:
           type: string
         BusinessService:
-          type: string
+          type: object
         CheckPostconditions:
           type: string
         CheckServiceType:
@@ -562,14 +558,12 @@ components:
     Calculation:
       type: object
       properties:
-        '':
-          type: string
         CalculationPreconditions:
           type: string
         CalculationTaskSchedule:
           type: string
         CommissionCalculation:
-          type: string
+          type: object
         CalculationPostconditions:
           type: string
         CalculationCommissionCalculationServiceType:
@@ -585,14 +579,12 @@ components:
     Payment:
       type: object
       properties:
-        '':
-          type: string
         PaymentPreconditions:
           type: string
         PaymentTaskSchedule:
           type: string
         BusinessService:
-          type: string
+          type: object
         PaymentPostconditions:
           type: string
         PaymentServiceType:
@@ -625,7 +617,7 @@ components:
         CommissionsOptions:
           type: string
         CommissionsRates:
-          type: string
+          type: object
         CommissionsSettlement:
           type: string
         CommissionsWorkProduct:

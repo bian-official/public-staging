@@ -313,21 +313,21 @@ components:
       type: object
       properties:
         ProductandServiceReference:
-          type: string
+          type: object
         CustomerReference:
-          type: string
+          type: object
         PartyReference:
-          type: string
+          type: object
         FacilityTerms:
           type: string
         ParticipantAcquirerBankReference:
-          type: string
+          type: object
         ParticipantAcquirerBankClearingandSettlementTerms:
           type: string
         ParticipantAcquirerBankServiceSchedule:
           type: string
         ParticipantIssuerBankReference:
-          type: string
+          type: object
         ParticipantIssuerBankClearingandSettlementTerms:
           type: string
         ParticipantIssuerBankServiceSchedule:
@@ -340,7 +340,7 @@ components:
         NetworkParticipantFacilityAccountPostingPurpose:
           type: string
         NetworkParticipantFacilityAccountPostingAmount:
-          type: string
+          type: number
         NetworkParticipantFacilityAccountPostingValueDate:
           type: string
         NetworkParticipantFacilityAccountPostingResult:

@@ -158,19 +158,19 @@ components:
       type: object
       properties:
         PaymentTransactionInitiatorReference:
-          type: string
+          type: object
         PayerReference:
-          type: string
+          type: object
         PayerBankReference:
-          type: string
+          type: object
         PayerProductInstanceReference:
-          type: string
+          type: object
         PayeeReference:
-          type: string
+          type: object
         PayeeBankReference:
-          type: string
+          type: object
         PayeeProductInstanceReference:
-          type: string
+          type: object
         Amount:
           type: string
         Currency:
@@ -193,7 +193,7 @@ components:
       type: object
       properties:
         PaymentExecutionProcedureInstanceReference:
-          type: string
+          type: object
         PaymentExecutionProcedureInstanceStatus:
           type: string
         ExecutionInitiationTaskResult:

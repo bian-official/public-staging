@@ -282,13 +282,13 @@ components:
         CustomerCaseType:
           type: string
         ProductInstanceReference:
-          type: string
+          type: object
         CustomerReference:
-          type: string
+          type: object
         CustomerContactRecordReference:
-          type: string
+          type: object
         ProductTransactionReference:
-          type: string
+          type: object
         ProductTransactionRecord:
           type: string
         CaseLocation:
@@ -296,14 +296,14 @@ components:
         Date:
           type: string
         EmployeeOrBusinessUnitReference:
-          type: string
+          type: object
         CustomerCaseResolutionSchedule:
           type: string
     Determination:
       type: object
       properties:
         CustomerAgreementInstanceReference:
-          type: string
+          type: object
         CustomerAgreement:
           type: string
         CaseDeterminationWorkProduct:
@@ -314,17 +314,17 @@ components:
       type: object
       properties:
         CorrespondenceInstanceReference:
-          type: string
+          type: object
         CorrespondenceContent:
           type: string
         DocumentDirectoryEntryInstanceReference:
-          type: string
+          type: object
         DocumentContent:
           type: string
         Employee/BusinessUnitReference:
-          type: string
+          type: object
         PaymentOrderReference:
-          type: string
+          type: object
     Analysis:
       type: object
       properties:

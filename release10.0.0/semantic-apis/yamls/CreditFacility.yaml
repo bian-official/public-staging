@@ -492,35 +492,35 @@ components:
       type: object
       properties:
         ProductInstanceReference:
-          type: string
+          type: object
         CreditFacilityNumber:
           type: string
         CustomerReference:
-          type: string
+          type: object
         PartyReference:
-          type: string
+          type: object
         CustomerAgreementReference:
-          type: string
+          type: object
         CustomerCreditAssessmentReference:
-          type: string
+          type: object
         InsuranceReference:
-          type: string
+          type: object
         DelinquencyOrCollectionReference:
-          type: string
+          type: object
         BankBranchOrLocationReference:
-          type: string
+          type: object
         BankAccountingUnitReference:
-          type: string
+          type: object
         CreditFacilityType:
           type: string
         CreditFacilityAmount:
-          type: string
+          type: number
         CreditFacilityCurrency:
           type: string
         CreditFacilityRateType:
           type: string
         CreditFacilityApplicableRate:
-          type: string
+          type: object
         RepaymentType:
           type: string
         InterestType:
@@ -532,17 +532,17 @@ components:
         CreditFacilityMaturityDate:
           type: string
         CollateralReference:
-          type: string
+          type: object
         CollateralAllocation:
           type: string
         TaxReference:
-          type: string
+          type: object
         CreditFacilityAccessTerms:
           type: string
         CreditFacilityUnderlyingDrawdown:
           type: string
         DrawdownReference:
-          type: string
+          type: object
         DrawdownRecord:
           type: string
         DrawdownLoanTransaction:
@@ -562,7 +562,7 @@ components:
         AssociationObligationOrEntitlement:
           type: string
         AssociationReference:
-          type: string
+          type: object
         CreditFacilityRepaymentSchedule:
           type: string
         StagedRepaymentStatement:
@@ -603,7 +603,7 @@ components:
         ProjectedTransactionFeeCharge:
           type: string
         FeeAccrualAmount:
-          type: string
+          type: number
         AccrualFeeType:
           type: string
         AccrualFeeCharge:
@@ -629,11 +629,11 @@ components:
         InterestRateType:
           type: string
         InterestRateApplicationSchedule:
-          type: string
+          type: object
         InterestRateConfiguration:
-          type: string
+          type: object
         InterestRate:
-          type: string
+          type: object
         InterestApplicationRecord:
           type: string
         InterestTransaction:
@@ -645,7 +645,7 @@ components:
         TransactionInterestCharge:
           type: string
         InterestAccrualAmount:
-          type: string
+          type: number
         InterestAccrualType:
           type: string
         InterestAccrualCharge:
@@ -665,13 +665,13 @@ components:
         RepaymentTransactionType:
           type: string
         RepaymentTransactionPayerReference:
-          type: string
+          type: object
         RepaymentTransactionPayerProductInstanceReference:
-          type: string
+          type: object
         RepaymentTransactionPayerBankReference:
-          type: string
+          type: object
         RepaymentTransactionAmount:
-          type: string
+          type: number
         RepaymentTransactionCurrency:
           type: string
         RepaymentTransactionValueDate:

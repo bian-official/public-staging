@@ -193,11 +193,11 @@ components:
         SecuritiesTransactionLogType:
           type: string
         ProductInstanceReference:
-          type: string
+          type: object
         CustomerReference:
-          type: string
+          type: object
         CounterpartyReference:
-          type: string
+          type: object
         SecuritiesPositionLogInstrumentProfile:
           type: string
         SecuritiesPositionLogInstrumentRecord:
@@ -205,7 +205,7 @@ components:
         SecuritiesInstrumentType:
           type: string
         SecuritiesInstrumentReference:
-          type: string
+          type: object
         SecuritiesPositionLimits:
           type: string
         SecuritiesPositionLimitType:
@@ -215,7 +215,7 @@ components:
         SecuritiesPositionLimitValue:
           type: string
         SecuritiesAmountBlock:
-          type: string
+          type: number
         SecuritiesAmountBlockType:
           type: string
         Priority:

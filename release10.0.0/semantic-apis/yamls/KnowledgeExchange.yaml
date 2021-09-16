@@ -704,8 +704,6 @@ components:
     IntellectualPropertyExchangeOperatingSession:
       type: object
       properties:
-        '':
-          type: string
         IntellectualPropertyExchangeOperatingSessionSchedule:
           type: string
         IntellectualPropertyExchangeOperatingSessionStatus:
@@ -713,9 +711,9 @@ components:
         IntellectualPropertyExchangeOperatingSessionUsageLog:
           type: string
         IntellectualPropertyExchangeOperatingSessionReference:
-          type: string
+          type: object
         IntellectualPropertyExchangeOperatingSessionServiceProviderReference:
-          type: string
+          type: object
         IntellectualPropertyExchangeOperatingSessionType:
           type: string
         IntellectualPropertyExchangeOperatingSessionServiceProviderSchedule:
@@ -727,14 +725,12 @@ components:
     Review,RefinementandEditing:
       type: object
       properties:
-        '':
-          type: string
         Review,RefinementandEditingPreconditions:
           type: string
         Review,RefinementandEditingFunctionSchedule:
           type: string
         ContentReview,RefinementandEditing:
-          type: string
+          type: object
         ContentReview,RefinementandEditingServiceType:
           type: string
         ContentReview,RefinementandEditingServiceDescription:
@@ -748,14 +744,12 @@ components:
     IndexingandPublication:
       type: object
       properties:
-        '':
-          type: string
         IndexingandPublicationPreconditions:
           type: string
         IndexingandPublicationFunctionSchedule:
           type: string
         ContentIndexingandPublication:
-          type: string
+          type: object
         ContentIndexingandPublicationServiceType:
           type: string
         ContentIndexingandPublicationServiceDescription:
@@ -769,14 +763,12 @@ components:
     CaptureandClassification:
       type: object
       properties:
-        '':
-          type: string
         CaptureandClassificationPreconditions:
           type: string
         CaptureandClassificationFunctionSchedule:
           type: string
         ContentCaptureandClassification:
-          type: string
+          type: object
         ContentCaptureandClassificationServiceType:
           type: string
         ContentCaptureandClassificationServiceDescription:
@@ -790,14 +782,12 @@ components:
     Archiving:
       type: object
       properties:
-        '':
-          type: string
         ArchivingPreconditions:
           type: string
         ArchivingFunctionSchedule:
           type: string
         ContentArchiving:
-          type: string
+          type: object
         ContentArchivingServiceType:
           type: string
         ContentArchivingServiceDescription:
@@ -818,14 +808,12 @@ components:
     MaintenanceandAccessAdministration:
       type: object
       properties:
-        '':
-          type: string
         MaintenanceandAccessAdministrationPreconditions:
           type: string
         MaintenanceandAccessAdministrationFunctionSchedule:
           type: string
         ContentMaintenanceandAccessAdministration:
-          type: string
+          type: object
         ContentMaintenanceandAccessAdministrationServiceType:
           type: string
         ContentMaintenanceandAccessAdministrationServiceDescription:

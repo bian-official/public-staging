@@ -372,8 +372,6 @@ components:
     BranchCashAllocation:
       type: object
       properties:
-        '':
-          type: string
         BranchCashAllocationParameterType:
           type: string
         BranchCashAllocationSelectedOption:
@@ -389,13 +387,13 @@ components:
         BranchCashAllocationStatus:
           type: string
         BranchCashAllocationReference:
-          type: string
+          type: object
         BranchCashAllocationCustomerReference:
-          type: string
+          type: object
         BranchCashAllocationCurrency:
           type: string
         BranchCashAllocationRegulationReference:
-          type: string
+          type: object
         BranchCashAllocationRegulationType:
           type: string
         BranchCashAllocationJurisdiction:
@@ -405,7 +403,7 @@ components:
         BranchCashAllocationAccountType:
           type: string
         BranchCashAllocationAccountReference:
-          type: string
+          type: object
         BranchCashAllocationInstance:
           type: string
     BranchCurrencyManagementOutcome:
@@ -418,14 +416,12 @@ components:
     InventoryAllocation:
       type: object
       properties:
-        '':
-          type: string
         InventoryAllocationPreconditions:
           type: string
         InventoryAllocationAllocationSchedule:
           type: string
         CashInventoryAllocation:
-          type: string
+          type: object
         CashInventoryAllocationServiceType:
           type: string
         CashInventoryAllocationServiceDescription:

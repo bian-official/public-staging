@@ -737,8 +737,6 @@ components:
     SyndicatedLoanArrangement:
       type: object
       properties:
-        '':
-          type: string
         SyndicatedLoanArrangementParameterType:
           type: string
         SyndicatedLoanArrangementSelectedOption:
@@ -746,7 +744,7 @@ components:
         SyndicatedLoanArrangementType:
           type: string
         SyndicatedLoanArrangementReference:
-          type: string
+          type: object
         SyndicatedLoanArrangementSchedule:
           type: string
         SyndicatedLoanArrangementStatus:
@@ -754,7 +752,7 @@ components:
         SyndicatedLoanArrangementCurrency:
           type: string
         SyndicatedLoanArrangementRegulationReference:
-          type: string
+          type: object
         SyndicatedLoanArrangementRegulationType:
           type: string
         SyndicatedLoanArrangementJurisdiction:
@@ -764,18 +762,16 @@ components:
         SyndicatedLoanArrangementAccountType:
           type: string
         SyndicatedLoanArrangementAccountReference:
-          type: string
+          type: object
     SyndicateAssembly:
       type: object
       properties:
-        '':
-          type: string
         SyndicateAssemblyPreconditions:
           type: string
         SyndicateAssemblyFeatureSchedule:
           type: string
         SyndicatedLoanOrganization:
-          type: string
+          type: object
         SyndicateAssemblyPostconditions:
           type: string
         SyndicateAssemblySyndicatedLoanOrganizationServiceType:
@@ -798,14 +794,12 @@ components:
     Fulfillment:
       type: object
       properties:
-        '':
-          type: string
         FulfillmentPreconditions:
           type: string
         FulfillmentFeatureSchedule:
           type: string
         FiduciaryArrangementFulfillment:
-          type: string
+          type: object
         FulfillmentPostconditions:
           type: string
         FulfillmentFiduciaryArrangementFulfillmentServiceType:
@@ -821,14 +815,12 @@ components:
     Origination:
       type: object
       properties:
-        '':
-          type: string
         OriginationPreconditions:
           type: string
         OriginationFeatureSchedule:
           type: string
         SyndicatedLoanOrigination:
-          type: string
+          type: object
         OriginationPostconditions:
           type: string
         OriginationSyndicatedLoanOriginationServiceType:
@@ -844,14 +836,12 @@ components:
     Structuring:
       type: object
       properties:
-        '':
-          type: string
         StructuringPreconditions:
           type: string
         StructuringFeatureSchedule:
           type: string
         SyndicatedLoanArrangement:
-          type: string
+          type: object
         StructuringPostconditions:
           type: string
         StructuringSyndicatedLoanArrangementServiceType:

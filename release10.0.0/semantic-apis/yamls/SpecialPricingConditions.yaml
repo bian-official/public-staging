@@ -309,8 +309,6 @@ components:
     SpecialPricingConditionsDirectoryEntry:
       type: object
       properties:
-        '':
-          type: string
         SpecialPricingConditionsDirectoryEntryDescription:
           type: string
         SpecialPricingConditionsDirectoryEntrySchedule:
@@ -328,8 +326,6 @@ components:
     PricingTerms:
       type: object
       properties:
-        '':
-          type: string
         PricingTermsPreconditions:
           type: string
         PricingTermsPropertySchedule:
@@ -337,7 +333,7 @@ components:
         PricingTermsVersionNumber:
           type: string
         SpecialPricingterms:
-          type: string
+          type: object
         SpecialPricingtermsServiceType:
           type: string
         SpecialPricingtermsServiceDescription:

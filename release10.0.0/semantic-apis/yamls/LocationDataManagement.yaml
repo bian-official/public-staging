@@ -343,7 +343,7 @@ components:
       type: object
       properties:
         LocationReference:
-          type: string
+          type: object
         DateType:
           type: string
         Date:
@@ -352,7 +352,7 @@ components:
       type: object
       properties:
         CustomerReference:
-          type: string
+          type: object
         LocationOwner/Title:
           type: string
         LocationValue:
@@ -360,11 +360,11 @@ components:
         LocationOccupierType:
           type: string
         LocationOccupierReference:
-          type: string
+          type: object
         LocationOccupierTerms:
           type: string
         AlliancePartnerReference:
-          type: string
+          type: object
     Location:
       type: object
       properties:

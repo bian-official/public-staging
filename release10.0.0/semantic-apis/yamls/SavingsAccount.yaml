@@ -794,19 +794,19 @@ components:
       type: object
       properties:
         ProductInstanceReference:
-          type: string
+          type: object
         SavingsAccountNumber:
           type: string
         CustomerReference:
-          type: string
+          type: object
         BankBranchOrLocationReference:
-          type: string
+          type: object
         AccountType:
           type: string
         AccountCurrency:
           type: string
         TaxReference:
-          type: string
+          type: object
         EntitlementOptionDefinition:
           type: string
         EntitlementOptionSetting:
@@ -822,7 +822,7 @@ components:
         AssociationObligationOrEntitlement:
           type: string
         AssociationReference:
-          type: string
+          type: object
         LinkedAccounts:
           type: string
         LinkType:
@@ -857,11 +857,11 @@ components:
         InterestRateType:
           type: string
         InterestRateApplicationSchedule:
-          type: string
+          type: object
         InterestRateConfiguration:
-          type: string
+          type: object
         InterestRate:
-          type: string
+          type: object
         InterestApplicationRecord:
           type: string
         InterestTransaction:
@@ -873,7 +873,7 @@ components:
         TransactionInterestCharge:
           type: string
         InterestAccrualAmount:
-          type: string
+          type: number
         InterestAccrualType:
           type: string
         InterestAccrualCharge:
@@ -894,7 +894,7 @@ components:
         LienPurpose:
           type: string
         LienAmount:
-          type: string
+          type: number
         LienStartDate:
           type: string
         LienExpiryDate:
@@ -929,7 +929,7 @@ components:
         ProjectedTransactionFeeCharge:
           type: string
         FeeAccrualAmount:
-          type: string
+          type: number
         AccrualFeeType:
           type: string
         AccrualFeeCharge:
@@ -956,7 +956,7 @@ components:
         AccountSweepTargetAccount:
           type: string
         AccountSweepAmount:
-          type: string
+          type: number
         AccountSweepExecutionDate:
           type: string
     IssuedDevice:
@@ -990,25 +990,25 @@ components:
         DepositTransaction:
           type: string
         DepositTransactionSourceReference:
-          type: string
+          type: object
         DepositTransactionDepositType:
           type: string
         DepositTransactionDescription:
           type: string
         DepositTransactionAmount:
-          type: string
+          type: number
         DepositTransactionDate:
           type: string
         WithdrawalTransaction:
           type: string
         WithdrawalTransactionSourceReference:
-          type: string
+          type: object
         WithdrawalTransactionWithdrawalType:
           type: string
         WithdrawalTransactionDescription:
           type: string
         WithdrawalTransactionAmount:
-          type: string
+          type: number
         WithdrawalTransactionDate:
           type: string
     Payments:
@@ -1027,11 +1027,11 @@ components:
         PaymentSchedule:
           type: string
         DirectDebitMandateReference:
-          type: string
+          type: object
         DirectDebitMandateSettings:
           type: string
         BillPayMandateReference:
-          type: string
+          type: object
         BillPayMandateSettings:
           type: string
         PaymentTransaction:
@@ -1039,13 +1039,13 @@ components:
         PaymentTransactionType:
           type: string
         PaymentTransactionPayeeReference:
-          type: string
+          type: object
         PaymentTransactionPayeeAccountReference:
-          type: string
+          type: object
         PaymentTransactionPayeeBankReference:
-          type: string
+          type: object
         PaymentTransactionAmount:
-          type: string
+          type: number
         PaymentTransactionFeeType:
           type: string
         PaymentTransactionFeeCharge:
@@ -1057,7 +1057,7 @@ components:
         PaymentTransactionPaymentPurpose:
           type: string
         PaymentTransactionBankBranch/LocationReference:
-          type: string
+          type: object
         PaymentTransactionStatus:
           type: string
     HTTPError:

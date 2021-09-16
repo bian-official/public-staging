@@ -615,8 +615,6 @@ components:
     CustomerCaseRootCauseAnalysis:
       type: object
       properties:
-        '':
-          type: string
         CustomerCaseRootCauseAnalysisParameterType:
           type: string
         CustomerCaseRootCauseAnalysisSelectedOption:
@@ -630,7 +628,7 @@ components:
         CustomerCaseRootCauseAnalysisUsageLog:
           type: string
         CustomerCaseRootCauseAnalysisRequesterReference:
-          type: string
+          type: object
     CaseRootCauseAnalysisOutcome:
       type: object
       properties:
@@ -641,8 +639,6 @@ components:
     OperationsandServicingIssueAnalysis:
       type: object
       properties:
-        '':
-          type: string
         OperationsandServicingIssueAnalysisPreconditions:
           type: string
         OperationsandServicingIssueAnalysisAnalysisSchedule:
@@ -650,7 +646,7 @@ components:
         OperationsandServicingIssueAnalysisVersionNumber:
           type: string
         OperationsandServicingIssueAnalysis:
-          type: string
+          type: object
         OperationsandServicingIssueAnalysisServiceType:
           type: string
         OperationsandServicingIssueAnalysisServiceDescription:
@@ -664,8 +660,6 @@ components:
     CreditandFraudRelatedIssueAnalysis:
       type: object
       properties:
-        '':
-          type: string
         CreditandFraudRelatedIssueAnalysisPreconditions:
           type: string
         CreditandFraudRelatedIssueAnalysisAnalysisSchedule:
@@ -673,7 +667,7 @@ components:
         CreditandFraudRelatedIssueAnalysisVersionNumber:
           type: string
         CreditandFraudRelatedIssueAnalysis:
-          type: string
+          type: object
         CreditandFraudRelatedIssueAnalysisServiceType:
           type: string
         CreditandFraudRelatedIssueAnalysisServiceDescription:
@@ -687,8 +681,6 @@ components:
     ProductandServiceIssueAnalysis:
       type: object
       properties:
-        '':
-          type: string
         ProductandServiceIssueAnalysisPreconditions:
           type: string
         ProductandServiceIssueAnalysisAnalysisSchedule:
@@ -696,7 +688,7 @@ components:
         ProductandServiceIssueAnalysisVersionNumber:
           type: string
         ProductandServiceIssueAnalysis:
-          type: string
+          type: object
         ProductandServiceIssueAnalysisServiceType:
           type: string
         ProductandServiceIssueAnalysisServiceDescription:

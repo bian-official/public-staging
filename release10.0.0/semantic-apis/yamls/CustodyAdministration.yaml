@@ -794,8 +794,6 @@ components:
     CustodyArrangement:
       type: object
       properties:
-        '':
-          type: string
         CustodyArrangementParameterType:
           type: string
         CustodyArrangementSelectedOption:
@@ -803,7 +801,7 @@ components:
         CustodyArrangementType:
           type: string
         CustodyArrangementReference:
-          type: string
+          type: object
         CustodyArrangementSchedule:
           type: string
         CustodyArrangementStatus:
@@ -811,7 +809,7 @@ components:
         CustodyArrangementCurrency:
           type: string
         CustodyArrangementRegulationReference:
-          type: string
+          type: object
         CustodyArrangementRegulationType:
           type: string
         CustodyArrangementJurisdiction:
@@ -821,18 +819,16 @@ components:
         CustodyArrangementAccountType:
           type: string
         CustodyArrangementAccountReference:
-          type: string
+          type: object
     SafeKeeping:
       type: object
       properties:
-        '':
-          type: string
         SafeKeepingPreconditions:
           type: string
         SafeKeepingFeatureSchedule:
           type: string
         SecuritiesSafeKeeping:
-          type: string
+          type: object
         SafeKeepingPostconditions:
           type: string
         SafeKeepingSecuritiesSafeKeepingServiceType:
@@ -848,14 +844,12 @@ components:
     SecuritiesReporting:
       type: object
       properties:
-        '':
-          type: string
         SecuritiesReportingPreconditions:
           type: string
         SecuritiesReportingFeatureSchedule:
           type: string
         CustodySecuritiesReporting:
-          type: string
+          type: object
         SecuritiesReportingPostconditions:
           type: string
         SecuritiesReportingCustodySecuritiesReportingServiceType:
@@ -878,14 +872,12 @@ components:
     DividendsandInterest:
       type: object
       properties:
-        '':
-          type: string
         DividendsandInterestPreconditions:
           type: string
         DividendsandInterestFeatureSchedule:
           type: string
         CustodyDividendsandInterest:
-          type: string
+          type: object
         DividendsandInterestPostconditions:
           type: string
         DividendsandInterestCustodyDividendsandInterestServiceType:
@@ -901,14 +893,12 @@ components:
     Settlement:
       type: object
       properties:
-        '':
-          type: string
         SettlementPreconditions:
           type: string
         SettlementFeatureSchedule:
           type: string
         BusinessService:
-          type: string
+          type: object
         SettlementPostconditions:
           type: string
         SettlementServiceType:
@@ -924,14 +914,12 @@ components:
     Fees:
       type: object
       properties:
-        '':
-          type: string
         FeesPreconditions:
           type: string
         FeesFeatureSchedule:
           type: string
         BusinessService:
-          type: string
+          type: object
         FeesPostconditions:
           type: string
         FeesServiceType:

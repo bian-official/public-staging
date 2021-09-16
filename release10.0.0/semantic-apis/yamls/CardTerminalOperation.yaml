@@ -438,22 +438,22 @@ components:
       type: object
       properties:
         CardTransactionBatchReference:
-          type: string
+          type: object
     Capture:
       type: object
       properties:
         CardTransactionProductInstanceReference:
-          type: string
+          type: object
         CardHolderReference:
-          type: string
+          type: object
         CardTransactionIssuedDeviceReference:
-          type: string
+          type: object
         CardTransactionNetworkReference:
-          type: string
+          type: object
         CardTransactionIssuingBankReference:
-          type: string
+          type: object
         CardTransactionMerchantAcquiringBankReference:
-          type: string
+          type: object
         CardTransactionType:
           type: string
         CardTransactionCurrency:
@@ -461,13 +461,13 @@ components:
         CardTransactionAmountType:
           type: string
         CardTransactionAmount:
-          type: string
+          type: number
         CardTransactionMerchantReference:
-          type: string
+          type: object
         CardTransactionLocationReference:
-          type: string
+          type: object
         CardTransactionProductandServiceReference:
-          type: string
+          type: object
         CardTransactionDate/Time:
           type: string
         CardTransactionFXConversionCharge:

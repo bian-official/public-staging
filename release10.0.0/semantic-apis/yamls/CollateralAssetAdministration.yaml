@@ -342,7 +342,7 @@ components:
       type: object
       properties:
         CollateralAssetReference:
-          type: string
+          type: object
         CollateralAssetRecord:
           type: string
         CollateralAssetType:
@@ -362,11 +362,11 @@ components:
         CollateralAssetJurisdiction:
           type: string
         CollateralAssetDocumentReference:
-          type: string
+          type: object
         CollateralAssetDocumentType:
           type: string
         CollateralAssetInsuranceReference:
-          type: string
+          type: object
         CollateralAssetPledgedDate:
           type: string
         CollateralAssetValuationHistory:
@@ -383,7 +383,7 @@ components:
         CollateralAssetMaintenanceTaskType:
           type: string
         CollateralAssetMaintenanceServiceProviderReference(3rdpartyserviceprovider):
-          type: string
+          type: object
         CollateralAssetVerificationandComplianceRecord:
           type: string
         CollateralAssetMaintenance/SafekeepingFees:
@@ -394,7 +394,7 @@ components:
         CollateralAssetValuationType:
           type: string
         CollateralAssetValuationServiceReference:
-          type: string
+          type: object
         CollateralAssetLoantoValueRatio:
           type: string
         CollateralAssetValuation:
