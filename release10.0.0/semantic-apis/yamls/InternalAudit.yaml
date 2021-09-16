@@ -446,7 +446,7 @@ components:
         InternalAuditAssessmentType:
           type: string
         InternalAuditAssessmentReference:
-          type: object
+          type: string
         InternalAuditAssessmentRequest:
           type: string
         InternalAuditAssessmentSchedule:
@@ -456,9 +456,9 @@ components:
         InternalAuditAssessmentUsageLog:
           type: string
         InternalAuditAssessmentServiceProviderReference:
-          type: object
+          type: string
         InternalAuditAssessmentRequesterReference:
-          type: object
+          type: string
     Audit:
       type: object
       properties:
@@ -475,7 +475,7 @@ components:
         AuditVersionNumber:
           type: string
         BusinessService:
-          type: object
+          type: string
         ServiceType:
           type: string
         ServiceDescription:

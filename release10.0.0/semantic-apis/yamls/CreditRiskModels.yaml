@@ -605,32 +605,6 @@ components:
         CreditRiskModelSpecificationFeedback:
           type: string
         CreditRiskModelSpecificationServiceProviderReference:
-          type: object
-    Testing:
-      type: object
-      properties:
-        ? >-
-          Createandmaintainadesignforaprocedure,product/servicemodelorothersuchentitywithinCreditRiskModels.
-
-          Example:Createandmaintainproductdesignsandanalyticalmodels.
-        : type: string
-        TestingPreconditions:
-          type: string
-        TestingSpecificationSchedule:
-          type: string
-        TestingVersionNumber:
-          type: string
-        BusinessService:
-          type: object
-        ServiceType:
-          type: string
-        ServiceDescription:
-          type: string
-        ServiceInputsandOuputs:
-          type: string
-        ServiceWorkProduct:
-          type: string
-        ServiceName:
           type: string
     FunctionalRequirements:
       type: object
@@ -647,7 +621,7 @@ components:
         FunctionalRequirementsVersionNumber:
           type: string
         BusinessService:
-          type: object
+          type: string
         ServiceType:
           type: string
         ServiceDescription:
@@ -673,7 +647,7 @@ components:
         ProductionVersionNumber:
           type: string
         BusinessService:
-          type: object
+          type: string
         ServiceType:
           type: string
         ServiceDescription:
@@ -695,6 +669,32 @@ components:
           type: string
         CreditRiskModelsImpactAnalysis:
           type: string
+    Testing:
+      type: object
+      properties:
+        ? >-
+          Createandmaintainadesignforaprocedure,product/servicemodelorothersuchentitywithinCreditRiskModels.
+
+          Example:Createandmaintainproductdesignsandanalyticalmodels.
+        : type: string
+        TestingPreconditions:
+          type: string
+        TestingSpecificationSchedule:
+          type: string
+        TestingVersionNumber:
+          type: string
+        BusinessService:
+          type: string
+        ServiceType:
+          type: string
+        ServiceDescription:
+          type: string
+        ServiceInputsandOuputs:
+          type: string
+        ServiceWorkProduct:
+          type: string
+        ServiceName:
+          type: string
     HTTPError:
       type: object
       properties:
@@ -707,14 +707,6 @@ components:
   parameters:
     CreditRiskModelsID:
       name: creditriskmodelsId
-      in: path
-      required: true
-      style: simple
-      explode: false
-      schema:
-        type: string
-    TestingID:
-      name: testingId
       in: path
       required: true
       style: simple
@@ -739,6 +731,14 @@ components:
         type: string
     CreditRiskModelsOutcomeID:
       name: creditriskmodelsoutcomeId
+      in: path
+      required: true
+      style: simple
+      explode: false
+      schema:
+        type: string
+    TestingID:
+      name: testingId
       in: path
       required: true
       style: simple

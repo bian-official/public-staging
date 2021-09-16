@@ -497,7 +497,7 @@ components:
         CustomerServicingRepresentativeAllocationSchedule:
           type: string
         CustomerServicingRepresentativeReference:
-          type: object
+          type: string
         CustomerServicingRepresentativeRecord:
           type: string
         CustomerServicingRepresentativeQualificationProfile:
@@ -516,13 +516,20 @@ components:
         AssignmentCustomerServicingRepresentative:
           type: string
         AssignmentCustomerServicingPositionReference:
-          type: object
+          type: string
         AssignmentCustomerServicingPositionProfile:
           type: string
         AssignmentCustomerServicingPositionSchedule:
           type: string
         CustomerContactSessionProcedureInstanceReference:
-          type: object
+          type: string
+    Troubleshooting:
+      type: object
+      properties:
+        ContactCenterProductionIssueRecord:
+          type: string
+        ContactCenterIssueAnalysisAndRecommendedResponse:
+          type: string
     PeakLoad:
       type: object
       properties:
@@ -535,13 +542,6 @@ components:
         PeakLoadResponseTaskType:
           type: string
         PeakLoadResponseDescription:
-          type: string
-    Troubleshooting:
-      type: object
-      properties:
-        ContactCenterProductionIssueRecord:
-          type: string
-        ContactCenterIssueAnalysisAndRecommendedResponse:
           type: string
     HTTPError:
       type: object
@@ -569,16 +569,16 @@ components:
       explode: false
       schema:
         type: string
-    PeakLoadID:
-      name: peakloadId
+    TroubleshootingID:
+      name: troubleshootingId
       in: path
       required: true
       style: simple
       explode: false
       schema:
         type: string
-    TroubleshootingID:
-      name: troubleshootingId
+    PeakLoadID:
+      name: peakloadId
       in: path
       required: true
       style: simple

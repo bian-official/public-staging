@@ -403,15 +403,15 @@ components:
       type: object
       properties:
         ProductInstanceReference:
-          type: object
+          type: string
         CustomerReference:
-          type: object
+          type: string
         BankBranchOrLocationReference:
-          type: object
+          type: string
         BusinessUnitReference:
-          type: object
+          type: string
         DocumentDirectoryEntryInstanceReference:
-          type: object
+          type: string
         Associations:
           type: string
         AssociationType:
@@ -419,7 +419,7 @@ components:
         AssociationObligationOrEntitlement:
           type: string
         AssociationReference:
-          type: object
+          type: string
         ECMAndDCMFulfillmentSchedule:
           type: string
         DateType:
@@ -432,7 +432,7 @@ components:
       type: object
       properties:
         Employee/BusinessUnitReference:
-          type: object
+          type: string
         InstrumentDefinitionWorkTaskRecord:
           type: string
         InstrumentDefinitionWorkTaskType:
@@ -442,14 +442,14 @@ components:
         InstrumentDefinitionWorkTaskWorkProducts:
           type: string
         DocumentDirectoryEntryInstanceReference:
-          type: object
+          type: string
         InstrumentDefinitionSpecification:
           type: string
     Placement:
       type: object
       properties:
         Employee/BusinessUnitReference:
-          type: object
+          type: string
         ProspectList:
           type: string
         PlacementRoadshowSchedule:
@@ -463,14 +463,14 @@ components:
         PlacementWorkTaskWorkProducts:
           type: string
         DocumentDirectoryEntryInstanceReference:
-          type: object
+          type: string
         PlacementTransaction:
           type: string
     Prospectus:
       type: object
       properties:
         Employee/BusinessUnitReference:
-          type: object
+          type: string
         ProspectusWorkTaskRecord:
           type: string
         ProspectusWorkTaskType:
@@ -480,7 +480,7 @@ components:
         ProspectusWorkTaskWorkProducts:
           type: string
         DocumentDirectoryEntryInstanceReference:
-          type: object
+          type: string
         Prospectus:
           type: string
     HTTPError:

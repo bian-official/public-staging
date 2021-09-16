@@ -332,13 +332,6 @@ components:
           type: string
         FinancialMarketInformationSubjectAreaRecord:
           type: string
-    Consolidation:
-      type: object
-      properties:
-        FinancialMarketInformationServiceReport:
-          type: string
-        FinancialMarketInformationServiceReportProperties:
-          type: string
     Improvement:
       type: object
       properties:
@@ -362,6 +355,13 @@ components:
         FinancialMarketInformationReportSchedule:
           type: string
         FinancialMarketInformationReportAccessHistory:
+          type: string
+    Consolidation:
+      type: object
+      properties:
+        FinancialMarketInformationServiceReport:
+          type: string
+        FinancialMarketInformationServiceReportProperties:
           type: string
     HTTPError:
       type: object
@@ -420,14 +420,6 @@ components:
       explode: false
       schema:
         type: string
-    ConsolidationID:
-      name: consolidationId
-      in: path
-      required: true
-      style: simple
-      explode: false
-      schema:
-        type: string
     ImprovementID:
       name: improvementId
       in: path
@@ -438,6 +430,14 @@ components:
         type: string
     ReportingID:
       name: reportingId
+      in: path
+      required: true
+      style: simple
+      explode: false
+      schema:
+        type: string
+    ConsolidationID:
+      name: consolidationId
       in: path
       required: true
       style: simple

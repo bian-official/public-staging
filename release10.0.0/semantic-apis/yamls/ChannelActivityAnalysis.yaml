@@ -501,23 +501,23 @@ components:
           type: string
         ChannelActivityHistoryReport:
           type: string
+    CustomerFraud:
+      type: object
+      properties:
+        ChannelActivityCustomerFraudAnalysisAlgorithmSpecification:
+          type: string
+        ChannelActivityCustomerFraudAnalysisReference:
+          type: string
+        ChannelActivityCustomerFraudAnalysisResult:
+          type: string
     Bot:
       type: object
       properties:
         ChannelActivityBotDetectionAnalysisAlgorithmSpecification:
           type: string
         ChannelActivityBotDetectionAnalysisReference:
-          type: object
+          type: string
         ChannelActivityBotDetectionAnalysisResult:
-          type: string
-    CustomerBehavior:
-      type: object
-      properties:
-        ChannelActivityCustomerBehaviorAnalysisAlgorithmSpecification:
-          type: string
-        ChannelActivityCustomerBehaviorAnalysisReference:
-          type: object
-        ChannelActivityCustomerBehaviorAnalysisResult:
           type: string
     MerchantFraud:
       type: object
@@ -525,7 +525,7 @@ components:
         ChannelActivityMerchantFraudAnalysisAlgorithmSpecification:
           type: string
         ChannelActivityMerchantFraudAnalysisReference:
-          type: object
+          type: string
         ChannelActivityMerchantFraudAnalysisResult:
           type: string
     MerchantBehavior:
@@ -534,7 +534,7 @@ components:
         ChannelActivityMerchantBehaviorAnalysisAlgorithmSpecification:
           type: string
         ChannelActivityMerchantBehaviorAnalysisReference:
-          type: object
+          type: string
         ChannelActivityMerchantBehaviorAnalysisResult:
           type: string
     DeviceError:
@@ -543,17 +543,17 @@ components:
         ChannelActivityDeviceErrorDetectionAnalysisAlgorithmSpecification:
           type: string
         ChannelActivityDeviceErrorDetectionAnalysisReference:
-          type: object
+          type: string
         ChannelActivityDeviceErrorDetectionAnalysisResult:
           type: string
-    CustomerFraud:
+    CustomerBehavior:
       type: object
       properties:
-        ChannelActivityCustomerFraudAnalysisAlgorithmSpecification:
+        ChannelActivityCustomerBehaviorAnalysisAlgorithmSpecification:
           type: string
-        ChannelActivityCustomerFraudAnalysisReference:
-          type: object
-        ChannelActivityCustomerFraudAnalysisResult:
+        ChannelActivityCustomerBehaviorAnalysisReference:
+          type: string
+        ChannelActivityCustomerBehaviorAnalysisResult:
           type: string
     HTTPError:
       type: object
@@ -825,16 +825,16 @@ components:
       explode: false
       schema:
         type: string
-    BotID:
-      name: botId
+    CustomerFraudID:
+      name: customerfraudId
       in: path
       required: true
       style: simple
       explode: false
       schema:
         type: string
-    CustomerBehaviorID:
-      name: customerbehaviorId
+    BotID:
+      name: botId
       in: path
       required: true
       style: simple
@@ -865,8 +865,8 @@ components:
       explode: false
       schema:
         type: string
-    CustomerFraudID:
-      name: customerfraudId
+    CustomerBehaviorID:
+      name: customerbehaviorId
       in: path
       required: true
       style: simple

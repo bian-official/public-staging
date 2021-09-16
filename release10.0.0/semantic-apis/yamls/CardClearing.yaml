@@ -365,13 +365,13 @@ components:
       type: object
       properties:
         NetworkReference:
-          type: object
+          type: string
         ParticipantAcquirerBankReference:
-          type: object
+          type: string
         ParticipantAcquirerBankClearingandSettlementTerms:
           type: string
         ParticipantIssuerBankReference:
-          type: object
+          type: string
         ParticipantIssuerBankClearingandSettlementTerms:
           type: string
         CardClearingProcessType:
@@ -384,15 +384,15 @@ components:
       type: object
       properties:
         CardTransactionRecordReference:
-          type: object
+          type: string
         CardTransactionProductInstanceReference:
-          type: object
+          type: string
         CardTransactionNetworkReference:
-          type: object
+          type: string
         CardTransactionIssuingBankReference:
-          type: object
+          type: string
         CardTransactionMerchantAcquiringBankReference:
-          type: object
+          type: string
         CardTransactionType:
           type: string
         CardTransactionCurrency:
@@ -400,13 +400,13 @@ components:
         CardTransactionAmountType:
           type: string
         CardTransactionAmount:
-          type: number
+          type: string
         CardTransactionMerchantReference:
-          type: object
+          type: string
         CardTransactionLocationReference:
-          type: object
+          type: string
         CardTransactionProductandServiceReference:
-          type: object
+          type: string
         CardTransactionDate/Time:
           type: string
         CardTransactionFXConversionCharge:
@@ -415,17 +415,10 @@ components:
           type: string
         CardTransactionAuthorizationRecord:
           type: string
-    Addressing:
+    Routing:
       type: object
       properties:
-        AddressingTaskResult:
-          type: string
-    FXConversion:
-      type: object
-      properties:
-        FXConversionRatesandFees:
-          type: object
-        FXConversionTaskResult:
+        RoutingTaskResult:
           type: string
     Fees:
       type: object
@@ -434,20 +427,27 @@ components:
           type: string
         FeeTaskResult:
           type: string
-    Reconciliation:
+    Addressing:
       type: object
       properties:
-        ReconciliationTaskResult:
+        AddressingTaskResult:
           type: string
     Matching:
       type: object
       properties:
         MatchingTaskResult:
           type: string
-    Routing:
+    FXConversion:
       type: object
       properties:
-        RoutingTaskResult:
+        FXConversionRatesandFees:
+          type: string
+        FXConversionTaskResult:
+          type: string
+    Reconciliation:
+      type: object
+      properties:
+        ReconciliationTaskResult:
           type: string
     HTTPError:
       type: object
@@ -790,16 +790,8 @@ components:
       explode: false
       schema:
         type: string
-    AddressingID:
-      name: addressingId
-      in: path
-      required: true
-      style: simple
-      explode: false
-      schema:
-        type: string
-    FXConversionID:
-      name: fxconversionId
+    RoutingID:
+      name: routingId
       in: path
       required: true
       style: simple
@@ -814,8 +806,8 @@ components:
       explode: false
       schema:
         type: string
-    ReconciliationID:
-      name: reconciliationId
+    AddressingID:
+      name: addressingId
       in: path
       required: true
       style: simple
@@ -830,8 +822,16 @@ components:
       explode: false
       schema:
         type: string
-    RoutingID:
-      name: routingId
+    FXConversionID:
+      name: fxconversionId
+      in: path
+      required: true
+      style: simple
+      explode: false
+      schema:
+        type: string
+    ReconciliationID:
+      name: reconciliationId
       in: path
       required: true
       style: simple

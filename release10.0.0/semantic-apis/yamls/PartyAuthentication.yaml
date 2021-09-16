@@ -514,9 +514,9 @@ components:
       type: object
       properties:
         CustomerReference:
-          type: object
+          type: string
         PartyReference:
-          type: object
+          type: string
         PartyAuthenticationAssessmentProfile:
           type: string
         AuthenticationType:
@@ -525,30 +525,30 @@ components:
           type: string
         CustomerContactAuthenticationLevel:
           type: string
-    Device:
+    Document:
       type: object
       properties:
-        AuthenticationDeviceReference:
-          type: object
-        AuthenticationDevicePropertyValue:
+        AuthenticationDocumentReference:
           type: string
-        IssuedDeviceInstanceReference:
-          type: object
-        IssuedDevicePropertyValue:
+        AuthenticationDocumentContent:
           type: string
-        DeviceTestResult:
+        DocumentDirectoryEntryInstanceReference:
+          type: string
+        DocumentContent:
+          type: string
+        AuthenticationDocumentComparisonTestResult:
           type: string
     Password:
       type: object
       properties:
         AuthenticationReferenceDataReference:
-          type: object
+          type: string
         AuthenticationReferenceDataType:
           type: string
         AuthenticationReferenceDataValue:
-          type: object
+          type: string
         AuthenticationPasswordReference:
-          type: object
+          type: string
         AuthenticationPasswordTemplate:
           type: string
         AuthenticationPasswordStoredValue:
@@ -559,29 +559,16 @@ components:
           type: string
         AuthenticationPasswordTestResult:
           type: string
-    Biometric:
+    Question:
       type: object
       properties:
-        AuthenticationBiometricType:
+        AuthenticationSecretQuestionReference:
           type: string
-        AuthenticationBiometricRecord:
+        AuthenticationSecretQuestionTemplate:
           type: string
-        RegisteredBiometricInstanceReference:
-          type: object
-        BiometricTestResult:
+        AuthenticationSecretQuestionValue:
           type: string
-    Document:
-      type: object
-      properties:
-        AuthenticationDocumentReference:
-          type: object
-        AuthenticationDocumentContent:
-          type: string
-        DocumentDirectoryEntryInstanceReference:
-          type: object
-        DocumentContent:
-          type: string
-        AuthenticationDocumentComparisonTestResult:
+        SecretQuestionTestResult:
           type: string
     Behavior:
       type: object
@@ -591,19 +578,32 @@ components:
         AuthenticationBehaviorRecord:
           type: string
         RegisteredBehaviorInstanceReference:
-          type: object
+          type: string
         BehaviorTestResult:
           type: string
-    Question:
+    Biometric:
       type: object
       properties:
-        AuthenticationSecretQuestionReference:
-          type: object
-        AuthenticationSecretQuestionTemplate:
+        AuthenticationBiometricType:
           type: string
-        AuthenticationSecretQuestionValue:
+        AuthenticationBiometricRecord:
           type: string
-        SecretQuestionTestResult:
+        RegisteredBiometricInstanceReference:
+          type: string
+        BiometricTestResult:
+          type: string
+    Device:
+      type: object
+      properties:
+        AuthenticationDeviceReference:
+          type: string
+        AuthenticationDevicePropertyValue:
+          type: string
+        IssuedDeviceInstanceReference:
+          type: string
+        IssuedDevicePropertyValue:
+          type: string
+        DeviceTestResult:
           type: string
     HTTPError:
       type: object
@@ -916,8 +916,8 @@ components:
       explode: false
       schema:
         type: string
-    DeviceID:
-      name: deviceId
+    DocumentID:
+      name: documentId
       in: path
       required: true
       style: simple
@@ -932,16 +932,8 @@ components:
       explode: false
       schema:
         type: string
-    BiometricID:
-      name: biometricId
-      in: path
-      required: true
-      style: simple
-      explode: false
-      schema:
-        type: string
-    DocumentID:
-      name: documentId
+    QuestionID:
+      name: questionId
       in: path
       required: true
       style: simple
@@ -956,8 +948,16 @@ components:
       explode: false
       schema:
         type: string
-    QuestionID:
-      name: questionId
+    BiometricID:
+      name: biometricId
+      in: path
+      required: true
+      style: simple
+      explode: false
+      schema:
+        type: string
+    DeviceID:
+      name: deviceId
       in: path
       required: true
       style: simple

@@ -310,7 +310,7 @@ components:
       type: object
       properties:
         CustomerReference:
-          type: object
+          type: string
         CustomerChannelAccessProfileRecord:
           type: string
         CustomerAccessAgreementValidFromOrToDate:
@@ -318,7 +318,24 @@ components:
         CustomerAccessAgreementSignaturesOrResponsibleParties:
           type: string
         DocumentDirectoryEntryInstanceReference:
-          type: object
+          type: string
+    Preferences:
+      type: object
+      properties:
+        ChannelAccessPreferencesRecord:
+          type: string
+        ChannelAccessPreferenceReference:
+          type: string
+        ChannelAccessPreferenceType:
+          type: string
+        ChannelAccessPreferenceProfile:
+          type: string
+        ChannelAccessChannel/DeviceType:
+          type: string
+        ChannelAccessChannel/DeviceTypePreference:
+          type: string
+        ProductandServiceType:
+          type: string
     Restrictions:
       type: object
       properties:
@@ -333,23 +350,6 @@ components:
         ChannelAccessProductandServiceFrequency/LimitRestrictions:
           type: string
         ChannelAccessProductandServiceTime/DurationRestrictions:
-          type: string
-    Preferences:
-      type: object
-      properties:
-        ChannelAccessPreferencesRecord:
-          type: string
-        ChannelAccessPreferenceReference:
-          type: object
-        ChannelAccessPreferenceType:
-          type: string
-        ChannelAccessPreferenceProfile:
-          type: string
-        ChannelAccessChannel/DeviceType:
-          type: string
-        ChannelAccessChannel/DeviceTypePreference:
-          type: string
-        ProductandServiceType:
           type: string
     HTTPError:
       type: object
@@ -577,16 +577,16 @@ components:
       explode: false
       schema:
         type: string
-    RestrictionsID:
-      name: restrictionsId
+    PreferencesID:
+      name: preferencesId
       in: path
       required: true
       style: simple
       explode: false
       schema:
         type: string
-    PreferencesID:
-      name: preferencesId
+    RestrictionsID:
+      name: restrictionsId
       in: path
       required: true
       style: simple

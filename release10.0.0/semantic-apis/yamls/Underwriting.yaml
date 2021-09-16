@@ -116,17 +116,17 @@ components:
         ProposedTransactionDetails:
           type: string
         ProductInstanceReference:
-          type: object
+          type: string
         ProposedLoanTerms:
           type: string
         ProposedLoanAmount:
-          type: number
+          type: string
         LoanPurpose:
           type: string
         CustomerReference:
-          type: object
+          type: string
         CustomerReferenceDetails:
-          type: object
+          type: string
         CustomerProductEligibilityTerms:
           type: string
         CustomerEmploymentHistory:
@@ -142,13 +142,13 @@ components:
         CustomerProductandServicePaymentHistory:
           type: string
         CollateralItemReference:
-          type: object
+          type: string
         CollateralItemType:
           type: string
         CollateralItemValuation:
           type: string
         DocumentReference:
-          type: object
+          type: string
         UnderwritingAssessmentDecision:
           type: string
         UnderwritingAssessmentWorkProduct:

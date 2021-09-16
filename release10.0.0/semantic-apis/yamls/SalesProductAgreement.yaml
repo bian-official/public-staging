@@ -340,13 +340,13 @@ components:
       type: object
       properties:
         CustomerReference:
-          type: object
+          type: string
         LegalEntityReference:
-          type: object
+          type: string
         ProductandServiceType:
           type: string
         ProductInstanceReference:
-          type: object
+          type: string
         AgreementType:
           type: string
         AgreementJurisdiction:
@@ -356,19 +356,10 @@ components:
         AgreementSignatoriesOrResponsibleParties:
           type: string
         DocumentDirectoryEntryInstanceReference:
-          type: object
-        CustomerAgreementReference:
-          type: object
-        PartyLife-cycleManagementReference:
-          type: object
-    PolicyTerms:
-      type: object
-      properties:
-        BankPolicy-RuleType:
           type: string
-        ApplicableBankPolicy-RuleReference:
-          type: object
-        ApplicableBankPolicy-RuleInterpretation:
+        CustomerAgreementReference:
+          type: string
+        PartyLife-cycleManagementReference:
           type: string
     RegulatoryTerms:
       type: object
@@ -376,8 +367,17 @@ components:
         RegulatoryAuthority:
           type: string
         ApplicableRegulationReference:
-          type: object
+          type: string
         ApplicableRegulationInterpretation:
+          type: string
+    PolicyTerms:
+      type: object
+      properties:
+        BankPolicy-RuleType:
+          type: string
+        ApplicableBankPolicy-RuleReference:
+          type: string
+        ApplicableBankPolicy-RuleInterpretation:
           type: string
     LegalTerms:
       type: object
@@ -385,7 +385,7 @@ components:
         Jurisdiction:
           type: string
         ApplicableLawReference:
-          type: object
+          type: string
         ApplicableLawInterpretation:
           type: string
     HTTPError:
@@ -544,16 +544,16 @@ components:
       explode: false
       schema:
         type: string
-    PolicyTermsID:
-      name: policytermsId
+    RegulatoryTermsID:
+      name: regulatorytermsId
       in: path
       required: true
       style: simple
       explode: false
       schema:
         type: string
-    RegulatoryTermsID:
-      name: regulatorytermsId
+    PolicyTermsID:
+      name: policytermsId
       in: path
       required: true
       style: simple

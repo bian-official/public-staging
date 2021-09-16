@@ -794,19 +794,19 @@ components:
       type: object
       properties:
         ProductInstanceReference:
-          type: object
+          type: string
         CorporateCurrentAccountNumber:
           type: string
         CustomerReference:
-          type: object
+          type: string
         BankBranchOrLocationReference:
-          type: object
+          type: string
         AccountType:
           type: string
         AccountCurrency:
           type: string
         TaxReference:
-          type: object
+          type: string
         EntitlementOptionDefinition:
           type: string
         EntitlementOptionSetting:
@@ -822,7 +822,7 @@ components:
         AssociationObligationOrEntitlement:
           type: string
         AssociationReference:
-          type: object
+          type: string
         LinkedAccounts:
           type: string
         LinkType:
@@ -840,6 +840,130 @@ components:
         DateType:
           type: string
         Date:
+          type: string
+    IssuedDevice:
+      type: object
+      properties:
+        IssuedDeviceType:
+          type: string
+        IssuedDeviceDescription:
+          type: string
+        IssuedDeviceOptionDefinition:
+          type: string
+        IssuedDeviceOptionSetting:
+          type: string
+        IssuedDeviceProperty:
+          type: string
+        IssuedDevicePropertyType:
+          type: string
+        IssuedDevicePropertyValue:
+          type: string
+        IssuedDeviceStatus:
+          type: string
+    DepositsandWithdrawals:
+      type: object
+      properties:
+        DepositType:
+          type: string
+        WithdrawalType:
+          type: string
+        AccountLimitBreachResponse:
+          type: string
+        DepositTransaction:
+          type: string
+        DepositTransactionSourceReference:
+          type: string
+        DepositTransactionDepositType:
+          type: string
+        DepositTransactionDescription:
+          type: string
+        DepositTransactionAmount:
+          type: string
+        DepositTransactionDate:
+          type: string
+        WithdrawalTransaction:
+          type: string
+        WithdrawalTransactionSourceReference:
+          type: string
+        WithdrawalTransactionWithdrawalType:
+          type: string
+        WithdrawalTransactionDescription:
+          type: string
+        WithdrawalTransactionAmount:
+          type: string
+        WithdrawalTransactionDate:
+          type: string
+    AccountLien:
+      type: object
+      properties:
+        LienType:
+          type: string
+        LienDefinition:
+          type: string
+        LienProcessingOption:
+          type: string
+        LienRecord:
+          type: string
+        LienOriginator:
+          type: string
+        LienPurpose:
+          type: string
+        LienAmount:
+          type: string
+        LienStartDate:
+          type: string
+        LienExpiryDate:
+          type: string
+        LienStatus:
+          type: string
+    Payments:
+      type: object
+      properties:
+        PaymentType:
+          type: string
+        PaymentDefinition:
+          type: string
+        PaymentProcessingOptionDefinition:
+          type: string
+        PaymentProcessingOptionSetting:
+          type: string
+        PaymentConfiguration:
+          type: string
+        PaymentSchedule:
+          type: string
+        DirectDebitMandateReference:
+          type: string
+        DirectDebitMandateSettings:
+          type: string
+        BillPayMandateReference:
+          type: string
+        BillPayMandateSettings:
+          type: string
+        PaymentTransaction:
+          type: string
+        PaymentTransactionType:
+          type: string
+        PaymentTransactionPayeeReference:
+          type: string
+        PaymentTransactionPayeeAccountReference:
+          type: string
+        PaymentTransactionPayeeBankReference:
+          type: string
+        PaymentTransactionAmount:
+          type: string
+        PaymentTransactionFeeType:
+          type: string
+        PaymentTransactionFeeCharge:
+          type: string
+        PaymentTransactionDate:
+          type: string
+        PaymentTransactionPaymentMechanism:
+          type: string
+        PaymentTransactionPaymentPurpose:
+          type: string
+        PaymentTransactionBankBranch/LocationReference:
+          type: string
+        PaymentTransactionStatus:
           type: string
     AccountSweep:
       type: object
@@ -863,35 +987,8 @@ components:
         AccountSweepTargetAccount:
           type: string
         AccountSweepAmount:
-          type: number
+          type: string
         AccountSweepExecutionDate:
-          type: string
-    Interest:
-      type: object
-      properties:
-        InterestRateType:
-          type: string
-        InterestRateApplicationSchedule:
-          type: object
-        InterestRateConfiguration:
-          type: object
-        InterestRate:
-          type: object
-        InterestApplicationRecord:
-          type: string
-        InterestTransaction:
-          type: string
-        TransactionDescription:
-          type: string
-        TransactionRateType:
-          type: string
-        TransactionInterestCharge:
-          type: string
-        InterestAccrualAmount:
-          type: number
-        InterestAccrualType:
-          type: string
-        InterestAccrualCharge:
           type: string
     ServiceFees:
       type: object
@@ -921,134 +1018,37 @@ components:
         ProjectedTransactionFeeCharge:
           type: string
         FeeAccrualAmount:
-          type: number
+          type: string
         AccrualFeeType:
           type: string
         AccrualFeeCharge:
           type: string
-    AccountLien:
+    Interest:
       type: object
       properties:
-        LienType:
+        InterestRateType:
           type: string
-        LienDefinition:
+        InterestRateApplicationSchedule:
           type: string
-        LienProcessingOption:
+        InterestRateConfiguration:
           type: string
-        LienRecord:
+        InterestRate:
           type: string
-        LienOriginator:
+        InterestApplicationRecord:
           type: string
-        LienPurpose:
+        InterestTransaction:
           type: string
-        LienAmount:
-          type: number
-        LienStartDate:
+        TransactionDescription:
           type: string
-        LienExpiryDate:
+        TransactionRateType:
           type: string
-        LienStatus:
+        TransactionInterestCharge:
           type: string
-    DepositsandWithdrawals:
-      type: object
-      properties:
-        DepositType:
+        InterestAccrualAmount:
           type: string
-        WithdrawalType:
+        InterestAccrualType:
           type: string
-        AccountLimitBreachResponse:
-          type: string
-        DepositTransaction:
-          type: string
-        DepositTransactionSourceReference:
-          type: object
-        DepositTransactionDepositType:
-          type: string
-        DepositTransactionDescription:
-          type: string
-        DepositTransactionAmount:
-          type: number
-        DepositTransactionDate:
-          type: string
-        WithdrawalTransaction:
-          type: string
-        WithdrawalTransactionSourceReference:
-          type: object
-        WithdrawalTransactionWithdrawalType:
-          type: string
-        WithdrawalTransactionDescription:
-          type: string
-        WithdrawalTransactionAmount:
-          type: number
-        WithdrawalTransactionDate:
-          type: string
-    Payments:
-      type: object
-      properties:
-        PaymentType:
-          type: string
-        PaymentDefinition:
-          type: string
-        PaymentProcessingOptionDefinition:
-          type: string
-        PaymentProcessingOptionSetting:
-          type: string
-        PaymentConfiguration:
-          type: string
-        PaymentSchedule:
-          type: string
-        DirectDebitMandateReference:
-          type: object
-        DirectDebitMandateSettings:
-          type: string
-        BillPayMandateReference:
-          type: object
-        BillPayMandateSettings:
-          type: string
-        PaymentTransaction:
-          type: string
-        PaymentTransactionType:
-          type: string
-        PaymentTransactionPayeeReference:
-          type: object
-        PaymentTransactionPayeeAccountReference:
-          type: object
-        PaymentTransactionPayeeBankReference:
-          type: object
-        PaymentTransactionAmount:
-          type: number
-        PaymentTransactionFeeType:
-          type: string
-        PaymentTransactionFeeCharge:
-          type: string
-        PaymentTransactionDate:
-          type: string
-        PaymentTransactionPaymentMechanism:
-          type: string
-        PaymentTransactionPaymentPurpose:
-          type: string
-        PaymentTransactionBankBranch/LocationReference:
-          type: object
-        PaymentTransactionStatus:
-          type: string
-    IssuedDevice:
-      type: object
-      properties:
-        IssuedDeviceType:
-          type: string
-        IssuedDeviceDescription:
-          type: string
-        IssuedDeviceOptionDefinition:
-          type: string
-        IssuedDeviceOptionSetting:
-          type: string
-        IssuedDeviceProperty:
-          type: string
-        IssuedDevicePropertyType:
-          type: string
-        IssuedDevicePropertyValue:
-          type: string
-        IssuedDeviceStatus:
+        InterestAccrualCharge:
           type: string
     HTTPError:
       type: object
@@ -1447,32 +1447,8 @@ components:
       explode: false
       schema:
         type: string
-    AccountSweepID:
-      name: accountsweepId
-      in: path
-      required: true
-      style: simple
-      explode: false
-      schema:
-        type: string
-    InterestID:
-      name: interestId
-      in: path
-      required: true
-      style: simple
-      explode: false
-      schema:
-        type: string
-    ServiceFeesID:
-      name: servicefeesId
-      in: path
-      required: true
-      style: simple
-      explode: false
-      schema:
-        type: string
-    AccountLienID:
-      name: accountlienId
+    IssuedDeviceID:
+      name: issueddeviceId
       in: path
       required: true
       style: simple
@@ -1487,6 +1463,14 @@ components:
       explode: false
       schema:
         type: string
+    AccountLienID:
+      name: accountlienId
+      in: path
+      required: true
+      style: simple
+      explode: false
+      schema:
+        type: string
     PaymentsID:
       name: paymentsId
       in: path
@@ -1495,8 +1479,24 @@ components:
       explode: false
       schema:
         type: string
-    IssuedDeviceID:
-      name: issueddeviceId
+    AccountSweepID:
+      name: accountsweepId
+      in: path
+      required: true
+      style: simple
+      explode: false
+      schema:
+        type: string
+    ServiceFeesID:
+      name: servicefeesId
+      in: path
+      required: true
+      style: simple
+      explode: false
+      schema:
+        type: string
+    InterestID:
+      name: interestId
       in: path
       required: true
       style: simple

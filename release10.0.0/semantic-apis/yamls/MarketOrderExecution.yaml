@@ -308,19 +308,19 @@ components:
       type: object
       properties:
         MarketOrderTransactionInstanceReference:
-          type: object
+          type: string
         CustomerReference:
-          type: object
+          type: string
         EmployeeOrBusinessUnitReference:
-          type: object
+          type: string
         CustomerMarketOrderProcessingInstruction:
           type: string
         MarketOrderTransaction:
           type: string
         InvestmentAccountArrangementInstanceReference:
-          type: object
+          type: string
         CurrentAccountArrangementInstanceReference:
-          type: object
+          type: string
         MarketOrderType:
           type: string
         SecurityType:
@@ -332,14 +332,14 @@ components:
         Date:
           type: string
         MarketOrderTradeInitiationInstanceReference:
-          type: object
+          type: string
     Position:
       type: object
       properties:
         BankSecurityPositionSecurityType:
           type: string
         PositionMarketOrderTradeInitiationInstanceReference:
-          type: object
+          type: string
         BankSecurityPositionSecurityPAndLRecord:
           type: string
         WholesaleTrade:
@@ -353,9 +353,9 @@ components:
         WholesaleTradeClearingandSettlementTerms:
           type: string
         DocumentDirectoryEntryInstanceReference:
-          type: object
+          type: string
         CorrespondenceInstanceReference:
-          type: object
+          type: string
         WholesaleTradeStatus:
           type: string
     Quote:
@@ -371,7 +371,7 @@ components:
       type: object
       properties:
         WholesaleTradeReference:
-          type: object
+          type: string
         MarketTradeTransactionInstanceProcessingStatus:
           type: string
         MarketTradeInitiationTaskResult:

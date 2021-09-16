@@ -194,11 +194,11 @@ components:
         TransactionLogType:
           type: string
         ProductInstanceReference:
-          type: object
+          type: string
         CustomerReference:
-          type: object
+          type: string
         CounterpartyReference:
-          type: object
+          type: string
         BaseCurrency:
           type: string
         InterestApplicationRecord:

@@ -716,9 +716,9 @@ components:
         IntellectualPropertyExchangeOperatingSessionUsageLog:
           type: string
         IntellectualPropertyExchangeOperatingSessionReference:
-          type: object
+          type: string
         IntellectualPropertyExchangeOperatingSessionServiceProviderReference:
-          type: object
+          type: string
         IntellectualPropertyExchangeOperatingSessionType:
           type: string
         IntellectualPropertyExchangeOperatingSessionServiceProviderSchedule:
@@ -740,7 +740,7 @@ components:
         Review,RefinementandEditingFunctionSchedule:
           type: string
         ContentReview,RefinementandEditing:
-          type: object
+          type: string
         ContentReview,RefinementandEditingServiceType:
           type: string
         ContentReview,RefinementandEditingServiceDescription:
@@ -764,7 +764,7 @@ components:
         IndexingandPublicationFunctionSchedule:
           type: string
         ContentIndexingandPublication:
-          type: object
+          type: string
         ContentIndexingandPublicationServiceType:
           type: string
         ContentIndexingandPublicationServiceDescription:
@@ -774,30 +774,6 @@ components:
         ContentIndexingandPublicationServiceWorkProduct:
           type: string
         ContentIndexingandPublicationServiceName:
-          type: string
-    Archiving:
-      type: object
-      properties:
-        ? >-
-          Operateequipmentand/oralargelyautomatedfacilitywithinKnowledgeExchange.
-
-          Example:Operatethebank'sinternalintranetfacility.
-        : type: string
-        ArchivingPreconditions:
-          type: string
-        ArchivingFunctionSchedule:
-          type: string
-        ContentArchiving:
-          type: object
-        ContentArchivingServiceType:
-          type: string
-        ContentArchivingServiceDescription:
-          type: string
-        ContentArchivingServiceInputsandOuputs:
-          type: string
-        ContentArchivingServiceWorkProduct:
-          type: string
-        ContentArchivingServiceName:
           type: string
     CaptureandClassification:
       type: object
@@ -812,7 +788,7 @@ components:
         CaptureandClassificationFunctionSchedule:
           type: string
         ContentCaptureandClassification:
-          type: object
+          type: string
         ContentCaptureandClassificationServiceType:
           type: string
         ContentCaptureandClassificationServiceDescription:
@@ -822,6 +798,37 @@ components:
         ContentCaptureandClassificationServiceWorkProduct:
           type: string
         ContentCaptureandClassificationServiceName:
+          type: string
+    Archiving:
+      type: object
+      properties:
+        ? >-
+          Operateequipmentand/oralargelyautomatedfacilitywithinKnowledgeExchange.
+
+          Example:Operatethebank'sinternalintranetfacility.
+        : type: string
+        ArchivingPreconditions:
+          type: string
+        ArchivingFunctionSchedule:
+          type: string
+        ContentArchiving:
+          type: string
+        ContentArchivingServiceType:
+          type: string
+        ContentArchivingServiceDescription:
+          type: string
+        ContentArchivingServiceInputsandOuputs:
+          type: string
+        ContentArchivingServiceWorkProduct:
+          type: string
+        ContentArchivingServiceName:
+          type: string
+    KnowledgeExchangeOutcome:
+      type: object
+      properties:
+        KnowledgeExchangeIncident:
+          type: string
+        KnowledgeExchangeProvision:
           type: string
     MaintenanceandAccessAdministration:
       type: object
@@ -836,7 +843,7 @@ components:
         MaintenanceandAccessAdministrationFunctionSchedule:
           type: string
         ContentMaintenanceandAccessAdministration:
-          type: object
+          type: string
         ContentMaintenanceandAccessAdministrationServiceType:
           type: string
         ContentMaintenanceandAccessAdministrationServiceDescription:
@@ -846,13 +853,6 @@ components:
         ContentMaintenanceandAccessAdministrationServiceWorkProduct:
           type: string
         ContentMaintenanceandAccessAdministrationServiceName:
-          type: string
-    KnowledgeExchangeOutcome:
-      type: object
-      properties:
-        KnowledgeExchangeIncident:
-          type: string
-        KnowledgeExchangeProvision:
           type: string
     HTTPError:
       type: object
@@ -888,14 +888,6 @@ components:
       explode: false
       schema:
         type: string
-    ArchivingID:
-      name: archivingId
-      in: path
-      required: true
-      style: simple
-      explode: false
-      schema:
-        type: string
     CaptureandClassificationID:
       name: captureandclassificationId
       in: path
@@ -904,8 +896,8 @@ components:
       explode: false
       schema:
         type: string
-    MaintenanceandAccessAdministrationID:
-      name: maintenanceandaccessadministrationId
+    ArchivingID:
+      name: archivingId
       in: path
       required: true
       style: simple
@@ -914,6 +906,14 @@ components:
         type: string
     KnowledgeExchangeOutcomeID:
       name: knowledgeexchangeoutcomeId
+      in: path
+      required: true
+      style: simple
+      explode: false
+      schema:
+        type: string
+    MaintenanceandAccessAdministrationID:
+      name: maintenanceandaccessadministrationId
       in: path
       required: true
       style: simple

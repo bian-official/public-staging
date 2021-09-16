@@ -351,11 +351,11 @@ components:
         FraudModelDeployment:
           type: string
         EmployeeOrBusinessUnitReference:
-          type: object
+          type: string
         FraudModelDeploymentConfiguration:
           type: string
         FraudModelDeploymentTaskReference:
-          type: object
+          type: string
         FraudModelDeploymentTaskRecord:
           type: string
         FraudModelStatus:
@@ -368,15 +368,24 @@ components:
           type: string
         FraudModel:
           type: string
+    Production:
+      type: object
+      properties:
+        FraudModelOperationalRequirements:
+          type: string
+        FraudModelAllowedUsage:
+          type: string
+        FraudModelUsageGuidelines:
+          type: string
     FunctionalRequirements:
       type: object
       properties:
         FraudModelDesignTaskReference:
-          type: object
+          type: string
         FraudModelDesignTaskRecord:
           type: string
         Customer/MarketDataServiceReference:
-          type: object
+          type: string
         Customer/MarketDataRecord:
           type: string
         FraudModelFeedbackRecord:
@@ -387,33 +396,24 @@ components:
       type: object
       properties:
         FraudModelTestReference:
-          type: object
+          type: string
         FraudModelTestType:
           type: string
         FraudModelTestHarnessReference:
-          type: object
+          type: string
         FraudModelTestResult:
           type: string
         FraudModelTestingTaskReference:
-          type: object
+          type: string
         FraudModelTestingTaskRecord:
           type: string
         FraudModelComplianceTaskReference:
-          type: object
+          type: string
         FraudModelComplianceTaskRecord:
           type: string
         FraudModelComplianceTestReference:
-          type: object
+          type: string
         FraudModelComplianceTestType:
-          type: string
-    Production:
-      type: object
-      properties:
-        FraudModelOperationalRequirements:
-          type: string
-        FraudModelAllowedUsage:
-          type: string
-        FraudModelUsageGuidelines:
           type: string
     HTTPError:
       type: object
@@ -701,6 +701,14 @@ components:
       explode: false
       schema:
         type: string
+    ProductionID:
+      name: productionId
+      in: path
+      required: true
+      style: simple
+      explode: false
+      schema:
+        type: string
     FunctionalRequirementsID:
       name: functionalrequirementsId
       in: path
@@ -711,14 +719,6 @@ components:
         type: string
     TestingID:
       name: testingId
-      in: path
-      required: true
-      style: simple
-      explode: false
-      schema:
-        type: string
-    ProductionID:
-      name: productionId
       in: path
       required: true
       style: simple

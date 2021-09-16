@@ -367,21 +367,21 @@ components:
       type: object
       properties:
         ProductInstanceReference:
-          type: object
+          type: string
         ProductAccountNumber:
           type: string
         ProductandServiceType:
           type: string
         CustomerReference:
-          type: object
+          type: string
         BankBranchOrLocationReference:
-          type: object
+          type: string
         IssuedDevice:
           type: string
         AccountCurrency:
           type: string
         TaxReference:
-          type: object
+          type: string
         Associations:
           type: string
         AssociationType:
@@ -389,7 +389,7 @@ components:
         AssociationObligationOrEntitlement:
           type: string
         AssociationReference:
-          type: object
+          type: string
         LinkedAccounts:
           type: string
         LinkType:
@@ -405,7 +405,7 @@ components:
         PositionLimitValue:
           type: string
         CollateralAssetAllocationInstanceReference:
-          type: object
+          type: string
         CollateralAssetAllocationProfile:
           type: string
         DateType:
@@ -415,28 +415,42 @@ components:
         BillingTransactions:
           type: string
         BillingTransactionReference:
-          type: object
+          type: string
         PaymentTransactions:
           type: string
         PaymentTransactionReference:
-          type: object
+          type: string
         ProductTransactions:
           type: string
         ProductTransactionReference:
-          type: object
+          type: string
         InterestTransactions:
           type: string
         InterestTransactionReference:
-          type: object
+          type: string
         FeeTransactions:
           type: string
         FeeTransactionReference:
-          type: object
+          type: string
         CreditPlanReference:
-          type: object
+          type: string
         CreditPlanType:
           type: string
         DelinquentAccountProcessingSchedule:
+          type: string
+    Assessment:
+      type: object
+      properties:
+        DelinquentAccountAssessmentWorkProduct:
+          type: string
+        DelinquentAccountAssessmentRecord:
+          type: string
+    Payment:
+      type: object
+      properties:
+        PaymentTransactionReference:
+          type: string
+        PaymentTransaction:
           type: string
     Resolution:
       type: object
@@ -446,13 +460,6 @@ components:
         DelinquentAccountResolutionActionPlan:
           type: string
         DelinquentAccountResolutionWorkProduct:
-          type: string
-    Assessment:
-      type: object
-      properties:
-        DelinquentAccountAssessmentWorkProduct:
-          type: string
-        DelinquentAccountAssessmentRecord:
           type: string
     Contact:
       type: object
@@ -466,23 +473,16 @@ components:
         ContactResult:
           type: string
         DocumentDirectoryEntryInstanceReference:
-          type: object
+          type: string
         DocumentContent:
           type: string
         CorrespondenceInstanceReference:
-          type: object
+          type: string
         CorrespondenceContent:
           type: string
         DelinquentAccountContactResult:
           type: string
         DelinquentAccountContactWorkProduct:
-          type: string
-    Payment:
-      type: object
-      properties:
-        PaymentTransactionReference:
-          type: object
-        PaymentTransaction:
           type: string
     HTTPError:
       type: object
@@ -798,14 +798,6 @@ components:
       explode: false
       schema:
         type: string
-    ResolutionID:
-      name: resolutionId
-      in: path
-      required: true
-      style: simple
-      explode: false
-      schema:
-        type: string
     AssessmentID:
       name: assessmentId
       in: path
@@ -814,16 +806,24 @@ components:
       explode: false
       schema:
         type: string
-    ContactID:
-      name: contactId
+    PaymentID:
+      name: paymentId
       in: path
       required: true
       style: simple
       explode: false
       schema:
         type: string
-    PaymentID:
-      name: paymentId
+    ResolutionID:
+      name: resolutionId
+      in: path
+      required: true
+      style: simple
+      explode: false
+      schema:
+        type: string
+    ContactID:
+      name: contactId
       in: path
       required: true
       style: simple

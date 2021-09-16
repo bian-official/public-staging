@@ -965,7 +965,7 @@ components:
         ManagementManualSpecificationFeedback:
           type: string
         ManagementManualSpecificationServiceProviderReference:
-          type: object
+          type: string
     OperationalSecurityProceduresandGuidelines:
       type: object
       properties:
@@ -981,7 +981,7 @@ components:
         OperationalSecurityProceduresandGuidelinesVersionNumber:
           type: string
         OperationalSecurityProceduresandGuidelines:
-          type: object
+          type: string
         OperationalSecurityProceduresandGuidelinesServiceType:
           type: string
         OperationalSecurityProceduresandGuidelinesServiceDescription:
@@ -1007,7 +1007,7 @@ components:
         OperationalandProductionProceduresandGuidelinesVersionNumber:
           type: string
         OperationalandProductionProceduresandGuidelines:
-          type: object
+          type: string
         OperationalandProductionProceduresandGuidelinesServiceType:
           type: string
         OperationalandProductionProceduresandGuidelinesServiceDescription:
@@ -1033,7 +1033,7 @@ components:
         EmploymentRelatedProceduresandGuidelinesVersionNumber:
           type: string
         EmploymentRelatedProceduresandGuidelines:
-          type: object
+          type: string
         EmploymentRelatedProceduresandGuidelinesServiceType:
           type: string
         EmploymentRelatedProceduresandGuidelinesServiceDescription:
@@ -1043,17 +1043,6 @@ components:
         EmploymentRelatedProceduresandGuidelinesServiceWorkProduct:
           type: string
         EmploymentRelatedProceduresandGuidelinesServiceName:
-          type: string
-    ManagementManualOutcome:
-      type: object
-      properties:
-        ManagementManualTask:
-          type: string
-        ManagementManualDesign:
-          type: string
-        ManagementManualWorkProduct:
-          type: string
-        ManagementManualImpactAnalysis:
           type: string
     StaffManagementProceduresandGuidelines:
       type: object
@@ -1070,7 +1059,7 @@ components:
         StaffManagementProceduresandGuidelinesVersionNumber:
           type: string
         StaffManagementProceduresandGuidelines:
-          type: object
+          type: string
         StaffManagementProceduresandGuidelinesServiceType:
           type: string
         StaffManagementProceduresandGuidelinesServiceDescription:
@@ -1080,6 +1069,17 @@ components:
         StaffManagementProceduresandGuidelinesServiceWorkProduct:
           type: string
         StaffManagementProceduresandGuidelinesServiceName:
+          type: string
+    ManagementManualOutcome:
+      type: object
+      properties:
+        ManagementManualTask:
+          type: string
+        ManagementManualDesign:
+          type: string
+        ManagementManualWorkProduct:
+          type: string
+        ManagementManualImpactAnalysis:
           type: string
     LegalandRegulatoryObligationsandGuidelines:
       type: object
@@ -1096,7 +1096,7 @@ components:
         LegalandRegulatoryObligationsandGuidelinesVersionNumber:
           type: string
         LegalandRegulatoryObligationsandGuidelines:
-          type: object
+          type: string
         LegalandRegulatoryObligationsandGuidelinesServiceType:
           type: string
         LegalandRegulatoryObligationsandGuidelinesServiceDescription:
@@ -1122,7 +1122,7 @@ components:
         CompanyMissionandPoliciesVersionNumber:
           type: string
         CompanyMissionandPolicies:
-          type: object
+          type: string
         CompanyMissionandPoliciesServiceType:
           type: string
         CompanyMissionandPoliciesServiceDescription:
@@ -1175,16 +1175,16 @@ components:
       explode: false
       schema:
         type: string
-    ManagementManualOutcomeID:
-      name: managementmanualoutcomeId
+    StaffManagementProceduresandGuidelinesID:
+      name: staffmanagementproceduresandguidelinesId
       in: path
       required: true
       style: simple
       explode: false
       schema:
         type: string
-    StaffManagementProceduresandGuidelinesID:
-      name: staffmanagementproceduresandguidelinesId
+    ManagementManualOutcomeID:
+      name: managementmanualoutcomeId
       in: path
       required: true
       style: simple

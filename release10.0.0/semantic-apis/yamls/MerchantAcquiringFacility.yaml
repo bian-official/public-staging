@@ -493,17 +493,17 @@ components:
       type: object
       properties:
         ProductInstanceReference:
-          type: object
+          type: string
         CustomerReference:
-          type: object
+          type: string
         PartyReference:
-          type: object
+          type: string
         BankBranchOrLocationReference:
-          type: object
+          type: string
         AccountCurrency:
           type: string
         TaxReference:
-          type: object
+          type: string
         MerchantAcquiringFacilityOperationalTerms:
           type: string
         MerchantAcquiringFacilityPositionLimits:
@@ -518,21 +518,21 @@ components:
       type: object
       properties:
         CardTransactionRecordReference:
-          type: object
+          type: string
         ChargebackInstruction:
           type: string
         CardTransactionProductInstanceReference:
-          type: object
+          type: string
         CardHolderReference:
-          type: object
+          type: string
         CardTransactionIssuedDeviceReference:
-          type: object
+          type: string
         CardTransactionNetworkReference:
-          type: object
+          type: string
         CardTransactionIssuingBankReference:
-          type: object
+          type: string
         CardTransactionMerchantAcquiringBankReference:
-          type: object
+          type: string
         CardTransactionType:
           type: string
         CardTransactionCurrency:
@@ -540,13 +540,52 @@ components:
         CardTransactionAmountType:
           type: string
         CardTransactionAmount:
-          type: number
+          type: string
         CardTransactionMerchantReference:
-          type: object
+          type: string
         CardTransactionLocationReference:
-          type: object
+          type: string
         CardTransactionProductandServiceReference:
-          type: object
+          type: string
+        CardTransactionDate/Time:
+          type: string
+        CardTransactionFXConversionCharge:
+          type: string
+        CardTransactionInterchargeFee:
+          type: string
+        CardTransactionAuthorizationRecord:
+          type: string
+    Clearing:
+      type: object
+      properties:
+        CardTransactionRecordReference:
+          type: string
+        CardTransactionProductInstanceReference:
+          type: string
+        CardHolderReference:
+          type: string
+        CardTransactionIssuedDeviceReference:
+          type: string
+        CardTransactionNetworkReference:
+          type: string
+        CardTransactionIssuingBankReference:
+          type: string
+        CardTransactionMerchantAcquiringBankReference:
+          type: string
+        CardTransactionType:
+          type: string
+        CardTransactionCurrency:
+          type: string
+        CardTransactionAmountType:
+          type: string
+        CardTransactionAmount:
+          type: string
+        CardTransactionMerchantReference:
+          type: string
+        CardTransactionLocationReference:
+          type: string
+        CardTransactionProductandServiceReference:
+          type: string
         CardTransactionDate/Time:
           type: string
         CardTransactionFXConversionCharge:
@@ -563,57 +602,18 @@ components:
         MerchantAcquiringAccountPostingPurpose:
           type: string
         MerchantAcquiringAccountPostingAmount:
-          type: number
+          type: string
         MerchantAcquiringAccountPostingValueDate:
           type: string
         MerchantAcquiringAccountPostingResult:
-          type: string
-    Clearing:
-      type: object
-      properties:
-        CardTransactionRecordReference:
-          type: object
-        CardTransactionProductInstanceReference:
-          type: object
-        CardHolderReference:
-          type: object
-        CardTransactionIssuedDeviceReference:
-          type: object
-        CardTransactionNetworkReference:
-          type: object
-        CardTransactionIssuingBankReference:
-          type: object
-        CardTransactionMerchantAcquiringBankReference:
-          type: object
-        CardTransactionType:
-          type: string
-        CardTransactionCurrency:
-          type: string
-        CardTransactionAmountType:
-          type: string
-        CardTransactionAmount:
-          type: number
-        CardTransactionMerchantReference:
-          type: object
-        CardTransactionLocationReference:
-          type: object
-        CardTransactionProductandServiceReference:
-          type: object
-        CardTransactionDate/Time:
-          type: string
-        CardTransactionFXConversionCharge:
-          type: string
-        CardTransactionInterchargeFee:
-          type: string
-        CardTransactionAuthorizationRecord:
           type: string
     Settlement:
       type: object
       properties:
         ParticipantMerchantAcquirerBankReference:
-          type: object
+          type: string
         ParticipantIssuerBankReference:
-          type: object
+          type: string
         CardFinancialSettlementServicePaymentAdviceRecord:
           type: string
         ParticipantPaymentTransaction:
@@ -1284,16 +1284,16 @@ components:
       explode: false
       schema:
         type: string
-    MerchantAccountID:
-      name: merchantaccountId
+    ClearingID:
+      name: clearingId
       in: path
       required: true
       style: simple
       explode: false
       schema:
         type: string
-    ClearingID:
-      name: clearingId
+    MerchantAccountID:
+      name: merchantaccountId
       in: path
       required: true
       style: simple

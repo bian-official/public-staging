@@ -284,13 +284,13 @@ components:
         SalesSpecialistSupportResourceAllocationServiceSchedule:
           type: string
         SalesSpecialistSupportResourceReference:
-          type: object
+          type: string
         SalesSpecialistSupportResourceRecord:
           type: string
         SalesSpecialistSupportResourceQualificationProfile:
           type: string
         SalesSpecialistSupportLocationReference:
-          type: object
+          type: string
         SalesSpecialistSupportResourceAvailabilitySchedule:
           type: string
         SalesSpecialistSupportResourceStatus:

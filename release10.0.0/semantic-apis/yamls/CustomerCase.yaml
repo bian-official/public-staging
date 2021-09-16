@@ -282,13 +282,13 @@ components:
         CustomerCaseType:
           type: string
         ProductInstanceReference:
-          type: object
+          type: string
         CustomerReference:
-          type: object
+          type: string
         CustomerContactRecordReference:
-          type: object
+          type: string
         ProductTransactionReference:
-          type: object
+          type: string
         ProductTransactionRecord:
           type: string
         CaseLocation:
@@ -296,23 +296,14 @@ components:
         Date:
           type: string
         EmployeeOrBusinessUnitReference:
-          type: object
+          type: string
         CustomerCaseResolutionSchedule:
-          type: string
-    Analysis:
-      type: object
-      properties:
-        CustomerContactRecord:
-          type: string
-        CaseAnalysisWorkProduct:
-          type: string
-        CaseAnalysisWorkTaskResult:
           type: string
     Determination:
       type: object
       properties:
         CustomerAgreementInstanceReference:
-          type: object
+          type: string
         CustomerAgreement:
           type: string
         CaseDeterminationWorkProduct:
@@ -323,17 +314,26 @@ components:
       type: object
       properties:
         CorrespondenceInstanceReference:
-          type: object
+          type: string
         CorrespondenceContent:
           type: string
         DocumentDirectoryEntryInstanceReference:
-          type: object
+          type: string
         DocumentContent:
           type: string
         Employee/BusinessUnitReference:
-          type: object
+          type: string
         PaymentOrderReference:
-          type: object
+          type: string
+    Analysis:
+      type: object
+      properties:
+        CustomerContactRecord:
+          type: string
+        CaseAnalysisWorkProduct:
+          type: string
+        CaseAnalysisWorkTaskResult:
+          type: string
     HTTPError:
       type: object
       properties:
@@ -474,14 +474,6 @@ components:
       explode: false
       schema:
         type: string
-    AnalysisID:
-      name: analysisId
-      in: path
-      required: true
-      style: simple
-      explode: false
-      schema:
-        type: string
     DeterminationID:
       name: determinationId
       in: path
@@ -492,6 +484,14 @@ components:
         type: string
     ResolutionID:
       name: resolutionId
+      in: path
+      required: true
+      style: simple
+      explode: false
+      schema:
+        type: string
+    AnalysisID:
+      name: analysisId
       in: path
       required: true
       style: simple

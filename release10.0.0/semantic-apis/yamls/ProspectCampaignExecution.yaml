@@ -376,7 +376,7 @@ components:
         ProspectCampaignDescription:
           type: string
         EmployeeOrBusinessUnitReference:
-          type: object
+          type: string
         ProspectCampaignProcedureSet-up:
           type: string
         ProspectCampaignProcedureVersionNumber:
@@ -398,16 +398,23 @@ components:
         ProspectCampaignProcedureProspectIdentification:
           type: string
         PartyLifecycleManagementProcedureInstanceReference:
-          type: object
+          type: string
     CandidateSelection:
       type: object
       properties:
         ProspectCampaignSelectionCriteria:
           type: string
         ProspectCampaignCandidateEmployee/BusinessUnitReference:
-          type: object
+          type: string
         ProspectCampaignCandidateReference:
-          type: object
+          type: string
+    AnalysisFeedback:
+      type: object
+      properties:
+        ProspectCampaignProcedureAnalysisResult:
+          type: string
+        ProspectCampaignProcedureAnalysisFeedbackResult:
+          type: string
     Execution:
       type: object
       properties:
@@ -418,17 +425,10 @@ components:
         ProspectCampaignProcedureWorkTaskWorkProducts:
           type: string
         DocumentDirectoryEntryInstanceReference:
-          type: object
+          type: string
         ProspectCampaignProcedureWorkTaskResult:
           type: string
         ProspectCampaignProcedureWorkTaskDate-Time:
-          type: string
-    AnalysisFeedback:
-      type: object
-      properties:
-        ProspectCampaignProcedureAnalysisResult:
-          type: string
-        ProspectCampaignProcedureAnalysisFeedbackResult:
           type: string
     HTTPError:
       type: object
@@ -931,16 +931,16 @@ components:
       explode: false
       schema:
         type: string
-    ExecutionID:
-      name: executionId
+    AnalysisFeedbackID:
+      name: analysisfeedbackId
       in: path
       required: true
       style: simple
       explode: false
       schema:
         type: string
-    AnalysisFeedbackID:
-      name: analysisfeedbackId
+    ExecutionID:
+      name: executionId
       in: path
       required: true
       style: simple

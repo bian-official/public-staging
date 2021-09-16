@@ -282,9 +282,9 @@ components:
       type: object
       properties:
         InformationFeedProviderReference:
-          type: object
+          type: string
         IssuedDeviceAllocationInstanceReference:
-          type: object
+          type: string
         IssuedDeviceAllocationStatus:
           type: string
     ExternalReport:
@@ -293,13 +293,13 @@ components:
         InformationFeedServiceContentRecord:
           type: string
         IssuedDeviceReference:
-          type: object
+          type: string
         IssuedDeviceType:
           type: string
         CustomerReference:
-          type: object
+          type: string
         ProductInstanceReference:
-          type: object
+          type: string
         StatusUpdateDetails:
           type: string
         StatusUpdateResult:
@@ -310,13 +310,13 @@ components:
       type: object
       properties:
         IssuedDeviceReference:
-          type: object
+          type: string
         IssuedDeviceType:
           type: string
         CustomerReference:
-          type: object
+          type: string
         ProductInstanceReference:
-          type: object
+          type: string
         StatusUpdateDetails:
           type: string
         StatusUpdateResult:

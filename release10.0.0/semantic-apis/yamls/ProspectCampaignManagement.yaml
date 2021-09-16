@@ -539,14 +539,40 @@ components:
         ProspectCampaignPerformanceRecord:
           type: string
         ProspectCampaignProcedureInstanceReference:
-          type: object
+          type: string
         EmployeeOrBusinessUnitReference:
-          type: object
+          type: string
         ProspectCampaignProcedureSet-up:
           type: string
         ProspectCampaignProcedureVersionNumber:
           type: string
         ProspectCampaignProcedureResult:
+          type: string
+    MarketTracking:
+      type: object
+      properties:
+        MarketTrackingWorkTaskType:
+          type: string
+        MarketTrackingWorkTask:
+          type: string
+        GeneralMarketResearchDirectoryEntryInstanceReference:
+          type: string
+        CompetitorAnalysisInstanceReference:
+          type: string
+        CustomerSurveyProcedureInstanceReference:
+          type: string
+        MarketTrackingWorkTaskWorkProducts:
+          type: string
+        MarketTrackingWorkTaskResult:
+          type: string
+        MarketTrackingWorkTaskDate-Time:
+          type: string
+    CampaignDirection:
+      type: object
+      properties:
+        ProspectCampaignDevelopmentSchedule:
+          type: string
+        ProspectCampaignExecutionSchedule:
           type: string
     PerformanceAssessment:
       type: object
@@ -560,32 +586,6 @@ components:
         PerformanceAssessmentWorkTaskResult:
           type: string
         PerformanceAssessmentWorkTaskDate-Time:
-          type: string
-    MarketTracking:
-      type: object
-      properties:
-        MarketTrackingWorkTaskType:
-          type: string
-        MarketTrackingWorkTask:
-          type: string
-        GeneralMarketResearchDirectoryEntryInstanceReference:
-          type: object
-        CompetitorAnalysisInstanceReference:
-          type: object
-        CustomerSurveyProcedureInstanceReference:
-          type: object
-        MarketTrackingWorkTaskWorkProducts:
-          type: string
-        MarketTrackingWorkTaskResult:
-          type: string
-        MarketTrackingWorkTaskDate-Time:
-          type: string
-    CampaignDirection:
-      type: object
-      properties:
-        ProspectCampaignDevelopmentSchedule:
-          type: string
-        ProspectCampaignExecutionSchedule:
           type: string
     HTTPError:
       type: object
@@ -605,14 +605,6 @@ components:
       explode: false
       schema:
         type: string
-    PerformanceAssessmentID:
-      name: performanceassessmentId
-      in: path
-      required: true
-      style: simple
-      explode: false
-      schema:
-        type: string
     MarketTrackingID:
       name: markettrackingId
       in: path
@@ -623,6 +615,14 @@ components:
         type: string
     CampaignDirectionID:
       name: campaigndirectionId
+      in: path
+      required: true
+      style: simple
+      explode: false
+      schema:
+        type: string
+    PerformanceAssessmentID:
+      name: performanceassessmentId
       in: path
       required: true
       style: simple

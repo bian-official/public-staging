@@ -260,9 +260,9 @@ components:
         FinancialGatewayServiceSessionIssueRecord:
           type: string
         EmployeeOrBusinessUnitReference:
-          type: object
+          type: string
         MessageReference:
-          type: object
+          type: string
         ProductionIssueType:
           type: string
         ProductionIssueDescription:
@@ -274,6 +274,17 @@ components:
         ProductionIssueRecord:
           type: string
         ProductionIssueStatus:
+          type: string
+    Inbound:
+      type: object
+      properties:
+        FinancialGatewayInboundMessageType:
+          type: string
+        FinancialGatewayInboundMessageRecord:
+          type: string
+        FinancialGatewayInboundMessageReceiver:
+          type: string
+        FinancialGatewayInboundMessageStatus:
           type: string
     Outbound:
       type: object
@@ -287,17 +298,6 @@ components:
         FinancialGatewayOutboundMessageReceiver:
           type: string
         FinancialGatewayOutboundMessageStatus:
-          type: string
-    Inbound:
-      type: object
-      properties:
-        FinancialGatewayInboundMessageType:
-          type: string
-        FinancialGatewayInboundMessageRecord:
-          type: string
-        FinancialGatewayInboundMessageReceiver:
-          type: string
-        FinancialGatewayInboundMessageStatus:
           type: string
     HTTPError:
       type: object
@@ -431,16 +431,16 @@ components:
       explode: false
       schema:
         type: string
-    OutboundID:
-      name: outboundId
+    InboundID:
+      name: inboundId
       in: path
       required: true
       style: simple
       explode: false
       schema:
         type: string
-    InboundID:
-      name: inboundId
+    OutboundID:
+      name: outboundId
       in: path
       required: true
       style: simple

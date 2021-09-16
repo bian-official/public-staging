@@ -806,7 +806,7 @@ components:
         CustodyArrangementType:
           type: string
         CustodyArrangementReference:
-          type: object
+          type: string
         CustodyArrangementSchedule:
           type: string
         CustodyArrangementStatus:
@@ -814,7 +814,7 @@ components:
         CustodyArrangementCurrency:
           type: string
         CustodyArrangementRegulationReference:
-          type: object
+          type: string
         CustodyArrangementRegulationType:
           type: string
         CustodyArrangementJurisdiction:
@@ -824,7 +824,7 @@ components:
         CustodyArrangementAccountType:
           type: string
         CustodyArrangementAccountReference:
-          type: object
+          type: string
     SafeKeeping:
       type: object
       properties:
@@ -838,7 +838,7 @@ components:
         SafeKeepingFeatureSchedule:
           type: string
         SecuritiesSafeKeeping:
-          type: object
+          type: string
         SafeKeepingPostconditions:
           type: string
         SafeKeepingSecuritiesSafeKeepingServiceType:
@@ -850,32 +850,6 @@ components:
         SafeKeepingSecuritiesSafeKeepingServiceWorkProduct:
           type: string
         SafeKeepingSecuritiesSafeKeepingServiceName:
-          type: string
-    Fees:
-      type: object
-      properties:
-        ? >-
-          Fulfillanyscheduledandad-hocobligationsunderaservicearrangement,mosttypicallyforafinancialproductorfacilitywithinCustodyAdministration.
-
-          Example:Performthescheduled(e.g.statements,standingorders)andad-hoc/requested(e.g.balanceinquiries,fundtransfers)fulfillmenttasksforacustomercurrentaccountfacility.
-        : type: string
-        FeesPreconditions:
-          type: string
-        FeesFeatureSchedule:
-          type: string
-        BusinessService:
-          type: object
-        FeesPostconditions:
-          type: string
-        FeesServiceType:
-          type: string
-        FeesServiceDescription:
-          type: string
-        FeesServiceInputsandOuputs:
-          type: string
-        FeesServiceWorkProduct:
-          type: string
-        FeesServiceName:
           type: string
     SecuritiesReporting:
       type: object
@@ -890,7 +864,7 @@ components:
         SecuritiesReportingFeatureSchedule:
           type: string
         CustodySecuritiesReporting:
-          type: object
+          type: string
         SecuritiesReportingPostconditions:
           type: string
         SecuritiesReportingCustodySecuritiesReportingServiceType:
@@ -903,31 +877,12 @@ components:
           type: string
         SecuritiesReportingCustodySecuritiesReportingServiceName:
           type: string
-    Settlement:
+    CustodyAdministrationOutcome:
       type: object
       properties:
-        ? >-
-          Fulfillanyscheduledandad-hocobligationsunderaservicearrangement,mosttypicallyforafinancialproductorfacilitywithinCustodyAdministration.
-
-          Example:Performthescheduled(e.g.statements,standingorders)andad-hoc/requested(e.g.balanceinquiries,fundtransfers)fulfillmenttasksforacustomercurrentaccountfacility.
-        : type: string
-        SettlementPreconditions:
+        CustodyAdministrationFinancialFacility:
           type: string
-        SettlementFeatureSchedule:
-          type: string
-        BusinessService:
-          type: object
-        SettlementPostconditions:
-          type: string
-        SettlementServiceType:
-          type: string
-        SettlementServiceDescription:
-          type: string
-        SettlementServiceInputsandOuputs:
-          type: string
-        SettlementServiceWorkProduct:
-          type: string
-        SettlementServiceName:
+        CustodyAdministrationWorkProduct:
           type: string
     DividendsandInterest:
       type: object
@@ -942,7 +897,7 @@ components:
         DividendsandInterestFeatureSchedule:
           type: string
         CustodyDividendsandInterest:
-          type: object
+          type: string
         DividendsandInterestPostconditions:
           type: string
         DividendsandInterestCustodyDividendsandInterestServiceType:
@@ -955,12 +910,57 @@ components:
           type: string
         DividendsandInterestCustodyDividendsandInterestServiceName:
           type: string
-    CustodyAdministrationOutcome:
+    Settlement:
       type: object
       properties:
-        CustodyAdministrationFinancialFacility:
+        ? >-
+          Fulfillanyscheduledandad-hocobligationsunderaservicearrangement,mosttypicallyforafinancialproductorfacilitywithinCustodyAdministration.
+
+          Example:Performthescheduled(e.g.statements,standingorders)andad-hoc/requested(e.g.balanceinquiries,fundtransfers)fulfillmenttasksforacustomercurrentaccountfacility.
+        : type: string
+        SettlementPreconditions:
           type: string
-        CustodyAdministrationWorkProduct:
+        SettlementFeatureSchedule:
+          type: string
+        BusinessService:
+          type: string
+        SettlementPostconditions:
+          type: string
+        SettlementServiceType:
+          type: string
+        SettlementServiceDescription:
+          type: string
+        SettlementServiceInputsandOuputs:
+          type: string
+        SettlementServiceWorkProduct:
+          type: string
+        SettlementServiceName:
+          type: string
+    Fees:
+      type: object
+      properties:
+        ? >-
+          Fulfillanyscheduledandad-hocobligationsunderaservicearrangement,mosttypicallyforafinancialproductorfacilitywithinCustodyAdministration.
+
+          Example:Performthescheduled(e.g.statements,standingorders)andad-hoc/requested(e.g.balanceinquiries,fundtransfers)fulfillmenttasksforacustomercurrentaccountfacility.
+        : type: string
+        FeesPreconditions:
+          type: string
+        FeesFeatureSchedule:
+          type: string
+        BusinessService:
+          type: string
+        FeesPostconditions:
+          type: string
+        FeesServiceType:
+          type: string
+        FeesServiceDescription:
+          type: string
+        FeesServiceInputsandOuputs:
+          type: string
+        FeesServiceWorkProduct:
+          type: string
+        FeesServiceName:
           type: string
     HTTPError:
       type: object
@@ -988,14 +988,6 @@ components:
       explode: false
       schema:
         type: string
-    FeesID:
-      name: feesId
-      in: path
-      required: true
-      style: simple
-      explode: false
-      schema:
-        type: string
     SecuritiesReportingID:
       name: securitiesreportingId
       in: path
@@ -1004,8 +996,8 @@ components:
       explode: false
       schema:
         type: string
-    SettlementID:
-      name: settlementId
+    CustodyAdministrationOutcomeID:
+      name: custodyadministrationoutcomeId
       in: path
       required: true
       style: simple
@@ -1020,8 +1012,16 @@ components:
       explode: false
       schema:
         type: string
-    CustodyAdministrationOutcomeID:
-      name: custodyadministrationoutcomeId
+    SettlementID:
+      name: settlementId
+      in: path
+      required: true
+      style: simple
+      explode: false
+      schema:
+        type: string
+    FeesID:
+      name: feesId
       in: path
       required: true
       style: simple

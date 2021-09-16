@@ -187,37 +187,6 @@ paths:
           $ref: '#/components/responses/TooManyRequestsError'
         500:
           $ref: '#/components/responses/InternalServerError'
-  /ProductDirectory/{productdirectoryId}/Production/{productionId}/Request:
-    put:
-      tags:
-      - BQ - Production
-      summary: RqBQ Request that an existing entry is updated or revised
-      description: RqBQ Request that an existing entry is updated or revised
-      operationId: RequestProduction
-      parameters:
-      - $ref: '#/components/parameters/ProductDirectoryID'
-      - $ref: '#/components/parameters/ProductionID'
-      requestBody:
-        $ref: '#/components/requestBodies/ProductDirectoryEntry'
-      responses:
-        200:
-          description: Success
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/ProductDirectoryEntry'
-        400:
-          $ref: '#/components/responses/BadRequestError'
-        401:
-          $ref: '#/components/responses/UnauthorizedError'
-        403:
-          $ref: '#/components/responses/ForbiddenError'
-        404:
-          $ref: '#/components/responses/NotFoundError'
-        429:
-          $ref: '#/components/responses/TooManyRequestsError'
-        500:
-          $ref: '#/components/responses/InternalServerError'
   /ProductDirectory/{productdirectoryId}/Operations/{operationsId}/Retrieve:
     get:
       tags:
@@ -529,6 +498,17 @@ components:
           type: string
         ProductDirectoryEntryConfiguration:
           type: string
+    Servicing:
+      type: object
+      properties:
+        ProductandServiceFeature:
+          type: string
+        ProductandServiceFeatureGuideline:
+          type: string
+        ProductandServiceFeatureProblemDiagnosis:
+          type: string
+        ProductandServiceFeatureProblemResolution:
+          type: string
     SalesandMarketing:
       type: object
       properties:
@@ -547,17 +527,6 @@ components:
         ProductandServiceEligibilityDescription:
           type: string
         ProductandServiceOfferProcessingRequirements:
-          type: string
-    Servicing:
-      type: object
-      properties:
-        ProductandServiceFeature:
-          type: string
-        ProductandServiceFeatureGuideline:
-          type: string
-        ProductandServiceFeatureProblemDiagnosis:
-          type: string
-        ProductandServiceFeatureProblemResolution:
           type: string
     Production:
       type: object
@@ -597,16 +566,16 @@ components:
       explode: false
       schema:
         type: string
-    SalesandMarketingID:
-      name: salesandmarketingId
+    ServicingID:
+      name: servicingId
       in: path
       required: true
       style: simple
       explode: false
       schema:
         type: string
-    ServicingID:
-      name: servicingId
+    SalesandMarketingID:
+      name: salesandmarketingId
       in: path
       required: true
       style: simple

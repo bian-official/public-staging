@@ -221,15 +221,15 @@ components:
       type: object
       properties:
         CustomerReference:
-          type: object
+          type: string
         CollateralAssetType:
           type: string
         CollateralAssetReference:
-          type: object
+          type: string
         CollateralAssetDescription:
           type: string
         CollateralAssetAdministrationInstanceReference:
-          type: object
+          type: string
         CollateralAssetStatus:
           type: string
         CollateralAssetValuation:
@@ -246,19 +246,19 @@ components:
         RequestedAllocationRequestType:
           type: string
         ProductInstanceReference:
-          type: object
+          type: string
         CustomerOfferReference:
-          type: object
+          type: string
         CollateralEarmarkAmount:
-          type: number
+          type: string
         CollateralEarmarkDuration:
           type: string
         CollateralAllocationAmount:
-          type: number
+          type: string
         CollateralAllocationDuration:
           type: string
         CollateralAllocationRecallAmount:
-          type: number
+          type: string
         CollateralAllocationRecallTimetable:
           type: string
         CollateralAllocationRecallResult:

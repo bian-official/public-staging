@@ -307,25 +307,25 @@ components:
       type: object
       properties:
         NetworkReference:
-          type: object
+          type: string
         ParticipantAcquirerBankReference:
-          type: object
+          type: string
         ParticipantIssuerBankReference:
-          type: object
+          type: string
         CardTransactionRecord:
           type: string
         CardTransactionProductInstanceReference:
-          type: object
+          type: string
         CardHolderReference:
-          type: object
+          type: string
         CardTransactionIssuedDeviceReference:
-          type: object
+          type: string
         CardTransactionNetworkReference:
-          type: object
+          type: string
         CardTransactionIssuingBankReference:
-          type: object
+          type: string
         CardTransactionMerchantAcquiringBankReference:
-          type: object
+          type: string
         CardTransactionType:
           type: string
         CardTransactionCurrency:
@@ -333,13 +333,13 @@ components:
         CardTransactionAmountType:
           type: string
         CardTransactionAmount:
-          type: number
+          type: string
         CardTransactionMerchantReference:
-          type: object
+          type: string
         CardTransactionLocationReference:
-          type: object
+          type: string
         CardTransactionProductandServiceReference:
-          type: object
+          type: string
         CardTransactionDateOrTime:
           type: string
         CardTransactionFXConversionCharge:
@@ -347,23 +347,6 @@ components:
         CardTransactionInterchargeFee:
           type: string
         CardTransactionAuthorizationRecord:
-          type: string
-    Authentication:
-      type: object
-      properties:
-        CardTransactionProductInstanceReference:
-          type: object
-        CardHolderAccountPassword:
-          type: string
-        IssuedDevicePIN:
-          type: string
-        AuthenticationSecretQuestionReference:
-          type: object
-        AuthenticationSecretQuestionTemplate:
-          type: string
-        AuthenticationSecretQuestionValue:
-          type: string
-        AuthenticationCheckResult:
           type: string
     DeviceCheck:
       type: object
@@ -382,22 +365,39 @@ components:
           type: string
         IssuedDeviceCheckResult:
           type: string
-    CreditCheck:
-      type: object
-      properties:
-        CardAccountavailablebalancecheckresult:
-          type: string
     FraudCheck:
       type: object
       properties:
         FraudCheckResult:
           type: string
+    Authentication:
+      type: object
+      properties:
+        CardTransactionProductInstanceReference:
+          type: string
+        CardHolderAccountPassword:
+          type: string
+        IssuedDevicePIN:
+          type: string
+        AuthenticationSecretQuestionReference:
+          type: string
+        AuthenticationSecretQuestionTemplate:
+          type: string
+        AuthenticationSecretQuestionValue:
+          type: string
+        AuthenticationCheckResult:
+          type: string
     StandIn:
       type: object
       properties:
         NegativeFileReference:
-          type: object
+          type: string
         CardAccountStandInAuthorizationResult:
+          type: string
+    CreditCheck:
+      type: object
+      properties:
+        CardAccountavailablebalancecheckresult:
           type: string
     HTTPError:
       type: object
@@ -510,24 +510,8 @@ components:
       explode: false
       schema:
         type: string
-    AuthenticationID:
-      name: authenticationId
-      in: path
-      required: true
-      style: simple
-      explode: false
-      schema:
-        type: string
     DeviceCheckID:
       name: devicecheckId
-      in: path
-      required: true
-      style: simple
-      explode: false
-      schema:
-        type: string
-    CreditCheckID:
-      name: creditcheckId
       in: path
       required: true
       style: simple
@@ -542,8 +526,24 @@ components:
       explode: false
       schema:
         type: string
+    AuthenticationID:
+      name: authenticationId
+      in: path
+      required: true
+      style: simple
+      explode: false
+      schema:
+        type: string
     StandInID:
       name: standinId
+      in: path
+      required: true
+      style: simple
+      explode: false
+      schema:
+        type: string
+    CreditCheckID:
+      name: creditcheckId
       in: path
       required: true
       style: simple

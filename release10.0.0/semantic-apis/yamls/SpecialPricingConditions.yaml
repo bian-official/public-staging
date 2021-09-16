@@ -337,7 +337,7 @@ components:
         PricingTermsVersionNumber:
           type: string
         SpecialPricingterms:
-          type: object
+          type: string
         SpecialPricingtermsServiceType:
           type: string
         SpecialPricingtermsServiceDescription:

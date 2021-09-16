@@ -589,7 +589,7 @@ components:
         CustomerSurveyDescription:
           type: string
         EmployeeOrBusinessUnitReference:
-          type: object
+          type: string
         CustomerSurveyProcedureSet-up:
           type: string
         CustomerSurveyProcedureVersionNumber:
@@ -613,6 +613,13 @@ components:
       properties:
         CustomerSurveyProcedureSurveyAnalysisResult:
           type: string
+    ReviewerSelection:
+      type: object
+      properties:
+        CustomerSurveySelectionCriteria:
+          type: string
+        CustomerSurveyCandidateReference:
+          type: string
     Execution:
       type: object
       properties:
@@ -623,7 +630,7 @@ components:
         CustomerSurveyExecutionWorkTaskWorkProducts:
           type: string
         DocumentDirectoryEntryInstanceReference:
-          type: object
+          type: string
         CustomerSurveyExecutionWorkTaskResult:
           type: string
         CustomerSurveyExecutionWorkTaskDate-Time:
@@ -639,13 +646,6 @@ components:
           type: string
         CustomerSurveyDesignWorkTaskResult:
           type: string
-    ReviewerSelection:
-      type: object
-      properties:
-        CustomerSurveySelectionCriteria:
-          type: string
-        CustomerSurveyCandidateReference:
-          type: object
     HTTPError:
       type: object
       properties:
@@ -987,6 +987,14 @@ components:
       explode: false
       schema:
         type: string
+    ReviewerSelectionID:
+      name: reviewerselectionId
+      in: path
+      required: true
+      style: simple
+      explode: false
+      schema:
+        type: string
     ExecutionID:
       name: executionId
       in: path
@@ -997,14 +1005,6 @@ components:
         type: string
     DefinitionID:
       name: definitionId
-      in: path
-      required: true
-      style: simple
-      explode: false
-      schema:
-        type: string
-    ReviewerSelectionID:
-      name: reviewerselectionId
       in: path
       required: true
       style: simple

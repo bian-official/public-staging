@@ -378,19 +378,21 @@ components:
         InvestmentPortfolioPolicyLimitsandConstraints:
           type: string
         InvestmentPortfolioInstanceReference:
-          type: object
+          type: string
         InvestmentPortfolioHoldings:
           type: string
         InvestmentPortfolioSecurityType:
           type: string
         InvestmentPortfolioSecurityHolding:
           type: string
-    MarketOpportunities:
+    TradeInitiation:
       type: object
       properties:
-        MarketOpportunityDescription:
+        InvestmentPortfolioTradeRequest:
           type: string
-        SecuritiesComparison:
+        InvestmentPortfolioTradeSecurityType:
+          type: string
+        InvestmentPortfolioTradeSecurityTradeDescription:
           type: string
     Track:
       type: object
@@ -401,14 +403,12 @@ components:
           type: string
         ProjectedPortfolioImpact:
           type: string
-    TradeInitiation:
+    MarketOpportunities:
       type: object
       properties:
-        InvestmentPortfolioTradeRequest:
+        MarketOpportunityDescription:
           type: string
-        InvestmentPortfolioTradeSecurityType:
-          type: string
-        InvestmentPortfolioTradeSecurityTradeDescription:
+        SecuritiesComparison:
           type: string
     HTTPError:
       type: object
@@ -451,8 +451,8 @@ components:
       explode: false
       schema:
         type: string
-    MarketOpportunitiesID:
-      name: marketopportunitiesId
+    TradeInitiationID:
+      name: tradeinitiationId
       in: path
       required: true
       style: simple
@@ -467,8 +467,8 @@ components:
       explode: false
       schema:
         type: string
-    TradeInitiationID:
-      name: tradeinitiationId
+    MarketOpportunitiesID:
+      name: marketopportunitiesId
       in: path
       required: true
       style: simple

@@ -392,13 +392,13 @@ components:
         BranchCashAllocationStatus:
           type: string
         BranchCashAllocationReference:
-          type: object
+          type: string
         BranchCashAllocationCustomerReference:
-          type: object
+          type: string
         BranchCashAllocationCurrency:
           type: string
         BranchCashAllocationRegulationReference:
-          type: object
+          type: string
         BranchCashAllocationRegulationType:
           type: string
         BranchCashAllocationJurisdiction:
@@ -408,8 +408,15 @@ components:
         BranchCashAllocationAccountType:
           type: string
         BranchCashAllocationAccountReference:
-          type: object
+          type: string
         BranchCashAllocationInstance:
+          type: string
+    BranchCurrencyManagementOutcome:
+      type: object
+      properties:
+        BranchCurrencyManagementAllocation:
+          type: string
+        BranchCurrencyManagementWorkProduct:
           type: string
     InventoryAllocation:
       type: object
@@ -421,7 +428,7 @@ components:
         InventoryAllocationAllocationSchedule:
           type: string
         CashInventoryAllocation:
-          type: object
+          type: string
         CashInventoryAllocationServiceType:
           type: string
         CashInventoryAllocationServiceDescription:
@@ -431,13 +438,6 @@ components:
         CashInventoryAllocationServiceWorkProduct:
           type: string
         CashInventoryAllocationServiceName:
-          type: string
-    BranchCurrencyManagementOutcome:
-      type: object
-      properties:
-        BranchCurrencyManagementAllocation:
-          type: string
-        BranchCurrencyManagementWorkProduct:
           type: string
     HTTPError:
       type: object
@@ -457,16 +457,16 @@ components:
       explode: false
       schema:
         type: string
-    InventoryAllocationID:
-      name: inventoryallocationId
+    BranchCurrencyManagementOutcomeID:
+      name: branchcurrencymanagementoutcomeId
       in: path
       required: true
       style: simple
       explode: false
       schema:
         type: string
-    BranchCurrencyManagementOutcomeID:
-      name: branchcurrencymanagementoutcomeId
+    InventoryAllocationID:
+      name: inventoryallocationId
       in: path
       required: true
       style: simple

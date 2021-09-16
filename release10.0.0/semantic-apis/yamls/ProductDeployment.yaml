@@ -10,20 +10,20 @@ paths:
   /ProductDeployment/Create:
     post:
       tags:
-      - CR - ProductandServiceDeploymentProject
+      - CR - ProductandServiceDeploymentDevelopment
       summary: CrCR Create a product or service deployment project
       description: CrCR Create a product or service deployment project
       operationId: Create
       parameters: []
       requestBody:
-        $ref: '#/components/requestBodies/ProductandServiceDeploymentProject'
+        $ref: '#/components/requestBodies/ProductandServiceDeploymentDevelopment'
       responses:
         200:
           description: Success
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/ProductandServiceDeploymentProject'
+                $ref: '#/components/schemas/ProductandServiceDeploymentDevelopment'
         400:
           $ref: '#/components/responses/BadRequestError'
         401:
@@ -39,21 +39,21 @@ paths:
   /ProductDeployment/{productdeploymentId}/Update:
     put:
       tags:
-      - CR - ProductandServiceDeploymentProject
+      - CR - ProductandServiceDeploymentDevelopment
       summary: UpCR Update details of a product or service deployment project
       description: UpCR Update details of a product or service deployment project
       operationId: Update
       parameters:
       - $ref: '#/components/parameters/ProductDeploymentID'
       requestBody:
-        $ref: '#/components/requestBodies/ProductandServiceDeploymentProject'
+        $ref: '#/components/requestBodies/ProductandServiceDeploymentDevelopment'
       responses:
         200:
           description: Success
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/ProductandServiceDeploymentProject'
+                $ref: '#/components/schemas/ProductandServiceDeploymentDevelopment'
         400:
           $ref: '#/components/responses/BadRequestError'
         401:
@@ -69,21 +69,21 @@ paths:
   /ProductDeployment/{productdeploymentId}/Capture:
     put:
       tags:
-      - CR - ProductandServiceDeploymentProject
+      - CR - ProductandServiceDeploymentDevelopment
       summary: CaCR Capture details about tasks performed during the deployment
       description: CaCR Capture details about tasks performed during the deployment
       operationId: Capture
       parameters:
       - $ref: '#/components/parameters/ProductDeploymentID'
       requestBody:
-        $ref: '#/components/requestBodies/ProductandServiceDeploymentProject'
+        $ref: '#/components/requestBodies/ProductandServiceDeploymentDevelopment'
       responses:
         200:
           description: Success
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/ProductandServiceDeploymentProject'
+                $ref: '#/components/schemas/ProductandServiceDeploymentDevelopment'
         400:
           $ref: '#/components/responses/BadRequestError'
         401:
@@ -99,21 +99,21 @@ paths:
   /ProductDeployment/{productdeploymentId}/Request:
     put:
       tags:
-      - CR - ProductandServiceDeploymentProject
+      - CR - ProductandServiceDeploymentDevelopment
       summary: RqCR Request manual intervention in a deployment project
       description: RqCR Request manual intervention in a deployment project
       operationId: Request
       parameters:
       - $ref: '#/components/parameters/ProductDeploymentID'
       requestBody:
-        $ref: '#/components/requestBodies/ProductandServiceDeploymentProject'
+        $ref: '#/components/requestBodies/ProductandServiceDeploymentDevelopment'
       responses:
         200:
           description: Success
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/ProductandServiceDeploymentProject'
+                $ref: '#/components/schemas/ProductandServiceDeploymentDevelopment'
         400:
           $ref: '#/components/responses/BadRequestError'
         401:
@@ -129,7 +129,7 @@ paths:
   /ProductDeployment/{productdeploymentId}/Retrieve:
     get:
       tags:
-      - CR - ProductandServiceDeploymentProject
+      - CR - ProductandServiceDeploymentDevelopment
       summary: ReCR Retrieve details about a deployment project
       description: ReCR Retrieve details about a deployment project
       operationId: Retrieve
@@ -141,7 +141,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/ProductandServiceDeploymentProject'
+                $ref: '#/components/schemas/ProductandServiceDeploymentDevelopment'
         400:
           $ref: '#/components/responses/BadRequestError'
         401:
@@ -793,7 +793,7 @@ paths:
           $ref: '#/components/responses/InternalServerError'
 components:
   schemas:
-    ProductandServiceDeploymentProject:
+    ProductandServiceDeploymentDevelopment:
       type: object
       properties:
         ProductandServiceDeploymentProjectName:
@@ -814,17 +814,6 @@ components:
           type: string
         Date:
           type: string
-    ProductionSupport:
-      type: object
-      properties:
-        ProductandServiceDeploymentProductionSupportRequirements:
-          type: string
-        ProductandServiceDeploymentProductionSupportRequirementsWorkProducts:
-          type: string
-        DocumentDirectoryEntryInstanceReference:
-          type: object
-        ProductandServiceDeploymentProductionSupportRequirementsTaskSpecification:
-          type: string
     ITOperations:
       type: object
       properties:
@@ -833,30 +822,8 @@ components:
         ProductandServiceDeploymentITOperationsRequirementsWorkProducts:
           type: string
         DocumentDirectoryEntryInstanceReference:
-          type: object
+          type: string
         ProductandServiceDeploymentITOperationsRequirementsTaskSpecification:
-          type: string
-    SalesandMarketing:
-      type: object
-      properties:
-        ProductandServiceDeploymentSalesandMarketingRequirements:
-          type: string
-        ProductandServiceDeploymentSalesandMarketingRequirementsWorkProducts:
-          type: string
-        DocumentDirectoryEntryInstanceReference:
-          type: object
-        ProductandServiceDeploymentSalesandMarketingRequirementsTaskSpecification:
-          type: string
-    Production:
-      type: object
-      properties:
-        ProductandServiceDeploymentProductionRequirements:
-          type: string
-        ProductandServiceDeploymentProductionRequirementsWorkProducts:
-          type: string
-        DocumentDirectoryEntryInstanceReference:
-          type: object
-        ProductandServiceDeploymentProductionRequirementsTaskSpecification:
           type: string
     Systems:
       type: object
@@ -866,19 +833,8 @@ components:
         ProductandServiceDeploymentSystemsRequirementsWorkProducts:
           type: string
         DocumentDirectoryEntryInstanceReference:
-          type: object
+          type: string
         ProductandServiceDeploymentSystemsRequirementsTaskSpecification:
-          type: string
-    Servicing:
-      type: object
-      properties:
-        ProductandServiceDeploymentServicingRequirements:
-          type: string
-        ProductandServiceDeploymentServicingRequirementsWorkProducts:
-          type: string
-        DocumentDirectoryEntryInstanceReference:
-          type: object
-        ProductandServiceDeploymentServicingRequirementsTaskSpecification:
           type: string
     HROperations:
       type: object
@@ -888,8 +844,52 @@ components:
         ProductandServiceDeploymentHROperationsRequirementsWorkProducts:
           type: string
         DocumentDirectoryEntryInstanceReference:
-          type: object
+          type: string
         ProductandServiceDeploymentHROperationsRequirementsTaskSpecification:
+          type: string
+    SalesandMarketing:
+      type: object
+      properties:
+        ProductandServiceDeploymentSalesandMarketingRequirements:
+          type: string
+        ProductandServiceDeploymentSalesandMarketingRequirementsWorkProducts:
+          type: string
+        DocumentDirectoryEntryInstanceReference:
+          type: string
+        ProductandServiceDeploymentSalesandMarketingRequirementsTaskSpecification:
+          type: string
+    ProductionSupport:
+      type: object
+      properties:
+        ProductandServiceDeploymentProductionSupportRequirements:
+          type: string
+        ProductandServiceDeploymentProductionSupportRequirementsWorkProducts:
+          type: string
+        DocumentDirectoryEntryInstanceReference:
+          type: string
+        ProductandServiceDeploymentProductionSupportRequirementsTaskSpecification:
+          type: string
+    Servicing:
+      type: object
+      properties:
+        ProductandServiceDeploymentServicingRequirements:
+          type: string
+        ProductandServiceDeploymentServicingRequirementsWorkProducts:
+          type: string
+        DocumentDirectoryEntryInstanceReference:
+          type: string
+        ProductandServiceDeploymentServicingRequirementsTaskSpecification:
+          type: string
+    Production:
+      type: object
+      properties:
+        ProductandServiceDeploymentProductionRequirements:
+          type: string
+        ProductandServiceDeploymentProductionRequirementsWorkProducts:
+          type: string
+        DocumentDirectoryEntryInstanceReference:
+          type: string
+        ProductandServiceDeploymentProductionRequirementsTaskSpecification:
           type: string
     HTTPError:
       type: object
@@ -903,7 +903,7 @@ components:
     UpdateSystemsRequest:
       type: object
       properties:
-        ProductandServiceDeploymentProject:
+        ProductandServiceDeploymentDevelopment:
           type: object
           properties:
             ProductandServiceDeploymentImplementationPlan:
@@ -930,7 +930,7 @@ components:
     UpdateSystemsResponse:
       type: object
       properties:
-        ProductandServiceDeploymentProject:
+        ProductandServiceDeploymentDevelopment:
           type: object
           properties:
             ProductandServiceDeploymentImplementationPlan:
@@ -957,7 +957,7 @@ components:
     RequestSystemsRequest:
       type: object
       properties:
-        ProductandServiceDeploymentProject:
+        ProductandServiceDeploymentDevelopment:
           type: object
           properties:
             ProductandServiceDeploymentImplementationPlan:
@@ -984,7 +984,7 @@ components:
     RequestSystemsResponse:
       type: object
       properties:
-        ProductandServiceDeploymentProject:
+        ProductandServiceDeploymentDevelopment:
           type: object
           properties:
             ProductandServiceDeploymentImplementationPlan:
@@ -1011,7 +1011,7 @@ components:
     RetrieveSystemsResponse:
       type: object
       properties:
-        ProductandServiceDeploymentProject:
+        ProductandServiceDeploymentDevelopment:
           type: object
           properties:
             ProductandServiceDeploymentImplementationPlan:
@@ -1038,7 +1038,7 @@ components:
     UpdateITOperationsRequest:
       type: object
       properties:
-        ProductandServiceDeploymentProject:
+        ProductandServiceDeploymentDevelopment:
           type: object
           properties:
             ProductandServiceDeploymentImplementationPlan:
@@ -1065,7 +1065,7 @@ components:
     UpdateITOperationsResponse:
       type: object
       properties:
-        ProductandServiceDeploymentProject:
+        ProductandServiceDeploymentDevelopment:
           type: object
           properties:
             ProductandServiceDeploymentImplementationPlan:
@@ -1092,7 +1092,7 @@ components:
     RequestITOperationsRequest:
       type: object
       properties:
-        ProductandServiceDeploymentProject:
+        ProductandServiceDeploymentDevelopment:
           type: object
           properties:
             ProductandServiceDeploymentImplementationPlan:
@@ -1119,7 +1119,7 @@ components:
     RequestITOperationsResponse:
       type: object
       properties:
-        ProductandServiceDeploymentProject:
+        ProductandServiceDeploymentDevelopment:
           type: object
           properties:
             ProductandServiceDeploymentImplementationPlan:
@@ -1146,7 +1146,7 @@ components:
     RetrieveITOperationsResponse:
       type: object
       properties:
-        ProductandServiceDeploymentProject:
+        ProductandServiceDeploymentDevelopment:
           type: object
           properties:
             ProductandServiceDeploymentImplementationPlan:
@@ -1173,7 +1173,7 @@ components:
     UpdateHROperationsRequest:
       type: object
       properties:
-        ProductandServiceDeploymentProject:
+        ProductandServiceDeploymentDevelopment:
           type: object
           properties:
             ProductandServiceDeploymentImplementationPlan:
@@ -1200,7 +1200,7 @@ components:
     UpdateHROperationsResponse:
       type: object
       properties:
-        ProductandServiceDeploymentProject:
+        ProductandServiceDeploymentDevelopment:
           type: object
           properties:
             ProductandServiceDeploymentImplementationPlan:
@@ -1227,7 +1227,7 @@ components:
     RequestHROperationsRequest:
       type: object
       properties:
-        ProductandServiceDeploymentProject:
+        ProductandServiceDeploymentDevelopment:
           type: object
           properties:
             ProductandServiceDeploymentImplementationPlan:
@@ -1254,7 +1254,7 @@ components:
     RequestHROperationsResponse:
       type: object
       properties:
-        ProductandServiceDeploymentProject:
+        ProductandServiceDeploymentDevelopment:
           type: object
           properties:
             ProductandServiceDeploymentImplementationPlan:
@@ -1281,7 +1281,7 @@ components:
     RetrieveHROperationsResponse:
       type: object
       properties:
-        ProductandServiceDeploymentProject:
+        ProductandServiceDeploymentDevelopment:
           type: object
           properties:
             ProductandServiceDeploymentImplementationPlan:
@@ -1308,7 +1308,7 @@ components:
     UpdateSalesandMarketingRequest:
       type: object
       properties:
-        ProductandServiceDeploymentProject:
+        ProductandServiceDeploymentDevelopment:
           type: object
           properties:
             ProductandServiceDeploymentImplementationPlan:
@@ -1335,7 +1335,7 @@ components:
     UpdateSalesandMarketingResponse:
       type: object
       properties:
-        ProductandServiceDeploymentProject:
+        ProductandServiceDeploymentDevelopment:
           type: object
           properties:
             ProductandServiceDeploymentImplementationPlan:
@@ -1362,7 +1362,7 @@ components:
     RequestSalesandMarketingRequest:
       type: object
       properties:
-        ProductandServiceDeploymentProject:
+        ProductandServiceDeploymentDevelopment:
           type: object
           properties:
             ProductandServiceDeploymentImplementationPlan:
@@ -1389,7 +1389,7 @@ components:
     RequestSalesandMarketingResponse:
       type: object
       properties:
-        ProductandServiceDeploymentProject:
+        ProductandServiceDeploymentDevelopment:
           type: object
           properties:
             ProductandServiceDeploymentImplementationPlan:
@@ -1416,7 +1416,7 @@ components:
     RetrieveSalesandMarketingResponse:
       type: object
       properties:
-        ProductandServiceDeploymentProject:
+        ProductandServiceDeploymentDevelopment:
           type: object
           properties:
             ProductandServiceDeploymentImplementationPlan:
@@ -1443,7 +1443,7 @@ components:
     UpdateServicingRequest:
       type: object
       properties:
-        ProductandServiceDeploymentProject:
+        ProductandServiceDeploymentDevelopment:
           type: object
           properties:
             ProductandServiceDeploymentImplementationPlan:
@@ -1470,7 +1470,7 @@ components:
     UpdateServicingResponse:
       type: object
       properties:
-        ProductandServiceDeploymentProject:
+        ProductandServiceDeploymentDevelopment:
           type: object
           properties:
             ProductandServiceDeploymentImplementationPlan:
@@ -1497,7 +1497,7 @@ components:
     RequestServicingRequest:
       type: object
       properties:
-        ProductandServiceDeploymentProject:
+        ProductandServiceDeploymentDevelopment:
           type: object
           properties:
             ProductandServiceDeploymentImplementationPlan:
@@ -1524,7 +1524,7 @@ components:
     RequestServicingResponse:
       type: object
       properties:
-        ProductandServiceDeploymentProject:
+        ProductandServiceDeploymentDevelopment:
           type: object
           properties:
             ProductandServiceDeploymentImplementationPlan:
@@ -1551,7 +1551,7 @@ components:
     RetrieveServicingResponse:
       type: object
       properties:
-        ProductandServiceDeploymentProject:
+        ProductandServiceDeploymentDevelopment:
           type: object
           properties:
             ProductandServiceDeploymentImplementationPlan:
@@ -1578,7 +1578,7 @@ components:
     UpdateProductionRequest:
       type: object
       properties:
-        ProductandServiceDeploymentProject:
+        ProductandServiceDeploymentDevelopment:
           type: object
           properties:
             ProductandServiceDeploymentImplementationPlan:
@@ -1605,7 +1605,7 @@ components:
     UpdateProductionResponse:
       type: object
       properties:
-        ProductandServiceDeploymentProject:
+        ProductandServiceDeploymentDevelopment:
           type: object
           properties:
             ProductandServiceDeploymentImplementationPlan:
@@ -1632,7 +1632,7 @@ components:
     RequestProductionRequest:
       type: object
       properties:
-        ProductandServiceDeploymentProject:
+        ProductandServiceDeploymentDevelopment:
           type: object
           properties:
             ProductandServiceDeploymentImplementationPlan:
@@ -1659,7 +1659,7 @@ components:
     RequestProductionResponse:
       type: object
       properties:
-        ProductandServiceDeploymentProject:
+        ProductandServiceDeploymentDevelopment:
           type: object
           properties:
             ProductandServiceDeploymentImplementationPlan:
@@ -1686,7 +1686,7 @@ components:
     RetrieveProductionResponse:
       type: object
       properties:
-        ProductandServiceDeploymentProject:
+        ProductandServiceDeploymentDevelopment:
           type: object
           properties:
             ProductandServiceDeploymentImplementationPlan:
@@ -1713,7 +1713,7 @@ components:
     UpdateProductionSupportRequest:
       type: object
       properties:
-        ProductandServiceDeploymentProject:
+        ProductandServiceDeploymentDevelopment:
           type: object
           properties:
             ProductandServiceDeploymentImplementationPlan:
@@ -1740,7 +1740,7 @@ components:
     UpdateProductionSupportResponse:
       type: object
       properties:
-        ProductandServiceDeploymentProject:
+        ProductandServiceDeploymentDevelopment:
           type: object
           properties:
             ProductandServiceDeploymentImplementationPlan:
@@ -1767,7 +1767,7 @@ components:
     RequestProductionSupportRequest:
       type: object
       properties:
-        ProductandServiceDeploymentProject:
+        ProductandServiceDeploymentDevelopment:
           type: object
           properties:
             ProductandServiceDeploymentImplementationPlan:
@@ -1794,7 +1794,7 @@ components:
     RequestProductionSupportResponse:
       type: object
       properties:
-        ProductandServiceDeploymentProject:
+        ProductandServiceDeploymentDevelopment:
           type: object
           properties:
             ProductandServiceDeploymentImplementationPlan:
@@ -1821,7 +1821,7 @@ components:
     RetrieveProductionSupportResponse:
       type: object
       properties:
-        ProductandServiceDeploymentProject:
+        ProductandServiceDeploymentDevelopment:
           type: object
           properties:
             ProductandServiceDeploymentImplementationPlan:
@@ -1854,32 +1854,8 @@ components:
       explode: false
       schema:
         type: string
-    ProductionSupportID:
-      name: productionsupportId
-      in: path
-      required: true
-      style: simple
-      explode: false
-      schema:
-        type: string
     ITOperationsID:
       name: itoperationsId
-      in: path
-      required: true
-      style: simple
-      explode: false
-      schema:
-        type: string
-    SalesandMarketingID:
-      name: salesandmarketingId
-      in: path
-      required: true
-      style: simple
-      explode: false
-      schema:
-        type: string
-    ProductionID:
-      name: productionId
       in: path
       required: true
       style: simple
@@ -1894,14 +1870,6 @@ components:
       explode: false
       schema:
         type: string
-    ServicingID:
-      name: servicingId
-      in: path
-      required: true
-      style: simple
-      explode: false
-      schema:
-        type: string
     HROperationsID:
       name: hroperationsId
       in: path
@@ -1910,13 +1878,45 @@ components:
       explode: false
       schema:
         type: string
+    SalesandMarketingID:
+      name: salesandmarketingId
+      in: path
+      required: true
+      style: simple
+      explode: false
+      schema:
+        type: string
+    ProductionSupportID:
+      name: productionsupportId
+      in: path
+      required: true
+      style: simple
+      explode: false
+      schema:
+        type: string
+    ServicingID:
+      name: servicingId
+      in: path
+      required: true
+      style: simple
+      explode: false
+      schema:
+        type: string
+    ProductionID:
+      name: productionId
+      in: path
+      required: true
+      style: simple
+      explode: false
+      schema:
+        type: string
   requestBodies:
-    ProductandServiceDeploymentProject:
+    ProductandServiceDeploymentDevelopment:
       required: true
       content:
         application/json:
           schema:
-            $ref: '#/components/schemas/ProductandServiceDeploymentProject'
+            $ref: '#/components/schemas/ProductandServiceDeploymentDevelopment'
     UpdateSystemsRequest:
       required: true
       content:

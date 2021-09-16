@@ -221,7 +221,7 @@ components:
       type: object
       properties:
         CustomerReference:
-          type: object
+          type: string
         CustomerInsightAnalysisSchedule:
           type: string
         CustomerBehaviorAnalysisInsightsRecord:
@@ -242,7 +242,7 @@ components:
         InsightEvaluationRequestSpecification:
           type: string
         insightEvaluationCustomerBehaviorModelReference:
-          type: object
+          type: string
         InsightEvaluationProductandServiceActivityReport:
           type: string
         InsightEvaluationCustomerEventLogReport:

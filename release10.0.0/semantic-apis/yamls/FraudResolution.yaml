@@ -221,17 +221,17 @@ components:
         FraudCaseType:
           type: string
         ProductInstanceReference:
-          type: object
+          type: string
         CustomerReference:
-          type: object
+          type: string
         MerchantReference:
-          type: object
+          type: string
         InterstedPartyReference:
-          type: object
+          type: string
         ContactReference:
-          type: object
+          type: string
         TransactionReference:
-          type: object
+          type: string
         TransactionRecord:
           type: string
         CaseLocation:
@@ -239,7 +239,7 @@ components:
         Date:
           type: string
         EmployeeOrBusinessUnitReference:
-          type: object
+          type: string
         FraudCaseWorkProducts:
           type: string
         FraudCaseResolutionSchedule:
@@ -252,38 +252,38 @@ components:
         FraudCaseResolutionRecord:
           type: string
         Employee/BusinessUnitReference:
-          type: object
+          type: string
         CorrespondenceReference:
-          type: object
+          type: string
         Adjustment/ChargebackReference:
-          type: object
+          type: string
         ConsortiaReportingInstanceReference:
-          type: object
+          type: string
         DocumentDirectoryEntryInstanceReference:
-          type: object
+          type: string
         PaymentOrderReference:
-          type: object
-    CaseDetermination:
-      type: object
-      properties:
-        CustomerAgreementReference:
-          type: object
-        CustomerAgreement:
-          type: string
-        MerchantAgreementReference:
-          type: object
-        MerchantAgreement:
-          type: string
-        InterestedPartyAgreementReference:
-          type: object
-        InterestedPartyAgreement:
-          type: string
-        FraudCaseDeterminationRecord:
           type: string
     CaseAnalysis:
       type: object
       properties:
         FraudCaseRootCause:
+          type: string
+    CaseDetermination:
+      type: object
+      properties:
+        CustomerAgreementReference:
+          type: string
+        CustomerAgreement:
+          type: string
+        MerchantAgreementReference:
+          type: string
+        MerchantAgreement:
+          type: string
+        InterestedPartyAgreementReference:
+          type: string
+        InterestedPartyAgreement:
+          type: string
+        FraudCaseDeterminationRecord:
           type: string
     HTTPError:
       type: object
@@ -420,16 +420,16 @@ components:
       explode: false
       schema:
         type: string
-    CaseDeterminationID:
-      name: casedeterminationId
+    CaseAnalysisID:
+      name: caseanalysisId
       in: path
       required: true
       style: simple
       explode: false
       schema:
         type: string
-    CaseAnalysisID:
-      name: caseanalysisId
+    CaseDeterminationID:
+      name: casedeterminationId
       in: path
       required: true
       style: simple

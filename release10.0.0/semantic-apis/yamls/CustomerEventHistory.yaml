@@ -653,7 +653,45 @@ components:
       type: object
       properties:
         CustomerReference:
-          type: object
+          type: string
+    Sales:
+      type: object
+      properties:
+        CustomerSalesEventType:
+          type: string
+        Employee/UnitReference:
+          type: string
+        ProductandServiceType:
+          type: string
+        LeadandOpportunityReference:
+          type: string
+        CustomerSalesEventRecord:
+          type: string
+        CommissionAgreementReference:
+          type: string
+        Date/Time/Location:
+          type: string
+    Servicing:
+      type: object
+      properties:
+        CustomerServicingEventType:
+          type: string
+        CustomerContactRecordReference:
+          type: string
+        AccessedProductandService:
+          type: string
+        Channel/DeviceType:
+          type: string
+        ContactPurpose:
+          type: string
+        ContactResult:
+          type: string
+        Employee/UnitReference:
+          type: string
+        CustomerServicingEventRecord:
+          type: string
+        Date/Time/Location:
+          type: string
     Relationship:
       type: object
       properties:
@@ -667,57 +705,36 @@ components:
           type: string
         Date/Time/Location:
           type: string
-    Sales:
-      type: object
-      properties:
-        CustomerSalesEventType:
-          type: string
-        Employee/UnitReference:
-          type: object
-        ProductandServiceType:
-          type: string
-        LeadandOpportunityReference:
-          type: object
-        CustomerSalesEventRecord:
-          type: string
-        CommissionAgreementReference:
-          type: object
-        Date/Time/Location:
-          type: string
-    Servicing:
-      type: object
-      properties:
-        CustomerServicingEventType:
-          type: string
-        CustomerContactRecordReference:
-          type: object
-        AccessedProductandService:
-          type: string
-        Channel/DeviceType:
-          type: string
-        ContactPurpose:
-          type: string
-        ContactResult:
-          type: string
-        Employee/UnitReference:
-          type: object
-        CustomerServicingEventRecord:
-          type: string
-        Date/Time/Location:
-          type: string
     Fraud:
       type: object
       properties:
         CustomerFraudCaseEventType:
           type: string
         CustomerContactRecordReference:
-          type: object
+          type: string
         AccessedProductandService:
           type: string
         Employee/UnitReference:
-          type: object
+          type: string
         FraudCaseReference:
-          type: object
+          type: string
+        Date/Time/Location:
+          type: string
+    ProductProcessing:
+      type: object
+      properties:
+        ProductInstanceReference:
+          type: string
+        ProductAction/EventType:
+          type: string
+        ProductAction/EventDescription:
+          type: string
+        ProductAction/EventResult:
+          type: string
+        Employee/UnitReference:
+          type: string
+        CustomerProductandServiceEventRecord:
+          type: string
         Date/Time/Location:
           type: string
     Life:
@@ -726,27 +743,10 @@ components:
         CustomerLifeEventType:
           type: string
         CustomerContactRecordReference:
-          type: object
+          type: string
         Employee/UnitReference:
-          type: object
+          type: string
         CustomerLifeEventRecord:
-          type: string
-        Date/Time/Location:
-          type: string
-    ProductProcessing:
-      type: object
-      properties:
-        ProductInstanceReference:
-          type: object
-        ProductAction/EventType:
-          type: string
-        ProductAction/EventDescription:
-          type: string
-        ProductAction/EventResult:
-          type: string
-        Employee/UnitReference:
-          type: object
-        CustomerProductandServiceEventRecord:
           type: string
         Date/Time/Location:
           type: string
@@ -762,14 +762,6 @@ components:
   parameters:
     CustomerEventHistoryID:
       name: customereventhistoryId
-      in: path
-      required: true
-      style: simple
-      explode: false
-      schema:
-        type: string
-    RelationshipID:
-      name: relationshipId
       in: path
       required: true
       style: simple
@@ -792,6 +784,14 @@ components:
       explode: false
       schema:
         type: string
+    RelationshipID:
+      name: relationshipId
+      in: path
+      required: true
+      style: simple
+      explode: false
+      schema:
+        type: string
     FraudID:
       name: fraudId
       in: path
@@ -800,16 +800,16 @@ components:
       explode: false
       schema:
         type: string
-    LifeID:
-      name: lifeId
+    ProductProcessingID:
+      name: productprocessingId
       in: path
       required: true
       style: simple
       explode: false
       schema:
         type: string
-    ProductProcessingID:
-      name: productprocessingId
+    LifeID:
+      name: lifeId
       in: path
       required: true
       style: simple

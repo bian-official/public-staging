@@ -342,7 +342,7 @@ components:
       type: object
       properties:
         IntellectualPropertyAssetReference:
-          type: object
+          type: string
         IntellectualPropertyAssetRecord:
           type: string
         IntellectualPropertyAssetType:
@@ -358,31 +358,10 @@ components:
         IntellectualPropertyAssetValuation:
           type: string
         DocumentDirectoryEntryInstanceReference:
-          type: object
+          type: string
         DateType:
           type: string
         Date:
-          type: string
-    Maintenance:
-      type: object
-      properties:
-        IntellectualPropertyAssetMaintenanceSchedule:
-          type: string
-        IntellectualPropertyAssetProtectionReference:
-          type: object
-        IntellectualPropertyAssetRegistrationReference:
-          type: object
-        IntellectualPropertyAssetMaintenanceTaskRecord:
-          type: string
-        IntellectualPropertyAssetMaintenanceTaskType:
-          type: string
-        IntellectualPropertyAssetMaintenanceTaskDescription:
-          type: string
-        IntellectualPropertyAssetMaintenanceTaskWorkProducts:
-          type: string
-        DocumentDirectoryEntryInstanceReference:
-          type: object
-        IntellectualPropertyAssetMaintenanceTransaction:
           type: string
     Assignment:
       type: object
@@ -396,8 +375,29 @@ components:
         IntellectualPropertyAssetAssignmentDescription:
           type: string
         DocumentDirectoryEntryInstanceReference:
-          type: object
+          type: string
         IntellectualPropertyAssetAssignmentTransaction:
+          type: string
+    Maintenance:
+      type: object
+      properties:
+        IntellectualPropertyAssetMaintenanceSchedule:
+          type: string
+        IntellectualPropertyAssetProtectionReference:
+          type: string
+        IntellectualPropertyAssetRegistrationReference:
+          type: string
+        IntellectualPropertyAssetMaintenanceTaskRecord:
+          type: string
+        IntellectualPropertyAssetMaintenanceTaskType:
+          type: string
+        IntellectualPropertyAssetMaintenanceTaskDescription:
+          type: string
+        IntellectualPropertyAssetMaintenanceTaskWorkProducts:
+          type: string
+        DocumentDirectoryEntryInstanceReference:
+          type: string
+        IntellectualPropertyAssetMaintenanceTransaction:
           type: string
     HTTPError:
       type: object
@@ -747,16 +747,16 @@ components:
       explode: false
       schema:
         type: string
-    MaintenanceID:
-      name: maintenanceId
+    AssignmentID:
+      name: assignmentId
       in: path
       required: true
       style: simple
       explode: false
       schema:
         type: string
-    AssignmentID:
-      name: assignmentId
+    MaintenanceID:
+      name: maintenanceId
       in: path
       required: true
       style: simple

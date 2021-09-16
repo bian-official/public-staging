@@ -342,7 +342,7 @@ components:
       type: object
       properties:
         CollateralAssetReference:
-          type: object
+          type: string
         CollateralAssetRecord:
           type: string
         CollateralAssetType:
@@ -362,11 +362,11 @@ components:
         CollateralAssetJurisdiction:
           type: string
         CollateralAssetDocumentReference:
-          type: object
+          type: string
         CollateralAssetDocumentType:
           type: string
         CollateralAssetInsuranceReference:
-          type: object
+          type: string
         CollateralAssetPledgedDate:
           type: string
         CollateralAssetValuationHistory:
@@ -377,29 +377,29 @@ components:
           type: string
         CollateralAssetStatus:
           type: string
-    Valuation:
-      type: object
-      properties:
-        CollateralAssetValuationType:
-          type: string
-        CollateralAssetValuationServiceReference:
-          type: object
-        CollateralAssetLoantoValueRatio:
-          type: string
-        CollateralAssetValuation:
-          type: string
-        CollateralAssetValuationDate:
-          type: string
     Maintenance:
       type: object
       properties:
         CollateralAssetMaintenanceTaskType:
           type: string
         CollateralAssetMaintenanceServiceProviderReference(3rdpartyserviceprovider):
-          type: object
+          type: string
         CollateralAssetVerificationandComplianceRecord:
           type: string
         CollateralAssetMaintenance/SafekeepingFees:
+          type: string
+    Valuation:
+      type: object
+      properties:
+        CollateralAssetValuationType:
+          type: string
+        CollateralAssetValuationServiceReference:
+          type: string
+        CollateralAssetLoantoValueRatio:
+          type: string
+        CollateralAssetValuation:
+          type: string
+        CollateralAssetValuationDate:
           type: string
     HTTPError:
       type: object
@@ -728,16 +728,16 @@ components:
       explode: false
       schema:
         type: string
-    ValuationID:
-      name: valuationId
+    MaintenanceID:
+      name: maintenanceId
       in: path
       required: true
       style: simple
       explode: false
       schema:
         type: string
-    MaintenanceID:
-      name: maintenanceId
+    ValuationID:
+      name: valuationId
       in: path
       required: true
       style: simple

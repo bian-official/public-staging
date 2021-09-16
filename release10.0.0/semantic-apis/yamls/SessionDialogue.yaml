@@ -16,14 +16,14 @@ paths:
       operationId: Initiate
       parameters: []
       requestBody:
-        $ref: '#/components/requestBodies/InitiateCustomerContactSessionProcedureRequest'
+        $ref: '#/components/requestBodies/CustomerContactSessionProcedure'
       responses:
         200:
           description: Success
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/InitiateCustomerContactSessionProcedureResponse'
+                $ref: '#/components/schemas/CustomerContactSessionProcedure'
         400:
           $ref: '#/components/responses/BadRequestError'
         401:
@@ -46,14 +46,14 @@ paths:
       parameters:
       - $ref: '#/components/parameters/SessionDialogueID'
       requestBody:
-        $ref: '#/components/requestBodies/UpdateCustomerContactSessionProcedureRequest'
+        $ref: '#/components/requestBodies/CustomerContactSessionProcedure'
       responses:
         200:
           description: Success
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/UpdateCustomerContactSessionProcedureResponse'
+                $ref: '#/components/schemas/CustomerContactSessionProcedure'
         400:
           $ref: '#/components/responses/BadRequestError'
         401:
@@ -141,7 +141,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/RetrieveCustomerContactSessionProcedureResponse'
+                $ref: '#/components/schemas/CustomerContactSessionProcedure'
         400:
           $ref: '#/components/responses/BadRequestError'
         401:
@@ -484,24 +484,24 @@ paths:
           $ref: '#/components/responses/TooManyRequestsError'
         500:
           $ref: '#/components/responses/InternalServerError'
-  /SessionDialogue/{sessiondialogueId}/ProductandService/Initiate:
+  /SessionDialogue/{sessiondialogueId}/ProductorService/Initiate:
     post:
       tags:
-      - BQ - ProductandService
+      - BQ - ProductorService
       summary: InBQ Initiate customer product/service handling
       description: InBQ Initiate customer product/service handling
-      operationId: InitiateProductandService
+      operationId: InitiateProductorService
       parameters:
       - $ref: '#/components/parameters/SessionDialogueID'
       requestBody:
-        $ref: '#/components/requestBodies/InitiateProductandServiceRequest'
+        $ref: '#/components/requestBodies/InitiateProductorServiceRequest'
       responses:
         200:
           description: Success
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/InitiateProductandServiceResponse'
+                $ref: '#/components/schemas/InitiateProductorServiceResponse'
         400:
           $ref: '#/components/responses/BadRequestError'
         401:
@@ -514,25 +514,25 @@ paths:
           $ref: '#/components/responses/TooManyRequestsError'
         500:
           $ref: '#/components/responses/InternalServerError'
-  /SessionDialogue/{sessiondialogueId}/ProductandService/{productandserviceId}/Update:
+  /SessionDialogue/{sessiondialogueId}/ProductorService/{productorserviceId}/Update:
     put:
       tags:
-      - BQ - ProductandService
+      - BQ - ProductorService
       summary: UpBQ Update details for product/service handling
       description: UpBQ Update details for product/service handling
-      operationId: UpdateProductandService
+      operationId: UpdateProductorService
       parameters:
       - $ref: '#/components/parameters/SessionDialogueID'
-      - $ref: '#/components/parameters/ProductandServiceID'
+      - $ref: '#/components/parameters/ProductorServiceID'
       requestBody:
-        $ref: '#/components/requestBodies/UpdateProductandServiceRequest'
+        $ref: '#/components/requestBodies/UpdateProductorServiceRequest'
       responses:
         200:
           description: Success
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/UpdateProductandServiceResponse'
+                $ref: '#/components/schemas/UpdateProductorServiceResponse'
         400:
           $ref: '#/components/responses/BadRequestError'
         401:
@@ -545,23 +545,23 @@ paths:
           $ref: '#/components/responses/TooManyRequestsError'
         500:
           $ref: '#/components/responses/InternalServerError'
-  /SessionDialogue/{sessiondialogueId}/ProductandService/{productandserviceId}/Retrieve:
+  /SessionDialogue/{sessiondialogueId}/ProductorService/{productorserviceId}/Retrieve:
     get:
       tags:
-      - BQ - ProductandService
+      - BQ - ProductorService
       summary: ReBQ Retrieve details about product/service handling
       description: ReBQ Retrieve details about product/service handling
-      operationId: RetrieveProductandService
+      operationId: RetrieveProductorService
       parameters:
       - $ref: '#/components/parameters/SessionDialogueID'
-      - $ref: '#/components/parameters/ProductandServiceID'
+      - $ref: '#/components/parameters/ProductorServiceID'
       responses:
         200:
           description: Success
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/RetrieveProductandServiceResponse'
+                $ref: '#/components/schemas/RetrieveProductorServiceResponse'
         400:
           $ref: '#/components/responses/BadRequestError'
         401:
@@ -754,6 +754,96 @@ paths:
           $ref: '#/components/responses/TooManyRequestsError'
         500:
           $ref: '#/components/responses/InternalServerError'
+  /SessionDialogue/{sessiondialogueId}/Intelligence/Initiate:
+    post:
+      tags:
+      - BQ - Intelligence
+      summary: InBQ Initiate customer insight capture
+      description: InBQ Initiate customer insight capture
+      operationId: InitiateIntelligence
+      parameters:
+      - $ref: '#/components/parameters/SessionDialogueID'
+      requestBody:
+        $ref: '#/components/requestBodies/InitiateIntelligenceRequest'
+      responses:
+        200:
+          description: Success
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/InitiateIntelligenceResponse'
+        400:
+          $ref: '#/components/responses/BadRequestError'
+        401:
+          $ref: '#/components/responses/UnauthorizedError'
+        403:
+          $ref: '#/components/responses/ForbiddenError'
+        404:
+          $ref: '#/components/responses/NotFoundError'
+        429:
+          $ref: '#/components/responses/TooManyRequestsError'
+        500:
+          $ref: '#/components/responses/InternalServerError'
+  /SessionDialogue/{sessiondialogueId}/Intelligence/{intelligenceId}/Update:
+    put:
+      tags:
+      - BQ - Intelligence
+      summary: UpBQ Update details for customer insight capture
+      description: UpBQ Update details for customer insight capture
+      operationId: UpdateIntelligence
+      parameters:
+      - $ref: '#/components/parameters/SessionDialogueID'
+      - $ref: '#/components/parameters/IntelligenceID'
+      requestBody:
+        $ref: '#/components/requestBodies/UpdateIntelligenceRequest'
+      responses:
+        200:
+          description: Success
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/UpdateIntelligenceResponse'
+        400:
+          $ref: '#/components/responses/BadRequestError'
+        401:
+          $ref: '#/components/responses/UnauthorizedError'
+        403:
+          $ref: '#/components/responses/ForbiddenError'
+        404:
+          $ref: '#/components/responses/NotFoundError'
+        429:
+          $ref: '#/components/responses/TooManyRequestsError'
+        500:
+          $ref: '#/components/responses/InternalServerError'
+  /SessionDialogue/{sessiondialogueId}/Intelligence/{intelligenceId}/Retrieve:
+    get:
+      tags:
+      - BQ - Intelligence
+      summary: ReBQ Retrieve details about customer insight capture
+      description: ReBQ Retrieve details about customer insight capture
+      operationId: RetrieveIntelligence
+      parameters:
+      - $ref: '#/components/parameters/SessionDialogueID'
+      - $ref: '#/components/parameters/IntelligenceID'
+      responses:
+        200:
+          description: Success
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/RetrieveIntelligenceResponse'
+        400:
+          $ref: '#/components/responses/BadRequestError'
+        401:
+          $ref: '#/components/responses/UnauthorizedError'
+        403:
+          $ref: '#/components/responses/ForbiddenError'
+        404:
+          $ref: '#/components/responses/NotFoundError'
+        429:
+          $ref: '#/components/responses/TooManyRequestsError'
+        500:
+          $ref: '#/components/responses/InternalServerError'
   /SessionDialogue/{sessiondialogueId}/History/{historyId}/Update:
     put:
       tags:
@@ -820,11 +910,11 @@ components:
       type: object
       properties:
         CustomerReference:
-          type: object
+          type: string
         EmployeeReference:
-          type: object
+          type: string
         ServicingPositionReference:
-          type: object
+          type: string
         SessionMechanism:
           type: string
         SessionStartOrEndTime:
@@ -836,10 +926,31 @@ components:
         SessionDialogueScript:
           type: string
         SessionDialogueLogReference:
-          type: object
+          type: string
         SessionDialogueLog:
           type: string
         SessionDialogueResult:
+          type: string
+    Authentication:
+      type: object
+      properties:
+        RequiredAuthenticationLevel:
+          type: string
+        AuthenticationTaskResult:
+          type: string
+    Query:
+      type: object
+      properties:
+        QueryType:
+          type: string
+        QueryTaskResult:
+          type: string
+    Offer:
+      type: object
+      properties:
+        ProductandServiceType:
+          type: string
+        OfferTaskResult:
           type: string
     Order:
       type: object
@@ -852,39 +963,12 @@ components:
           type: string
         OrderTaskWorkResult:
           type: string
-    Query:
-      type: object
-      properties:
-        QueryType:
-          type: string
-        QueryTaskResult:
-          type: string
-    Authentication:
-      type: object
-      properties:
-        RequiredAuthenticationLevel:
-          type: string
-        AuthenticationTaskResult:
-          type: string
-    Case:
+    ProductorService:
       type: object
       properties:
         ProductInstanceReference:
-          type: object
-        CustomerCaseType:
           type: string
-        CaseTaskResult:
-          type: string
-    IntelligenceRecord:
-      type: object
-      properties:
-        IntelligenceRecord:
-          type: string
-        CustomerInsightType:
-          type: string
-        CustomerInsight:
-          type: string
-        InsightTaskResult:
+        ProductandServiceTaskResult:
           type: string
     Sales:
       type: object
@@ -900,19 +984,25 @@ components:
       properties:
         HistoryTaskResult:
           type: string
-    ProductandService:
+    Intelligence:
+      type: object
+      properties:
+        IntelligenceRecord:
+          type: string
+        CustomerInsightType:
+          type: string
+        CustomerInsight:
+          type: string
+        InsightTaskResult:
+          type: string
+    Case:
       type: object
       properties:
         ProductInstanceReference:
-          type: object
-        ProductandServiceTaskResult:
           type: string
-    Offer:
-      type: object
-      properties:
-        ProductandServiceType:
+        CustomerCaseType:
           type: string
-        OfferTaskResult:
+        CaseTaskResult:
           type: string
     HTTPError:
       type: object
@@ -923,175 +1013,6 @@ components:
           type: string
         message:
           type: string
-    InitiateCustomerContactSessionProcedureRequest:
-      type: object
-      properties:
-        CustomerContactSessionProcedure:
-          type: object
-          properties:
-            CustomerReference:
-              type: object
-            EmployeeReference:
-              type: object
-            ServicingPositionReference:
-              type: object
-            SessionMechanism:
-              type: string
-            SessionStartOrEndTime:
-              type: string
-            SessionDialogueRecord:
-              type: string
-            SessionDialogueType:
-              type: string
-            SessionDialogueScript:
-              type: string
-            SessionDialogueLogReference:
-              type: object
-            SessionDialogueResult:
-              type: string
-        IntelligenceRecord:
-          type: object
-          properties:
-            BQIntelligenceRecord:
-              type: string
-            CustomerInsightType:
-              type: string
-    InitiateCustomerContactSessionProcedureResponse:
-      type: object
-      properties:
-        CustomerContactSessionProcedure:
-          type: object
-          properties:
-            SessionStartOrEndTime:
-              type: string
-            SessionDialogueRecord:
-              type: string
-            SessionDialogueType:
-              type: string
-            SessionDialogueScript:
-              type: string
-            SessionDialogueLogReference:
-              type: object
-            SessionDialogueResult:
-              type: string
-        IntelligenceRecord:
-          type: object
-          properties:
-            BQIntelligenceRecord:
-              type: string
-            CustomerInsightType:
-              type: string
-            InsightTaskResult:
-              type: string
-    UpdateCustomerContactSessionProcedureRequest:
-      type: object
-      properties:
-        CustomerContactSessionProcedure:
-          type: object
-          properties:
-            CustomerReference:
-              type: object
-            EmployeeReference:
-              type: object
-            ServicingPositionReference:
-              type: object
-            SessionMechanism:
-              type: string
-            SessionStartOrEndTime:
-              type: string
-            SessionDialogueRecord:
-              type: string
-            SessionDialogueType:
-              type: string
-            SessionDialogueScript:
-              type: string
-            SessionDialogueLogReference:
-              type: object
-            SessionDialogueResult:
-              type: string
-            SessionDialogueLog:
-              type: string
-        IntelligenceRecord:
-          type: object
-          properties:
-            BQIntelligenceRecord:
-              type: string
-            CustomerInsightType:
-              type: string
-            InsightTaskResult:
-              type: string
-    UpdateCustomerContactSessionProcedureResponse:
-      type: object
-      properties:
-        CustomerContactSessionProcedure:
-          type: object
-          properties:
-            CustomerReference:
-              type: object
-            EmployeeReference:
-              type: object
-            ServicingPositionReference:
-              type: object
-            SessionMechanism:
-              type: string
-            SessionStartOrEndTime:
-              type: string
-            SessionDialogueRecord:
-              type: string
-            SessionDialogueType:
-              type: string
-            SessionDialogueScript:
-              type: string
-            SessionDialogueLogReference:
-              type: object
-            SessionDialogueResult:
-              type: string
-            SessionDialogueLog:
-              type: string
-        IntelligenceRecord:
-          type: object
-          properties:
-            BQIntelligenceRecord:
-              type: string
-            CustomerInsightType:
-              type: string
-            InsightTaskResult:
-              type: string
-    RetrieveCustomerContactSessionProcedureResponse:
-      type: object
-      properties:
-        CustomerContactSessionProcedure:
-          type: object
-          properties:
-            CustomerReference:
-              type: object
-            EmployeeReference:
-              type: object
-            ServicingPositionReference:
-              type: object
-            SessionMechanism:
-              type: string
-            SessionStartOrEndTime:
-              type: string
-            SessionDialogueRecord:
-              type: string
-            SessionDialogueType:
-              type: string
-            SessionDialogueScript:
-              type: string
-            SessionDialogueLogReference:
-              type: object
-            SessionDialogueResult:
-              type: string
-        IntelligenceRecord:
-          type: object
-          properties:
-            BQIntelligenceRecord:
-              type: string
-            CustomerInsightType:
-              type: string
-            InsightTaskResult:
-              type: string
     InitiateQueryRequest:
       type: object
       properties:
@@ -1528,7 +1449,7 @@ components:
               type: string
             OfferTaskResult:
               type: string
-    InitiateProductandServiceRequest:
+    InitiateProductorServiceRequest:
       type: object
       properties:
         CustomerContactSessionProcedure:
@@ -1554,12 +1475,12 @@ components:
               type: object
             SessionDialogueResult:
               type: string
-        ProductandService:
+        ProductorService:
           type: object
           properties:
             ProductInstanceReference:
               type: object
-    InitiateProductandServiceResponse:
+    InitiateProductorServiceResponse:
       type: object
       properties:
         CustomerContactSessionProcedure:
@@ -1575,12 +1496,12 @@ components:
               type: string
             SessionDialogueResult:
               type: string
-        ProductandService:
+        ProductorService:
           type: object
           properties:
             ProductandServiceTaskResult:
               type: string
-    UpdateProductandServiceRequest:
+    UpdateProductorServiceRequest:
       type: object
       properties:
         CustomerContactSessionProcedure:
@@ -1592,14 +1513,14 @@ components:
               type: string
             SessionDialogueResult:
               type: string
-        ProductandService:
+        ProductorService:
           type: object
           properties:
             ProductInstanceReference:
               type: object
             ProductandServiceTaskResult:
               type: string
-    UpdateProductandServiceResponse:
+    UpdateProductorServiceResponse:
       type: object
       properties:
         CustomerContactSessionProcedure:
@@ -1611,14 +1532,14 @@ components:
               type: string
             SessionDialogueResult:
               type: string
-        ProductandService:
+        ProductorService:
           type: object
           properties:
             ProductInstanceReference:
               type: object
             ProductandServiceTaskResult:
               type: string
-    RetrieveProductandServiceResponse:
+    RetrieveProductorServiceResponse:
       type: object
       properties:
         CustomerContactSessionProcedure:
@@ -1644,7 +1565,7 @@ components:
               type: object
             SessionDialogueResult:
               type: string
-        ProductandService:
+        ProductorService:
           type: object
           properties:
             ProductInstanceReference:
@@ -1923,6 +1844,141 @@ components:
               type: string
             OrderTaskWorkResult:
               type: string
+    InitiateIntelligenceRequest:
+      type: object
+      properties:
+        CustomerContactSessionProcedure:
+          type: object
+          properties:
+            CustomerReference:
+              type: object
+            EmployeeReference:
+              type: object
+            ServicingPositionReference:
+              type: object
+            SessionMechanism:
+              type: string
+            SessionStartOrEndTime:
+              type: string
+            SessionDialogueRecord:
+              type: string
+            SessionDialogueType:
+              type: string
+            SessionDialogueScript:
+              type: string
+            SessionDialogueLogReference:
+              type: object
+            SessionDialogueResult:
+              type: string
+        Intelligence:
+          type: object
+          properties:
+            BQIntelligenceRecord:
+              type: string
+            CustomerInsightType:
+              type: string
+    InitiateIntelligenceResponse:
+      type: object
+      properties:
+        CustomerContactSessionProcedure:
+          type: object
+          properties:
+            SessionStartOrEndTime:
+              type: string
+            SessionDialogueRecord:
+              type: string
+            SessionDialogueType:
+              type: string
+            SessionDialogueScript:
+              type: string
+            SessionDialogueResult:
+              type: string
+        Intelligence:
+          type: object
+          properties:
+            BQIntelligenceRecord:
+              type: string
+            CustomerInsightType:
+              type: string
+            InsightTaskResult:
+              type: string
+    UpdateIntelligenceRequest:
+      type: object
+      properties:
+        CustomerContactSessionProcedure:
+          type: object
+          properties:
+            SessionDialogueRecord:
+              type: string
+            SessionDialogueLog:
+              type: string
+            SessionDialogueResult:
+              type: string
+        Intelligence:
+          type: object
+          properties:
+            BQIntelligenceRecord:
+              type: string
+            CustomerInsightType:
+              type: string
+            InsightTaskResult:
+              type: string
+    UpdateIntelligenceResponse:
+      type: object
+      properties:
+        CustomerContactSessionProcedure:
+          type: object
+          properties:
+            SessionDialogueRecord:
+              type: string
+            SessionDialogueLog:
+              type: string
+            SessionDialogueResult:
+              type: string
+        Intelligence:
+          type: object
+          properties:
+            BQIntelligenceRecord:
+              type: string
+            CustomerInsightType:
+              type: string
+            InsightTaskResult:
+              type: string
+    RetrieveIntelligenceResponse:
+      type: object
+      properties:
+        CustomerContactSessionProcedure:
+          type: object
+          properties:
+            CustomerReference:
+              type: object
+            EmployeeReference:
+              type: object
+            ServicingPositionReference:
+              type: object
+            SessionMechanism:
+              type: string
+            SessionStartOrEndTime:
+              type: string
+            SessionDialogueRecord:
+              type: string
+            SessionDialogueType:
+              type: string
+            SessionDialogueScript:
+              type: string
+            SessionDialogueLogReference:
+              type: object
+            SessionDialogueResult:
+              type: string
+        Intelligence:
+          type: object
+          properties:
+            BQIntelligenceRecord:
+              type: string
+            CustomerInsightType:
+              type: string
+            InsightTaskResult:
+              type: string
     UpdateHistoryRequest:
       type: object
       properties:
@@ -1997,8 +2053,8 @@ components:
       explode: false
       schema:
         type: string
-    OrderID:
-      name: orderId
+    AuthenticationID:
+      name: authenticationId
       in: path
       required: true
       style: simple
@@ -2013,24 +2069,24 @@ components:
       explode: false
       schema:
         type: string
-    AuthenticationID:
-      name: authenticationId
+    OfferID:
+      name: offerId
       in: path
       required: true
       style: simple
       explode: false
       schema:
         type: string
-    CaseID:
-      name: caseId
+    OrderID:
+      name: orderId
       in: path
       required: true
       style: simple
       explode: false
       schema:
         type: string
-    IntelligenceRecordID:
-      name: intelligencerecordId
+    ProductorServiceID:
+      name: productorserviceId
       in: path
       required: true
       style: simple
@@ -2053,16 +2109,16 @@ components:
       explode: false
       schema:
         type: string
-    ProductandServiceID:
-      name: productandserviceId
+    IntelligenceID:
+      name: intelligenceId
       in: path
       required: true
       style: simple
       explode: false
       schema:
         type: string
-    OfferID:
-      name: offerId
+    CaseID:
+      name: caseId
       in: path
       required: true
       style: simple
@@ -2070,18 +2126,6 @@ components:
       schema:
         type: string
   requestBodies:
-    InitiateCustomerContactSessionProcedureRequest:
-      required: true
-      content:
-        application/json:
-          schema:
-            $ref: '#/components/schemas/InitiateCustomerContactSessionProcedureRequest'
-    UpdateCustomerContactSessionProcedureRequest:
-      required: true
-      content:
-        application/json:
-          schema:
-            $ref: '#/components/schemas/UpdateCustomerContactSessionProcedureRequest'
     CustomerContactSessionProcedure:
       required: true
       content:
@@ -2130,18 +2174,18 @@ components:
         application/json:
           schema:
             $ref: '#/components/schemas/UpdateOfferRequest'
-    InitiateProductandServiceRequest:
+    InitiateProductorServiceRequest:
       required: true
       content:
         application/json:
           schema:
-            $ref: '#/components/schemas/InitiateProductandServiceRequest'
-    UpdateProductandServiceRequest:
+            $ref: '#/components/schemas/InitiateProductorServiceRequest'
+    UpdateProductorServiceRequest:
       required: true
       content:
         application/json:
           schema:
-            $ref: '#/components/schemas/UpdateProductandServiceRequest'
+            $ref: '#/components/schemas/UpdateProductorServiceRequest'
     InitiateCaseRequest:
       required: true
       content:
@@ -2166,6 +2210,18 @@ components:
         application/json:
           schema:
             $ref: '#/components/schemas/UpdateOrderRequest'
+    InitiateIntelligenceRequest:
+      required: true
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/InitiateIntelligenceRequest'
+    UpdateIntelligenceRequest:
+      required: true
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/UpdateIntelligenceRequest'
     UpdateHistoryRequest:
       required: true
       content:

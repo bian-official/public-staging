@@ -875,17 +875,17 @@ components:
         ProductTrainingProcedureStatus:
           type: string
         ProductTrainingProcedureReference:
-          type: object
+          type: string
         ProductTrainingProcedureBusinessUnitReference:
-          type: object
+          type: string
         ProductTrainingProcedureServiceProviderReference:
-          type: object
+          type: string
         ProductTrainingProcedureFinancialFacilityReference:
-          type: object
+          type: string
         ProductTrainingProcedureEmployeeReference:
-          type: object
+          type: string
         ProductTrainingProcedureCustomerReference:
-          type: object
+          type: string
         ProductTrainingProcedureType:
           type: string
         ProductTrainingProcedureServiceProviderSchedule:
@@ -903,62 +903,6 @@ components:
         ProductTrainingProcedureFinancialTransactionArrangement:
           type: string
         ProductTrainingProcedureCustomerAgreementReference:
-          type: object
-    ContentDevelopment:
-      type: object
-      properties:
-        ? >-
-          CompleteworktasksfollowingadefinedprocedureinsupportofgeneralofficeactivitiesandproductandservicedeliverywithinProductTraining.
-
-          Example:Processtheevaluationandcompletionofcustomeroffers.
-        : type: string
-        ContentDevelopmentPreconditions:
-          type: string
-        ContentDevelopmentBusinessUnit/EmployeeReference:
-          type: object
-        ContentDevelopmentWorkSchedule:
-          type: string
-        ContentDevelopment:
-          type: object
-        ContentDevelopmentPostconditions:
-          type: string
-        ContentDevelopmentContentDevelopmentServiceType:
-          type: string
-        ContentDevelopmentContentDevelopmentServiceDescription:
-          type: string
-        ContentDevelopmentContentDevelopmentServiceInputsandOuputs:
-          type: string
-        ContentDevelopmentContentDevelopmentServiceWorkProduct:
-          type: string
-        ContentDevelopmentContentDevelopmentServiceName:
-          type: string
-    ServiceEvaluation:
-      type: object
-      properties:
-        ? >-
-          CompleteworktasksfollowingadefinedprocedureinsupportofgeneralofficeactivitiesandproductandservicedeliverywithinProductTraining.
-
-          Example:Processtheevaluationandcompletionofcustomeroffers.
-        : type: string
-        ServiceEvaluationPreconditions:
-          type: string
-        ServiceEvaluationBusinessUnit/EmployeeReference:
-          type: object
-        ServiceEvaluationWorkSchedule:
-          type: string
-        ServiceEvaluation:
-          type: object
-        ServiceEvaluationPostconditions:
-          type: string
-        ServiceEvaluationServiceEvaluationServiceType:
-          type: string
-        ServiceEvaluationServiceEvaluationServiceDescription:
-          type: string
-        ServiceEvaluationServiceEvaluationServiceInputsandOuputs:
-          type: string
-        ServiceEvaluationServiceEvaluationServiceWorkProduct:
-          type: string
-        ServiceEvaluationServiceEvaluationServiceName:
           type: string
     ServiceDelivery:
       type: object
@@ -971,11 +915,11 @@ components:
         ServiceDeliveryPreconditions:
           type: string
         ServiceDeliveryBusinessUnit/EmployeeReference:
-          type: object
+          type: string
         ServiceDeliveryWorkSchedule:
           type: string
         ServiceDelivery:
-          type: object
+          type: string
         ServiceDeliveryPostconditions:
           type: string
         ServiceDeliveryServiceDeliveryServiceType:
@@ -988,6 +932,69 @@ components:
           type: string
         ServiceDeliveryServiceDeliveryServiceName:
           type: string
+    ContentDevelopment:
+      type: object
+      properties:
+        ? >-
+          CompleteworktasksfollowingadefinedprocedureinsupportofgeneralofficeactivitiesandproductandservicedeliverywithinProductTraining.
+
+          Example:Processtheevaluationandcompletionofcustomeroffers.
+        : type: string
+        ContentDevelopmentPreconditions:
+          type: string
+        ContentDevelopmentBusinessUnit/EmployeeReference:
+          type: string
+        ContentDevelopmentWorkSchedule:
+          type: string
+        ContentDevelopment:
+          type: string
+        ContentDevelopmentPostconditions:
+          type: string
+        ContentDevelopmentContentDevelopmentServiceType:
+          type: string
+        ContentDevelopmentContentDevelopmentServiceDescription:
+          type: string
+        ContentDevelopmentContentDevelopmentServiceInputsandOuputs:
+          type: string
+        ContentDevelopmentContentDevelopmentServiceWorkProduct:
+          type: string
+        ContentDevelopmentContentDevelopmentServiceName:
+          type: string
+    ProductTrainingOutcome:
+      type: object
+      properties:
+        ProductTrainingWorkProduct:
+          type: string
+        ProductTrainingProcedure:
+          type: string
+    ServiceEvaluation:
+      type: object
+      properties:
+        ? >-
+          CompleteworktasksfollowingadefinedprocedureinsupportofgeneralofficeactivitiesandproductandservicedeliverywithinProductTraining.
+
+          Example:Processtheevaluationandcompletionofcustomeroffers.
+        : type: string
+        ServiceEvaluationPreconditions:
+          type: string
+        ServiceEvaluationBusinessUnit/EmployeeReference:
+          type: string
+        ServiceEvaluationWorkSchedule:
+          type: string
+        ServiceEvaluation:
+          type: string
+        ServiceEvaluationPostconditions:
+          type: string
+        ServiceEvaluationServiceEvaluationServiceType:
+          type: string
+        ServiceEvaluationServiceEvaluationServiceDescription:
+          type: string
+        ServiceEvaluationServiceEvaluationServiceInputsandOuputs:
+          type: string
+        ServiceEvaluationServiceEvaluationServiceWorkProduct:
+          type: string
+        ServiceEvaluationServiceEvaluationServiceName:
+          type: string
     ServiceScheduling:
       type: object
       properties:
@@ -999,11 +1006,11 @@ components:
         ServiceSchedulingPreconditions:
           type: string
         ServiceSchedulingBusinessUnit/EmployeeReference:
-          type: object
+          type: string
         ServiceSchedulingWorkSchedule:
           type: string
         ServiceScheduling:
-          type: object
+          type: string
         ServiceSchedulingPostconditions:
           type: string
         ServiceSchedulingServiceSchedulingServiceType:
@@ -1015,13 +1022,6 @@ components:
         ServiceSchedulingServiceSchedulingServiceWorkProduct:
           type: string
         ServiceSchedulingServiceSchedulingServiceName:
-          type: string
-    ProductTrainingOutcome:
-      type: object
-      properties:
-        ProductTrainingWorkProduct:
-          type: string
-        ProductTrainingProcedure:
           type: string
     HTTPError:
       type: object
@@ -1041,8 +1041,24 @@ components:
       explode: false
       schema:
         type: string
+    ServiceDeliveryID:
+      name: servicedeliveryId
+      in: path
+      required: true
+      style: simple
+      explode: false
+      schema:
+        type: string
     ContentDevelopmentID:
       name: contentdevelopmentId
+      in: path
+      required: true
+      style: simple
+      explode: false
+      schema:
+        type: string
+    ProductTrainingOutcomeID:
+      name: producttrainingoutcomeId
       in: path
       required: true
       style: simple
@@ -1057,24 +1073,8 @@ components:
       explode: false
       schema:
         type: string
-    ServiceDeliveryID:
-      name: servicedeliveryId
-      in: path
-      required: true
-      style: simple
-      explode: false
-      schema:
-        type: string
     ServiceSchedulingID:
       name: serviceschedulingId
-      in: path
-      required: true
-      style: simple
-      explode: false
-      schema:
-        type: string
-    ProductTrainingOutcomeID:
-      name: producttrainingoutcomeId
       in: path
       required: true
       style: simple

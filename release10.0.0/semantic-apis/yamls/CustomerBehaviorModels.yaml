@@ -124,23 +124,25 @@ paths:
           $ref: '#/components/responses/TooManyRequestsError'
         500:
           $ref: '#/components/responses/InternalServerError'
-  /CustomerBehaviorModels/Activate:
-    post:
+  /CustomerBehaviorModels/{customerbehaviormodelsId}/FunctionalRequirements/{functionalrequirementsId}/Update:
+    put:
       tags:
-      - CR - CustomerBehaviorModelSpecification
+      - BQ - FunctionalRequirements
       summary: UpBQ Update the requirements or other properties of a model
       description: UpBQ Update the requirements or other properties of a model
-      operationId: Activate
-      parameters: []
+      operationId: UpdateFunctionalRequirements
+      parameters:
+      - $ref: '#/components/parameters/CustomerBehaviorModelsID'
+      - $ref: '#/components/parameters/FunctionalRequirementsID'
       requestBody:
-        $ref: '#/components/requestBodies/ActivateCustomerBehaviorModelSpecificationRequest'
+        $ref: '#/components/requestBodies/UpdateFunctionalRequirementsRequest'
       responses:
         200:
           description: Success
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/ActivateCustomerBehaviorModelSpecificationResponse'
+                $ref: '#/components/schemas/UpdateFunctionalRequirementsResponse'
         400:
           $ref: '#/components/responses/BadRequestError'
         401:
@@ -185,6 +187,218 @@ paths:
           $ref: '#/components/responses/TooManyRequestsError'
         500:
           $ref: '#/components/responses/InternalServerError'
+  /CustomerBehaviorModels/{customerbehaviormodelsId}/FunctionalRequirements/{functionalrequirementsId}/Request:
+    put:
+      tags:
+      - BQ - FunctionalRequirements
+      summary: RqBQ Request changes or improvements to a model
+      description: RqBQ Request changes or improvements to a model
+      operationId: RequestFunctionalRequirements
+      parameters:
+      - $ref: '#/components/parameters/CustomerBehaviorModelsID'
+      - $ref: '#/components/parameters/FunctionalRequirementsID'
+      requestBody:
+        $ref: '#/components/requestBodies/RequestFunctionalRequirementsRequest'
+      responses:
+        200:
+          description: Success
+          content:
+            application/json:
+              schema:
+                type: boolean
+                example: true
+        400:
+          $ref: '#/components/responses/BadRequestError'
+        401:
+          $ref: '#/components/responses/UnauthorizedError'
+        403:
+          $ref: '#/components/responses/ForbiddenError'
+        404:
+          $ref: '#/components/responses/NotFoundError'
+        429:
+          $ref: '#/components/responses/TooManyRequestsError'
+        500:
+          $ref: '#/components/responses/InternalServerError'
+  /CustomerBehaviorModels/{customerbehaviormodelsId}/FunctionalRequirements/{functionalrequirementsId}/Retrieve:
+    get:
+      tags:
+      - BQ - FunctionalRequirements
+      summary: ReBQ Retrieve details about the model specification and properties
+      description: ReBQ Retrieve details about the model specification and properties
+      operationId: RetrieveFunctionalRequirements
+      parameters:
+      - $ref: '#/components/parameters/CustomerBehaviorModelsID'
+      - $ref: '#/components/parameters/FunctionalRequirementsID'
+      responses:
+        200:
+          description: Success
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/RetrieveFunctionalRequirementsResponse'
+        400:
+          $ref: '#/components/responses/BadRequestError'
+        401:
+          $ref: '#/components/responses/UnauthorizedError'
+        403:
+          $ref: '#/components/responses/ForbiddenError'
+        404:
+          $ref: '#/components/responses/NotFoundError'
+        429:
+          $ref: '#/components/responses/TooManyRequestsError'
+        500:
+          $ref: '#/components/responses/InternalServerError'
+  /CustomerBehaviorModels/{customerbehaviormodelsId}/Testing/{testingId}/Update:
+    put:
+      tags:
+      - BQ - Testing
+      summary: UpBQ Update user testing content
+      description: UpBQ Update user testing content
+      operationId: UpdateTesting
+      parameters:
+      - $ref: '#/components/parameters/CustomerBehaviorModelsID'
+      - $ref: '#/components/parameters/TestingID'
+      requestBody:
+        $ref: '#/components/requestBodies/UpdateTestingRequest'
+      responses:
+        200:
+          description: Success
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Testing'
+        400:
+          $ref: '#/components/responses/BadRequestError'
+        401:
+          $ref: '#/components/responses/UnauthorizedError'
+        403:
+          $ref: '#/components/responses/ForbiddenError'
+        404:
+          $ref: '#/components/responses/NotFoundError'
+        429:
+          $ref: '#/components/responses/TooManyRequestsError'
+        500:
+          $ref: '#/components/responses/InternalServerError'
+  /CustomerBehaviorModels/{customerbehaviormodelsId}/Testing/{testingId}/Retrieve:
+    get:
+      tags:
+      - BQ - Testing
+      summary: ReBQ Retrieve details and testing results
+      description: ReBQ Retrieve details and testing results
+      operationId: RetrieveTesting
+      parameters:
+      - $ref: '#/components/parameters/CustomerBehaviorModelsID'
+      - $ref: '#/components/parameters/TestingID'
+      responses:
+        200:
+          description: Success
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/RetrieveTestingResponse'
+        400:
+          $ref: '#/components/responses/BadRequestError'
+        401:
+          $ref: '#/components/responses/UnauthorizedError'
+        403:
+          $ref: '#/components/responses/ForbiddenError'
+        404:
+          $ref: '#/components/responses/NotFoundError'
+        429:
+          $ref: '#/components/responses/TooManyRequestsError'
+        500:
+          $ref: '#/components/responses/InternalServerError'
+  /CustomerBehaviorModels/{customerbehaviormodelsId}/Production/{productionId}/Execute:
+    put:
+      tags:
+      - BQ - Production
+      summary: ExBQ Get automated support for model deployment
+      description: ExBQ Get automated support for model deployment
+      operationId: ExecuteProduction
+      parameters:
+      - $ref: '#/components/parameters/CustomerBehaviorModelsID'
+      - $ref: '#/components/parameters/ProductionID'
+      requestBody:
+        $ref: '#/components/requestBodies/CustomerBehaviorModelSpecification'
+      responses:
+        200:
+          description: Success
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ExecuteProductionResponse'
+        400:
+          $ref: '#/components/responses/BadRequestError'
+        401:
+          $ref: '#/components/responses/UnauthorizedError'
+        403:
+          $ref: '#/components/responses/ForbiddenError'
+        404:
+          $ref: '#/components/responses/NotFoundError'
+        429:
+          $ref: '#/components/responses/TooManyRequestsError'
+        500:
+          $ref: '#/components/responses/InternalServerError'
+  /CustomerBehaviorModels/{customerbehaviormodelsId}/Production/{productionId}/Request:
+    put:
+      tags:
+      - BQ - Production
+      summary: RqBQ Request production support for a deployed model
+      description: RqBQ Request production support for a deployed model
+      operationId: RequestProduction
+      parameters:
+      - $ref: '#/components/parameters/CustomerBehaviorModelsID'
+      - $ref: '#/components/parameters/ProductionID'
+      requestBody:
+        $ref: '#/components/requestBodies/CustomerBehaviorModelSpecification'
+      responses:
+        200:
+          description: Success
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/RequestProductionResponse'
+        400:
+          $ref: '#/components/responses/BadRequestError'
+        401:
+          $ref: '#/components/responses/UnauthorizedError'
+        403:
+          $ref: '#/components/responses/ForbiddenError'
+        404:
+          $ref: '#/components/responses/NotFoundError'
+        429:
+          $ref: '#/components/responses/TooManyRequestsError'
+        500:
+          $ref: '#/components/responses/InternalServerError'
+  /CustomerBehaviorModels/{customerbehaviormodelsId}/Production/{productionId}/Retrieve:
+    get:
+      tags:
+      - BQ - Production
+      summary: ReBQ Retrieve details and documentation covering model production deployment
+      description: ReBQ Retrieve details and documentation covering model production deployment
+      operationId: RetrieveProduction
+      parameters:
+      - $ref: '#/components/parameters/CustomerBehaviorModelsID'
+      - $ref: '#/components/parameters/ProductionID'
+      responses:
+        200:
+          description: Success
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/RetrieveProductionResponse'
+        400:
+          $ref: '#/components/responses/BadRequestError'
+        401:
+          $ref: '#/components/responses/UnauthorizedError'
+        403:
+          $ref: '#/components/responses/ForbiddenError'
+        404:
+          $ref: '#/components/responses/NotFoundError'
+        429:
+          $ref: '#/components/responses/TooManyRequestsError'
+        500:
+          $ref: '#/components/responses/InternalServerError'
 components:
   schemas:
     CustomerBehaviorModelSpecification:
@@ -197,11 +411,11 @@ components:
         CustomerBehaviorModelDeployment:
           type: string
         EmployeeOrBusinessUnitReference:
-          type: object
+          type: string
         CustomerBehaviorModelDeploymentConfiguration:
           type: string
         CustomerBehaviorModelDeploymentTaskReference:
-          type: object
+          type: string
         CustomerBehaviorModelDeploymentTaskRecord:
           type: string
         CustomerBehaviorModelStatus:
@@ -218,23 +432,23 @@ components:
       type: object
       properties:
         CustomerBehaviorModelTestReference:
-          type: object
+          type: string
         CustomerBehaviorModelTestType:
           type: string
         CustomerBehaviorModelTestHarnessReference:
-          type: object
+          type: string
         CustomerBehaviorModelTestResult:
           type: string
         CustomerBehaviorModelTestingTaskReference:
-          type: object
+          type: string
         CustomerBehaviorModelTestingTaskRecord:
           type: string
         CustomerBehaviorModelComplianceTaskReference:
-          type: object
+          type: string
         CustomerBehaviorModelComplianceTaskRecord:
           type: string
         CustomerBehaviorModelComplianceTestReference:
-          type: object
+          type: string
         CustomerBehaviorModelComplianceTestType:
           type: string
     Production:
@@ -250,11 +464,11 @@ components:
       type: object
       properties:
         CustomerBehaviorModelDesignTaskReference:
-          type: object
+          type: string
         CustomerBehaviorModelDesignTaskRecord:
           type: string
         Customer/MarketDataServiceReference:
-          type: object
+          type: string
         Customer/MarketDataRecord:
           type: string
         CustomerBehaviorModelFeedbackRecord:
@@ -270,7 +484,7 @@ components:
           type: string
         message:
           type: string
-    ActivateCustomerBehaviorModelSpecificationRequest:
+    UpdateFunctionalRequirementsRequest:
       type: object
       properties:
         CustomerBehaviorModelSpecification:
@@ -286,12 +500,6 @@ components:
               type: string
             CustomerBehaviorModelVersion:
               type: string
-            CustomerBehaviorModelImpact:
-              type: string
-            CustomerBehaviorModelDeployment:
-              type: string
-            EmployeeOrBusinessUnitReference:
-              type: object
         FunctionalRequirements:
           type: object
           properties:
@@ -303,22 +511,7 @@ components:
               type: string
             CustomerBehaviorModelRequirementsSpecification:
               type: string
-        Testing:
-          type: object
-          properties:
-            CustomerBehaviorModelTestReference:
-              type: object
-            CustomerBehaviorModelTestType:
-              type: string
-            CustomerBehaviorModelTestHarnessReference:
-              type: object
-            CustomerBehaviorModelTestResult:
-              type: string
-            CustomerBehaviorModelTestingTaskReference:
-              type: object
-            CustomerBehaviorModelTestingTaskRecord:
-              type: string
-    ActivateCustomerBehaviorModelSpecificationResponse:
+    UpdateFunctionalRequirementsResponse:
       type: object
       properties:
         CustomerBehaviorModelSpecification:
@@ -334,18 +527,6 @@ components:
               type: string
             CustomerBehaviorModelVersion:
               type: string
-            CustomerBehaviorModelImpact:
-              type: string
-            CustomerBehaviorModelDeployment:
-              type: string
-            EmployeeOrBusinessUnitReference:
-              type: object
-            CustomerBehaviorModelDeploymentConfiguration:
-              type: string
-            CustomerBehaviorModelDeploymentTaskReference:
-              type: object
-            CustomerBehaviorModelDeploymentTaskRecord:
-              type: string
         FunctionalRequirements:
           type: object
           properties:
@@ -356,34 +537,6 @@ components:
             CustomerBehaviorModelFeedbackRecord:
               type: string
             CustomerBehaviorModelRequirementsSpecification:
-              type: string
-            CustomerOrMarketDataServiceReference:
-              type: object
-            CustomerOrMarketDataRecord:
-              type: string
-        Testing:
-          type: object
-          properties:
-            CustomerBehaviorModelTestReference:
-              type: object
-            CustomerBehaviorModelTestType:
-              type: string
-            CustomerBehaviorModelTestHarnessReference:
-              type: object
-            CustomerBehaviorModelTestResult:
-              type: string
-            CustomerBehaviorModelTestingTaskReference:
-              type: object
-            CustomerBehaviorModelTestingTaskRecord:
-              type: string
-        Production:
-          type: object
-          properties:
-            CustomerBehaviorModelOperationalRequirements:
-              type: string
-            CustomerBehaviorModelAllowedUsage:
-              type: string
-            CustomerBehaviorModelUsageGuidelines:
               type: string
     CaptureFunctionalRequirementsRequest:
       type: object
@@ -399,6 +552,205 @@ components:
           type: object
           properties:
             CustomerBehaviorModelFeedbackRecord:
+              type: string
+    RequestFunctionalRequirementsRequest:
+      type: object
+      properties:
+        CustomerBehaviorModelSpecification:
+          type: object
+          properties:
+            CustomerBehaviorModelType:
+              type: string
+            CustomerBehaviorModelUsage:
+              type: string
+            CustomerBehaviorModelImpact:
+              type: string
+            CustomerBehaviorModelVersion:
+              type: string
+        FunctionalRequirements:
+          type: object
+          properties:
+            CustomerBehaviorModelRequirementsSpecification:
+              type: string
+    RetrieveFunctionalRequirementsResponse:
+      type: object
+      properties:
+        CustomerBehaviorModelSpecification:
+          type: object
+          properties:
+            CustomerBehaviorModelType:
+              type: string
+            CustomerBehaviorModelPurpose:
+              type: string
+            CustomerBehaviorModelStatus:
+              type: string
+            CustomerBehaviorModelUsage:
+              type: string
+            CustomerBehaviorModelImpact:
+              type: string
+            CustomerBehaviorModelVersion:
+              type: string
+        FunctionalRequirements:
+          type: object
+          properties:
+            CustomerBehaviorModelDesignTaskReference:
+              type: object
+            CustomerBehaviorModelDesignTaskRecord:
+              type: string
+            CustomerOrMarketDataServiceReference:
+              type: object
+            CustomerOrMarketDataRecord:
+              type: string
+            CustomerBehaviorModelFeedbackRecord:
+              type: string
+            CustomerBehaviorModelRequirementsSpecification:
+              type: string
+    UpdateTestingRequest:
+      type: object
+      properties:
+        CustomerBehaviorModelSpecification:
+          type: object
+          properties:
+            CustomerBehaviorModelType:
+              type: string
+            CustomerBehaviorModelDeployment:
+              type: string
+            EmployeeOrBusinessUnitReference:
+              type: object
+            CustomerBehaviorModelVersion:
+              type: string
+        Testing:
+          type: object
+          properties:
+            CustomerBehaviorModelTestReference:
+              type: object
+            CustomerBehaviorModelTestType:
+              type: string
+            CustomerBehaviorModelTestHarnessReference:
+              type: object
+            CustomerBehaviorModelTestResult:
+              type: string
+            CustomerBehaviorModelTestingTaskReference:
+              type: object
+            CustomerBehaviorModelTestingTaskRecord:
+              type: string
+    RetrieveTestingResponse:
+      type: object
+      properties:
+        CustomerBehaviorModelSpecification:
+          type: object
+          properties:
+            CustomerBehaviorModelType:
+              type: string
+            CustomerBehaviorModelDeployment:
+              type: string
+            EmployeeOrBusinessUnitReference:
+              type: object
+            CustomerBehaviorModelVersion:
+              type: string
+        Testing:
+          type: object
+          properties:
+            CustomerBehaviorModelTestReference:
+              type: object
+            CustomerBehaviorModelTestType:
+              type: string
+            CustomerBehaviorModelTestHarnessReference:
+              type: object
+            CustomerBehaviorModelTestResult:
+              type: string
+            CustomerBehaviorModelTestingTaskReference:
+              type: object
+            CustomerBehaviorModelTestingTaskRecord:
+              type: string
+    ExecuteProductionResponse:
+      type: object
+      properties:
+        CustomerBehaviorModelSpecification:
+          type: object
+          properties:
+            CustomerBehaviorModelDeployment:
+              type: string
+            CustomerBehaviorModelDeploymentConfiguration:
+              type: string
+            CustomerBehaviorModelDeploymentTaskReference:
+              type: object
+            CustomerBehaviorModelDeploymentTaskRecord:
+              type: string
+            CustomerBehaviorModelStatus:
+              type: string
+            CustomerBehaviorModelUsage:
+              type: string
+            CustomerBehaviorModelVersion:
+              type: string
+        Production:
+          type: object
+          properties:
+            CustomerBehaviorModelOperationalRequirements:
+              type: string
+            CustomerBehaviorModelAllowedUsage:
+              type: string
+            CustomerBehaviorModelUsageGuidelines:
+              type: string
+    RequestProductionResponse:
+      type: object
+      properties:
+        CustomerBehaviorModelSpecification:
+          type: object
+          properties:
+            CustomerBehaviorModelDeployment:
+              type: string
+            CustomerBehaviorModelDeploymentConfiguration:
+              type: string
+            CustomerBehaviorModelDeploymentTaskReference:
+              type: object
+            CustomerBehaviorModelDeploymentTaskRecord:
+              type: string
+            CustomerBehaviorModelStatus:
+              type: string
+            CustomerBehaviorModelUsage:
+              type: string
+            CustomerBehaviorModelVersion:
+              type: string
+        Production:
+          type: object
+          properties:
+            CustomerBehaviorModelOperationalRequirements:
+              type: string
+            CustomerBehaviorModelAllowedUsage:
+              type: string
+            CustomerBehaviorModelUsageGuidelines:
+              type: string
+    RetrieveProductionResponse:
+      type: object
+      properties:
+        CustomerBehaviorModelSpecification:
+          type: object
+          properties:
+            CustomerBehaviorModelDeployment:
+              type: string
+            EmployeeOrBusinessUnitReference:
+              type: object
+            CustomerBehaviorModelDeploymentConfiguration:
+              type: string
+            CustomerBehaviorModelDeploymentTaskReference:
+              type: object
+            CustomerBehaviorModelDeploymentTaskRecord:
+              type: string
+            CustomerBehaviorModelStatus:
+              type: string
+            CustomerBehaviorModelUsage:
+              type: string
+            CustomerBehaviorModelVersion:
+              type: string
+        Production:
+          type: object
+          properties:
+            CustomerBehaviorModelOperationalRequirements:
+              type: string
+            CustomerBehaviorModelAllowedUsage:
+              type: string
+            CustomerBehaviorModelUsageGuidelines:
               type: string
   parameters:
     CustomerBehaviorModelsID:
@@ -440,18 +792,30 @@ components:
         application/json:
           schema:
             $ref: '#/components/schemas/CustomerBehaviorModelSpecification'
-    ActivateCustomerBehaviorModelSpecificationRequest:
+    UpdateFunctionalRequirementsRequest:
       required: true
       content:
         application/json:
           schema:
-            $ref: '#/components/schemas/ActivateCustomerBehaviorModelSpecificationRequest'
+            $ref: '#/components/schemas/UpdateFunctionalRequirementsRequest'
     CaptureFunctionalRequirementsRequest:
       required: true
       content:
         application/json:
           schema:
             $ref: '#/components/schemas/CaptureFunctionalRequirementsRequest'
+    RequestFunctionalRequirementsRequest:
+      required: true
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/RequestFunctionalRequirementsRequest'
+    UpdateTestingRequest:
+      required: true
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/UpdateTestingRequest'
   responses:
     HTTPError:
       description: Bad Request

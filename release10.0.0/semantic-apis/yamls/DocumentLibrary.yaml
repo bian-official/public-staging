@@ -132,13 +132,13 @@ components:
         DocumentName:
           type: string
         LocationReference:
-          type: object
+          type: string
         BusinessUnitOrEmployeeReference:
-          type: object
+          type: string
         ProductandServiceReference:
-          type: object
+          type: string
         ProductandServiceActionReference:
-          type: object
+          type: string
         DocumentCreationDate:
           type: string
         DocumentCaptureDateOrTime:
@@ -166,7 +166,7 @@ components:
         DocumentVerificationTaskDescription:
           type: string
         DocumentVerificationServiceProviderReference:
-          type: object
+          type: string
         DocumentVerificationTaskResult:
           type: string
         DocumentAmendmentHistory:
@@ -186,11 +186,11 @@ components:
         DocumentArchivingAction:
           type: string
         DocumentArchiveReference:
-          type: object
+          type: string
         DocumentMediaOrFormat:
           type: string
         DocumentSubjectReference:
-          type: object
+          type: string
         DocumentLocation:
           type: string
         DocumentStatus:

@@ -473,32 +473,6 @@ components:
           type: string
         RewardPointsAwardsAndRedemptionWorkProduct:
           type: string
-    Redemption:
-      type: object
-      properties:
-        ? >-
-          Executeawell-boundedfinancialtransaction/task,typicallyinvolvinglargelyautomated/structuredfulfillmentprocessingwithinRewardPointsAwards&Redemption.
-
-          Example:Executeapaymenttransaction.
-        : type: string
-        RedemptionPreconditions:
-          type: string
-        RedemptionTaskSchedule:
-          type: string
-        AwardsRedemption:
-          type: object
-        RedemptionPostconditions:
-          type: string
-        RedemptionAwardsRedemptionServiceType:
-          type: string
-        RedemptionAwardsRedemptionServiceDescription:
-          type: string
-        RedemptionAwardsRedemptionServiceInputsandOuputs:
-          type: string
-        RedemptionAwardsRedemptionServiceWorkProduct:
-          type: string
-        RedemptionAwardsRedemptionServiceName:
-          type: string
     Award:
       type: object
       properties:
@@ -512,7 +486,7 @@ components:
         AwardTaskSchedule:
           type: string
         Awards:
-          type: object
+          type: string
         AwardPostconditions:
           type: string
         AwardAwardsServiceType:
@@ -524,6 +498,32 @@ components:
         AwardAwardsServiceWorkProduct:
           type: string
         AwardAwardsServiceName:
+          type: string
+    Redemption:
+      type: object
+      properties:
+        ? >-
+          Executeawell-boundedfinancialtransaction/task,typicallyinvolvinglargelyautomated/structuredfulfillmentprocessingwithinRewardPointsAwards&Redemption.
+
+          Example:Executeapaymenttransaction.
+        : type: string
+        RedemptionPreconditions:
+          type: string
+        RedemptionTaskSchedule:
+          type: string
+        AwardsRedemption:
+          type: string
+        RedemptionPostconditions:
+          type: string
+        RedemptionAwardsRedemptionServiceType:
+          type: string
+        RedemptionAwardsRedemptionServiceDescription:
+          type: string
+        RedemptionAwardsRedemptionServiceInputsandOuputs:
+          type: string
+        RedemptionAwardsRedemptionServiceWorkProduct:
+          type: string
+        RedemptionAwardsRedemptionServiceName:
           type: string
     HTTPError:
       type: object
@@ -551,16 +551,16 @@ components:
       explode: false
       schema:
         type: string
-    RedemptionID:
-      name: redemptionId
+    AwardID:
+      name: awardId
       in: path
       required: true
       style: simple
       explode: false
       schema:
         type: string
-    AwardID:
-      name: awardId
+    RedemptionID:
+      name: redemptionId
       in: path
       required: true
       style: simple

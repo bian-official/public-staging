@@ -67,23 +67,25 @@ paths:
           $ref: '#/components/responses/TooManyRequestsError'
         500:
           $ref: '#/components/responses/InternalServerError'
-  /PartyReferenceDataDirectory/Activate:
-    post:
+  /PartyReferenceDataDirectory/{partyreferencedatadirectoryId}/Request:
+    put:
       tags:
       - CR - PartyReferenceDataDirectoryEntry
       summary: RqCR Request manual intervention with an entry (e.g. refresh content)
       description: RqCR Request manual intervention with an entry (e.g. refresh content)
-      operationId: Activate
-      parameters: []
+      operationId: Request
+      parameters:
+      - $ref: '#/components/parameters/PartyReferenceDataDirectoryID'
       requestBody:
-        $ref: '#/components/requestBodies/ActivatePartyReferenceDataDirectoryEntryRequest'
+        $ref: '#/components/requestBodies/PartyReferenceDataDirectoryEntry'
       responses:
         200:
           description: Success
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/ActivatePartyReferenceDataDirectoryEntryResponse'
+                type: boolean
+                example: true
         400:
           $ref: '#/components/responses/BadRequestError'
         401:
@@ -112,6 +114,37 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/PartyReferenceDataDirectoryEntry'
+        400:
+          $ref: '#/components/responses/BadRequestError'
+        401:
+          $ref: '#/components/responses/UnauthorizedError'
+        403:
+          $ref: '#/components/responses/ForbiddenError'
+        404:
+          $ref: '#/components/responses/NotFoundError'
+        429:
+          $ref: '#/components/responses/TooManyRequestsError'
+        500:
+          $ref: '#/components/responses/InternalServerError'
+  /PartyReferenceDataDirectory/{partyreferencedatadirectoryId}/Execute:
+    put:
+      tags:
+      - CR - PartyReferenceDataDirectoryEntry
+      summary: ExCR Execute an automated action against an entry
+      description: ExCR Execute an automated action against an entry
+      operationId: Execute
+      parameters:
+      - $ref: '#/components/parameters/PartyReferenceDataDirectoryID'
+      requestBody:
+        $ref: '#/components/requestBodies/ExecutePartyReferenceDataDirectoryEntryRequest'
+      responses:
+        200:
+          description: Success
+          content:
+            application/json:
+              schema:
+                type: boolean
+                example: true
         400:
           $ref: '#/components/responses/BadRequestError'
         401:
@@ -203,6 +236,35 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/UpdateAssociationsResponse'
+        400:
+          $ref: '#/components/responses/BadRequestError'
+        401:
+          $ref: '#/components/responses/UnauthorizedError'
+        403:
+          $ref: '#/components/responses/ForbiddenError'
+        404:
+          $ref: '#/components/responses/NotFoundError'
+        429:
+          $ref: '#/components/responses/TooManyRequestsError'
+        500:
+          $ref: '#/components/responses/InternalServerError'
+  /PartyReferenceDataDirectory/{partyreferencedatadirectoryId}/Associations/{associationsId}/Retrieve:
+    get:
+      tags:
+      - BQ - Associations
+      summary: ReBQ Retrieve details about association entries in the directory record
+      description: ReBQ Retrieve details about association entries in the directory record
+      operationId: RetrieveAssociations
+      parameters:
+      - $ref: '#/components/parameters/PartyReferenceDataDirectoryID'
+      - $ref: '#/components/parameters/AssociationsID'
+      responses:
+        200:
+          description: Success
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/RetrieveAssociationsResponse'
         400:
           $ref: '#/components/responses/BadRequestError'
         401:
@@ -341,24 +403,46 @@ components:
       type: object
       properties:
         PartyReference:
-          type: object
+          type: string
         DateType:
           type: string
         Date:
+          type: string
+    BankRelations:
+      type: object
+      properties:
+        BankRelationType:
+          type: string
+        BusinessUnit/EmployeeReference:
+          type: string
+    Demographics:
+      type: object
+      properties:
+        Socio-EconomicClassification:
+          type: string
+        Ethnicity/Religion:
+          type: string
+        Employment:
+          type: string
+        EmploymentHistory:
+          type: string
+        EducationHistory:
+          type: string
+        ServicingConstraints:
           type: string
     Reference:
       type: object
       properties:
         PartyLegalEntityReference:
-          type: object
+          type: string
         PartyName/Salutation:
           type: string
         GovernmentIssuedIdentityReference:
-          type: object
+          type: string
         GovernmentIssuedDocumentDetails:
           type: string
         DocumentDirectoryEntryInstanceReference:
-          type: object
+          type: string
         ResidencyStatus:
           type: string
         DateofBirth:
@@ -378,39 +462,24 @@ components:
         PoliticalExposureDescriptionRecord:
           type: string
         CorporateCustomerReference:
-          type: object
+          type: string
         CorporateCustomerLegalEntityReference:
-          type: object
+          type: string
         CorporateAddress:
           type: string
         CompanyOfficerReference:
-          type: object
+          type: string
         CompanyOfficerRole:
           type: string
         CustomerSinceDate:
-          type: string
-    Demographics:
-      type: object
-      properties:
-        Socio-EconomicClassification:
-          type: string
-        Ethnicity/Religion:
-          type: string
-        Employment:
-          type: string
-        EmploymentHistory:
-          type: string
-        EducationHistory:
-          type: string
-        ServicingConstraints:
           type: string
     Associations:
       type: object
       properties:
         EmployeeReference:
-          type: object
+          type: string
         AssociateReference:
-          type: object
+          type: string
         AssociateType:
           type: string
         AssociateObligation/DependencyDescription:
@@ -418,18 +487,11 @@ components:
         AssociationValidFrom/ToDate:
           type: string
         ProductInstanceReference:
-          type: object
+          type: string
         PreferredBeneficiary:
           type: string
         Proxy/Representative/PowerofAttorneyReference:
-          type: object
-    BankRelations:
-      type: object
-      properties:
-        BankRelationType:
           type: string
-        BusinessUnit/EmployeeReference:
-          type: object
     HTTPError:
       type: object
       properties:
@@ -439,14 +501,9 @@ components:
           type: string
         message:
           type: string
-    ActivatePartyReferenceDataDirectoryEntryRequest:
+    ExecutePartyReferenceDataDirectoryEntryRequest:
       type: object
       properties:
-        PartyReferenceDataDirectoryEntry:
-          type: object
-          properties:
-            DateType:
-              type: string
         Reference:
           type: object
           properties:
@@ -530,33 +587,6 @@ components:
             BankRelationType:
               type: string
             BusinessUnitOrEmployeeReference:
-              type: object
-    ActivatePartyReferenceDataDirectoryEntryResponse:
-      type: object
-      properties:
-        PartyReferenceDataDirectoryEntry:
-          type: object
-          properties:
-            DateType:
-              type: string
-        Associations:
-          type: object
-          properties:
-            EmployeeReference:
-              type: object
-            AssociateReference:
-              type: object
-            AssociateType:
-              type: string
-            AssociateObligationOrDependencyDescription:
-              type: string
-            AssociationValidFromOrToDate:
-              type: string
-            ProductInstanceReference:
-              type: object
-            PreferredBeneficiary:
-              type: string
-            ProxyOrRepresentativeOrPowerofAttorneyReference:
               type: object
     UpdateReferenceRequest:
       type: object
@@ -765,6 +795,33 @@ components:
               type: string
             ProxyOrRepresentativeOrPowerofAttorneyReference:
               type: object
+    RetrieveAssociationsResponse:
+      type: object
+      properties:
+        PartyReferenceDataDirectoryEntry:
+          type: object
+          properties:
+            DateType:
+              type: string
+        Associations:
+          type: object
+          properties:
+            EmployeeReference:
+              type: object
+            AssociateReference:
+              type: object
+            AssociateType:
+              type: string
+            AssociateObligationOrDependencyDescription:
+              type: string
+            AssociationValidFromOrToDate:
+              type: string
+            ProductInstanceReference:
+              type: object
+            PreferredBeneficiary:
+              type: string
+            ProxyOrRepresentativeOrPowerofAttorneyReference:
+              type: object
     UpdateDemographicsRequest:
       type: object
       properties:
@@ -888,8 +945,8 @@ components:
       explode: false
       schema:
         type: string
-    ReferenceID:
-      name: referenceId
+    BankRelationsID:
+      name: bankrelationsId
       in: path
       required: true
       style: simple
@@ -904,16 +961,16 @@ components:
       explode: false
       schema:
         type: string
-    AssociationsID:
-      name: associationsId
+    ReferenceID:
+      name: referenceId
       in: path
       required: true
       style: simple
       explode: false
       schema:
         type: string
-    BankRelationsID:
-      name: bankrelationsId
+    AssociationsID:
+      name: associationsId
       in: path
       required: true
       style: simple
@@ -927,12 +984,12 @@ components:
         application/json:
           schema:
             $ref: '#/components/schemas/PartyReferenceDataDirectoryEntry'
-    ActivatePartyReferenceDataDirectoryEntryRequest:
+    ExecutePartyReferenceDataDirectoryEntryRequest:
       required: true
       content:
         application/json:
           schema:
-            $ref: '#/components/schemas/ActivatePartyReferenceDataDirectoryEntryRequest'
+            $ref: '#/components/schemas/ExecutePartyReferenceDataDirectoryEntryRequest'
     UpdateReferenceRequest:
       required: true
       content:

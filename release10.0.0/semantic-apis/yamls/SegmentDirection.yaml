@@ -126,6 +126,34 @@ paths:
           $ref: '#/components/responses/TooManyRequestsError'
         500:
           $ref: '#/components/responses/InternalServerError'
+  /SegmentDirection/{segmentdirectionId}/Retrieve:
+    get:
+      tags:
+      - CR - SegmentStrategy
+      summary: ReCR Retrieve details relating to the strategy and any supporting activities
+      description: ReCR Retrieve details relating to the strategy and any supporting activities
+      operationId: Retrieve
+      parameters:
+      - $ref: '#/components/parameters/SegmentDirectionID'
+      responses:
+        200:
+          description: Success
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/SegmentStrategy'
+        400:
+          $ref: '#/components/responses/BadRequestError'
+        401:
+          $ref: '#/components/responses/UnauthorizedError'
+        403:
+          $ref: '#/components/responses/ForbiddenError'
+        404:
+          $ref: '#/components/responses/NotFoundError'
+        429:
+          $ref: '#/components/responses/TooManyRequestsError'
+        500:
+          $ref: '#/components/responses/InternalServerError'
   /SegmentDirection/{segmentdirectionId}/Initiative/Create:
     post:
       tags:
@@ -307,7 +335,7 @@ components:
       type: object
       properties:
         SegmentInitiativeBusinessUnitReference:
-          type: object
+          type: string
         SegmentInitiativeType:
           type: string
         SegmentInitiativeDescription:
@@ -319,9 +347,9 @@ components:
         SegmentInitiativeResult:
           type: string
         DocumentDirectoryEntryInstanceReference:
-          type: object
+          type: string
         CorrespondenceInstanceReference:
-          type: object
+          type: string
         DateType:
           type: string
         Date:

@@ -568,32 +568,6 @@ components:
           type: string
         CurrencyExchangeTransactionTransaction:
           type: string
-    FXTransactionPricing:
-      type: object
-      properties:
-        ? >-
-          Executeawell-boundedfinancialtransaction/task,typicallyinvolvinglargelyautomated/structuredfulfillmentprocessingwithinCurrencyExchange.
-
-          Example:Executeapaymenttransaction.
-        : type: string
-        FXTransactionPricingPreconditions:
-          type: string
-        FXTransactionPricingTaskSchedule:
-          type: string
-        OTCFXTransactionPricing:
-          type: object
-        FXTransactionPricingPostconditions:
-          type: string
-        FXTransactionPricingOTCFXTransactionPricingServiceType:
-          type: string
-        FXTransactionPricingOTCFXTransactionPricingServiceDescription:
-          type: string
-        FXTransactionPricingOTCFXTransactionPricingServiceInputsandOuputs:
-          type: string
-        FXTransactionPricingOTCFXTransactionPricingServiceWorkProduct:
-          type: string
-        FXTransactionPricingOTCFXTransactionPricingServiceName:
-          type: string
     FXTransactionCapture:
       type: object
       properties:
@@ -607,7 +581,7 @@ components:
         FXTransactionCaptureTaskSchedule:
           type: string
         FXTransactionCapture:
-          type: object
+          type: string
         FXTransactionCapturePostconditions:
           type: string
         FXTransactionCaptureFXTransactionCaptureServiceType:
@@ -619,6 +593,32 @@ components:
         FXTransactionCaptureFXTransactionCaptureServiceWorkProduct:
           type: string
         FXTransactionCaptureFXTransactionCaptureServiceName:
+          type: string
+    DocumentHandling:
+      type: object
+      properties:
+        ? >-
+          Executeawell-boundedfinancialtransaction/task,typicallyinvolvinglargelyautomated/structuredfulfillmentprocessingwithinCurrencyExchange.
+
+          Example:Executeapaymenttransaction.
+        : type: string
+        DocumentHandlingPreconditions:
+          type: string
+        DocumentHandlingTaskSchedule:
+          type: string
+        DocumentServices:
+          type: string
+        DocumentHandlingPostconditions:
+          type: string
+        DocumentHandlingDocumentServicesServiceType:
+          type: string
+        DocumentHandlingDocumentServicesServiceDescription:
+          type: string
+        DocumentHandlingDocumentServicesServiceInputsandOuputs:
+          type: string
+        DocumentHandlingDocumentServicesServiceWorkProduct:
+          type: string
+        DocumentHandlingDocumentServicesServiceName:
           type: string
     CurrencyExchangeOutcome:
       type: object
@@ -645,7 +645,7 @@ components:
           type: string
         CurrencyExchangeWorkProduct:
           type: string
-    DocumentHandling:
+    FXTransactionPricing:
       type: object
       properties:
         ? >-
@@ -653,23 +653,23 @@ components:
 
           Example:Executeapaymenttransaction.
         : type: string
-        DocumentHandlingPreconditions:
+        FXTransactionPricingPreconditions:
           type: string
-        DocumentHandlingTaskSchedule:
+        FXTransactionPricingTaskSchedule:
           type: string
-        DocumentServices:
-          type: object
-        DocumentHandlingPostconditions:
+        OTCFXTransactionPricing:
           type: string
-        DocumentHandlingDocumentServicesServiceType:
+        FXTransactionPricingPostconditions:
           type: string
-        DocumentHandlingDocumentServicesServiceDescription:
+        FXTransactionPricingOTCFXTransactionPricingServiceType:
           type: string
-        DocumentHandlingDocumentServicesServiceInputsandOuputs:
+        FXTransactionPricingOTCFXTransactionPricingServiceDescription:
           type: string
-        DocumentHandlingDocumentServicesServiceWorkProduct:
+        FXTransactionPricingOTCFXTransactionPricingServiceInputsandOuputs:
           type: string
-        DocumentHandlingDocumentServicesServiceName:
+        FXTransactionPricingOTCFXTransactionPricingServiceWorkProduct:
+          type: string
+        FXTransactionPricingOTCFXTransactionPricingServiceName:
           type: string
     HTTPError:
       type: object
@@ -689,16 +689,16 @@ components:
       explode: false
       schema:
         type: string
-    FXTransactionPricingID:
-      name: fxtransactionpricingId
+    FXTransactionCaptureID:
+      name: fxtransactioncaptureId
       in: path
       required: true
       style: simple
       explode: false
       schema:
         type: string
-    FXTransactionCaptureID:
-      name: fxtransactioncaptureId
+    DocumentHandlingID:
+      name: documenthandlingId
       in: path
       required: true
       style: simple
@@ -713,8 +713,8 @@ components:
       explode: false
       schema:
         type: string
-    DocumentHandlingID:
-      name: documenthandlingId
+    FXTransactionPricingID:
+      name: fxtransactionpricingId
       in: path
       required: true
       style: simple

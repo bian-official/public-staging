@@ -401,13 +401,13 @@ components:
       type: object
       properties:
         ProductInstanceReference:
-          type: object
+          type: string
         InvestmentAccountNumber:
           type: string
         CustomerReference:
-          type: object
+          type: string
         BankBranchOrLocationReference:
-          type: object
+          type: string
         LinkedCashAccount:
           type: string
         LinkType:
@@ -423,9 +423,9 @@ components:
         InstrumentType:
           type: string
         InstrumentReference:
-          type: object
+          type: string
         TradingMarketplaceReference:
-          type: object
+          type: string
         InstrumentPositionRecord:
           type: string
         InstrumentPositionLimitType:
@@ -443,7 +443,7 @@ components:
         InstrumentEventDate:
           type: string
         TaxReference:
-          type: object
+          type: string
         EntitlementOptionDefinition:
           type: string
         EntitlementOptionSetting:
@@ -476,41 +476,10 @@ components:
         CorporateActionWorkProducts:
           type: string
         DocumentDirectoryEntryInstanceReference:
-          type: object
+          type: string
         CorporateActionTransactionResult:
           type: string
         CorporateActionTransactionDate:
-          type: string
-    DepositsandWithdrawals:
-      type: object
-      properties:
-        SecuritiesDepositType:
-          type: string
-        SecuritiesWithdrawalType:
-          type: string
-        SecuritiesDepositTransaction:
-          type: string
-        SecuritiesDepositTransactionSourceReference:
-          type: object
-        SecuritiesDepositTransactionDepositType:
-          type: string
-        SecuritiesDepositTransactionDescription:
-          type: string
-        SecuritiesDepositTransactionAmount:
-          type: number
-        SecuritiesDepositTransactionDate:
-          type: string
-        SecuritiesWithdrawalTransaction:
-          type: string
-        SecuritiesWithdrawalTransactionSourceReference:
-          type: object
-        SecuritiesWithdrawalTransactionWithdrawalType:
-          type: string
-        SecuritiesWithdrawalTransactionDescription:
-          type: string
-        SecuritiesWithdrawalTransactionAmount:
-          type: number
-        SecuritiesWithdrawalTransactionDate:
           type: string
     ServiceFees:
       type: object
@@ -532,7 +501,7 @@ components:
         TransactionFeeCharge:
           type: string
         PaymentOrderProcedureInstanceReference:
-          type: object
+          type: string
         FeeProjectionsandCommitments:
           type: string
         ProjectedTransactionDescription:
@@ -542,10 +511,41 @@ components:
         ProjectedTransactionFeeCharge:
           type: string
         FeeAccrualAmount:
-          type: number
+          type: string
         AccrualFeeType:
           type: string
         AccrualFeeCharge:
+          type: string
+    DepositsandWithdrawals:
+      type: object
+      properties:
+        SecuritiesDepositType:
+          type: string
+        SecuritiesWithdrawalType:
+          type: string
+        SecuritiesDepositTransaction:
+          type: string
+        SecuritiesDepositTransactionSourceReference:
+          type: string
+        SecuritiesDepositTransactionDepositType:
+          type: string
+        SecuritiesDepositTransactionDescription:
+          type: string
+        SecuritiesDepositTransactionAmount:
+          type: string
+        SecuritiesDepositTransactionDate:
+          type: string
+        SecuritiesWithdrawalTransaction:
+          type: string
+        SecuritiesWithdrawalTransactionSourceReference:
+          type: string
+        SecuritiesWithdrawalTransactionWithdrawalType:
+          type: string
+        SecuritiesWithdrawalTransactionDescription:
+          type: string
+        SecuritiesWithdrawalTransactionAmount:
+          type: string
+        SecuritiesWithdrawalTransactionDate:
           type: string
     HTTPError:
       type: object
@@ -573,16 +573,16 @@ components:
       explode: false
       schema:
         type: string
-    DepositsandWithdrawalsID:
-      name: depositsandwithdrawalsId
+    ServiceFeesID:
+      name: servicefeesId
       in: path
       required: true
       style: simple
       explode: false
       schema:
         type: string
-    ServiceFeesID:
-      name: servicefeesId
+    DepositsandWithdrawalsID:
+      name: depositsandwithdrawalsId
       in: path
       required: true
       style: simple

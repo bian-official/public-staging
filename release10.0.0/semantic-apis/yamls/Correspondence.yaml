@@ -124,35 +124,6 @@ paths:
           $ref: '#/components/responses/TooManyRequestsError'
         500:
           $ref: '#/components/responses/InternalServerError'
-  /Correspondence/Activate:
-    post:
-      tags:
-      - CR - CorrespondenceOperatingSession
-      summary: InBQ Initiate processing outbound correspondence with tracked response
-      description: InBQ Initiate processing outbound correspondence with tracked response
-      operationId: Activate
-      parameters: []
-      requestBody:
-        $ref: '#/components/requestBodies/ActivateCorrespondenceOperatingSessionRequest'
-      responses:
-        200:
-          description: Success
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/ActivateCorrespondenceOperatingSessionResponse'
-        400:
-          $ref: '#/components/responses/BadRequestError'
-        401:
-          $ref: '#/components/responses/UnauthorizedError'
-        403:
-          $ref: '#/components/responses/ForbiddenError'
-        404:
-          $ref: '#/components/responses/NotFoundError'
-        429:
-          $ref: '#/components/responses/TooManyRequestsError'
-        500:
-          $ref: '#/components/responses/InternalServerError'
   /Correspondence/{correspondenceId}/Outbound/Initiate:
     post:
       tags:
@@ -231,6 +202,96 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/RetrieveOutboundResponse'
+        400:
+          $ref: '#/components/responses/BadRequestError'
+        401:
+          $ref: '#/components/responses/UnauthorizedError'
+        403:
+          $ref: '#/components/responses/ForbiddenError'
+        404:
+          $ref: '#/components/responses/NotFoundError'
+        429:
+          $ref: '#/components/responses/TooManyRequestsError'
+        500:
+          $ref: '#/components/responses/InternalServerError'
+  /Correspondence/{correspondenceId}/OutboundWithResponse/Initiate:
+    post:
+      tags:
+      - BQ - OutboundWithResponse
+      summary: InBQ Initiate processing outbound correspondence with tracked response
+      description: InBQ Initiate processing outbound correspondence with tracked response
+      operationId: InitiateOutboundWithResponse
+      parameters:
+      - $ref: '#/components/parameters/CorrespondenceID'
+      requestBody:
+        $ref: '#/components/requestBodies/InitiateOutboundWithResponseRequest'
+      responses:
+        200:
+          description: Success
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/InitiateOutboundWithResponseResponse'
+        400:
+          $ref: '#/components/responses/BadRequestError'
+        401:
+          $ref: '#/components/responses/UnauthorizedError'
+        403:
+          $ref: '#/components/responses/ForbiddenError'
+        404:
+          $ref: '#/components/responses/NotFoundError'
+        429:
+          $ref: '#/components/responses/TooManyRequestsError'
+        500:
+          $ref: '#/components/responses/InternalServerError'
+  /Correspondence/{correspondenceId}/OutboundWithResponse/{outboundwithresponseId}/Update:
+    put:
+      tags:
+      - BQ - OutboundWithResponse
+      summary: UpBQ Update details of an outbound correspondence with tracked response
+      description: UpBQ Update details of an outbound correspondence with tracked response
+      operationId: UpdateOutboundWithResponse
+      parameters:
+      - $ref: '#/components/parameters/CorrespondenceID'
+      - $ref: '#/components/parameters/OutboundWithResponseID'
+      requestBody:
+        $ref: '#/components/requestBodies/UpdateOutboundWithResponseRequest'
+      responses:
+        200:
+          description: Success
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/UpdateOutboundWithResponseResponse'
+        400:
+          $ref: '#/components/responses/BadRequestError'
+        401:
+          $ref: '#/components/responses/UnauthorizedError'
+        403:
+          $ref: '#/components/responses/ForbiddenError'
+        404:
+          $ref: '#/components/responses/NotFoundError'
+        429:
+          $ref: '#/components/responses/TooManyRequestsError'
+        500:
+          $ref: '#/components/responses/InternalServerError'
+  /Correspondence/{correspondenceId}/OutboundWithResponse/{outboundwithresponseId}/Retrieve:
+    get:
+      tags:
+      - BQ - OutboundWithResponse
+      summary: ReBQ Retrieve details about an outbound correspondence with tracked response
+      description: ReBQ Retrieve details about an outbound correspondence with tracked response
+      operationId: RetrieveOutboundWithResponse
+      parameters:
+      - $ref: '#/components/parameters/CorrespondenceID'
+      - $ref: '#/components/parameters/OutboundWithResponseID'
+      responses:
+        200:
+          description: Success
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/RetrieveOutboundWithResponseResponse'
         400:
           $ref: '#/components/responses/BadRequestError'
         401:
@@ -436,22 +497,17 @@ components:
           type: string
         CorrespondenceServiceSessionDate:
           type: string
-    BlockMailing:
-      type: object
-      properties:
-        BlockmailingRecord:
-          type: string
     Outbound:
       type: object
       properties:
         CorrespondenceSourceReference:
-          type: object
+          type: string
         CorrespondenceRecord:
           type: string
         CorrespondenceType:
           type: string
         CorrespondenceTemplateReference:
-          type: object
+          type: string
         CorrespondenceTemplateRecord:
           type: string
         CorrespondenceContent:
@@ -461,9 +517,9 @@ components:
         CorrespondenceAddressee:
           type: string
         CustomerReference:
-          type: object
+          type: string
         ChannelAccessPreferenceReference:
-          type: object
+          type: string
         ChannelAccessPreferenceProfile:
           type: string
         ChannelAccessChannel/DeviceType:
@@ -473,7 +529,7 @@ components:
         ProductandServiceType:
           type: string
         Employee/BusinessUnitReference:
-          type: object
+          type: string
         DateType:
           type: string
         Date:
@@ -482,7 +538,7 @@ components:
       type: object
       properties:
         InboundCorrespondenceInstanceReference:
-          type: object
+          type: string
         InboundCorrespondenceRecord:
           type: string
         InboundCorrespondenceType(e.g.unsolicitedmessage,product/servicerelated,complaint):
@@ -492,21 +548,26 @@ components:
         InboundCorrespondenceAddressee:
           type: string
         InboundCorrespondenceCustomerReference:
-          type: object
+          type: string
         InboundCorrespondenceEmployee/BusinessUnitReference:
-          type: object
+          type: string
         DateType:
           type: string
         Date:
           type: string
-    OutboundWithResponseInstanceRecord:
+    OutboundWithResponse:
       type: object
       properties:
         ResponseDueDate:
           type: string
         ResponseCorrespondenceReference:
-          type: object
+          type: string
         ResponseCorrespondenceRecord:
+          type: string
+    BlockMailing:
+      type: object
+      properties:
+        BlockmailingRecord:
           type: string
     HTTPError:
       type: object
@@ -563,106 +624,6 @@ components:
             EmployeeOrBusinessUnitReference:
               type: object
             DateType:
-              type: string
-    ActivateCorrespondenceOperatingSessionRequest:
-      type: object
-      properties:
-        CorrespondenceOperatingSession:
-          type: object
-          properties:
-            CorrespondenceServiceSessionStatistics:
-              type: string
-        Outbound:
-          type: object
-          properties:
-            CorrespondenceRecord:
-              type: string
-            CorrespondenceType:
-              type: string
-            CorrespondenceTemplateReference:
-              type: object
-            CorrespondenceTemplateRecord:
-              type: string
-            CorrespondenceContent:
-              type: string
-            CorrespondenceMediaOrChannel:
-              type: string
-            CorrespondenceAddressee:
-              type: string
-            CustomerReference:
-              type: object
-            ChannelAccessPreferenceReference:
-              type: object
-            ChannelAccessPreferenceProfile:
-              type: string
-            ChannelAccessChannelOrDeviceType:
-              type: string
-            ChannelAccessChannelOrDeviceTypePreference:
-              type: string
-            ProductandServiceType:
-              type: string
-            EmployeeOrBusinessUnitReference:
-              type: object
-            DateType:
-              type: string
-        OutboundWithResponseInstanceRecord:
-          type: object
-          properties:
-            ResponseDueDate:
-              type: string
-            ResponseCorrespondenceReference:
-              type: object
-            ResponseCorrespondenceRecord:
-              type: string
-    ActivateCorrespondenceOperatingSessionResponse:
-      type: object
-      properties:
-        CorrespondenceOperatingSession:
-          type: object
-          properties:
-            CorrespondenceServiceSessionStatistics:
-              type: string
-        Outbound:
-          type: object
-          properties:
-            DateType:
-              type: string
-            CorrespondenceRecord:
-              type: string
-            CorrespondenceType:
-              type: string
-            CorrespondenceTemplateReference:
-              type: object
-            CorrespondenceTemplateRecord:
-              type: string
-            CorrespondenceContent:
-              type: string
-            CorrespondenceMediaOrChannel:
-              type: string
-            CorrespondenceAddressee:
-              type: string
-            CustomerReference:
-              type: object
-            ChannelAccessPreferenceReference:
-              type: object
-            ChannelAccessPreferenceProfile:
-              type: string
-            ChannelAccessChannelOrDeviceType:
-              type: string
-            ChannelAccessChannelOrDeviceTypePreference:
-              type: string
-            ProductandServiceType:
-              type: string
-            EmployeeOrBusinessUnitReference:
-              type: object
-        OutboundWithResponseInstanceRecord:
-          type: object
-          properties:
-            ResponseDueDate:
-              type: string
-            ResponseCorrespondenceReference:
-              type: object
-            ResponseCorrespondenceRecord:
               type: string
     InitiateOutboundRequest:
       type: object
@@ -848,6 +809,219 @@ components:
             EmployeeOrBusinessUnitReference:
               type: object
             DateType:
+              type: string
+    InitiateOutboundWithResponseRequest:
+      type: object
+      properties:
+        CorrespondenceOperatingSession:
+          type: object
+          properties:
+            CorrespondenceServiceSessionStatistics:
+              type: string
+        Outbound:
+          type: object
+          properties:
+            CorrespondenceRecord:
+              type: string
+            CorrespondenceType:
+              type: string
+            CorrespondenceTemplateReference:
+              type: object
+            CorrespondenceTemplateRecord:
+              type: string
+            CorrespondenceContent:
+              type: string
+            CorrespondenceMediaOrChannel:
+              type: string
+            CorrespondenceAddressee:
+              type: string
+            CustomerReference:
+              type: object
+            ChannelAccessPreferenceReference:
+              type: object
+            ChannelAccessPreferenceProfile:
+              type: string
+            ChannelAccessChannelOrDeviceType:
+              type: string
+            ChannelAccessChannelOrDeviceTypePreference:
+              type: string
+            ProductandServiceType:
+              type: string
+            EmployeeOrBusinessUnitReference:
+              type: object
+            DateType:
+              type: string
+        OutboundWithResponse:
+          type: object
+          properties:
+            ResponseDueDate:
+              type: string
+            ResponseCorrespondenceReference:
+              type: object
+            ResponseCorrespondenceRecord:
+              type: string
+    InitiateOutboundWithResponseResponse:
+      type: object
+      properties:
+        CorrespondenceOperatingSession:
+          type: object
+          properties:
+            CorrespondenceServiceSessionStatistics:
+              type: string
+        Outbound:
+          type: object
+          properties:
+            DateType:
+              type: string
+    UpdateOutboundWithResponseRequest:
+      type: object
+      properties:
+        CorrespondenceOperatingSession:
+          type: object
+          properties:
+            CorrespondenceServiceSessionStatistics:
+              type: string
+        Outbound:
+          type: object
+          properties:
+            CorrespondenceRecord:
+              type: string
+            CorrespondenceType:
+              type: string
+            CorrespondenceTemplateReference:
+              type: object
+            CorrespondenceTemplateRecord:
+              type: string
+            CorrespondenceContent:
+              type: string
+            CorrespondenceMediaOrChannel:
+              type: string
+            CorrespondenceAddressee:
+              type: string
+            CustomerReference:
+              type: object
+            ChannelAccessPreferenceReference:
+              type: object
+            ChannelAccessPreferenceProfile:
+              type: string
+            ChannelAccessChannelOrDeviceType:
+              type: string
+            ChannelAccessChannelOrDeviceTypePreference:
+              type: string
+            ProductandServiceType:
+              type: string
+            EmployeeOrBusinessUnitReference:
+              type: object
+            DateType:
+              type: string
+        OutboundWithResponse:
+          type: object
+          properties:
+            ResponseDueDate:
+              type: string
+            ResponseCorrespondenceReference:
+              type: object
+            ResponseCorrespondenceRecord:
+              type: string
+    UpdateOutboundWithResponseResponse:
+      type: object
+      properties:
+        CorrespondenceOperatingSession:
+          type: object
+          properties:
+            CorrespondenceServiceSessionStatistics:
+              type: string
+        Outbound:
+          type: object
+          properties:
+            CorrespondenceRecord:
+              type: string
+            CorrespondenceType:
+              type: string
+            CorrespondenceTemplateReference:
+              type: object
+            CorrespondenceTemplateRecord:
+              type: string
+            CorrespondenceContent:
+              type: string
+            CorrespondenceMediaOrChannel:
+              type: string
+            CorrespondenceAddressee:
+              type: string
+            CustomerReference:
+              type: object
+            ChannelAccessPreferenceReference:
+              type: object
+            ChannelAccessPreferenceProfile:
+              type: string
+            ChannelAccessChannelOrDeviceType:
+              type: string
+            ChannelAccessChannelOrDeviceTypePreference:
+              type: string
+            ProductandServiceType:
+              type: string
+            EmployeeOrBusinessUnitReference:
+              type: object
+            DateType:
+              type: string
+        OutboundWithResponse:
+          type: object
+          properties:
+            ResponseDueDate:
+              type: string
+            ResponseCorrespondenceReference:
+              type: object
+            ResponseCorrespondenceRecord:
+              type: string
+    RetrieveOutboundWithResponseResponse:
+      type: object
+      properties:
+        CorrespondenceOperatingSession:
+          type: object
+          properties:
+            CorrespondenceServiceSessionStatistics:
+              type: string
+        Outbound:
+          type: object
+          properties:
+            CorrespondenceRecord:
+              type: string
+            CorrespondenceType:
+              type: string
+            CorrespondenceTemplateReference:
+              type: object
+            CorrespondenceTemplateRecord:
+              type: string
+            CorrespondenceContent:
+              type: string
+            CorrespondenceMediaOrChannel:
+              type: string
+            CorrespondenceAddressee:
+              type: string
+            CustomerReference:
+              type: object
+            ChannelAccessPreferenceReference:
+              type: object
+            ChannelAccessPreferenceProfile:
+              type: string
+            ChannelAccessChannelOrDeviceType:
+              type: string
+            ChannelAccessChannelOrDeviceTypePreference:
+              type: string
+            ProductandServiceType:
+              type: string
+            EmployeeOrBusinessUnitReference:
+              type: object
+            DateType:
+              type: string
+        OutboundWithResponse:
+          type: object
+          properties:
+            ResponseDueDate:
+              type: string
+            ResponseCorrespondenceReference:
+              type: object
+            ResponseCorrespondenceRecord:
               type: string
     InitiateInboundRequest:
       type: object
@@ -1181,14 +1355,6 @@ components:
       explode: false
       schema:
         type: string
-    BlockMailingID:
-      name: blockmailingId
-      in: path
-      required: true
-      style: simple
-      explode: false
-      schema:
-        type: string
     OutboundID:
       name: outboundId
       in: path
@@ -1205,8 +1371,16 @@ components:
       explode: false
       schema:
         type: string
-    OutboundWithResponseInstanceRecordID:
-      name: outboundwithresponseinstancerecordId
+    OutboundWithResponseID:
+      name: outboundwithresponseId
+      in: path
+      required: true
+      style: simple
+      explode: false
+      schema:
+        type: string
+    BlockMailingID:
+      name: blockmailingId
       in: path
       required: true
       style: simple
@@ -1220,12 +1394,6 @@ components:
         application/json:
           schema:
             $ref: '#/components/schemas/CorrespondenceOperatingSession'
-    ActivateCorrespondenceOperatingSessionRequest:
-      required: true
-      content:
-        application/json:
-          schema:
-            $ref: '#/components/schemas/ActivateCorrespondenceOperatingSessionRequest'
     InitiateOutboundRequest:
       required: true
       content:
@@ -1238,6 +1406,18 @@ components:
         application/json:
           schema:
             $ref: '#/components/schemas/UpdateOutboundRequest'
+    InitiateOutboundWithResponseRequest:
+      required: true
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/InitiateOutboundWithResponseRequest'
+    UpdateOutboundWithResponseRequest:
+      required: true
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/UpdateOutboundWithResponseRequest'
     InitiateInboundRequest:
       required: true
       content:

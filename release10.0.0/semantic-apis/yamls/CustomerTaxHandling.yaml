@@ -280,40 +280,22 @@ components:
       type: object
       properties:
         CustomerReference:
-          type: object
+          type: string
         CustomerTaxHandlingArrangementRecord:
           type: string
         TaxationJurisdictionReference:
-          type: object
+          type: string
         ApplicableTaxationRuleReference:
-          type: object
+          type: string
         ApplicableTaxationRuleDefinition:
           type: string
         CustomerTaxReportingSchedule:
-          type: string
-    Reporting:
-      type: object
-      properties:
-        CustomerTaxReportInstanceReference:
-          type: object
-        CustomerTaxReportType:
-          type: string
-        CustomerTaxReportPeriod:
-          type: string
-        CustomerTaxReportReport:
-          type: string
-        CustomerTaxHandlingReportingWorkProducts:
-          type: string
-    Analysis:
-      type: object
-      properties:
-        CustomerTaxHandlingAnalysisWorkProducts:
           type: string
     Consolidation:
       type: object
       properties:
         ProductInstanceReference:
-          type: object
+          type: string
         ProductArrangementInstanceReportType:
           type: string
         ProductArrangementInstanceReport:
@@ -327,6 +309,24 @@ components:
         Report:
           type: string
         CustomerTaxHandlingConsolidationWorkProducts:
+          type: string
+    Analysis:
+      type: object
+      properties:
+        CustomerTaxHandlingAnalysisWorkProducts:
+          type: string
+    Reporting:
+      type: object
+      properties:
+        CustomerTaxReportInstanceReference:
+          type: string
+        CustomerTaxReportType:
+          type: string
+        CustomerTaxReportPeriod:
+          type: string
+        CustomerTaxReportReport:
+          type: string
+        CustomerTaxHandlingReportingWorkProducts:
           type: string
     HTTPError:
       type: object
@@ -493,8 +493,8 @@ components:
       explode: false
       schema:
         type: string
-    ReportingID:
-      name: reportingId
+    ConsolidationID:
+      name: consolidationId
       in: path
       required: true
       style: simple
@@ -509,8 +509,8 @@ components:
       explode: false
       schema:
         type: string
-    ConsolidationID:
-      name: consolidationId
+    ReportingID:
+      name: reportingId
       in: path
       required: true
       style: simple

@@ -380,9 +380,9 @@ components:
         ChequeProcessingOperatingSessionUsageLog:
           type: string
         ChequeProcessingOperatingSessionReference:
-          type: object
+          type: string
         ChequeProcessingOperatingSessionServiceProviderReference:
-          type: object
+          type: string
         ChequeProcessingOperatingSessionType:
           type: string
         ChequeProcessingOperatingSessionServiceProviderSchedule:
@@ -404,7 +404,7 @@ components:
         CancelledChequeHandlingFunctionSchedule:
           type: string
         CancelledChequeHandling:
-          type: object
+          type: string
         CancelledChequeHandlingServiceType:
           type: string
         CancelledChequeHandlingServiceDescription:
@@ -414,6 +414,13 @@ components:
         CancelledChequeHandlingServiceWorkProduct:
           type: string
         CancelledChequeHandlingServiceName:
+          type: string
+    ChequeProcessingOutcome:
+      type: object
+      properties:
+        ChequeProcessingIncident:
+          type: string
+        ChequeProcessingProvision:
           type: string
     ChequeExtraction:
       type: object
@@ -428,7 +435,7 @@ components:
         ChequeExtractionFunctionSchedule:
           type: string
         ChequeExtraction:
-          type: object
+          type: string
         ChequeExtractionServiceType:
           type: string
         ChequeExtractionServiceDescription:
@@ -438,13 +445,6 @@ components:
         ChequeExtractionServiceWorkProduct:
           type: string
         ChequeExtractionServiceName:
-          type: string
-    ChequeProcessingOutcome:
-      type: object
-      properties:
-        ChequeProcessingIncident:
-          type: string
-        ChequeProcessingProvision:
           type: string
     FinancialTransactionInitiation:
       type: object
@@ -459,7 +459,7 @@ components:
         FinancialTransactionInitiationFunctionSchedule:
           type: string
         FinancialTransactionInitiation:
-          type: object
+          type: string
         FinancialTransactionInitiationServiceType:
           type: string
         FinancialTransactionInitiationServiceDescription:
@@ -496,16 +496,16 @@ components:
       explode: false
       schema:
         type: string
-    ChequeExtractionID:
-      name: chequeextractionId
+    ChequeProcessingOutcomeID:
+      name: chequeprocessingoutcomeId
       in: path
       required: true
       style: simple
       explode: false
       schema:
         type: string
-    ChequeProcessingOutcomeID:
-      name: chequeprocessingoutcomeId
+    ChequeExtractionID:
+      name: chequeextractionId
       in: path
       required: true
       style: simple

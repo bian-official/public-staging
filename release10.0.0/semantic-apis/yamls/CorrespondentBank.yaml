@@ -46,14 +46,14 @@ paths:
       parameters:
       - $ref: '#/components/parameters/CorrespondentBankID'
       requestBody:
-        $ref: '#/components/requestBodies/UpdateCorrespondentBankArrangementRequest'
+        $ref: '#/components/requestBodies/CorrespondentBankArrangement'
       responses:
         200:
           description: Success
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/UpdateCorrespondentBankArrangementResponse'
+                $ref: '#/components/schemas/CorrespondentBankArrangement'
         400:
           $ref: '#/components/responses/BadRequestError'
         401:
@@ -82,34 +82,6 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/RetrieveCorrespondentBankArrangementResponse'
-        400:
-          $ref: '#/components/responses/BadRequestError'
-        401:
-          $ref: '#/components/responses/UnauthorizedError'
-        403:
-          $ref: '#/components/responses/ForbiddenError'
-        404:
-          $ref: '#/components/responses/NotFoundError'
-        429:
-          $ref: '#/components/responses/TooManyRequestsError'
-        500:
-          $ref: '#/components/responses/InternalServerError'
-  /CorrespondentBank/{correspondentbankId}/Request:
-    put:
-      tags:
-      - CR - CorrespondentBankArrangement
-      summary: RqBQ Request reconciliation processing for a correspondent
-      description: RqBQ Request reconciliation processing for a correspondent
-      operationId: Request
-      parameters:
-      - $ref: '#/components/parameters/CorrespondentBankID'
-      responses:
-        200:
-          description: Success
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/Reconciliations'
         400:
           $ref: '#/components/responses/BadRequestError'
         401:
@@ -398,13 +370,102 @@ paths:
           $ref: '#/components/responses/TooManyRequestsError'
         500:
           $ref: '#/components/responses/InternalServerError'
+  /CorrespondentBank/{correspondentbankId}/Reconciliation/{reconciliationId}/Update:
+    put:
+      tags:
+      - BQ - Reconciliation
+      summary: UpBQ Update a reconciliation task
+      description: UpBQ Update a reconciliation task
+      operationId: UpdateReconciliation
+      parameters:
+      - $ref: '#/components/parameters/CorrespondentBankID'
+      - $ref: '#/components/parameters/ReconciliationID'
+      requestBody:
+        $ref: '#/components/requestBodies/Reconciliation'
+      responses:
+        200:
+          description: Success
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Reconciliation'
+        400:
+          $ref: '#/components/responses/BadRequestError'
+        401:
+          $ref: '#/components/responses/UnauthorizedError'
+        403:
+          $ref: '#/components/responses/ForbiddenError'
+        404:
+          $ref: '#/components/responses/NotFoundError'
+        429:
+          $ref: '#/components/responses/TooManyRequestsError'
+        500:
+          $ref: '#/components/responses/InternalServerError'
+  /CorrespondentBank/{correspondentbankId}/Reconciliation/{reconciliationId}/Request:
+    put:
+      tags:
+      - BQ - Reconciliation
+      summary: RqBQ Request reconciliation processing for a correspondent
+      description: RqBQ Request reconciliation processing for a correspondent
+      operationId: RequestReconciliation
+      parameters:
+      - $ref: '#/components/parameters/CorrespondentBankID'
+      - $ref: '#/components/parameters/ReconciliationID'
+      responses:
+        200:
+          description: Success
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Reconciliation'
+        400:
+          $ref: '#/components/responses/BadRequestError'
+        401:
+          $ref: '#/components/responses/UnauthorizedError'
+        403:
+          $ref: '#/components/responses/ForbiddenError'
+        404:
+          $ref: '#/components/responses/NotFoundError'
+        429:
+          $ref: '#/components/responses/TooManyRequestsError'
+        500:
+          $ref: '#/components/responses/InternalServerError'
+  /CorrespondentBank/{correspondentbankId}/Reconciliation/{reconciliationId}/Retrieve:
+    get:
+      tags:
+      - BQ - Reconciliation
+      summary: ReBQ Retrieve details about reconciliation activity with a correspondent
+      description: ReBQ Retrieve details about reconciliation activity with a correspondent
+      operationId: RetrieveReconciliation
+      parameters:
+      - $ref: '#/components/parameters/CorrespondentBankID'
+      - $ref: '#/components/parameters/ReconciliationID'
+      responses:
+        200:
+          description: Success
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/RetrieveReconciliationResponse'
+        400:
+          $ref: '#/components/responses/BadRequestError'
+        401:
+          $ref: '#/components/responses/UnauthorizedError'
+        403:
+          $ref: '#/components/responses/ForbiddenError'
+        404:
+          $ref: '#/components/responses/NotFoundError'
+        429:
+          $ref: '#/components/responses/TooManyRequestsError'
+        500:
+          $ref: '#/components/responses/InternalServerError'
 components:
   schemas:
     CorrespondentBankArrangement:
       type: object
       properties:
         CorrespondentBankArrangementReference:
-          type: object
+          type: string
         CorrespondentBankArrangement:
           type: string
         CorrespondentBankServicingSchedule:
@@ -412,20 +473,51 @@ components:
         HolidayOrTimezoneSchedule:
           type: string
         VostroAccountReference:
-          type: object
+          type: string
         NostroMirrorAccountReference:
-          type: object
+          type: string
+    OutboundPayments:
+      type: object
+      properties:
+        CorrespondentTransactionRecord:
+          type: string
+        SWIFTTransactionReference:
+          type: string
+        PayerBankReference:
+          type: string
+        PayerReference:
+          type: string
+        CorrespondedBankReference:
+          type: string
+        PayerProductInstanceReference:
+          type: string
+        PayeeReference:
+          type: string
+        PayeeProductInstanceReference:
+          type: string
+        PayeeBankReference:
+          type: string
+        SpecialInstructions:
+          type: string
+        Amount:
+          type: string
+        Currency:
+          type: string
+        DateType:
+          type: string
+        Date:
+          type: string
     ClearingandSettlement:
       type: object
       properties:
         CorrespondentBankClearingArrangementReference:
-          type: object
+          type: string
         CorrespondentBankClearingArrangementClearingInstructions:
           type: string
         CorrespondentBankClearingArrangementSettlementInstructions:
           type: string
         MirrorNostroAccountReference:
-          type: object
+          type: string
         ClearingTransaction:
           type: string
         SettlementTransaction:
@@ -436,21 +528,21 @@ components:
         CorrespondentTransactionRecord:
           type: string
         SWIFTTransactionReference:
-          type: object
+          type: string
         PayerBankReference:
-          type: object
+          type: string
         PayerReference:
-          type: object
+          type: string
         CorrespondedBankReference:
-          type: object
+          type: string
         PayerProductInstanceReference:
-          type: object
+          type: string
         PayeeReference:
-          type: object
+          type: string
         PayeeProductInstanceReference:
-          type: object
+          type: string
         PayeeBankReference:
-          type: object
+          type: string
         SpecialInstructions:
           type: string
         Amount:
@@ -461,45 +553,14 @@ components:
           type: string
         Date:
           type: string
-    Reconciliations:
+    Reconciliation:
       type: object
       properties:
         CorrespondentBankReconciliationTaskReference:
-          type: object
+          type: string
         CorrespondentBankReconciliationTaskWorkProducts:
           type: string
         CorrespondentBankReconciliationTaskResult:
-          type: string
-    OutboundPayments:
-      type: object
-      properties:
-        CorrespondentTransactionRecord:
-          type: string
-        SWIFTTransactionReference:
-          type: object
-        PayerBankReference:
-          type: object
-        PayerReference:
-          type: object
-        CorrespondedBankReference:
-          type: object
-        PayerProductInstanceReference:
-          type: object
-        PayeeReference:
-          type: object
-        PayeeProductInstanceReference:
-          type: object
-        PayeeBankReference:
-          type: object
-        SpecialInstructions:
-          type: string
-        Amount:
-          type: string
-        Currency:
-          type: string
-        DateType:
-          type: string
-        Date:
           type: string
     HTTPError:
       type: object
@@ -510,54 +571,6 @@ components:
           type: string
         message:
           type: string
-    UpdateCorrespondentBankArrangementRequest:
-      type: object
-      properties:
-        CorrespondentBankArrangement:
-          type: object
-          properties:
-            CorrespondentBankArrangementReference:
-              type: object
-            CorrespondentBankServicingSchedule:
-              type: string
-            HolidayOrTimezoneSchedule:
-              type: string
-            VostroAccountReference:
-              type: object
-            NostroMirrorAccountReference:
-              type: object
-        Reconciliations:
-          type: object
-          properties:
-            CorrespondentBankReconciliationTaskReference:
-              type: object
-            CorrespondentBankReconciliationTaskWorkProducts:
-              type: string
-            CorrespondentBankReconciliationTaskResult:
-              type: string
-    UpdateCorrespondentBankArrangementResponse:
-      type: object
-      properties:
-        CorrespondentBankArrangement:
-          type: object
-          properties:
-            CorrespondentBankServicingSchedule:
-              type: string
-            HolidayOrTimezoneSchedule:
-              type: string
-            VostroAccountReference:
-              type: object
-            NostroMirrorAccountReference:
-              type: object
-        Reconciliations:
-          type: object
-          properties:
-            CorrespondentBankReconciliationTaskReference:
-              type: object
-            CorrespondentBankReconciliationTaskWorkProducts:
-              type: string
-            CorrespondentBankReconciliationTaskResult:
-              type: string
     RetrieveCorrespondentBankArrangementResponse:
       type: object
       properties:
@@ -594,15 +607,6 @@ components:
             Currency:
               type: string
             DateType:
-              type: string
-        Reconciliations:
-          type: object
-          properties:
-            CorrespondentBankReconciliationTaskReference:
-              type: object
-            CorrespondentBankReconciliationTaskWorkProducts:
-              type: string
-            CorrespondentBankReconciliationTaskResult:
               type: string
     RetrieveInboundPaymentsResponse:
       type: object
@@ -717,9 +721,42 @@ components:
               type: string
             SettlementTransaction:
               type: string
+    RetrieveReconciliationResponse:
+      type: object
+      properties:
+        CorrespondentBankArrangement:
+          type: object
+          properties:
+            CorrespondentBankArrangementReference:
+              type: object
+            CorrespondentBankServicingSchedule:
+              type: string
+            HolidayOrTimezoneSchedule:
+              type: string
+            VostroAccountReference:
+              type: object
+            NostroMirrorAccountReference:
+              type: object
+        Reconciliation:
+          type: object
+          properties:
+            CorrespondentBankReconciliationTaskReference:
+              type: object
+            CorrespondentBankReconciliationTaskWorkProducts:
+              type: string
+            CorrespondentBankReconciliationTaskResult:
+              type: string
   parameters:
     CorrespondentBankID:
       name: correspondentbankId
+      in: path
+      required: true
+      style: simple
+      explode: false
+      schema:
+        type: string
+    OutboundPaymentsID:
+      name: outboundpaymentsId
       in: path
       required: true
       style: simple
@@ -742,16 +779,8 @@ components:
       explode: false
       schema:
         type: string
-    ReconciliationsID:
-      name: reconciliationsId
-      in: path
-      required: true
-      style: simple
-      explode: false
-      schema:
-        type: string
-    OutboundPaymentsID:
-      name: outboundpaymentsId
+    ReconciliationID:
+      name: reconciliationId
       in: path
       required: true
       style: simple
@@ -765,12 +794,6 @@ components:
         application/json:
           schema:
             $ref: '#/components/schemas/CorrespondentBankArrangement'
-    UpdateCorrespondentBankArrangementRequest:
-      required: true
-      content:
-        application/json:
-          schema:
-            $ref: '#/components/schemas/UpdateCorrespondentBankArrangementRequest'
     InboundPayments:
       required: true
       content:
@@ -789,6 +812,12 @@ components:
         application/json:
           schema:
             $ref: '#/components/schemas/ClearingandSettlement'
+    Reconciliation:
+      required: true
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/Reconciliation'
   responses:
     HTTPError:
       description: Bad Request

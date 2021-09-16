@@ -751,34 +751,6 @@ components:
         ITSystemAdministrativePlanPlan:
           type: string
         ITSystemAdministrativePlanReference:
-          type: object
-    Inventory:
-      type: object
-      properties:
-        ? >-
-          Handleandassignthedaytodayactivities,capturetime,costsandincomeforanoperationalunitwithinSystemsAdministration.
-
-          Example:Administerthetimereportingandbillingforthespecialistsalessupportteam.
-        : type: string
-        InventoryPreconditions:
-          type: string
-        InventoryBusinessUnit/EmployeeReference:
-          type: object
-        InventoryWorkSchedule:
-          type: string
-        BusinessService:
-          type: object
-        InventoryPostconditions:
-          type: string
-        InventoryServiceType:
-          type: string
-        InventoryServiceDescription:
-          type: string
-        InventoryServiceInputsandOuputs:
-          type: string
-        InventoryServiceWorkProduct:
-          type: string
-        InventoryServiceName:
           type: string
     Assurance:
       type: object
@@ -791,11 +763,11 @@ components:
         AssurancePreconditions:
           type: string
         AssuranceBusinessUnit/EmployeeReference:
-          type: object
+          type: string
         AssuranceWorkSchedule:
           type: string
         CollateralItemAssurance:
-          type: object
+          type: string
         AssurancePostconditions:
           type: string
         AssuranceCollateralItemAssuranceServiceType:
@@ -807,6 +779,62 @@ components:
         AssuranceCollateralItemAssuranceServiceWorkProduct:
           type: string
         AssuranceCollateralItemAssuranceServiceName:
+          type: string
+    Inventory:
+      type: object
+      properties:
+        ? >-
+          Handleandassignthedaytodayactivities,capturetime,costsandincomeforanoperationalunitwithinSystemsAdministration.
+
+          Example:Administerthetimereportingandbillingforthespecialistsalessupportteam.
+        : type: string
+        InventoryPreconditions:
+          type: string
+        InventoryBusinessUnit/EmployeeReference:
+          type: string
+        InventoryWorkSchedule:
+          type: string
+        BusinessService:
+          type: string
+        InventoryPostconditions:
+          type: string
+        InventoryServiceType:
+          type: string
+        InventoryServiceDescription:
+          type: string
+        InventoryServiceInputsandOuputs:
+          type: string
+        InventoryServiceWorkProduct:
+          type: string
+        InventoryServiceName:
+          type: string
+    Configuration:
+      type: object
+      properties:
+        ? >-
+          Handleandassignthedaytodayactivities,capturetime,costsandincomeforanoperationalunitwithinSystemsAdministration.
+
+          Example:Administerthetimereportingandbillingforthespecialistsalessupportteam.
+        : type: string
+        ConfigurationPreconditions:
+          type: string
+        ConfigurationBusinessUnit/EmployeeReference:
+          type: string
+        ConfigurationWorkSchedule:
+          type: string
+        SystemsConfigurationAdministration:
+          type: string
+        ConfigurationPostconditions:
+          type: string
+        ConfigurationSystemsConfigurationAdministrationServiceType:
+          type: string
+        ConfigurationSystemsConfigurationAdministrationServiceDescription:
+          type: string
+        ConfigurationSystemsConfigurationAdministrationServiceInputsandOuputs:
+          type: string
+        ConfigurationSystemsConfigurationAdministrationServiceWorkProduct:
+          type: string
+        ConfigurationSystemsConfigurationAdministrationServiceName:
           type: string
     SystemsAdministrationOutcome:
       type: object
@@ -830,11 +858,11 @@ components:
         CapacityPlanningandResiliencePreconditions:
           type: string
         CapacityPlanningandResilienceBusinessUnit/EmployeeReference:
-          type: object
+          type: string
         CapacityPlanningandResilienceWorkSchedule:
           type: string
         CapacityPlanningandResilience:
-          type: object
+          type: string
         CapacityPlanningandResiliencePostconditions:
           type: string
         CapacityPlanningandResilienceCapacityPlanningandResilienceServiceType:
@@ -846,34 +874,6 @@ components:
         CapacityPlanningandResilienceCapacityPlanningandResilienceServiceWorkProduct:
           type: string
         CapacityPlanningandResilienceCapacityPlanningandResilienceServiceName:
-          type: string
-    Configuration:
-      type: object
-      properties:
-        ? >-
-          Handleandassignthedaytodayactivities,capturetime,costsandincomeforanoperationalunitwithinSystemsAdministration.
-
-          Example:Administerthetimereportingandbillingforthespecialistsalessupportteam.
-        : type: string
-        ConfigurationPreconditions:
-          type: string
-        ConfigurationBusinessUnit/EmployeeReference:
-          type: object
-        ConfigurationWorkSchedule:
-          type: string
-        SystemsConfigurationAdministration:
-          type: object
-        ConfigurationPostconditions:
-          type: string
-        ConfigurationSystemsConfigurationAdministrationServiceType:
-          type: string
-        ConfigurationSystemsConfigurationAdministrationServiceDescription:
-          type: string
-        ConfigurationSystemsConfigurationAdministrationServiceInputsandOuputs:
-          type: string
-        ConfigurationSystemsConfigurationAdministrationServiceWorkProduct:
-          type: string
-        ConfigurationSystemsConfigurationAdministrationServiceName:
           type: string
     HTTPError:
       type: object
@@ -893,6 +893,14 @@ components:
       explode: false
       schema:
         type: string
+    AssuranceID:
+      name: assuranceId
+      in: path
+      required: true
+      style: simple
+      explode: false
+      schema:
+        type: string
     InventoryID:
       name: inventoryId
       in: path
@@ -901,8 +909,8 @@ components:
       explode: false
       schema:
         type: string
-    AssuranceID:
-      name: assuranceId
+    ConfigurationID:
+      name: configurationId
       in: path
       required: true
       style: simple
@@ -919,14 +927,6 @@ components:
         type: string
     CapacityPlanningandResilienceID:
       name: capacityplanningandresilienceId
-      in: path
-      required: true
-      style: simple
-      explode: false
-      schema:
-        type: string
-    ConfigurationID:
-      name: configurationId
       in: path
       required: true
       style: simple

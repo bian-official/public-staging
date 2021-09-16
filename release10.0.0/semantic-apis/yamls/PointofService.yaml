@@ -584,7 +584,7 @@ components:
         ServicingPositionConfigurationOrSet-up:
           type: string
         ServicingPositionReference:
-          type: object
+          type: string
         ServicingPositionType:
           type: string
         ServicingPositionLocation:
@@ -592,7 +592,7 @@ components:
         ServicingPositionFacilityType:
           type: string
         ServicingPositionFacilityReference:
-          type: object
+          type: string
         ServicingPositionSchedule:
           type: string
         ServicingPositionActivityReport:
@@ -611,18 +611,23 @@ components:
         ServicingCashHoldingRecord:
           type: string
         ServicingCashTransactionReference:
-          type: object
+          type: string
         ServicingCashTransactionRecord:
           type: string
         ProductInstanceReference:
-          type: object
+          type: string
+    Interaction:
+      type: object
+      properties:
+        CustomerSessionDialogueReference:
+          type: string
     Assisted:
       type: object
       properties:
         Employee/BusinessUnitReference:
-          type: object
+          type: string
         CustomerContactReference:
-          type: object
+          type: string
     Inventory:
       type: object
       properties:
@@ -632,16 +637,11 @@ components:
           type: string
         ServicingInventoryTransactionRecord:
           type: string
-    Interaction:
-      type: object
-      properties:
-        CustomerSessionDialogueReference:
-          type: object
     Automated:
       type: object
       properties:
         BusinessUnitReference:
-          type: object
+          type: string
     HTTPError:
       type: object
       properties:
@@ -753,6 +753,14 @@ components:
       explode: false
       schema:
         type: string
+    InteractionID:
+      name: interactionId
+      in: path
+      required: true
+      style: simple
+      explode: false
+      schema:
+        type: string
     AssistedID:
       name: assistedId
       in: path
@@ -763,14 +771,6 @@ components:
         type: string
     InventoryID:
       name: inventoryId
-      in: path
-      required: true
-      style: simple
-      explode: false
-      schema:
-        type: string
-    InteractionID:
-      name: interactionId
       in: path
       required: true
       style: simple

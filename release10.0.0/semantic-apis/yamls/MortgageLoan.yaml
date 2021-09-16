@@ -1468,7 +1468,7 @@ components:
         MortgageLoanArrangementType:
           type: string
         MortgageLoanArrangementReference:
-          type: object
+          type: string
         MortgageLoanArrangementSchedule:
           type: string
         MortgageLoanArrangementStatus:
@@ -1476,7 +1476,7 @@ components:
         MortgageLoanArrangementCurrency:
           type: string
         MortgageLoanArrangementRegulationReference:
-          type: object
+          type: string
         MortgageLoanArrangementRegulationType:
           type: string
         MortgageLoanArrangementJurisdiction:
@@ -1486,7 +1486,7 @@ components:
         MortgageLoanArrangementAccountType:
           type: string
         MortgageLoanArrangementAccountReference:
-          type: object
+          type: string
     FinancialInstrument:
       type: object
       properties:
@@ -1500,7 +1500,7 @@ components:
         FinancialInstrumentFeatureSchedule:
           type: string
         FinancialInstrument:
-          type: object
+          type: string
         FinancialInstrumentPostconditions:
           type: string
         FinancialInstrumentFinancialInstrumentServiceType:
@@ -1512,13 +1512,6 @@ components:
         FinancialInstrumentFinancialInstrumentServiceWorkProduct:
           type: string
         FinancialInstrumentFinancialInstrumentServiceName:
-          type: string
-    MortgageLoanOutcome:
-      type: object
-      properties:
-        MortgageLoanFinancialFacility:
-          type: string
-        MortgageLoanWorkProduct:
           type: string
     Fees:
       type: object
@@ -1533,7 +1526,7 @@ components:
         FeesFeatureSchedule:
           type: string
         BusinessService:
-          type: object
+          type: string
         FeesPostconditions:
           type: string
         FeesServiceType:
@@ -1545,58 +1538,6 @@ components:
         FeesServiceWorkProduct:
           type: string
         FeesServiceName:
-          type: string
-    Collateral:
-      type: object
-      properties:
-        ? >-
-          Fulfillanyscheduledandad-hocobligationsunderaservicearrangement,mosttypicallyforafinancialproductorfacilitywithinMortgageLoan.
-
-          Example:Performthescheduled(e.g.statements,standingorders)andad-hoc/requested(e.g.balanceinquiries,fundtransfers)fulfillmenttasksforacustomercurrentaccountfacility.
-        : type: string
-        CollateralPreconditions:
-          type: string
-        CollateralFeatureSchedule:
-          type: string
-        BusinessService:
-          type: object
-        CollateralPostconditions:
-          type: string
-        CollateralServiceType:
-          type: string
-        CollateralServiceDescription:
-          type: string
-        CollateralServiceInputsandOuputs:
-          type: string
-        CollateralServiceWorkProduct:
-          type: string
-        CollateralServiceName:
-          type: string
-    Billing:
-      type: object
-      properties:
-        ? >-
-          Fulfillanyscheduledandad-hocobligationsunderaservicearrangement,mosttypicallyforafinancialproductorfacilitywithinMortgageLoan.
-
-          Example:Performthescheduled(e.g.statements,standingorders)andad-hoc/requested(e.g.balanceinquiries,fundtransfers)fulfillmenttasksforacustomercurrentaccountfacility.
-        : type: string
-        BillingPreconditions:
-          type: string
-        BillingFeatureSchedule:
-          type: string
-        BusinessService:
-          type: object
-        BillingPostconditions:
-          type: string
-        BillingServiceType:
-          type: string
-        BillingServiceDescription:
-          type: string
-        BillingServiceInputsandOuputs:
-          type: string
-        BillingServiceWorkProduct:
-          type: string
-        BillingServiceName:
           type: string
     FinancialAccounting:
       type: object
@@ -1611,7 +1552,7 @@ components:
         FinancialAccountingFeatureSchedule:
           type: string
         FinancialAccounting:
-          type: object
+          type: string
         FinancialAccountingPostconditions:
           type: string
         FinancialAccountingFinancialAccountingServiceType:
@@ -1623,6 +1564,39 @@ components:
         FinancialAccountingFinancialAccountingServiceWorkProduct:
           type: string
         FinancialAccountingFinancialAccountingServiceName:
+          type: string
+    MortgageLoanOutcome:
+      type: object
+      properties:
+        MortgageLoanFinancialFacility:
+          type: string
+        MortgageLoanWorkProduct:
+          type: string
+    Collateral:
+      type: object
+      properties:
+        ? >-
+          Fulfillanyscheduledandad-hocobligationsunderaservicearrangement,mosttypicallyforafinancialproductorfacilitywithinMortgageLoan.
+
+          Example:Performthescheduled(e.g.statements,standingorders)andad-hoc/requested(e.g.balanceinquiries,fundtransfers)fulfillmenttasksforacustomercurrentaccountfacility.
+        : type: string
+        CollateralPreconditions:
+          type: string
+        CollateralFeatureSchedule:
+          type: string
+        BusinessService:
+          type: string
+        CollateralPostconditions:
+          type: string
+        CollateralServiceType:
+          type: string
+        CollateralServiceDescription:
+          type: string
+        CollateralServiceInputsandOuputs:
+          type: string
+        CollateralServiceWorkProduct:
+          type: string
+        CollateralServiceName:
           type: string
     Deposits:
       type: object
@@ -1637,7 +1611,7 @@ components:
         DepositsFeatureSchedule:
           type: string
         DepositProcessing:
-          type: object
+          type: string
         DepositsPostconditions:
           type: string
         DepositsDepositProcessingServiceType:
@@ -1650,7 +1624,7 @@ components:
           type: string
         DepositsDepositProcessingServiceName:
           type: string
-    Sweep:
+    Billing:
       type: object
       properties:
         ? >-
@@ -1658,23 +1632,23 @@ components:
 
           Example:Performthescheduled(e.g.statements,standingorders)andad-hoc/requested(e.g.balanceinquiries,fundtransfers)fulfillmenttasksforacustomercurrentaccountfacility.
         : type: string
-        SweepPreconditions:
+        BillingPreconditions:
           type: string
-        SweepFeatureSchedule:
+        BillingFeatureSchedule:
           type: string
         BusinessService:
-          type: object
-        SweepPostconditions:
           type: string
-        SweepServiceType:
+        BillingPostconditions:
           type: string
-        SweepServiceDescription:
+        BillingServiceType:
           type: string
-        SweepServiceInputsandOuputs:
+        BillingServiceDescription:
           type: string
-        SweepServiceWorkProduct:
+        BillingServiceInputsandOuputs:
           type: string
-        SweepServiceName:
+        BillingServiceWorkProduct:
+          type: string
+        BillingServiceName:
           type: string
     Withdrawals:
       type: object
@@ -1689,7 +1663,7 @@ components:
         WithdrawalsFeatureSchedule:
           type: string
         WithdrawalProcessing:
-          type: object
+          type: string
         WithdrawalsPostconditions:
           type: string
         WithdrawalsWithdrawalProcessingServiceType:
@@ -1701,32 +1675,6 @@ components:
         WithdrawalsWithdrawalProcessingServiceWorkProduct:
           type: string
         WithdrawalsWithdrawalProcessingServiceName:
-          type: string
-    Payments:
-      type: object
-      properties:
-        ? >-
-          Fulfillanyscheduledandad-hocobligationsunderaservicearrangement,mosttypicallyforafinancialproductorfacilitywithinMortgageLoan.
-
-          Example:Performthescheduled(e.g.statements,standingorders)andad-hoc/requested(e.g.balanceinquiries,fundtransfers)fulfillmenttasksforacustomercurrentaccountfacility.
-        : type: string
-        PaymentsPreconditions:
-          type: string
-        PaymentsFeatureSchedule:
-          type: string
-        BusinessService:
-          type: object
-        PaymentsPostconditions:
-          type: string
-        PaymentsServiceType:
-          type: string
-        PaymentsServiceDescription:
-          type: string
-        PaymentsServiceInputsandOuputs:
-          type: string
-        PaymentsServiceWorkProduct:
-          type: string
-        PaymentsServiceName:
           type: string
     IssuedDevice:
       type: object
@@ -1741,7 +1689,7 @@ components:
         IssuedDeviceFeatureSchedule:
           type: string
         BusinessService:
-          type: object
+          type: string
         IssuedDevicePostconditions:
           type: string
         IssuedDeviceServiceType:
@@ -1753,6 +1701,58 @@ components:
         IssuedDeviceServiceWorkProduct:
           type: string
         IssuedDeviceServiceName:
+          type: string
+    Sweep:
+      type: object
+      properties:
+        ? >-
+          Fulfillanyscheduledandad-hocobligationsunderaservicearrangement,mosttypicallyforafinancialproductorfacilitywithinMortgageLoan.
+
+          Example:Performthescheduled(e.g.statements,standingorders)andad-hoc/requested(e.g.balanceinquiries,fundtransfers)fulfillmenttasksforacustomercurrentaccountfacility.
+        : type: string
+        SweepPreconditions:
+          type: string
+        SweepFeatureSchedule:
+          type: string
+        BusinessService:
+          type: string
+        SweepPostconditions:
+          type: string
+        SweepServiceType:
+          type: string
+        SweepServiceDescription:
+          type: string
+        SweepServiceInputsandOuputs:
+          type: string
+        SweepServiceWorkProduct:
+          type: string
+        SweepServiceName:
+          type: string
+    Payments:
+      type: object
+      properties:
+        ? >-
+          Fulfillanyscheduledandad-hocobligationsunderaservicearrangement,mosttypicallyforafinancialproductorfacilitywithinMortgageLoan.
+
+          Example:Performthescheduled(e.g.statements,standingorders)andad-hoc/requested(e.g.balanceinquiries,fundtransfers)fulfillmenttasksforacustomercurrentaccountfacility.
+        : type: string
+        PaymentsPreconditions:
+          type: string
+        PaymentsFeatureSchedule:
+          type: string
+        BusinessService:
+          type: string
+        PaymentsPostconditions:
+          type: string
+        PaymentsServiceType:
+          type: string
+        PaymentsServiceDescription:
+          type: string
+        PaymentsServiceInputsandOuputs:
+          type: string
+        PaymentsServiceWorkProduct:
+          type: string
+        PaymentsServiceName:
           type: string
     Interest:
       type: object
@@ -1767,7 +1767,7 @@ components:
         InterestFeatureSchedule:
           type: string
         BusinessService:
-          type: object
+          type: string
         InterestPostconditions:
           type: string
         InterestServiceType:
@@ -1793,7 +1793,7 @@ components:
         LienFeatureSchedule:
           type: string
         BusinessService:
-          type: object
+          type: string
         LienPostconditions:
           type: string
         LienServiceType:
@@ -1832,32 +1832,8 @@ components:
       explode: false
       schema:
         type: string
-    MortgageLoanOutcomeID:
-      name: mortgageloanoutcomeId
-      in: path
-      required: true
-      style: simple
-      explode: false
-      schema:
-        type: string
     FeesID:
       name: feesId
-      in: path
-      required: true
-      style: simple
-      explode: false
-      schema:
-        type: string
-    CollateralID:
-      name: collateralId
-      in: path
-      required: true
-      style: simple
-      explode: false
-      schema:
-        type: string
-    BillingID:
-      name: billingId
       in: path
       required: true
       style: simple
@@ -1872,6 +1848,22 @@ components:
       explode: false
       schema:
         type: string
+    MortgageLoanOutcomeID:
+      name: mortgageloanoutcomeId
+      in: path
+      required: true
+      style: simple
+      explode: false
+      schema:
+        type: string
+    CollateralID:
+      name: collateralId
+      in: path
+      required: true
+      style: simple
+      explode: false
+      schema:
+        type: string
     DepositsID:
       name: depositsId
       in: path
@@ -1880,8 +1872,8 @@ components:
       explode: false
       schema:
         type: string
-    SweepID:
-      name: sweepId
+    BillingID:
+      name: billingId
       in: path
       required: true
       style: simple
@@ -1896,16 +1888,24 @@ components:
       explode: false
       schema:
         type: string
-    PaymentsID:
-      name: paymentsId
+    IssuedDeviceID:
+      name: issueddeviceId
       in: path
       required: true
       style: simple
       explode: false
       schema:
         type: string
-    IssuedDeviceID:
-      name: issueddeviceId
+    SweepID:
+      name: sweepId
+      in: path
+      required: true
+      style: simple
+      explode: false
+      schema:
+        type: string
+    PaymentsID:
+      name: paymentsId
       in: path
       required: true
       style: simple

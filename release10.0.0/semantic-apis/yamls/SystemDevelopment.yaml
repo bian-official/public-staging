@@ -124,35 +124,6 @@ paths:
           $ref: '#/components/responses/TooManyRequestsError'
         500:
           $ref: '#/components/responses/InternalServerError'
-  /SystemDevelopment/Activate:
-    post:
-      tags:
-      - CR - ITSystemDevelopment
-      summary: UpBQ Update aspects of the software and data specification
-      description: UpBQ Update aspects of the software and data specification
-      operationId: Activate
-      parameters: []
-      requestBody:
-        $ref: '#/components/requestBodies/ActivateITSystemDevelopmentRequest'
-      responses:
-        200:
-          description: Success
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/ActivateITSystemDevelopmentResponse'
-        400:
-          $ref: '#/components/responses/BadRequestError'
-        401:
-          $ref: '#/components/responses/UnauthorizedError'
-        403:
-          $ref: '#/components/responses/ForbiddenError'
-        404:
-          $ref: '#/components/responses/NotFoundError'
-        429:
-          $ref: '#/components/responses/TooManyRequestsError'
-        500:
-          $ref: '#/components/responses/InternalServerError'
   /SystemDevelopment/{systemdevelopmentId}/FunctionalSpecification/{functionalspecificationId}/Update:
     put:
       tags:
@@ -385,6 +356,128 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/RetrieveTechnicalSpecificationResponse'
+        400:
+          $ref: '#/components/responses/BadRequestError'
+        401:
+          $ref: '#/components/responses/UnauthorizedError'
+        403:
+          $ref: '#/components/responses/ForbiddenError'
+        404:
+          $ref: '#/components/responses/NotFoundError'
+        429:
+          $ref: '#/components/responses/TooManyRequestsError'
+        500:
+          $ref: '#/components/responses/InternalServerError'
+  /SystemDevelopment/{systemdevelopmentId}/SoftwareandDataSpecification/{softwareanddataspecificationId}/Update:
+    put:
+      tags:
+      - BQ - SoftwareandDataSpecification
+      summary: UpBQ Update aspects of the software and data specification
+      description: UpBQ Update aspects of the software and data specification
+      operationId: UpdateSoftwareandDataSpecification
+      parameters:
+      - $ref: '#/components/parameters/SystemDevelopmentID'
+      - $ref: '#/components/parameters/SoftwareandDataSpecificationID'
+      requestBody:
+        $ref: '#/components/requestBodies/SoftwareandDataSpecification'
+      responses:
+        200:
+          description: Success
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/SoftwareandDataSpecification'
+        400:
+          $ref: '#/components/responses/BadRequestError'
+        401:
+          $ref: '#/components/responses/UnauthorizedError'
+        403:
+          $ref: '#/components/responses/ForbiddenError'
+        404:
+          $ref: '#/components/responses/NotFoundError'
+        429:
+          $ref: '#/components/responses/TooManyRequestsError'
+        500:
+          $ref: '#/components/responses/InternalServerError'
+  /SystemDevelopment/{systemdevelopmentId}/SoftwareandDataSpecification/{softwareanddataspecificationId}/Capture:
+    put:
+      tags:
+      - BQ - SoftwareandDataSpecification
+      summary: CaBQ Capture details relating to the software and data specification activity
+      description: CaBQ Capture details relating to the software and data specification activity
+      operationId: CaptureSoftwareandDataSpecification
+      parameters:
+      - $ref: '#/components/parameters/SystemDevelopmentID'
+      - $ref: '#/components/parameters/SoftwareandDataSpecificationID'
+      requestBody:
+        $ref: '#/components/requestBodies/CaptureSoftwareandDataSpecificationRequest'
+      responses:
+        200:
+          description: Success
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/CaptureSoftwareandDataSpecificationResponse'
+        400:
+          $ref: '#/components/responses/BadRequestError'
+        401:
+          $ref: '#/components/responses/UnauthorizedError'
+        403:
+          $ref: '#/components/responses/ForbiddenError'
+        404:
+          $ref: '#/components/responses/NotFoundError'
+        429:
+          $ref: '#/components/responses/TooManyRequestsError'
+        500:
+          $ref: '#/components/responses/InternalServerError'
+  /SystemDevelopment/{systemdevelopmentId}/SoftwareandDataSpecification/{softwareanddataspecificationId}/Request:
+    put:
+      tags:
+      - BQ - SoftwareandDataSpecification
+      summary: RqBQ Request manual intervention to the software and data specification
+      description: RqBQ Request manual intervention to the software and data specification
+      operationId: RequestSoftwareandDataSpecification
+      parameters:
+      - $ref: '#/components/parameters/SystemDevelopmentID'
+      - $ref: '#/components/parameters/SoftwareandDataSpecificationID'
+      requestBody:
+        $ref: '#/components/requestBodies/SoftwareandDataSpecification'
+      responses:
+        200:
+          description: Success
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/SoftwareandDataSpecification'
+        400:
+          $ref: '#/components/responses/BadRequestError'
+        401:
+          $ref: '#/components/responses/UnauthorizedError'
+        403:
+          $ref: '#/components/responses/ForbiddenError'
+        404:
+          $ref: '#/components/responses/NotFoundError'
+        429:
+          $ref: '#/components/responses/TooManyRequestsError'
+        500:
+          $ref: '#/components/responses/InternalServerError'
+  /SystemDevelopment/{systemdevelopmentId}/SoftwareandDataSpecification/{softwareanddataspecificationId}/Retrieve:
+    get:
+      tags:
+      - BQ - SoftwareandDataSpecification
+      summary: ReBQ Retrieve details about the software and data specification tasks
+      description: ReBQ Retrieve details about the software and data specification tasks
+      operationId: RetrieveSoftwareandDataSpecification
+      parameters:
+      - $ref: '#/components/parameters/SystemDevelopmentID'
+      - $ref: '#/components/parameters/SoftwareandDataSpecificationID'
+      responses:
+        200:
+          description: Success
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/RetrieveSoftwareandDataSpecificationResponse'
         400:
           $ref: '#/components/responses/BadRequestError'
         401:
@@ -664,28 +757,6 @@ components:
           type: string
         Date:
           type: string
-    TestingSpecification:
-      type: object
-      properties:
-        TestingSpecificationTaskDefinition:
-          type: string
-        TestingSpecificationTaskWorkProducts:
-          type: string
-        DocumentDirectoryEntryInstanceReference:
-          type: object
-        SystemTestingSpecification:
-          type: string
-    FunctionalSpecification:
-      type: object
-      properties:
-        FunctionalSpecificationTaskDefinition:
-          type: string
-        FunctionalSpecificationTaskWorkProducts:
-          type: string
-        DocumentDirectoryEntryInstanceReference:
-          type: object
-        SystemFunctionalSpecification:
-          type: string
     SoftwareandDataSpecification:
       type: object
       properties:
@@ -694,7 +765,7 @@ components:
         SoftwareandDataSpecificationTaskWorkProducts:
           type: string
         DocumentDirectoryEntryInstanceReference:
-          type: object
+          type: string
         SystemSoftwareandDataSpecification:
           type: string
     TechnicalSpecification:
@@ -705,8 +776,19 @@ components:
         TechnicalSpecificationTaskWorkProducts:
           type: string
         DocumentDirectoryEntryInstanceReference:
-          type: object
+          type: string
         SystemTechnicalSpecification:
+          type: string
+    FunctionalSpecification:
+      type: object
+      properties:
+        FunctionalSpecificationTaskDefinition:
+          type: string
+        FunctionalSpecificationTaskWorkProducts:
+          type: string
+        DocumentDirectoryEntryInstanceReference:
+          type: string
+        SystemFunctionalSpecification:
           type: string
     UsageSpecification:
       type: object
@@ -716,8 +798,19 @@ components:
         UsageSpecificationTaskWorkProducts:
           type: string
         DocumentDirectoryEntryInstanceReference:
-          type: object
+          type: string
         SystemFunctionalSpecification:
+          type: string
+    TestingSpecification:
+      type: object
+      properties:
+        TestingSpecificationTaskDefinition:
+          type: string
+        TestingSpecificationTaskWorkProducts:
+          type: string
+        DocumentDirectoryEntryInstanceReference:
+          type: string
+        SystemTestingSpecification:
           type: string
     HTTPError:
       type: object
@@ -728,58 +821,6 @@ components:
           type: string
         message:
           type: string
-    ActivateITSystemDevelopmentRequest:
-      type: object
-      properties:
-        SoftwareandDataSpecification:
-          type: object
-          properties:
-            SoftwareandDataSpecificationTaskDefinition:
-              type: string
-            SoftwareandDataSpecificationTaskWorkProducts:
-              type: string
-            DocumentDirectoryEntryInstanceReference:
-              type: object
-            SystemSoftwareandDataSpecification:
-              type: string
-        ITSystemDevelopment:
-          type: object
-          properties:
-            SystemDevelopmentImplementationPlan:
-              type: string
-    ActivateITSystemDevelopmentResponse:
-      type: object
-      properties:
-        SoftwareandDataSpecification:
-          type: object
-          properties:
-            SoftwareandDataSpecificationTaskDefinition:
-              type: string
-            SoftwareandDataSpecificationTaskWorkProducts:
-              type: string
-            DocumentDirectoryEntryInstanceReference:
-              type: object
-            SystemSoftwareandDataSpecification:
-              type: string
-        ITSystemDevelopment:
-          type: object
-          properties:
-            SystemDevelopmentImplementationPlan:
-              type: string
-            SystemDevelopmentProjectName:
-              type: string
-            SystemDevelopmentProjectType:
-              type: string
-            SystemDevelopmentProjectDescription:
-              type: string
-            SystemDevelopmentBudget:
-              type: string
-            SystemDevelopmentProjectOrganization:
-              type: string
-            SystemDevelopmentProjectSchedule:
-              type: string
-            DateType:
-              type: string
     CaptureFunctionalSpecificationRequest:
       type: object
       properties:
@@ -913,6 +954,73 @@ components:
             DocumentDirectoryEntryInstanceReference:
               type: object
             SystemTechnicalSpecification:
+              type: string
+    CaptureSoftwareandDataSpecificationRequest:
+      type: object
+      properties:
+        ITSystemDevelopment:
+          type: object
+          properties:
+            SystemDevelopmentImplementationPlan:
+              type: string
+        SoftwareandDataSpecification:
+          type: object
+          properties:
+            SoftwareandDataSpecificationTaskDefinition:
+              type: string
+            SoftwareandDataSpecificationTaskWorkProducts:
+              type: string
+            DocumentDirectoryEntryInstanceReference:
+              type: object
+    CaptureSoftwareandDataSpecificationResponse:
+      type: object
+      properties:
+        ITSystemDevelopment:
+          type: object
+          properties:
+            SystemDevelopmentImplementationPlan:
+              type: string
+        SoftwareandDataSpecification:
+          type: object
+          properties:
+            SoftwareandDataSpecificationTaskDefinition:
+              type: string
+            SoftwareandDataSpecificationTaskWorkProducts:
+              type: string
+            DocumentDirectoryEntryInstanceReference:
+              type: object
+    RetrieveSoftwareandDataSpecificationResponse:
+      type: object
+      properties:
+        ITSystemDevelopment:
+          type: object
+          properties:
+            SystemDevelopmentProjectName:
+              type: string
+            SystemDevelopmentProjectType:
+              type: string
+            SystemDevelopmentProjectDescription:
+              type: string
+            SystemDevelopmentImplementationPlan:
+              type: string
+            SystemDevelopmentBudget:
+              type: string
+            SystemDevelopmentProjectOrganization:
+              type: string
+            SystemDevelopmentProjectSchedule:
+              type: string
+            DateType:
+              type: string
+        SoftwareandDataSpecification:
+          type: object
+          properties:
+            SoftwareandDataSpecificationTaskDefinition:
+              type: string
+            SoftwareandDataSpecificationTaskWorkProducts:
+              type: string
+            DocumentDirectoryEntryInstanceReference:
+              type: object
+            SystemSoftwareandDataSpecification:
               type: string
     CaptureTestingSpecificationRequest:
       type: object
@@ -1057,22 +1165,6 @@ components:
       explode: false
       schema:
         type: string
-    TestingSpecificationID:
-      name: testingspecificationId
-      in: path
-      required: true
-      style: simple
-      explode: false
-      schema:
-        type: string
-    FunctionalSpecificationID:
-      name: functionalspecificationId
-      in: path
-      required: true
-      style: simple
-      explode: false
-      schema:
-        type: string
     SoftwareandDataSpecificationID:
       name: softwareanddataspecificationId
       in: path
@@ -1089,8 +1181,24 @@ components:
       explode: false
       schema:
         type: string
+    FunctionalSpecificationID:
+      name: functionalspecificationId
+      in: path
+      required: true
+      style: simple
+      explode: false
+      schema:
+        type: string
     UsageSpecificationID:
       name: usagespecificationId
+      in: path
+      required: true
+      style: simple
+      explode: false
+      schema:
+        type: string
+    TestingSpecificationID:
+      name: testingspecificationId
       in: path
       required: true
       style: simple
@@ -1104,12 +1212,6 @@ components:
         application/json:
           schema:
             $ref: '#/components/schemas/ITSystemDevelopment'
-    ActivateITSystemDevelopmentRequest:
-      required: true
-      content:
-        application/json:
-          schema:
-            $ref: '#/components/schemas/ActivateITSystemDevelopmentRequest'
     FunctionalSpecification:
       required: true
       content:
@@ -1134,6 +1236,18 @@ components:
         application/json:
           schema:
             $ref: '#/components/schemas/CaptureTechnicalSpecificationRequest'
+    SoftwareandDataSpecification:
+      required: true
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/SoftwareandDataSpecification'
+    CaptureSoftwareandDataSpecificationRequest:
+      required: true
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/CaptureSoftwareandDataSpecificationRequest'
     TestingSpecification:
       required: true
       content:

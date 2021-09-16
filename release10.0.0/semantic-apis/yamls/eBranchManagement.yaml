@@ -382,6 +382,20 @@ components:
           type: string
         eBranchChannelServiceSchedule:
           type: string
+    Troubleshooting:
+      type: object
+      properties:
+        eBranchChannelProductionIssueRecord:
+          type: string
+        eBranchChannelIssueAnalysisAndRecommendedResponse:
+          type: string
+    CapacityPlanning:
+      type: object
+      properties:
+        eBranchChannelPlatformUtilization:
+          type: string
+        eBranchChannelLoadingProjections:
+          type: string
     MaintenanceAndUpgrades:
       type: object
       properties:
@@ -396,20 +410,6 @@ components:
         eBranchChannelMaintenanceandUpgradeWorkTaskResult:
           type: string
         eBranchChannelMaintenanceandUpgradeWorkTaskDate-Time:
-          type: string
-    CapacityPlanning:
-      type: object
-      properties:
-        eBranchChannelPlatformUtilization:
-          type: string
-        eBranchChannelLoadingProjections:
-          type: string
-    Troubleshooting:
-      type: object
-      properties:
-        eBranchChannelProductionIssueRecord:
-          type: string
-        eBranchChannelIssueAnalysisAndRecommendedResponse:
           type: string
     HTTPError:
       type: object
@@ -511,8 +511,8 @@ components:
       explode: false
       schema:
         type: string
-    MaintenanceAndUpgradesID:
-      name: maintenanceandupgradesId
+    TroubleshootingID:
+      name: troubleshootingId
       in: path
       required: true
       style: simple
@@ -527,8 +527,8 @@ components:
       explode: false
       schema:
         type: string
-    TroubleshootingID:
-      name: troubleshootingId
+    MaintenanceAndUpgradesID:
+      name: maintenanceandupgradesId
       in: path
       required: true
       style: simple

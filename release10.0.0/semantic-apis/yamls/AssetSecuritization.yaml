@@ -717,7 +717,7 @@ components:
           type: string
         AssetSecuritizationWorkProduct:
           type: string
-    Placement:
+    Securitization:
       type: object
       properties:
         ? >-
@@ -725,23 +725,23 @@ components:
 
           Example:Executeapaymenttransaction.
         : type: string
-        PlacementPreconditions:
+        SecuritizationPreconditions:
           type: string
-        PlacementTaskSchedule:
+        SecuritizationTaskSchedule:
           type: string
         BusinessService:
-          type: object
-        PlacementPostconditions:
           type: string
-        PlacementServiceType:
+        SecuritizationPostconditions:
           type: string
-        PlacementServiceDescription:
+        SecuritizationServiceType:
           type: string
-        PlacementServiceInputsandOuputs:
+        SecuritizationServiceDescription:
           type: string
-        PlacementServiceWorkProduct:
+        SecuritizationServiceInputsandOuputs:
           type: string
-        PlacementServiceName:
+        SecuritizationServiceWorkProduct:
+          type: string
+        SecuritizationServiceName:
           type: string
     Selection:
       type: object
@@ -756,7 +756,7 @@ components:
         SelectionTaskSchedule:
           type: string
         AssetSelection:
-          type: object
+          type: string
         SelectionPostconditions:
           type: string
         SelectionAssetSelectionServiceType:
@@ -769,7 +769,7 @@ components:
           type: string
         SelectionAssetSelectionServiceName:
           type: string
-    Securitization:
+    Placement:
       type: object
       properties:
         ? >-
@@ -777,23 +777,23 @@ components:
 
           Example:Executeapaymenttransaction.
         : type: string
-        SecuritizationPreconditions:
+        PlacementPreconditions:
           type: string
-        SecuritizationTaskSchedule:
+        PlacementTaskSchedule:
           type: string
         BusinessService:
-          type: object
-        SecuritizationPostconditions:
           type: string
-        SecuritizationServiceType:
+        PlacementPostconditions:
           type: string
-        SecuritizationServiceDescription:
+        PlacementServiceType:
           type: string
-        SecuritizationServiceInputsandOuputs:
+        PlacementServiceDescription:
           type: string
-        SecuritizationServiceWorkProduct:
+        PlacementServiceInputsandOuputs:
           type: string
-        SecuritizationServiceName:
+        PlacementServiceWorkProduct:
+          type: string
+        PlacementServiceName:
           type: string
     HTTPError:
       type: object
@@ -821,8 +821,8 @@ components:
       explode: false
       schema:
         type: string
-    PlacementID:
-      name: placementId
+    SecuritizationID:
+      name: securitizationId
       in: path
       required: true
       style: simple
@@ -837,8 +837,8 @@ components:
       explode: false
       schema:
         type: string
-    SecuritizationID:
-      name: securitizationId
+    PlacementID:
+      name: placementId
       in: path
       required: true
       style: simple

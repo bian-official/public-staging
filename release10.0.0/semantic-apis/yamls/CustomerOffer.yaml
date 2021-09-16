@@ -822,9 +822,9 @@ components:
         Thecustomerofferprocedurerecord,combinestheresultofallunderlyingworksteps:
           type: string
         CustomerReference:
-          type: object
+          type: string
         PartyReference:
-          type: object
+          type: string
         ProductandServiceType:
           type: string
         CustomerOfferProcessingSchedule:
@@ -834,26 +834,23 @@ components:
         CustomerOfferProcessingTaskType:
           type: string
         EmployeeOrBusinessUnitReference:
-          type: object
+          type: string
         CustomerOfferProcessingTaskWorkProducts:
           type: string
         CustomerOfferProcessingTaskResult:
           type: string
-    Compliance:
+    CorrespondenceandDocuments:
       type: object
       properties:
-        ? >
-          Handlesanyregulatorycompliancechecksandreportingrequirements
-        : type: string
-        RegulatoryComplianceCheckType:
+        CustomerOfferRequiredDocuments:
           type: string
-        RegulatoryComplianceCheckRequirement:
+        CorrespondenceInstanceReference:
           type: string
-        RegulatoryComplianceCheckSubmission:
+        CorrespondenceContent:
           type: string
-        RegulatoryComplianceAdjustmentRequirement:
+        DocumentDirectoryEntryInstanceReference:
           type: string
-        RegulatoryComplianceCheckAssessment:
+        DocumentContent:
           type: string
     FacilityApplication:
       type: object
@@ -879,6 +876,36 @@ components:
           type: string
         FacilitySchedule:
           type: string
+    Underwriting:
+      type: object
+      properties:
+        ? >
+          Handlestheunderwritingdecisionwhenneeded
+        : type: string
+        CustomerIncomeStatement:
+          type: string
+        CustomerDebtStatement:
+          type: string
+        CustomerAssetStatement:
+          type: string
+        UnderwritingAssessmentReference:
+          type: string
+    Compliance:
+      type: object
+      properties:
+        ? >
+          Handlesanyregulatorycompliancechecksandreportingrequirements
+        : type: string
+        RegulatoryComplianceCheckType:
+          type: string
+        RegulatoryComplianceCheckRequirement:
+          type: string
+        RegulatoryComplianceCheckSubmission:
+          type: string
+        RegulatoryComplianceAdjustmentRequirement:
+          type: string
+        RegulatoryComplianceCheckAssessment:
+          type: string
     Credit:
       type: object
       properties:
@@ -888,47 +915,9 @@ components:
         CustomerCreditRating:
           type: string
         CreditAuthorizationDecisionReference:
-          type: object
+          type: string
         CreditAuthorizationDecision:
           type: string
-    Collateral:
-      type: object
-      properties:
-        ? >
-          Handlingtheevaluationandallocationofcollateral
-        : type: string
-        CollateralRequirement:
-          type: string
-        CollateralEarmarkReference:
-          type: object
-        CollateralAssetReference:
-          type: object
-    Booking:
-      type: object
-      properties:
-        ? >
-          Handlesthebookingoftheassetorliabilitytotheappropriateunit
-        : type: string
-        BusinessUnitReference:
-          type: object
-        Asset/LiabilityType:
-          type: string
-        Amount:
-          type: string
-    Disclosures:
-      type: object
-      properties:
-        ? >
-          Handlestheissuanceandacceptanceofrequireddisclosures
-        : type: string
-        DisclosureType:
-          type: string
-        DisclosureText/Description:
-          type: string
-        CustomerAcceptanceIndicator:
-          type: boolean
-        DocumentReference(forcustomersignature/acceptancerecord):
-          type: object
     Audit:
       type: object
       properties:
@@ -945,29 +934,20 @@ components:
           type: string
         GuidelineComplianceCheckAssessment:
           type: string
-    Underwriting:
+    Disclosures:
       type: object
       properties:
         ? >
-          Handlestheunderwritingdecisionwhenneeded
+          Handlestheissuanceandacceptanceofrequireddisclosures
         : type: string
-        CustomerIncomeStatement:
+        DisclosureType:
           type: string
-        CustomerDebtStatement:
+        DisclosureText/Description:
           type: string
-        CustomerAssetStatement:
+        CustomerAcceptanceIndicator:
           type: string
-        UnderwritingAssessmentReference:
-          type: object
-    Agreement:
-      type: object
-      properties:
-        Handlestheset-upofthemasteragreementandproductspecifictermsandconditions:
+        DocumentReference(forcustomersignature/acceptancerecord):
           type: string
-        CustomerAgreementInstanceReference:
-          type: object
-        SalesProductAgreementInstanceReference:
-          type: object
     ProductInitialization:
       type: object
       properties:
@@ -975,19 +955,39 @@ components:
           Atthesuccessfulcompletionofrequiredtasks,theproductisinitialized
         : type: string
         ProductInstanceReference:
-          type: object
-    CorrespondenceandDocuments:
+          type: string
+    Collateral:
       type: object
       properties:
-        CustomerOfferRequiredDocuments:
+        ? >
+          Handlingtheevaluationandallocationofcollateral
+        : type: string
+        CollateralRequirement:
           type: string
-        CorrespondenceInstanceReference:
-          type: object
-        CorrespondenceContent:
+        CollateralEarmarkReference:
           type: string
-        DocumentDirectoryEntryInstanceReference:
-          type: object
-        DocumentContent:
+        CollateralAssetReference:
+          type: string
+    Agreement:
+      type: object
+      properties:
+        Handlestheset-upofthemasteragreementandproductspecifictermsandconditions:
+          type: string
+        CustomerAgreementInstanceReference:
+          type: string
+        SalesProductAgreementInstanceReference:
+          type: string
+    Booking:
+      type: object
+      properties:
+        ? >
+          Handlesthebookingoftheassetorliabilitytotheappropriateunit
+        : type: string
+        BusinessUnitReference:
+          type: string
+        Asset/LiabilityType:
+          type: string
+        Amount:
           type: string
     HTTPError:
       type: object
@@ -1004,6 +1004,8 @@ components:
         CustomerOfferProcedure:
           type: object
           properties:
+            CustomerReference:
+              type: object
             PartyReference:
               type: object
             ProductandServiceType:
@@ -2106,8 +2108,8 @@ components:
       explode: false
       schema:
         type: string
-    ComplianceID:
-      name: complianceId
+    CorrespondenceandDocumentsID:
+      name: correspondenceanddocumentsId
       in: path
       required: true
       style: simple
@@ -2122,32 +2124,24 @@ components:
       explode: false
       schema:
         type: string
+    UnderwritingID:
+      name: underwritingId
+      in: path
+      required: true
+      style: simple
+      explode: false
+      schema:
+        type: string
+    ComplianceID:
+      name: complianceId
+      in: path
+      required: true
+      style: simple
+      explode: false
+      schema:
+        type: string
     CreditID:
       name: creditId
-      in: path
-      required: true
-      style: simple
-      explode: false
-      schema:
-        type: string
-    CollateralID:
-      name: collateralId
-      in: path
-      required: true
-      style: simple
-      explode: false
-      schema:
-        type: string
-    BookingID:
-      name: bookingId
-      in: path
-      required: true
-      style: simple
-      explode: false
-      schema:
-        type: string
-    DisclosuresID:
-      name: disclosuresId
       in: path
       required: true
       style: simple
@@ -2162,16 +2156,8 @@ components:
       explode: false
       schema:
         type: string
-    UnderwritingID:
-      name: underwritingId
-      in: path
-      required: true
-      style: simple
-      explode: false
-      schema:
-        type: string
-    AgreementID:
-      name: agreementId
+    DisclosuresID:
+      name: disclosuresId
       in: path
       required: true
       style: simple
@@ -2186,8 +2172,24 @@ components:
       explode: false
       schema:
         type: string
-    CorrespondenceandDocumentsID:
-      name: correspondenceanddocumentsId
+    CollateralID:
+      name: collateralId
+      in: path
+      required: true
+      style: simple
+      explode: false
+      schema:
+        type: string
+    AgreementID:
+      name: agreementId
+      in: path
+      required: true
+      style: simple
+      explode: false
+      schema:
+        type: string
+    BookingID:
+      name: bookingId
       in: path
       required: true
       style: simple

@@ -438,27 +438,22 @@ components:
       type: object
       properties:
         CardTransactionBatchReference:
-          type: object
-    Authorization:
-      type: object
-      properties:
-        AuthorizationTransactionDate/Time:
           type: string
     Capture:
       type: object
       properties:
         CardTransactionProductInstanceReference:
-          type: object
+          type: string
         CardHolderReference:
-          type: object
+          type: string
         CardTransactionIssuedDeviceReference:
-          type: object
+          type: string
         CardTransactionNetworkReference:
-          type: object
+          type: string
         CardTransactionIssuingBankReference:
-          type: object
+          type: string
         CardTransactionMerchantAcquiringBankReference:
-          type: object
+          type: string
         CardTransactionType:
           type: string
         CardTransactionCurrency:
@@ -466,13 +461,13 @@ components:
         CardTransactionAmountType:
           type: string
         CardTransactionAmount:
-          type: number
+          type: string
         CardTransactionMerchantReference:
-          type: object
+          type: string
         CardTransactionLocationReference:
-          type: object
+          type: string
         CardTransactionProductandServiceReference:
-          type: object
+          type: string
         CardTransactionDate/Time:
           type: string
         CardTransactionFXConversionCharge:
@@ -480,6 +475,11 @@ components:
         CardTransactionInterchargeFee:
           type: string
         CardTransactionAuthorizationRecord:
+          type: string
+    Authorization:
+      type: object
+      properties:
+        AuthorizationTransactionDate/Time:
           type: string
     HTTPError:
       type: object
@@ -1043,16 +1043,16 @@ components:
       explode: false
       schema:
         type: string
-    AuthorizationID:
-      name: authorizationId
+    CaptureID:
+      name: captureId
       in: path
       required: true
       style: simple
       explode: false
       schema:
         type: string
-    CaptureID:
-      name: captureId
+    AuthorizationID:
+      name: authorizationId
       in: path
       required: true
       style: simple

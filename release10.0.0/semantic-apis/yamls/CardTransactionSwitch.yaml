@@ -221,28 +221,28 @@ components:
       type: object
       properties:
         NetworkReference:
-          type: object
+          type: string
         ParticipantAcquirerBankReference:
-          type: object
+          type: string
         ParticipantAcquirerBanktransactionRoutingDetails:
           type: string
         ParticipantIssuerBankReference:
-          type: object
+          type: string
         ParticipantIssuerBankTransactionRoutingDetails:
           type: string
     TransactionCapture:
       type: object
       properties:
         CardTransactionRecordReference:
-          type: object
+          type: string
         CardTransactionProductInstanceReference:
-          type: object
+          type: string
         CardTransactionNetworkReference:
-          type: object
+          type: string
         CardTransactionIssuingBankReference:
-          type: object
+          type: string
         CardTransactionMerchantAcquiringBankReference:
-          type: object
+          type: string
         CardTransactionType:
           type: string
         CardTransactionCurrency:
@@ -250,13 +250,13 @@ components:
         CardTransactionAmountType:
           type: string
         CardTransactionAmount:
-          type: number
+          type: string
         CardTransactionMerchantReference:
-          type: object
+          type: string
         CardTransactionLocationReference:
-          type: object
+          type: string
         CardTransactionProductandServiceReference:
-          type: object
+          type: string
         CardTransactionDate/Time:
           type: string
         CardTransactionFXConversionCharge:

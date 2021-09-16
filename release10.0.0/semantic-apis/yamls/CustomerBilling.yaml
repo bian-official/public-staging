@@ -373,11 +373,11 @@ components:
         CustomerBillingTransactionDescription:
           type: string
         CustomerReference:
-          type: object
+          type: string
         ProductInstanceReference:
-          type: object
+          type: string
         CustomerAgreementReference:
-          type: object
+          type: string
         CustomerBillingProductandServiceOrActionDescription:
           type: string
         CustomerBillingParty:
@@ -389,18 +389,33 @@ components:
         CustomerBillingStatement:
           type: string
         CustomerBillingAmount:
-          type: number
+          type: string
         CustomerBillingPaymentDueDate:
           type: string
         CustomerBillingPaymentDetails:
           type: string
         CustomerBillingPaymentSchedule:
           type: string
+    Invoicing:
+      type: object
+      properties:
+        CustomerInvoiceRecord:
+          type: string
+        InvoiceDate:
+          type: string
+        DocumentDirectoryEntryInstanceReference:
+          type: string
+        CorrespondenceInstanceReference:
+          type: string
+        Invoice:
+          type: string
+        InvoicingWorkProduct:
+          type: string
     Payments:
       type: object
       properties:
         PaymentTransactionReference:
-          type: object
+          type: string
         PaymentTransaction:
           type: string
     TrackingandReminders:
@@ -417,21 +432,6 @@ components:
         TrackingandRemindersResult:
           type: string
         TrackingandRemindersWorkProduct:
-          type: string
-    Invoicing:
-      type: object
-      properties:
-        CustomerInvoiceRecord:
-          type: string
-        InvoiceDate:
-          type: string
-        DocumentDirectoryEntryInstanceReference:
-          type: object
-        CorrespondenceInstanceReference:
-          type: object
-        Invoice:
-          type: string
-        InvoicingWorkProduct:
           type: string
     HTTPError:
       type: object
@@ -678,6 +678,14 @@ components:
       explode: false
       schema:
         type: string
+    InvoicingID:
+      name: invoicingId
+      in: path
+      required: true
+      style: simple
+      explode: false
+      schema:
+        type: string
     PaymentsID:
       name: paymentsId
       in: path
@@ -688,14 +696,6 @@ components:
         type: string
     TrackingandRemindersID:
       name: trackingandremindersId
-      in: path
-      required: true
-      style: simple
-      explode: false
-      schema:
-        type: string
-    InvoicingID:
-      name: invoicingId
       in: path
       required: true
       style: simple

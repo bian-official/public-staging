@@ -221,17 +221,17 @@ components:
       type: object
       properties:
         ProductInstanceReference:
-          type: object
+          type: string
         CustomerReference:
-          type: object
+          type: string
         EmployeeOrBusinessUnitReference:
-          type: object
+          type: string
         InvestmentPortfolioInstanceReference:
-          type: object
+          type: string
         InvestmentPortfolioAnalysisSchedule:
           type: string
         InvestmentAccountArrangementInstanceReference:
-          type: object
+          type: string
         InvestmentPortfolioAnalysisReport:
           type: string
         InvestmentPortfolioAnalysisType:
@@ -241,7 +241,7 @@ components:
         InvestmentPortfolioAnalysisReportingDate:
           type: string
         DocumentDirectoryEntryInstanceReference:
-          type: object
+          type: string
     PerformanceAnalysis:
       type: object
       properties:
@@ -252,7 +252,7 @@ components:
         InvestmentPerformanceRequestSpecification:
           type: string
         InvestmentPerformanceModelReference:
-          type: object
+          type: string
         InvestmentPerformanceProductandServiceActivityReport:
           type: string
         InvestmentPerformanceFinancialMarketResearchReport:

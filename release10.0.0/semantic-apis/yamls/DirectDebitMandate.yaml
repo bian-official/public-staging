@@ -253,7 +253,7 @@ components:
       type: object
       properties:
         MandatedCustomerReference:
-          type: object
+          type: string
         MandateDescription:
           type: string
         MandateCollectionValidPeriod:
@@ -262,23 +262,23 @@ components:
       type: object
       properties:
         DirectDebitMandateCustomerReference:
-          type: object
+          type: string
         DirectDebitMandateCustomerPseudonym:
           type: string
         DirectDebitMandateBankReference:
-          type: object
+          type: string
         DirectDebitMandateAccountReference:
-          type: object
+          type: string
         DirectDebitMandateValidDates:
           type: string
         DirectDebitMandateTerms:
           type: string
         CorrespondenceInstanceReference:
-          type: object
+          type: string
         CorrespondenceContent:
           type: string
         DocumentDirectoryEntryInstanceReference:
-          type: object
+          type: string
         DocumentContent:
           type: string
     HTTPError:

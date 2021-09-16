@@ -258,9 +258,9 @@ components:
         VChannelProductionIssueRecord:
           type: string
         EmployeeOrBusinessUnitReference:
-          type: object
+          type: string
         CustomerContactRecordReference:
-          type: object
+          type: string
         ProductionIssueType:
           type: string
         ProductionIssueDescription:
@@ -275,13 +275,13 @@ components:
       type: object
       properties:
         Employee/BusinessUnitReference:
-          type: object
+          type: string
         CustomerContactRecordReference:
-          type: object
+          type: string
         CustomerSessionDialogueRecord:
           type: string
         VChannelCustomerDeviceReference:
-          type: object
+          type: string
         VChannelOutboundConnectionStartTime:
           type: string
         VChannelOutboundConnectionDuration:
@@ -290,7 +290,7 @@ components:
       type: object
       properties:
         VChannelDeviceReference:
-          type: object
+          type: string
         VChannelDevicePropertyValue:
           type: string
         VChannelInboundConnectionStartTime:
@@ -298,7 +298,7 @@ components:
         VChannelInboundConnectionDuration:
           type: string
         VChannelInboundConnectionContactReference:
-          type: object
+          type: string
     HTTPError:
       type: object
       properties:

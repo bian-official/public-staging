@@ -340,9 +340,9 @@ components:
       type: object
       properties:
         CustomerReference:
-          type: object
+          type: string
         LegalEntityReference:
-          type: object
+          type: string
         AgreementType:
           type: string
         AgreementJurisdiction:
@@ -352,18 +352,27 @@ components:
         AgreementSignatoriesOrResponsibleParties:
           type: string
         DocumentDirectoryEntryInstanceReference:
-          type: object
+          type: string
         SalesProductAgreementReference:
-          type: object
+          type: string
         PartyLife-cycleManagementReference:
-          type: object
+          type: string
+    LegalTerms:
+      type: object
+      properties:
+        Jurisdiction:
+          type: string
+        ApplicableLawReference:
+          type: string
+        ApplicableLawInterpretation:
+          type: string
     PolicyTerms:
       type: object
       properties:
         BankPolicy-RuleType:
           type: string
         ApplicableBankPolicy-RuleReference:
-          type: object
+          type: string
         ApplicableBankPolicy-RuleInterpretation:
           type: string
     RegulatoryTerms:
@@ -372,17 +381,8 @@ components:
         RegulatoryAuthority:
           type: string
         ApplicableRegulationReference:
-          type: object
+          type: string
         ApplicableRegulationInterpretation:
-          type: string
-    LegalTerms:
-      type: object
-      properties:
-        Jurisdiction:
-          type: string
-        ApplicableLawReference:
-          type: object
-        ApplicableLawInterpretation:
           type: string
     HTTPError:
       type: object
@@ -524,6 +524,14 @@ components:
       explode: false
       schema:
         type: string
+    LegalTermsID:
+      name: legaltermsId
+      in: path
+      required: true
+      style: simple
+      explode: false
+      schema:
+        type: string
     PolicyTermsID:
       name: policytermsId
       in: path
@@ -534,14 +542,6 @@ components:
         type: string
     RegulatoryTermsID:
       name: regulatorytermsId
-      in: path
-      required: true
-      style: simple
-      explode: false
-      schema:
-        type: string
-    LegalTermsID:
-      name: legaltermsId
       in: path
       required: true
       style: simple

@@ -436,17 +436,6 @@ components:
       type: object
       properties:
         CustomerReference:
-          type: object
-    Status:
-      type: object
-      properties:
-        CustomerRelationshipStatusType:
-          type: string
-        CustomerRelationshipStatus:
-          type: string
-        CustomerRelationshipStatusNarrative:
-          type: string
-        CustomerRelationshipStatusValidFrom/ToDate:
           type: string
     Alert:
       type: object
@@ -458,6 +447,17 @@ components:
         CustomerRelationshipAlertNarrative:
           type: string
         CustomerRelationshipAlertValidFrom/ToDate:
+          type: string
+    Status:
+      type: object
+      properties:
+        CustomerRelationshipStatusType:
+          type: string
+        CustomerRelationshipStatus:
+          type: string
+        CustomerRelationshipStatusNarrative:
+          type: string
+        CustomerRelationshipStatusValidFrom/ToDate:
           type: string
     Rating:
       type: object
@@ -488,16 +488,16 @@ components:
       explode: false
       schema:
         type: string
-    StatusID:
-      name: statusId
+    AlertID:
+      name: alertId
       in: path
       required: true
       style: simple
       explode: false
       schema:
         type: string
-    AlertID:
-      name: alertId
+    StatusID:
+      name: statusId
       in: path
       required: true
       style: simple

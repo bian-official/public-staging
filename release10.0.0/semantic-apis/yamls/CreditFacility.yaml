@@ -492,35 +492,35 @@ components:
       type: object
       properties:
         ProductInstanceReference:
-          type: object
+          type: string
         CreditFacilityNumber:
           type: string
         CustomerReference:
-          type: object
+          type: string
         PartyReference:
-          type: object
+          type: string
         CustomerAgreementReference:
-          type: object
+          type: string
         CustomerCreditAssessmentReference:
-          type: object
+          type: string
         InsuranceReference:
-          type: object
+          type: string
         DelinquencyOrCollectionReference:
-          type: object
+          type: string
         BankBranchOrLocationReference:
-          type: object
+          type: string
         BankAccountingUnitReference:
-          type: object
+          type: string
         CreditFacilityType:
           type: string
         CreditFacilityAmount:
-          type: number
+          type: string
         CreditFacilityCurrency:
           type: string
         CreditFacilityRateType:
           type: string
         CreditFacilityApplicableRate:
-          type: object
+          type: string
         RepaymentType:
           type: string
         InterestType:
@@ -532,17 +532,17 @@ components:
         CreditFacilityMaturityDate:
           type: string
         CollateralReference:
-          type: object
+          type: string
         CollateralAllocation:
           type: string
         TaxReference:
-          type: object
+          type: string
         CreditFacilityAccessTerms:
           type: string
         CreditFacilityUnderlyingDrawdown:
           type: string
         DrawdownReference:
-          type: object
+          type: string
         DrawdownRecord:
           type: string
         DrawdownLoanTransaction:
@@ -562,7 +562,7 @@ components:
         AssociationObligationOrEntitlement:
           type: string
         AssociationReference:
-          type: object
+          type: string
         CreditFacilityRepaymentSchedule:
           type: string
         StagedRepaymentStatement:
@@ -574,21 +574,6 @@ components:
         DateType:
           type: string
         Date:
-          type: string
-    Maintenance:
-      type: object
-      properties:
-        MaintenanceReportType:
-          type: string
-        CreditFacilityTaxReport:
-          type: string
-        CreditFacilityFeeType:
-          type: string
-        CreditFacilityFees:
-          type: string
-        CreditFacilityPenalties:
-          type: string
-        CreditFacilityCollateralValuation:
           type: string
     ServiceFees:
       type: object
@@ -618,19 +603,25 @@ components:
         ProjectedTransactionFeeCharge:
           type: string
         FeeAccrualAmount:
-          type: number
+          type: string
         AccrualFeeType:
           type: string
         AccrualFeeCharge:
           type: string
-    Restructuring:
+    Maintenance:
       type: object
       properties:
-        RestructuringTask:
+        MaintenanceReportType:
           type: string
-        RestructuringEvaluation:
+        CreditFacilityTaxReport:
           type: string
-        RestructuringWriteDown:
+        CreditFacilityFeeType:
+          type: string
+        CreditFacilityFees:
+          type: string
+        CreditFacilityPenalties:
+          type: string
+        CreditFacilityCollateralValuation:
           type: string
     Interest:
       type: object
@@ -638,11 +629,11 @@ components:
         InterestRateType:
           type: string
         InterestRateApplicationSchedule:
-          type: object
+          type: string
         InterestRateConfiguration:
-          type: object
+          type: string
         InterestRate:
-          type: object
+          type: string
         InterestApplicationRecord:
           type: string
         InterestTransaction:
@@ -654,10 +645,19 @@ components:
         TransactionInterestCharge:
           type: string
         InterestAccrualAmount:
-          type: number
+          type: string
         InterestAccrualType:
           type: string
         InterestAccrualCharge:
+          type: string
+    Restructuring:
+      type: object
+      properties:
+        RestructuringTask:
+          type: string
+        RestructuringEvaluation:
+          type: string
+        RestructuringWriteDown:
           type: string
     Repayment:
       type: object
@@ -665,13 +665,13 @@ components:
         RepaymentTransactionType:
           type: string
         RepaymentTransactionPayerReference:
-          type: object
+          type: string
         RepaymentTransactionPayerProductInstanceReference:
-          type: object
+          type: string
         RepaymentTransactionPayerBankReference:
-          type: object
+          type: string
         RepaymentTransactionAmount:
-          type: number
+          type: string
         RepaymentTransactionCurrency:
           type: string
         RepaymentTransactionValueDate:
@@ -1447,14 +1447,6 @@ components:
       explode: false
       schema:
         type: string
-    MaintenanceID:
-      name: maintenanceId
-      in: path
-      required: true
-      style: simple
-      explode: false
-      schema:
-        type: string
     ServiceFeesID:
       name: servicefeesId
       in: path
@@ -1463,8 +1455,8 @@ components:
       explode: false
       schema:
         type: string
-    RestructuringID:
-      name: restructuringId
+    MaintenanceID:
+      name: maintenanceId
       in: path
       required: true
       style: simple
@@ -1473,6 +1465,14 @@ components:
         type: string
     InterestID:
       name: interestId
+      in: path
+      required: true
+      style: simple
+      explode: false
+      schema:
+        type: string
+    RestructuringID:
+      name: restructuringId
       in: path
       required: true
       style: simple

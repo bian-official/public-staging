@@ -340,7 +340,7 @@ components:
       type: object
       properties:
         NetworkReference:
-          type: object
+          type: string
         CardFinancialSettlementProcessType:
           type: string
         CardFinancialSettlementProcessDateOrTime:
@@ -348,9 +348,9 @@ components:
         CardFinancialSettlementServiceSchedule:
           type: string
         ParticipantAcquirerBankReference:
-          type: object
+          type: string
         ParticipantIssuerBankReference:
-          type: object
+          type: string
     Instruction:
       type: object
       properties:
@@ -358,26 +358,24 @@ components:
           type: string
         ParticipantIssuerBankSettlementAccountStatement:
           type: string
-    Processing:
+    Payment:
       type: object
       properties:
-        ParticipantAcquirerBankSettlementTerms:
-          type: string
-        ParticipantIssuerBankSettlementTerms:
+        ParticipantPaymentTransaction:
           type: string
     Consolidation:
       type: object
       properties:
         CardTransactionRecordReference:
-          type: object
+          type: string
         CardTransactionRecord:
           type: string
         CardTransactionProductInstanceReference:
-          type: object
+          type: string
         CardTransactionIssuingBankReference:
-          type: object
+          type: string
         CardTransactionMerchantAcquiringBankReference:
-          type: object
+          type: string
         CardTransactionType:
           type: string
         CardTransactionCurrency:
@@ -385,19 +383,21 @@ components:
         CardTransactionAmountType:
           type: string
         CardTransactionAmount:
-          type: number
+          type: string
         CardTransactionMerchantReference:
-          type: object
+          type: string
         CardTransactionLocationReference:
-          type: object
+          type: string
         CardTransactionProductandServiceReference:
-          type: object
+          type: string
         CardTransactionDate/Time:
           type: string
-    Payment:
+    Processing:
       type: object
       properties:
-        ParticipantPaymentTransaction:
+        ParticipantAcquirerBankSettlementTerms:
+          type: string
+        ParticipantIssuerBankSettlementTerms:
           type: string
     HTTPError:
       type: object
@@ -613,8 +613,8 @@ components:
       explode: false
       schema:
         type: string
-    ProcessingID:
-      name: processingId
+    PaymentID:
+      name: paymentId
       in: path
       required: true
       style: simple
@@ -629,8 +629,8 @@ components:
       explode: false
       schema:
         type: string
-    PaymentID:
-      name: paymentId
+    ProcessingID:
+      name: processingId
       in: path
       required: true
       style: simple

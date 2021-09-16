@@ -1377,7 +1377,7 @@ components:
         LeasingArrangementType:
           type: string
         LeasingArrangementReference:
-          type: object
+          type: string
         LeasingArrangementSchedule:
           type: string
         LeasingArrangementStatus:
@@ -1385,7 +1385,7 @@ components:
         LeasingArrangementCurrency:
           type: string
         LeasingArrangementRegulationReference:
-          type: object
+          type: string
         LeasingArrangementRegulationType:
           type: string
         LeasingArrangementJurisdiction:
@@ -1395,7 +1395,144 @@ components:
         LeasingArrangementAccountType:
           type: string
         LeasingArrangementAccountReference:
-          type: object
+          type: string
+    FinancialInstrument:
+      type: object
+      properties:
+        ? >-
+          Fulfillanyscheduledandad-hocobligationsunderaservicearrangement,mosttypicallyforafinancialproductorfacilitywithinLeasing.
+
+          Example:Performthescheduled(e.g.statements,standingorders)andad-hoc/requested(e.g.balanceinquiries,fundtransfers)fulfillmenttasksforacustomercurrentaccountfacility.
+        : type: string
+        FinancialInstrumentPreconditions:
+          type: string
+        FinancialInstrumentFeatureSchedule:
+          type: string
+        FinancialInstrument:
+          type: string
+        FinancialInstrumentPostconditions:
+          type: string
+        FinancialInstrumentFinancialInstrumentServiceType:
+          type: string
+        FinancialInstrumentFinancialInstrumentServiceDescription:
+          type: string
+        FinancialInstrumentFinancialInstrumentServiceInputsandOuputs:
+          type: string
+        FinancialInstrumentFinancialInstrumentServiceWorkProduct:
+          type: string
+        FinancialInstrumentFinancialInstrumentServiceName:
+          type: string
+    FinancialAccounting:
+      type: object
+      properties:
+        ? >-
+          Fulfillanyscheduledandad-hocobligationsunderaservicearrangement,mosttypicallyforafinancialproductorfacilitywithinLeasing.
+
+          Example:Performthescheduled(e.g.statements,standingorders)andad-hoc/requested(e.g.balanceinquiries,fundtransfers)fulfillmenttasksforacustomercurrentaccountfacility.
+        : type: string
+        FinancialAccountingPreconditions:
+          type: string
+        FinancialAccountingFeatureSchedule:
+          type: string
+        FinancialAccounting:
+          type: string
+        FinancialAccountingPostconditions:
+          type: string
+        FinancialAccountingFinancialAccountingServiceType:
+          type: string
+        FinancialAccountingFinancialAccountingServiceDescription:
+          type: string
+        FinancialAccountingFinancialAccountingServiceInputsandOuputs:
+          type: string
+        FinancialAccountingFinancialAccountingServiceWorkProduct:
+          type: string
+        FinancialAccountingFinancialAccountingServiceName:
+          type: string
+    IssuedDevice:
+      type: object
+      properties:
+        ? >-
+          Fulfillanyscheduledandad-hocobligationsunderaservicearrangement,mosttypicallyforafinancialproductorfacilitywithinLeasing.
+
+          Example:Performthescheduled(e.g.statements,standingorders)andad-hoc/requested(e.g.balanceinquiries,fundtransfers)fulfillmenttasksforacustomercurrentaccountfacility.
+        : type: string
+        IssuedDevicePreconditions:
+          type: string
+        IssuedDeviceFeatureSchedule:
+          type: string
+        BusinessService:
+          type: string
+        IssuedDevicePostconditions:
+          type: string
+        IssuedDeviceServiceType:
+          type: string
+        IssuedDeviceServiceDescription:
+          type: string
+        IssuedDeviceServiceInputsandOuputs:
+          type: string
+        IssuedDeviceServiceWorkProduct:
+          type: string
+        IssuedDeviceServiceName:
+          type: string
+    CorporateAction:
+      type: object
+      properties:
+        ? >-
+          Fulfillanyscheduledandad-hocobligationsunderaservicearrangement,mosttypicallyforafinancialproductorfacilitywithinLeasing.
+
+          Example:Performthescheduled(e.g.statements,standingorders)andad-hoc/requested(e.g.balanceinquiries,fundtransfers)fulfillmenttasksforacustomercurrentaccountfacility.
+        : type: string
+        CorporateActionPreconditions:
+          type: string
+        CorporateActionFeatureSchedule:
+          type: string
+        BS-CorporateActionProcessing:
+          type: string
+        CorporateActionPostconditions:
+          type: string
+        CorporateActionBS-CorporateActionProcessingServiceType:
+          type: string
+        CorporateActionBS-CorporateActionProcessingServiceDescription:
+          type: string
+        CorporateActionBS-CorporateActionProcessingServiceInputsandOuputs:
+          type: string
+        CorporateActionBS-CorporateActionProcessingServiceWorkProduct:
+          type: string
+        CorporateActionBS-CorporateActionProcessingServiceName:
+          type: string
+    Deposits:
+      type: object
+      properties:
+        ? >-
+          Fulfillanyscheduledandad-hocobligationsunderaservicearrangement,mosttypicallyforafinancialproductorfacilitywithinLeasing.
+
+          Example:Performthescheduled(e.g.statements,standingorders)andad-hoc/requested(e.g.balanceinquiries,fundtransfers)fulfillmenttasksforacustomercurrentaccountfacility.
+        : type: string
+        DepositsPreconditions:
+          type: string
+        DepositsFeatureSchedule:
+          type: string
+        DepositProcessing:
+          type: string
+        DepositsPostconditions:
+          type: string
+        DepositsDepositProcessingServiceType:
+          type: string
+        DepositsDepositProcessingServiceDescription:
+          type: string
+        DepositsDepositProcessingServiceInputsandOuputs:
+          type: string
+        DepositsDepositProcessingServiceWorkProduct:
+          type: string
+        DepositsDepositProcessingServiceName:
+          type: string
+    LeasingOutcome:
+      type: object
+      properties:
+        LeasingFinancialFacility:
+          type: string
+        LeasingWorkProduct:
+          type: string
     Fees:
       type: object
       properties:
@@ -1409,7 +1546,7 @@ components:
         FeesFeatureSchedule:
           type: string
         BusinessService:
-          type: object
+          type: string
         FeesPostconditions:
           type: string
         FeesServiceType:
@@ -1421,6 +1558,32 @@ components:
         FeesServiceWorkProduct:
           type: string
         FeesServiceName:
+          type: string
+    Collateral:
+      type: object
+      properties:
+        ? >-
+          Fulfillanyscheduledandad-hocobligationsunderaservicearrangement,mosttypicallyforafinancialproductorfacilitywithinLeasing.
+
+          Example:Performthescheduled(e.g.statements,standingorders)andad-hoc/requested(e.g.balanceinquiries,fundtransfers)fulfillmenttasksforacustomercurrentaccountfacility.
+        : type: string
+        CollateralPreconditions:
+          type: string
+        CollateralFeatureSchedule:
+          type: string
+        BusinessService:
+          type: string
+        CollateralPostconditions:
+          type: string
+        CollateralServiceType:
+          type: string
+        CollateralServiceDescription:
+          type: string
+        CollateralServiceInputsandOuputs:
+          type: string
+        CollateralServiceWorkProduct:
+          type: string
+        CollateralServiceName:
           type: string
     Lien:
       type: object
@@ -1435,7 +1598,7 @@ components:
         LienFeatureSchedule:
           type: string
         BusinessService:
-          type: object
+          type: string
         LienPostconditions:
           type: string
         LienServiceType:
@@ -1461,7 +1624,7 @@ components:
         PaymentsFeatureSchedule:
           type: string
         BusinessService:
-          type: object
+          type: string
         PaymentsPostconditions:
           type: string
         PaymentsServiceType:
@@ -1473,188 +1636,6 @@ components:
         PaymentsServiceWorkProduct:
           type: string
         PaymentsServiceName:
-          type: string
-    Sweep:
-      type: object
-      properties:
-        ? >-
-          Fulfillanyscheduledandad-hocobligationsunderaservicearrangement,mosttypicallyforafinancialproductorfacilitywithinLeasing.
-
-          Example:Performthescheduled(e.g.statements,standingorders)andad-hoc/requested(e.g.balanceinquiries,fundtransfers)fulfillmenttasksforacustomercurrentaccountfacility.
-        : type: string
-        SweepPreconditions:
-          type: string
-        SweepFeatureSchedule:
-          type: string
-        BusinessService:
-          type: object
-        SweepPostconditions:
-          type: string
-        SweepServiceType:
-          type: string
-        SweepServiceDescription:
-          type: string
-        SweepServiceInputsandOuputs:
-          type: string
-        SweepServiceWorkProduct:
-          type: string
-        SweepServiceName:
-          type: string
-    FinancialInstrument:
-      type: object
-      properties:
-        ? >-
-          Fulfillanyscheduledandad-hocobligationsunderaservicearrangement,mosttypicallyforafinancialproductorfacilitywithinLeasing.
-
-          Example:Performthescheduled(e.g.statements,standingorders)andad-hoc/requested(e.g.balanceinquiries,fundtransfers)fulfillmenttasksforacustomercurrentaccountfacility.
-        : type: string
-        FinancialInstrumentPreconditions:
-          type: string
-        FinancialInstrumentFeatureSchedule:
-          type: string
-        FinancialInstrument:
-          type: object
-        FinancialInstrumentPostconditions:
-          type: string
-        FinancialInstrumentFinancialInstrumentServiceType:
-          type: string
-        FinancialInstrumentFinancialInstrumentServiceDescription:
-          type: string
-        FinancialInstrumentFinancialInstrumentServiceInputsandOuputs:
-          type: string
-        FinancialInstrumentFinancialInstrumentServiceWorkProduct:
-          type: string
-        FinancialInstrumentFinancialInstrumentServiceName:
-          type: string
-    Deposits:
-      type: object
-      properties:
-        ? >-
-          Fulfillanyscheduledandad-hocobligationsunderaservicearrangement,mosttypicallyforafinancialproductorfacilitywithinLeasing.
-
-          Example:Performthescheduled(e.g.statements,standingorders)andad-hoc/requested(e.g.balanceinquiries,fundtransfers)fulfillmenttasksforacustomercurrentaccountfacility.
-        : type: string
-        DepositsPreconditions:
-          type: string
-        DepositsFeatureSchedule:
-          type: string
-        DepositProcessing:
-          type: object
-        DepositsPostconditions:
-          type: string
-        DepositsDepositProcessingServiceType:
-          type: string
-        DepositsDepositProcessingServiceDescription:
-          type: string
-        DepositsDepositProcessingServiceInputsandOuputs:
-          type: string
-        DepositsDepositProcessingServiceWorkProduct:
-          type: string
-        DepositsDepositProcessingServiceName:
-          type: string
-    CorporateAction:
-      type: object
-      properties:
-        ? >-
-          Fulfillanyscheduledandad-hocobligationsunderaservicearrangement,mosttypicallyforafinancialproductorfacilitywithinLeasing.
-
-          Example:Performthescheduled(e.g.statements,standingorders)andad-hoc/requested(e.g.balanceinquiries,fundtransfers)fulfillmenttasksforacustomercurrentaccountfacility.
-        : type: string
-        CorporateActionPreconditions:
-          type: string
-        CorporateActionFeatureSchedule:
-          type: string
-        BS-CorporateActionProcessing:
-          type: object
-        CorporateActionPostconditions:
-          type: string
-        CorporateActionBS-CorporateActionProcessingServiceType:
-          type: string
-        CorporateActionBS-CorporateActionProcessingServiceDescription:
-          type: string
-        CorporateActionBS-CorporateActionProcessingServiceInputsandOuputs:
-          type: string
-        CorporateActionBS-CorporateActionProcessingServiceWorkProduct:
-          type: string
-        CorporateActionBS-CorporateActionProcessingServiceName:
-          type: string
-    IssuedDevice:
-      type: object
-      properties:
-        ? >-
-          Fulfillanyscheduledandad-hocobligationsunderaservicearrangement,mosttypicallyforafinancialproductorfacilitywithinLeasing.
-
-          Example:Performthescheduled(e.g.statements,standingorders)andad-hoc/requested(e.g.balanceinquiries,fundtransfers)fulfillmenttasksforacustomercurrentaccountfacility.
-        : type: string
-        IssuedDevicePreconditions:
-          type: string
-        IssuedDeviceFeatureSchedule:
-          type: string
-        BusinessService:
-          type: object
-        IssuedDevicePostconditions:
-          type: string
-        IssuedDeviceServiceType:
-          type: string
-        IssuedDeviceServiceDescription:
-          type: string
-        IssuedDeviceServiceInputsandOuputs:
-          type: string
-        IssuedDeviceServiceWorkProduct:
-          type: string
-        IssuedDeviceServiceName:
-          type: string
-    Withdrawals:
-      type: object
-      properties:
-        ? >-
-          Fulfillanyscheduledandad-hocobligationsunderaservicearrangement,mosttypicallyforafinancialproductorfacilitywithinLeasing.
-
-          Example:Performthescheduled(e.g.statements,standingorders)andad-hoc/requested(e.g.balanceinquiries,fundtransfers)fulfillmenttasksforacustomercurrentaccountfacility.
-        : type: string
-        WithdrawalsPreconditions:
-          type: string
-        WithdrawalsFeatureSchedule:
-          type: string
-        WithdrawalProcessing:
-          type: object
-        WithdrawalsPostconditions:
-          type: string
-        WithdrawalsWithdrawalProcessingServiceType:
-          type: string
-        WithdrawalsWithdrawalProcessingServiceDescription:
-          type: string
-        WithdrawalsWithdrawalProcessingServiceInputsandOuputs:
-          type: string
-        WithdrawalsWithdrawalProcessingServiceWorkProduct:
-          type: string
-        WithdrawalsWithdrawalProcessingServiceName:
-          type: string
-    Collateral:
-      type: object
-      properties:
-        ? >-
-          Fulfillanyscheduledandad-hocobligationsunderaservicearrangement,mosttypicallyforafinancialproductorfacilitywithinLeasing.
-
-          Example:Performthescheduled(e.g.statements,standingorders)andad-hoc/requested(e.g.balanceinquiries,fundtransfers)fulfillmenttasksforacustomercurrentaccountfacility.
-        : type: string
-        CollateralPreconditions:
-          type: string
-        CollateralFeatureSchedule:
-          type: string
-        BusinessService:
-          type: object
-        CollateralPostconditions:
-          type: string
-        CollateralServiceType:
-          type: string
-        CollateralServiceDescription:
-          type: string
-        CollateralServiceInputsandOuputs:
-          type: string
-        CollateralServiceWorkProduct:
-          type: string
-        CollateralServiceName:
           type: string
     Interest:
       type: object
@@ -1669,7 +1650,7 @@ components:
         InterestFeatureSchedule:
           type: string
         BusinessService:
-          type: object
+          type: string
         InterestPostconditions:
           type: string
         InterestServiceType:
@@ -1682,7 +1663,7 @@ components:
           type: string
         InterestServiceName:
           type: string
-    FinancialAccounting:
+    Withdrawals:
       type: object
       properties:
         ? >-
@@ -1690,30 +1671,64 @@ components:
 
           Example:Performthescheduled(e.g.statements,standingorders)andad-hoc/requested(e.g.balanceinquiries,fundtransfers)fulfillmenttasksforacustomercurrentaccountfacility.
         : type: string
-        FinancialAccountingPreconditions:
+        WithdrawalsPreconditions:
           type: string
-        FinancialAccountingFeatureSchedule:
+        WithdrawalsFeatureSchedule:
           type: string
-        FinancialAccounting:
-          type: object
-        FinancialAccountingPostconditions:
+        WithdrawalProcessing:
           type: string
-        FinancialAccountingFinancialAccountingServiceType:
+        WithdrawalsPostconditions:
           type: string
-        FinancialAccountingFinancialAccountingServiceDescription:
+        WithdrawalsWithdrawalProcessingServiceType:
           type: string
-        FinancialAccountingFinancialAccountingServiceInputsandOuputs:
+        WithdrawalsWithdrawalProcessingServiceDescription:
           type: string
-        FinancialAccountingFinancialAccountingServiceWorkProduct:
+        WithdrawalsWithdrawalProcessingServiceInputsandOuputs:
           type: string
-        FinancialAccountingFinancialAccountingServiceName:
+        WithdrawalsWithdrawalProcessingServiceWorkProduct:
           type: string
-    LeasingOutcome:
+        WithdrawalsWithdrawalProcessingServiceName:
+          type: string
+    ClearingandSettlement:
       type: object
       properties:
-        LeasingFinancialFacility:
+        CorrespondentBankClearingArrangementReference:
           type: string
-        LeasingWorkProduct:
+        CorrespondentBankClearingArrangementClearingInstructions:
+          type: string
+        CorrespondentBankClearingArrangementSettlementInstructions:
+          type: string
+        MirrorNostroAccountReference:
+          type: string
+        ClearingTransaction:
+          type: string
+        SettlementTransaction:
+          type: string
+    Sweep:
+      type: object
+      properties:
+        ? >-
+          Fulfillanyscheduledandad-hocobligationsunderaservicearrangement,mosttypicallyforafinancialproductorfacilitywithinLeasing.
+
+          Example:Performthescheduled(e.g.statements,standingorders)andad-hoc/requested(e.g.balanceinquiries,fundtransfers)fulfillmenttasksforacustomercurrentaccountfacility.
+        : type: string
+        SweepPreconditions:
+          type: string
+        SweepFeatureSchedule:
+          type: string
+        BusinessService:
+          type: string
+        SweepPostconditions:
+          type: string
+        SweepServiceType:
+          type: string
+        SweepServiceDescription:
+          type: string
+        SweepServiceInputsandOuputs:
+          type: string
+        SweepServiceWorkProduct:
+          type: string
+        SweepServiceName:
           type: string
     HTTPError:
       type: object
@@ -1733,8 +1748,64 @@ components:
       explode: false
       schema:
         type: string
+    FinancialInstrumentID:
+      name: financialinstrumentId
+      in: path
+      required: true
+      style: simple
+      explode: false
+      schema:
+        type: string
+    FinancialAccountingID:
+      name: financialaccountingId
+      in: path
+      required: true
+      style: simple
+      explode: false
+      schema:
+        type: string
+    IssuedDeviceID:
+      name: issueddeviceId
+      in: path
+      required: true
+      style: simple
+      explode: false
+      schema:
+        type: string
+    CorporateActionID:
+      name: corporateactionId
+      in: path
+      required: true
+      style: simple
+      explode: false
+      schema:
+        type: string
+    DepositsID:
+      name: depositsId
+      in: path
+      required: true
+      style: simple
+      explode: false
+      schema:
+        type: string
+    LeasingOutcomeID:
+      name: leasingoutcomeId
+      in: path
+      required: true
+      style: simple
+      explode: false
+      schema:
+        type: string
     FeesID:
       name: feesId
+      in: path
+      required: true
+      style: simple
+      explode: false
+      schema:
+        type: string
+    CollateralID:
+      name: collateralId
       in: path
       required: true
       style: simple
@@ -1757,40 +1828,8 @@ components:
       explode: false
       schema:
         type: string
-    SweepID:
-      name: sweepId
-      in: path
-      required: true
-      style: simple
-      explode: false
-      schema:
-        type: string
-    FinancialInstrumentID:
-      name: financialinstrumentId
-      in: path
-      required: true
-      style: simple
-      explode: false
-      schema:
-        type: string
-    DepositsID:
-      name: depositsId
-      in: path
-      required: true
-      style: simple
-      explode: false
-      schema:
-        type: string
-    CorporateActionID:
-      name: corporateactionId
-      in: path
-      required: true
-      style: simple
-      explode: false
-      schema:
-        type: string
-    IssuedDeviceID:
-      name: issueddeviceId
+    InterestID:
+      name: interestId
       in: path
       required: true
       style: simple
@@ -1805,32 +1844,16 @@ components:
       explode: false
       schema:
         type: string
-    CollateralID:
-      name: collateralId
+    ClearingandSettlementID:
+      name: clearingandsettlementId
       in: path
       required: true
       style: simple
       explode: false
       schema:
         type: string
-    InterestID:
-      name: interestId
-      in: path
-      required: true
-      style: simple
-      explode: false
-      schema:
-        type: string
-    FinancialAccountingID:
-      name: financialaccountingId
-      in: path
-      required: true
-      style: simple
-      explode: false
-      schema:
-        type: string
-    LeasingOutcomeID:
-      name: leasingoutcomeId
+    SweepID:
+      name: sweepId
       in: path
       required: true
       style: simple

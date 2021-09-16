@@ -688,17 +688,17 @@ components:
         AccountsReceivableProcedureStatus:
           type: string
         AccountsReceivableProcedureReference:
-          type: object
+          type: string
         AccountsReceivableProcedureBusinessUnitReference:
-          type: object
+          type: string
         AccountsReceivableProcedureServiceProviderReference:
-          type: object
+          type: string
         AccountsReceivableProcedureFinancialFacilityReference:
-          type: object
+          type: string
         AccountsReceivableProcedureEmployeeReference:
-          type: object
+          type: string
         AccountsReceivableProcedureCustomerReference:
-          type: object
+          type: string
         AccountsReceivableProcedureType:
           type: string
         AccountsReceivableProcedureServiceProviderSchedule:
@@ -716,90 +716,6 @@ components:
         AccountsReceivableProcedureFinancialTransactionArrangement:
           type: string
         AccountsReceivableProcedureCustomerAgreementReference:
-          type: object
-    CustomerNegotiation:
-      type: object
-      properties:
-        ? >-
-          CompleteworktasksfollowingadefinedprocedureinsupportofgeneralofficeactivitiesandproductandservicedeliverywithinAccountsReceivable.
-
-          Example:Processtheevaluationandcompletionofcustomeroffers.
-        : type: string
-        CustomerNegotiationPreconditions:
-          type: string
-        CustomerNegotiationBusinessUnit/EmployeeReference:
-          type: object
-        CustomerNegotiationWorkSchedule:
-          type: string
-        PaymentNegotation:
-          type: object
-        CustomerNegotiationPostconditions:
-          type: string
-        CustomerNegotiationPaymentNegotationServiceType:
-          type: string
-        CustomerNegotiationPaymentNegotationServiceDescription:
-          type: string
-        CustomerNegotiationPaymentNegotationServiceInputsandOuputs:
-          type: string
-        CustomerNegotiationPaymentNegotationServiceWorkProduct:
-          type: string
-        CustomerNegotiationPaymentNegotationServiceName:
-          type: string
-    ReceivablesEvaluation:
-      type: object
-      properties:
-        ? >-
-          CompleteworktasksfollowingadefinedprocedureinsupportofgeneralofficeactivitiesandproductandservicedeliverywithinAccountsReceivable.
-
-          Example:Processtheevaluationandcompletionofcustomeroffers.
-        : type: string
-        ReceivablesEvaluationPreconditions:
-          type: string
-        ReceivablesEvaluationBusinessUnit/EmployeeReference:
-          type: object
-        ReceivablesEvaluationWorkSchedule:
-          type: string
-        ReceivablesEvaluation:
-          type: object
-        ReceivablesEvaluationPostconditions:
-          type: string
-        ReceivablesEvaluationReceivablesEvaluationServiceType:
-          type: string
-        ReceivablesEvaluationReceivablesEvaluationServiceDescription:
-          type: string
-        ReceivablesEvaluationReceivablesEvaluationServiceInputsandOuputs:
-          type: string
-        ReceivablesEvaluationReceivablesEvaluationServiceWorkProduct:
-          type: string
-        ReceivablesEvaluationReceivablesEvaluationServiceName:
-          type: string
-    Payment:
-      type: object
-      properties:
-        ? >-
-          CompleteworktasksfollowingadefinedprocedureinsupportofgeneralofficeactivitiesandproductandservicedeliverywithinAccountsReceivable.
-
-          Example:Processtheevaluationandcompletionofcustomeroffers.
-        : type: string
-        PaymentPreconditions:
-          type: string
-        PaymentBusinessUnit/EmployeeReference:
-          type: object
-        PaymentWorkSchedule:
-          type: string
-        BusinessService:
-          type: object
-        PaymentPostconditions:
-          type: string
-        PaymentServiceType:
-          type: string
-        PaymentServiceDescription:
-          type: string
-        PaymentServiceInputsandOuputs:
-          type: string
-        PaymentServiceWorkProduct:
-          type: string
-        PaymentServiceName:
           type: string
     Resolution:
       type: object
@@ -812,11 +728,11 @@ components:
         ResolutionPreconditions:
           type: string
         ResolutionBusinessUnit/EmployeeReference:
-          type: object
+          type: string
         ResolutionWorkSchedule:
           type: string
         BusinessService:
-          type: object
+          type: string
         ResolutionPostconditions:
           type: string
         ResolutionServiceType:
@@ -828,6 +744,90 @@ components:
         ResolutionServiceWorkProduct:
           type: string
         ResolutionServiceName:
+          type: string
+    ReceivablesEvaluation:
+      type: object
+      properties:
+        ? >-
+          CompleteworktasksfollowingadefinedprocedureinsupportofgeneralofficeactivitiesandproductandservicedeliverywithinAccountsReceivable.
+
+          Example:Processtheevaluationandcompletionofcustomeroffers.
+        : type: string
+        ReceivablesEvaluationPreconditions:
+          type: string
+        ReceivablesEvaluationBusinessUnit/EmployeeReference:
+          type: string
+        ReceivablesEvaluationWorkSchedule:
+          type: string
+        ReceivablesEvaluation:
+          type: string
+        ReceivablesEvaluationPostconditions:
+          type: string
+        ReceivablesEvaluationReceivablesEvaluationServiceType:
+          type: string
+        ReceivablesEvaluationReceivablesEvaluationServiceDescription:
+          type: string
+        ReceivablesEvaluationReceivablesEvaluationServiceInputsandOuputs:
+          type: string
+        ReceivablesEvaluationReceivablesEvaluationServiceWorkProduct:
+          type: string
+        ReceivablesEvaluationReceivablesEvaluationServiceName:
+          type: string
+    CustomerNegotiation:
+      type: object
+      properties:
+        ? >-
+          CompleteworktasksfollowingadefinedprocedureinsupportofgeneralofficeactivitiesandproductandservicedeliverywithinAccountsReceivable.
+
+          Example:Processtheevaluationandcompletionofcustomeroffers.
+        : type: string
+        CustomerNegotiationPreconditions:
+          type: string
+        CustomerNegotiationBusinessUnit/EmployeeReference:
+          type: string
+        CustomerNegotiationWorkSchedule:
+          type: string
+        PaymentNegotation:
+          type: string
+        CustomerNegotiationPostconditions:
+          type: string
+        CustomerNegotiationPaymentNegotationServiceType:
+          type: string
+        CustomerNegotiationPaymentNegotationServiceDescription:
+          type: string
+        CustomerNegotiationPaymentNegotationServiceInputsandOuputs:
+          type: string
+        CustomerNegotiationPaymentNegotationServiceWorkProduct:
+          type: string
+        CustomerNegotiationPaymentNegotationServiceName:
+          type: string
+    Payment:
+      type: object
+      properties:
+        ? >-
+          CompleteworktasksfollowingadefinedprocedureinsupportofgeneralofficeactivitiesandproductandservicedeliverywithinAccountsReceivable.
+
+          Example:Processtheevaluationandcompletionofcustomeroffers.
+        : type: string
+        PaymentPreconditions:
+          type: string
+        PaymentBusinessUnit/EmployeeReference:
+          type: string
+        PaymentWorkSchedule:
+          type: string
+        BusinessService:
+          type: string
+        PaymentPostconditions:
+          type: string
+        PaymentServiceType:
+          type: string
+        PaymentServiceDescription:
+          type: string
+        PaymentServiceInputsandOuputs:
+          type: string
+        PaymentServiceWorkProduct:
+          type: string
+        PaymentServiceName:
           type: string
     AccountsReceivableOutcome:
       type: object
@@ -854,8 +854,8 @@ components:
       explode: false
       schema:
         type: string
-    CustomerNegotiationID:
-      name: customernegotiationId
+    ResolutionID:
+      name: resolutionId
       in: path
       required: true
       style: simple
@@ -870,16 +870,16 @@ components:
       explode: false
       schema:
         type: string
-    PaymentID:
-      name: paymentId
+    CustomerNegotiationID:
+      name: customernegotiationId
       in: path
       required: true
       style: simple
       explode: false
       schema:
         type: string
-    ResolutionID:
-      name: resolutionId
+    PaymentID:
+      name: paymentId
       in: path
       required: true
       style: simple

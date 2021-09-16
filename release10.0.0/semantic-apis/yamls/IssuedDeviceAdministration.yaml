@@ -673,9 +673,9 @@ components:
       type: object
       properties:
         CustomerReference:
-          type: object
+          type: string
         ProductInstanceReference:
-          type: object
+          type: string
         IssuedDeviceType:
           type: string
         AssociatedPermissions:
@@ -683,6 +683,24 @@ components:
         IssueDate:
           type: string
         ValidFrom-ToDate:
+          type: string
+    PasswordAssignment:
+      type: object
+      properties:
+        FormatRules:
+          type: string
+        RecentValues:
+          type: string
+        PasswordValue:
+          type: string
+        UsageLog:
+          type: string
+    BiometricAssignment:
+      type: object
+      properties:
+        BiometricType:
+          type: string
+        BiometricRegisteredDetail:
           type: string
     QuestionAssignment:
       type: object
@@ -697,6 +715,19 @@ components:
           type: string
         UsageLog:
           type: string
+    ReaderAssignment:
+      type: object
+      properties:
+        IssuedReaderDeviceSerialNumber:
+          type: string
+        VersionNumber:
+          type: string
+        IssueLocation:
+          type: string
+        IssuedDeviceConfiguration:
+          type: string
+        UsageLog:
+          type: string
     DeviceAssignment:
       type: object
       properties:
@@ -705,7 +736,7 @@ components:
         VersionNumber:
           type: string
         CustomerCustomizationReference:
-          type: object
+          type: string
         Deliverymethod:
           type: string
         IssueLocation:
@@ -722,37 +753,6 @@ components:
         IssueLocation:
           type: string
         SequenceNumber:
-          type: string
-    BiometricAssignment:
-      type: object
-      properties:
-        BiometricType:
-          type: string
-        BiometricRegisteredDetail:
-          type: string
-    ReaderAssignment:
-      type: object
-      properties:
-        IssuedReaderDeviceSerialNumber:
-          type: string
-        VersionNumber:
-          type: string
-        IssueLocation:
-          type: string
-        IssuedDeviceConfiguration:
-          type: string
-        UsageLog:
-          type: string
-    PasswordAssignment:
-      type: object
-      properties:
-        FormatRules:
-          type: string
-        RecentValues:
-          type: string
-        PasswordValue:
-          type: string
-        UsageLog:
           type: string
     HTTPError:
       type: object
@@ -1320,8 +1320,32 @@ components:
       explode: false
       schema:
         type: string
+    PasswordAssignmentID:
+      name: passwordassignmentId
+      in: path
+      required: true
+      style: simple
+      explode: false
+      schema:
+        type: string
+    BiometricAssignmentID:
+      name: biometricassignmentId
+      in: path
+      required: true
+      style: simple
+      explode: false
+      schema:
+        type: string
     QuestionAssignmentID:
       name: questionassignmentId
+      in: path
+      required: true
+      style: simple
+      explode: false
+      schema:
+        type: string
+    ReaderAssignmentID:
+      name: readerassignmentId
       in: path
       required: true
       style: simple
@@ -1338,30 +1362,6 @@ components:
         type: string
     ChequesAssignmentID:
       name: chequesassignmentId
-      in: path
-      required: true
-      style: simple
-      explode: false
-      schema:
-        type: string
-    BiometricAssignmentID:
-      name: biometricassignmentId
-      in: path
-      required: true
-      style: simple
-      explode: false
-      schema:
-        type: string
-    ReaderAssignmentID:
-      name: readerassignmentId
-      in: path
-      required: true
-      style: simple
-      explode: false
-      schema:
-        type: string
-    PasswordAssignmentID:
-      name: passwordassignmentId
       in: path
       required: true
       style: simple

@@ -1154,84 +1154,6 @@ components:
         TechnologyStandardsSpecificationFeedback:
           type: string
         TechnologyStandardsSpecificationServiceProviderReference:
-          type: object
-    ITPoliciesandGuidelines:
-      type: object
-      properties:
-        ? >-
-          Createandmaintainadesignforaprocedure,product/servicemodelorothersuchentitywithinITStandards&Guidelines.
-
-          Example:Createandmaintainproductdesignsandanalyticalmodels.
-        : type: string
-        ITPoliciesandGuidelinesPreconditions:
-          type: string
-        ITPoliciesandGuidelinesSpecificationSchedule:
-          type: string
-        ITPoliciesandGuidelinesVersionNumber:
-          type: string
-        ITPoliciesandGuidelines:
-          type: object
-        ITPoliciesandGuidelinesServiceType:
-          type: string
-        ITPoliciesandGuidelinesServiceDescription:
-          type: string
-        ITPoliciesandGuidelinesServiceInputsandOuputs:
-          type: string
-        ITPoliciesandGuidelinesServiceWorkProduct:
-          type: string
-        ITPoliciesandGuidelinesServiceName:
-          type: string
-    ProductionEnvironmentandSupportServices:
-      type: object
-      properties:
-        ? >-
-          Createandmaintainadesignforaprocedure,product/servicemodelorothersuchentitywithinITStandards&Guidelines.
-
-          Example:Createandmaintainproductdesignsandanalyticalmodels.
-        : type: string
-        ProductionEnvironmentandSupportServicesPreconditions:
-          type: string
-        ProductionEnvironmentandSupportServicesSpecificationSchedule:
-          type: string
-        ProductionEnvironmentandSupportServicesVersionNumber:
-          type: string
-        ProductionEnvironmentandSupportServices:
-          type: object
-        ProductionEnvironmentandSupportServicesServiceType:
-          type: string
-        ProductionEnvironmentandSupportServicesServiceDescription:
-          type: string
-        ProductionEnvironmentandSupportServicesServiceInputsandOuputs:
-          type: string
-        ProductionEnvironmentandSupportServicesServiceWorkProduct:
-          type: string
-        ProductionEnvironmentandSupportServicesServiceName:
-          type: string
-    ProductionPlatformsandInfrastructure:
-      type: object
-      properties:
-        ? >-
-          Createandmaintainadesignforaprocedure,product/servicemodelorothersuchentitywithinITStandards&Guidelines.
-
-          Example:Createandmaintainproductdesignsandanalyticalmodels.
-        : type: string
-        ProductionPlatformsandInfrastructurePreconditions:
-          type: string
-        ProductionPlatformsandInfrastructureSpecificationSchedule:
-          type: string
-        ProductionPlatformsandInfrastructureVersionNumber:
-          type: string
-        ProductionPlatformsandInfrastructure:
-          type: object
-        ProductionPlatformsandInfrastructureServiceType:
-          type: string
-        ProductionPlatformsandInfrastructureServiceDescription:
-          type: string
-        ProductionPlatformsandInfrastructureServiceInputsandOuputs:
-          type: string
-        ProductionPlatformsandInfrastructureServiceWorkProduct:
-          type: string
-        ProductionPlatformsandInfrastructureServiceName:
           type: string
     DevelopmentToolingandEnvironment:
       type: object
@@ -1248,7 +1170,7 @@ components:
         DevelopmentToolingandEnvironmentVersionNumber:
           type: string
         DevelopmentToolingandEnvironment:
-          type: object
+          type: string
         DevelopmentToolingandEnvironmentServiceType:
           type: string
         DevelopmentToolingandEnvironmentServiceDescription:
@@ -1258,6 +1180,32 @@ components:
         DevelopmentToolingandEnvironmentServiceWorkProduct:
           type: string
         DevelopmentToolingandEnvironmentServiceName:
+          type: string
+    ProductionEnvironmentandSupportServices:
+      type: object
+      properties:
+        ? >-
+          Createandmaintainadesignforaprocedure,product/servicemodelorothersuchentitywithinITStandards&Guidelines.
+
+          Example:Createandmaintainproductdesignsandanalyticalmodels.
+        : type: string
+        ProductionEnvironmentandSupportServicesPreconditions:
+          type: string
+        ProductionEnvironmentandSupportServicesSpecificationSchedule:
+          type: string
+        ProductionEnvironmentandSupportServicesVersionNumber:
+          type: string
+        ProductionEnvironmentandSupportServices:
+          type: string
+        ProductionEnvironmentandSupportServicesServiceType:
+          type: string
+        ProductionEnvironmentandSupportServicesServiceDescription:
+          type: string
+        ProductionEnvironmentandSupportServicesServiceInputsandOuputs:
+          type: string
+        ProductionEnvironmentandSupportServicesServiceWorkProduct:
+          type: string
+        ProductionEnvironmentandSupportServicesServiceName:
           type: string
     ITStandardsAndGuidelinesOutcome:
       type: object
@@ -1269,6 +1217,58 @@ components:
         ITStandardsAndGuidelinesWorkProduct:
           type: string
         ITStandardsAndGuidelinesImpactAnalysis:
+          type: string
+    ITPoliciesandGuidelines:
+      type: object
+      properties:
+        ? >-
+          Createandmaintainadesignforaprocedure,product/servicemodelorothersuchentitywithinITStandards&Guidelines.
+
+          Example:Createandmaintainproductdesignsandanalyticalmodels.
+        : type: string
+        ITPoliciesandGuidelinesPreconditions:
+          type: string
+        ITPoliciesandGuidelinesSpecificationSchedule:
+          type: string
+        ITPoliciesandGuidelinesVersionNumber:
+          type: string
+        ITPoliciesandGuidelines:
+          type: string
+        ITPoliciesandGuidelinesServiceType:
+          type: string
+        ITPoliciesandGuidelinesServiceDescription:
+          type: string
+        ITPoliciesandGuidelinesServiceInputsandOuputs:
+          type: string
+        ITPoliciesandGuidelinesServiceWorkProduct:
+          type: string
+        ITPoliciesandGuidelinesServiceName:
+          type: string
+    ProductionPlatformsandInfrastructure:
+      type: object
+      properties:
+        ? >-
+          Createandmaintainadesignforaprocedure,product/servicemodelorothersuchentitywithinITStandards&Guidelines.
+
+          Example:Createandmaintainproductdesignsandanalyticalmodels.
+        : type: string
+        ProductionPlatformsandInfrastructurePreconditions:
+          type: string
+        ProductionPlatformsandInfrastructureSpecificationSchedule:
+          type: string
+        ProductionPlatformsandInfrastructureVersionNumber:
+          type: string
+        ProductionPlatformsandInfrastructure:
+          type: string
+        ProductionPlatformsandInfrastructureServiceType:
+          type: string
+        ProductionPlatformsandInfrastructureServiceDescription:
+          type: string
+        ProductionPlatformsandInfrastructureServiceInputsandOuputs:
+          type: string
+        ProductionPlatformsandInfrastructureServiceWorkProduct:
+          type: string
+        ProductionPlatformsandInfrastructureServiceName:
           type: string
     ProductTestingandDeploymentMechanisms:
       type: object
@@ -1285,7 +1285,7 @@ components:
         ProductTestingandDeploymentMechanismsVersionNumber:
           type: string
         ProductTestingandDeploymentMechanisms:
-          type: object
+          type: string
         ProductTestingandDeploymentMechanismsServiceType:
           type: string
         ProductTestingandDeploymentMechanismsServiceDescription:
@@ -1314,8 +1314,8 @@ components:
       explode: false
       schema:
         type: string
-    ITPoliciesandGuidelinesID:
-      name: itpoliciesandguidelinesId
+    DevelopmentToolingandEnvironmentID:
+      name: developmenttoolingandenvironmentId
       in: path
       required: true
       style: simple
@@ -1330,24 +1330,24 @@ components:
       explode: false
       schema:
         type: string
-    ProductionPlatformsandInfrastructureID:
-      name: productionplatformsandinfrastructureId
-      in: path
-      required: true
-      style: simple
-      explode: false
-      schema:
-        type: string
-    DevelopmentToolingandEnvironmentID:
-      name: developmenttoolingandenvironmentId
-      in: path
-      required: true
-      style: simple
-      explode: false
-      schema:
-        type: string
     ITStandardsAndGuidelinesOutcomeID:
       name: itstandardsandguidelinesoutcomeId
+      in: path
+      required: true
+      style: simple
+      explode: false
+      schema:
+        type: string
+    ITPoliciesandGuidelinesID:
+      name: itpoliciesandguidelinesId
+      in: path
+      required: true
+      style: simple
+      explode: false
+      schema:
+        type: string
+    ProductionPlatformsandInfrastructureID:
+      name: productionplatformsandinfrastructureId
       in: path
       required: true
       style: simple

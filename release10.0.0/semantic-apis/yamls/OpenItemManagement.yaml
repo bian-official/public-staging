@@ -284,9 +284,9 @@ components:
         OpenItemDescription:
           type: string
         ProductInstanceReference:
-          type: object
+          type: string
         PartyReference:
-          type: object
+          type: string
         LoanRepaymentSchedule:
           type: string
         LoanOutstandingBalance:
@@ -295,28 +295,11 @@ components:
           type: string
         RepaymentStatement:
           type: string
-    Repayment:
-      type: object
-      properties:
-        TransactionPayerReference:
-          type: object
-        TransactionPayerProductInstanceReference:
-          type: object
-        TransactionPayerBankReference:
-          type: object
-        TransactionType:
-          type: string
-        TransactionAmount:
-          type: number
-        TransactionCurrency:
-          type: string
-        TransactionDate:
-          type: string
     Tracking:
       type: object
       properties:
         CustomerBillingProcedureInstanceReference:
-          type: object
+          type: string
         CustomerBillingParty:
           type: string
         CustomerBillingAddress:
@@ -326,7 +309,24 @@ components:
         CustomerBillingStatement:
           type: string
         CustomerBillingAmount:
-          type: number
+          type: string
+    Repayment:
+      type: object
+      properties:
+        TransactionPayerReference:
+          type: string
+        TransactionPayerProductInstanceReference:
+          type: string
+        TransactionPayerBankReference:
+          type: string
+        TransactionType:
+          type: string
+        TransactionAmount:
+          type: string
+        TransactionCurrency:
+          type: string
+        TransactionDate:
+          type: string
     HTTPError:
       type: object
       properties:
@@ -345,16 +345,16 @@ components:
       explode: false
       schema:
         type: string
-    RepaymentID:
-      name: repaymentId
+    TrackingID:
+      name: trackingId
       in: path
       required: true
       style: simple
       explode: false
       schema:
         type: string
-    TrackingID:
-      name: trackingId
+    RepaymentID:
+      name: repaymentId
       in: path
       required: true
       style: simple

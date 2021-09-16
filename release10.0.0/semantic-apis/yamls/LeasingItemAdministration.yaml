@@ -626,34 +626,6 @@ components:
         LeasingItemAdministrativePlan:
           type: string
         LeasingItemAdministrativePlanReference:
-          type: object
-    Valuation:
-      type: object
-      properties:
-        ? >-
-          Handleandassignthedaytodayactivities,capturetime,costsandincomeforanoperationalunitwithinLeasingItemAdministration.
-
-          Example:Administerthetimereportingandbillingforthespecialistsalessupportteam.
-        : type: string
-        ValuationPreconditions:
-          type: string
-        ValuationBusinessUnit/EmployeeReference:
-          type: object
-        ValuationWorkSchedule:
-          type: string
-        BusinessService:
-          type: object
-        ValuationPostconditions:
-          type: string
-        ValuationServiceType:
-          type: string
-        ValuationServiceDescription:
-          type: string
-        ValuationServiceInputsandOuputs:
-          type: string
-        ValuationServiceWorkProduct:
-          type: string
-        ValuationServiceName:
           type: string
     Registration:
       type: object
@@ -666,11 +638,11 @@ components:
         RegistrationPreconditions:
           type: string
         RegistrationBusinessUnit/EmployeeReference:
-          type: object
+          type: string
         RegistrationWorkSchedule:
           type: string
         CollateralRegistration:
-          type: object
+          type: string
         RegistrationPostconditions:
           type: string
         RegistrationCollateralRegistrationServiceType:
@@ -683,6 +655,34 @@ components:
           type: string
         RegistrationCollateralRegistrationServiceName:
           type: string
+    Valuation:
+      type: object
+      properties:
+        ? >-
+          Handleandassignthedaytodayactivities,capturetime,costsandincomeforanoperationalunitwithinLeasingItemAdministration.
+
+          Example:Administerthetimereportingandbillingforthespecialistsalessupportteam.
+        : type: string
+        ValuationPreconditions:
+          type: string
+        ValuationBusinessUnit/EmployeeReference:
+          type: string
+        ValuationWorkSchedule:
+          type: string
+        BusinessService:
+          type: string
+        ValuationPostconditions:
+          type: string
+        ValuationServiceType:
+          type: string
+        ValuationServiceDescription:
+          type: string
+        ValuationServiceInputsandOuputs:
+          type: string
+        ValuationServiceWorkProduct:
+          type: string
+        ValuationServiceName:
+          type: string
     Assurance:
       type: object
       properties:
@@ -694,11 +694,11 @@ components:
         AssurancePreconditions:
           type: string
         AssuranceBusinessUnit/EmployeeReference:
-          type: object
+          type: string
         AssuranceWorkSchedule:
           type: string
         CollateralItemAssurance:
-          type: object
+          type: string
         AssurancePostconditions:
           type: string
         AssuranceCollateralItemAssuranceServiceType:
@@ -740,16 +740,16 @@ components:
       explode: false
       schema:
         type: string
-    ValuationID:
-      name: valuationId
+    RegistrationID:
+      name: registrationId
       in: path
       required: true
       style: simple
       explode: false
       schema:
         type: string
-    RegistrationID:
-      name: registrationId
+    ValuationID:
+      name: valuationId
       in: path
       required: true
       style: simple

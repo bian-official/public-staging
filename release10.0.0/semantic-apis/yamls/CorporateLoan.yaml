@@ -643,35 +643,35 @@ components:
       type: object
       properties:
         ProductInstanceReference:
-          type: object
+          type: string
         CorporateLoanNumber:
           type: string
         CustomerReference:
-          type: object
+          type: string
         PartyReference:
-          type: object
+          type: string
         CustomerAgreementReference:
-          type: object
+          type: string
         CustomerCreditAssessmentReference:
-          type: object
+          type: string
         InsuranceReference:
-          type: object
+          type: string
         DelinquencyOrCollectionReference:
-          type: object
+          type: string
         BankBranchOrLocationReference:
-          type: object
+          type: string
         BankAccountingUnitReference:
-          type: object
+          type: string
         LoanType:
           type: string
         LoanAmount:
-          type: number
+          type: string
         LoanCurrency:
           type: string
         LoanRateType:
           type: string
         LoanApplicableRate:
-          type: object
+          type: string
         RepaymentType:
           type: string
         InterestType:
@@ -683,11 +683,11 @@ components:
         LoanMaturityDate:
           type: string
         CollateralReference:
-          type: object
+          type: string
         CollateralAllocation:
           type: string
         TaxReference:
-          type: object
+          type: string
         LoanAccessTerms:
           type: string
         EntitlementOptionDefinition:
@@ -705,7 +705,7 @@ components:
         AssociationObligationOrEntitlement:
           type: string
         AssociationReference:
-          type: object
+          type: string
         LoanRepaymentSchedule:
           type: string
         StagedRepaymentStatement:
@@ -717,6 +717,57 @@ components:
         DateType:
           type: string
         Date:
+          type: string
+    Interest:
+      type: object
+      properties:
+        InterestRateType:
+          type: string
+        InterestRateApplicationSchedule:
+          type: string
+        InterestRateConfiguration:
+          type: string
+        InterestRate:
+          type: string
+        InterestApplicationRecord:
+          type: string
+        InterestTransaction:
+          type: string
+        TransactionDescription:
+          type: string
+        TransactionRateType:
+          type: string
+        TransactionInterestCharge:
+          type: string
+        InterestAccrualAmount:
+          type: string
+        InterestAccrualType:
+          type: string
+        InterestAccrualCharge:
+          type: string
+    Restructuring:
+      type: object
+      properties:
+        RestructuringTask:
+          type: string
+        RestructuringEvaluation:
+          type: string
+        RestructuringWriteDown:
+          type: string
+    Disbursement:
+      type: object
+      properties:
+        DisbursementPayeeReference:
+          type: string
+        DisbursementPayeeProductInstanceReference:
+          type: string
+        DisbursementPayeeBankReference:
+          type: string
+        DisbursementAmount:
+          type: string
+        DisbursementCurrency:
+          type: string
+        DisbursementValueDate:
           type: string
     ServiceFees:
       type: object
@@ -746,37 +797,27 @@ components:
         ProjectedTransactionFeeCharge:
           type: string
         FeeAccrualAmount:
-          type: number
+          type: string
         AccrualFeeType:
           type: string
         AccrualFeeCharge:
           type: string
-    Interest:
+    Repayment:
       type: object
       properties:
-        InterestRateType:
+        RepaymentTransactionType:
           type: string
-        InterestRateApplicationSchedule:
-          type: object
-        InterestRateConfiguration:
-          type: object
-        InterestRate:
-          type: object
-        InterestApplicationRecord:
+        RepaymentTransactionPayerReference:
           type: string
-        InterestTransaction:
+        RepaymentTransactionPayerProductInstanceReference:
           type: string
-        TransactionDescription:
+        RepaymentTransactionPayerBankReference:
           type: string
-        TransactionRateType:
+        RepaymentTransactionAmount:
           type: string
-        TransactionInterestCharge:
+        RepaymentTransactionCurrency:
           type: string
-        InterestAccrualAmount:
-          type: number
-        InterestAccrualType:
-          type: string
-        InterestAccrualCharge:
+        RepaymentTransactionValueDate:
           type: string
     Withdrawal:
       type: object
@@ -786,13 +827,13 @@ components:
         PaymentTransactionType:
           type: string
         PaymentTransactionPayeeReference:
-          type: object
+          type: string
         PaymentTransactionPayeeAccountReference:
-          type: object
+          type: string
         PaymentTransactionPayeeBankReference:
-          type: object
+          type: string
         PaymentTransactionAmount:
-          type: number
+          type: string
         PaymentTransactionFeeType:
           type: string
         PaymentTransactionFeeCharge:
@@ -804,34 +845,8 @@ components:
         PaymentTransactionPaymentPurpose:
           type: string
         PaymentTransactionBankBranch/LocationReference:
-          type: object
+          type: string
         PaymentTransactionStatus:
-          type: string
-    Repayment:
-      type: object
-      properties:
-        RepaymentTransactionType:
-          type: string
-        RepaymentTransactionPayerReference:
-          type: object
-        RepaymentTransactionPayerProductInstanceReference:
-          type: object
-        RepaymentTransactionPayerBankReference:
-          type: object
-        RepaymentTransactionAmount:
-          type: number
-        RepaymentTransactionCurrency:
-          type: string
-        RepaymentTransactionValueDate:
-          type: string
-    Restructuring:
-      type: object
-      properties:
-        RestructuringTask:
-          type: string
-        RestructuringEvaluation:
-          type: string
-        RestructuringWriteDown:
           type: string
     Maintenance:
       type: object
@@ -847,21 +862,6 @@ components:
         Penalties:
           type: string
         CollateralValuation:
-          type: string
-    Disbursement:
-      type: object
-      properties:
-        DisbursementPayeeReference:
-          type: object
-        DisbursementPayeeProductInstanceReference:
-          type: object
-        DisbursementPayeeBankReference:
-          type: object
-        DisbursementAmount:
-          type: number
-        DisbursementCurrency:
-          type: string
-        DisbursementValueDate:
           type: string
     HTTPError:
       type: object
@@ -1670,32 +1670,8 @@ components:
       explode: false
       schema:
         type: string
-    ServiceFeesID:
-      name: servicefeesId
-      in: path
-      required: true
-      style: simple
-      explode: false
-      schema:
-        type: string
     InterestID:
       name: interestId
-      in: path
-      required: true
-      style: simple
-      explode: false
-      schema:
-        type: string
-    WithdrawalID:
-      name: withdrawalId
-      in: path
-      required: true
-      style: simple
-      explode: false
-      schema:
-        type: string
-    RepaymentID:
-      name: repaymentId
       in: path
       required: true
       style: simple
@@ -1710,16 +1686,40 @@ components:
       explode: false
       schema:
         type: string
-    MaintenanceID:
-      name: maintenanceId
+    DisbursementID:
+      name: disbursementId
       in: path
       required: true
       style: simple
       explode: false
       schema:
         type: string
-    DisbursementID:
-      name: disbursementId
+    ServiceFeesID:
+      name: servicefeesId
+      in: path
+      required: true
+      style: simple
+      explode: false
+      schema:
+        type: string
+    RepaymentID:
+      name: repaymentId
+      in: path
+      required: true
+      style: simple
+      explode: false
+      schema:
+        type: string
+    WithdrawalID:
+      name: withdrawalId
+      in: path
+      required: true
+      style: simple
+      explode: false
+      schema:
+        type: string
+    MaintenanceID:
+      name: maintenanceId
       in: path
       required: true
       style: simple

@@ -10,20 +10,20 @@ paths:
   /ProductionRelease/Evaluate:
     post:
       tags:
-      - CR - ITSystemAssessment
+      - CR - ProductionSystemAssessment
       summary: EvCR Evaluate various risk exposures for a production release
       description: EvCR Evaluate various risk exposures for a production release
       operationId: Evaluate
       parameters: []
       requestBody:
-        $ref: '#/components/requestBodies/ITSystemAssessment'
+        $ref: '#/components/requestBodies/ProductionSystemAssessment'
       responses:
         200:
           description: Success
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/ITSystemAssessment'
+                $ref: '#/components/schemas/ProductionSystemAssessment'
         400:
           $ref: '#/components/responses/BadRequestError'
         401:
@@ -39,21 +39,21 @@ paths:
   /ProductionRelease/{productionreleaseId}/Update:
     put:
       tags:
-      - CR - ITSystemAssessment
+      - CR - ProductionSystemAssessment
       summary: UpCR Update aspects of an active production release evaluation
       description: UpCR Update aspects of an active production release evaluation
       operationId: Update
       parameters:
       - $ref: '#/components/parameters/ProductionReleaseID'
       requestBody:
-        $ref: '#/components/requestBodies/ITSystemAssessment'
+        $ref: '#/components/requestBodies/ProductionSystemAssessment'
       responses:
         200:
           description: Success
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/ITSystemAssessment'
+                $ref: '#/components/schemas/ProductionSystemAssessment'
         400:
           $ref: '#/components/responses/BadRequestError'
         401:
@@ -69,21 +69,21 @@ paths:
   /ProductionRelease/{productionreleaseId}/Request:
     put:
       tags:
-      - CR - ITSystemAssessment
+      - CR - ProductionSystemAssessment
       summary: RqCR Request manual intervention in an evaluation
       description: RqCR Request manual intervention in an evaluation
       operationId: Request
       parameters:
       - $ref: '#/components/parameters/ProductionReleaseID'
       requestBody:
-        $ref: '#/components/requestBodies/ITSystemAssessment'
+        $ref: '#/components/requestBodies/ProductionSystemAssessment'
       responses:
         200:
           description: Success
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/ITSystemAssessment'
+                $ref: '#/components/schemas/ProductionSystemAssessment'
         400:
           $ref: '#/components/responses/BadRequestError'
         401:
@@ -99,7 +99,7 @@ paths:
   /ProductionRelease/{productionreleaseId}/Retrieve:
     get:
       tags:
-      - CR - ITSystemAssessment
+      - CR - ProductionSystemAssessment
       summary: ReCR Retrieve details about a production release evaluation
       description: ReCR Retrieve details about a production release evaluation
       operationId: Retrieve
@@ -111,7 +111,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/ITSystemAssessment'
+                $ref: '#/components/schemas/ProductionSystemAssessment'
         400:
           $ref: '#/components/responses/BadRequestError'
         401:
@@ -242,13 +242,13 @@ paths:
           $ref: '#/components/responses/InternalServerError'
 components:
   schemas:
-    ITSystemAssessment:
+    ProductionSystemAssessment:
       type: object
       properties:
         ProductionReleaseName:
           type: string
         EmployeeOrBusinessUnitReference:
-          type: object
+          type: string
         ProductionReleaseType:
           type: string
         ProductionReleaseDescription:
@@ -260,10 +260,21 @@ components:
         ProductionReleaseConsolidationRecord:
           type: string
         DocumentDirectoryEntryInstanceReference:
-          type: object
+          type: string
         DateType:
           type: string
         Date:
+          type: string
+    BusinessRisk:
+      type: object
+      properties:
+        BusinessRiskSystemTestType:
+          type: string
+        BusinessRiskSystemTestDescription:
+          type: string
+        BusinessRiskTestWorkProduct:
+          type: string
+        BusinessRiskTestResult:
           type: string
     ProductionRisk:
       type: object
@@ -298,17 +309,6 @@ components:
           type: string
         FunctionalRiskSystemTestResult:
           type: string
-    BusinessRisk:
-      type: object
-      properties:
-        BusinessRiskSystemTestType:
-          type: string
-        BusinessRiskSystemTestDescription:
-          type: string
-        BusinessRiskTestWorkProduct:
-          type: string
-        BusinessRiskTestResult:
-          type: string
     HTTPError:
       type: object
       properties:
@@ -321,7 +321,7 @@ components:
     RetrieveFunctionalRiskResponse:
       type: object
       properties:
-        ITSystemAssessment:
+        ProductionSystemAssessment:
           type: object
           properties:
             ProductionReleaseName:
@@ -356,7 +356,7 @@ components:
     RetrieveProductionRiskResponse:
       type: object
       properties:
-        ITSystemAssessment:
+        ProductionSystemAssessment:
           type: object
           properties:
             ProductionReleaseName:
@@ -391,7 +391,7 @@ components:
     RetrieveBusinessRiskResponse:
       type: object
       properties:
-        ITSystemAssessment:
+        ProductionSystemAssessment:
           type: object
           properties:
             ProductionReleaseName:
@@ -426,7 +426,7 @@ components:
     RetrieveOperationalRiskResponse:
       type: object
       properties:
-        ITSystemAssessment:
+        ProductionSystemAssessment:
           type: object
           properties:
             ProductionReleaseName:
@@ -467,6 +467,14 @@ components:
       explode: false
       schema:
         type: string
+    BusinessRiskID:
+      name: businessriskId
+      in: path
+      required: true
+      style: simple
+      explode: false
+      schema:
+        type: string
     ProductionRiskID:
       name: productionriskId
       in: path
@@ -491,21 +499,13 @@ components:
       explode: false
       schema:
         type: string
-    BusinessRiskID:
-      name: businessriskId
-      in: path
-      required: true
-      style: simple
-      explode: false
-      schema:
-        type: string
   requestBodies:
-    ITSystemAssessment:
+    ProductionSystemAssessment:
       required: true
       content:
         application/json:
           schema:
-            $ref: '#/components/schemas/ITSystemAssessment'
+            $ref: '#/components/schemas/ProductionSystemAssessment'
   responses:
     HTTPError:
       description: Bad Request

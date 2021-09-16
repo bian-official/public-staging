@@ -411,11 +411,11 @@ components:
         ProductandServiceSpecificationDeployment:
           type: string
         EmployeeOrBusinessUnitReference:
-          type: object
+          type: string
         ProductandServiceSpecificationDeploymentConfiguration:
           type: string
         ProductandServiceSpecificationDeploymentTaskReference:
-          type: object
+          type: string
         ProductandServiceSpecificationDeploymentTaskRecord:
           type: string
         ProductandServiceSpecificationStatus:
@@ -428,28 +428,20 @@ components:
           type: string
         ProductandServiceSpecification:
           type: string
-    Testing:
+    FunctionalRequirements:
       type: object
       properties:
-        ProductandServiceSpecificationTestReference:
-          type: object
-        ProductandServiceSpecificationTestType:
+        ProductandServiceSpecificationDesignTaskReference:
           type: string
-        ProductandServiceSpecificationTestHarnessReference:
-          type: object
-        ProductandServiceSpecificationTestResult:
+        ProductandServiceSpecificationDesignTaskRecord:
           type: string
-        ProductandServiceSpecificationTestingTaskReference:
-          type: object
-        ProductandServiceSpecificationTestingTaskRecord:
+        MarketResearchDataServiceReference:
           type: string
-        ProductandServiceSpecificationComplianceTaskReference:
-          type: object
-        ProductandServiceSpecificationComplianceTaskRecord:
+        MarketResearchDataRecord:
           type: string
-        ProductandServiceSpecificationComplianceTestReference:
-          type: object
-        ProductandServiceSpecificationComplianceTestType:
+        ProductandServiceFeedbackRecord:
+          type: string
+        ProductandServiceRequirementsSpecification:
           type: string
     Production:
       type: object
@@ -460,20 +452,28 @@ components:
           type: string
         ProductandServiceSpecificationUsageGuidelines:
           type: string
-    FunctionalRequirements:
+    Testing:
       type: object
       properties:
-        ProductandServiceSpecificationDesignTaskReference:
-          type: object
-        ProductandServiceSpecificationDesignTaskRecord:
+        ProductandServiceSpecificationTestReference:
           type: string
-        MarketResearchDataServiceReference:
-          type: object
-        MarketResearchDataRecord:
+        ProductandServiceSpecificationTestType:
           type: string
-        ProductandServiceFeedbackRecord:
+        ProductandServiceSpecificationTestHarnessReference:
           type: string
-        ProductandServiceRequirementsSpecification:
+        ProductandServiceSpecificationTestResult:
+          type: string
+        ProductandServiceSpecificationTestingTaskReference:
+          type: string
+        ProductandServiceSpecificationTestingTaskRecord:
+          type: string
+        ProductandServiceSpecificationComplianceTaskReference:
+          type: string
+        ProductandServiceSpecificationComplianceTaskRecord:
+          type: string
+        ProductandServiceSpecificationComplianceTestReference:
+          type: string
+        ProductandServiceSpecificationComplianceTestType:
           type: string
     HTTPError:
       type: object
@@ -761,8 +761,8 @@ components:
       explode: false
       schema:
         type: string
-    TestingID:
-      name: testingId
+    FunctionalRequirementsID:
+      name: functionalrequirementsId
       in: path
       required: true
       style: simple
@@ -777,8 +777,8 @@ components:
       explode: false
       schema:
         type: string
-    FunctionalRequirementsID:
-      name: functionalrequirementsId
+    TestingID:
+      name: testingId
       in: path
       required: true
       style: simple

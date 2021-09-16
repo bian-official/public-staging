@@ -160,19 +160,19 @@ components:
       type: object
       properties:
         ProductInstanceReference:
-          type: object
+          type: string
         AuthorizingEmployeeReference:
-          type: object
+          type: string
         CustomerReference:
-          type: object
+          type: string
         FundingAccountReference:
-          type: object
+          type: string
         PayeeReference:
-          type: object
+          type: string
         PayeeProductInstanceReference:
-          type: object
+          type: string
         PayeeBankReference:
-          type: object
+          type: string
         Amount:
           type: string
         Currency:

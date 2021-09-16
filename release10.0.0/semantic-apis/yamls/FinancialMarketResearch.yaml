@@ -178,7 +178,7 @@ components:
         FinancialMarketResearchReportRequest:
           type: string
         EmployeeOrBusinessUnitReference:
-          type: object
+          type: string
     HTTPError:
       type: object
       properties:

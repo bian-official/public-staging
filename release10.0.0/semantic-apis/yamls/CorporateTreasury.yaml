@@ -7,16 +7,45 @@ servers:
 - description: SwaggerHub API Auto Mocking
   url: https://virtserver.swaggerhub.com/B154/CorporateTreasury/10.0.0
 paths:
-  /CorporateTreasury/Activate:
-    post:
+  /CorporateTreasury/{corporatetreasuryId}/Update:
+    put:
       tags:
       - CR - CorporateTreasuryManagementPlan
       summary: UpCR Update the corporate treasury plan
       description: UpCR Update the corporate treasury plan
-      operationId: Activate
-      parameters: []
+      operationId: Update
+      parameters:
+      - $ref: '#/components/parameters/CorporateTreasuryID'
       requestBody:
         $ref: '#/components/requestBodies/CorporateTreasuryManagementPlan'
+      responses:
+        200:
+          description: Success
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/CorporateTreasuryManagementPlan'
+        400:
+          $ref: '#/components/responses/BadRequestError'
+        401:
+          $ref: '#/components/responses/UnauthorizedError'
+        403:
+          $ref: '#/components/responses/ForbiddenError'
+        404:
+          $ref: '#/components/responses/NotFoundError'
+        429:
+          $ref: '#/components/responses/TooManyRequestsError'
+        500:
+          $ref: '#/components/responses/InternalServerError'
+  /CorporateTreasury/{corporatetreasuryId}/Retrieve:
+    get:
+      tags:
+      - CR - CorporateTreasuryManagementPlan
+      summary: ReCR Retrieve details about the corporate treasury plan
+      description: ReCR Retrieve details about the corporate treasury plan
+      operationId: Retrieve
+      parameters:
+      - $ref: '#/components/parameters/CorporateTreasuryID'
       responses:
         200:
           description: Success
@@ -296,23 +325,34 @@ components:
         CapitalOrWholesaleMarketTransactions:
           type: string
         CurrencyandRateRiskAnalysis:
-          type: object
+          type: string
     BankRates:
       type: object
       properties:
         BankRateType:
           type: string
         BankRateValue:
-          type: object
+          type: string
         BankRateValueDate:
           type: string
         BankRateValueHistory:
-          type: object
+          type: string
         BankRateRecordReference:
-          type: object
+          type: string
         BankRateRecord:
-          type: object
+          type: string
         BankRateRecordDate:
+          type: string
+    Liquidity:
+      type: object
+      properties:
+        EnterpriseLiquidity/CashManagementAnalysis:
+          type: string
+        EnterpriseLargePaymentTransactionRecords:
+          type: string
+        BusinessUnitFinancialReports:
+          type: string
+        LiquidityResolutionTask:
           type: string
     Securitization:
       type: object
@@ -320,7 +360,7 @@ components:
         BankSecuritizationPoliciesandguidelines:
           type: string
         SecuritizationTrancheReference:
-          type: object
+          type: string
         SecuritizationTrancheRecord:
           type: string
         SecuritizationTask:
@@ -348,17 +388,6 @@ components:
         EnterpriseBalanceSheetPositions:
           type: string
         StrategicFundingResolutionTask:
-          type: string
-    Liquidity:
-      type: object
-      properties:
-        EnterpriseLiquidity/CashManagementAnalysis:
-          type: string
-        EnterpriseLargePaymentTransactionRecords:
-          type: string
-        BusinessUnitFinancialReports:
-          type: string
-        LiquidityResolutionTask:
           type: string
     HTTPError:
       type: object
@@ -407,6 +436,14 @@ components:
       explode: false
       schema:
         type: string
+    LiquidityID:
+      name: liquidityId
+      in: path
+      required: true
+      style: simple
+      explode: false
+      schema:
+        type: string
     SecuritizationID:
       name: securitizationId
       in: path
@@ -425,14 +462,6 @@ components:
         type: string
     StrategicFundingID:
       name: strategicfundingId
-      in: path
-      required: true
-      style: simple
-      explode: false
-      schema:
-        type: string
-    LiquidityID:
-      name: liquidityId
       in: path
       required: true
       style: simple

@@ -371,25 +371,25 @@ paths:
           $ref: '#/components/responses/TooManyRequestsError'
         500:
           $ref: '#/components/responses/InternalServerError'
-  /ServicingEventHistory/{servicingeventhistoryId}/Facility/{facilityId}/Update:
+  /ServicingEventHistory/{servicingeventhistoryId}/ServicingFacility/{servicingfacilityId}/Update:
     put:
       tags:
-      - BQ - Facility
+      - BQ - ServicingFacility
       summary: UpBQ Update captured facility utilization event details
       description: UpBQ Update captured facility utilization event details
-      operationId: UpdateFacility
+      operationId: UpdateServicingFacility
       parameters:
       - $ref: '#/components/parameters/ServicingEventHistoryID'
-      - $ref: '#/components/parameters/FacilityID'
+      - $ref: '#/components/parameters/ServicingFacilityID'
       requestBody:
-        $ref: '#/components/requestBodies/Facility'
+        $ref: '#/components/requestBodies/ServicingFacility'
       responses:
         200:
           description: Success
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/Facility'
+                $ref: '#/components/schemas/ServicingFacility'
         400:
           $ref: '#/components/responses/BadRequestError'
         401:
@@ -402,18 +402,18 @@ paths:
           $ref: '#/components/responses/TooManyRequestsError'
         500:
           $ref: '#/components/responses/InternalServerError'
-  /ServicingEventHistory/{servicingeventhistoryId}/Facility/{facilityId}/Capture:
+  /ServicingEventHistory/{servicingeventhistoryId}/ServicingFacility/{servicingfacilityId}/Capture:
     put:
       tags:
-      - BQ - Facility
+      - BQ - ServicingFacility
       summary: CaBQ Capture  facility utilization event details
       description: CaBQ Capture  facility utilization event details
-      operationId: CaptureFacility
+      operationId: CaptureServicingFacility
       parameters:
       - $ref: '#/components/parameters/ServicingEventHistoryID'
-      - $ref: '#/components/parameters/FacilityID'
+      - $ref: '#/components/parameters/ServicingFacilityID'
       requestBody:
-        $ref: '#/components/requestBodies/CaptureFacilityRequest'
+        $ref: '#/components/requestBodies/CaptureServicingFacilityRequest'
       responses:
         200:
           description: Success
@@ -434,23 +434,23 @@ paths:
           $ref: '#/components/responses/TooManyRequestsError'
         500:
           $ref: '#/components/responses/InternalServerError'
-  /ServicingEventHistory/{servicingeventhistoryId}/Facility/{facilityId}/Retrieve:
+  /ServicingEventHistory/{servicingeventhistoryId}/ServicingFacility/{servicingfacilityId}/Retrieve:
     get:
       tags:
-      - BQ - Facility
+      - BQ - ServicingFacility
       summary: ReBQ Retrieve  facility utilization event details
       description: ReBQ Retrieve  facility utilization event details
-      operationId: RetrieveFacility
+      operationId: RetrieveServicingFacility
       parameters:
       - $ref: '#/components/parameters/ServicingEventHistoryID'
-      - $ref: '#/components/parameters/FacilityID'
+      - $ref: '#/components/parameters/ServicingFacilityID'
       responses:
         200:
           description: Success
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/Facility'
+                $ref: '#/components/schemas/ServicingFacility'
         400:
           $ref: '#/components/responses/BadRequestError'
         401:
@@ -469,9 +469,33 @@ components:
       type: object
       properties:
         ServicingPositionReference:
-          type: object
+          type: string
         EmployeeOrBusinessUnitReference:
-          type: object
+          type: string
+    Issue:
+      type: object
+      properties:
+        ServicingPositionReference:
+          type: string
+        ServicingPositionSessionReference:
+          type: string
+        Employee/BusinessUnitReference:
+          type: string
+        ProductionIssueType:
+          type: string
+        ProductionIssueDescription:
+          type: string
+        ProductionIssueDiagnosis:
+          type: string
+        ProductionIssueResolutionTask:
+          type: string
+    ServicingFacility:
+      type: object
+      properties:
+        ServicingFacilityType:
+          type: string
+        ServicingFacilityInstanceReference:
+          type: string
     Assignment:
       type: object
       properties:
@@ -481,30 +505,13 @@ components:
           type: string
         ServicingPositionActivityStatistics:
           type: string
-    Issue:
-      type: object
-      properties:
-        ServicingPositionReference:
-          type: object
-        ServicingPositionSessionReference:
-          type: object
-        Employee/BusinessUnitReference:
-          type: object
-        ProductionIssueType:
-          type: string
-        ProductionIssueDescription:
-          type: string
-        ProductionIssueDiagnosis:
-          type: string
-        ProductionIssueResolutionTask:
-          type: string
     Session:
       type: object
       properties:
         SessionStart/EndTime:
           type: string
         CustomerContactReference:
-          type: object
+          type: string
         SessionMechanism:
           type: string
         ServicingFacilityType:
@@ -516,18 +523,11 @@ components:
         SessionDialogueScript:
           type: string
         SessionDialogueLogReference:
-          type: object
+          type: string
         SessionDialogueLog:
           type: string
         SessionDialogueResult:
           type: string
-    Facility:
-      type: object
-      properties:
-        ServicingFacilityType:
-          type: string
-        ServicingFacilityInstanceReference:
-          type: object
     HTTPError:
       type: object
       properties:
@@ -562,7 +562,7 @@ components:
               type: string
             ProductionIssueResolutionTask:
               type: string
-    CaptureFacilityRequest:
+    CaptureServicingFacilityRequest:
       type: object
       properties:
         Session:
@@ -570,7 +570,7 @@ components:
           properties:
             CustomerContactReference:
               type: object
-        Facility:
+        ServicingFacility:
           type: object
           properties:
             ServicingFacilityType:
@@ -586,14 +586,6 @@ components:
       explode: false
       schema:
         type: string
-    AssignmentID:
-      name: assignmentId
-      in: path
-      required: true
-      style: simple
-      explode: false
-      schema:
-        type: string
     IssueID:
       name: issueId
       in: path
@@ -602,16 +594,24 @@ components:
       explode: false
       schema:
         type: string
-    SessionID:
-      name: sessionId
+    ServicingFacilityID:
+      name: servicingfacilityId
       in: path
       required: true
       style: simple
       explode: false
       schema:
         type: string
-    FacilityID:
-      name: facilityId
+    AssignmentID:
+      name: assignmentId
+      in: path
+      required: true
+      style: simple
+      explode: false
+      schema:
+        type: string
+    SessionID:
+      name: sessionId
       in: path
       required: true
       style: simple
@@ -649,18 +649,18 @@ components:
         application/json:
           schema:
             $ref: '#/components/schemas/CaptureIssueRequest'
-    Facility:
+    ServicingFacility:
       required: true
       content:
         application/json:
           schema:
-            $ref: '#/components/schemas/Facility'
-    CaptureFacilityRequest:
+            $ref: '#/components/schemas/ServicingFacility'
+    CaptureServicingFacilityRequest:
       required: true
       content:
         application/json:
           schema:
-            $ref: '#/components/schemas/CaptureFacilityRequest'
+            $ref: '#/components/schemas/CaptureServicingFacilityRequest'
   responses:
     HTTPError:
       description: Bad Request

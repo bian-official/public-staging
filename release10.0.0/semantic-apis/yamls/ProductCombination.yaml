@@ -657,7 +657,7 @@ components:
         ProductCombinationArrangementType:
           type: string
         ProductCombinationArrangementReference:
-          type: object
+          type: string
         ProductCombinationArrangementSchedule:
           type: string
         ProductCombinationArrangementStatus:
@@ -665,7 +665,7 @@ components:
         ProductCombinationArrangementCurrency:
           type: string
         ProductCombinationArrangementRegulationReference:
-          type: object
+          type: string
         ProductCombinationArrangementRegulationType:
           type: string
         ProductCombinationArrangementJurisdiction:
@@ -675,32 +675,6 @@ components:
         ProductCombinationArrangementAccountType:
           type: string
         ProductCombinationArrangementAccountReference:
-          type: object
-    Fulfillment:
-      type: object
-      properties:
-        ? >-
-          Fulfillanyscheduledandad-hocobligationsunderaservicearrangement,mosttypicallyforafinancialproductorfacilitywithinProductCombination.
-
-          Example:Performthescheduled(e.g.statements,standingorders)andad-hoc/requested(e.g.balanceinquiries,fundtransfers)fulfillmenttasksforacustomercurrentaccountfacility.
-        : type: string
-        FulfillmentPreconditions:
-          type: string
-        FulfillmentFeatureSchedule:
-          type: string
-        FiduciaryArrangementFulfillment:
-          type: object
-        FulfillmentPostconditions:
-          type: string
-        FulfillmentFiduciaryArrangementFulfillmentServiceType:
-          type: string
-        FulfillmentFiduciaryArrangementFulfillmentServiceDescription:
-          type: string
-        FulfillmentFiduciaryArrangementFulfillmentServiceInputsandOuputs:
-          type: string
-        FulfillmentFiduciaryArrangementFulfillmentServiceWorkProduct:
-          type: string
-        FulfillmentFiduciaryArrangementFulfillmentServiceName:
           type: string
     TransferPricing:
       type: object
@@ -715,7 +689,7 @@ components:
         TransferPricingFeatureSchedule:
           type: string
         ProductTransferPricing:
-          type: object
+          type: string
         TransferPricingPostconditions:
           type: string
         TransferPricingProductTransferPricingServiceType:
@@ -727,6 +701,39 @@ components:
         TransferPricingProductTransferPricingServiceWorkProduct:
           type: string
         TransferPricingProductTransferPricingServiceName:
+          type: string
+    ProductCombinationOutcome:
+      type: object
+      properties:
+        ProductCombinationFinancialFacility:
+          type: string
+        ProductCombinationWorkProduct:
+          type: string
+    Fulfillment:
+      type: object
+      properties:
+        ? >-
+          Fulfillanyscheduledandad-hocobligationsunderaservicearrangement,mosttypicallyforafinancialproductorfacilitywithinProductCombination.
+
+          Example:Performthescheduled(e.g.statements,standingorders)andad-hoc/requested(e.g.balanceinquiries,fundtransfers)fulfillmenttasksforacustomercurrentaccountfacility.
+        : type: string
+        FulfillmentPreconditions:
+          type: string
+        FulfillmentFeatureSchedule:
+          type: string
+        FiduciaryArrangementFulfillment:
+          type: string
+        FulfillmentPostconditions:
+          type: string
+        FulfillmentFiduciaryArrangementFulfillmentServiceType:
+          type: string
+        FulfillmentFiduciaryArrangementFulfillmentServiceDescription:
+          type: string
+        FulfillmentFiduciaryArrangementFulfillmentServiceInputsandOuputs:
+          type: string
+        FulfillmentFiduciaryArrangementFulfillmentServiceWorkProduct:
+          type: string
+        FulfillmentFiduciaryArrangementFulfillmentServiceName:
           type: string
     EmbeddedProductControl:
       type: object
@@ -741,7 +748,7 @@ components:
         EmbeddedProductControlFeatureSchedule:
           type: string
         CombinedProductControl:
-          type: object
+          type: string
         EmbeddedProductControlPostconditions:
           type: string
         EmbeddedProductControlCombinedProductControlServiceType:
@@ -753,13 +760,6 @@ components:
         EmbeddedProductControlCombinedProductControlServiceWorkProduct:
           type: string
         EmbeddedProductControlCombinedProductControlServiceName:
-          type: string
-    ProductCombinationOutcome:
-      type: object
-      properties:
-        ProductCombinationFinancialFacility:
-          type: string
-        ProductCombinationWorkProduct:
           type: string
     HTTPError:
       type: object
@@ -779,14 +779,6 @@ components:
       explode: false
       schema:
         type: string
-    FulfillmentID:
-      name: fulfillmentId
-      in: path
-      required: true
-      style: simple
-      explode: false
-      schema:
-        type: string
     TransferPricingID:
       name: transferpricingId
       in: path
@@ -795,16 +787,24 @@ components:
       explode: false
       schema:
         type: string
-    EmbeddedProductControlID:
-      name: embeddedproductcontrolId
+    ProductCombinationOutcomeID:
+      name: productcombinationoutcomeId
       in: path
       required: true
       style: simple
       explode: false
       schema:
         type: string
-    ProductCombinationOutcomeID:
-      name: productcombinationoutcomeId
+    FulfillmentID:
+      name: fulfillmentId
+      in: path
+      required: true
+      style: simple
+      explode: false
+      schema:
+        type: string
+    EmbeddedProductControlID:
+      name: embeddedproductcontrolId
       in: path
       required: true
       style: simple

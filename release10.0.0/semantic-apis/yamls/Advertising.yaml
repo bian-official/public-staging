@@ -539,11 +539,11 @@ components:
         AdvertisingCampaignPerformanceRecord:
           type: string
         AdvertisingCampaignProcedureInstanceReference:
-          type: object
+          type: string
         AdvertisingCampaignExecutionPlan:
           type: string
         EmployeeOrBusinessUnitReference:
-          type: object
+          type: string
         AdvertisingCampaignDuration:
           type: string
         AdvertisingCampaignProcedureResult:
@@ -563,7 +563,7 @@ components:
         MarketTrackingWorkTask:
           type: string
         GeneralMarketResearchDirectoryEntryInstanceReference:
-          type: object
+          type: string
         MarketTrackingWorkTaskWorkProducts:
           type: string
         MarketTrackingWorkTaskResult:

@@ -251,11 +251,11 @@ components:
       type: object
       properties:
         CustomerReference:
-          type: object
+          type: string
         LegalEntityReference:
-          type: object
+          type: string
         InvestmentPortfolioInstanceReference:
-          type: object
+          type: string
         InvestmentPortfolioAgreementType:
           type: string
         InvestmentPortfolioAgreementJurisdiction:
@@ -265,11 +265,11 @@ components:
         InvestmentPortfolioAgreementSignatoriesOrResponsibleParties:
           type: string
         DocumentDirectoryEntryInstanceReference:
-          type: object
+          type: string
         CustomerAgreementInstanceReference:
-          type: object
+          type: string
         PartyRelationshipProcedureInstanceReference:
-          type: object
+          type: string
         ManagedInvestmentPortfolioAgreement:
           type: string
     InvestmentTerms:

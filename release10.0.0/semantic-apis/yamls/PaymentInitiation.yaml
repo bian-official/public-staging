@@ -191,25 +191,25 @@ components:
         RecurringPaymentRecord:
           type: string
         RecurringPaymentCustomerReference:
-          type: object
+          type: string
         RecurringPaymentReference:
-          type: object
+          type: string
         CustomerReference:
-          type: object
+          type: string
         PaymentTransaction:
           type: string
         PayerReference:
-          type: object
+          type: string
         PayerBankReference:
-          type: object
+          type: string
         PayerProductInstanceReference:
-          type: object
+          type: string
         PayeeReference:
-          type: object
+          type: string
         PayeeBankReference:
-          type: object
+          type: string
         PayeeProductInstanceReference:
-          type: object
+          type: string
         Amount:
           type: string
         Currency:
@@ -225,13 +225,8 @@ components:
         PaymentPurpose:
           type: string
         DocumentDirectoryEntryInstanceReference:
-          type: object
-        DocumentContent:
           type: string
-    FundingCheck:
-      type: object
-      properties:
-        PaymentTransactionFundingCheckResult:
+        DocumentContent:
           type: string
     Compliance:
       type: object
@@ -246,10 +241,15 @@ components:
       type: object
       properties:
         PaymentOrderProcedureInstanceReference:
-          type: object
+          type: string
         PaymentOrderProcedureInstanceStatus:
           type: string
         OrderInitiationTaskResult:
+          type: string
+    FundingCheck:
+      type: object
+      properties:
+        PaymentTransactionFundingCheckResult:
           type: string
     HTTPError:
       type: object
@@ -388,14 +388,6 @@ components:
       explode: false
       schema:
         type: string
-    FundingCheckID:
-      name: fundingcheckId
-      in: path
-      required: true
-      style: simple
-      explode: false
-      schema:
-        type: string
     ComplianceID:
       name: complianceId
       in: path
@@ -406,6 +398,14 @@ components:
         type: string
     OrderInitiationID:
       name: orderinitiationId
+      in: path
+      required: true
+      style: simple
+      explode: false
+      schema:
+        type: string
+    FundingCheckID:
+      name: fundingcheckId
       in: path
       required: true
       style: simple

@@ -624,7 +624,7 @@ components:
         FiduciaryRelationshipArrangementType:
           type: string
         FiduciaryRelationshipArrangementReference:
-          type: object
+          type: string
         FiduciaryRelationshipArrangementSchedule:
           type: string
         FiduciaryRelationshipArrangementStatus:
@@ -632,7 +632,7 @@ components:
         FiduciaryRelationshipArrangementCurrency:
           type: string
         FiduciaryRelationshipArrangementRegulationReference:
-          type: object
+          type: string
         FiduciaryRelationshipArrangementRegulationType:
           type: string
         FiduciaryRelationshipArrangementJurisdiction:
@@ -642,7 +642,66 @@ components:
         FiduciaryRelationshipArrangementAccountType:
           type: string
         FiduciaryRelationshipArrangementAccountReference:
-          type: object
+          type: string
+    Fulfillment:
+      type: object
+      properties:
+        ? >-
+          Fulfillanyscheduledandad-hocobligationsunderaservicearrangement,mosttypicallyforafinancialproductorfacilitywithinFiduciaryAgreement.
+
+          Example:Performthescheduled(e.g.statements,standingorders)andad-hoc/requested(e.g.balanceinquiries,fundtransfers)fulfillmenttasksforacustomercurrentaccountfacility.
+        : type: string
+        FulfillmentPreconditions:
+          type: string
+        FulfillmentFeatureSchedule:
+          type: string
+        FiduciaryArrangementFulfillment:
+          type: string
+        FulfillmentPostconditions:
+          type: string
+        FulfillmentFiduciaryArrangementFulfillmentServiceType:
+          type: string
+        FulfillmentFiduciaryArrangementFulfillmentServiceDescription:
+          type: string
+        FulfillmentFiduciaryArrangementFulfillmentServiceInputsandOuputs:
+          type: string
+        FulfillmentFiduciaryArrangementFulfillmentServiceWorkProduct:
+          type: string
+        FulfillmentFiduciaryArrangementFulfillmentServiceName:
+          type: string
+    AssessmentandReporting:
+      type: object
+      properties:
+        ? >-
+          Fulfillanyscheduledandad-hocobligationsunderaservicearrangement,mosttypicallyforafinancialproductorfacilitywithinFiduciaryAgreement.
+
+          Example:Performthescheduled(e.g.statements,standingorders)andad-hoc/requested(e.g.balanceinquiries,fundtransfers)fulfillmenttasksforacustomercurrentaccountfacility.
+        : type: string
+        AssessmentandReportingPreconditions:
+          type: string
+        AssessmentandReportingFeatureSchedule:
+          type: string
+        AnalysisandReporting:
+          type: string
+        AssessmentandReportingPostconditions:
+          type: string
+        AssessmentandReportingAnalysisandReportingServiceType:
+          type: string
+        AssessmentandReportingAnalysisandReportingServiceDescription:
+          type: string
+        AssessmentandReportingAnalysisandReportingServiceInputsandOuputs:
+          type: string
+        AssessmentandReportingAnalysisandReportingServiceWorkProduct:
+          type: string
+        AssessmentandReportingAnalysisandReportingServiceName:
+          type: string
+    FiduciaryAgreementOutcome:
+      type: object
+      properties:
+        FiduciaryAgreementFinancialFacility:
+          type: string
+        FiduciaryAgreementWorkProduct:
+          type: string
     Fees:
       type: object
       properties:
@@ -656,7 +715,7 @@ components:
         FeesFeatureSchedule:
           type: string
         BusinessService:
-          type: object
+          type: string
         FeesPostconditions:
           type: string
         FeesServiceType:
@@ -682,7 +741,7 @@ components:
         AgreementFeatureSchedule:
           type: string
         BusinessService:
-          type: object
+          type: string
         AgreementPostconditions:
           type: string
         AgreementServiceType:
@@ -694,65 +753,6 @@ components:
         AgreementServiceWorkProduct:
           type: string
         AgreementServiceName:
-          type: string
-    AssessmentandReporting:
-      type: object
-      properties:
-        ? >-
-          Fulfillanyscheduledandad-hocobligationsunderaservicearrangement,mosttypicallyforafinancialproductorfacilitywithinFiduciaryAgreement.
-
-          Example:Performthescheduled(e.g.statements,standingorders)andad-hoc/requested(e.g.balanceinquiries,fundtransfers)fulfillmenttasksforacustomercurrentaccountfacility.
-        : type: string
-        AssessmentandReportingPreconditions:
-          type: string
-        AssessmentandReportingFeatureSchedule:
-          type: string
-        AnalysisandReporting:
-          type: object
-        AssessmentandReportingPostconditions:
-          type: string
-        AssessmentandReportingAnalysisandReportingServiceType:
-          type: string
-        AssessmentandReportingAnalysisandReportingServiceDescription:
-          type: string
-        AssessmentandReportingAnalysisandReportingServiceInputsandOuputs:
-          type: string
-        AssessmentandReportingAnalysisandReportingServiceWorkProduct:
-          type: string
-        AssessmentandReportingAnalysisandReportingServiceName:
-          type: string
-    Fulfillment:
-      type: object
-      properties:
-        ? >-
-          Fulfillanyscheduledandad-hocobligationsunderaservicearrangement,mosttypicallyforafinancialproductorfacilitywithinFiduciaryAgreement.
-
-          Example:Performthescheduled(e.g.statements,standingorders)andad-hoc/requested(e.g.balanceinquiries,fundtransfers)fulfillmenttasksforacustomercurrentaccountfacility.
-        : type: string
-        FulfillmentPreconditions:
-          type: string
-        FulfillmentFeatureSchedule:
-          type: string
-        FiduciaryArrangementFulfillment:
-          type: object
-        FulfillmentPostconditions:
-          type: string
-        FulfillmentFiduciaryArrangementFulfillmentServiceType:
-          type: string
-        FulfillmentFiduciaryArrangementFulfillmentServiceDescription:
-          type: string
-        FulfillmentFiduciaryArrangementFulfillmentServiceInputsandOuputs:
-          type: string
-        FulfillmentFiduciaryArrangementFulfillmentServiceWorkProduct:
-          type: string
-        FulfillmentFiduciaryArrangementFulfillmentServiceName:
-          type: string
-    FiduciaryAgreementOutcome:
-      type: object
-      properties:
-        FiduciaryAgreementFinancialFacility:
-          type: string
-        FiduciaryAgreementWorkProduct:
           type: string
     HTTPError:
       type: object
@@ -772,16 +772,8 @@ components:
       explode: false
       schema:
         type: string
-    FeesID:
-      name: feesId
-      in: path
-      required: true
-      style: simple
-      explode: false
-      schema:
-        type: string
-    AgreementID:
-      name: agreementId
+    FulfillmentID:
+      name: fulfillmentId
       in: path
       required: true
       style: simple
@@ -796,16 +788,24 @@ components:
       explode: false
       schema:
         type: string
-    FulfillmentID:
-      name: fulfillmentId
+    FiduciaryAgreementOutcomeID:
+      name: fiduciaryagreementoutcomeId
       in: path
       required: true
       style: simple
       explode: false
       schema:
         type: string
-    FiduciaryAgreementOutcomeID:
-      name: fiduciaryagreementoutcomeId
+    FeesID:
+      name: feesId
+      in: path
+      required: true
+      style: simple
+      explode: false
+      schema:
+        type: string
+    AgreementID:
+      name: agreementId
       in: path
       required: true
       style: simple

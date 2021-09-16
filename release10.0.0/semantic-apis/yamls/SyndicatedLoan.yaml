@@ -749,7 +749,7 @@ components:
         SyndicatedLoanArrangementType:
           type: string
         SyndicatedLoanArrangementReference:
-          type: object
+          type: string
         SyndicatedLoanArrangementSchedule:
           type: string
         SyndicatedLoanArrangementStatus:
@@ -757,7 +757,7 @@ components:
         SyndicatedLoanArrangementCurrency:
           type: string
         SyndicatedLoanArrangementRegulationReference:
-          type: object
+          type: string
         SyndicatedLoanArrangementRegulationType:
           type: string
         SyndicatedLoanArrangementJurisdiction:
@@ -767,32 +767,6 @@ components:
         SyndicatedLoanArrangementAccountType:
           type: string
         SyndicatedLoanArrangementAccountReference:
-          type: object
-    Fulfillment:
-      type: object
-      properties:
-        ? >-
-          Fulfillanyscheduledandad-hocobligationsunderaservicearrangement,mosttypicallyforafinancialproductorfacilitywithinSyndicatedLoan.
-
-          Example:Performthescheduled(e.g.statements,standingorders)andad-hoc/requested(e.g.balanceinquiries,fundtransfers)fulfillmenttasksforacustomercurrentaccountfacility.
-        : type: string
-        FulfillmentPreconditions:
-          type: string
-        FulfillmentFeatureSchedule:
-          type: string
-        FiduciaryArrangementFulfillment:
-          type: object
-        FulfillmentPostconditions:
-          type: string
-        FulfillmentFiduciaryArrangementFulfillmentServiceType:
-          type: string
-        FulfillmentFiduciaryArrangementFulfillmentServiceDescription:
-          type: string
-        FulfillmentFiduciaryArrangementFulfillmentServiceInputsandOuputs:
-          type: string
-        FulfillmentFiduciaryArrangementFulfillmentServiceWorkProduct:
-          type: string
-        FulfillmentFiduciaryArrangementFulfillmentServiceName:
           type: string
     SyndicateAssembly:
       type: object
@@ -807,7 +781,7 @@ components:
         SyndicateAssemblyFeatureSchedule:
           type: string
         SyndicatedLoanOrganization:
-          type: object
+          type: string
         SyndicateAssemblyPostconditions:
           type: string
         SyndicateAssemblySyndicatedLoanOrganizationServiceType:
@@ -819,6 +793,39 @@ components:
         SyndicateAssemblySyndicatedLoanOrganizationServiceWorkProduct:
           type: string
         SyndicateAssemblySyndicatedLoanOrganizationServiceName:
+          type: string
+    SyndicatedLoanOutcome:
+      type: object
+      properties:
+        SyndicatedLoanFinancialFacility:
+          type: string
+        SyndicatedLoanWorkProduct:
+          type: string
+    Fulfillment:
+      type: object
+      properties:
+        ? >-
+          Fulfillanyscheduledandad-hocobligationsunderaservicearrangement,mosttypicallyforafinancialproductorfacilitywithinSyndicatedLoan.
+
+          Example:Performthescheduled(e.g.statements,standingorders)andad-hoc/requested(e.g.balanceinquiries,fundtransfers)fulfillmenttasksforacustomercurrentaccountfacility.
+        : type: string
+        FulfillmentPreconditions:
+          type: string
+        FulfillmentFeatureSchedule:
+          type: string
+        FiduciaryArrangementFulfillment:
+          type: string
+        FulfillmentPostconditions:
+          type: string
+        FulfillmentFiduciaryArrangementFulfillmentServiceType:
+          type: string
+        FulfillmentFiduciaryArrangementFulfillmentServiceDescription:
+          type: string
+        FulfillmentFiduciaryArrangementFulfillmentServiceInputsandOuputs:
+          type: string
+        FulfillmentFiduciaryArrangementFulfillmentServiceWorkProduct:
+          type: string
+        FulfillmentFiduciaryArrangementFulfillmentServiceName:
           type: string
     Origination:
       type: object
@@ -833,7 +840,7 @@ components:
         OriginationFeatureSchedule:
           type: string
         SyndicatedLoanOrigination:
-          type: object
+          type: string
         OriginationPostconditions:
           type: string
         OriginationSyndicatedLoanOriginationServiceType:
@@ -859,7 +866,7 @@ components:
         StructuringFeatureSchedule:
           type: string
         SyndicatedLoanArrangement:
-          type: object
+          type: string
         StructuringPostconditions:
           type: string
         StructuringSyndicatedLoanArrangementServiceType:
@@ -871,13 +878,6 @@ components:
         StructuringSyndicatedLoanArrangementServiceWorkProduct:
           type: string
         StructuringSyndicatedLoanArrangementServiceName:
-          type: string
-    SyndicatedLoanOutcome:
-      type: object
-      properties:
-        SyndicatedLoanFinancialFacility:
-          type: string
-        SyndicatedLoanWorkProduct:
           type: string
     HTTPError:
       type: object
@@ -897,16 +897,24 @@ components:
       explode: false
       schema:
         type: string
-    FulfillmentID:
-      name: fulfillmentId
+    SyndicateAssemblyID:
+      name: syndicateassemblyId
       in: path
       required: true
       style: simple
       explode: false
       schema:
         type: string
-    SyndicateAssemblyID:
-      name: syndicateassemblyId
+    SyndicatedLoanOutcomeID:
+      name: syndicatedloanoutcomeId
+      in: path
+      required: true
+      style: simple
+      explode: false
+      schema:
+        type: string
+    FulfillmentID:
+      name: fulfillmentId
       in: path
       required: true
       style: simple
@@ -923,14 +931,6 @@ components:
         type: string
     StructuringID:
       name: structuringId
-      in: path
-      required: true
-      style: simple
-      explode: false
-      schema:
-        type: string
-    SyndicatedLoanOutcomeID:
-      name: syndicatedloanoutcomeId
       in: path
       required: true
       style: simple

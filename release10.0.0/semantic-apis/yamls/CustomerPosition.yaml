@@ -280,39 +280,25 @@ components:
       type: object
       properties:
         CustomerReference:
-          type: object
+          type: string
         CustomerPositionStateRecord:
           type: string
-    Collateral:
+    Credit:
       type: object
       properties:
-        CustomerReference:
-          type: object
-        CollateralAssetType:
+        CustomerCreditRatingAssessment:
           type: string
-        CollateralAssetReference:
-          type: object
-        CollateralAssetDescription:
+        CustomerCreditRatingAssessmentType:
           type: string
-        CollateralAssetAdministrationInstanceReference:
-          type: object
-        CollateralAssetStatus:
+        CustomerCreditRatingNarrative:
           type: string
-        CollateralAssetValuation:
-          type: string
-        CollateralAssetAllocationProfile:
-          type: string
-        CollateralAssetValuationDate:
-          type: string
-        CollateralAssetLoantoValueRatio:
-          type: string
-        CustomerCollateralPositionAnalysisRecord:
+        CustomerCreditPositionAnalysisRecord:
           type: string
     Cashflow:
       type: object
       properties:
         ProductInstanceReference:
-          type: object
+          type: string
         ProductArrangementInstanceReportType:
           type: string
         ProductArrangementInstanceReport:
@@ -327,16 +313,30 @@ components:
           type: string
         CustomerCashflowPositionAnalysisRecord:
           type: string
-    Credit:
+    Collateral:
       type: object
       properties:
-        CustomerCreditRatingAssessment:
+        CustomerReference:
           type: string
-        CustomerCreditRatingAssessmentType:
+        CollateralAssetType:
           type: string
-        CustomerCreditRatingNarrative:
+        CollateralAssetReference:
           type: string
-        CustomerCreditPositionAnalysisRecord:
+        CollateralAssetDescription:
+          type: string
+        CollateralAssetAdministrationInstanceReference:
+          type: string
+        CollateralAssetStatus:
+          type: string
+        CollateralAssetValuation:
+          type: string
+        CollateralAssetAllocationProfile:
+          type: string
+        CollateralAssetValuationDate:
+          type: string
+        CollateralAssetLoantoValueRatio:
+          type: string
+        CustomerCollateralPositionAnalysisRecord:
           type: string
     HTTPError:
       type: object
@@ -414,8 +414,8 @@ components:
       explode: false
       schema:
         type: string
-    CollateralID:
-      name: collateralId
+    CreditID:
+      name: creditId
       in: path
       required: true
       style: simple
@@ -430,8 +430,8 @@ components:
       explode: false
       schema:
         type: string
-    CreditID:
-      name: creditId
+    CollateralID:
+      name: collateralId
       in: path
       required: true
       style: simple

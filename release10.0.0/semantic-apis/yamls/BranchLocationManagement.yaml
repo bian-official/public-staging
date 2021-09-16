@@ -836,7 +836,7 @@ components:
         BranchLocationManagementPlanType:
           type: string
         BranchLocationManagementPlanReference:
-          type: object
+          type: string
         BranchLocationManagementPlanBudgetType:
           type: string
         BranchLocationManagementPlanBudget:
@@ -858,11 +858,11 @@ components:
         ProductandServicePlanningPreconditions:
           type: string
         ProductandServicePlanningBusinessUnit/EmployeeReference:
-          type: object
+          type: string
         ProductandServicePlanningWorkSchedule:
           type: string
         ProductandServicePlanning:
-          type: object
+          type: string
         ProductandServicePlanningPostconditions:
           type: string
         ProductandServicePlanningProductandServicePlanningServiceType:
@@ -875,6 +875,34 @@ components:
           type: string
         ProductandServicePlanningProductandServicePlanningServiceName:
           type: string
+    CustomerLiaison:
+      type: object
+      properties:
+        ? >-
+          Overseetheworkingofabusinessunit,assignwork,manageagainstaplanandtroubleshootissueswithinBranchLocationManagement.
+
+          Example:Managethedaytodayactivitiesatabankbranchlocation.
+        : type: string
+        CustomerLiaisonPreconditions:
+          type: string
+        CustomerLiaisonBusinessUnit/EmployeeReference:
+          type: string
+        CustomerLiaisonWorkSchedule:
+          type: string
+        CustomerLiaison:
+          type: string
+        CustomerLiaisonPostconditions:
+          type: string
+        CustomerLiaisonCustomerLiaisonServiceType:
+          type: string
+        CustomerLiaisonCustomerLiaisonServiceDescription:
+          type: string
+        CustomerLiaisonCustomerLiaisonServiceInputsandOuputs:
+          type: string
+        CustomerLiaisonCustomerLiaisonServiceWorkProduct:
+          type: string
+        CustomerLiaisonCustomerLiaisonServiceName:
+          type: string
     Troubleshooting:
       type: object
       properties:
@@ -886,11 +914,11 @@ components:
         TroubleshootingPreconditions:
           type: string
         TroubleshootingBusinessUnit/EmployeeReference:
-          type: object
+          type: string
         TroubleshootingWorkSchedule:
           type: string
         BusinessService:
-          type: object
+          type: string
         TroubleshootingPostconditions:
           type: string
         TroubleshootingServiceType:
@@ -914,11 +942,11 @@ components:
         StaffandLocationPlanningPreconditions:
           type: string
         StaffandLocationPlanningBusinessUnit/EmployeeReference:
-          type: object
+          type: string
         StaffandLocationPlanningWorkSchedule:
           type: string
         StaffandLocationPlanning:
-          type: object
+          type: string
         StaffandLocationPlanningPostconditions:
           type: string
         StaffandLocationPlanningStaffandLocationPlanningServiceType:
@@ -930,34 +958,6 @@ components:
         StaffandLocationPlanningStaffandLocationPlanningServiceWorkProduct:
           type: string
         StaffandLocationPlanningStaffandLocationPlanningServiceName:
-          type: string
-    CustomerLiaison:
-      type: object
-      properties:
-        ? >-
-          Overseetheworkingofabusinessunit,assignwork,manageagainstaplanandtroubleshootissueswithinBranchLocationManagement.
-
-          Example:Managethedaytodayactivitiesatabankbranchlocation.
-        : type: string
-        CustomerLiaisonPreconditions:
-          type: string
-        CustomerLiaisonBusinessUnit/EmployeeReference:
-          type: object
-        CustomerLiaisonWorkSchedule:
-          type: string
-        CustomerLiaison:
-          type: object
-        CustomerLiaisonPostconditions:
-          type: string
-        CustomerLiaisonCustomerLiaisonServiceType:
-          type: string
-        CustomerLiaisonCustomerLiaisonServiceDescription:
-          type: string
-        CustomerLiaisonCustomerLiaisonServiceInputsandOuputs:
-          type: string
-        CustomerLiaisonCustomerLiaisonServiceWorkProduct:
-          type: string
-        CustomerLiaisonCustomerLiaisonServiceName:
           type: string
     BranchLocationManagementOutcome:
       type: object
@@ -998,6 +998,14 @@ components:
       explode: false
       schema:
         type: string
+    CustomerLiaisonID:
+      name: customerliaisonId
+      in: path
+      required: true
+      style: simple
+      explode: false
+      schema:
+        type: string
     TroubleshootingID:
       name: troubleshootingId
       in: path
@@ -1008,14 +1016,6 @@ components:
         type: string
     StaffandLocationPlanningID:
       name: staffandlocationplanningId
-      in: path
-      required: true
-      style: simple
-      explode: false
-      schema:
-        type: string
-    CustomerLiaisonID:
-      name: customerliaisonId
       in: path
       required: true
       style: simple

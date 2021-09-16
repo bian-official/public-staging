@@ -136,13 +136,13 @@ components:
         GeneralMarketResearchAnalysisGuidance:
           type: string
         GeneralMarketResearchAnalysisAlgorithmReference:
-          type: object
+          type: string
         GeneralMarketResearchAnalysisRequestRecord:
           type: string
         GeneralMarketResearchAnalysisRequest:
           type: string
         EmployeeOrBusinessUnitReference:
-          type: object
+          type: string
         MarketAnalysisRequestWorkProducts:
           type: string
         GeneralMarketResearchAnalysisRequestResult:
@@ -163,7 +163,7 @@ components:
         AnalysisAlgorithmGuidance:
           type: string
         AnalysisAlgorithmReferencedMarketResearchRecord:
-          type: object
+          type: string
         MarketResearchReportTypeReference:
           type: string
         MarketResearchReportTypeDefinition:
@@ -173,7 +173,7 @@ components:
         MarketResearchReport:
           type: string
         GeneralMarketResearchDirectoryEntryInstanceReference:
-          type: object
+          type: string
         AnalysisAlgorithmRequestRecord:
           type: string
         AnalysisAlgorithmRequest:

@@ -661,17 +661,17 @@ components:
         CashDistributionProcedureStatus:
           type: string
         CashDistributionProcedureReference:
-          type: object
+          type: string
         CashDistributionProcedureBusinessUnitReference:
-          type: object
+          type: string
         CashDistributionProcedureServiceProviderReference:
-          type: object
+          type: string
         CashDistributionProcedureFinancialFacilityReference:
-          type: object
+          type: string
         CashDistributionProcedureEmployeeReference:
-          type: object
+          type: string
         CashDistributionProcedureCustomerReference:
-          type: object
+          type: string
         CashDistributionProcedureType:
           type: string
         CashDistributionProcedureServiceProviderSchedule:
@@ -689,7 +689,7 @@ components:
         CashDistributionProcedureFinancialTransactionArrangement:
           type: string
         CashDistributionProcedureCustomerAgreementReference:
-          type: object
+          type: string
     InventoryDistributionOversight:
       type: object
       properties:
@@ -701,11 +701,11 @@ components:
         InventoryDistributionOversightPreconditions:
           type: string
         InventoryDistributionOversightBusinessUnit/EmployeeReference:
-          type: object
+          type: string
         InventoryDistributionOversightWorkSchedule:
           type: string
         InventoryDistributionOversight:
-          type: object
+          type: string
         InventoryDistributionOversightPostconditions:
           type: string
         InventoryDistributionOversightInventoryDistributionOversightServiceType:
@@ -718,61 +718,12 @@ components:
           type: string
         InventoryDistributionOversightInventoryDistributionOversightServiceName:
           type: string
-    InventoryProvisioning:
+    BranchCurrencyDistributionOutcome:
       type: object
       properties:
-        ? >-
-          CompleteworktasksfollowingadefinedprocedureinsupportofgeneralofficeactivitiesandproductandservicedeliverywithinBranchCurrencyDistribution.
-
-          Example:Processtheevaluationandcompletionofcustomeroffers.
-        : type: string
-        InventoryProvisioningPreconditions:
+        BranchCurrencyDistributionWorkProduct:
           type: string
-        InventoryProvisioningBusinessUnit/EmployeeReference:
-          type: object
-        InventoryProvisioningWorkSchedule:
-          type: string
-        InventoryProvisioning:
-          type: object
-        InventoryProvisioningPostconditions:
-          type: string
-        InventoryProvisioningInventoryProvisioningServiceType:
-          type: string
-        InventoryProvisioningInventoryProvisioningServiceDescription:
-          type: string
-        InventoryProvisioningInventoryProvisioningServiceInputsandOuputs:
-          type: string
-        InventoryProvisioningInventoryProvisioningServiceWorkProduct:
-          type: string
-        InventoryProvisioningInventoryProvisioningServiceName:
-          type: string
-    DistributionVehicleAdministration:
-      type: object
-      properties:
-        ? >-
-          CompleteworktasksfollowingadefinedprocedureinsupportofgeneralofficeactivitiesandproductandservicedeliverywithinBranchCurrencyDistribution.
-
-          Example:Processtheevaluationandcompletionofcustomeroffers.
-        : type: string
-        DistributionVehicleAdministrationPreconditions:
-          type: string
-        DistributionVehicleAdministrationBusinessUnit/EmployeeReference:
-          type: object
-        DistributionVehicleAdministrationWorkSchedule:
-          type: string
-        VehicleAdministration:
-          type: object
-        DistributionVehicleAdministrationPostconditions:
-          type: string
-        DistributionVehicleAdministrationVehicleAdministrationServiceType:
-          type: string
-        DistributionVehicleAdministrationVehicleAdministrationServiceDescription:
-          type: string
-        DistributionVehicleAdministrationVehicleAdministrationServiceInputsandOuputs:
-          type: string
-        DistributionVehicleAdministrationVehicleAdministrationServiceWorkProduct:
-          type: string
-        DistributionVehicleAdministrationVehicleAdministrationServiceName:
+        BranchCurrencyDistributionProcedure:
           type: string
     DistributionPlanning:
       type: object
@@ -785,11 +736,11 @@ components:
         DistributionPlanningPreconditions:
           type: string
         DistributionPlanningBusinessUnit/EmployeeReference:
-          type: object
+          type: string
         DistributionPlanningWorkSchedule:
           type: string
         DistributionPlanning:
-          type: object
+          type: string
         DistributionPlanningPostconditions:
           type: string
         DistributionPlanningDistributionPlanningServiceType:
@@ -802,12 +753,61 @@ components:
           type: string
         DistributionPlanningDistributionPlanningServiceName:
           type: string
-    BranchCurrencyDistributionOutcome:
+    DistributionVehicleAdministration:
       type: object
       properties:
-        BranchCurrencyDistributionWorkProduct:
+        ? >-
+          CompleteworktasksfollowingadefinedprocedureinsupportofgeneralofficeactivitiesandproductandservicedeliverywithinBranchCurrencyDistribution.
+
+          Example:Processtheevaluationandcompletionofcustomeroffers.
+        : type: string
+        DistributionVehicleAdministrationPreconditions:
           type: string
-        BranchCurrencyDistributionProcedure:
+        DistributionVehicleAdministrationBusinessUnit/EmployeeReference:
+          type: string
+        DistributionVehicleAdministrationWorkSchedule:
+          type: string
+        VehicleAdministration:
+          type: string
+        DistributionVehicleAdministrationPostconditions:
+          type: string
+        DistributionVehicleAdministrationVehicleAdministrationServiceType:
+          type: string
+        DistributionVehicleAdministrationVehicleAdministrationServiceDescription:
+          type: string
+        DistributionVehicleAdministrationVehicleAdministrationServiceInputsandOuputs:
+          type: string
+        DistributionVehicleAdministrationVehicleAdministrationServiceWorkProduct:
+          type: string
+        DistributionVehicleAdministrationVehicleAdministrationServiceName:
+          type: string
+    InventoryProvisioning:
+      type: object
+      properties:
+        ? >-
+          CompleteworktasksfollowingadefinedprocedureinsupportofgeneralofficeactivitiesandproductandservicedeliverywithinBranchCurrencyDistribution.
+
+          Example:Processtheevaluationandcompletionofcustomeroffers.
+        : type: string
+        InventoryProvisioningPreconditions:
+          type: string
+        InventoryProvisioningBusinessUnit/EmployeeReference:
+          type: string
+        InventoryProvisioningWorkSchedule:
+          type: string
+        InventoryProvisioning:
+          type: string
+        InventoryProvisioningPostconditions:
+          type: string
+        InventoryProvisioningInventoryProvisioningServiceType:
+          type: string
+        InventoryProvisioningInventoryProvisioningServiceDescription:
+          type: string
+        InventoryProvisioningInventoryProvisioningServiceInputsandOuputs:
+          type: string
+        InventoryProvisioningInventoryProvisioningServiceWorkProduct:
+          type: string
+        InventoryProvisioningInventoryProvisioningServiceName:
           type: string
     HTTPError:
       type: object
@@ -835,16 +835,8 @@ components:
       explode: false
       schema:
         type: string
-    InventoryProvisioningID:
-      name: inventoryprovisioningId
-      in: path
-      required: true
-      style: simple
-      explode: false
-      schema:
-        type: string
-    DistributionVehicleAdministrationID:
-      name: distributionvehicleadministrationId
+    BranchCurrencyDistributionOutcomeID:
+      name: branchcurrencydistributionoutcomeId
       in: path
       required: true
       style: simple
@@ -859,8 +851,16 @@ components:
       explode: false
       schema:
         type: string
-    BranchCurrencyDistributionOutcomeID:
-      name: branchcurrencydistributionoutcomeId
+    DistributionVehicleAdministrationID:
+      name: distributionvehicleadministrationId
+      in: path
+      required: true
+      style: simple
+      explode: false
+      schema:
+        type: string
+    InventoryProvisioningID:
+      name: inventoryprovisioningId
       in: path
       required: true
       style: simple

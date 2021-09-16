@@ -748,17 +748,17 @@ components:
         CollateralAssetLiquidationProcedureStatus:
           type: string
         CollateralAssetLiquidationProcedureReference:
-          type: object
+          type: string
         CollateralAssetLiquidationProcedureBusinessUnitReference:
-          type: object
+          type: string
         CollateralAssetLiquidationProcedureServiceProviderReference:
-          type: object
+          type: string
         CollateralAssetLiquidationProcedureFinancialFacilityReference:
-          type: object
+          type: string
         CollateralAssetLiquidationProcedureEmployeeReference:
-          type: object
+          type: string
         CollateralAssetLiquidationProcedureCustomerReference:
-          type: object
+          type: string
         CollateralAssetLiquidationProcedureType:
           type: string
         CollateralAssetLiquidationProcedureServiceProviderSchedule:
@@ -776,118 +776,6 @@ components:
         CollateralAssetLiquidationProcedureFinancialTransactionArrangement:
           type: string
         CollateralAssetLiquidationProcedureCustomerAgreementReference:
-          type: object
-    CollateralLiquidation:
-      type: object
-      properties:
-        ? >-
-          CompleteworktasksfollowingadefinedprocedureinsupportofgeneralofficeactivitiesandproductandservicedeliverywithinCollections.
-
-          Example:Processtheevaluationandcompletionofcustomeroffers.
-        : type: string
-        CollateralLiquidationPreconditions:
-          type: string
-        CollateralLiquidationBusinessUnit/EmployeeReference:
-          type: object
-        CollateralLiquidationWorkSchedule:
-          type: string
-        CollateralLiquidation:
-          type: object
-        CollateralLiquidationPostconditions:
-          type: string
-        CollateralLiquidationCollateralLiquidationServiceType:
-          type: string
-        CollateralLiquidationCollateralLiquidationServiceDescription:
-          type: string
-        CollateralLiquidationCollateralLiquidationServiceInputsandOuputs:
-          type: string
-        CollateralLiquidationCollateralLiquidationServiceWorkProduct:
-          type: string
-        CollateralLiquidationCollateralLiquidationServiceName:
-          type: string
-    DebtFactoring:
-      type: object
-      properties:
-        ? >-
-          CompleteworktasksfollowingadefinedprocedureinsupportofgeneralofficeactivitiesandproductandservicedeliverywithinCollections.
-
-          Example:Processtheevaluationandcompletionofcustomeroffers.
-        : type: string
-        DebtFactoringPreconditions:
-          type: string
-        DebtFactoringBusinessUnit/EmployeeReference:
-          type: object
-        DebtFactoringWorkSchedule:
-          type: string
-        Factoring:
-          type: object
-        DebtFactoringPostconditions:
-          type: string
-        DebtFactoringFactoringServiceType:
-          type: string
-        DebtFactoringFactoringServiceDescription:
-          type: string
-        DebtFactoringFactoringServiceInputsandOuputs:
-          type: string
-        DebtFactoringFactoringServiceWorkProduct:
-          type: string
-        DebtFactoringFactoringServiceName:
-          type: string
-    CollateralValuation:
-      type: object
-      properties:
-        ? >-
-          CompleteworktasksfollowingadefinedprocedureinsupportofgeneralofficeactivitiesandproductandservicedeliverywithinCollections.
-
-          Example:Processtheevaluationandcompletionofcustomeroffers.
-        : type: string
-        CollateralValuationPreconditions:
-          type: string
-        CollateralValuationBusinessUnit/EmployeeReference:
-          type: object
-        CollateralValuationWorkSchedule:
-          type: string
-        CollateralValuation:
-          type: object
-        CollateralValuationPostconditions:
-          type: string
-        CollateralValuationCollateralValuationServiceType:
-          type: string
-        CollateralValuationCollateralValuationServiceDescription:
-          type: string
-        CollateralValuationCollateralValuationServiceInputsandOuputs:
-          type: string
-        CollateralValuationCollateralValuationServiceWorkProduct:
-          type: string
-        CollateralValuationCollateralValuationServiceName:
-          type: string
-    CollectionsAssessment:
-      type: object
-      properties:
-        ? >-
-          CompleteworktasksfollowingadefinedprocedureinsupportofgeneralofficeactivitiesandproductandservicedeliverywithinCollections.
-
-          Example:Processtheevaluationandcompletionofcustomeroffers.
-        : type: string
-        CollectionsAssessmentPreconditions:
-          type: string
-        CollectionsAssessmentBusinessUnit/EmployeeReference:
-          type: object
-        CollectionsAssessmentWorkSchedule:
-          type: string
-        CollectionsAssessment:
-          type: object
-        CollectionsAssessmentPostconditions:
-          type: string
-        CollectionsAssessmentCollectionsAssessmentServiceType:
-          type: string
-        CollectionsAssessmentCollectionsAssessmentServiceDescription:
-          type: string
-        CollectionsAssessmentCollectionsAssessmentServiceInputsandOuputs:
-          type: string
-        CollectionsAssessmentCollectionsAssessmentServiceWorkProduct:
-          type: string
-        CollectionsAssessmentCollectionsAssessmentServiceName:
           type: string
     CollectionsAccountUpdate:
       type: object
@@ -900,11 +788,11 @@ components:
         CollectionsAccountUpdatePreconditions:
           type: string
         CollectionsAccountUpdateBusinessUnit/EmployeeReference:
-          type: object
+          type: string
         CollectionsAccountUpdateWorkSchedule:
           type: string
         CollectionsAccountUpdate:
-          type: object
+          type: string
         CollectionsAccountUpdatePostconditions:
           type: string
         CollectionsAccountUpdateCollectionsAccountUpdateServiceType:
@@ -917,12 +805,124 @@ components:
           type: string
         CollectionsAccountUpdateCollectionsAccountUpdateServiceName:
           type: string
+    CollectionsAssessment:
+      type: object
+      properties:
+        ? >-
+          CompleteworktasksfollowingadefinedprocedureinsupportofgeneralofficeactivitiesandproductandservicedeliverywithinCollections.
+
+          Example:Processtheevaluationandcompletionofcustomeroffers.
+        : type: string
+        CollectionsAssessmentPreconditions:
+          type: string
+        CollectionsAssessmentBusinessUnit/EmployeeReference:
+          type: string
+        CollectionsAssessmentWorkSchedule:
+          type: string
+        CollectionsAssessment:
+          type: string
+        CollectionsAssessmentPostconditions:
+          type: string
+        CollectionsAssessmentCollectionsAssessmentServiceType:
+          type: string
+        CollectionsAssessmentCollectionsAssessmentServiceDescription:
+          type: string
+        CollectionsAssessmentCollectionsAssessmentServiceInputsandOuputs:
+          type: string
+        CollectionsAssessmentCollectionsAssessmentServiceWorkProduct:
+          type: string
+        CollectionsAssessmentCollectionsAssessmentServiceName:
+          type: string
+    DebtFactoring:
+      type: object
+      properties:
+        ? >-
+          CompleteworktasksfollowingadefinedprocedureinsupportofgeneralofficeactivitiesandproductandservicedeliverywithinCollections.
+
+          Example:Processtheevaluationandcompletionofcustomeroffers.
+        : type: string
+        DebtFactoringPreconditions:
+          type: string
+        DebtFactoringBusinessUnit/EmployeeReference:
+          type: string
+        DebtFactoringWorkSchedule:
+          type: string
+        Factoring:
+          type: string
+        DebtFactoringPostconditions:
+          type: string
+        DebtFactoringFactoringServiceType:
+          type: string
+        DebtFactoringFactoringServiceDescription:
+          type: string
+        DebtFactoringFactoringServiceInputsandOuputs:
+          type: string
+        DebtFactoringFactoringServiceWorkProduct:
+          type: string
+        DebtFactoringFactoringServiceName:
+          type: string
+    CollateralLiquidation:
+      type: object
+      properties:
+        ? >-
+          CompleteworktasksfollowingadefinedprocedureinsupportofgeneralofficeactivitiesandproductandservicedeliverywithinCollections.
+
+          Example:Processtheevaluationandcompletionofcustomeroffers.
+        : type: string
+        CollateralLiquidationPreconditions:
+          type: string
+        CollateralLiquidationBusinessUnit/EmployeeReference:
+          type: string
+        CollateralLiquidationWorkSchedule:
+          type: string
+        CollateralLiquidation:
+          type: string
+        CollateralLiquidationPostconditions:
+          type: string
+        CollateralLiquidationCollateralLiquidationServiceType:
+          type: string
+        CollateralLiquidationCollateralLiquidationServiceDescription:
+          type: string
+        CollateralLiquidationCollateralLiquidationServiceInputsandOuputs:
+          type: string
+        CollateralLiquidationCollateralLiquidationServiceWorkProduct:
+          type: string
+        CollateralLiquidationCollateralLiquidationServiceName:
+          type: string
     CollectionsOutcome:
       type: object
       properties:
         CollectionsWorkProduct:
           type: string
         CollectionsProcedure:
+          type: string
+    CollateralValuation:
+      type: object
+      properties:
+        ? >-
+          CompleteworktasksfollowingadefinedprocedureinsupportofgeneralofficeactivitiesandproductandservicedeliverywithinCollections.
+
+          Example:Processtheevaluationandcompletionofcustomeroffers.
+        : type: string
+        CollateralValuationPreconditions:
+          type: string
+        CollateralValuationBusinessUnit/EmployeeReference:
+          type: string
+        CollateralValuationWorkSchedule:
+          type: string
+        CollateralValuation:
+          type: string
+        CollateralValuationPostconditions:
+          type: string
+        CollateralValuationCollateralValuationServiceType:
+          type: string
+        CollateralValuationCollateralValuationServiceDescription:
+          type: string
+        CollateralValuationCollateralValuationServiceInputsandOuputs:
+          type: string
+        CollateralValuationCollateralValuationServiceWorkProduct:
+          type: string
+        CollateralValuationCollateralValuationServiceName:
           type: string
     HTTPError:
       type: object
@@ -942,24 +942,8 @@ components:
       explode: false
       schema:
         type: string
-    CollateralLiquidationID:
-      name: collateralliquidationId
-      in: path
-      required: true
-      style: simple
-      explode: false
-      schema:
-        type: string
-    DebtFactoringID:
-      name: debtfactoringId
-      in: path
-      required: true
-      style: simple
-      explode: false
-      schema:
-        type: string
-    CollateralValuationID:
-      name: collateralvaluationId
+    CollectionsAccountUpdateID:
+      name: collectionsaccountupdateId
       in: path
       required: true
       style: simple
@@ -974,8 +958,16 @@ components:
       explode: false
       schema:
         type: string
-    CollectionsAccountUpdateID:
-      name: collectionsaccountupdateId
+    DebtFactoringID:
+      name: debtfactoringId
+      in: path
+      required: true
+      style: simple
+      explode: false
+      schema:
+        type: string
+    CollateralLiquidationID:
+      name: collateralliquidationId
       in: path
       required: true
       style: simple
@@ -984,6 +976,14 @@ components:
         type: string
     CollectionsOutcomeID:
       name: collectionsoutcomeId
+      in: path
+      required: true
+      style: simple
+      explode: false
+      schema:
+        type: string
+    CollateralValuationID:
+      name: collateralvaluationId
       in: path
       required: true
       style: simple

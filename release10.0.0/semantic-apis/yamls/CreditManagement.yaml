@@ -100,21 +100,21 @@ components:
       type: object
       properties:
         BusinessUnitReference:
-          type: object
+          type: string
         CustomerReference:
-          type: object
+          type: string
         SectorReference:
-          type: object
+          type: string
         ProductType:
           type: string
         ProposedTransactionReference:
-          type: object
+          type: string
         ProposedTransactionRecord:
           type: string
         ProposedTransactionType:
           type: string
         ProposedTransactionAmount:
-          type: number
+          type: string
         ProposedTransactionRecordDate:
           type: string
         ProposedTransactionBookingEntity:

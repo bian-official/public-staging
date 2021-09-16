@@ -160,23 +160,23 @@ components:
       type: object
       properties:
         CustomerReference:
-          type: object
+          type: string
         EmployeeReference:
-          type: object
+          type: string
         ProductReference:
-          type: object
+          type: string
         ProductInstanceReference:
-          type: object
+          type: string
         ProposedTransactionType:
           type: string
         ProposedTransactionValue:
           type: string
         CustomerContactRecordReference:
-          type: object
+          type: string
         CustomerContactRecord:
           type: string
         CustomerContactRecordCustomerReference:
-          type: object
+          type: string
         CustomerContactRecordContactDevice:
           type: string
         CustomerContactRecordAuthenticationStatus(asobtainedbySD-ContactHandler):
@@ -190,13 +190,13 @@ components:
         CustomerContactRecordServicingEventHistory:
           type: string
         CustomerContactRecordServicingPositionReference:
-          type: object
+          type: string
         CustomerContactRecordServicingResourceReference:
-          type: object
+          type: string
         CustomerContactRecordActivityRecord:
           type: string
         CustomerSessionDialogueReference:
-          type: object
+          type: string
         CustomerSessionDialogueRecord:
           type: string
         SessionDialogueType:
@@ -204,7 +204,7 @@ components:
         SessionDialogueScript:
           type: string
         SessionDialogueLogReference:
-          type: object
+          type: string
         SessionDialogueLog:
           type: string
         SessionDialogueSessionMechanism:
@@ -220,7 +220,7 @@ components:
         CustomerContactResult:
           type: string
         ChannelActivityHistoryReportReference:
-          type: object
+          type: string
         ChannelActivityHistoryReportFromOrto:
           type: string
         ChannelActivityHistoryReport:

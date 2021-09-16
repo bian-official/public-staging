@@ -370,7 +370,7 @@ components:
       type: object
       properties:
         PartyReference:
-          type: object
+          type: string
         AgreementType:
           type: string
         AgreementJurisdiction:
@@ -380,15 +380,6 @@ components:
         AgreementSignaturesOrResponsibleParties:
           type: string
         DocumentDirectoryEntryInstanceReference:
-          type: object
-    LegalTerms:
-      type: object
-      properties:
-        Jurisdiction:
-          type: string
-        ApplicableLawReference:
-          type: object
-        ApplicableLawInterpretation:
           type: string
     PolicyTerms:
       type: object
@@ -396,8 +387,17 @@ components:
         BankPolicy-RuleType:
           type: string
         ApplicableBankPolicy-RuleReference:
-          type: object
+          type: string
         ApplicableBankPolicy-RuleInterpretation:
+          type: string
+    LegalTerms:
+      type: object
+      properties:
+        Jurisdiction:
+          type: string
+        ApplicableLawReference:
+          type: string
+        ApplicableLawInterpretation:
           type: string
     RegulatoryTerms:
       type: object
@@ -405,7 +405,7 @@ components:
         RegulatoryAuthority:
           type: string
         ApplicableRegulationReference:
-          type: object
+          type: string
         ApplicableRegulationInterpretation:
           type: string
     HTTPError:
@@ -524,16 +524,16 @@ components:
       explode: false
       schema:
         type: string
-    LegalTermsID:
-      name: legaltermsId
+    PolicyTermsID:
+      name: policytermsId
       in: path
       required: true
       style: simple
       explode: false
       schema:
         type: string
-    PolicyTermsID:
-      name: policytermsId
+    LegalTermsID:
+      name: legaltermsId
       in: path
       required: true
       style: simple

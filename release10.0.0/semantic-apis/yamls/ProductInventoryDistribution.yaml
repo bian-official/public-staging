@@ -747,90 +747,6 @@ components:
         ProductInventoryDistributionAdministrativePlanPlan:
           type: string
         ProductInventoryDistributionAdministrativePlanReference:
-          type: object
-    Distribution:
-      type: object
-      properties:
-        ? >-
-          Handleandassignthedaytodayactivities,capturetime,costsandincomeforanoperationalunitwithinProductInventoryDistribution.
-
-          Example:Administerthetimereportingandbillingforthespecialistsalessupportteam.
-        : type: string
-        DistributionPreconditions:
-          type: string
-        DistributionBusinessUnit/EmployeeReference:
-          type: object
-        DistributionWorkSchedule:
-          type: string
-        BusinessService:
-          type: object
-        DistributionPostconditions:
-          type: string
-        DistributionServiceType:
-          type: string
-        DistributionServiceDescription:
-          type: string
-        DistributionServiceInputsandOuputs:
-          type: string
-        DistributionServiceWorkProduct:
-          type: string
-        DistributionServiceName:
-          type: string
-    Oversight:
-      type: object
-      properties:
-        ? >-
-          Handleandassignthedaytodayactivities,capturetime,costsandincomeforanoperationalunitwithinProductInventoryDistribution.
-
-          Example:Administerthetimereportingandbillingforthespecialistsalessupportteam.
-        : type: string
-        OversightPreconditions:
-          type: string
-        OversightBusinessUnit/EmployeeReference:
-          type: object
-        OversightWorkSchedule:
-          type: string
-        AdministrativeOversight:
-          type: object
-        OversightPostconditions:
-          type: string
-        OversightAdministrativeOversightServiceType:
-          type: string
-        OversightAdministrativeOversightServiceDescription:
-          type: string
-        OversightAdministrativeOversightServiceInputsandOuputs:
-          type: string
-        OversightAdministrativeOversightServiceWorkProduct:
-          type: string
-        OversightAdministrativeOversightServiceName:
-          type: string
-    Mailing:
-      type: object
-      properties:
-        ? >-
-          Handleandassignthedaytodayactivities,capturetime,costsandincomeforanoperationalunitwithinProductInventoryDistribution.
-
-          Example:Administerthetimereportingandbillingforthespecialistsalessupportteam.
-        : type: string
-        MailingPreconditions:
-          type: string
-        MailingBusinessUnit/EmployeeReference:
-          type: object
-        MailingWorkSchedule:
-          type: string
-        Mailing:
-          type: object
-        MailingPostconditions:
-          type: string
-        MailingMailingServiceType:
-          type: string
-        MailingMailingServiceDescription:
-          type: string
-        MailingMailingServiceInputsandOuputs:
-          type: string
-        MailingMailingServiceWorkProduct:
-          type: string
-        MailingMailingServiceName:
           type: string
     Provisioning:
       type: object
@@ -843,11 +759,11 @@ components:
         ProvisioningPreconditions:
           type: string
         ProvisioningBusinessUnit/EmployeeReference:
-          type: object
+          type: string
         ProvisioningWorkSchedule:
           type: string
         BusinessService:
-          type: object
+          type: string
         ProvisioningPostconditions:
           type: string
         ProvisioningServiceType:
@@ -860,6 +776,62 @@ components:
           type: string
         ProvisioningServiceName:
           type: string
+    Mailing:
+      type: object
+      properties:
+        ? >-
+          Handleandassignthedaytodayactivities,capturetime,costsandincomeforanoperationalunitwithinProductInventoryDistribution.
+
+          Example:Administerthetimereportingandbillingforthespecialistsalessupportteam.
+        : type: string
+        MailingPreconditions:
+          type: string
+        MailingBusinessUnit/EmployeeReference:
+          type: string
+        MailingWorkSchedule:
+          type: string
+        Mailing:
+          type: string
+        MailingPostconditions:
+          type: string
+        MailingMailingServiceType:
+          type: string
+        MailingMailingServiceDescription:
+          type: string
+        MailingMailingServiceInputsandOuputs:
+          type: string
+        MailingMailingServiceWorkProduct:
+          type: string
+        MailingMailingServiceName:
+          type: string
+    Distribution:
+      type: object
+      properties:
+        ? >-
+          Handleandassignthedaytodayactivities,capturetime,costsandincomeforanoperationalunitwithinProductInventoryDistribution.
+
+          Example:Administerthetimereportingandbillingforthespecialistsalessupportteam.
+        : type: string
+        DistributionPreconditions:
+          type: string
+        DistributionBusinessUnit/EmployeeReference:
+          type: string
+        DistributionWorkSchedule:
+          type: string
+        BusinessService:
+          type: string
+        DistributionPostconditions:
+          type: string
+        DistributionServiceType:
+          type: string
+        DistributionServiceDescription:
+          type: string
+        DistributionServiceInputsandOuputs:
+          type: string
+        DistributionServiceWorkProduct:
+          type: string
+        DistributionServiceName:
+          type: string
     ProductInventoryDistributionOutcome:
       type: object
       properties:
@@ -870,6 +842,34 @@ components:
         ProductInventoryDistributionAdministrativePlan:
           type: string
         ProductInventoryDistributionAdministrationTask:
+          type: string
+    Oversight:
+      type: object
+      properties:
+        ? >-
+          Handleandassignthedaytodayactivities,capturetime,costsandincomeforanoperationalunitwithinProductInventoryDistribution.
+
+          Example:Administerthetimereportingandbillingforthespecialistsalessupportteam.
+        : type: string
+        OversightPreconditions:
+          type: string
+        OversightBusinessUnit/EmployeeReference:
+          type: string
+        OversightWorkSchedule:
+          type: string
+        AdministrativeOversight:
+          type: string
+        OversightPostconditions:
+          type: string
+        OversightAdministrativeOversightServiceType:
+          type: string
+        OversightAdministrativeOversightServiceDescription:
+          type: string
+        OversightAdministrativeOversightServiceInputsandOuputs:
+          type: string
+        OversightAdministrativeOversightServiceWorkProduct:
+          type: string
+        OversightAdministrativeOversightServiceName:
           type: string
     HTTPError:
       type: object
@@ -889,16 +889,8 @@ components:
       explode: false
       schema:
         type: string
-    DistributionID:
-      name: distributionId
-      in: path
-      required: true
-      style: simple
-      explode: false
-      schema:
-        type: string
-    OversightID:
-      name: oversightId
+    ProvisioningID:
+      name: provisioningId
       in: path
       required: true
       style: simple
@@ -913,8 +905,8 @@ components:
       explode: false
       schema:
         type: string
-    ProvisioningID:
-      name: provisioningId
+    DistributionID:
+      name: distributionId
       in: path
       required: true
       style: simple
@@ -923,6 +915,14 @@ components:
         type: string
     ProductInventoryDistributionOutcomeID:
       name: productinventorydistributionoutcomeId
+      in: path
+      required: true
+      style: simple
+      explode: false
+      schema:
+        type: string
+    OversightID:
+      name: oversightId
       in: path
       required: true
       style: simple

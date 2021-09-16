@@ -125,23 +125,23 @@ paths:
           $ref: '#/components/responses/TooManyRequestsError'
         500:
           $ref: '#/components/responses/InternalServerError'
-  /AccountRecovery/{accountrecoveryId}/Writedown/{writedownId}/Retrieve:
+  /AccountRecovery/{accountrecoveryId}/Assessment/{assessmentId}/Retrieve:
     get:
       tags:
-      - BQ - Writedown
+      - BQ - Assessment
       summary: ReBQ Retrieve details of an active case assessment
       description: ReBQ Retrieve details of an active case assessment
-      operationId: RetrieveWritedown
+      operationId: RetrieveAssessment
       parameters:
       - $ref: '#/components/parameters/AccountRecoveryID'
-      - $ref: '#/components/parameters/WritedownID'
+      - $ref: '#/components/parameters/AssessmentID'
       responses:
         200:
           description: Success
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/RetrieveWritedownResponse'
+                $ref: '#/components/schemas/RetrieveAssessmentResponse'
         400:
           $ref: '#/components/responses/BadRequestError'
         401:
@@ -373,23 +373,23 @@ components:
         AccountRecoveryCaseType:
           type: string
         ProductInstanceReference:
-          type: object
+          type: string
         LinkedProductInstanceReference:
-          type: object
+          type: string
         CustomerReference:
-          type: object
+          type: string
         EmployeeOrBusinessUnitReference:
-          type: object
+          type: string
         AccountNumber:
           type: string
         BankBranchOrLocationReference:
-          type: object
+          type: string
         DateType:
           type: string
         Date:
           type: string
         InvolvedPartyReference:
-          type: object
+          type: string
         InvolvedPartyObligationOrEntitlement:
           type: string
         AccountType:
@@ -403,7 +403,7 @@ components:
         AllowedAccess:
           type: string
         TaxReference:
-          type: object
+          type: string
         AccountStatus:
           type: string
         CollateralAssetAllocationProfile:
@@ -417,26 +417,12 @@ components:
         AccountRecoveryCaseWorkProducts:
           type: string
         DocumentReference:
-          type: object
+          type: string
         CustomerCommentary:
           type: string
         AccountRecoveryCaseResolutionSchedule:
           type: string
         AccountRecoveryCaseStatus:
-          type: string
-    Planning:
-      type: object
-      properties:
-        AccountRecoveryPlan:
-          type: string
-        AccountRecoveryCasePlanningTaskRecord:
-          type: string
-    Restructuring:
-      type: object
-      properties:
-        AccountRecoveryRestructuringSchedule:
-          type: string
-        AccountRecoveryCaseRestructuringTaskRecord:
           type: string
     Negotiation:
       type: object
@@ -444,11 +430,11 @@ components:
         AccountRecoveryGuidelines:
           type: string
         CorrespondenceReference:
-          type: object
+          type: string
         CorrespondenceContent:
           type: string
         DocumentReference:
-          type: object
+          type: string
         DocumentContent:
           type: string
         AccountRecoveryCaseNegotiationTaskRecord:
@@ -460,10 +446,24 @@ components:
           type: string
         AccountRecoveryCaseWrite-downTaskRecord:
           type: string
+    Planning:
+      type: object
+      properties:
+        AccountRecoveryPlan:
+          type: string
+        AccountRecoveryCasePlanningTaskRecord:
+          type: string
     Assessment:
       type: object
       properties:
         AccountRecoveryCaseAssessmentTaskRecord:
+          type: string
+    Restructuring:
+      type: object
+      properties:
+        AccountRecoveryRestructuringSchedule:
+          type: string
+        AccountRecoveryCaseRestructuringTaskRecord:
           type: string
     HTTPError:
       type: object
@@ -474,7 +474,7 @@ components:
           type: string
         message:
           type: string
-    RetrieveWritedownResponse:
+    RetrieveAssessmentResponse:
       type: object
       properties:
         AccountRecoveryProcedure:
@@ -770,22 +770,6 @@ components:
       explode: false
       schema:
         type: string
-    PlanningID:
-      name: planningId
-      in: path
-      required: true
-      style: simple
-      explode: false
-      schema:
-        type: string
-    RestructuringID:
-      name: restructuringId
-      in: path
-      required: true
-      style: simple
-      explode: false
-      schema:
-        type: string
     NegotiationID:
       name: negotiationId
       in: path
@@ -802,8 +786,24 @@ components:
       explode: false
       schema:
         type: string
+    PlanningID:
+      name: planningId
+      in: path
+      required: true
+      style: simple
+      explode: false
+      schema:
+        type: string
     AssessmentID:
       name: assessmentId
+      in: path
+      required: true
+      style: simple
+      explode: false
+      schema:
+        type: string
+    RestructuringID:
+      name: restructuringId
       in: path
       required: true
       style: simple

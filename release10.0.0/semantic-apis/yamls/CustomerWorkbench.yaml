@@ -94,33 +94,6 @@ paths:
           $ref: '#/components/responses/TooManyRequestsError'
         500:
           $ref: '#/components/responses/InternalServerError'
-  /CustomerWorkbench/Activate:
-    post:
-      tags:
-      - CR - CustomerWorkbenchOperatingSession
-      summary: ReBQ Retrieve details about a contact
-      description: ReBQ Retrieve details about a contact
-      operationId: Activate
-      parameters: []
-      responses:
-        200:
-          description: Success
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/Contact'
-        400:
-          $ref: '#/components/responses/BadRequestError'
-        401:
-          $ref: '#/components/responses/UnauthorizedError'
-        403:
-          $ref: '#/components/responses/ForbiddenError'
-        404:
-          $ref: '#/components/responses/NotFoundError'
-        429:
-          $ref: '#/components/responses/TooManyRequestsError'
-        500:
-          $ref: '#/components/responses/InternalServerError'
   /CustomerWorkbench/{customerworkbenchId}/SWUpdate/Initiate:
     post:
       tags:
@@ -417,6 +390,35 @@ paths:
           $ref: '#/components/responses/TooManyRequestsError'
         500:
           $ref: '#/components/responses/InternalServerError'
+  /CustomerWorkbench/{customerworkbenchId}/Contact/{contactId}/Retrieve:
+    get:
+      tags:
+      - BQ - Contact
+      summary: ReBQ Retrieve details about a contact
+      description: ReBQ Retrieve details about a contact
+      operationId: RetrieveContact
+      parameters:
+      - $ref: '#/components/parameters/CustomerWorkbenchID'
+      - $ref: '#/components/parameters/ContactID'
+      responses:
+        200:
+          description: Success
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Contact'
+        400:
+          $ref: '#/components/responses/BadRequestError'
+        401:
+          $ref: '#/components/responses/UnauthorizedError'
+        403:
+          $ref: '#/components/responses/ForbiddenError'
+        404:
+          $ref: '#/components/responses/NotFoundError'
+        429:
+          $ref: '#/components/responses/TooManyRequestsError'
+        500:
+          $ref: '#/components/responses/InternalServerError'
   /CustomerWorkbench/{customerworkbenchId}/ProductandServiceAccess/Initiate:
     post:
       tags:
@@ -544,7 +546,7 @@ components:
       type: object
       properties:
         CustomerReference:
-          type: object
+          type: string
         CustomerWorkbenchDeviceType:
           type: string
         CustomerWorkbenchDeviceRegistration:
@@ -579,6 +581,13 @@ components:
           type: string
         Date:
           type: string
+    Browsing:
+      type: object
+      properties:
+        CustomerURL:
+          type: string
+        BankWebsiteURL:
+          type: string
     ProductandServiceAccess:
       type: object
       properties:
@@ -591,13 +600,6 @@ components:
         AccessStart/EndTime:
           type: string
         CustomerResidentFiles:
-          type: string
-    Browsing:
-      type: object
-      properties:
-        CustomerURL:
-          type: string
-        BankWebsiteURL:
           type: string
     Contact:
       type: object
@@ -757,16 +759,16 @@ components:
       explode: false
       schema:
         type: string
-    ProductandServiceAccessID:
-      name: productandserviceaccessId
+    BrowsingID:
+      name: browsingId
       in: path
       required: true
       style: simple
       explode: false
       schema:
         type: string
-    BrowsingID:
-      name: browsingId
+    ProductandServiceAccessID:
+      name: productandserviceaccessId
       in: path
       required: true
       style: simple

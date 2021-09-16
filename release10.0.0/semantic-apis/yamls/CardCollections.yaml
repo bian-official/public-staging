@@ -308,11 +308,11 @@ components:
       type: object
       properties:
         ProductInstanceReference:
-          type: object
+          type: string
         ProductandServiceType:
           type: string
         CustomerReference:
-          type: object
+          type: string
         CardType:
           type: string
         CardAccountStatus:
@@ -322,40 +322,24 @@ components:
         ConfigurationOrOptions:
           type: string
         TaxReference:
-          type: object
+          type: string
         BillingTransactions:
           type: string
         BillingTransactionReference:
-          type: object
+          type: string
         PaymentTransactions:
           type: string
         PaymentTransactionReference:
-          type: object
+          type: string
         ProductTransactions:
           type: string
         ProductTransactionReference:
-          type: object
+          type: string
         Statements:
           type: string
         StatementsReference:
-          type: object
+          type: string
         CardCollectionsProcessingSchedule:
-          type: string
-    Payment:
-      type: object
-      properties:
-        PaymentTransactionReference:
-          type: object
-        PaymentTransaction:
-          type: string
-        CardCollectionsPaymentNotificationRecord:
-          type: string
-    Resolution:
-      type: object
-      properties:
-        CardCollectionsResolutionDecision:
-          type: string
-        CardCollectionsResolutionWorkProduct:
           type: string
     PaymentTerms:
       type: object
@@ -369,26 +353,42 @@ components:
         ContactResult:
           type: string
         DocumentDirectoryEntryInstanceReference:
-          type: object
+          type: string
         DocumentContent:
           type: string
         CorrespondenceInstanceReference:
-          type: object
+          type: string
         CorrespondenceContent:
           type: string
         CardCollectionsPaymentTermsRenegotiationDecision:
           type: string
         CardCollectionsPaymentTermsWorkProduct:
           type: string
+    Payment:
+      type: object
+      properties:
+        PaymentTransactionReference:
+          type: string
+        PaymentTransaction:
+          type: string
+        CardCollectionsPaymentNotificationRecord:
+          type: string
+    Resolution:
+      type: object
+      properties:
+        CardCollectionsResolutionDecision:
+          type: string
+        CardCollectionsResolutionWorkProduct:
+          type: string
     Assignment:
       type: object
       properties:
         CustomerCreditRatingAssessmentInstanceReference:
-          type: object
+          type: string
         CustomerCreditRatingAssessment:
           type: string
         CollectionAgencyReference:
-          type: object
+          type: string
         CollectionAgencyAgreement:
           type: string
         CardCollectionsAssignmentDecision:
@@ -520,6 +520,14 @@ components:
       explode: false
       schema:
         type: string
+    PaymentTermsID:
+      name: paymenttermsId
+      in: path
+      required: true
+      style: simple
+      explode: false
+      schema:
+        type: string
     PaymentID:
       name: paymentId
       in: path
@@ -530,14 +538,6 @@ components:
         type: string
     ResolutionID:
       name: resolutionId
-      in: path
-      required: true
-      style: simple
-      explode: false
-      schema:
-        type: string
-    PaymentTermsID:
-      name: paymenttermsId
       in: path
       required: true
       style: simple

@@ -399,17 +399,17 @@ components:
       type: object
       properties:
         CustomerContactInboundorOutboundIndicator:
-          type: boolean
+          type: string
         eBranchOperatingSessionReference:
-          type: object
+          type: string
         AdvancedVoiceServiceOperatingSessionReference:
-          type: object
+          type: string
         CustomerContactRecordReference:
-          type: object
+          type: string
         CustomerContactRecord:
           type: string
         CustomerContactRecordCustomerReference:
-          type: object
+          type: string
         CustomerContactRecordContactDevice:
           type: string
         CustomerContactRecordAuthenticationStatus:
@@ -423,18 +423,28 @@ components:
         CustomerContactRecordServicingEventHistory:
           type: string
         CustomerContactRecordServicingPositionReference:
-          type: object
+          type: string
         CustomerContactRecordServicingResourceReference:
-          type: object
+          type: string
         CustomerContactRecordActivityRecord:
           type: string
         CustomerSessionDialogueReference:
-          type: object
+          type: string
         CustomerSessionDialogueRecord:
           type: string
         CustomerContactRecordDuration:
           type: string
         CustomerContactRecordResult:
+          type: string
+    History:
+      type: object
+      properties:
+        HistoryTaskRecord:
+          type: string
+    Routing:
+      type: object
+      properties:
+        RoutingTaskRecord:
           type: string
     Session:
       type: object
@@ -443,20 +453,10 @@ components:
           type: string
         SessionResult:
           type: string
-    History:
-      type: object
-      properties:
-        HistoryTaskRecord:
-          type: string
     Authentication:
       type: object
       properties:
         AuthenticationTaskRecord:
-          type: string
-    Routing:
-      type: object
-      properties:
-        RoutingTaskRecord:
           type: string
     HTTPError:
       type: object
@@ -765,14 +765,6 @@ components:
       explode: false
       schema:
         type: string
-    SessionID:
-      name: sessionId
-      in: path
-      required: true
-      style: simple
-      explode: false
-      schema:
-        type: string
     HistoryID:
       name: historyId
       in: path
@@ -781,16 +773,24 @@ components:
       explode: false
       schema:
         type: string
-    AuthenticationID:
-      name: authenticationId
+    RoutingID:
+      name: routingId
       in: path
       required: true
       style: simple
       explode: false
       schema:
         type: string
-    RoutingID:
-      name: routingId
+    SessionID:
+      name: sessionId
+      in: path
+      required: true
+      style: simple
+      explode: false
+      schema:
+        type: string
+    AuthenticationID:
+      name: authenticationId
       in: path
       required: true
       style: simple

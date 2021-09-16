@@ -130,15 +130,15 @@ components:
       type: object
       properties:
         ThirdPartyReference:
-          type: object
+          type: string
         ThirdPartyServicingMandateReference:
-          type: object
+          type: string
         ThirdPartyServicingMandate:
           type: string
         CustomerReference:
-          type: object
+          type: string
         CustomerEligibilityAssessmentInstanceReference:
-          type: object
+          type: string
         ServicingOrderType:
           type: string
         ServicingOrderTaskRecord:
@@ -148,7 +148,7 @@ components:
         Date:
           type: string
         EmployeeOrBusinessUnitReference:
-          type: object
+          type: string
         ServicingOrderWorkProduct:
           type: string
         ServicingOrderWorkTaskResult:

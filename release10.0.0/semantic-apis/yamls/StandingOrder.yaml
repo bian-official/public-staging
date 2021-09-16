@@ -356,7 +356,7 @@ components:
         StandingOrderArrangementStatus:
           type: string
         StandingOrderArrangementAssociatedParty:
-          type: object
+          type: string
         StandingOrderArrangementCurrency:
           type: string
         StandingOrderArrangementRegulationReference:
@@ -364,15 +364,15 @@ components:
         StandingOrderArrangementRegulationType:
           type: string
         StandingOrderArrangementJurisdiction:
-          type: object
+          type: string
         StandingOrderArrangementBookingLocation:
-          type: object
+          type: string
         StandingOrderArrangementAccountType:
           type: string
         StandingOrderArrangementAccountReference:
           type: string
         StandingOrderArrangementCustomerReference:
-          type: object
+          type: string
         StandingOrderArrangementPosition:
           type: string
         StandingOrderArrangementProductReference:
@@ -410,13 +410,13 @@ components:
           Example:Performthescheduled(e.g.statements,standingorders)andad-hoc/requested(e.g.balanceinquiries,fundtransfers)fulfillmenttasksforacustomercurrentaccountfacility.
         : type: string
         StandingOrderPaymentPreconditions:
-          type: object
+          type: string
         StandingOrderPaymentFeatureSchedule:
-          type: object
+          type: string
         BusinessService:
-          type: object
+          type: string
         StandingOrderPaymentPostconditions:
-          type: object
+          type: string
         StandingOrderPaymentServiceType:
           type: string
         StandingOrderPaymentServiceDescription:
@@ -424,7 +424,7 @@ components:
         StandingOrderPaymentServiceInputsandOuputs:
           type: string
         StandingOrderPaymentServiceWorkProduct:
-          type: object
+          type: string
         StandingOrderPaymentServiceName:
           type: string
         StandingOrderExecutionDate:

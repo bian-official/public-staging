@@ -433,9 +433,9 @@ components:
       type: object
       properties:
         CustomerReference:
-          type: object
+          type: string
         EmployeeOrBusinessUnitReference:
-          type: object
+          type: string
         CustomerRelationshipRatingType:
           type: string
         CustomerRelationshipRating:
@@ -456,15 +456,32 @@ components:
           type: string
         CustomerProfitability:
           type: string
+    Contact:
+      type: object
+      properties:
+        CustomerRelationshipContactHistory:
+          type: string
+        CustomerRelationshipContactSchedule:
+          type: string
+        CustomerRelationshipContactRecord:
+          type: string
+        CustomerRelationshipContactDate:
+          type: string
+        EmployeeReference:
+          type: string
+        CustomerRelationshipContactType:
+          type: string
+        CustomerRelationshipContactResult:
+          type: string
     Incident:
       type: object
       properties:
         RelationshipIncidentRecord:
           type: string
         Employee/BusinessUnitReference:
-          type: object
+          type: string
         ProductandServiceActivityReference:
-          type: object
+          type: string
         CustomerIncidentType:
           type: string
         CustomerIncidentDescription:
@@ -483,27 +500,10 @@ components:
         CustomerRelationshipDevelopmentPlan:
           type: string
         Employee/BusinessUnitReference:
-          type: object
+          type: string
         CustomerDevelopmentWorkProduct:
           type: string
         CustomerDevelopmentTaskResult:
-          type: string
-    Contact:
-      type: object
-      properties:
-        CustomerRelationshipContactHistory:
-          type: string
-        CustomerRelationshipContactSchedule:
-          type: string
-        CustomerRelationshipContactRecord:
-          type: string
-        CustomerRelationshipContactDate:
-          type: string
-        EmployeeReference:
-          type: object
-        CustomerRelationshipContactType:
-          type: string
-        CustomerRelationshipContactResult:
           type: string
     HTTPError:
       type: object
@@ -738,6 +738,14 @@ components:
       explode: false
       schema:
         type: string
+    ContactID:
+      name: contactId
+      in: path
+      required: true
+      style: simple
+      explode: false
+      schema:
+        type: string
     IncidentID:
       name: incidentId
       in: path
@@ -748,14 +756,6 @@ components:
         type: string
     DevelopmentID:
       name: developmentId
-      in: path
-      required: true
-      style: simple
-      explode: false
-      schema:
-        type: string
-    ContactID:
-      name: contactId
       in: path
       required: true
       style: simple

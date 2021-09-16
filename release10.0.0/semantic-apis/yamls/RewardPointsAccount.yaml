@@ -509,11 +509,11 @@ components:
         RewardPointsLogUpdateLog:
           type: string
         RewardPointsLogReference:
-          type: object
+          type: string
         RewardPointsLogBusinessUnitReference:
-          type: object
+          type: string
         RewardPointsLogCustomerReference:
-          type: object
+          type: string
         RewardPointsLogServiceConfiguration:
           type: string
         RewardPointsLogPosition:
@@ -521,32 +521,6 @@ components:
         RewardPointsLogPositionType:
           type: string
         RewardPointsLogPositionLimitTime:
-          type: string
-    Capture:
-      type: object
-      properties:
-        ? >-
-          Maintainalogoftransactionsoractivity,typicallyafinancialaccount/journaloralogofactivitytosupportbehavioralanalysiswithinRewardPointsAccount.
-
-          Examples:Maintainafinancialjournaloftransactionsprocessedforaproductorserviceandmaintainalogofcustomereventsandactivityforsubsequentanalysis.
-        : type: string
-        CapturePreconditions:
-          type: string
-        CaptureEventSchedule:
-          type: string
-        BusinessService:
-          type: object
-        CapturePostconditions:
-          type: string
-        CaptureServiceType:
-          type: string
-        CaptureServiceDescription:
-          type: string
-        CaptureServiceInputsandOuputs:
-          type: string
-        CaptureServiceWorkProduct:
-          type: string
-        CaptureServiceName:
           type: string
     Expiration:
       type: object
@@ -561,7 +535,7 @@ components:
         ExpirationEventSchedule:
           type: string
         LogEventExpiration:
-          type: object
+          type: string
         ExpirationPostconditions:
           type: string
         ExpirationLogEventExpirationServiceType:
@@ -573,6 +547,32 @@ components:
         ExpirationLogEventExpirationServiceWorkProduct:
           type: string
         ExpirationLogEventExpirationServiceName:
+          type: string
+    Capture:
+      type: object
+      properties:
+        ? >-
+          Maintainalogoftransactionsoractivity,typicallyafinancialaccount/journaloralogofactivitytosupportbehavioralanalysiswithinRewardPointsAccount.
+
+          Examples:Maintainafinancialjournaloftransactionsprocessedforaproductorserviceandmaintainalogofcustomereventsandactivityforsubsequentanalysis.
+        : type: string
+        CapturePreconditions:
+          type: string
+        CaptureEventSchedule:
+          type: string
+        BusinessService:
+          type: string
+        CapturePostconditions:
+          type: string
+        CaptureServiceType:
+          type: string
+        CaptureServiceDescription:
+          type: string
+        CaptureServiceInputsandOuputs:
+          type: string
+        CaptureServiceWorkProduct:
+          type: string
+        CaptureServiceName:
           type: string
     RewardPointsAccountOutcome:
       type: object
@@ -599,16 +599,16 @@ components:
       explode: false
       schema:
         type: string
-    CaptureID:
-      name: captureId
+    ExpirationID:
+      name: expirationId
       in: path
       required: true
       style: simple
       explode: false
       schema:
         type: string
-    ExpirationID:
-      name: expirationId
+    CaptureID:
+      name: captureId
       in: path
       required: true
       style: simple

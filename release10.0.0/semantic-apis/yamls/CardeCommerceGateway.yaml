@@ -380,39 +380,15 @@ components:
       type: object
       properties:
         eCommerceTransactionInstanceReference:
-          type: object
+          type: string
         eCommerceTransactionAuthorizationResponse:
           type: string
-    CardTransaction:
+    CardAuthentication:
       type: object
       properties:
-        ProductInstanceReference:
-          type: object
-        CustomerReference:
-          type: object
-        Cardexpirationdate:
+        eCommerceTransactionInstanceReference:
           type: string
-        CardCVV:
-          type: string
-        CardIssuingBankReference:
-          type: object
-        MerchantAcquiringBankReference:
-          type: object
-        eCommerceTransactionType:
-          type: string
-        eCommerceTransactionCurrency:
-          type: string
-        eCommerceTransactionAmountType:
-          type: string
-        eCommerceTransactionAmount:
-          type: number
-        eCommerceTransactionMerchantReference:
-          type: object
-        eCommerceTransactionLocationReference:
-          type: object
-        eCommerceTransactionProductandServiceReference:
-          type: object
-        eCommerceTransactionDate/Time:
+        eCommerceTransactionAuthenticationResponse:
           type: string
     TransactionBatch:
       type: object
@@ -420,15 +396,39 @@ components:
         eCommerceBatchTransactionDate/Time:
           type: string
         TransactionMerchantReference:
-          type: object
+          type: string
         eCommerceBatchTransactionRecord:
           type: string
-    CardAuthentication:
+    CardTransaction:
       type: object
       properties:
-        eCommerceTransactionInstanceReference:
-          type: object
-        eCommerceTransactionAuthenticationResponse:
+        ProductInstanceReference:
+          type: string
+        CustomerReference:
+          type: string
+        Cardexpirationdate:
+          type: string
+        CardCVV:
+          type: string
+        CardIssuingBankReference:
+          type: string
+        MerchantAcquiringBankReference:
+          type: string
+        eCommerceTransactionType:
+          type: string
+        eCommerceTransactionCurrency:
+          type: string
+        eCommerceTransactionAmountType:
+          type: string
+        eCommerceTransactionAmount:
+          type: string
+        eCommerceTransactionMerchantReference:
+          type: string
+        eCommerceTransactionLocationReference:
+          type: string
+        eCommerceTransactionProductandServiceReference:
+          type: string
+        eCommerceTransactionDate/Time:
           type: string
     HTTPError:
       type: object
@@ -924,8 +924,8 @@ components:
       explode: false
       schema:
         type: string
-    CardTransactionID:
-      name: cardtransactionId
+    CardAuthenticationID:
+      name: cardauthenticationId
       in: path
       required: true
       style: simple
@@ -940,8 +940,8 @@ components:
       explode: false
       schema:
         type: string
-    CardAuthenticationID:
-      name: cardauthenticationId
+    CardTransactionID:
+      name: cardtransactionId
       in: path
       required: true
       style: simple

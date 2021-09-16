@@ -521,60 +521,42 @@ components:
       type: object
       properties:
         ACHReference:
-          type: object
+          type: string
         ACHAccessSchedule:
           type: string
-    OutboundACH:
-      type: object
-      properties:
-        OutboundACHTransactionBatchReference:
-          type: object
-    Reconciliation:
-      type: object
-      properties:
-        ACHReconciliationTaskResult:
-          type: string
-    ClearingandSettlement:
-      type: object
-      properties:
-        CorrespondentBankReference:
-          type: object
-        CorrespondentBankClearingAgreementReference:
-          type: object
-        CorrespondentBankClearingAgreementClearingInstructions:
-          type: string
-        CorrespondentBankClearingAgreementSettlementInstructions:
-          type: string
-        MirrorNostroAccountReference:
-          type: object
     Warehousing:
       type: object
       properties:
         ScheduleReleaseDate/Time:
           type: string
+    OutboundACH:
+      type: object
+      properties:
+        OutboundACHTransactionBatchReference:
+          type: string
     InboundACH:
       type: object
       properties:
         InboundACHTransactionBatchReference:
-          type: object
+          type: string
         ACHPaymentTransactionReference:
-          type: object
+          type: string
         ACHPaymentTransactionRecord:
           type: string
         PaymentTransactionInitiatorReference:
-          type: object
+          type: string
         PayerReference:
-          type: object
+          type: string
         PayerBankReference:
-          type: object
+          type: string
         PayerProductInstanceReference:
-          type: object
+          type: string
         PayeeReference:
-          type: object
+          type: string
         PayeeProductInstanceReference:
-          type: object
+          type: string
         PayeeBankReference:
-          type: object
+          type: string
         SpecialInstructions:
           type: string
         Amount:
@@ -584,6 +566,24 @@ components:
         DateType:
           type: string
         Date:
+          type: string
+    ClearingandSettlement:
+      type: object
+      properties:
+        CorrespondentBankReference:
+          type: string
+        CorrespondentBankClearingAgreementReference:
+          type: string
+        CorrespondentBankClearingAgreementClearingInstructions:
+          type: string
+        CorrespondentBankClearingAgreementSettlementInstructions:
+          type: string
+        MirrorNostroAccountReference:
+          type: string
+    Reconciliation:
+      type: object
+      properties:
+        ACHReconciliationTaskResult:
           type: string
     HTTPError:
       type: object
@@ -1328,6 +1328,14 @@ components:
       explode: false
       schema:
         type: string
+    WarehousingID:
+      name: warehousingId
+      in: path
+      required: true
+      style: simple
+      explode: false
+      schema:
+        type: string
     OutboundACHID:
       name: outboundachId
       in: path
@@ -1336,8 +1344,8 @@ components:
       explode: false
       schema:
         type: string
-    ReconciliationID:
-      name: reconciliationId
+    InboundACHID:
+      name: inboundachId
       in: path
       required: true
       style: simple
@@ -1352,16 +1360,8 @@ components:
       explode: false
       schema:
         type: string
-    WarehousingID:
-      name: warehousingId
-      in: path
-      required: true
-      style: simple
-      explode: false
-      schema:
-        type: string
-    InboundACHID:
-      name: inboundachId
+    ReconciliationID:
+      name: reconciliationId
       in: path
       required: true
       style: simple

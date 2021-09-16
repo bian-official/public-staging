@@ -342,33 +342,33 @@ components:
         CardCaseType:
           type: string
         ProductInstanceReference:
-          type: object
+          type: string
         CustomerReference:
-          type: object
+          type: string
         CustomerContactRecordReference:
-          type: object
+          type: string
         CaseLocation:
           type: string
         Date:
           type: string
         EmployeeOrBusinessUnitReference:
-          type: object
+          type: string
         CardTransactionReference:
-          type: object
+          type: string
         CardTransactionRecord:
           type: string
         CardTransactionProductInstanceReference:
-          type: object
+          type: string
         CardHolderReference:
-          type: object
+          type: string
         CardTransactionIssuedDeviceReference:
-          type: object
+          type: string
         CardTransactionNetworkReference:
-          type: object
+          type: string
         CardTransactionIssuingBankReference:
-          type: object
+          type: string
         CardTransactionMerchantAcquiringBankReference:
-          type: object
+          type: string
         CardTransactionType:
           type: string
         CardTransactionCurrency:
@@ -376,13 +376,13 @@ components:
         CardTransactionAmountType:
           type: string
         CardTransactionAmount:
-          type: number
+          type: string
         CardTransactionMerchantReference:
-          type: object
+          type: string
         CardTransactionLocationReference:
-          type: object
+          type: string
         CardTransactionProductandServiceReference:
-          type: object
+          type: string
         CardTransactionDateOrTime:
           type: string
         CardTransactionFXConversionCharge:
@@ -393,32 +393,25 @@ components:
           type: string
         CardCaseResolutionSchedule:
           type: string
-    Chargeback:
-      type: object
-      properties:
-        ChargebackCardTransactionRecordReference:
-          type: object
-        ChargebackInstruction:
-          type: string
     Resolution:
       type: object
       properties:
         ResolutionCardTransactionRecordReference:
-          type: object
+          type: string
         ResolutionTaskRecord:
           type: string
         CorrespondenceInstanceReference:
-          type: object
+          type: string
         CorrespondenceContent:
           type: string
         DocumentDirectoryEntryInstanceReference:
-          type: object
+          type: string
         DocumentContent:
           type: string
         Employee/BusinessUnitReference:
-          type: object
+          type: string
         PaymentOrderReference:
-          type: object
+          type: string
         ResolutionTaskWorkProducts:
           type: string
         ResolutionTaskResult:
@@ -427,26 +420,33 @@ components:
       type: object
       properties:
         ConsolidationCardTransactionRecordReference:
-          type: object
+          type: string
         ConsolidationTaskRecord:
           type: string
         ConsolidationInstruction:
           type: string
         CorrespondenceReference:
-          type: object
+          type: string
         DocumentDirectoryEntryInstanceReference:
-          type: object
+          type: string
         ConsolidationTaskWorkProducts:
           type: string
         ConsolidationTaskResult:
+          type: string
+    Chargeback:
+      type: object
+      properties:
+        ChargebackCardTransactionRecordReference:
+          type: string
+        ChargebackInstruction:
           type: string
     Arbitration:
       type: object
       properties:
         ArbitrationCardTransactionRecordReference:
-          type: object
+          type: string
         NetworkParticipantNetworkServiceRequestReference:
-          type: object
+          type: string
         NetworkParticipantNetworkServiceRequestRecord:
           type: string
         NetworkParticipantServiceType:
@@ -765,14 +765,6 @@ components:
       explode: false
       schema:
         type: string
-    ChargebackID:
-      name: chargebackId
-      in: path
-      required: true
-      style: simple
-      explode: false
-      schema:
-        type: string
     ResolutionID:
       name: resolutionId
       in: path
@@ -783,6 +775,14 @@ components:
         type: string
     ConsolidationID:
       name: consolidationId
+      in: path
+      required: true
+      style: simple
+      explode: false
+      schema:
+        type: string
+    ChargebackID:
+      name: chargebackId
       in: path
       required: true
       style: simple

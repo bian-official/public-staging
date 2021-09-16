@@ -212,21 +212,21 @@ components:
       type: object
       properties:
         BusinessUnitReference:
-          type: object
+          type: string
         ProposedTransactionOriginatorReference:
-          type: object
+          type: string
         ProposedTransactionType:
           type: string
         ProposedTransactionDescription:
           type: string
         ProposedTransactionAmount:
-          type: number
+          type: string
         ProposedTransactionRiskAssessment:
           type: string
         DocumentDirectoryEntryInstanceReference:
-          type: object
+          type: string
         CorrespondenceInstanceReference:
-          type: object
+          type: string
         DateType:
           type: string
         Date:

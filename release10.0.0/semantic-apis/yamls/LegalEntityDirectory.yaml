@@ -10,13 +10,13 @@ paths:
   /LegalEntityDirectory/Register:
     post:
       tags:
-      - CR - PartyDirectoryEntry
+      - CR - LegalEntityDirectoryEntry
       summary: InCR Register a new legal entity in the catalog
       description: InCR Register a new legal entity in the catalog
       operationId: Register
       parameters: []
       requestBody:
-        $ref: '#/components/requestBodies/PartyDirectoryEntry'
+        $ref: '#/components/requestBodies/LegalEntityDirectoryEntry'
       responses:
         200:
           description: Success
@@ -40,21 +40,21 @@ paths:
   /LegalEntityDirectory/{legalentitydirectoryId}/Update:
     put:
       tags:
-      - CR - PartyDirectoryEntry
+      - CR - LegalEntityDirectoryEntry
       summary: UpCR Update details about the legal entity directory entry
       description: UpCR Update details about the legal entity directory entry
       operationId: Update
       parameters:
       - $ref: '#/components/parameters/LegalEntityDirectoryID'
       requestBody:
-        $ref: '#/components/requestBodies/PartyDirectoryEntry'
+        $ref: '#/components/requestBodies/LegalEntityDirectoryEntry'
       responses:
         200:
           description: Success
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/PartyDirectoryEntry'
+                $ref: '#/components/schemas/LegalEntityDirectoryEntry'
         400:
           $ref: '#/components/responses/BadRequestError'
         401:
@@ -70,14 +70,14 @@ paths:
   /LegalEntityDirectory/{legalentitydirectoryId}/Request:
     put:
       tags:
-      - CR - PartyDirectoryEntry
+      - CR - LegalEntityDirectoryEntry
       summary: RqCR Request manual intervention with an entry (e.g. refresh content)
       description: RqCR Request manual intervention with an entry (e.g. refresh content)
       operationId: Request
       parameters:
       - $ref: '#/components/parameters/LegalEntityDirectoryID'
       requestBody:
-        $ref: '#/components/requestBodies/PartyDirectoryEntry'
+        $ref: '#/components/requestBodies/LegalEntityDirectoryEntry'
       responses:
         200:
           description: Success
@@ -101,7 +101,7 @@ paths:
   /LegalEntityDirectory/{legalentitydirectoryId}/Retrieve:
     get:
       tags:
-      - CR - PartyDirectoryEntry
+      - CR - LegalEntityDirectoryEntry
       summary: ReCR Retrieve details about a legal entity directory entry
       description: ReCR Retrieve details about a legal entity directory entry
       operationId: Retrieve
@@ -113,7 +113,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/PartyDirectoryEntry'
+                $ref: '#/components/schemas/LegalEntityDirectoryEntry'
         400:
           $ref: '#/components/responses/BadRequestError'
         401:
@@ -129,9 +129,9 @@ paths:
   /LegalEntityDirectory/{legalentitydirectoryId}/Execute:
     put:
       tags:
-      - CR - PartyDirectoryEntry
-      summary: ExBQ Execute an automated action against an entry (e.g. notify status update)
-      description: ExBQ Execute an automated action against an entry (e.g. notify status update)
+      - CR - LegalEntityDirectoryEntry
+      summary: ExCR Execute an automated action against an entry
+      description: ExCR Execute an automated action against an entry
       operationId: Execute
       parameters:
       - $ref: '#/components/parameters/LegalEntityDirectoryID'
@@ -339,13 +339,13 @@ paths:
           $ref: '#/components/responses/InternalServerError'
 components:
   schemas:
-    PartyDirectoryEntry:
+    LegalEntityDirectoryEntry:
       type: object
       properties:
         LegalEntityReference:
-          type: object
+          type: string
         PartyReference:
-          type: object
+          type: string
         DateType:
           type: string
         Date:
@@ -372,7 +372,7 @@ components:
         PrimaryRegulator:
           type: string
         TaxReference:
-          type: object
+          type: string
         ContactRole:
           type: string
         ContactAddress/Details:
@@ -381,15 +381,15 @@ components:
       type: object
       properties:
         LegalEntityAssociationReference:
-          type: object
+          type: string
         LegalEntityAssociationType:
           type: string
         LegalEntityAssociationObligation:
           type: string
         ParentLegalEntityReference:
-          type: object
+          type: string
         SubsidiaryLegalEntityReference:
-          type: object
+          type: string
         ShareholdingProfile:
           type: string
     Profile:
@@ -402,7 +402,7 @@ components:
         OrganizationEconomicIntent:
           type: string
         OrganizationGrowthRate:
-          type: object
+          type: string
         OrganizationProfitability/Stocks:
           type: string
         OrganizationRevenue/Turnover:
@@ -419,7 +419,7 @@ components:
     UpdateReferenceRequest:
       type: object
       properties:
-        PartyDirectoryEntry:
+        LegalEntityDirectoryEntry:
           type: object
           properties:
             Date:
@@ -454,7 +454,7 @@ components:
     UpdateReferenceResponse:
       type: object
       properties:
-        PartyDirectoryEntry:
+        LegalEntityDirectoryEntry:
           type: object
           properties:
             Date:
@@ -489,7 +489,7 @@ components:
     RetrieveReferenceResponse:
       type: object
       properties:
-        PartyDirectoryEntry:
+        LegalEntityDirectoryEntry:
           type: object
           properties:
             LegalEntityReference:
@@ -528,7 +528,7 @@ components:
     UpdateProfileRequest:
       type: object
       properties:
-        PartyDirectoryEntry:
+        LegalEntityDirectoryEntry:
           type: object
           properties:
             Date:
@@ -551,7 +551,7 @@ components:
     UpdateProfileResponse:
       type: object
       properties:
-        PartyDirectoryEntry:
+        LegalEntityDirectoryEntry:
           type: object
           properties:
             Date:
@@ -574,7 +574,7 @@ components:
     RetrieveProfileResponse:
       type: object
       properties:
-        PartyDirectoryEntry:
+        LegalEntityDirectoryEntry:
           type: object
           properties:
             LegalEntityReference:
@@ -601,7 +601,7 @@ components:
     UpdateAssociationsRequest:
       type: object
       properties:
-        PartyDirectoryEntry:
+        LegalEntityDirectoryEntry:
           type: object
           properties:
             Date:
@@ -624,7 +624,7 @@ components:
     UpdateAssociationsResponse:
       type: object
       properties:
-        PartyDirectoryEntry:
+        LegalEntityDirectoryEntry:
           type: object
           properties:
             Date:
@@ -647,7 +647,7 @@ components:
     RetrieveAssociationsResponse:
       type: object
       properties:
-        PartyDirectoryEntry:
+        LegalEntityDirectoryEntry:
           type: object
           properties:
             LegalEntityReference:
@@ -705,12 +705,12 @@ components:
       schema:
         type: string
   requestBodies:
-    PartyDirectoryEntry:
+    LegalEntityDirectoryEntry:
       required: true
       content:
         application/json:
           schema:
-            $ref: '#/components/schemas/PartyDirectoryEntry'
+            $ref: '#/components/schemas/LegalEntityDirectoryEntry'
     Reference:
       required: true
       content:

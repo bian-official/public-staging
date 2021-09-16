@@ -539,9 +539,9 @@ components:
         CustomerCampaignPerformanceRecord:
           type: string
         CustomerCampaignProcedureInstanceReference:
-          type: object
+          type: string
         EmployeeOrBusinessUnitReference:
-          type: object
+          type: string
         CustomerCampaignProcedureSet-up:
           type: string
         CustomerCampaignProcedureVersionNumber:
@@ -556,16 +556,23 @@ components:
         MarketTrackingWorkTask:
           type: string
         GeneralMarketResearchDirectoryEntryInstanceReference:
-          type: object
+          type: string
         CompetitorAnalysisInstanceReference:
-          type: object
+          type: string
         CustomerSurveyProcedureInstanceReference:
-          type: object
+          type: string
         MarketTrackingWorkTaskWorkProducts:
           type: string
         MarketTrackingWorkTaskResult:
           type: string
         MarketTrackingWorkTaskDate-Time:
+          type: string
+    CampaignDirection:
+      type: object
+      properties:
+        CustomerCampaignDevelopmentSchedule:
+          type: string
+        CustomerCampaignExecutionSchedule:
           type: string
     PerformanceAssessment:
       type: object
@@ -579,13 +586,6 @@ components:
         PerformanceAssessmentWorkTaskResult:
           type: string
         PerformanceAssessmentWorkTaskDate-Time:
-          type: string
-    CampaignDirection:
-      type: object
-      properties:
-        CustomerCampaignDevelopmentSchedule:
-          type: string
-        CustomerCampaignExecutionSchedule:
           type: string
     HTTPError:
       type: object
@@ -613,16 +613,16 @@ components:
       explode: false
       schema:
         type: string
-    PerformanceAssessmentID:
-      name: performanceassessmentId
+    CampaignDirectionID:
+      name: campaigndirectionId
       in: path
       required: true
       style: simple
       explode: false
       schema:
         type: string
-    CampaignDirectionID:
-      name: campaigndirectionId
+    PerformanceAssessmentID:
+      name: performanceassessmentId
       in: path
       required: true
       style: simple

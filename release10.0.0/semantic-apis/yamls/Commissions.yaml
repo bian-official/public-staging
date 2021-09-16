@@ -539,7 +539,7 @@ components:
           type: string
         CommissionTransactionTransaction:
           type: string
-    Payment:
+    Check:
       type: object
       properties:
         ? >-
@@ -547,23 +547,23 @@ components:
 
           Example:Executeapaymenttransaction.
         : type: string
-        PaymentPreconditions:
+        CheckPreconditions:
           type: string
-        PaymentTaskSchedule:
+        CheckTaskSchedule:
           type: string
         BusinessService:
-          type: object
-        PaymentPostconditions:
           type: string
-        PaymentServiceType:
+        CheckPostconditions:
           type: string
-        PaymentServiceDescription:
+        CheckServiceType:
           type: string
-        PaymentServiceInputsandOuputs:
+        CheckServiceDescription:
           type: string
-        PaymentServiceWorkProduct:
+        CheckServiceInputsandOuputs:
           type: string
-        PaymentServiceName:
+        CheckServiceWorkProduct:
+          type: string
+        CheckServiceName:
           type: string
     Calculation:
       type: object
@@ -578,7 +578,7 @@ components:
         CalculationTaskSchedule:
           type: string
         CommissionCalculation:
-          type: object
+          type: string
         CalculationPostconditions:
           type: string
         CalculationCommissionCalculationServiceType:
@@ -591,7 +591,7 @@ components:
           type: string
         CalculationCommissionCalculationServiceName:
           type: string
-    Check:
+    Payment:
       type: object
       properties:
         ? >-
@@ -599,23 +599,23 @@ components:
 
           Example:Executeapaymenttransaction.
         : type: string
-        CheckPreconditions:
+        PaymentPreconditions:
           type: string
-        CheckTaskSchedule:
+        PaymentTaskSchedule:
           type: string
         BusinessService:
-          type: object
-        CheckPostconditions:
           type: string
-        CheckServiceType:
+        PaymentPostconditions:
           type: string
-        CheckServiceDescription:
+        PaymentServiceType:
           type: string
-        CheckServiceInputsandOuputs:
+        PaymentServiceDescription:
           type: string
-        CheckServiceWorkProduct:
+        PaymentServiceInputsandOuputs:
           type: string
-        CheckServiceName:
+        PaymentServiceWorkProduct:
+          type: string
+        PaymentServiceName:
           type: string
     CommissionsOutcome:
       type: object
@@ -660,8 +660,8 @@ components:
       explode: false
       schema:
         type: string
-    PaymentID:
-      name: paymentId
+    CheckID:
+      name: checkId
       in: path
       required: true
       style: simple
@@ -676,8 +676,8 @@ components:
       explode: false
       schema:
         type: string
-    CheckID:
-      name: checkId
+    PaymentID:
+      name: paymentId
       in: path
       required: true
       style: simple

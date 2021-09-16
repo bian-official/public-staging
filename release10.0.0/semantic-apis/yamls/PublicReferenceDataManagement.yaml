@@ -298,32 +298,6 @@ components:
         GlobalStandardSpecificationFeedback:
           type: string
         GlobalStandardSpecificationServiceProviderReference:
-          type: object
-    GlobalReferenceData:
-      type: object
-      properties:
-        ? >-
-          Createandmaintainadesignforaprocedure,product/servicemodelorothersuchentitywithinPublicReferenceDataManagement.
-
-          Example:Createandmaintainproductdesignsandanalyticalmodels.
-        : type: string
-        GlobalReferenceDataPreconditions:
-          type: object
-        GlobalReferenceDataSpecificationSchedule:
-          type: object
-        GlobalReferenceDataVersionNumber:
-          type: object
-        ExternalReferenceData:
-          type: object
-        ExternalReferenceDataServiceType:
-          type: string
-        ExternalReferenceDataServiceDescription:
-          type: object
-        ExternalReferenceDataServiceInputsandOuputs:
-          type: object
-        ExternalReferenceDataServiceWorkProduct:
-          type: object
-        ExternalReferenceDataServiceName:
           type: string
     PublicReferenceDataManagementOutcome:
       type: object
@@ -335,6 +309,32 @@ components:
         PublicReferenceDataManagementWorkProduct:
           type: string
         PublicReferenceDataManagementImpactAnalysis:
+          type: string
+    GlobalReferenceData:
+      type: object
+      properties:
+        ? >-
+          Createandmaintainadesignforaprocedure,product/servicemodelorothersuchentitywithinPublicReferenceDataManagement.
+
+          Example:Createandmaintainproductdesignsandanalyticalmodels.
+        : type: string
+        GlobalReferenceDataPreconditions:
+          type: string
+        GlobalReferenceDataSpecificationSchedule:
+          type: string
+        GlobalReferenceDataVersionNumber:
+          type: string
+        ExternalReferenceData:
+          type: string
+        ExternalReferenceDataServiceType:
+          type: string
+        ExternalReferenceDataServiceDescription:
+          type: string
+        ExternalReferenceDataServiceInputsandOuputs:
+          type: string
+        ExternalReferenceDataServiceWorkProduct:
+          type: string
+        ExternalReferenceDataServiceName:
           type: string
     HTTPError:
       type: object
@@ -354,16 +354,16 @@ components:
       explode: false
       schema:
         type: string
-    GlobalReferenceDataID:
-      name: globalreferencedataId
+    PublicReferenceDataManagementOutcomeID:
+      name: publicreferencedatamanagementoutcomeId
       in: path
       required: true
       style: simple
       explode: false
       schema:
         type: string
-    PublicReferenceDataManagementOutcomeID:
-      name: publicreferencedatamanagementoutcomeId
+    GlobalReferenceDataID:
+      name: globalreferencedataId
       in: path
       required: true
       style: simple

@@ -130,7 +130,7 @@ components:
       type: object
       properties:
         ProductInstanceReference:
-          type: object
+          type: string
         ProductandServiceType:
           type: string
         TransactionScheduleFulfillmentSchedule:
@@ -144,7 +144,7 @@ components:
         TransactionScheduleWorkTaskWorkProducts:
           type: string
         DocumentDirectoryEntryInstanceReference:
-          type: object
+          type: string
         TransactionScheduleWorkTaskResult:
           type: string
         TransactionScheduleTaskFeeTransaction:
@@ -158,15 +158,15 @@ components:
         TransactionScheduleFinancialTransaction:
           type: string
         TransactionScheduleFinancialTransactionProductInstanceReference:
-          type: object
+          type: string
         TransactionScheduleFinancialTransactionType:
           type: string
         TransactionScheduleFinancialTransactionDescription:
           type: string
         TransactionScheduleFinancialTransactionAmount:
-          type: number
+          type: string
         CorrespondenceInstanceReference:
-          type: object
+          type: string
         DateType:
           type: string
         Date:

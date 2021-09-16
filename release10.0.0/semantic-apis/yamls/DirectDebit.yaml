@@ -37,42 +37,12 @@ paths:
           $ref: '#/components/responses/TooManyRequestsError'
         500:
           $ref: '#/components/responses/InternalServerError'
-  /DirectDebit/{directdebitId}/Exchange:
+  /DirectDebit/{directdebitId}/Execute:
     put:
       tags:
       - CR - DirectDebitArrangement
       summary: EcCR Accept, verify, etc. aspects of Direct Debit Arrangement processing
       description: EcCR Accept, verify, etc. aspects of Direct Debit Arrangement processing
-      operationId: Exchange
-      parameters:
-      - $ref: '#/components/parameters/DirectDebitID'
-      requestBody:
-        $ref: '#/components/requestBodies/DirectDebitArrangement'
-      responses:
-        200:
-          description: Success
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/DirectDebitArrangement'
-        400:
-          $ref: '#/components/responses/BadRequestError'
-        401:
-          $ref: '#/components/responses/UnauthorizedError'
-        403:
-          $ref: '#/components/responses/ForbiddenError'
-        404:
-          $ref: '#/components/responses/NotFoundError'
-        429:
-          $ref: '#/components/responses/TooManyRequestsError'
-        500:
-          $ref: '#/components/responses/InternalServerError'
-  /DirectDebit/{directdebitId}/Execute:
-    put:
-      tags:
-      - CR - DirectDebitArrangement
-      summary: ExCR Execute an available automated action for Direct Debit Arrangement
-      description: ExCR Execute an available automated action for Direct Debit Arrangement
       operationId: Execute
       parameters:
       - $ref: '#/components/parameters/DirectDebitID'
@@ -245,13 +215,13 @@ paths:
           $ref: '#/components/responses/TooManyRequestsError'
         500:
           $ref: '#/components/responses/InternalServerError'
-  /DirectDebit/{directdebitId}/FundsAvailableCheck/{fundsavailablecheckId}/Exchange:
+  /DirectDebit/{directdebitId}/FundsAvailableCheck/{fundsavailablecheckId}/Execute:
     put:
       tags:
       - BQ - FundsAvailableCheck
       summary: EcBQ Accept, verify, etc. aspects of Funds Available Check processing
       description: EcBQ Accept, verify, etc. aspects of Funds Available Check processing
-      operationId: ExchangeFundsAvailableCheck
+      operationId: ExecuteFundsAvailableCheck
       parameters:
       - $ref: '#/components/parameters/DirectDebitID'
       - $ref: '#/components/parameters/FundsAvailableCheckID'
@@ -276,13 +246,13 @@ paths:
           $ref: '#/components/responses/TooManyRequestsError'
         500:
           $ref: '#/components/responses/InternalServerError'
-  /DirectDebit/{directdebitId}/PaymentInitiation/{paymentinitiationId}/Exchange:
+  /DirectDebit/{directdebitId}/PaymentInitiation/{paymentinitiationId}/Execute:
     put:
       tags:
       - BQ - PaymentInitiation
       summary: EcBQ Accept, verify, etc. aspects of Payment Initiation processing
       description: EcBQ Accept, verify, etc. aspects of Payment Initiation processing
-      operationId: ExchangePaymentInitiation
+      operationId: ExecutePaymentInitiation
       parameters:
       - $ref: '#/components/parameters/DirectDebitID'
       - $ref: '#/components/parameters/PaymentInitiationID'
@@ -307,13 +277,13 @@ paths:
           $ref: '#/components/responses/TooManyRequestsError'
         500:
           $ref: '#/components/responses/InternalServerError'
-  /DirectDebit/{directdebitId}/VerifyMandate/{verifymandateId}/Exchange:
+  /DirectDebit/{directdebitId}/VerifyMandate/{verifymandateId}/Execute:
     put:
       tags:
       - BQ - VerifyMandate
       summary: EcBQ Accept, verify, etc. aspects of Verify Mandate processing
       description: EcBQ Accept, verify, etc. aspects of Verify Mandate processing
-      operationId: ExchangeVerifyMandate
+      operationId: ExecuteVerifyMandate
       parameters:
       - $ref: '#/components/parameters/DirectDebitID'
       - $ref: '#/components/parameters/VerifyMandateID'
@@ -622,7 +592,7 @@ components:
         DirectDebitArrangementType:
           type: string
         DirectDebitArrangementReference:
-          type: object
+          type: string
         DirectDebitArrangementSchedule:
           type: string
         DirectDebitArrangementStatus:
@@ -630,7 +600,7 @@ components:
         DirectDebitArrangementCurrency:
           type: string
         DirectDebitArrangementRegulationReference:
-          type: object
+          type: string
         DirectDebitArrangementRegulationType:
           type: string
         DirectDebitArrangementJurisdiction:
@@ -640,7 +610,7 @@ components:
         DirectDebitArrangementAccountType:
           type: string
         DirectDebitArrangementAccountReference:
-          type: object
+          type: string
     Reporting:
       type: object
       properties:
@@ -654,7 +624,7 @@ components:
         ReportingFeatureSchedule:
           type: string
         BusinessService:
-          type: object
+          type: string
         ReportingPostconditions:
           type: string
         ReportingServiceType:
@@ -680,7 +650,7 @@ components:
         FundsAvailableCheckFeatureSchedule:
           type: string
         FundsAvailableCheck:
-          type: object
+          type: string
         FundsAvailableCheckPostconditions:
           type: string
         FundsAvailableCheckFundsAvailableCheckServiceType:
@@ -706,7 +676,7 @@ components:
         PaymentInitiationFeatureSchedule:
           type: string
         DirectDebitPaymentInitiation:
-          type: object
+          type: string
         PaymentInitiationPostconditions:
           type: string
         PaymentInitiationDirectDebitPaymentInitiationServiceType:
@@ -718,39 +688,6 @@ components:
         PaymentInitiationDirectDebitPaymentInitiationServiceWorkProduct:
           type: string
         PaymentInitiationDirectDebitPaymentInitiationServiceName:
-          type: string
-    DirectDebitOutcome:
-      type: object
-      properties:
-        DirectDebitFinancialFacility:
-          type: string
-        DirectDebitWorkProduct:
-          type: string
-    PaymentTracking:
-      type: object
-      properties:
-        ? >-
-          Fulfillanyscheduledandad-hocobligationsunderaservicearrangement,mosttypicallyforafinancialproductorfacilitywithinDirectDebit.
-
-          Example:Performthescheduled(e.g.statements,standingorders)andad-hoc/requested(e.g.balanceinquiries,fundtransfers)fulfillmenttasksforacustomercurrentaccountfacility.
-        : type: string
-        PaymentTrackingPreconditions:
-          type: string
-        PaymentTrackingFeatureSchedule:
-          type: string
-        DirectDebitPaymentTracking:
-          type: object
-        PaymentTrackingPostconditions:
-          type: string
-        PaymentTrackingDirectDebitPaymentTrackingServiceType:
-          type: string
-        PaymentTrackingDirectDebitPaymentTrackingServiceDescription:
-          type: string
-        PaymentTrackingDirectDebitPaymentTrackingServiceInputsandOuputs:
-          type: string
-        PaymentTrackingDirectDebitPaymentTrackingServiceWorkProduct:
-          type: string
-        PaymentTrackingDirectDebitPaymentTrackingServiceName:
           type: string
     VerifyMandate:
       type: object
@@ -765,7 +702,7 @@ components:
         VerifyMandateFeatureSchedule:
           type: string
         DirectDebitMandateCheck:
-          type: object
+          type: string
         VerifyMandatePostconditions:
           type: string
         VerifyMandateDirectDebitMandateCheckServiceType:
@@ -777,6 +714,39 @@ components:
         VerifyMandateDirectDebitMandateCheckServiceWorkProduct:
           type: string
         VerifyMandateDirectDebitMandateCheckServiceName:
+          type: string
+    PaymentTracking:
+      type: object
+      properties:
+        ? >-
+          Fulfillanyscheduledandad-hocobligationsunderaservicearrangement,mosttypicallyforafinancialproductorfacilitywithinDirectDebit.
+
+          Example:Performthescheduled(e.g.statements,standingorders)andad-hoc/requested(e.g.balanceinquiries,fundtransfers)fulfillmenttasksforacustomercurrentaccountfacility.
+        : type: string
+        PaymentTrackingPreconditions:
+          type: string
+        PaymentTrackingFeatureSchedule:
+          type: string
+        DirectDebitPaymentTracking:
+          type: string
+        PaymentTrackingPostconditions:
+          type: string
+        PaymentTrackingDirectDebitPaymentTrackingServiceType:
+          type: string
+        PaymentTrackingDirectDebitPaymentTrackingServiceDescription:
+          type: string
+        PaymentTrackingDirectDebitPaymentTrackingServiceInputsandOuputs:
+          type: string
+        PaymentTrackingDirectDebitPaymentTrackingServiceWorkProduct:
+          type: string
+        PaymentTrackingDirectDebitPaymentTrackingServiceName:
+          type: string
+    DirectDebitOutcome:
+      type: object
+      properties:
+        DirectDebitFinancialFacility:
+          type: string
+        DirectDebitWorkProduct:
           type: string
     HTTPError:
       type: object
@@ -820,8 +790,8 @@ components:
       explode: false
       schema:
         type: string
-    DirectDebitOutcomeID:
-      name: directdebitoutcomeId
+    VerifyMandateID:
+      name: verifymandateId
       in: path
       required: true
       style: simple
@@ -836,8 +806,8 @@ components:
       explode: false
       schema:
         type: string
-    VerifyMandateID:
-      name: verifymandateId
+    DirectDebitOutcomeID:
+      name: directdebitoutcomeId
       in: path
       required: true
       style: simple

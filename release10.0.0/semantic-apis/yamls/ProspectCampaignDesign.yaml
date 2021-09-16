@@ -226,9 +226,9 @@ components:
         ProspectCampaignPerformanceRecord:
           type: string
         ProspectCampaignProcedureInstanceReference:
-          type: object
+          type: string
         EmployeeOrBusinessUnitReference:
-          type: object
+          type: string
         ProspectCampaignProcedureSet-up:
           type: string
         ProspectCampaignProcedureVersionNumber:

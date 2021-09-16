@@ -218,23 +218,23 @@ components:
         ConsumerSecuritiesOrderInstructionType:
           type: string
         CustomerReference:
-          type: object
+          type: string
         EmployeeOrBusinessUnitReference:
-          type: object
+          type: string
         InvestmentPortfolioInstanceReference:
-          type: object
+          type: string
         ConsumerSecuritiesOrderProcessingInstruction:
           type: string
         DocumentDirectoryEntryInstanceReference:
-          type: object
+          type: string
         CorrespondenceInstanceReference:
-          type: object
+          type: string
         ConsumerSecuritiesOrderTransaction:
           type: string
         InvestmentAccountArrangementInstanceReference:
-          type: object
+          type: string
         CurrentAccountArrangementInstanceReference:
-          type: object
+          type: string
         MarketOrderType:
           type: string
         SecurityType:
@@ -250,10 +250,14 @@ components:
       properties:
         ConsumerSecuritiesOrderTransactionFundingCheckResult:
           type: string
-    Quote:
+    OrderInitiation:
       type: object
       properties:
-        SecuritiesPrice:
+        ConsumerSecuritiesOrderTransactionInstanceReference:
+          type: string
+        ConsumerSecuritiesOrderTransactionInstanceStatus:
+          type: string
+        ConsumerSecuritiesOrderInitiationTaskResult:
           type: string
     Compliance:
       type: object
@@ -264,14 +268,10 @@ components:
           type: string
         ConsumerSecuritiesOrderTransactionComplianceTaskResult:
           type: string
-    OrderInitiation:
+    Quote:
       type: object
       properties:
-        ConsumerSecuritiesOrderTransactionInstanceReference:
-          type: object
-        ConsumerSecuritiesOrderTransactionInstanceStatus:
-          type: string
-        ConsumerSecuritiesOrderInitiationTaskResult:
+        SecuritiesPrice:
           type: string
     HTTPError:
       type: object
@@ -455,8 +455,8 @@ components:
       explode: false
       schema:
         type: string
-    QuoteID:
-      name: quoteId
+    OrderInitiationID:
+      name: orderinitiationId
       in: path
       required: true
       style: simple
@@ -471,8 +471,8 @@ components:
       explode: false
       schema:
         type: string
-    OrderInitiationID:
-      name: orderinitiationId
+    QuoteID:
+      name: quoteId
       in: path
       required: true
       style: simple
