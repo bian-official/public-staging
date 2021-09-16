@@ -278,11 +278,8 @@ components:
     GlobalStandardSpecification:
       type: object
       properties:
-        ? >-
-          Createandmaintainadesignforaprocedure,productOrservicemodelorothersuchentitywithinPublicReferenceDataManagement.
-
-          Example:Createandmaintainproductdesignsandanalyticalmodels.
-        : type: string
+        '':
+          type: string
         GlobalStandardSpecificationParameterType:
           type: string
         GlobalStandardSpecificationSelectedOption:
@@ -313,11 +310,8 @@ components:
     GlobalReferenceData:
       type: object
       properties:
-        ? >-
-          Createandmaintainadesignforaprocedure,product/servicemodelorothersuchentitywithinPublicReferenceDataManagement.
-
-          Example:Createandmaintainproductdesignsandanalyticalmodels.
-        : type: string
+        '':
+          type: string
         GlobalReferenceDataPreconditions:
           type: string
         GlobalReferenceDataSpecificationSchedule:

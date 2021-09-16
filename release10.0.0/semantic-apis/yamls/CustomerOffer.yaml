@@ -819,7 +819,7 @@ components:
     CustomerOfferProcedure:
       type: object
       properties:
-        Thecustomerofferprocedurerecord,combinestheresultofallunderlyingworksteps:
+        '':
           type: string
         CustomerReference:
           type: string
@@ -855,11 +855,8 @@ components:
     FacilityApplication:
       type: object
       properties:
-        ? >+
-          Informationabouttheselectedproductfeatures/options,scheduleandagreedpricingandfees/penaltiesintheproductapplication
-
-
-        : type: string
+        '':
+          type: string
         FacilityOption:
           type: string
         FacilityOptionDescription:
@@ -879,9 +876,8 @@ components:
     Underwriting:
       type: object
       properties:
-        ? >
-          Handlestheunderwritingdecisionwhenneeded
-        : type: string
+        '':
+          type: string
         CustomerIncomeStatement:
           type: string
         CustomerDebtStatement:
@@ -893,9 +889,8 @@ components:
     Compliance:
       type: object
       properties:
-        ? >
-          Handlesanyregulatorycompliancechecksandreportingrequirements
-        : type: string
+        '':
+          type: string
         RegulatoryComplianceCheckType:
           type: string
         RegulatoryComplianceCheckRequirement:
@@ -909,9 +904,8 @@ components:
     Credit:
       type: object
       properties:
-        ? >
-          Handlestherequiredcreditchecksandassessments
-        : type: string
+        '':
+          type: string
         CustomerCreditRating:
           type: string
         CreditAuthorizationDecisionReference:
@@ -921,9 +915,8 @@ components:
     Audit:
       type: object
       properties:
-        ? >
-          Handlesanyinternalauditcompliancechecksandreportingrequirements
-        : type: string
+        '':
+          type: string
         GuidelineComplianceCheckType:
           type: string
         GuidelineComplianceCheckRequirement:
@@ -937,9 +930,8 @@ components:
     Disclosures:
       type: object
       properties:
-        ? >
-          Handlestheissuanceandacceptanceofrequireddisclosures
-        : type: string
+        '':
+          type: string
         DisclosureType:
           type: string
         DisclosureText/Description:
@@ -951,17 +943,15 @@ components:
     ProductInitialization:
       type: object
       properties:
-        ? >
-          Atthesuccessfulcompletionofrequiredtasks,theproductisinitialized
-        : type: string
+        '':
+          type: string
         ProductInstanceReference:
           type: string
     Collateral:
       type: object
       properties:
-        ? >
-          Handlingtheevaluationandallocationofcollateral
-        : type: string
+        '':
+          type: string
         CollateralRequirement:
           type: string
         CollateralEarmarkReference:
@@ -971,7 +961,7 @@ components:
     Agreement:
       type: object
       properties:
-        Handlestheset-upofthemasteragreementandproductspecifictermsandconditions:
+        '':
           type: string
         CustomerAgreementInstanceReference:
           type: string
@@ -980,9 +970,8 @@ components:
     Booking:
       type: object
       properties:
-        ? >
-          Handlesthebookingoftheassetorliabilitytotheappropriateunit
-        : type: string
+        '':
+          type: string
         BusinessUnitReference:
           type: string
         Asset/LiabilityType:

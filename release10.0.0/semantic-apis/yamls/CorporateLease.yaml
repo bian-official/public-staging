@@ -555,11 +555,8 @@ components:
     CorporateLeaseArrangement:
       type: object
       properties:
-        ? >-
-          Fulfillanyscheduledandad-hocobligationsunderaservicearrangement,mosttypicallyforafinancialproductorfacilitywithinCorporateLease.
-
-          Example:Performthescheduled(e.g.statements,standingorders)andad-hocOrrequested(e.g.balanceinquiries,fundtransfers)fulfillmenttasksforacustomercurrentaccountfacility.
-        : type: string
+        '':
+          type: string
         CorporateLeaseArrangementParameterType:
           type: string
         CorporateLeaseArrangementSelectedOption:
@@ -589,11 +586,8 @@ components:
     Fulfill:
       type: object
       properties:
-        ? >-
-          Fulfillanyscheduledandad-hocobligationsunderaservicearrangement,mosttypicallyforafinancialproductorfacilitywithinCorporateLease.
-
-          Example:Performthescheduled(e.g.statements,standingorders)andad-hoc/requested(e.g.balanceinquiries,fundtransfers)fulfillmenttasksforacustomercurrentaccountfacility.
-        : type: string
+        '':
+          type: string
         FulfillPreconditions:
           type: string
         FulfillFeatureSchedule:
@@ -615,11 +609,8 @@ components:
     Administer:
       type: object
       properties:
-        ? >-
-          Fulfillanyscheduledandad-hocobligationsunderaservicearrangement,mosttypicallyforafinancialproductorfacilitywithinCorporateLease.
-
-          Example:Performthescheduled(e.g.statements,standingorders)andad-hoc/requested(e.g.balanceinquiries,fundtransfers)fulfillmenttasksforacustomercurrentaccountfacility.
-        : type: string
+        '':
+          type: string
         AdministerPreconditions:
           type: string
         AdministerFeatureSchedule:

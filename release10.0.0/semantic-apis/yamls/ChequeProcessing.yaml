@@ -368,11 +368,8 @@ components:
     ChequeProcessingOperatingSession:
       type: object
       properties:
-        ? >-
-          OperateequipmentandOroralargelyautomatedfacilitywithinChequeProcessing.
-
-          Example:Operatethebank'sinternalintranetfacility.
-        : type: string
+        '':
+          type: string
         ChequeProcessingOperatingSessionSchedule:
           type: string
         ChequeProcessingOperatingSessionStatus:
@@ -394,11 +391,8 @@ components:
     CancelledChequeHandling:
       type: object
       properties:
-        ? >-
-          Operateequipmentand/oralargelyautomatedfacilitywithinChequeProcessing.
-
-          Example:Operatethebank'sinternalintranetfacility.
-        : type: string
+        '':
+          type: string
         CancelledChequeHandlingPreconditions:
           type: string
         CancelledChequeHandlingFunctionSchedule:
@@ -425,11 +419,8 @@ components:
     ChequeExtraction:
       type: object
       properties:
-        ? >-
-          Operateequipmentand/oralargelyautomatedfacilitywithinChequeProcessing.
-
-          Example:Operatethebank'sinternalintranetfacility.
-        : type: string
+        '':
+          type: string
         ChequeExtractionPreconditions:
           type: string
         ChequeExtractionFunctionSchedule:
@@ -449,11 +440,8 @@ components:
     FinancialTransactionInitiation:
       type: object
       properties:
-        ? >-
-          Operateequipmentand/oralargelyautomatedfacilitywithinChequeProcessing.
-
-          Example:Operatethebank'sinternalintranetfacility.
-        : type: string
+        '':
+          type: string
         FinancialTransactionInitiationPreconditions:
           type: string
         FinancialTransactionInitiationFunctionSchedule:

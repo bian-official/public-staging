@@ -491,11 +491,8 @@ components:
     RewardPointsLog:
       type: object
       properties:
-        ? >-
-          Maintainalogoftransactionsoractivity,typicallyafinancialaccountOrjournaloralogofactivitytosupportbehavioralanalysiswithinRewardPointsAccount.
-
-          Examples:Maintainafinancialjournaloftransactionsprocessedforaproductorserviceandmaintainalogofcustomereventsandactivityforsubsequentanalysis.
-        : type: string
+        '':
+          type: string
         RewardPointsLogParameterType:
           type: string
         RewardPointsLogSelectedOption:
@@ -525,11 +522,8 @@ components:
     Expiration:
       type: object
       properties:
-        ? >-
-          Maintainalogoftransactionsoractivity,typicallyafinancialaccount/journaloralogofactivitytosupportbehavioralanalysiswithinRewardPointsAccount.
-
-          Examples:Maintainafinancialjournaloftransactionsprocessedforaproductorserviceandmaintainalogofcustomereventsandactivityforsubsequentanalysis.
-        : type: string
+        '':
+          type: string
         ExpirationPreconditions:
           type: string
         ExpirationEventSchedule:
@@ -551,11 +545,8 @@ components:
     Capture:
       type: object
       properties:
-        ? >-
-          Maintainalogoftransactionsoractivity,typicallyafinancialaccount/journaloralogofactivitytosupportbehavioralanalysiswithinRewardPointsAccount.
-
-          Examples:Maintainafinancialjournaloftransactionsprocessedforaproductorserviceandmaintainalogofcustomereventsandactivityforsubsequentanalysis.
-        : type: string
+        '':
+          type: string
         CapturePreconditions:
           type: string
         CaptureEventSchedule:

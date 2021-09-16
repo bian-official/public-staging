@@ -828,11 +828,8 @@ components:
     BranchLocationManagementPlan:
       type: object
       properties:
-        ? >-
-          Overseetheworkingofabusinessunit,assignwork,manageagainstaplanandtroubleshootissueswithinBranchLocationManagement.
-
-          Example:Managethedaytodayactivitiesatabankbranchlocation.
-        : type: string
+        '':
+          type: string
         BranchLocationManagementPlanType:
           type: string
         BranchLocationManagementPlanReference:
@@ -850,11 +847,8 @@ components:
     ProductandServicePlanning:
       type: object
       properties:
-        ? >-
-          Overseetheworkingofabusinessunit,assignwork,manageagainstaplanandtroubleshootissueswithinBranchLocationManagement.
-
-          Example:Managethedaytodayactivitiesatabankbranchlocation.
-        : type: string
+        '':
+          type: string
         ProductandServicePlanningPreconditions:
           type: string
         ProductandServicePlanningBusinessUnit/EmployeeReference:
@@ -878,11 +872,8 @@ components:
     CustomerLiaison:
       type: object
       properties:
-        ? >-
-          Overseetheworkingofabusinessunit,assignwork,manageagainstaplanandtroubleshootissueswithinBranchLocationManagement.
-
-          Example:Managethedaytodayactivitiesatabankbranchlocation.
-        : type: string
+        '':
+          type: string
         CustomerLiaisonPreconditions:
           type: string
         CustomerLiaisonBusinessUnit/EmployeeReference:
@@ -906,11 +897,8 @@ components:
     Troubleshooting:
       type: object
       properties:
-        ? >-
-          Overseetheworkingofabusinessunit,assignwork,manageagainstaplanandtroubleshootissueswithinBranchLocationManagement.
-
-          Example:Managethedaytodayactivitiesatabankbranchlocation.
-        : type: string
+        '':
+          type: string
         TroubleshootingPreconditions:
           type: string
         TroubleshootingBusinessUnit/EmployeeReference:
@@ -934,11 +922,8 @@ components:
     StaffandLocationPlanning:
       type: object
       properties:
-        ? >-
-          Overseetheworkingofabusinessunit,assignwork,manageagainstaplanandtroubleshootissueswithinBranchLocationManagement.
-
-          Example:Managethedaytodayactivitiesatabankbranchlocation.
-        : type: string
+        '':
+          type: string
         StaffandLocationPlanningPreconditions:
           type: string
         StaffandLocationPlanningBusinessUnit/EmployeeReference:

@@ -1456,11 +1456,8 @@ components:
     MerchandisingLoanArrangement:
       type: object
       properties:
-        ? >-
-          Fulfillanyscheduledandad-hocobligationsunderaservicearrangement,mosttypicallyforafinancialproductorfacilitywithinMerchandisingLoan.
-
-          Example:Performthescheduled(e.g.statements,standingorders)andad-hocOrrequested(e.g.balanceinquiries,fundtransfers)fulfillmenttasksforacustomercurrentaccountfacility.
-        : type: string
+        '':
+          type: string
         MerchandisingLoanArrangementParameterType:
           type: string
         MerchandisingLoanArrangementSelectedOption:
@@ -1492,11 +1489,8 @@ components:
     FinancialInstrument:
       type: object
       properties:
-        ? >-
-          Fulfillanyscheduledandad-hocobligationsunderaservicearrangement,mosttypicallyforafinancialproductorfacilitywithinMerchandisingLoan.
-
-          Example:Performthescheduled(e.g.statements,standingorders)andad-hoc/requested(e.g.balanceinquiries,fundtransfers)fulfillmenttasksforacustomercurrentaccountfacility.
-        : type: string
+        '':
+          type: string
         FinancialInstrumentPreconditions:
           type: string
         FinancialInstrumentFeatureSchedule:
@@ -1518,11 +1512,8 @@ components:
     FinancialAccounting:
       type: object
       properties:
-        ? >-
-          Fulfillanyscheduledandad-hocobligationsunderaservicearrangement,mosttypicallyforafinancialproductorfacilitywithinMerchandisingLoan.
-
-          Example:Performthescheduled(e.g.statements,standingorders)andad-hoc/requested(e.g.balanceinquiries,fundtransfers)fulfillmenttasksforacustomercurrentaccountfacility.
-        : type: string
+        '':
+          type: string
         FinancialAccountingPreconditions:
           type: string
         FinancialAccountingFeatureSchedule:
@@ -1544,11 +1535,8 @@ components:
     Deposits:
       type: object
       properties:
-        ? >-
-          Fulfillanyscheduledandad-hocobligationsunderaservicearrangement,mosttypicallyforafinancialproductorfacilitywithinMerchandisingLoan.
-
-          Example:Performthescheduled(e.g.statements,standingorders)andad-hoc/requested(e.g.balanceinquiries,fundtransfers)fulfillmenttasksforacustomercurrentaccountfacility.
-        : type: string
+        '':
+          type: string
         DepositsPreconditions:
           type: string
         DepositsFeatureSchedule:
@@ -1570,11 +1558,8 @@ components:
     IssuedDevice:
       type: object
       properties:
-        ? >-
-          Fulfillanyscheduledandad-hocobligationsunderaservicearrangement,mosttypicallyforafinancialproductorfacilitywithinMerchandisingLoan.
-
-          Example:Performthescheduled(e.g.statements,standingorders)andad-hoc/requested(e.g.balanceinquiries,fundtransfers)fulfillmenttasksforacustomercurrentaccountfacility.
-        : type: string
+        '':
+          type: string
         IssuedDevicePreconditions:
           type: string
         IssuedDeviceFeatureSchedule:
@@ -1596,11 +1581,8 @@ components:
     Sweep:
       type: object
       properties:
-        ? >-
-          Fulfillanyscheduledandad-hocobligationsunderaservicearrangement,mosttypicallyforafinancialproductorfacilitywithinMerchandisingLoan.
-
-          Example:Performthescheduled(e.g.statements,standingorders)andad-hoc/requested(e.g.balanceinquiries,fundtransfers)fulfillmenttasksforacustomercurrentaccountfacility.
-        : type: string
+        '':
+          type: string
         SweepPreconditions:
           type: string
         SweepFeatureSchedule:
@@ -1622,11 +1604,8 @@ components:
     Withdrawals:
       type: object
       properties:
-        ? >-
-          Fulfillanyscheduledandad-hocobligationsunderaservicearrangement,mosttypicallyforafinancialproductorfacilitywithinMerchandisingLoan.
-
-          Example:Performthescheduled(e.g.statements,standingorders)andad-hoc/requested(e.g.balanceinquiries,fundtransfers)fulfillmenttasksforacustomercurrentaccountfacility.
-        : type: string
+        '':
+          type: string
         WithdrawalsPreconditions:
           type: string
         WithdrawalsFeatureSchedule:
@@ -1648,11 +1627,8 @@ components:
     Lien:
       type: object
       properties:
-        ? >-
-          Fulfillanyscheduledandad-hocobligationsunderaservicearrangement,mosttypicallyforafinancialproductorfacilitywithinMerchandisingLoan.
-
-          Example:Performthescheduled(e.g.statements,standingorders)andad-hoc/requested(e.g.balanceinquiries,fundtransfers)fulfillmenttasksforacustomercurrentaccountfacility.
-        : type: string
+        '':
+          type: string
         LienPreconditions:
           type: string
         LienFeatureSchedule:
@@ -1674,11 +1650,8 @@ components:
     Collateral:
       type: object
       properties:
-        ? >-
-          Fulfillanyscheduledandad-hocobligationsunderaservicearrangement,mosttypicallyforafinancialproductorfacilitywithinMerchandisingLoan.
-
-          Example:Performthescheduled(e.g.statements,standingorders)andad-hoc/requested(e.g.balanceinquiries,fundtransfers)fulfillmenttasksforacustomercurrentaccountfacility.
-        : type: string
+        '':
+          type: string
         CollateralPreconditions:
           type: string
         CollateralFeatureSchedule:
@@ -1700,11 +1673,8 @@ components:
     Interest:
       type: object
       properties:
-        ? >-
-          Fulfillanyscheduledandad-hocobligationsunderaservicearrangement,mosttypicallyforafinancialproductorfacilitywithinMerchandisingLoan.
-
-          Example:Performthescheduled(e.g.statements,standingorders)andad-hoc/requested(e.g.balanceinquiries,fundtransfers)fulfillmenttasksforacustomercurrentaccountfacility.
-        : type: string
+        '':
+          type: string
         InterestPreconditions:
           type: string
         InterestFeatureSchedule:
@@ -1726,11 +1696,8 @@ components:
     Payments:
       type: object
       properties:
-        ? >-
-          Fulfillanyscheduledandad-hocobligationsunderaservicearrangement,mosttypicallyforafinancialproductorfacilitywithinMerchandisingLoan.
-
-          Example:Performthescheduled(e.g.statements,standingorders)andad-hoc/requested(e.g.balanceinquiries,fundtransfers)fulfillmenttasksforacustomercurrentaccountfacility.
-        : type: string
+        '':
+          type: string
         PaymentsPreconditions:
           type: string
         PaymentsFeatureSchedule:
@@ -1752,11 +1719,8 @@ components:
     Billing:
       type: object
       properties:
-        ? >-
-          Fulfillanyscheduledandad-hocobligationsunderaservicearrangement,mosttypicallyforafinancialproductorfacilitywithinMerchandisingLoan.
-
-          Example:Performthescheduled(e.g.statements,standingorders)andad-hoc/requested(e.g.balanceinquiries,fundtransfers)fulfillmenttasksforacustomercurrentaccountfacility.
-        : type: string
+        '':
+          type: string
         BillingPreconditions:
           type: string
         BillingFeatureSchedule:
@@ -1785,11 +1749,8 @@ components:
     Fees:
       type: object
       properties:
-        ? >-
-          Fulfillanyscheduledandad-hocobligationsunderaservicearrangement,mosttypicallyforafinancialproductorfacilitywithinMerchandisingLoan.
-
-          Example:Performthescheduled(e.g.statements,standingorders)andad-hoc/requested(e.g.balanceinquiries,fundtransfers)fulfillmenttasksforacustomercurrentaccountfacility.
-        : type: string
+        '':
+          type: string
         FeesPreconditions:
           type: string
         FeesFeatureSchedule:

@@ -372,11 +372,8 @@ components:
     BranchCashAllocation:
       type: object
       properties:
-        ? >-
-          MaintainaninventoryorholdingofsomeresourceandmakeassignmentsOrallocationsasrequestedwithinBranchCurrencyManagement.
-
-          Example:Tracktheinventoryandadministerthedistributionofcentralcashholdingsthroughoutthebranch&ATMnetwork.
-        : type: string
+        '':
+          type: string
         BranchCashAllocationParameterType:
           type: string
         BranchCashAllocationSelectedOption:
@@ -421,8 +418,8 @@ components:
     InventoryAllocation:
       type: object
       properties:
-        ? Criteriagoverningcashtopositionallocationbasedonavailablecashholdings,historicalvolumes/activityandplannedtelleravailabilityschedules
-        : type: string
+        '':
+          type: string
         InventoryAllocationPreconditions:
           type: string
         InventoryAllocationAllocationSchedule:

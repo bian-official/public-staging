@@ -7,23 +7,23 @@ servers:
 - description: SwaggerHub API Auto Mocking
   url: https://virtserver.swaggerhub.com/B154/PositionManagement/10.0.0
 paths:
-  /PositionManagement/{positionmanagementId}/Initiate:
-    get:
+  /PositionManagement/Initiate:
+    post:
       tags:
       - CR - FinancialPositionState
       summary: InCR Initialize a monitored financial position
       description: InCR Initialize a monitored financial position
       operationId: Initiate
-      parameters:
-      - $ref: '#/components/parameters/PositionManagementID'
+      parameters: []
+      requestBody:
+        $ref: '#/components/requestBodies/FinancialPositionState'
       responses:
         200:
           description: Success
           content:
             application/json:
               schema:
-                type: boolean
-                example: true
+                $ref: '#/components/schemas/FinancialPositionState'
         400:
           $ref: '#/components/responses/BadRequestError'
         401:
@@ -37,7 +37,7 @@ paths:
         500:
           $ref: '#/components/responses/InternalServerError'
   /PositionManagement/{positionmanagementId}/Update:
-    get:
+    put:
       tags:
       - CR - FinancialPositionState
       summary: UpCR Update the settings and notification arrangements for a position
@@ -45,14 +45,15 @@ paths:
       operationId: Update
       parameters:
       - $ref: '#/components/parameters/PositionManagementID'
+      requestBody:
+        $ref: '#/components/requestBodies/FinancialPositionState'
       responses:
         200:
           description: Success
           content:
             application/json:
               schema:
-                type: boolean
-                example: true
+                $ref: '#/components/schemas/FinancialPositionState'
         400:
           $ref: '#/components/responses/BadRequestError'
         401:
@@ -66,7 +67,7 @@ paths:
         500:
           $ref: '#/components/responses/InternalServerError'
   /PositionManagement/{positionmanagementId}/Request:
-    get:
+    put:
       tags:
       - CR - FinancialPositionState
       summary: ReCR Get details and the current value of a monitored position
@@ -80,8 +81,7 @@ paths:
           content:
             application/json:
               schema:
-                type: boolean
-                example: true
+                $ref: '#/components/schemas/FinancialPositionState'
         400:
           $ref: '#/components/responses/BadRequestError'
         401:
@@ -372,6 +372,12 @@ components:
       schema:
         type: string
   requestBodies:
+    FinancialPositionState:
+      required: true
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/FinancialPositionState'
     TrialTransaction:
       required: true
       content:

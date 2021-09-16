@@ -645,11 +645,8 @@ components:
     ProductCombinationArrangement:
       type: object
       properties:
-        ? >-
-          Fulfillanyscheduledandad-hocobligationsunderaservicearrangement,mosttypicallyforafinancialproductorfacilitywithinProductCombination.
-
-          Example:Performthescheduled(e.g.statements,standingorders)andad-hocOrrequested(e.g.balanceinquiries,fundtransfers)fulfillmenttasksforacustomercurrentaccountfacility.
-        : type: string
+        '':
+          type: string
         ProductCombinationArrangementParameterType:
           type: string
         ProductCombinationArrangementSelectedOption:
@@ -679,11 +676,8 @@ components:
     TransferPricing:
       type: object
       properties:
-        ? >-
-          Fulfillanyscheduledandad-hocobligationsunderaservicearrangement,mosttypicallyforafinancialproductorfacilitywithinProductCombination.
-
-          Example:Performthescheduled(e.g.statements,standingorders)andad-hoc/requested(e.g.balanceinquiries,fundtransfers)fulfillmenttasksforacustomercurrentaccountfacility.
-        : type: string
+        '':
+          type: string
         TransferPricingPreconditions:
           type: string
         TransferPricingFeatureSchedule:
@@ -712,11 +706,8 @@ components:
     Fulfillment:
       type: object
       properties:
-        ? >-
-          Fulfillanyscheduledandad-hocobligationsunderaservicearrangement,mosttypicallyforafinancialproductorfacilitywithinProductCombination.
-
-          Example:Performthescheduled(e.g.statements,standingorders)andad-hoc/requested(e.g.balanceinquiries,fundtransfers)fulfillmenttasksforacustomercurrentaccountfacility.
-        : type: string
+        '':
+          type: string
         FulfillmentPreconditions:
           type: string
         FulfillmentFeatureSchedule:
@@ -738,11 +729,8 @@ components:
     EmbeddedProductControl:
       type: object
       properties:
-        ? >-
-          Fulfillanyscheduledandad-hocobligationsunderaservicearrangement,mosttypicallyforafinancialproductorfacilitywithinProductCombination.
-
-          Example:Performthescheduled(e.g.statements,standingorders)andad-hoc/requested(e.g.balanceinquiries,fundtransfers)fulfillmenttasksforacustomercurrentaccountfacility.
-        : type: string
+        '':
+          type: string
         EmbeddedProductControlPreconditions:
           type: string
         EmbeddedProductControlFeatureSchedule:

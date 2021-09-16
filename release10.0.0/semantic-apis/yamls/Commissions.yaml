@@ -522,11 +522,8 @@ components:
     CommissionTransaction:
       type: object
       properties:
-        ? >-
-          Executeawell-boundedfinancialtransactionOrtask,typicallyinvolvinglargelyautomatedOrstructuredfulfillmentprocessingwithinCommissions.
-
-          Example:Executeapaymenttransaction.
-        : type: string
+        '':
+          type: string
         CommissionTransactionParameterType:
           type: string
         CommissionTransactionSelectedOption:
@@ -542,11 +539,8 @@ components:
     Check:
       type: object
       properties:
-        ? >-
-          Executeawell-boundedfinancialtransaction/task,typicallyinvolvinglargelyautomated/structuredfulfillmentprocessingwithinCommissions.
-
-          Example:Executeapaymenttransaction.
-        : type: string
+        '':
+          type: string
         CheckPreconditions:
           type: string
         CheckTaskSchedule:
@@ -568,11 +562,8 @@ components:
     Calculation:
       type: object
       properties:
-        ? >-
-          Executeawell-boundedfinancialtransaction/task,typicallyinvolvinglargelyautomated/structuredfulfillmentprocessingwithinCommissions.
-
-          Example:Executeapaymenttransaction.
-        : type: string
+        '':
+          type: string
         CalculationPreconditions:
           type: string
         CalculationTaskSchedule:
@@ -594,11 +585,8 @@ components:
     Payment:
       type: object
       properties:
-        ? >-
-          Executeawell-boundedfinancialtransaction/task,typicallyinvolvinglargelyautomated/structuredfulfillmentprocessingwithinCommissions.
-
-          Example:Executeapaymenttransaction.
-        : type: string
+        '':
+          type: string
         PaymentPreconditions:
           type: string
         PaymentTaskSchedule:

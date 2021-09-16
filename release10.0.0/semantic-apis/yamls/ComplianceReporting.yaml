@@ -555,11 +555,8 @@ components:
     ComplianceReportingAdministrativePlan:
       type: object
       properties:
-        ? >-
-          Handleandassignthedaytodayactivities,capturetime,costsandincomeforanoperationalunitwithinComplianceReporting.
-
-          Example:Administerthetimereportingandbillingforthespecialistsalessupportteam.
-        : type: string
+        '':
+          type: string
         ComplianceReportingAdministrativePlanBudgetType:
           type: string
         ComplianceReportingAdministrativePlanBudget:
@@ -584,11 +581,8 @@ components:
     ComplianceAssessment:
       type: object
       properties:
-        ? >-
-          Handleandassignthedaytodayactivities,capturetime,costsandincomeforanoperationalunitwithinComplianceReporting.
-
-          Example:Administerthetimereportingandbillingforthespecialistsalessupportteam.
-        : type: string
+        '':
+          type: string
         ComplianceAssessmentPreconditions:
           type: string
         ComplianceAssessmentBusinessUnit/EmployeeReference:
@@ -612,11 +606,8 @@ components:
     Remediation:
       type: object
       properties:
-        ? >-
-          Handleandassignthedaytodayactivities,capturetime,costsandincomeforanoperationalunitwithinComplianceReporting.
-
-          Example:Administerthetimereportingandbillingforthespecialistsalessupportteam.
-        : type: string
+        '':
+          type: string
         RemediationPreconditions:
           type: string
         RemediationBusinessUnit/EmployeeReference:
@@ -640,11 +631,8 @@ components:
     Consolidation:
       type: object
       properties:
-        ? >-
-          Handleandassignthedaytodayactivities,capturetime,costsandincomeforanoperationalunitwithinComplianceReporting.
-
-          Example:Administerthetimereportingandbillingforthespecialistsalessupportteam.
-        : type: string
+        '':
+          type: string
         ConsolidationPreconditions:
           type: string
         ConsolidationBusinessUnit/EmployeeReference:

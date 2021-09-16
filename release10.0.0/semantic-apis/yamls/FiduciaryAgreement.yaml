@@ -612,11 +612,8 @@ components:
     FiduciaryRelationshipArrangement:
       type: object
       properties:
-        ? >-
-          Fulfillanyscheduledandad-hocobligationsunderaservicearrangement,mosttypicallyforafinancialproductorfacilitywithinFiduciaryAgreement.
-
-          Example:Performthescheduled(e.g.statements,standingorders)andad-hocOrrequested(e.g.balanceinquiries,fundtransfers)fulfillmenttasksforacustomercurrentaccountfacility.
-        : type: string
+        '':
+          type: string
         FiduciaryRelationshipArrangementParameterType:
           type: string
         FiduciaryRelationshipArrangementSelectedOption:
@@ -646,11 +643,8 @@ components:
     Fulfillment:
       type: object
       properties:
-        ? >-
-          Fulfillanyscheduledandad-hocobligationsunderaservicearrangement,mosttypicallyforafinancialproductorfacilitywithinFiduciaryAgreement.
-
-          Example:Performthescheduled(e.g.statements,standingorders)andad-hoc/requested(e.g.balanceinquiries,fundtransfers)fulfillmenttasksforacustomercurrentaccountfacility.
-        : type: string
+        '':
+          type: string
         FulfillmentPreconditions:
           type: string
         FulfillmentFeatureSchedule:
@@ -672,11 +666,8 @@ components:
     AssessmentandReporting:
       type: object
       properties:
-        ? >-
-          Fulfillanyscheduledandad-hocobligationsunderaservicearrangement,mosttypicallyforafinancialproductorfacilitywithinFiduciaryAgreement.
-
-          Example:Performthescheduled(e.g.statements,standingorders)andad-hoc/requested(e.g.balanceinquiries,fundtransfers)fulfillmenttasksforacustomercurrentaccountfacility.
-        : type: string
+        '':
+          type: string
         AssessmentandReportingPreconditions:
           type: string
         AssessmentandReportingFeatureSchedule:
@@ -705,11 +696,8 @@ components:
     Fees:
       type: object
       properties:
-        ? >-
-          Fulfillanyscheduledandad-hocobligationsunderaservicearrangement,mosttypicallyforafinancialproductorfacilitywithinFiduciaryAgreement.
-
-          Example:Performthescheduled(e.g.statements,standingorders)andad-hoc/requested(e.g.balanceinquiries,fundtransfers)fulfillmenttasksforacustomercurrentaccountfacility.
-        : type: string
+        '':
+          type: string
         FeesPreconditions:
           type: string
         FeesFeatureSchedule:
@@ -731,11 +719,8 @@ components:
     Agreement:
       type: object
       properties:
-        ? >-
-          Fulfillanyscheduledandad-hocobligationsunderaservicearrangement,mosttypicallyforafinancialproductorfacilitywithinFiduciaryAgreement.
-
-          Example:Performthescheduled(e.g.statements,standingorders)andad-hoc/requested(e.g.balanceinquiries,fundtransfers)fulfillmenttasksforacustomercurrentaccountfacility.
-        : type: string
+        '':
+          type: string
         AgreementPreconditions:
           type: string
         AgreementFeatureSchedule:

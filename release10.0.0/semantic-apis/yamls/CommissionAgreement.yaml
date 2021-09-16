@@ -433,11 +433,8 @@ components:
     EmployeeCommissionAgreement:
       type: object
       properties:
-        ? >-
-          MaintainthetermsandconditionsthatapplytoacommercialrelationshipwithinCommissionAgreement.
-
-          Example:Defineandmaintainthetermsgoveringthecontratcualrelationshipwithacustomer.
-        : type: string
+        '':
+          type: string
         EmployeeCommissionAgreementParameterType:
           type: string
         EmployeeCommissionAgreementSelectedOption:
@@ -471,11 +468,8 @@ components:
     CommissionTerms:
       type: object
       properties:
-        ? >-
-          MaintainthetermsandconditionsthatapplytoacommercialrelationshipwithinCommissionAgreement.
-
-          Example:Defineandmaintainthetermsgoveringthecontratcualrelationshipwithacustomer.
-        : type: string
+        '':
+          type: string
         CommissionTermsPreconditions:
           type: string
         CommissionTermsTermSchedule:

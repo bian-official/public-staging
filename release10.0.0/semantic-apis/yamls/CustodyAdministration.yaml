@@ -794,11 +794,8 @@ components:
     CustodyArrangement:
       type: object
       properties:
-        ? >-
-          Fulfillanyscheduledandad-hocobligationsunderaservicearrangement,mosttypicallyforafinancialproductorfacilitywithinCustodyAdministration.
-
-          Example:Performthescheduled(e.g.statements,standingorders)andad-hocOrrequested(e.g.balanceinquiries,fundtransfers)fulfillmenttasksforacustomercurrentaccountfacility.
-        : type: string
+        '':
+          type: string
         CustodyArrangementParameterType:
           type: string
         CustodyArrangementSelectedOption:
@@ -828,11 +825,8 @@ components:
     SafeKeeping:
       type: object
       properties:
-        ? >-
-          Fulfillanyscheduledandad-hocobligationsunderaservicearrangement,mosttypicallyforafinancialproductorfacilitywithinCustodyAdministration.
-
-          Example:Performthescheduled(e.g.statements,standingorders)andad-hoc/requested(e.g.balanceinquiries,fundtransfers)fulfillmenttasksforacustomercurrentaccountfacility.
-        : type: string
+        '':
+          type: string
         SafeKeepingPreconditions:
           type: string
         SafeKeepingFeatureSchedule:
@@ -854,11 +848,8 @@ components:
     SecuritiesReporting:
       type: object
       properties:
-        ? >-
-          Fulfillanyscheduledandad-hocobligationsunderaservicearrangement,mosttypicallyforafinancialproductorfacilitywithinCustodyAdministration.
-
-          Example:Performthescheduled(e.g.statements,standingorders)andad-hoc/requested(e.g.balanceinquiries,fundtransfers)fulfillmenttasksforacustomercurrentaccountfacility.
-        : type: string
+        '':
+          type: string
         SecuritiesReportingPreconditions:
           type: string
         SecuritiesReportingFeatureSchedule:
@@ -887,11 +878,8 @@ components:
     DividendsandInterest:
       type: object
       properties:
-        ? >-
-          Fulfillanyscheduledandad-hocobligationsunderaservicearrangement,mosttypicallyforafinancialproductorfacilitywithinCustodyAdministration.
-
-          Example:Performthescheduled(e.g.statements,standingorders)andad-hoc/requested(e.g.balanceinquiries,fundtransfers)fulfillmenttasksforacustomercurrentaccountfacility.
-        : type: string
+        '':
+          type: string
         DividendsandInterestPreconditions:
           type: string
         DividendsandInterestFeatureSchedule:
@@ -913,11 +901,8 @@ components:
     Settlement:
       type: object
       properties:
-        ? >-
-          Fulfillanyscheduledandad-hocobligationsunderaservicearrangement,mosttypicallyforafinancialproductorfacilitywithinCustodyAdministration.
-
-          Example:Performthescheduled(e.g.statements,standingorders)andad-hoc/requested(e.g.balanceinquiries,fundtransfers)fulfillmenttasksforacustomercurrentaccountfacility.
-        : type: string
+        '':
+          type: string
         SettlementPreconditions:
           type: string
         SettlementFeatureSchedule:
@@ -939,11 +924,8 @@ components:
     Fees:
       type: object
       properties:
-        ? >-
-          Fulfillanyscheduledandad-hocobligationsunderaservicearrangement,mosttypicallyforafinancialproductorfacilitywithinCustodyAdministration.
-
-          Example:Performthescheduled(e.g.statements,standingorders)andad-hoc/requested(e.g.balanceinquiries,fundtransfers)fulfillmenttasksforacustomercurrentaccountfacility.
-        : type: string
+        '':
+          type: string
         FeesPreconditions:
           type: string
         FeesFeatureSchedule:

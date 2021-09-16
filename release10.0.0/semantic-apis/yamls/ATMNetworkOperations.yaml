@@ -857,11 +857,8 @@ components:
     ATMNetworkOperatingSession:
       type: object
       properties:
-        ? >-
-          OperateequipmentandOroralargelyautomatedfacilitywithinATMNetworkOperations.
-
-          Example:Operatethebank'sinternalintranetfacility.
-        : type: string
+        '':
+          type: string
         ATMNetworkOperatingSessionSchedule:
           type: string
         ATMNetworkOperatingSessionStatus:
@@ -883,11 +880,8 @@ components:
     FinancialDocumentHandling:
       type: object
       properties:
-        ? >-
-          Operateequipmentand/oralargelyautomatedfacilitywithinATMNetworkOperations.
-
-          Example:Operatethebank'sinternalintranetfacility.
-        : type: string
+        '':
+          type: string
         FinancialDocumentHandlingPreconditions:
           type: string
         FinancialDocumentHandlingFunctionSchedule:
@@ -914,11 +908,8 @@ components:
     NetworkOperation:
       type: object
       properties:
-        ? >-
-          Operateequipmentand/oralargelyautomatedfacilitywithinATMNetworkOperations.
-
-          Example:Operatethebank'sinternalintranetfacility.
-        : type: string
+        '':
+          type: string
         NetworkOperationPreconditions:
           type: string
         NetworkOperationFunctionSchedule:
@@ -938,11 +929,8 @@ components:
     DeviceTracking:
       type: object
       properties:
-        ? >-
-          Operateequipmentand/oralargelyautomatedfacilitywithinATMNetworkOperations.
-
-          Example:Operatethebank'sinternalintranetfacility.
-        : type: string
+        '':
+          type: string
         DeviceTrackingPreconditions:
           type: string
         DeviceTrackingFunctionSchedule:
@@ -962,11 +950,8 @@ components:
     CashDistribution:
       type: object
       properties:
-        ? >-
-          Operateequipmentand/oralargelyautomatedfacilitywithinATMNetworkOperations.
-
-          Example:Operatethebank'sinternalintranetfacility.
-        : type: string
+        '':
+          type: string
         CashDistributionPreconditions:
           type: string
         CashDistributionFunctionSchedule:
@@ -986,11 +971,8 @@ components:
     FinancialTransactionCapture:
       type: object
       properties:
-        ? >-
-          Operateequipmentand/oralargelyautomatedfacilitywithinATMNetworkOperations.
-
-          Example:Operatethebank'sinternalintranetfacility.
-        : type: string
+        '':
+          type: string
         FinancialTransactionCapturePreconditions:
           type: string
         FinancialTransactionCaptureFunctionSchedule:

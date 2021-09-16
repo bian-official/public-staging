@@ -612,11 +612,8 @@ components:
     LeasingItemAdministrativePlan:
       type: object
       properties:
-        ? >-
-          Handleandassignthedaytodayactivities,capturetime,costsandincomeforanoperationalunitwithinLeasingItemAdministration.
-
-          Example:Administerthetimereportingandbillingforthespecialistsalessupportteam.
-        : type: string
+        '':
+          type: string
         LeasingItemAdministrativePlanBudgetType:
           type: string
         LeasingItemAdministrativePlanBudget:
@@ -630,11 +627,8 @@ components:
     Registration:
       type: object
       properties:
-        ? >-
-          Handleandassignthedaytodayactivities,capturetime,costsandincomeforanoperationalunitwithinLeasingItemAdministration.
-
-          Example:Administerthetimereportingandbillingforthespecialistsalessupportteam.
-        : type: string
+        '':
+          type: string
         RegistrationPreconditions:
           type: string
         RegistrationBusinessUnit/EmployeeReference:
@@ -658,11 +652,8 @@ components:
     Valuation:
       type: object
       properties:
-        ? >-
-          Handleandassignthedaytodayactivities,capturetime,costsandincomeforanoperationalunitwithinLeasingItemAdministration.
-
-          Example:Administerthetimereportingandbillingforthespecialistsalessupportteam.
-        : type: string
+        '':
+          type: string
         ValuationPreconditions:
           type: string
         ValuationBusinessUnit/EmployeeReference:
@@ -686,11 +677,8 @@ components:
     Assurance:
       type: object
       properties:
-        ? >-
-          Handleandassignthedaytodayactivities,capturetime,costsandincomeforanoperationalunitwithinLeasingItemAdministration.
-
-          Example:Administerthetimereportingandbillingforthespecialistsalessupportteam.
-        : type: string
+        '':
+          type: string
         AssurancePreconditions:
           type: string
         AssuranceBusinessUnit/EmployeeReference:

@@ -672,11 +672,8 @@ components:
     CreditChargeCardFinancialCaptureTransaction:
       type: object
       properties:
-        ? >-
-          Executeawell-boundedfinancialtransactionOrtask,typicallyinvolvinglargelyautomatedOrstructuredfulfillmentprocessingwithinCardCapture.
-
-          Example:Executeapaymenttransaction.
-        : type: string
+        '':
+          type: string
         CreditChargeCardFinancialCaptureTransactionParameterType:
           type: string
         CreditChargeCardFinancialCaptureTransactionSelectedOption:
@@ -692,11 +689,8 @@ components:
     TransactionAuthorization:
       type: object
       properties:
-        ? >-
-          Executeawell-boundedfinancialtransaction/task,typicallyinvolvinglargelyautomated/structuredfulfillmentprocessingwithinCardCapture.
-
-          Example:Executeapaymenttransaction.
-        : type: string
+        '':
+          type: string
         TransactionAuthorizationPreconditions:
           type: string
         TransactionAuthorizationTaskSchedule:
@@ -718,11 +712,8 @@ components:
     TransactionCapture:
       type: object
       properties:
-        ? >-
-          Executeawell-boundedfinancialtransaction/task,typicallyinvolvinglargelyautomated/structuredfulfillmentprocessingwithinCardCapture.
-
-          Example:Executeapaymenttransaction.
-        : type: string
+        '':
+          type: string
         TransactionCapturePreconditions:
           type: string
         TransactionCaptureTaskSchedule:
@@ -769,11 +760,8 @@ components:
     TransactionReversal:
       type: object
       properties:
-        ? >-
-          Executeawell-boundedfinancialtransaction/task,typicallyinvolvinglargelyautomated/structuredfulfillmentprocessingwithinCardCapture.
-
-          Example:Executeapaymenttransaction.
-        : type: string
+        '':
+          type: string
         TransactionReversalPreconditions:
           type: string
         TransactionReversalTaskSchedule:
@@ -795,11 +783,8 @@ components:
     TransactionConsolidation:
       type: object
       properties:
-        ? >-
-          Executeawell-boundedfinancialtransaction/task,typicallyinvolvinglargelyautomated/structuredfulfillmentprocessingwithinCardCapture.
-
-          Example:Executeapaymenttransaction.
-        : type: string
+        '':
+          type: string
         TransactionConsolidationPreconditions:
           type: string
         TransactionConsolidationTaskSchedule:

@@ -579,12 +579,8 @@ components:
     Product/CustomerCombinationAssessment:
       type: object
       properties:
-        ? >-
-          Totestorassessanentity,possiblyagainstsomeformalqualificationorcertificationrequirementwithinProductMatching.
-
-
-          Examples:Performregulatorytestsonaproposedfinancialtransactionandcheckanewofferconformstoanexistingcontractualagreement.
-        : type: string
+        '':
+          type: string
         ProductOrCustomerCombinationAssessmentParameterType:
           type: string
         ProductOrCustomerCombinationAssessmentSelectedOption:
@@ -610,12 +606,8 @@ components:
     BankandCampaignAlignment:
       type: object
       properties:
-        ? >-
-          Totestorassessanentity,possiblyagainstsomeformalqualificationorcertificationrequirementwithinProductMatching.
-
-
-          Examples:Performregulatorytestsonaproposedfinancialtransactionandcheckanewofferconformstoanexistingcontractualagreement.
-        : type: string
+        '':
+          type: string
         BankandCampaignAlignmentPreconditions:
           type: string
         BankandCampaignAlignmentAnalysisSchedule:
@@ -637,12 +629,8 @@ components:
     ProductEligibility:
       type: object
       properties:
-        ? >-
-          Totestorassessanentity,possiblyagainstsomeformalqualificationorcertificationrequirementwithinProductMatching.
-
-
-          Examples:Performregulatorytestsonaproposedfinancialtransactionandcheckanewofferconformstoanexistingcontractualagreement.
-        : type: string
+        '':
+          type: string
         ProductEligibilityPreconditions:
           type: string
         ProductEligibilityAnalysisSchedule:
@@ -664,12 +652,8 @@ components:
     ProductTypeSelection:
       type: object
       properties:
-        ? >-
-          Totestorassessanentity,possiblyagainstsomeformalqualificationorcertificationrequirementwithinProductMatching.
-
-
-          Examples:Performregulatorytestsonaproposedfinancialtransactionandcheckanewofferconformstoanexistingcontractualagreement.
-        : type: string
+        '':
+          type: string
         ProductTypeSelectionPreconditions:
           type: string
         ProductTypeSelectionAnalysisSchedule:
@@ -691,12 +675,8 @@ components:
     ContextCriteria:
       type: object
       properties:
-        ? >-
-          Totestorassessanentity,possiblyagainstsomeformalqualificationorcertificationrequirementwithinProductMatching.
-
-
-          Examples:Performregulatorytestsonaproposedfinancialtransactionandcheckanewofferconformstoanexistingcontractualagreement.
-        : type: string
+        '':
+          type: string
         ContextCriteriaPreconditions:
           type: string
         ContextCriteriaAnalysisSchedule:

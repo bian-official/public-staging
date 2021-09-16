@@ -733,11 +733,8 @@ components:
     ProductInventoryDistributionAdministrativePlan:
       type: object
       properties:
-        ? >-
-          Handleandassignthedaytodayactivities,capturetime,costsandincomeforanoperationalunitwithinProductInventoryDistribution.
-
-          Example:Administerthetimereportingandbillingforthespecialistsalessupportteam.
-        : type: string
+        '':
+          type: string
         ProductInventoryDistributionAdministrativePlanBudgetType:
           type: string
         ProductInventoryDistributionAdministrativePlanBudget:
@@ -751,11 +748,8 @@ components:
     Provisioning:
       type: object
       properties:
-        ? >-
-          Handleandassignthedaytodayactivities,capturetime,costsandincomeforanoperationalunitwithinProductInventoryDistribution.
-
-          Example:Administerthetimereportingandbillingforthespecialistsalessupportteam.
-        : type: string
+        '':
+          type: string
         ProvisioningPreconditions:
           type: string
         ProvisioningBusinessUnit/EmployeeReference:
@@ -779,11 +773,8 @@ components:
     Mailing:
       type: object
       properties:
-        ? >-
-          Handleandassignthedaytodayactivities,capturetime,costsandincomeforanoperationalunitwithinProductInventoryDistribution.
-
-          Example:Administerthetimereportingandbillingforthespecialistsalessupportteam.
-        : type: string
+        '':
+          type: string
         MailingPreconditions:
           type: string
         MailingBusinessUnit/EmployeeReference:
@@ -807,11 +798,8 @@ components:
     Distribution:
       type: object
       properties:
-        ? >-
-          Handleandassignthedaytodayactivities,capturetime,costsandincomeforanoperationalunitwithinProductInventoryDistribution.
-
-          Example:Administerthetimereportingandbillingforthespecialistsalessupportteam.
-        : type: string
+        '':
+          type: string
         DistributionPreconditions:
           type: string
         DistributionBusinessUnit/EmployeeReference:
@@ -846,11 +834,8 @@ components:
     Oversight:
       type: object
       properties:
-        ? >-
-          Handleandassignthedaytodayactivities,capturetime,costsandincomeforanoperationalunitwithinProductInventoryDistribution.
-
-          Example:Administerthetimereportingandbillingforthespecialistsalessupportteam.
-        : type: string
+        '':
+          type: string
         OversightPreconditions:
           type: string
         OversightBusinessUnit/EmployeeReference:

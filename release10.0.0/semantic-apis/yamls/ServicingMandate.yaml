@@ -212,7 +212,7 @@ components:
     CustomerMandate:
       type: object
       properties:
-        Referencetothetermsinforceforaspecificcustomerforthisserviceprovider:
+        '':
           type: string
         CustomerReference:
           type: string

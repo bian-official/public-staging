@@ -672,11 +672,8 @@ components:
     AccountsReceivableProcedure:
       type: object
       properties:
-        ? >-
-          CompleteworktasksfollowingadefinedprocedureinsupportofgeneralofficeactivitiesandproductandservicedeliverywithinAccountsReceivable.
-
-          Example:Processtheevaluationandcompletionofcustomeroffers.
-        : type: string
+        '':
+          type: string
         AccountsReceivableProcedureParameterType:
           type: string
         AccountsReceivableProcedureSelectedOption:
@@ -720,11 +717,8 @@ components:
     Resolution:
       type: object
       properties:
-        ? >-
-          CompleteworktasksfollowingadefinedprocedureinsupportofgeneralofficeactivitiesandproductandservicedeliverywithinAccountsReceivable.
-
-          Example:Processtheevaluationandcompletionofcustomeroffers.
-        : type: string
+        '':
+          type: string
         ResolutionPreconditions:
           type: string
         ResolutionBusinessUnit/EmployeeReference:
@@ -748,11 +742,8 @@ components:
     ReceivablesEvaluation:
       type: object
       properties:
-        ? >-
-          CompleteworktasksfollowingadefinedprocedureinsupportofgeneralofficeactivitiesandproductandservicedeliverywithinAccountsReceivable.
-
-          Example:Processtheevaluationandcompletionofcustomeroffers.
-        : type: string
+        '':
+          type: string
         ReceivablesEvaluationPreconditions:
           type: string
         ReceivablesEvaluationBusinessUnit/EmployeeReference:
@@ -776,11 +767,8 @@ components:
     CustomerNegotiation:
       type: object
       properties:
-        ? >-
-          CompleteworktasksfollowingadefinedprocedureinsupportofgeneralofficeactivitiesandproductandservicedeliverywithinAccountsReceivable.
-
-          Example:Processtheevaluationandcompletionofcustomeroffers.
-        : type: string
+        '':
+          type: string
         CustomerNegotiationPreconditions:
           type: string
         CustomerNegotiationBusinessUnit/EmployeeReference:
@@ -804,11 +792,8 @@ components:
     Payment:
       type: object
       properties:
-        ? >-
-          CompleteworktasksfollowingadefinedprocedureinsupportofgeneralofficeactivitiesandproductandservicedeliverywithinAccountsReceivable.
-
-          Example:Processtheevaluationandcompletionofcustomeroffers.
-        : type: string
+        '':
+          type: string
         PaymentPreconditions:
           type: string
         PaymentBusinessUnit/EmployeeReference:

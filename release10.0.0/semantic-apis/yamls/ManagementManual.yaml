@@ -945,11 +945,8 @@ components:
     ManagementManualSpecification:
       type: object
       properties:
-        ? >-
-          Createandmaintainadesignforaprocedure,productOrservicemodelorothersuchentitywithinManagementManual.
-
-          Example:Createandmaintainproductdesignsandanalyticalmodels.
-        : type: string
+        '':
+          type: string
         ManagementManualSpecificationParameterType:
           type: string
         ManagementManualSpecificationSelectedOption:
@@ -969,11 +966,8 @@ components:
     OperationalSecurityProceduresandGuidelines:
       type: object
       properties:
-        ? >-
-          Createandmaintainadesignforaprocedure,product/servicemodelorothersuchentitywithinManagementManual.
-
-          Example:Createandmaintainproductdesignsandanalyticalmodels.
-        : type: string
+        '':
+          type: string
         OperationalSecurityProceduresandGuidelinesPreconditions:
           type: string
         OperationalSecurityProceduresandGuidelinesSpecificationSchedule:
@@ -995,11 +989,8 @@ components:
     OperationalandProductionProceduresandGuidelines:
       type: object
       properties:
-        ? >-
-          Createandmaintainadesignforaprocedure,product/servicemodelorothersuchentitywithinManagementManual.
-
-          Example:Createandmaintainproductdesignsandanalyticalmodels.
-        : type: string
+        '':
+          type: string
         OperationalandProductionProceduresandGuidelinesPreconditions:
           type: string
         OperationalandProductionProceduresandGuidelinesSpecificationSchedule:
@@ -1021,11 +1012,8 @@ components:
     EmploymentRelatedProceduresandGuidelines:
       type: object
       properties:
-        ? >-
-          Createandmaintainadesignforaprocedure,product/servicemodelorothersuchentitywithinManagementManual.
-
-          Example:Createandmaintainproductdesignsandanalyticalmodels.
-        : type: string
+        '':
+          type: string
         EmploymentRelatedProceduresandGuidelinesPreconditions:
           type: string
         EmploymentRelatedProceduresandGuidelinesSpecificationSchedule:
@@ -1047,11 +1035,8 @@ components:
     StaffManagementProceduresandGuidelines:
       type: object
       properties:
-        ? >-
-          Createandmaintainadesignforaprocedure,product/servicemodelorothersuchentitywithinManagementManual.
-
-          Example:Createandmaintainproductdesignsandanalyticalmodels.
-        : type: string
+        '':
+          type: string
         StaffManagementProceduresandGuidelinesPreconditions:
           type: string
         StaffManagementProceduresandGuidelinesSpecificationSchedule:
@@ -1084,11 +1069,8 @@ components:
     LegalandRegulatoryObligationsandGuidelines:
       type: object
       properties:
-        ? >-
-          Createandmaintainadesignforaprocedure,product/servicemodelorothersuchentitywithinManagementManual.
-
-          Example:Createandmaintainproductdesignsandanalyticalmodels.
-        : type: string
+        '':
+          type: string
         LegalandRegulatoryObligationsandGuidelinesPreconditions:
           type: string
         LegalandRegulatoryObligationsandGuidelinesSpecificationSchedule:
@@ -1110,11 +1092,8 @@ components:
     CompanyMissionandPolicies:
       type: object
       properties:
-        ? >-
-          Createandmaintainadesignforaprocedure,product/servicemodelorothersuchentitywithinManagementManual.
-
-          Example:Createandmaintainproductdesignsandanalyticalmodels.
-        : type: string
+        '':
+          type: string
         CompanyMissionandPoliciesPreconditions:
           type: string
         CompanyMissionandPoliciesSpecificationSchedule:

@@ -555,11 +555,8 @@ components:
     CentralCashAllocation:
       type: object
       properties:
-        ? >-
-          MaintainaninventoryorholdingofsomeresourceandmakeassignmentsOrallocationsasrequestedwithinCentralCashHandling.
-
-          Example:Tracktheinventoryandadministerthedistributionofcentralcashholdingsthroughoutthebranch&ATMnetwork.
-        : type: string
+        '':
+          type: string
         CentralCashAllocationParameterType:
           type: string
         CentralCashAllocationSelectedOption:
@@ -597,11 +594,8 @@ components:
     ProjectionandAllocation:
       type: object
       properties:
-        ? >-
-          Maintainaninventoryorholdingofsomeresourceandmakeassignments/allocationsasrequestedwithinCentralCashHandling.
-
-          Example:Tracktheinventoryandadministerthedistributionofcentralcashholdingsthroughoutthebranch&ATMnetwork.
-        : type: string
+        '':
+          type: string
         ProjectionandAllocationPreconditions:
           type: string
         ProjectionandAllocationAllocationSchedule:
@@ -628,11 +622,8 @@ components:
     TrackingandAllocation:
       type: object
       properties:
-        ? >-
-          Maintainaninventoryorholdingofsomeresourceandmakeassignments/allocationsasrequestedwithinCentralCashHandling.
-
-          Example:Tracktheinventoryandadministerthedistributionofcentralcashholdingsthroughoutthebranch&ATMnetwork.
-        : type: string
+        '':
+          type: string
         TrackingandAllocationPreconditions:
           type: string
         TrackingandAllocationAllocationSchedule:

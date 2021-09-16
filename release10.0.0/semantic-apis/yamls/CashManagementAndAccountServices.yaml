@@ -789,7 +789,7 @@ paths:
         500:
           $ref: '#/components/responses/InternalServerError'
   /CashManagementAndAccountServices/{cashmanagementandaccountservicesId}/PositivePay/{positivepayId}/Exchange:
-    get:
+    put:
       tags:
       - BQ - PositivePay
       summary: ExBQ Submit a check register report that the bank uses to check submitted checks
@@ -798,14 +798,15 @@ paths:
       parameters:
       - $ref: '#/components/parameters/CashManagementAndAccountServicesID'
       - $ref: '#/components/parameters/PositivePayID'
+      requestBody:
+        $ref: '#/components/requestBodies/PositivePay'
       responses:
         200:
           description: Success
           content:
             application/json:
               schema:
-                type: boolean
-                example: true
+                $ref: '#/components/schemas/PositivePay'
         400:
           $ref: '#/components/responses/BadRequestError'
         401:
@@ -834,8 +835,7 @@ paths:
           content:
             application/json:
               schema:
-                type: boolean
-                example: true
+                $ref: '#/components/schemas/PositivePay'
         400:
           $ref: '#/components/responses/BadRequestError'
         401:
@@ -1661,6 +1661,12 @@ components:
         application/json:
           schema:
             $ref: '#/components/schemas/IssuedDevice'
+    PositivePay:
+      required: true
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/PositivePay'
   responses:
     HTTPError:
       description: Bad Request

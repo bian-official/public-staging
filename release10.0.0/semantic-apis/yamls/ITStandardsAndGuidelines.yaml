@@ -1134,11 +1134,8 @@ components:
     TechnologyStandardsSpecification:
       type: object
       properties:
-        ? >-
-          Createandmaintainadesignforaprocedure,productOrservicemodelorothersuchentitywithinITStandards&Guidelines.
-
-          Example:Createandmaintainproductdesignsandanalyticalmodels.
-        : type: string
+        '':
+          type: string
         TechnologyStandardsSpecificationParameterType:
           type: string
         TechnologyStandardsSpecificationSelectedOption:
@@ -1158,11 +1155,8 @@ components:
     DevelopmentToolingandEnvironment:
       type: object
       properties:
-        ? >-
-          Createandmaintainadesignforaprocedure,product/servicemodelorothersuchentitywithinITStandards&Guidelines.
-
-          Example:Createandmaintainproductdesignsandanalyticalmodels.
-        : type: string
+        '':
+          type: string
         DevelopmentToolingandEnvironmentPreconditions:
           type: string
         DevelopmentToolingandEnvironmentSpecificationSchedule:
@@ -1184,11 +1178,8 @@ components:
     ProductionEnvironmentandSupportServices:
       type: object
       properties:
-        ? >-
-          Createandmaintainadesignforaprocedure,product/servicemodelorothersuchentitywithinITStandards&Guidelines.
-
-          Example:Createandmaintainproductdesignsandanalyticalmodels.
-        : type: string
+        '':
+          type: string
         ProductionEnvironmentandSupportServicesPreconditions:
           type: string
         ProductionEnvironmentandSupportServicesSpecificationSchedule:
@@ -1221,11 +1212,8 @@ components:
     ITPoliciesandGuidelines:
       type: object
       properties:
-        ? >-
-          Createandmaintainadesignforaprocedure,product/servicemodelorothersuchentitywithinITStandards&Guidelines.
-
-          Example:Createandmaintainproductdesignsandanalyticalmodels.
-        : type: string
+        '':
+          type: string
         ITPoliciesandGuidelinesPreconditions:
           type: string
         ITPoliciesandGuidelinesSpecificationSchedule:
@@ -1247,11 +1235,8 @@ components:
     ProductionPlatformsandInfrastructure:
       type: object
       properties:
-        ? >-
-          Createandmaintainadesignforaprocedure,product/servicemodelorothersuchentitywithinITStandards&Guidelines.
-
-          Example:Createandmaintainproductdesignsandanalyticalmodels.
-        : type: string
+        '':
+          type: string
         ProductionPlatformsandInfrastructurePreconditions:
           type: string
         ProductionPlatformsandInfrastructureSpecificationSchedule:
@@ -1273,11 +1258,8 @@ components:
     ProductTestingandDeploymentMechanisms:
       type: object
       properties:
-        ? >-
-          Createandmaintainadesignforaprocedure,product/servicemodelorothersuchentitywithinITStandards&Guidelines.
-
-          Example:Createandmaintainproductdesignsandanalyticalmodels.
-        : type: string
+        '':
+          type: string
         ProductTestingandDeploymentMechanismsPreconditions:
           type: string
         ProductTestingandDeploymentMechanismsSpecificationSchedule:

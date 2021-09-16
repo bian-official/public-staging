@@ -579,12 +579,8 @@ components:
     ProductandServiceAssessment:
       type: object
       properties:
-        ? >-
-          Totestorassessanentity,possiblyagainstsomeformalqualificationorcertificationrequirementwithinProductQualityAssurance.
-
-
-          Examples:Performregulatorytestsonaproposedfinancialtransactionandcheckanewofferconformstoanexistingcontractualagreement.
-        : type: string
+        '':
+          type: string
         ProductandServiceAssessmentParameterType:
           type: string
         ProductandServiceAssessmentSelectedOption:
@@ -610,12 +606,8 @@ components:
     UsabilityChecks:
       type: object
       properties:
-        ? >-
-          Totestorassessanentity,possiblyagainstsomeformalqualificationorcertificationrequirementwithinProductQualityAssurance.
-
-
-          Examples:Performregulatorytestsonaproposedfinancialtransactionandcheckanewofferconformstoanexistingcontractualagreement.
-        : type: string
+        '':
+          type: string
         UsabilityChecksPreconditions:
           type: string
         UsabilityChecksAnalysisSchedule:
@@ -644,12 +636,8 @@ components:
     ResiliencyandPerformanceChecks:
       type: object
       properties:
-        ? >-
-          Totestorassessanentity,possiblyagainstsomeformalqualificationorcertificationrequirementwithinProductQualityAssurance.
-
-
-          Examples:Performregulatorytestsonaproposedfinancialtransactionandcheckanewofferconformstoanexistingcontractualagreement.
-        : type: string
+        '':
+          type: string
         ResiliencyandPerformanceChecksPreconditions:
           type: string
         ResiliencyandPerformanceChecksAnalysisSchedule:
@@ -671,12 +659,8 @@ components:
     FunctionalConsistencyChecks:
       type: object
       properties:
-        ? >-
-          Totestorassessanentity,possiblyagainstsomeformalqualificationorcertificationrequirementwithinProductQualityAssurance.
-
-
-          Examples:Performregulatorytestsonaproposedfinancialtransactionandcheckanewofferconformstoanexistingcontractualagreement.
-        : type: string
+        '':
+          type: string
         FunctionalConsistencyChecksPreconditions:
           type: string
         FunctionalConsistencyChecksAnalysisSchedule:
@@ -698,12 +682,8 @@ components:
     ProcessingErrorandIntegrityChecks:
       type: object
       properties:
-        ? >-
-          Totestorassessanentity,possiblyagainstsomeformalqualificationorcertificationrequirementwithinProductQualityAssurance.
-
-
-          Examples:Performregulatorytestsonaproposedfinancialtransactionandcheckanewofferconformstoanexistingcontractualagreement.
-        : type: string
+        '':
+          type: string
         ProcessingErrorandIntegrityChecksPreconditions:
           type: string
         ProcessingErrorandIntegrityChecksAnalysisSchedule:

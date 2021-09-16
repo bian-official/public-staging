@@ -859,11 +859,8 @@ components:
     ProductTrainingProcedure:
       type: object
       properties:
-        ? >-
-          CompleteworktasksfollowingadefinedprocedureinsupportofgeneralofficeactivitiesandproductandservicedeliverywithinProductTraining.
-
-          Example:Processtheevaluationandcompletionofcustomeroffers.
-        : type: string
+        '':
+          type: string
         ProductTrainingProcedureParameterType:
           type: string
         ProductTrainingProcedureSelectedOption:
@@ -907,11 +904,8 @@ components:
     ServiceDelivery:
       type: object
       properties:
-        ? >-
-          CompleteworktasksfollowingadefinedprocedureinsupportofgeneralofficeactivitiesandproductandservicedeliverywithinProductTraining.
-
-          Example:Processtheevaluationandcompletionofcustomeroffers.
-        : type: string
+        '':
+          type: string
         ServiceDeliveryPreconditions:
           type: string
         ServiceDeliveryBusinessUnit/EmployeeReference:
@@ -935,11 +929,8 @@ components:
     ContentDevelopment:
       type: object
       properties:
-        ? >-
-          CompleteworktasksfollowingadefinedprocedureinsupportofgeneralofficeactivitiesandproductandservicedeliverywithinProductTraining.
-
-          Example:Processtheevaluationandcompletionofcustomeroffers.
-        : type: string
+        '':
+          type: string
         ContentDevelopmentPreconditions:
           type: string
         ContentDevelopmentBusinessUnit/EmployeeReference:
@@ -970,11 +961,8 @@ components:
     ServiceEvaluation:
       type: object
       properties:
-        ? >-
-          CompleteworktasksfollowingadefinedprocedureinsupportofgeneralofficeactivitiesandproductandservicedeliverywithinProductTraining.
-
-          Example:Processtheevaluationandcompletionofcustomeroffers.
-        : type: string
+        '':
+          type: string
         ServiceEvaluationPreconditions:
           type: string
         ServiceEvaluationBusinessUnit/EmployeeReference:
@@ -998,11 +986,8 @@ components:
     ServiceScheduling:
       type: object
       properties:
-        ? >-
-          CompleteworktasksfollowingadefinedprocedureinsupportofgeneralofficeactivitiesandproductandservicedeliverywithinProductTraining.
-
-          Example:Processtheevaluationandcompletionofcustomeroffers.
-        : type: string
+        '':
+          type: string
         ServiceSchedulingPreconditions:
           type: string
         ServiceSchedulingBusinessUnit/EmployeeReference:

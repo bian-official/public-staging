@@ -433,12 +433,8 @@ components:
     InternalAuditAssessment:
       type: object
       properties:
-        ? >-
-          Totestorassessanentity,possiblyagainstsomeformalqualificationorcertificationrequirementwithinInternalAudit.
-
-
-          Examples:Performregulatorytestsonaproposedfinancialtransactionandcheckanewofferconformstoanexistingcontractualagreement.
-        : type: string
+        '':
+          type: string
         InternalAuditAssessmentParameterType:
           type: string
         InternalAuditAssessmentSelectedOption:
@@ -462,12 +458,8 @@ components:
     Audit:
       type: object
       properties:
-        ? >-
-          Totestorassessanentity,possiblyagainstsomeformalqualificationorcertificationrequirementwithinInternalAudit.
-
-
-          Examples:Performregulatorytestsonaproposedfinancialtransactionandcheckanewofferconformstoanexistingcontractualagreement.
-        : type: string
+        '':
+          type: string
         AuditPreconditions:
           type: string
         AuditAnalysisSchedule:

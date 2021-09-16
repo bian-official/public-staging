@@ -645,11 +645,8 @@ components:
     CashDistributionProcedure:
       type: object
       properties:
-        ? >-
-          CompleteworktasksfollowingadefinedprocedureinsupportofgeneralofficeactivitiesandproductandservicedeliverywithinBranchCurrencyDistribution.
-
-          Example:Processtheevaluationandcompletionofcustomeroffers.
-        : type: string
+        '':
+          type: string
         CashDistributionProcedureParameterType:
           type: string
         CashDistributionProcedureSelectedOption:
@@ -693,11 +690,8 @@ components:
     InventoryDistributionOversight:
       type: object
       properties:
-        ? >-
-          CompleteworktasksfollowingadefinedprocedureinsupportofgeneralofficeactivitiesandproductandservicedeliverywithinBranchCurrencyDistribution.
-
-          Example:Processtheevaluationandcompletionofcustomeroffers.
-        : type: string
+        '':
+          type: string
         InventoryDistributionOversightPreconditions:
           type: string
         InventoryDistributionOversightBusinessUnit/EmployeeReference:
@@ -728,11 +722,8 @@ components:
     DistributionPlanning:
       type: object
       properties:
-        ? >-
-          CompleteworktasksfollowingadefinedprocedureinsupportofgeneralofficeactivitiesandproductandservicedeliverywithinBranchCurrencyDistribution.
-
-          Example:Processtheevaluationandcompletionofcustomeroffers.
-        : type: string
+        '':
+          type: string
         DistributionPlanningPreconditions:
           type: string
         DistributionPlanningBusinessUnit/EmployeeReference:
@@ -756,11 +747,8 @@ components:
     DistributionVehicleAdministration:
       type: object
       properties:
-        ? >-
-          CompleteworktasksfollowingadefinedprocedureinsupportofgeneralofficeactivitiesandproductandservicedeliverywithinBranchCurrencyDistribution.
-
-          Example:Processtheevaluationandcompletionofcustomeroffers.
-        : type: string
+        '':
+          type: string
         DistributionVehicleAdministrationPreconditions:
           type: string
         DistributionVehicleAdministrationBusinessUnit/EmployeeReference:
@@ -784,11 +772,8 @@ components:
     InventoryProvisioning:
       type: object
       properties:
-        ? >-
-          CompleteworktasksfollowingadefinedprocedureinsupportofgeneralofficeactivitiesandproductandservicedeliverywithinBranchCurrencyDistribution.
-
-          Example:Processtheevaluationandcompletionofcustomeroffers.
-        : type: string
+        '':
+          type: string
         InventoryProvisioningPreconditions:
           type: string
         InventoryProvisioningBusinessUnit/EmployeeReference:

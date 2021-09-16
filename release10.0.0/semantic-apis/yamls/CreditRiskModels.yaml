@@ -585,11 +585,8 @@ components:
     CreditRiskModelSpecification:
       type: object
       properties:
-        ? >-
-          Createandmaintainadesignforaprocedure,productOrservicemodelorothersuchentitywithinCreditRiskModels.
-
-          Example:Createandmaintainproductdesignsandanalyticalmodels.
-        : type: string
+        '':
+          type: string
         CreditRiskModelSpecificationParameterType:
           type: string
         CreditRiskModelSpecificationSelectedOption:
@@ -609,11 +606,8 @@ components:
     FunctionalRequirements:
       type: object
       properties:
-        ? >-
-          Createandmaintainadesignforaprocedure,product/servicemodelorothersuchentitywithinCreditRiskModels.
-
-          Example:Createandmaintainproductdesignsandanalyticalmodels.
-        : type: string
+        '':
+          type: string
         FunctionalRequirementsPreconditions:
           type: string
         FunctionalRequirementsSpecificationSchedule:
@@ -635,11 +629,8 @@ components:
     Production:
       type: object
       properties:
-        ? >-
-          Createandmaintainadesignforaprocedure,product/servicemodelorothersuchentitywithinCreditRiskModels.
-
-          Example:Createandmaintainproductdesignsandanalyticalmodels.
-        : type: string
+        '':
+          type: string
         ProductionPreconditions:
           type: string
         ProductionSpecificationSchedule:
@@ -672,11 +663,8 @@ components:
     Testing:
       type: object
       properties:
-        ? >-
-          Createandmaintainadesignforaprocedure,product/servicemodelorothersuchentitywithinCreditRiskModels.
-
-          Example:Createandmaintainproductdesignsandanalyticalmodels.
-        : type: string
+        '':
+          type: string
         TestingPreconditions:
           type: string
         TestingSpecificationSchedule:

@@ -732,11 +732,8 @@ components:
     CollateralAssetLiquidationProcedure:
       type: object
       properties:
-        ? >-
-          CompleteworktasksfollowingadefinedprocedureinsupportofgeneralofficeactivitiesandproductandservicedeliverywithinCollections.
-
-          Example:Processtheevaluationandcompletionofcustomeroffers.
-        : type: string
+        '':
+          type: string
         CollateralAssetLiquidationProcedureParameterType:
           type: string
         CollateralAssetLiquidationProcedureSelectedOption:
@@ -780,11 +777,8 @@ components:
     CollectionsAccountUpdate:
       type: object
       properties:
-        ? >-
-          CompleteworktasksfollowingadefinedprocedureinsupportofgeneralofficeactivitiesandproductandservicedeliverywithinCollections.
-
-          Example:Processtheevaluationandcompletionofcustomeroffers.
-        : type: string
+        '':
+          type: string
         CollectionsAccountUpdatePreconditions:
           type: string
         CollectionsAccountUpdateBusinessUnit/EmployeeReference:
@@ -808,11 +802,8 @@ components:
     CollectionsAssessment:
       type: object
       properties:
-        ? >-
-          CompleteworktasksfollowingadefinedprocedureinsupportofgeneralofficeactivitiesandproductandservicedeliverywithinCollections.
-
-          Example:Processtheevaluationandcompletionofcustomeroffers.
-        : type: string
+        '':
+          type: string
         CollectionsAssessmentPreconditions:
           type: string
         CollectionsAssessmentBusinessUnit/EmployeeReference:
@@ -836,11 +827,8 @@ components:
     DebtFactoring:
       type: object
       properties:
-        ? >-
-          CompleteworktasksfollowingadefinedprocedureinsupportofgeneralofficeactivitiesandproductandservicedeliverywithinCollections.
-
-          Example:Processtheevaluationandcompletionofcustomeroffers.
-        : type: string
+        '':
+          type: string
         DebtFactoringPreconditions:
           type: string
         DebtFactoringBusinessUnit/EmployeeReference:
@@ -864,11 +852,8 @@ components:
     CollateralLiquidation:
       type: object
       properties:
-        ? >-
-          CompleteworktasksfollowingadefinedprocedureinsupportofgeneralofficeactivitiesandproductandservicedeliverywithinCollections.
-
-          Example:Processtheevaluationandcompletionofcustomeroffers.
-        : type: string
+        '':
+          type: string
         CollateralLiquidationPreconditions:
           type: string
         CollateralLiquidationBusinessUnit/EmployeeReference:
@@ -899,11 +884,8 @@ components:
     CollateralValuation:
       type: object
       properties:
-        ? >-
-          CompleteworktasksfollowingadefinedprocedureinsupportofgeneralofficeactivitiesandproductandservicedeliverywithinCollections.
-
-          Example:Processtheevaluationandcompletionofcustomeroffers.
-        : type: string
+        '':
+          type: string
         CollateralValuationPreconditions:
           type: string
         CollateralValuationBusinessUnit/EmployeeReference:

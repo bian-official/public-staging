@@ -311,14 +311,8 @@ components:
     FinancialMarketAnalysis:
       type: object
       properties:
-        ? >-
-          Analyzetheperformanceorbehaviorofsomeon-goingactivityorentitywithinFinancialMarketAnalysis.
-
-          Examples:Providebehavioralinsightsandanalysisintocustomerbehaviorandanalyzefinancialmarketactivityinordertoidentifyopportunities,definepricingandevaluaterisks.
-
-
-          Analyzetheperformanceorbehaviorofsomeon-goingactivityorentity.Examples:Providebehavioralinsightsandanalysisintocustomerbehaviorandanalyzefinancialmarketactivityinordertoidentifyopportunities,definepricingandevaluaterisks.
-        : type: string
+        '':
+          type: string
         FinancialMarketAnalysisParameterType:
           type: string
         FinancialMarketAnalysisSelectedOption:
@@ -343,14 +337,8 @@ components:
     FinancialMarketInsight:
       type: object
       properties:
-        ? >-
-          Analyzetheperformanceorbehaviorofsomeon-goingactivityorentitywithinFinancialMarketAnalysis.
-
-          Examples:Providebehavioralinsightsandanalysisintocustomerbehaviorandanalyzefinancialmarketactivityinordertoidentifyopportunities,definepricingandevaluaterisks.
-
-
-          Analyzetheperformanceorbehaviorofsomeon-goingactivityorentity.Examples:Providebehavioralinsightsandanalysisintocustomerbehaviorandanalyzefinancialmarketactivityinordertoidentifyopportunities,definepricingandevaluaterisks.
-        : type: string
+        '':
+          type: string
         FinancialMarketInsightPreconditions:
           type: string
         FinancialMarketInsightAnalysisSchedule:

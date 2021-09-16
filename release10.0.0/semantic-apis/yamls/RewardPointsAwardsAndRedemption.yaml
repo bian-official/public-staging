@@ -431,11 +431,8 @@ components:
     RewardPointsTransaction:
       type: object
       properties:
-        ? >-
-          Executeawell-boundedfinancialtransactionOrtask,typicallyinvolvinglargelyautomatedOrstructuredfulfillmentprocessingwithinRewardPointsAwards&Redemption.
-
-          Example:Executeapaymenttransaction.
-        : type: string
+        '':
+          type: string
         RewardPointsTransactionParameterType:
           type: string
         RewardPointsTransactionSelectedOption:
@@ -476,11 +473,8 @@ components:
     Award:
       type: object
       properties:
-        ? >-
-          Executeawell-boundedfinancialtransaction/task,typicallyinvolvinglargelyautomated/structuredfulfillmentprocessingwithinRewardPointsAwards&Redemption.
-
-          Example:Executeapaymenttransaction.
-        : type: string
+        '':
+          type: string
         AwardPreconditions:
           type: string
         AwardTaskSchedule:
@@ -502,11 +496,8 @@ components:
     Redemption:
       type: object
       properties:
-        ? >-
-          Executeawell-boundedfinancialtransaction/task,typicallyinvolvinglargelyautomated/structuredfulfillmentprocessingwithinRewardPointsAwards&Redemption.
-
-          Example:Executeapaymenttransaction.
-        : type: string
+        '':
+          type: string
         RedemptionPreconditions:
           type: string
         RedemptionTaskSchedule:

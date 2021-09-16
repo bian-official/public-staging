@@ -737,11 +737,8 @@ components:
     ITSystemAdministrativePlan:
       type: object
       properties:
-        ? >-
-          Handleandassignthedaytodayactivities,capturetime,costsandincomeforanoperationalunitwithinSystemsAdministration.
-
-          Example:Administerthetimereportingandbillingforthespecialistsalessupportteam.
-        : type: string
+        '':
+          type: string
         ITSystemAdministrativePlanBudgetType:
           type: string
         ITSystemAdministrativePlanBudget:
@@ -755,11 +752,8 @@ components:
     Assurance:
       type: object
       properties:
-        ? >-
-          Handleandassignthedaytodayactivities,capturetime,costsandincomeforanoperationalunitwithinSystemsAdministration.
-
-          Example:Administerthetimereportingandbillingforthespecialistsalessupportteam.
-        : type: string
+        '':
+          type: string
         AssurancePreconditions:
           type: string
         AssuranceBusinessUnit/EmployeeReference:
@@ -783,11 +777,8 @@ components:
     Inventory:
       type: object
       properties:
-        ? >-
-          Handleandassignthedaytodayactivities,capturetime,costsandincomeforanoperationalunitwithinSystemsAdministration.
-
-          Example:Administerthetimereportingandbillingforthespecialistsalessupportteam.
-        : type: string
+        '':
+          type: string
         InventoryPreconditions:
           type: string
         InventoryBusinessUnit/EmployeeReference:
@@ -811,11 +802,8 @@ components:
     Configuration:
       type: object
       properties:
-        ? >-
-          Handleandassignthedaytodayactivities,capturetime,costsandincomeforanoperationalunitwithinSystemsAdministration.
-
-          Example:Administerthetimereportingandbillingforthespecialistsalessupportteam.
-        : type: string
+        '':
+          type: string
         ConfigurationPreconditions:
           type: string
         ConfigurationBusinessUnit/EmployeeReference:
@@ -850,11 +838,8 @@ components:
     CapacityPlanningandResilience:
       type: object
       properties:
-        ? >-
-          Handleandassignthedaytodayactivities,capturetime,costsandincomeforanoperationalunitwithinSystemsAdministration.
-
-          Example:Administerthetimereportingandbillingforthespecialistsalessupportteam.
-        : type: string
+        '':
+          type: string
         CapacityPlanningandResiliencePreconditions:
           type: string
         CapacityPlanningandResilienceBusinessUnit/EmployeeReference:

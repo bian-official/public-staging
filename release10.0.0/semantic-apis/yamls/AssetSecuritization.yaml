@@ -675,11 +675,8 @@ components:
     AssetSecuritizationTransaction:
       type: object
       properties:
-        ? >-
-          Executeawell-boundedfinancialtransactionOrtask,typicallyinvolvinglargelyautomatedOrstructuredfulfillmentprocessingwithinAssetSecuritization.
-
-          Example:Executeapaymenttransaction.
-        : type: string
+        '':
+          type: string
         AssetSecuritizationTransactionParameterType:
           type: string
         AssetSecuritizationTransactionSelectedOption:
@@ -720,11 +717,8 @@ components:
     Securitization:
       type: object
       properties:
-        ? >-
-          Executeawell-boundedfinancialtransaction/task,typicallyinvolvinglargelyautomated/structuredfulfillmentprocessingwithinAssetSecuritization.
-
-          Example:Executeapaymenttransaction.
-        : type: string
+        '':
+          type: string
         SecuritizationPreconditions:
           type: string
         SecuritizationTaskSchedule:
@@ -746,11 +740,8 @@ components:
     Selection:
       type: object
       properties:
-        ? >-
-          Executeawell-boundedfinancialtransaction/task,typicallyinvolvinglargelyautomated/structuredfulfillmentprocessingwithinAssetSecuritization.
-
-          Example:Executeapaymenttransaction.
-        : type: string
+        '':
+          type: string
         SelectionPreconditions:
           type: string
         SelectionTaskSchedule:
@@ -772,11 +763,8 @@ components:
     Placement:
       type: object
       properties:
-        ? >-
-          Executeawell-boundedfinancialtransaction/task,typicallyinvolvinglargelyautomated/structuredfulfillmentprocessingwithinAssetSecuritization.
-
-          Example:Executeapaymenttransaction.
-        : type: string
+        '':
+          type: string
         PlacementPreconditions:
           type: string
         PlacementTaskSchedule:

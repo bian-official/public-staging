@@ -551,11 +551,8 @@ components:
     CurrencyExchangeTransaction:
       type: object
       properties:
-        ? >-
-          Executeawell-boundedfinancialtransactionOrtask,typicallyinvolvinglargelyautomatedOrstructuredfulfillmentprocessingwithinCurrencyExchange.
-
-          Example:Executeapaymenttransaction.
-        : type: string
+        '':
+          type: string
         CurrencyExchangeTransactionParameterType:
           type: string
         CurrencyExchangeTransactionSelectedOption:
@@ -571,11 +568,8 @@ components:
     FXTransactionCapture:
       type: object
       properties:
-        ? >-
-          Executeawell-boundedfinancialtransaction/task,typicallyinvolvinglargelyautomated/structuredfulfillmentprocessingwithinCurrencyExchange.
-
-          Example:Executeapaymenttransaction.
-        : type: string
+        '':
+          type: string
         FXTransactionCapturePreconditions:
           type: string
         FXTransactionCaptureTaskSchedule:
@@ -597,11 +591,8 @@ components:
     DocumentHandling:
       type: object
       properties:
-        ? >-
-          Executeawell-boundedfinancialtransaction/task,typicallyinvolvinglargelyautomated/structuredfulfillmentprocessingwithinCurrencyExchange.
-
-          Example:Executeapaymenttransaction.
-        : type: string
+        '':
+          type: string
         DocumentHandlingPreconditions:
           type: string
         DocumentHandlingTaskSchedule:
@@ -648,11 +639,8 @@ components:
     FXTransactionPricing:
       type: object
       properties:
-        ? >-
-          Executeawell-boundedfinancialtransaction/task,typicallyinvolvinglargelyautomated/structuredfulfillmentprocessingwithinCurrencyExchange.
-
-          Example:Executeapaymenttransaction.
-        : type: string
+        '':
+          type: string
         FXTransactionPricingPreconditions:
           type: string
         FXTransactionPricingTaskSchedule:

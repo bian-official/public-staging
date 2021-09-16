@@ -309,7 +309,7 @@ components:
     SpecialPricingConditionsDirectoryEntry:
       type: object
       properties:
-        CaptureandmaintainreferenceinformationaboutsometypeofentititywithinSpecialPricingConditions.:
+        '':
           type: string
         SpecialPricingConditionsDirectoryEntryDescription:
           type: string
@@ -328,7 +328,7 @@ components:
     PricingTerms:
       type: object
       properties:
-        CaptureandmaintainreferenceinformationaboutsometypeofentititywithinSpecialPricingConditions.:
+        '':
           type: string
         PricingTermsPreconditions:
           type: string

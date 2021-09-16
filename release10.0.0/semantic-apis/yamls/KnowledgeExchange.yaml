@@ -704,11 +704,8 @@ components:
     IntellectualPropertyExchangeOperatingSession:
       type: object
       properties:
-        ? >-
-          OperateequipmentandOroralargelyautomatedfacilitywithinKnowledgeExchange.
-
-          Example:Operatethebank'sinternalintranetfacility.
-        : type: string
+        '':
+          type: string
         IntellectualPropertyExchangeOperatingSessionSchedule:
           type: string
         IntellectualPropertyExchangeOperatingSessionStatus:
@@ -730,11 +727,8 @@ components:
     Review,RefinementandEditing:
       type: object
       properties:
-        ? >-
-          Operateequipmentand/oralargelyautomatedfacilitywithinKnowledgeExchange.
-
-          Example:Operatethebank'sinternalintranetfacility.
-        : type: string
+        '':
+          type: string
         Review,RefinementandEditingPreconditions:
           type: string
         Review,RefinementandEditingFunctionSchedule:
@@ -754,11 +748,8 @@ components:
     IndexingandPublication:
       type: object
       properties:
-        ? >-
-          Operateequipmentand/oralargelyautomatedfacilitywithinKnowledgeExchange.
-
-          Example:Operatethebank'sinternalintranetfacility.
-        : type: string
+        '':
+          type: string
         IndexingandPublicationPreconditions:
           type: string
         IndexingandPublicationFunctionSchedule:
@@ -778,11 +769,8 @@ components:
     CaptureandClassification:
       type: object
       properties:
-        ? >-
-          Operateequipmentand/oralargelyautomatedfacilitywithinKnowledgeExchange.
-
-          Example:Operatethebank'sinternalintranetfacility.
-        : type: string
+        '':
+          type: string
         CaptureandClassificationPreconditions:
           type: string
         CaptureandClassificationFunctionSchedule:
@@ -802,11 +790,8 @@ components:
     Archiving:
       type: object
       properties:
-        ? >-
-          Operateequipmentand/oralargelyautomatedfacilitywithinKnowledgeExchange.
-
-          Example:Operatethebank'sinternalintranetfacility.
-        : type: string
+        '':
+          type: string
         ArchivingPreconditions:
           type: string
         ArchivingFunctionSchedule:
@@ -833,11 +818,8 @@ components:
     MaintenanceandAccessAdministration:
       type: object
       properties:
-        ? >-
-          Operateequipmentand/oralargelyautomatedfacilitywithinKnowledgeExchange.
-
-          Example:Operatethebank'sinternalintranetfacility.
-        : type: string
+        '':
+          type: string
         MaintenanceandAccessAdministrationPreconditions:
           type: string
         MaintenanceandAccessAdministrationFunctionSchedule:

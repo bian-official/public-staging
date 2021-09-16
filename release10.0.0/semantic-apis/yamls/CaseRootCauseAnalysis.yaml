@@ -615,14 +615,8 @@ components:
     CustomerCaseRootCauseAnalysis:
       type: object
       properties:
-        ? >-
-          Analyzetheperformanceorbehaviorofsomeon-goingactivityorentitywithinCaseRootCauseAnalysis.
-
-          Examples:Providebehavioralinsightsandanalysisintocustomerbehaviorandanalyzefinancialmarketactivityinordertoidentifyopportunities,definepricingandevaluaterisks.
-
-
-          Analyzetheperformanceorbehaviorofsomeon-goingactivityorentity.Examples:Providebehavioralinsightsandanalysisintocustomerbehaviorandanalyzefinancialmarketactivityinordertoidentifyopportunities,definepricingandevaluaterisks.
-        : type: string
+        '':
+          type: string
         CustomerCaseRootCauseAnalysisParameterType:
           type: string
         CustomerCaseRootCauseAnalysisSelectedOption:
@@ -647,14 +641,8 @@ components:
     OperationsandServicingIssueAnalysis:
       type: object
       properties:
-        ? >-
-          Analyzetheperformanceorbehaviorofsomeon-goingactivityorentitywithinCaseRootCauseAnalysis.
-
-          Examples:Providebehavioralinsightsandanalysisintocustomerbehaviorandanalyzefinancialmarketactivityinordertoidentifyopportunities,definepricingandevaluaterisks.
-
-
-          Analyzetheperformanceorbehaviorofsomeon-goingactivityorentity.Examples:Providebehavioralinsightsandanalysisintocustomerbehaviorandanalyzefinancialmarketactivityinordertoidentifyopportunities,definepricingandevaluaterisks.
-        : type: string
+        '':
+          type: string
         OperationsandServicingIssueAnalysisPreconditions:
           type: string
         OperationsandServicingIssueAnalysisAnalysisSchedule:
@@ -676,14 +664,8 @@ components:
     CreditandFraudRelatedIssueAnalysis:
       type: object
       properties:
-        ? >-
-          Analyzetheperformanceorbehaviorofsomeon-goingactivityorentitywithinCaseRootCauseAnalysis.
-
-          Examples:Providebehavioralinsightsandanalysisintocustomerbehaviorandanalyzefinancialmarketactivityinordertoidentifyopportunities,definepricingandevaluaterisks.
-
-
-          Analyzetheperformanceorbehaviorofsomeon-goingactivityorentity.Examples:Providebehavioralinsightsandanalysisintocustomerbehaviorandanalyzefinancialmarketactivityinordertoidentifyopportunities,definepricingandevaluaterisks.
-        : type: string
+        '':
+          type: string
         CreditandFraudRelatedIssueAnalysisPreconditions:
           type: string
         CreditandFraudRelatedIssueAnalysisAnalysisSchedule:
@@ -705,14 +687,8 @@ components:
     ProductandServiceIssueAnalysis:
       type: object
       properties:
-        ? >-
-          Analyzetheperformanceorbehaviorofsomeon-goingactivityorentitywithinCaseRootCauseAnalysis.
-
-          Examples:Providebehavioralinsightsandanalysisintocustomerbehaviorandanalyzefinancialmarketactivityinordertoidentifyopportunities,definepricingandevaluaterisks.
-
-
-          Analyzetheperformanceorbehaviorofsomeon-goingactivityorentity.Examples:Providebehavioralinsightsandanalysisintocustomerbehaviorandanalyzefinancialmarketactivityinordertoidentifyopportunities,definepricingandevaluaterisks.
-        : type: string
+        '':
+          type: string
         ProductandServiceIssueAnalysisPreconditions:
           type: string
         ProductandServiceIssueAnalysisAnalysisSchedule:
