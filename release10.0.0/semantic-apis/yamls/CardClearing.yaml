@@ -1,7 +1,7 @@
 openapi: 3.0.1
 info:
   title: Card Clearing
-  description: This service domain orchestrates the capture and consolidation of card financial transactions originating from various sources, such as POS Network, E-Commerce Gateway, ATM Network, or Card Case Management. It also handles the clearing of the transactions from the Acquirers to the Issuers through the Card Networks
+  description: ''
   version: 10.0.0
 servers:
 - description: SwaggerHub API Auto Mocking

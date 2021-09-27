@@ -1,7 +1,7 @@
 openapi: 3.0.1
 info:
   title: Product Broker Agreement
-  description: This service domain maintains product broker contractual and service level agreements and tracks and confirms compliance and service related activity/volume goals when necessary
+  description: ''
   version: 10.0.0
 servers:
 - description: SwaggerHub API Auto Mocking

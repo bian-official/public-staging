@@ -1,7 +1,7 @@
 openapi: 3.0.1
 info:
   title: Legal Compliance
-  description: Provide specialist legal advice, assess for legal compliance and resolve legal cases as they occur
+  description: ''
   version: 10.0.0
 servers:
 - description: SwaggerHub API Auto Mocking

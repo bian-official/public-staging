@@ -1,7 +1,7 @@
 openapi: 3.0.1
 info:
   title: Collateral Allocation Management
-  description: This service domain manages the holding, valuation and allocation of a customer's collateral assets to products on behalf of a customer
+  description: ''
   version: 10.0.0
 servers:
 - description: SwaggerHub API Auto Mocking

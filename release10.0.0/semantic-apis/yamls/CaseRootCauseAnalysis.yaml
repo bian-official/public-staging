@@ -1,7 +1,7 @@
 openapi: 3.0.1
 info:
   title: Case Root Cause Analysis
-  description: Root cause analysis business function reviews case reports to identify possible improvements to eliminate/mitigate servicing issues
+  description: ''
   version: 10.0.0
 servers:
 - description: SwaggerHub API Auto Mocking

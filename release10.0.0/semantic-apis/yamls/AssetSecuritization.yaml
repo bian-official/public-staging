@@ -1,7 +1,7 @@
 openapi: 3.0.1
 info:
   title: Asset Securitization
-  description: Determine and select assets for securitization as needed to maintain and optimize the Bank's portfolio. Administer the securitization process
+  description: ''
   version: 10.0.0
 servers:
 - description: SwaggerHub API Auto Mocking

@@ -1,7 +1,7 @@
 openapi: 3.0.1
 info:
   title: Card Case
-  description: This service domain handles the processing of a customer card case, typically a disputed charge
+  description: ''
   version: 10.0.0
 servers:
 - description: SwaggerHub API Auto Mocking

@@ -1,7 +1,7 @@
 openapi: 3.0.1
 info:
   title: Credit Facility
-  description: The Credit Facility Service Domain manages the Credit Facilities that a Corporate Customer has with the bank. A Credit Facility is an agreement between the bank and a (corporate) customer to allow the customer to acquire asset products from the bank up to the limit of the credit facility without the need for a full due diligence and underwriting for each of these products.
+  description: ''
   version: 10.0.0
 servers:
 - description: SwaggerHub API Auto Mocking

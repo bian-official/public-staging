@@ -1,7 +1,7 @@
 openapi: 3.0.1
 info:
   title: Customer Relationship Management
-  description: This service domain develops and executes a customer plan to maintain and build a customer relationship. Activities include ongoing customer contact, tracking internal and external events and activity of interest and relevance, product and service matching and sales, processing ad-hoc queries, trouble shooting and issue resolution including the initial phases of troubled account recovery
+  description: ''
   version: 10.0.0
 servers:
 - description: SwaggerHub API Auto Mocking

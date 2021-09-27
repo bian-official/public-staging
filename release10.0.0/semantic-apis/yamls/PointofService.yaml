@@ -1,7 +1,7 @@
 openapi: 3.0.1
 info:
   title: Point of Service
-  description: This service domain operates servicing positions within the bank. It administers all media connections, inventory holdings (e.g. cash), provides access to support utilities and tracks servicing activity -e.g. time spent, activity logs, capturing servicing events including commission and training related actions. In cases servicing positions can be automated
+  description: ''
   version: 10.0.0
 servers:
 - description: SwaggerHub API Auto Mocking

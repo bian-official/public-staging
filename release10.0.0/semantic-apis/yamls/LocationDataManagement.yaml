@@ -1,7 +1,7 @@
 openapi: 3.0.1
 info:
   title: Location Data Management
-  description: This service domain maintain details of the use and state of locations of interest to the bank. This can include both physical and virtual addresses. It is used to check for valid use and for sales/marketing activities
+  description: ''
   version: 10.0.0
 servers:
 - description: SwaggerHub API Auto Mocking

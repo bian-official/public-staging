@@ -1,7 +1,7 @@
 openapi: 3.0.1
 info:
   title: Correspondence
-  description: This service domain orchestrates the production of pre-formatted correspondence and batches of correspondence (e.g. mail shots).
+  description: ''
   version: 10.0.0
 servers:
 - description: SwaggerHub API Auto Mocking

@@ -1,7 +1,7 @@
 openapi: 3.0.1
 info:
   title: Position Keeping
-  description: This service domain maintains a financial transaction log to support production. Reconciled financial transactions are subsequently posted to the accounting systems
+  description: ''
   version: 10.0.0
 servers:
 - description: SwaggerHub API Auto Mocking

@@ -1,7 +1,7 @@
 openapi: 3.0.1
 info:
   title: Interbank Relationship Management
-  description: Manage the bank's relationship with other banks, covering any specific agreements that may be in place and overseeing operational issues.
+  description: ''
   version: 10.0.0
 servers:
 - description: SwaggerHub API Auto Mocking

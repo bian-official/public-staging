@@ -1,7 +1,7 @@
 openapi: 3.0.1
 info:
   title: Delinquent Account Handling
-  description: This service domain handles delinquent accounts (typically for active credit/charge cards) for follow-up of payments due through periodic review and contacts. This process ends when the account is cancelled and is transferred to Collections
+  description: ''
   version: 10.0.0
 servers:
 - description: SwaggerHub API Auto Mocking
