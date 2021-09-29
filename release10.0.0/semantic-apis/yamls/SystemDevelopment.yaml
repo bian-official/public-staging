@@ -1,7 +1,7 @@
 openapi: 3.0.1
 info:
   title: System Development
-  description: ''
+  description: Develop new, enhance existing applications and integrate package based systems solutions
   version: 10.0.0
 servers:
 - description: SwaggerHub API Auto Mocking

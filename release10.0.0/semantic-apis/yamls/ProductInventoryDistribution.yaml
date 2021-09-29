@@ -1,7 +1,7 @@
 openapi: 3.0.1
 info:
   title: Product Inventory Distribution
-  description: ''
+  description: Administer the provisioning and distribution of product inventory across the branch network and/or distribute direct to customers (e.g. mail) where appropriate
   version: 10.0.0
 servers:
 - description: SwaggerHub API Auto Mocking

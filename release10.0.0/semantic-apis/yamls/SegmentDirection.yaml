@@ -1,7 +1,7 @@
 openapi: 3.0.1
 info:
   title: Segment Direction
-  description: ''
+  description: Define market segments and develop and assess performance against the segment plan's performance goals
   version: 10.0.0
 servers:
 - description: SwaggerHub API Auto Mocking

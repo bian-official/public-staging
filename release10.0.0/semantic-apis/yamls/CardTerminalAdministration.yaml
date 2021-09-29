@@ -1,7 +1,7 @@
 openapi: 3.0.1
 info:
   title: Card Terminal Administration
-  description: ''
+  description: This service domain administers the POS Network including the inventory, terminal characteristics, deployment and status of the POS devices.
   version: 10.0.0
 servers:
 - description: SwaggerHub API Auto Mocking

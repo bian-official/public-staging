@@ -1,7 +1,7 @@
 openapi: 3.0.1
 info:
   title: IT Standards And Guidelines
-  description: ''
+  description: Define and apply comprehensive IT architectures, policies and standards as appropriate. Also define the IT usage guidelines and procedures governing systems use across the enterprise
   version: 10.0.0
 servers:
 - description: SwaggerHub API Auto Mocking

@@ -1,7 +1,7 @@
 openapi: 3.0.1
 info:
   title: Financial Gateway
-  description: ''
+  description: This service domain operates automated message interfaces to secure networks such as SWIFT, TELEX, ACH and Financial Market/Exchange reporting services
   version: 10.0.0
 servers:
 - description: SwaggerHub API Auto Mocking

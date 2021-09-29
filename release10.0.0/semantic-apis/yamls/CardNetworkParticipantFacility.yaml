@@ -1,7 +1,7 @@
 openapi: 3.0.1
 info:
   title: Card Network Participant Facility
-  description: ''
+  description: This service domain orchestrates the activities related to the inclusion of new Acquirers and Issuers in the Card Network, their terms and conditions and their status.
   version: 10.0.0
 servers:
 - description: SwaggerHub API Auto Mocking

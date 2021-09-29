@@ -1,7 +1,7 @@
 openapi: 3.0.1
 info:
   title: Reward Points Account
-  description: ''
+  description: Administer the booking and remittance of rewards points
   version: 10.0.0
 servers:
 - description: SwaggerHub API Auto Mocking

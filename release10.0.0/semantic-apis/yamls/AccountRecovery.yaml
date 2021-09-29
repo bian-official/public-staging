@@ -1,7 +1,7 @@
 openapi: 3.0.1
 info:
   title: Account Recovery
-  description: ''
+  description: This service domain handles the restructuring of a distressed account (loan) after standard recovery procedures have been exhausted
   version: 10.0.0
 servers:
 - description: SwaggerHub API Auto Mocking

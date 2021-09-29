@@ -1,7 +1,7 @@
 openapi: 3.0.1
 info:
   title: Party Authentication
-  description: ''
+  description: This service domain provides a customer identify authentication service covering all channels and devices to support access to the banks products and services
   version: 10.0.0
 servers:
 - description: SwaggerHub API Auto Mocking

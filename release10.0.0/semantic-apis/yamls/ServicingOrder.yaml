@@ -1,7 +1,7 @@
 openapi: 3.0.1
 info:
   title: Servicing Order
-  description: ''
+  description: This service domain handles the processing of a customer servicing request as a predefined procedure. A range of standard servicing requests can be supported. The process can include a check of permissions when the request is made by a third party/service provider
   version: 10.0.0
 servers:
 - description: SwaggerHub API Auto Mocking

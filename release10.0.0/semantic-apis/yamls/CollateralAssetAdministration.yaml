@@ -1,7 +1,7 @@
 openapi: 3.0.1
 info:
   title: Collateral Asset Administration
-  description: ''
+  description: This service domain maintains the status of a customers collateral assets, including scheduled and ad-hoc valuations and confirmation of the correct completion of scheduled maintenance tasks.
   version: 10.0.0
 servers:
 - description: SwaggerHub API Auto Mocking

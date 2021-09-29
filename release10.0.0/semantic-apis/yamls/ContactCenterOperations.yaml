@@ -1,7 +1,7 @@
 openapi: 3.0.1
 info:
   title: Contact Center Operations
-  description: ''
+  description: Administer the day to day activity in the contact center - allocate positions and track staff availability and performance
   version: 10.0.0
 servers:
 - description: SwaggerHub API Auto Mocking

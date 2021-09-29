@@ -1,7 +1,7 @@
 openapi: 3.0.1
 info:
   title: Accounts Receivable
-  description: ''
+  description: This service domain handles accounts receivable for invoices issue by the bank to customers and partners. It includes follow-up and resolution activity for delayed/missed payments
   version: 10.0.0
 servers:
 - description: SwaggerHub API Auto Mocking

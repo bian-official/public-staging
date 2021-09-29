@@ -1,7 +1,7 @@
 openapi: 3.0.1
 info:
   title: Customer Workbench
-  description: ''
+  description: This service domain represents customer side devices. Most commonly providing a customer access portal to the banks products and services through any suitable channel and device
   version: 10.0.0
 servers:
 - description: SwaggerHub API Auto Mocking

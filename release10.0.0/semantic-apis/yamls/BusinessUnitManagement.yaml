@@ -1,7 +1,7 @@
 openapi: 3.0.1
 info:
   title: Business Unit Management
-  description: ''
+  description: Track and report on business unit activity and financial performance
   version: 10.0.0
 servers:
 - description: SwaggerHub API Auto Mocking

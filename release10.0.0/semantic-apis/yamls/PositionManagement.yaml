@@ -1,7 +1,7 @@
 openapi: 3.0.1
 info:
   title: Position Management
-  description: ''
+  description: The Service Domain tracks the bank's consolidated financial positions for major customers and complex market conditions
   version: 10.0.0
 servers:
 - description: SwaggerHub API Auto Mocking

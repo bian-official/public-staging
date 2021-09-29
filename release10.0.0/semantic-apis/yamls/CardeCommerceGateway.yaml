@@ -1,7 +1,7 @@
 openapi: 3.0.1
 info:
   title: Card eCommerce Gateway
-  description: ''
+  description: This service domain orchestrates the processing of e-commerce transactions for authentication, authorization and capture of the financial transactions.
   version: 10.0.0
 servers:
 - description: SwaggerHub API Auto Mocking
