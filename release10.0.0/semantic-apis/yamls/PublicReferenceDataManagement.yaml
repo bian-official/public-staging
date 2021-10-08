@@ -1,7 +1,7 @@
 openapi: 3.0.1
 info:
   title: Public Reference Data Management
-  description: ''
+  description: Provide structured access to standard 'global' reference data and definitions associated with market activity such as currency, country and segment identifiers.
   version: 10.0.0
 servers:
 - description: SwaggerHub API Auto Mocking

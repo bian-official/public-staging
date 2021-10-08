@@ -1,7 +1,7 @@
 openapi: 3.0.1
 info:
   title: Prospect Campaign Execution
-  description: ''
+  description: Execute a prospect campaign (version) and track and respond to impact
   version: 10.0.0
 servers:
 - description: SwaggerHub API Auto Mocking

@@ -1,7 +1,7 @@
 openapi: 3.0.1
 info:
   title: Customer Behavior Insights
-  description: ''
+  description: This service domain applies behavioral analysis to customer event history to maintain a range of customer ratings/scores (such as 'propensity to buy') and to detect life events or trends
   version: 10.0.0
 servers:
 - description: SwaggerHub API Auto Mocking

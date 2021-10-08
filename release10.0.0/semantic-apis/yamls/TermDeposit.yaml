@@ -1,7 +1,7 @@
 openapi: 3.0.1
 info:
   title: Term Deposit
-  description: ''
+  description: '<span style=" font-size: 10pt;">This service domain handles the fulfillment of instances of the term deposit product&nbsp;<p style="margin-top: 3pt;"></span>'
   version: 10.0.0
 servers:
 - description: SwaggerHub API Auto Mocking

@@ -1,7 +1,7 @@
 openapi: 3.0.1
 info:
   title: Merchant Acquiring Facility
-  description: ''
+  description: This service domain orchestrates the activities related to Merchant fulfillment, Merchant Account maintenance, Merchant transactional activities and settlement, including the billing of merchant fees and charges.
   version: 10.0.0
 servers:
 - description: SwaggerHub API Auto Mocking

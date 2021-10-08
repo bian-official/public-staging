@@ -1,7 +1,7 @@
 openapi: 3.0.1
 info:
   title: Management Manual
-  description: ''
+  description: Develop, maintain and promulgate the management manual of required procedures and guidelines. Provide support in its reference and interpretation as appropriate
   version: 10.0.0
 servers:
 - description: SwaggerHub API Auto Mocking

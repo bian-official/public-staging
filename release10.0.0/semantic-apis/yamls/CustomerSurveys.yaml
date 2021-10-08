@@ -1,7 +1,7 @@
 openapi: 3.0.1
 info:
   title: Customer Surveys
-  description: ''
+  description: Define and execute and analyze customer surveys
   version: 10.0.0
 servers:
 - description: SwaggerHub API Auto Mocking

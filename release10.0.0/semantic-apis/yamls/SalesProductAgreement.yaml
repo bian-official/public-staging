@@ -1,7 +1,7 @@
 openapi: 3.0.1
 info:
   title: Sales Product Agreement
-  description: ''
+  description: This service domain maintains a structured legal agreement defining the contractual terms and conditions for an in-force product for a customer. It is subordinate to the customer's master agreement that is maintained by the Customer Agreement service domain
   version: 10.0.0
 servers:
 - description: SwaggerHub API Auto Mocking

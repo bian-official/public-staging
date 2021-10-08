@@ -1,7 +1,7 @@
 openapi: 3.0.1
 info:
   title: Product Quality Assurance
-  description: ''
+  description: Maintain and execute a portfolio of product quality assurance tests and certifications that can be applied to evaluate any aspect of production activity for quality assurance
   version: 10.0.0
 servers:
 - description: SwaggerHub API Auto Mocking

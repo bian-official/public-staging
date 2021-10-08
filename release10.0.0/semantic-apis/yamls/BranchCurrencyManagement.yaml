@@ -1,7 +1,7 @@
 openapi: 3.0.1
 info:
   title: Branch Currency Management
-  description: ''
+  description: Track cash inventory, project demand and ensure all cash is accounted for within the branch
   version: 10.0.0
 servers:
 - description: SwaggerHub API Auto Mocking

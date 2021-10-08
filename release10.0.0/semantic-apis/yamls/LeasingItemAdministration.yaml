@@ -1,7 +1,7 @@
 openapi: 3.0.1
 info:
   title: Leasing Item Administration
-  description: ''
+  description: Track the status of the assets underlying leasing agreements as they represent collateral items that could be accessed in the event of account recovery
   version: 10.0.0
 servers:
 - description: SwaggerHub API Auto Mocking

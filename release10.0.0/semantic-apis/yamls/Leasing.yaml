@@ -1,7 +1,7 @@
 openapi: 3.0.1
 info:
   title: Leasing
-  description: ''
+  description: The leasing products enables customers to finance equipment purchases using the leased item as collateral when necessary
   version: 10.0.0
 servers:
 - description: SwaggerHub API Auto Mocking
