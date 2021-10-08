@@ -1,7 +1,7 @@
 openapi: 3.0.1
 info:
   title: Branch Location Management
-  description: Manage and oversee branch activity, assign resources to optimize branch performance
+  description: ''
   version: 10.0.0
 servers:
 - description: SwaggerHub API Auto Mocking

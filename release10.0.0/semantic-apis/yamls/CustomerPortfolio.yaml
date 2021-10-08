@@ -1,7 +1,7 @@
 openapi: 3.0.1
 info:
   title: Customer Portfolio
-  description: Maintain a portfolio of analytical views of the customer base to support customer segment profitability and performance analysis
+  description: ''
   version: 10.0.0
 servers:
 - description: SwaggerHub API Auto Mocking

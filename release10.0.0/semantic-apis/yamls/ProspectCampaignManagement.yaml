@@ -1,7 +1,7 @@
 openapi: 3.0.1
 info:
   title: Prospect Campaign Management
-  description: Assess the coverage and impact of external/prospect campaigns and redirect campaign development and execution activity accordingly
+  description: ''
   version: 10.0.0
 servers:
 - description: SwaggerHub API Auto Mocking

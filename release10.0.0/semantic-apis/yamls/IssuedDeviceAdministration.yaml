@@ -1,7 +1,7 @@
 openapi: 3.0.1
 info:
   title: Issued Device Administration
-  description: This service domain administers the issuance of authentication tokens to customers and third party service providers. Tokens here include physical devices such as cards, fobs, readers and intangible 'devices' such as passwords and secret questions. Administration includes version tracking, replacement and duration/frequency limits. Specific product/service access permissions may be associated with an issued token when appropriate
+  description: ''
   version: 10.0.0
 servers:
 - description: SwaggerHub API Auto Mocking

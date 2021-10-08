@@ -1,7 +1,7 @@
 openapi: 3.0.1
 info:
   title: Product Matching
-  description: Capability used to match eligible product and product combinations to a customer based on prevailing conditions such as customer type, product interest, solicitation/retention, campaign alignment
+  description: ''
   version: 10.0.0
 servers:
 - description: SwaggerHub API Auto Mocking

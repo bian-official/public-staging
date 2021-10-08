@@ -1,7 +1,7 @@
 openapi: 3.0.1
 info:
   title: Custody Administration
-  description: A service to provide safe custody services for marketable securities for bank customers
+  description: ''
   version: 10.0.0
 servers:
 - description: SwaggerHub API Auto Mocking

@@ -1,7 +1,7 @@
 openapi: 3.0.1
 info:
   title: Product Deployment
-  description: Plan and administer the production deployment new and updated products and services
+  description: ''
   version: 10.0.0
 servers:
 - description: SwaggerHub API Auto Mocking

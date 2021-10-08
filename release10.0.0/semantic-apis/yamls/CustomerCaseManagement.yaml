@@ -1,7 +1,7 @@
 openapi: 3.0.1
 info:
   title: Customer Case Management
-  description: Track and assess case load and resolution activity - allocate resources as necessary to optimize case resolution performance
+  description: ''
   version: 10.0.0
 servers:
 - description: SwaggerHub API Auto Mocking

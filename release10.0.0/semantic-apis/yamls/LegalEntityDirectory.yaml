@@ -1,7 +1,7 @@
 openapi: 3.0.1
 info:
   title: Legal Entity Directory
-  description: This service domain maintains details of the legal entity structure of the party including dependents and associations for individuals and ownership/subsidiary structures for corporations. Some financial indicators and product coverage/activity details can be included where this defines the nature of the legal entity relationship in particular for corporate entities
+  description: ''
   version: 10.0.0
 servers:
 - description: SwaggerHub API Auto Mocking

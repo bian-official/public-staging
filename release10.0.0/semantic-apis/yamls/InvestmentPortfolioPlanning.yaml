@@ -1,7 +1,7 @@
 openapi: 3.0.1
 info:
   title: Investment Portfolio Planning
-  description: Agree the policies and required make-up of an investment portfolio and ensure all required bank and regulatory terms and conditions are addressed
+  description: ''
   version: 10.0.0
 servers:
 - description: SwaggerHub API Auto Mocking

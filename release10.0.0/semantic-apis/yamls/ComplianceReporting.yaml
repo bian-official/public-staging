@@ -1,7 +1,7 @@
 openapi: 3.0.1
 info:
   title: Compliance Reporting
-  description: This service domain administers and orchestrates the tasks required to apply and report on internal audit control and reporting activity
+  description: ''
   version: 10.0.0
 servers:
 - description: SwaggerHub API Auto Mocking

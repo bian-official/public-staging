@@ -1,7 +1,7 @@
 openapi: 3.0.1
 info:
   title: Product Combination
-  description: Product Combination supports bundled products applying necessary constraints on embedded product fulfillment and ensuring product performance analysis takes correct account of embedded products' contribution
+  description: ''
   version: 10.0.0
 servers:
 - description: SwaggerHub API Auto Mocking
