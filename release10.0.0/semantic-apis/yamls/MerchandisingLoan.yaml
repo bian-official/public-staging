@@ -1,7 +1,7 @@
 openapi: 3.0.1
 info:
   title: Merchandising Loan
-  description: Fulfillment of loan product used in the purchase of a larger merchandise item such as a car or boat. The purchased item is typically treated as collateral for the loan
+  description: ''
   version: 10.0.0
 servers:
 - description: SwaggerHub API Auto Mocking
@@ -10,21 +10,21 @@ paths:
   /MerchandisingLoan/{merchandisingloanId}/Control:
     put:
       tags:
-      - CR - MerchandisingLoanArrangement
-      summary: CoCR Control the processing of Merchandising Loan Arrangement
-      description: CoCR Control the processing of Merchandising Loan Arrangement
+      - CR - MerchandisingLoanFacility
+      summary: CoCR Control the processing of Merchandising Loan Facility
+      description: CoCR Control the processing of Merchandising Loan Facility
       operationId: Control
       parameters:
       - $ref: '#/components/parameters/MerchandisingLoanID'
       requestBody:
-        $ref: '#/components/requestBodies/MerchandisingLoanArrangement'
+        $ref: '#/components/requestBodies/MerchandisingLoanFacility'
       responses:
         200:
           description: Success
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/MerchandisingLoanArrangement'
+                $ref: '#/components/schemas/MerchandisingLoanFacility'
         400:
           $ref: '#/components/responses/BadRequestError'
         401:
@@ -40,21 +40,21 @@ paths:
   /MerchandisingLoan/{merchandisingloanId}/Exchange:
     put:
       tags:
-      - CR - MerchandisingLoanArrangement
-      summary: EcCR Accept, verify, etc. aspects of Merchandising Loan Arrangement processing
-      description: EcCR Accept, verify, etc. aspects of Merchandising Loan Arrangement processing
+      - CR - MerchandisingLoanFacility
+      summary: EcCR Accept, verify, etc. aspects of Merchandising Loan Facility processing
+      description: EcCR Accept, verify, etc. aspects of Merchandising Loan Facility processing
       operationId: Exchange
       parameters:
       - $ref: '#/components/parameters/MerchandisingLoanID'
       requestBody:
-        $ref: '#/components/requestBodies/MerchandisingLoanArrangement'
+        $ref: '#/components/requestBodies/MerchandisingLoanFacility'
       responses:
         200:
           description: Success
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/MerchandisingLoanArrangement'
+                $ref: '#/components/schemas/MerchandisingLoanFacility'
         400:
           $ref: '#/components/responses/BadRequestError'
         401:
@@ -70,21 +70,21 @@ paths:
   /MerchandisingLoan/{merchandisingloanId}/Execute:
     put:
       tags:
-      - CR - MerchandisingLoanArrangement
-      summary: ExCR Execute an available automated action for Merchandising Loan Arrangement
-      description: ExCR Execute an available automated action for Merchandising Loan Arrangement
+      - CR - MerchandisingLoanFacility
+      summary: ExCR Execute an available automated action for Merchandising Loan Facility
+      description: ExCR Execute an available automated action for Merchandising Loan Facility
       operationId: Execute
       parameters:
       - $ref: '#/components/parameters/MerchandisingLoanID'
       requestBody:
-        $ref: '#/components/requestBodies/MerchandisingLoanArrangement'
+        $ref: '#/components/requestBodies/MerchandisingLoanFacility'
       responses:
         200:
           description: Success
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/MerchandisingLoanArrangement'
+                $ref: '#/components/schemas/MerchandisingLoanFacility'
         400:
           $ref: '#/components/responses/BadRequestError'
         401:
@@ -100,20 +100,20 @@ paths:
   /MerchandisingLoan/Initiate:
     post:
       tags:
-      - CR - MerchandisingLoanArrangement
-      summary: InCR Instantiate a new Merchandising Loan Arrangement
-      description: InCR Instantiate a new Merchandising Loan Arrangement
+      - CR - MerchandisingLoanFacility
+      summary: InCR Instantiate a new Merchandising Loan Facility
+      description: InCR Instantiate a new Merchandising Loan Facility
       operationId: Initiate
       parameters: []
       requestBody:
-        $ref: '#/components/requestBodies/MerchandisingLoanArrangement'
+        $ref: '#/components/requestBodies/MerchandisingLoanFacility'
       responses:
         200:
           description: Success
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/MerchandisingLoanArrangement'
+                $ref: '#/components/schemas/MerchandisingLoanFacility'
         400:
           $ref: '#/components/responses/BadRequestError'
         401:
@@ -129,9 +129,9 @@ paths:
   /MerchandisingLoan/{merchandisingloanId}/Retrieve:
     get:
       tags:
-      - CR - MerchandisingLoanArrangement
-      summary: ReCR Retrieve details about any aspect of Merchandising Loan Arrangement
-      description: ReCR Retrieve details about any aspect of Merchandising Loan Arrangement
+      - CR - MerchandisingLoanFacility
+      summary: ReCR Retrieve details about any aspect of Merchandising Loan Facility
+      description: ReCR Retrieve details about any aspect of Merchandising Loan Facility
       operationId: Retrieve
       parameters:
       - $ref: '#/components/parameters/MerchandisingLoanID'
@@ -141,7 +141,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/MerchandisingLoanArrangement'
+                $ref: '#/components/schemas/MerchandisingLoanFacility'
         400:
           $ref: '#/components/responses/BadRequestError'
         401:
@@ -157,21 +157,21 @@ paths:
   /MerchandisingLoan/{merchandisingloanId}/Request:
     put:
       tags:
-      - CR - MerchandisingLoanArrangement
-      summary: RqCR Request manual intervention or a decision with respect to Merchandising Loan Arrangement
-      description: RqCR Request manual intervention or a decision with respect to Merchandising Loan Arrangement
+      - CR - MerchandisingLoanFacility
+      summary: RqCR Request manual intervention or a decision with respect to Merchandising Loan Facility
+      description: RqCR Request manual intervention or a decision with respect to Merchandising Loan Facility
       operationId: Request
       parameters:
       - $ref: '#/components/parameters/MerchandisingLoanID'
       requestBody:
-        $ref: '#/components/requestBodies/MerchandisingLoanArrangement'
+        $ref: '#/components/requestBodies/MerchandisingLoanFacility'
       responses:
         200:
           description: Success
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/MerchandisingLoanArrangement'
+                $ref: '#/components/schemas/MerchandisingLoanFacility'
         400:
           $ref: '#/components/responses/BadRequestError'
         401:
@@ -187,21 +187,21 @@ paths:
   /MerchandisingLoan/{merchandisingloanId}/Update:
     put:
       tags:
-      - CR - MerchandisingLoanArrangement
-      summary: UpCR Update details relating to Merchandising Loan Arrangement
-      description: UpCR Update details relating to Merchandising Loan Arrangement
+      - CR - MerchandisingLoanFacility
+      summary: UpCR Update details relating to Merchandising Loan Facility
+      description: UpCR Update details relating to Merchandising Loan Facility
       operationId: Update
       parameters:
       - $ref: '#/components/parameters/MerchandisingLoanID'
       requestBody:
-        $ref: '#/components/requestBodies/MerchandisingLoanArrangement'
+        $ref: '#/components/requestBodies/MerchandisingLoanFacility'
       responses:
         200:
           description: Success
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/MerchandisingLoanArrangement'
+                $ref: '#/components/schemas/MerchandisingLoanFacility'
         400:
           $ref: '#/components/responses/BadRequestError'
         401:
@@ -1453,79 +1453,37 @@ paths:
           $ref: '#/components/responses/InternalServerError'
 components:
   schemas:
-    MerchandisingLoanArrangement:
+    MerchandisingLoanFacility:
       type: object
       properties:
-        MerchandisingLoanArrangementParameterType:
+        MerchandisingLoanFacilityParameterType:
           type: string
-        MerchandisingLoanArrangementSelectedOption:
+        MerchandisingLoanFacilitySelectedOption:
           type: string
-        MerchandisingLoanArrangementType:
+        MerchandisingLoanFacilityType:
           type: string
-        MerchandisingLoanArrangementReference:
+        MerchandisingLoanFacilityReference:
           type: object
-        MerchandisingLoanArrangementSchedule:
+        MerchandisingLoanFacilitySchedule:
           type: string
-        MerchandisingLoanArrangementStatus:
+        MerchandisingLoanFacilityStatus:
           type: string
-        MerchandisingLoanArrangementAssociatedParty:
+        MerchandisingLoanFacilityAssociatedParty:
           type: string
-        MerchandisingLoanArrangementCurrency:
+        MerchandisingLoanFacilityCurrency:
           type: string
-        MerchandisingLoanArrangementRegulationReference:
+        MerchandisingLoanFacilityRegulationReference:
           type: object
-        MerchandisingLoanArrangementRegulationType:
+        MerchandisingLoanFacilityRegulationType:
           type: string
-        MerchandisingLoanArrangementJurisdiction:
+        MerchandisingLoanFacilityJurisdiction:
           type: string
-        MerchandisingLoanArrangementBookingLocation:
+        MerchandisingLoanFacilityBookingLocation:
           type: string
-        MerchandisingLoanArrangementAccountType:
+        MerchandisingLoanFacilityAccountType:
           type: string
-        MerchandisingLoanArrangementAccountReference:
+        MerchandisingLoanFacilityAccountReference:
           type: object
-    FinancialInstrument:
-      type: object
-      properties:
-        FinancialInstrumentPreconditions:
-          type: string
-        FinancialInstrumentFeatureSchedule:
-          type: string
-        FinancialInstrument:
-          type: object
-        FinancialInstrumentPostconditions:
-          type: string
-        FinancialInstrumentFinancialInstrumentServiceType:
-          type: string
-        FinancialInstrumentFinancialInstrumentServiceDescription:
-          type: string
-        FinancialInstrumentFinancialInstrumentServiceInputsandOuputs:
-          type: string
-        FinancialInstrumentFinancialInstrumentServiceWorkProduct:
-          type: string
-        FinancialInstrumentFinancialInstrumentServiceName:
-          type: string
-    FinancialAccounting:
-      type: object
-      properties:
-        FinancialAccountingPreconditions:
-          type: string
-        FinancialAccountingFeatureSchedule:
-          type: string
-        FinancialAccounting:
-          type: object
-        FinancialAccountingPostconditions:
-          type: string
-        FinancialAccountingFinancialAccountingServiceType:
-          type: string
-        FinancialAccountingFinancialAccountingServiceDescription:
-          type: string
-        FinancialAccountingFinancialAccountingServiceInputsandOuputs:
-          type: string
-        FinancialAccountingFinancialAccountingServiceWorkProduct:
-          type: string
-        FinancialAccountingFinancialAccountingServiceName:
-          type: string
     Deposits:
       type: object
       properties:
@@ -1546,6 +1504,55 @@ components:
         DepositsDepositProcessingServiceWorkProduct:
           type: string
         DepositsDepositProcessingServiceName:
+          type: string
+    Lien:
+      type: object
+      properties:
+        LienPreconditions:
+          type: string
+        LienFeatureSchedule:
+          type: string
+        BusinessService:
+          type: object
+        LienPostconditions:
+          type: string
+        LienServiceType:
+          type: string
+        LienServiceDescription:
+          type: string
+        LienServiceInputsandOuputs:
+          type: string
+        LienServiceWorkProduct:
+          type: string
+        LienServiceName:
+          type: string
+    MerchandisingLoanOutcome:
+      type: object
+      properties:
+        MerchandisingLoanFinancialFacility:
+          type: string
+        MerchandisingLoanWorkProduct:
+          type: string
+    Collateral:
+      type: object
+      properties:
+        CollateralPreconditions:
+          type: string
+        CollateralFeatureSchedule:
+          type: string
+        BusinessService:
+          type: object
+        CollateralPostconditions:
+          type: string
+        CollateralServiceType:
+          type: string
+        CollateralServiceDescription:
+          type: string
+        CollateralServiceInputsandOuputs:
+          type: string
+        CollateralServiceWorkProduct:
+          type: string
+        CollateralServiceName:
           type: string
     IssuedDevice:
       type: object
@@ -1589,68 +1596,47 @@ components:
           type: string
         SweepServiceName:
           type: string
-    Withdrawals:
+    Fees:
       type: object
       properties:
-        WithdrawalsPreconditions:
+        FeesPreconditions:
           type: string
-        WithdrawalsFeatureSchedule:
-          type: string
-        WithdrawalProcessing:
-          type: object
-        WithdrawalsPostconditions:
-          type: string
-        WithdrawalsWithdrawalProcessingServiceType:
-          type: string
-        WithdrawalsWithdrawalProcessingServiceDescription:
-          type: string
-        WithdrawalsWithdrawalProcessingServiceInputsandOuputs:
-          type: string
-        WithdrawalsWithdrawalProcessingServiceWorkProduct:
-          type: string
-        WithdrawalsWithdrawalProcessingServiceName:
-          type: string
-    Lien:
-      type: object
-      properties:
-        LienPreconditions:
-          type: string
-        LienFeatureSchedule:
+        FeesFeatureSchedule:
           type: string
         BusinessService:
           type: object
-        LienPostconditions:
+        FeesPostconditions:
           type: string
-        LienServiceType:
+        FeesServiceType:
           type: string
-        LienServiceDescription:
+        FeesServiceDescription:
           type: string
-        LienServiceInputsandOuputs:
+        FeesServiceInputsandOuputs:
           type: string
-        LienServiceWorkProduct:
+        FeesServiceWorkProduct:
           type: string
-        LienServiceName:
+        FeesServiceName:
           type: string
-    Collateral:
+    Billing:
       type: object
       properties:
-        CollateralPreconditions:
+        BillingPreconditions:
           type: string
-        CollateralFeatureSchedule:
+        BillingFeatureSchedule:
           type: string
         BusinessService:
           type: object
-        CollateralPostconditions:
+        BillingPostconditions:
           type: string
-        CollateralServiceType:
+        BillingServiceType:
           type: string
-        CollateralServiceDescription:
+        BillingServiceDescription:
           type: string
-        CollateralServiceInputsandOuputs:
+        BillingServiceInputsandOuputs:
           type: string
-        CollateralServiceWorkProduct:
+        BillingServiceWorkProduct:
           type: string
-        CollateralServiceName:
+        BillingServiceName:
           type: string
     Interest:
       type: object
@@ -1694,54 +1680,68 @@ components:
           type: string
         PaymentsServiceName:
           type: string
-    Billing:
+    FinancialInstrument:
       type: object
       properties:
-        BillingPreconditions:
+        FinancialInstrumentPreconditions:
           type: string
-        BillingFeatureSchedule:
+        FinancialInstrumentFeatureSchedule:
           type: string
-        BusinessService:
+        FinancialInstrument:
           type: object
-        BillingPostconditions:
+        FinancialInstrumentPostconditions:
           type: string
-        BillingServiceType:
+        FinancialInstrumentFinancialInstrumentServiceType:
           type: string
-        BillingServiceDescription:
+        FinancialInstrumentFinancialInstrumentServiceDescription:
           type: string
-        BillingServiceInputsandOuputs:
+        FinancialInstrumentFinancialInstrumentServiceInputsandOuputs:
           type: string
-        BillingServiceWorkProduct:
+        FinancialInstrumentFinancialInstrumentServiceWorkProduct:
           type: string
-        BillingServiceName:
+        FinancialInstrumentFinancialInstrumentServiceName:
           type: string
-    MerchandisingLoanOutcome:
+    Withdrawals:
       type: object
       properties:
-        MerchandisingLoanFinancialFacility:
+        WithdrawalsPreconditions:
           type: string
-        MerchandisingLoanWorkProduct:
+        WithdrawalsFeatureSchedule:
           type: string
-    Fees:
-      type: object
-      properties:
-        FeesPreconditions:
-          type: string
-        FeesFeatureSchedule:
-          type: string
-        BusinessService:
+        WithdrawalProcessing:
           type: object
-        FeesPostconditions:
+        WithdrawalsPostconditions:
           type: string
-        FeesServiceType:
+        WithdrawalsWithdrawalProcessingServiceType:
           type: string
-        FeesServiceDescription:
+        WithdrawalsWithdrawalProcessingServiceDescription:
           type: string
-        FeesServiceInputsandOuputs:
+        WithdrawalsWithdrawalProcessingServiceInputsandOuputs:
           type: string
-        FeesServiceWorkProduct:
+        WithdrawalsWithdrawalProcessingServiceWorkProduct:
           type: string
-        FeesServiceName:
+        WithdrawalsWithdrawalProcessingServiceName:
+          type: string
+    FinancialAccounting:
+      type: object
+      properties:
+        FinancialAccountingPreconditions:
+          type: string
+        FinancialAccountingFeatureSchedule:
+          type: string
+        FinancialAccounting:
+          type: object
+        FinancialAccountingPostconditions:
+          type: string
+        FinancialAccountingFinancialAccountingServiceType:
+          type: string
+        FinancialAccountingFinancialAccountingServiceDescription:
+          type: string
+        FinancialAccountingFinancialAccountingServiceInputsandOuputs:
+          type: string
+        FinancialAccountingFinancialAccountingServiceWorkProduct:
+          type: string
+        FinancialAccountingFinancialAccountingServiceName:
           type: string
     HTTPError:
       type: object
@@ -1761,24 +1761,32 @@ components:
       explode: false
       schema:
         type: string
-    FinancialInstrumentID:
-      name: financialinstrumentId
-      in: path
-      required: true
-      style: simple
-      explode: false
-      schema:
-        type: string
-    FinancialAccountingID:
-      name: financialaccountingId
-      in: path
-      required: true
-      style: simple
-      explode: false
-      schema:
-        type: string
     DepositsID:
       name: depositsId
+      in: path
+      required: true
+      style: simple
+      explode: false
+      schema:
+        type: string
+    LienID:
+      name: lienId
+      in: path
+      required: true
+      style: simple
+      explode: false
+      schema:
+        type: string
+    MerchandisingLoanOutcomeID:
+      name: merchandisingloanoutcomeId
+      in: path
+      required: true
+      style: simple
+      explode: false
+      schema:
+        type: string
+    CollateralID:
+      name: collateralId
       in: path
       required: true
       style: simple
@@ -1801,24 +1809,16 @@ components:
       explode: false
       schema:
         type: string
-    WithdrawalsID:
-      name: withdrawalsId
+    FeesID:
+      name: feesId
       in: path
       required: true
       style: simple
       explode: false
       schema:
         type: string
-    LienID:
-      name: lienId
-      in: path
-      required: true
-      style: simple
-      explode: false
-      schema:
-        type: string
-    CollateralID:
-      name: collateralId
+    BillingID:
+      name: billingId
       in: path
       required: true
       style: simple
@@ -1841,24 +1841,24 @@ components:
       explode: false
       schema:
         type: string
-    BillingID:
-      name: billingId
+    FinancialInstrumentID:
+      name: financialinstrumentId
       in: path
       required: true
       style: simple
       explode: false
       schema:
         type: string
-    MerchandisingLoanOutcomeID:
-      name: merchandisingloanoutcomeId
+    WithdrawalsID:
+      name: withdrawalsId
       in: path
       required: true
       style: simple
       explode: false
       schema:
         type: string
-    FeesID:
-      name: feesId
+    FinancialAccountingID:
+      name: financialaccountingId
       in: path
       required: true
       style: simple
@@ -1866,12 +1866,12 @@ components:
       schema:
         type: string
   requestBodies:
-    MerchandisingLoanArrangement:
+    MerchandisingLoanFacility:
       required: true
       content:
         application/json:
           schema:
-            $ref: '#/components/schemas/MerchandisingLoanArrangement'
+            $ref: '#/components/schemas/MerchandisingLoanFacility'
     Billing:
       required: true
       content:

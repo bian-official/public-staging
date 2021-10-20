@@ -1,7 +1,7 @@
 openapi: 3.0.1
 info:
   title: Brand Management
-  description: Respond to events that potentially damage the brand or provide an opportunity to strengthen/leverage brand awareness
+  description: ''
   version: 10.0.0
 servers:
 - description: SwaggerHub API Auto Mocking

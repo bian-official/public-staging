@@ -1,7 +1,7 @@
 openapi: 3.0.1
 info:
   title: Loan
-  description: This service domain handles the fulfillment of a general loan product. This includes the initial set-up of the loan facility and the completion of scheduled and ad-hoc product processing tasks
+  description: ''
   version: 10.0.0
 servers:
 - description: SwaggerHub API Auto Mocking
@@ -10,20 +10,20 @@ paths:
   /Loan/Initiate:
     post:
       tags:
-      - CR - LoanArrangement
+      - CR - LoanFacility
       summary: InCR Initiate a loan
       description: InCR Initiate a loan
       operationId: Initiate
       parameters: []
       requestBody:
-        $ref: '#/components/requestBodies/LoanArrangement'
+        $ref: '#/components/requestBodies/LoanFacility'
       responses:
         200:
           description: Success
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/LoanArrangement'
+                $ref: '#/components/schemas/LoanFacility'
         400:
           $ref: '#/components/responses/BadRequestError'
         401:
@@ -39,21 +39,21 @@ paths:
   /Loan/{loanId}/Update:
     put:
       tags:
-      - CR - LoanArrangement
+      - CR - LoanFacility
       summary: UpCR Update details for an existing loan
       description: UpCR Update details for an existing loan
       operationId: Update
       parameters:
       - $ref: '#/components/parameters/LoanID'
       requestBody:
-        $ref: '#/components/requestBodies/LoanArrangement'
+        $ref: '#/components/requestBodies/LoanFacility'
       responses:
         200:
           description: Success
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/LoanArrangement'
+                $ref: '#/components/schemas/LoanFacility'
         400:
           $ref: '#/components/responses/BadRequestError'
         401:
@@ -69,7 +69,7 @@ paths:
   /Loan/{loanId}/Retrieve:
     get:
       tags:
-      - CR - LoanArrangement
+      - CR - LoanFacility
       summary: ReCR Retrieve details about a loan
       description: ReCR Retrieve details about a loan
       operationId: Retrieve
@@ -81,7 +81,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/LoanArrangement'
+                $ref: '#/components/schemas/LoanFacility'
         400:
           $ref: '#/components/responses/BadRequestError'
         401:
@@ -639,7 +639,7 @@ paths:
           $ref: '#/components/responses/InternalServerError'
 components:
   schemas:
-    LoanArrangement:
+    LoanFacility:
       type: object
       properties:
         ProductInstanceReference:
@@ -718,6 +718,30 @@ components:
           type: string
         Date:
           type: string
+    Restructuring:
+      type: object
+      properties:
+        RestructuringTask:
+          type: string
+        RestructuringEvaluation:
+          type: string
+        RestructuringWriteDown:
+          type: string
+    Disbursement:
+      type: object
+      properties:
+        DisbursementPayeeReference:
+          type: object
+        DisbursementPayeeProductInstanceReference:
+          type: object
+        DisbursementPayeeBankReference:
+          type: object
+        DisbursementAmount:
+          type: number
+        DisbursementCurrency:
+          type: string
+        DisbursementValueDate:
+          type: string
     ServiceFees:
       type: object
       properties:
@@ -751,49 +775,20 @@ components:
           type: string
         AccrualFeeCharge:
           type: string
-    Repayment:
+    Maintenance:
       type: object
       properties:
-        RepaymentTransactionType:
+        MaintenanceReportType:
           type: string
-        RepaymentTransactionPayerReference:
-          type: object
-        RepaymentTransactionPayerProductInstanceReference:
-          type: object
-        RepaymentTransactionPayerBankReference:
-          type: object
-        RepaymentTransactionAmount:
-          type: number
-        RepaymentTransactionCurrency:
+        LoanTaxReport:
           type: string
-        RepaymentTransactionValueDate:
+        LoanFeeType:
           type: string
-    Interest:
-      type: object
-      properties:
-        InterestRateType:
+        LoanFees:
           type: string
-        InterestRateApplicationSchedule:
-          type: object
-        InterestRateConfiguration:
-          type: object
-        InterestRate:
-          type: object
-        InterestApplicationRecord:
+        Penalties:
           type: string
-        InterestTransaction:
-          type: string
-        TransactionDescription:
-          type: string
-        TransactionRateType:
-          type: string
-        TransactionInterestCharge:
-          type: string
-        InterestAccrualAmount:
-          type: number
-        InterestAccrualType:
-          type: string
-        InterestAccrualCharge:
+        CollateralValuation:
           type: string
     Withdrawal:
       type: object
@@ -824,44 +819,49 @@ components:
           type: object
         PaymentTransactionStatus:
           type: string
-    Restructuring:
+    Interest:
       type: object
       properties:
-        RestructuringTask:
+        InterestRateType:
           type: string
-        RestructuringEvaluation:
-          type: string
-        RestructuringWriteDown:
-          type: string
-    Maintenance:
-      type: object
-      properties:
-        MaintenanceReportType:
-          type: string
-        LoanTaxReport:
-          type: string
-        LoanFeeType:
-          type: string
-        LoanFees:
-          type: string
-        Penalties:
-          type: string
-        CollateralValuation:
-          type: string
-    Disbursement:
-      type: object
-      properties:
-        DisbursementPayeeReference:
+        InterestRateApplicationSchedule:
           type: object
-        DisbursementPayeeProductInstanceReference:
+        InterestRateConfiguration:
           type: object
-        DisbursementPayeeBankReference:
+        InterestRate:
           type: object
-        DisbursementAmount:
+        InterestApplicationRecord:
+          type: string
+        InterestTransaction:
+          type: string
+        TransactionDescription:
+          type: string
+        TransactionRateType:
+          type: string
+        TransactionInterestCharge:
+          type: string
+        InterestAccrualAmount:
           type: number
-        DisbursementCurrency:
+        InterestAccrualType:
           type: string
-        DisbursementValueDate:
+        InterestAccrualCharge:
+          type: string
+    Repayment:
+      type: object
+      properties:
+        RepaymentTransactionType:
+          type: string
+        RepaymentTransactionPayerReference:
+          type: object
+        RepaymentTransactionPayerProductInstanceReference:
+          type: object
+        RepaymentTransactionPayerBankReference:
+          type: object
+        RepaymentTransactionAmount:
+          type: number
+        RepaymentTransactionCurrency:
+          type: string
+        RepaymentTransactionValueDate:
           type: string
     HTTPError:
       type: object
@@ -875,7 +875,7 @@ components:
     RetrieveInterestResponse:
       type: object
       properties:
-        LoanArrangement:
+        LoanFacility:
           type: object
           properties:
             ProductInstanceReference:
@@ -932,7 +932,7 @@ components:
     RetrieveServiceFeesResponse:
       type: object
       properties:
-        LoanArrangement:
+        LoanFacility:
           type: object
           properties:
             ProductInstanceReference:
@@ -1001,7 +1001,7 @@ components:
     RetrieveDisbursementResponse:
       type: object
       properties:
-        LoanArrangement:
+        LoanFacility:
           type: object
           properties:
             ProductInstanceReference:
@@ -1036,7 +1036,7 @@ components:
     RetrieveMaintenanceResponse:
       type: object
       properties:
-        LoanArrangement:
+        LoanFacility:
           type: object
           properties:
             ProductInstanceReference:
@@ -1131,7 +1131,7 @@ components:
     RetrieveWithdrawalResponse:
       type: object
       properties:
-        LoanArrangement:
+        LoanFacility:
           type: object
           properties:
             ProductInstanceReference:
@@ -1188,7 +1188,7 @@ components:
     UpdateRepaymentRequest:
       type: object
       properties:
-        LoanArrangement:
+        LoanFacility:
           type: object
           properties:
             LoanOutstandingBalance:
@@ -1215,7 +1215,7 @@ components:
     UpdateRepaymentResponse:
       type: object
       properties:
-        LoanArrangement:
+        LoanFacility:
           type: object
           properties:
             LoanOutstandingBalance:
@@ -1242,7 +1242,7 @@ components:
     RetrieveRepaymentResponse:
       type: object
       properties:
-        LoanArrangement:
+        LoanFacility:
           type: object
           properties:
             ProductInstanceReference:
@@ -1289,7 +1289,7 @@ components:
     InitiateRestructuringRequest:
       type: object
       properties:
-        LoanArrangement:
+        LoanFacility:
           type: object
           properties:
             ProductInstanceReference:
@@ -1374,7 +1374,7 @@ components:
     InitiateRestructuringResponse:
       type: object
       properties:
-        LoanArrangement:
+        LoanFacility:
           type: object
           properties:
             StagedRepaymentStatement:
@@ -1397,7 +1397,7 @@ components:
     UpdateRestructuringRequest:
       type: object
       properties:
-        LoanArrangement:
+        LoanFacility:
           type: object
           properties:
             ProductInstanceReference:
@@ -1486,7 +1486,7 @@ components:
     UpdateRestructuringResponse:
       type: object
       properties:
-        LoanArrangement:
+        LoanFacility:
           type: object
           properties:
             ProductInstanceReference:
@@ -1575,7 +1575,7 @@ components:
     RetrieveRestructuringResponse:
       type: object
       properties:
-        LoanArrangement:
+        LoanFacility:
           type: object
           properties:
             ProductInstanceReference:
@@ -1670,48 +1670,8 @@ components:
       explode: false
       schema:
         type: string
-    ServiceFeesID:
-      name: servicefeesId
-      in: path
-      required: true
-      style: simple
-      explode: false
-      schema:
-        type: string
-    RepaymentID:
-      name: repaymentId
-      in: path
-      required: true
-      style: simple
-      explode: false
-      schema:
-        type: string
-    InterestID:
-      name: interestId
-      in: path
-      required: true
-      style: simple
-      explode: false
-      schema:
-        type: string
-    WithdrawalID:
-      name: withdrawalId
-      in: path
-      required: true
-      style: simple
-      explode: false
-      schema:
-        type: string
     RestructuringID:
       name: restructuringId
-      in: path
-      required: true
-      style: simple
-      explode: false
-      schema:
-        type: string
-    MaintenanceID:
-      name: maintenanceId
       in: path
       required: true
       style: simple
@@ -1726,13 +1686,53 @@ components:
       explode: false
       schema:
         type: string
+    ServiceFeesID:
+      name: servicefeesId
+      in: path
+      required: true
+      style: simple
+      explode: false
+      schema:
+        type: string
+    MaintenanceID:
+      name: maintenanceId
+      in: path
+      required: true
+      style: simple
+      explode: false
+      schema:
+        type: string
+    WithdrawalID:
+      name: withdrawalId
+      in: path
+      required: true
+      style: simple
+      explode: false
+      schema:
+        type: string
+    InterestID:
+      name: interestId
+      in: path
+      required: true
+      style: simple
+      explode: false
+      schema:
+        type: string
+    RepaymentID:
+      name: repaymentId
+      in: path
+      required: true
+      style: simple
+      explode: false
+      schema:
+        type: string
   requestBodies:
-    LoanArrangement:
+    LoanFacility:
       required: true
       content:
         application/json:
           schema:
-            $ref: '#/components/schemas/LoanArrangement'
+            $ref: '#/components/schemas/LoanFacility'
     ServiceFees:
       required: true
       content:

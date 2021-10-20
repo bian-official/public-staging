@@ -1,7 +1,7 @@
 openapi: 3.0.1
 info:
   title: Investment Account
-  description: This service domain handles the non-cash holdings positions for a customer, covering multiple instruments as necessary
+  description: ''
   version: 10.0.0
 servers:
 - description: SwaggerHub API Auto Mocking
@@ -10,20 +10,20 @@ paths:
   /InvestmentAccount/Initiate:
     post:
       tags:
-      - CR - InvestmentAccountArrangement
+      - CR - InvestmentAccountFacility
       summary: InCR Initiate a new securities investment account
       description: InCR Initiate a new securities investment account
       operationId: Initiate
       parameters: []
       requestBody:
-        $ref: '#/components/requestBodies/InvestmentAccountArrangement'
+        $ref: '#/components/requestBodies/InvestmentAccountFacility'
       responses:
         200:
           description: Success
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/InvestmentAccountArrangement'
+                $ref: '#/components/schemas/InvestmentAccountFacility'
         400:
           $ref: '#/components/responses/BadRequestError'
         401:
@@ -39,21 +39,21 @@ paths:
   /InvestmentAccount/{investmentaccountId}/Update:
     put:
       tags:
-      - CR - InvestmentAccountArrangement
+      - CR - InvestmentAccountFacility
       summary: UpCR Update properties of an active investment account
       description: UpCR Update properties of an active investment account
       operationId: Update
       parameters:
       - $ref: '#/components/parameters/InvestmentAccountID'
       requestBody:
-        $ref: '#/components/requestBodies/InvestmentAccountArrangement'
+        $ref: '#/components/requestBodies/InvestmentAccountFacility'
       responses:
         200:
           description: Success
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/InvestmentAccountArrangement'
+                $ref: '#/components/schemas/InvestmentAccountFacility'
         400:
           $ref: '#/components/responses/BadRequestError'
         401:
@@ -69,7 +69,7 @@ paths:
   /InvestmentAccount/{investmentaccountId}/Retrieve:
     get:
       tags:
-      - CR - InvestmentAccountArrangement
+      - CR - InvestmentAccountFacility
       summary: ReCR Retrieve information about a current account - either standard canned reports or selected instance attribute values
       description: ReCR Retrieve information about a current account - either standard canned reports or selected instance attribute values
       operationId: Retrieve
@@ -81,7 +81,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/InvestmentAccountArrangement'
+                $ref: '#/components/schemas/InvestmentAccountFacility'
         400:
           $ref: '#/components/responses/BadRequestError'
         401:
@@ -397,7 +397,7 @@ paths:
           $ref: '#/components/responses/InternalServerError'
 components:
   schemas:
-    InvestmentAccountArrangement:
+    InvestmentAccountFacility:
       type: object
       properties:
         ProductInstanceReference:
@@ -481,6 +481,37 @@ components:
           type: string
         CorporateActionTransactionDate:
           type: string
+    DepositsandWithdrawals:
+      type: object
+      properties:
+        SecuritiesDepositType:
+          type: string
+        SecuritiesWithdrawalType:
+          type: string
+        SecuritiesDepositTransaction:
+          type: string
+        SecuritiesDepositTransactionSourceReference:
+          type: object
+        SecuritiesDepositTransactionDepositType:
+          type: string
+        SecuritiesDepositTransactionDescription:
+          type: string
+        SecuritiesDepositTransactionAmount:
+          type: number
+        SecuritiesDepositTransactionDate:
+          type: string
+        SecuritiesWithdrawalTransaction:
+          type: string
+        SecuritiesWithdrawalTransactionSourceReference:
+          type: object
+        SecuritiesWithdrawalTransactionWithdrawalType:
+          type: string
+        SecuritiesWithdrawalTransactionDescription:
+          type: string
+        SecuritiesWithdrawalTransactionAmount:
+          type: number
+        SecuritiesWithdrawalTransactionDate:
+          type: string
     ServiceFees:
       type: object
       properties:
@@ -516,37 +547,6 @@ components:
           type: string
         AccrualFeeCharge:
           type: string
-    DepositsandWithdrawals:
-      type: object
-      properties:
-        SecuritiesDepositType:
-          type: string
-        SecuritiesWithdrawalType:
-          type: string
-        SecuritiesDepositTransaction:
-          type: string
-        SecuritiesDepositTransactionSourceReference:
-          type: object
-        SecuritiesDepositTransactionDepositType:
-          type: string
-        SecuritiesDepositTransactionDescription:
-          type: string
-        SecuritiesDepositTransactionAmount:
-          type: number
-        SecuritiesDepositTransactionDate:
-          type: string
-        SecuritiesWithdrawalTransaction:
-          type: string
-        SecuritiesWithdrawalTransactionSourceReference:
-          type: object
-        SecuritiesWithdrawalTransactionWithdrawalType:
-          type: string
-        SecuritiesWithdrawalTransactionDescription:
-          type: string
-        SecuritiesWithdrawalTransactionAmount:
-          type: number
-        SecuritiesWithdrawalTransactionDate:
-          type: string
     HTTPError:
       type: object
       properties:
@@ -573,14 +573,6 @@ components:
       explode: false
       schema:
         type: string
-    ServiceFeesID:
-      name: servicefeesId
-      in: path
-      required: true
-      style: simple
-      explode: false
-      schema:
-        type: string
     DepositsandWithdrawalsID:
       name: depositsandwithdrawalsId
       in: path
@@ -589,13 +581,21 @@ components:
       explode: false
       schema:
         type: string
+    ServiceFeesID:
+      name: servicefeesId
+      in: path
+      required: true
+      style: simple
+      explode: false
+      schema:
+        type: string
   requestBodies:
-    InvestmentAccountArrangement:
+    InvestmentAccountFacility:
       required: true
       content:
         application/json:
           schema:
-            $ref: '#/components/schemas/InvestmentAccountArrangement'
+            $ref: '#/components/schemas/InvestmentAccountFacility'
     DepositsandWithdrawals:
       required: true
       content:

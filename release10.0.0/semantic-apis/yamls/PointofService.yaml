@@ -1,7 +1,7 @@
 openapi: 3.0.1
 info:
   title: Point of Service
-  description: This service domain operates servicing positions within the bank. It administers all media connections, inventory holdings (e.g. cash), provides access to support utilities and tracks servicing activity -e.g. time spent, activity logs, capturing servicing events including commission and training related actions. In cases servicing positions can be automated
+  description: ''
   version: 10.0.0
 servers:
 - description: SwaggerHub API Auto Mocking
@@ -616,18 +616,6 @@ components:
           type: string
         ProductInstanceReference:
           type: object
-    Interaction:
-      type: object
-      properties:
-        CustomerSessionDialogueReference:
-          type: object
-    Assisted:
-      type: object
-      properties:
-        Employee/BusinessUnitReference:
-          type: object
-        CustomerContactReference:
-          type: object
     Inventory:
       type: object
       properties:
@@ -641,6 +629,18 @@ components:
       type: object
       properties:
         BusinessUnitReference:
+          type: object
+    Assisted:
+      type: object
+      properties:
+        Employee/BusinessUnitReference:
+          type: object
+        CustomerContactReference:
+          type: object
+    Interaction:
+      type: object
+      properties:
+        CustomerSessionDialogueReference:
           type: object
     HTTPError:
       type: object
@@ -753,8 +753,16 @@ components:
       explode: false
       schema:
         type: string
-    InteractionID:
-      name: interactionId
+    InventoryID:
+      name: inventoryId
+      in: path
+      required: true
+      style: simple
+      explode: false
+      schema:
+        type: string
+    AutomatedID:
+      name: automatedId
       in: path
       required: true
       style: simple
@@ -769,16 +777,8 @@ components:
       explode: false
       schema:
         type: string
-    InventoryID:
-      name: inventoryId
-      in: path
-      required: true
-      style: simple
-      explode: false
-      schema:
-        type: string
-    AutomatedID:
-      name: automatedId
+    InteractionID:
+      name: interactionId
       in: path
       required: true
       style: simple

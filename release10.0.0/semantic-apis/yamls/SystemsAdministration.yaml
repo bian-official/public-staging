@@ -1,7 +1,7 @@
 openapi: 3.0.1
 info:
   title: Systems Administration
-  description: Administer the configuration, maintenance, assignment and track usage and status of all IT assets deployed in development and production across the enterprise
+  description: ''
   version: 10.0.0
 servers:
 - description: SwaggerHub API Auto Mocking
@@ -747,29 +747,6 @@ components:
           type: string
         ITSystemAdministrativePlanReference:
           type: object
-    Assurance:
-      type: object
-      properties:
-        AssurancePreconditions:
-          type: string
-        AssuranceBusinessUnit/EmployeeReference:
-          type: object
-        AssuranceWorkSchedule:
-          type: string
-        CollateralItemAssurance:
-          type: object
-        AssurancePostconditions:
-          type: string
-        AssuranceCollateralItemAssuranceServiceType:
-          type: string
-        AssuranceCollateralItemAssuranceServiceDescription:
-          type: string
-        AssuranceCollateralItemAssuranceServiceInputsandOuputs:
-          type: string
-        AssuranceCollateralItemAssuranceServiceWorkProduct:
-          type: string
-        AssuranceCollateralItemAssuranceServiceName:
-          type: string
     Inventory:
       type: object
       properties:
@@ -792,6 +769,29 @@ components:
         InventoryServiceWorkProduct:
           type: string
         InventoryServiceName:
+          type: string
+    Assurance:
+      type: object
+      properties:
+        AssurancePreconditions:
+          type: string
+        AssuranceBusinessUnit/EmployeeReference:
+          type: object
+        AssuranceWorkSchedule:
+          type: string
+        CollateralItemAssurance:
+          type: object
+        AssurancePostconditions:
+          type: string
+        AssuranceCollateralItemAssuranceServiceType:
+          type: string
+        AssuranceCollateralItemAssuranceServiceDescription:
+          type: string
+        AssuranceCollateralItemAssuranceServiceInputsandOuputs:
+          type: string
+        AssuranceCollateralItemAssuranceServiceWorkProduct:
+          type: string
+        AssuranceCollateralItemAssuranceServiceName:
           type: string
     Configuration:
       type: object
@@ -816,17 +816,6 @@ components:
           type: string
         ConfigurationSystemsConfigurationAdministrationServiceName:
           type: string
-    SystemsAdministrationOutcome:
-      type: object
-      properties:
-        SystemsAdministrationPerformanceAnalysis:
-          type: string
-        SystemsAdministrationActivityAnalysis:
-          type: string
-        SystemsAdministrationAdministrativePlan:
-          type: string
-        SystemsAdministrationAdministrationTask:
-          type: string
     CapacityPlanningandResilience:
       type: object
       properties:
@@ -850,6 +839,17 @@ components:
           type: string
         CapacityPlanningandResilienceCapacityPlanningandResilienceServiceName:
           type: string
+    SystemsAdministrationOutcome:
+      type: object
+      properties:
+        SystemsAdministrationPerformanceAnalysis:
+          type: string
+        SystemsAdministrationActivityAnalysis:
+          type: string
+        SystemsAdministrationAdministrativePlan:
+          type: string
+        SystemsAdministrationAdministrationTask:
+          type: string
     HTTPError:
       type: object
       properties:
@@ -868,16 +868,16 @@ components:
       explode: false
       schema:
         type: string
-    AssuranceID:
-      name: assuranceId
+    InventoryID:
+      name: inventoryId
       in: path
       required: true
       style: simple
       explode: false
       schema:
         type: string
-    InventoryID:
-      name: inventoryId
+    AssuranceID:
+      name: assuranceId
       in: path
       required: true
       style: simple
@@ -892,16 +892,16 @@ components:
       explode: false
       schema:
         type: string
-    SystemsAdministrationOutcomeID:
-      name: systemsadministrationoutcomeId
+    CapacityPlanningandResilienceID:
+      name: capacityplanningandresilienceId
       in: path
       required: true
       style: simple
       explode: false
       schema:
         type: string
-    CapacityPlanningandResilienceID:
-      name: capacityplanningandresilienceId
+    SystemsAdministrationOutcomeID:
+      name: systemsadministrationoutcomeId
       in: path
       required: true
       style: simple

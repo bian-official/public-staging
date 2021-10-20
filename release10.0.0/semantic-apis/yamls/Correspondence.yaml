@@ -1,7 +1,7 @@
 openapi: 3.0.1
 info:
   title: Correspondence
-  description: This service domain orchestrates the production of pre-formatted correspondence and batches of correspondence (e.g. mail shots).
+  description: ''
   version: 10.0.0
 servers:
 - description: SwaggerHub API Auto Mocking
@@ -534,6 +534,15 @@ components:
           type: string
         Date:
           type: string
+    OutboundWithResponse:
+      type: object
+      properties:
+        ResponseDueDate:
+          type: string
+        ResponseCorrespondenceReference:
+          type: object
+        ResponseCorrespondenceRecord:
+          type: string
     Inbound:
       type: object
       properties:
@@ -554,15 +563,6 @@ components:
         DateType:
           type: string
         Date:
-          type: string
-    OutboundWithResponse:
-      type: object
-      properties:
-        ResponseDueDate:
-          type: string
-        ResponseCorrespondenceReference:
-          type: object
-        ResponseCorrespondenceRecord:
           type: string
     BlockMailing:
       type: object
@@ -1363,16 +1363,16 @@ components:
       explode: false
       schema:
         type: string
-    InboundID:
-      name: inboundId
+    OutboundWithResponseID:
+      name: outboundwithresponseId
       in: path
       required: true
       style: simple
       explode: false
       schema:
         type: string
-    OutboundWithResponseID:
-      name: outboundwithresponseId
+    InboundID:
+      name: inboundId
       in: path
       required: true
       style: simple

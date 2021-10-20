@@ -1,7 +1,7 @@
 openapi: 3.0.1
 info:
   title: Fraud Model
-  description: This service domain handles the design and maintenance of a portfolio of fraud models used across all production activity to detect potential fraud on the part of customers, merchants and other involved parties
+  description: ''
   version: 10.0.0
 servers:
 - description: SwaggerHub API Auto Mocking
@@ -377,21 +377,6 @@ components:
           type: string
         FraudModelUsageGuidelines:
           type: string
-    FunctionalRequirements:
-      type: object
-      properties:
-        FraudModelDesignTaskReference:
-          type: object
-        FraudModelDesignTaskRecord:
-          type: string
-        Customer/MarketDataServiceReference:
-          type: object
-        Customer/MarketDataRecord:
-          type: string
-        FraudModelFeedbackRecord:
-          type: string
-        FraudModelRequirementsSpecification:
-          type: string
     Testing:
       type: object
       properties:
@@ -414,6 +399,21 @@ components:
         FraudModelComplianceTestReference:
           type: object
         FraudModelComplianceTestType:
+          type: string
+    FunctionalRequirements:
+      type: object
+      properties:
+        FraudModelDesignTaskReference:
+          type: object
+        FraudModelDesignTaskRecord:
+          type: string
+        Customer/MarketDataServiceReference:
+          type: object
+        Customer/MarketDataRecord:
+          type: string
+        FraudModelFeedbackRecord:
+          type: string
+        FraudModelRequirementsSpecification:
           type: string
     HTTPError:
       type: object
@@ -709,16 +709,16 @@ components:
       explode: false
       schema:
         type: string
-    FunctionalRequirementsID:
-      name: functionalrequirementsId
+    TestingID:
+      name: testingId
       in: path
       required: true
       style: simple
       explode: false
       schema:
         type: string
-    TestingID:
-      name: testingId
+    FunctionalRequirementsID:
+      name: functionalrequirementsId
       in: path
       required: true
       style: simple

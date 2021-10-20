@@ -1,7 +1,7 @@
 openapi: 3.0.1
 info:
   title: Branch Location Management
-  description: Manage and oversee branch activity, assign resources to optimize branch performance
+  description: ''
   version: 10.0.0
 servers:
 - description: SwaggerHub API Auto Mocking
@@ -865,52 +865,6 @@ components:
           type: string
         ProductandServicePlanningProductandServicePlanningServiceName:
           type: string
-    CustomerLiaison:
-      type: object
-      properties:
-        CustomerLiaisonPreconditions:
-          type: string
-        CustomerLiaisonBusinessUnit/EmployeeReference:
-          type: object
-        CustomerLiaisonWorkSchedule:
-          type: string
-        CustomerLiaison:
-          type: object
-        CustomerLiaisonPostconditions:
-          type: string
-        CustomerLiaisonCustomerLiaisonServiceType:
-          type: string
-        CustomerLiaisonCustomerLiaisonServiceDescription:
-          type: string
-        CustomerLiaisonCustomerLiaisonServiceInputsandOuputs:
-          type: string
-        CustomerLiaisonCustomerLiaisonServiceWorkProduct:
-          type: string
-        CustomerLiaisonCustomerLiaisonServiceName:
-          type: string
-    Troubleshooting:
-      type: object
-      properties:
-        TroubleshootingPreconditions:
-          type: string
-        TroubleshootingBusinessUnit/EmployeeReference:
-          type: object
-        TroubleshootingWorkSchedule:
-          type: string
-        BusinessService:
-          type: object
-        TroubleshootingPostconditions:
-          type: string
-        TroubleshootingServiceType:
-          type: string
-        TroubleshootingServiceDescription:
-          type: string
-        TroubleshootingServiceInputsandOuputs:
-          type: string
-        TroubleshootingServiceWorkProduct:
-          type: string
-        TroubleshootingServiceName:
-          type: string
     StaffandLocationPlanning:
       type: object
       properties:
@@ -934,6 +888,29 @@ components:
           type: string
         StaffandLocationPlanningStaffandLocationPlanningServiceName:
           type: string
+    CustomerLiaison:
+      type: object
+      properties:
+        CustomerLiaisonPreconditions:
+          type: string
+        CustomerLiaisonBusinessUnit/EmployeeReference:
+          type: object
+        CustomerLiaisonWorkSchedule:
+          type: string
+        CustomerLiaison:
+          type: object
+        CustomerLiaisonPostconditions:
+          type: string
+        CustomerLiaisonCustomerLiaisonServiceType:
+          type: string
+        CustomerLiaisonCustomerLiaisonServiceDescription:
+          type: string
+        CustomerLiaisonCustomerLiaisonServiceInputsandOuputs:
+          type: string
+        CustomerLiaisonCustomerLiaisonServiceWorkProduct:
+          type: string
+        CustomerLiaisonCustomerLiaisonServiceName:
+          type: string
     BranchLocationManagementOutcome:
       type: object
       properties:
@@ -946,6 +923,29 @@ components:
         BranchLocationManagementTask:
           type: string
         BranchLocationManagementProject:
+          type: string
+    Troubleshooting:
+      type: object
+      properties:
+        TroubleshootingPreconditions:
+          type: string
+        TroubleshootingBusinessUnit/EmployeeReference:
+          type: object
+        TroubleshootingWorkSchedule:
+          type: string
+        BusinessService:
+          type: object
+        TroubleshootingPostconditions:
+          type: string
+        TroubleshootingServiceType:
+          type: string
+        TroubleshootingServiceDescription:
+          type: string
+        TroubleshootingServiceInputsandOuputs:
+          type: string
+        TroubleshootingServiceWorkProduct:
+          type: string
+        TroubleshootingServiceName:
           type: string
     HTTPError:
       type: object
@@ -973,22 +973,6 @@ components:
       explode: false
       schema:
         type: string
-    CustomerLiaisonID:
-      name: customerliaisonId
-      in: path
-      required: true
-      style: simple
-      explode: false
-      schema:
-        type: string
-    TroubleshootingID:
-      name: troubleshootingId
-      in: path
-      required: true
-      style: simple
-      explode: false
-      schema:
-        type: string
     StaffandLocationPlanningID:
       name: staffandlocationplanningId
       in: path
@@ -997,8 +981,24 @@ components:
       explode: false
       schema:
         type: string
+    CustomerLiaisonID:
+      name: customerliaisonId
+      in: path
+      required: true
+      style: simple
+      explode: false
+      schema:
+        type: string
     BranchLocationManagementOutcomeID:
       name: branchlocationmanagementoutcomeId
+      in: path
+      required: true
+      style: simple
+      explode: false
+      schema:
+        type: string
+    TroubleshootingID:
+      name: troubleshootingId
       in: path
       required: true
       style: simple

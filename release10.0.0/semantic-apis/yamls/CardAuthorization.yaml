@@ -1,7 +1,7 @@
 openapi: 3.0.1
 info:
   title: Card Authorization
-  description: This service domain is responsible for the real time card authorization decisions for credit/charge cards.
+  description: ''
   version: 10.0.0
 servers:
 - description: SwaggerHub API Auto Mocking
@@ -365,11 +365,6 @@ components:
           type: string
         IssuedDeviceCheckResult:
           type: string
-    FraudCheck:
-      type: object
-      properties:
-        FraudCheckResult:
-          type: string
     Authentication:
       type: object
       properties:
@@ -387,6 +382,11 @@ components:
           type: string
         AuthenticationCheckResult:
           type: string
+    CreditCheck:
+      type: object
+      properties:
+        CardAccountavailablebalancecheckresult:
+          type: string
     StandIn:
       type: object
       properties:
@@ -394,10 +394,10 @@ components:
           type: object
         CardAccountStandInAuthorizationResult:
           type: string
-    CreditCheck:
+    FraudCheck:
       type: object
       properties:
-        CardAccountavailablebalancecheckresult:
+        FraudCheckResult:
           type: string
     HTTPError:
       type: object
@@ -518,16 +518,16 @@ components:
       explode: false
       schema:
         type: string
-    FraudCheckID:
-      name: fraudcheckId
+    AuthenticationID:
+      name: authenticationId
       in: path
       required: true
       style: simple
       explode: false
       schema:
         type: string
-    AuthenticationID:
-      name: authenticationId
+    CreditCheckID:
+      name: creditcheckId
       in: path
       required: true
       style: simple
@@ -542,8 +542,8 @@ components:
       explode: false
       schema:
         type: string
-    CreditCheckID:
-      name: creditcheckId
+    FraudCheckID:
+      name: fraudcheckId
       in: path
       required: true
       style: simple

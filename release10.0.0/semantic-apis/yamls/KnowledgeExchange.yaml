@@ -1,7 +1,7 @@
 openapi: 3.0.1
 info:
   title: Knowledge Exchange
-  description: Consolidate, classify and provide structured access to consolidated market intelligence, product and procedural knowledge gained from the workforce in the execution of business to inform business activity and support continual improvement
+  description: ''
   version: 10.0.0
 servers:
 - description: SwaggerHub API Auto Mocking
@@ -722,24 +722,24 @@ components:
           type: string
         IntellectualPropertyExchangeOperatingSessionServiceConfiguration:
           type: string
-    Review,RefinementandEditing:
+    CaptureandClassification:
       type: object
       properties:
-        Review,RefinementandEditingPreconditions:
+        CaptureandClassificationPreconditions:
           type: string
-        Review,RefinementandEditingFunctionSchedule:
+        CaptureandClassificationFunctionSchedule:
           type: string
-        ContentReview,RefinementandEditing:
+        ContentCaptureandClassification:
           type: object
-        ContentReview,RefinementandEditingServiceType:
+        ContentCaptureandClassificationServiceType:
           type: string
-        ContentReview,RefinementandEditingServiceDescription:
+        ContentCaptureandClassificationServiceDescription:
           type: string
-        ContentReview,RefinementandEditingServiceInputsandOuputs:
+        ContentCaptureandClassificationServiceInputsandOuputs:
           type: string
-        ContentReview,RefinementandEditingServiceWorkProduct:
+        ContentCaptureandClassificationServiceWorkProduct:
           type: string
-        ContentReview,RefinementandEditingServiceName:
+        ContentCaptureandClassificationServiceName:
           type: string
     IndexingandPublication:
       type: object
@@ -760,25 +760,6 @@ components:
           type: string
         ContentIndexingandPublicationServiceName:
           type: string
-    CaptureandClassification:
-      type: object
-      properties:
-        CaptureandClassificationPreconditions:
-          type: string
-        CaptureandClassificationFunctionSchedule:
-          type: string
-        ContentCaptureandClassification:
-          type: object
-        ContentCaptureandClassificationServiceType:
-          type: string
-        ContentCaptureandClassificationServiceDescription:
-          type: string
-        ContentCaptureandClassificationServiceInputsandOuputs:
-          type: string
-        ContentCaptureandClassificationServiceWorkProduct:
-          type: string
-        ContentCaptureandClassificationServiceName:
-          type: string
     Archiving:
       type: object
       properties:
@@ -798,12 +779,24 @@ components:
           type: string
         ContentArchivingServiceName:
           type: string
-    KnowledgeExchangeOutcome:
+    Review,RefinementandEditing:
       type: object
       properties:
-        KnowledgeExchangeIncident:
+        Review,RefinementandEditingPreconditions:
           type: string
-        KnowledgeExchangeProvision:
+        Review,RefinementandEditingFunctionSchedule:
+          type: string
+        ContentReview,RefinementandEditing:
+          type: object
+        ContentReview,RefinementandEditingServiceType:
+          type: string
+        ContentReview,RefinementandEditingServiceDescription:
+          type: string
+        ContentReview,RefinementandEditingServiceInputsandOuputs:
+          type: string
+        ContentReview,RefinementandEditingServiceWorkProduct:
+          type: string
+        ContentReview,RefinementandEditingServiceName:
           type: string
     MaintenanceandAccessAdministration:
       type: object
@@ -824,6 +817,13 @@ components:
           type: string
         ContentMaintenanceandAccessAdministrationServiceName:
           type: string
+    KnowledgeExchangeOutcome:
+      type: object
+      properties:
+        KnowledgeExchangeIncident:
+          type: string
+        KnowledgeExchangeProvision:
+          type: string
     HTTPError:
       type: object
       properties:
@@ -842,8 +842,8 @@ components:
       explode: false
       schema:
         type: string
-    Review,RefinementandEditingID:
-      name: review,refinementandeditingId
+    CaptureandClassificationID:
+      name: captureandclassificationId
       in: path
       required: true
       style: simple
@@ -858,14 +858,6 @@ components:
       explode: false
       schema:
         type: string
-    CaptureandClassificationID:
-      name: captureandclassificationId
-      in: path
-      required: true
-      style: simple
-      explode: false
-      schema:
-        type: string
     ArchivingID:
       name: archivingId
       in: path
@@ -874,8 +866,8 @@ components:
       explode: false
       schema:
         type: string
-    KnowledgeExchangeOutcomeID:
-      name: knowledgeexchangeoutcomeId
+    Review,RefinementandEditingID:
+      name: review,refinementandeditingId
       in: path
       required: true
       style: simple
@@ -884,6 +876,14 @@ components:
         type: string
     MaintenanceandAccessAdministrationID:
       name: maintenanceandaccessadministrationId
+      in: path
+      required: true
+      style: simple
+      explode: false
+      schema:
+        type: string
+    KnowledgeExchangeOutcomeID:
+      name: knowledgeexchangeoutcomeId
       in: path
       required: true
       style: simple

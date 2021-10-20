@@ -1,7 +1,7 @@
 openapi: 3.0.1
 info:
   title: Customer Behavior Models
-  description: This service domain handles the design and maintenance of a portfolio of customer behavior models that might be used in all aspects of customer relationship development, sales, servicing and product fulfillment
+  description: ''
   version: 10.0.0
 servers:
 - description: SwaggerHub API Auto Mocking
@@ -428,6 +428,30 @@ components:
           type: string
         CustomerBehaviorModel:
           type: string
+    FunctionalRequirements:
+      type: object
+      properties:
+        CustomerBehaviorModelDesignTaskReference:
+          type: object
+        CustomerBehaviorModelDesignTaskRecord:
+          type: string
+        Customer/MarketDataServiceReference:
+          type: object
+        Customer/MarketDataRecord:
+          type: string
+        CustomerBehaviorModelFeedbackRecord:
+          type: string
+        CustomerBehaviorModelRequirementsSpecification:
+          type: string
+    Production:
+      type: object
+      properties:
+        CustomerBehaviorModelOperationalRequirements:
+          type: string
+        CustomerBehaviorModelAllowedUsage:
+          type: string
+        CustomerBehaviorModelUsageGuidelines:
+          type: string
     Testing:
       type: object
       properties:
@@ -450,30 +474,6 @@ components:
         CustomerBehaviorModelComplianceTestReference:
           type: object
         CustomerBehaviorModelComplianceTestType:
-          type: string
-    Production:
-      type: object
-      properties:
-        CustomerBehaviorModelOperationalRequirements:
-          type: string
-        CustomerBehaviorModelAllowedUsage:
-          type: string
-        CustomerBehaviorModelUsageGuidelines:
-          type: string
-    FunctionalRequirements:
-      type: object
-      properties:
-        CustomerBehaviorModelDesignTaskReference:
-          type: object
-        CustomerBehaviorModelDesignTaskRecord:
-          type: string
-        Customer/MarketDataServiceReference:
-          type: object
-        Customer/MarketDataRecord:
-          type: string
-        CustomerBehaviorModelFeedbackRecord:
-          type: string
-        CustomerBehaviorModelRequirementsSpecification:
           type: string
     HTTPError:
       type: object
@@ -761,8 +761,8 @@ components:
       explode: false
       schema:
         type: string
-    TestingID:
-      name: testingId
+    FunctionalRequirementsID:
+      name: functionalrequirementsId
       in: path
       required: true
       style: simple
@@ -777,8 +777,8 @@ components:
       explode: false
       schema:
         type: string
-    FunctionalRequirementsID:
-      name: functionalrequirementsId
+    TestingID:
+      name: testingId
       in: path
       required: true
       style: simple

@@ -1,7 +1,7 @@
 openapi: 3.0.1
 info:
   title: Transaction Engine
-  description: Orchestrate a schedule of payment transaction and reporting activities for the fulfillment of certain long term instruments or structured facilities
+  description: ''
   version: 10.0.0
 servers:
 - description: SwaggerHub API Auto Mocking
@@ -10,20 +10,20 @@ paths:
   /TransactionEngine/Initiate:
     post:
       tags:
-      - CR - TransactionScheduleArrangement
+      - CR - TransactionScheduleFacility
       summary: InCR Initiate delegated transaction processing for a product instance
       description: InCR Initiate delegated transaction processing for a product instance
       operationId: Initiate
       parameters: []
       requestBody:
-        $ref: '#/components/requestBodies/TransactionScheduleArrangement'
+        $ref: '#/components/requestBodies/TransactionScheduleFacility'
       responses:
         200:
           description: Success
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/TransactionScheduleArrangement'
+                $ref: '#/components/schemas/TransactionScheduleFacility'
         400:
           $ref: '#/components/responses/BadRequestError'
         401:
@@ -39,21 +39,21 @@ paths:
   /TransactionEngine/{transactionengineId}/Update:
     put:
       tags:
-      - CR - TransactionScheduleArrangement
+      - CR - TransactionScheduleFacility
       summary: UpCR Update details for an active transaction processing arrangement
       description: UpCR Update details for an active transaction processing arrangement
       operationId: Update
       parameters:
       - $ref: '#/components/parameters/TransactionEngineID'
       requestBody:
-        $ref: '#/components/requestBodies/TransactionScheduleArrangement'
+        $ref: '#/components/requestBodies/TransactionScheduleFacility'
       responses:
         200:
           description: Success
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/TransactionScheduleArrangement'
+                $ref: '#/components/schemas/TransactionScheduleFacility'
         400:
           $ref: '#/components/responses/BadRequestError'
         401:
@@ -69,21 +69,21 @@ paths:
   /TransactionEngine/{transactionengineId}/Execute:
     put:
       tags:
-      - CR - TransactionScheduleArrangement
+      - CR - TransactionScheduleFacility
       summary: ExCR Execute an automated function for a transaction processing arrangement
       description: ExCR Execute an automated function for a transaction processing arrangement
       operationId: Execute
       parameters:
       - $ref: '#/components/parameters/TransactionEngineID'
       requestBody:
-        $ref: '#/components/requestBodies/TransactionScheduleArrangement'
+        $ref: '#/components/requestBodies/TransactionScheduleFacility'
       responses:
         200:
           description: Success
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/TransactionScheduleArrangement'
+                $ref: '#/components/schemas/TransactionScheduleFacility'
         400:
           $ref: '#/components/responses/BadRequestError'
         401:
@@ -99,7 +99,7 @@ paths:
   /TransactionEngine/{transactionengineId}/Retrieve:
     get:
       tags:
-      - CR - TransactionScheduleArrangement
+      - CR - TransactionScheduleFacility
       summary: ReCR Retrieve details about delegated transaction processing for a product instance
       description: ReCR Retrieve details about delegated transaction processing for a product instance
       operationId: Retrieve
@@ -111,7 +111,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/TransactionScheduleArrangement'
+                $ref: '#/components/schemas/TransactionScheduleFacility'
         400:
           $ref: '#/components/responses/BadRequestError'
         401:
@@ -126,7 +126,7 @@ paths:
           $ref: '#/components/responses/InternalServerError'
 components:
   schemas:
-    TransactionScheduleArrangement:
+    TransactionScheduleFacility:
       type: object
       properties:
         ProductInstanceReference:
@@ -190,12 +190,12 @@ components:
       schema:
         type: string
   requestBodies:
-    TransactionScheduleArrangement:
+    TransactionScheduleFacility:
       required: true
       content:
         application/json:
           schema:
-            $ref: '#/components/schemas/TransactionScheduleArrangement'
+            $ref: '#/components/schemas/TransactionScheduleFacility'
   responses:
     HTTPError:
       description: Bad Request

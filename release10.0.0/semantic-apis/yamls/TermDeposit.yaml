@@ -1,7 +1,7 @@
 openapi: 3.0.1
 info:
   title: Term Deposit
-  description: '<span style=" font-size: 10pt;">This service domain handles the fulfillment of instances of the term deposit product&nbsp;<p style="margin-top: 3pt;"></span>'
+  description: ''
   version: 10.0.0
 servers:
 - description: SwaggerHub API Auto Mocking
@@ -10,20 +10,20 @@ paths:
   /TermDeposit/Initiate:
     post:
       tags:
-      - CR - TermDepositArrangement
+      - CR - TermDepositFacility
       summary: InCR Initiate A new term deposit account
       description: InCR Initiate A new term deposit account
       operationId: Initiate
       parameters: []
       requestBody:
-        $ref: '#/components/requestBodies/TermDepositArrangement'
+        $ref: '#/components/requestBodies/TermDepositFacility'
       responses:
         200:
           description: Success
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/TermDepositArrangement'
+                $ref: '#/components/schemas/TermDepositFacility'
         400:
           $ref: '#/components/responses/BadRequestError'
         401:
@@ -39,21 +39,21 @@ paths:
   /TermDeposit/{termdepositId}/Update:
     put:
       tags:
-      - CR - TermDepositArrangement
+      - CR - TermDepositFacility
       summary: UpCR Update properties of an active term deposit account
       description: UpCR Update properties of an active term deposit account
       operationId: Update
       parameters:
       - $ref: '#/components/parameters/TermDepositID'
       requestBody:
-        $ref: '#/components/requestBodies/TermDepositArrangement'
+        $ref: '#/components/requestBodies/TermDepositFacility'
       responses:
         200:
           description: Success
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/TermDepositArrangement'
+                $ref: '#/components/schemas/TermDepositFacility'
         400:
           $ref: '#/components/responses/BadRequestError'
         401:
@@ -69,7 +69,7 @@ paths:
   /TermDeposit/{termdepositId}/Retrieve:
     get:
       tags:
-      - CR - TermDepositArrangement
+      - CR - TermDepositFacility
       summary: ReCR Retrieve information about a term deposit account - either standard canned reports or selected instance attribute values
       description: ReCR Retrieve information about a term deposit account - either standard canned reports or selected instance attribute values
       operationId: Retrieve
@@ -81,7 +81,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/TermDepositArrangement'
+                $ref: '#/components/schemas/TermDepositFacility'
         400:
           $ref: '#/components/responses/BadRequestError'
         401:
@@ -442,7 +442,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/TermDepositArrangement'
+                $ref: '#/components/schemas/TermDepositFacility'
         400:
           $ref: '#/components/responses/BadRequestError'
         401:
@@ -790,7 +790,7 @@ paths:
           $ref: '#/components/responses/InternalServerError'
 components:
   schemas:
-    TermDepositArrangement:
+    TermDepositFacility:
       type: object
       properties:
         ProductInstanceReference:
@@ -850,130 +850,6 @@ components:
         StatementPeriod:
           type: string
         StatementReport:
-          type: string
-    DepositsandWithdrawals:
-      type: object
-      properties:
-        DepositType:
-          type: string
-        WithdrawalType:
-          type: string
-        AccountLimitBreachResponse:
-          type: string
-        DepositTransaction:
-          type: string
-        DepositTransactionSourceReference:
-          type: object
-        DepositTransactionDepositType:
-          type: string
-        DepositTransactionDescription:
-          type: string
-        DepositTransactionAmount:
-          type: number
-        DepositTransactionDate:
-          type: string
-        WithdrawalTransaction:
-          type: string
-        WithdrawalTransactionSourceReference:
-          type: object
-        WithdrawalTransactionWithdrawalType:
-          type: string
-        WithdrawalTransactionDescription:
-          type: string
-        WithdrawalTransactionAmount:
-          type: number
-        WithdrawalTransactionDate:
-          type: string
-    AccountLien:
-      type: object
-      properties:
-        LienType:
-          type: string
-        LienDefinition:
-          type: string
-        LienProcessingOption:
-          type: string
-        LienRecord:
-          type: string
-        LienOriginator:
-          type: string
-        LienPurpose:
-          type: string
-        LienAmount:
-          type: number
-        LienStartDate:
-          type: string
-        LienExpiryDate:
-          type: string
-        LienStatus:
-          type: string
-    Payments:
-      type: object
-      properties:
-        PaymentType:
-          type: string
-        PaymentDefinition:
-          type: string
-        PaymentProcessingOptionDefinition:
-          type: string
-        PaymentProcessingOptionSetting:
-          type: string
-        PaymentConfiguration:
-          type: string
-        PaymentSchedule:
-          type: string
-        DirectDebitMandateReference:
-          type: object
-        DirectDebitMandateSettings:
-          type: string
-        BillPayMandateReference:
-          type: object
-        BillPayMandateSettings:
-          type: string
-        PaymentTransaction:
-          type: string
-        PaymentTransactionType:
-          type: string
-        PaymentTransactionPayeeReference:
-          type: object
-        PaymentTransactionPayeeAccountReference:
-          type: object
-        PaymentTransactionPayeeBankReference:
-          type: object
-        PaymentTransactionAmount:
-          type: number
-        PaymentTransactionFeeType:
-          type: string
-        PaymentTransactionFeeCharge:
-          type: string
-        PaymentTransactionDate:
-          type: string
-        PaymentTransactionPaymentMechanism:
-          type: string
-        PaymentTransactionPaymentPurpose:
-          type: string
-        PaymentTransactionBankBranch/LocationReference:
-          type: object
-        PaymentTransactionStatus:
-          type: string
-    IssuedDevice:
-      type: object
-      properties:
-        IssuedDeviceType:
-          type: string
-        IssuedDeviceDescription:
-          type: string
-        IssuedDeviceOptionDefinition:
-          type: string
-        IssuedDeviceOptionSetting:
-          type: string
-        IssuedDeviceProperty:
-          type: string
-        IssuedDevicePropertyType:
-          type: string
-        IssuedDevicePropertyValue:
-          type: string
-        IssuedDeviceStatus:
           type: string
     AccountSweep:
       type: object
@@ -1060,6 +936,130 @@ components:
           type: string
         InterestAccrualCharge:
           type: string
+    AccountLien:
+      type: object
+      properties:
+        LienType:
+          type: string
+        LienDefinition:
+          type: string
+        LienProcessingOption:
+          type: string
+        LienRecord:
+          type: string
+        LienOriginator:
+          type: string
+        LienPurpose:
+          type: string
+        LienAmount:
+          type: number
+        LienStartDate:
+          type: string
+        LienExpiryDate:
+          type: string
+        LienStatus:
+          type: string
+    DepositsandWithdrawals:
+      type: object
+      properties:
+        DepositType:
+          type: string
+        WithdrawalType:
+          type: string
+        AccountLimitBreachResponse:
+          type: string
+        DepositTransaction:
+          type: string
+        DepositTransactionSourceReference:
+          type: object
+        DepositTransactionDepositType:
+          type: string
+        DepositTransactionDescription:
+          type: string
+        DepositTransactionAmount:
+          type: number
+        DepositTransactionDate:
+          type: string
+        WithdrawalTransaction:
+          type: string
+        WithdrawalTransactionSourceReference:
+          type: object
+        WithdrawalTransactionWithdrawalType:
+          type: string
+        WithdrawalTransactionDescription:
+          type: string
+        WithdrawalTransactionAmount:
+          type: number
+        WithdrawalTransactionDate:
+          type: string
+    IssuedDevice:
+      type: object
+      properties:
+        IssuedDeviceType:
+          type: string
+        IssuedDeviceDescription:
+          type: string
+        IssuedDeviceOptionDefinition:
+          type: string
+        IssuedDeviceOptionSetting:
+          type: string
+        IssuedDeviceProperty:
+          type: string
+        IssuedDevicePropertyType:
+          type: string
+        IssuedDevicePropertyValue:
+          type: string
+        IssuedDeviceStatus:
+          type: string
+    Payments:
+      type: object
+      properties:
+        PaymentType:
+          type: string
+        PaymentDefinition:
+          type: string
+        PaymentProcessingOptionDefinition:
+          type: string
+        PaymentProcessingOptionSetting:
+          type: string
+        PaymentConfiguration:
+          type: string
+        PaymentSchedule:
+          type: string
+        DirectDebitMandateReference:
+          type: object
+        DirectDebitMandateSettings:
+          type: string
+        BillPayMandateReference:
+          type: object
+        BillPayMandateSettings:
+          type: string
+        PaymentTransaction:
+          type: string
+        PaymentTransactionType:
+          type: string
+        PaymentTransactionPayeeReference:
+          type: object
+        PaymentTransactionPayeeAccountReference:
+          type: object
+        PaymentTransactionPayeeBankReference:
+          type: object
+        PaymentTransactionAmount:
+          type: number
+        PaymentTransactionFeeType:
+          type: string
+        PaymentTransactionFeeCharge:
+          type: string
+        PaymentTransactionDate:
+          type: string
+        PaymentTransactionPaymentMechanism:
+          type: string
+        PaymentTransactionPaymentPurpose:
+          type: string
+        PaymentTransactionBankBranch/LocationReference:
+          type: object
+        PaymentTransactionStatus:
+          type: string
     HTTPError:
       type: object
       properties:
@@ -1072,7 +1072,7 @@ components:
     InitiateServiceFeesRequest:
       type: object
       properties:
-        TermDepositArrangement:
+        TermDepositFacility:
           type: object
           properties:
             ProductInstanceReference:
@@ -1121,7 +1121,7 @@ components:
     InitiateServiceFeesResponse:
       type: object
       properties:
-        TermDepositArrangement:
+        TermDepositFacility:
           type: object
           properties:
             DateType:
@@ -1134,7 +1134,7 @@ components:
     InitiateAccountLienRequest:
       type: object
       properties:
-        TermDepositArrangement:
+        TermDepositFacility:
           type: object
           properties:
             ProductInstanceReference:
@@ -1189,7 +1189,7 @@ components:
     InitiateAccountLienResponse:
       type: object
       properties:
-        TermDepositArrangement:
+        TermDepositFacility:
           type: object
           properties:
             EntitlementOptionDefinition:
@@ -1214,7 +1214,7 @@ components:
     InitiateAccountSweepRequest:
       type: object
       properties:
-        TermDepositArrangement:
+        TermDepositFacility:
           type: object
           properties:
             ProductInstanceReference:
@@ -1261,7 +1261,7 @@ components:
     InitiateAccountSweepResponse:
       type: object
       properties:
-        TermDepositArrangement:
+        TermDepositFacility:
           type: object
           properties:
             DateType:
@@ -1276,7 +1276,7 @@ components:
     InitiateDepositsandWithdrawalsRequest:
       type: object
       properties:
-        TermDepositArrangement:
+        TermDepositFacility:
           type: object
           properties:
             ProductInstanceReference:
@@ -1311,7 +1311,7 @@ components:
     InitiatePaymentsRequest:
       type: object
       properties:
-        TermDepositArrangement:
+        TermDepositFacility:
           type: object
           properties:
             ProductInstanceReference:
@@ -1368,7 +1368,7 @@ components:
     InitiatePaymentsResponse:
       type: object
       properties:
-        TermDepositArrangement:
+        TermDepositFacility:
           type: object
           properties:
             TaxReference:
@@ -1393,7 +1393,7 @@ components:
     InitiateIssuedDeviceRequest:
       type: object
       properties:
-        TermDepositArrangement:
+        TermDepositFacility:
           type: object
           properties:
             ProductInstanceReference:
@@ -1438,7 +1438,7 @@ components:
     InitiateIssuedDeviceResponse:
       type: object
       properties:
-        TermDepositArrangement:
+        TermDepositFacility:
           type: object
           properties:
             AssociationType:
@@ -1477,38 +1477,6 @@ components:
       explode: false
       schema:
         type: string
-    DepositsandWithdrawalsID:
-      name: depositsandwithdrawalsId
-      in: path
-      required: true
-      style: simple
-      explode: false
-      schema:
-        type: string
-    AccountLienID:
-      name: accountlienId
-      in: path
-      required: true
-      style: simple
-      explode: false
-      schema:
-        type: string
-    PaymentsID:
-      name: paymentsId
-      in: path
-      required: true
-      style: simple
-      explode: false
-      schema:
-        type: string
-    IssuedDeviceID:
-      name: issueddeviceId
-      in: path
-      required: true
-      style: simple
-      explode: false
-      schema:
-        type: string
     AccountSweepID:
       name: accountsweepId
       in: path
@@ -1533,13 +1501,45 @@ components:
       explode: false
       schema:
         type: string
+    AccountLienID:
+      name: accountlienId
+      in: path
+      required: true
+      style: simple
+      explode: false
+      schema:
+        type: string
+    DepositsandWithdrawalsID:
+      name: depositsandwithdrawalsId
+      in: path
+      required: true
+      style: simple
+      explode: false
+      schema:
+        type: string
+    IssuedDeviceID:
+      name: issueddeviceId
+      in: path
+      required: true
+      style: simple
+      explode: false
+      schema:
+        type: string
+    PaymentsID:
+      name: paymentsId
+      in: path
+      required: true
+      style: simple
+      explode: false
+      schema:
+        type: string
   requestBodies:
-    TermDepositArrangement:
+    TermDepositFacility:
       required: true
       content:
         application/json:
           schema:
-            $ref: '#/components/schemas/TermDepositArrangement'
+            $ref: '#/components/schemas/TermDepositFacility'
     InitiateServiceFeesRequest:
       required: true
       content:

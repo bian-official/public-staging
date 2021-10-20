@@ -1,7 +1,7 @@
 openapi: 3.0.1
 info:
   title: Issued Device Administration
-  description: This service domain administers the issuance of authentication tokens to customers and third party service providers. Tokens here include physical devices such as cards, fobs, readers and intangible 'devices' such as passwords and secret questions. Administration includes version tracking, replacement and duration/frequency limits. Specific product/service access permissions may be associated with an issued token when appropriate
+  description: ''
   version: 10.0.0
 servers:
 - description: SwaggerHub API Auto Mocking
@@ -684,6 +684,15 @@ components:
           type: string
         ValidFrom-ToDate:
           type: string
+    ChequesAssignment:
+      type: object
+      properties:
+        IssuedDeviceTemplate/Values:
+          type: string
+        IssueLocation:
+          type: string
+        SequenceNumber:
+          type: string
     PasswordAssignment:
       type: object
       properties:
@@ -692,39 +701,6 @@ components:
         RecentValues:
           type: string
         PasswordValue:
-          type: string
-        UsageLog:
-          type: string
-    BiometricAssignment:
-      type: object
-      properties:
-        BiometricType:
-          type: string
-        BiometricRegisteredDetail:
-          type: string
-    QuestionAssignment:
-      type: object
-      properties:
-        FormatRules:
-          type: string
-        RecentValues:
-          type: string
-        RequestText:
-          type: string
-        ResponseText:
-          type: string
-        UsageLog:
-          type: string
-    ReaderAssignment:
-      type: object
-      properties:
-        IssuedReaderDeviceSerialNumber:
-          type: string
-        VersionNumber:
-          type: string
-        IssueLocation:
-          type: string
-        IssuedDeviceConfiguration:
           type: string
         UsageLog:
           type: string
@@ -745,14 +721,38 @@ components:
           type: string
         UsageLog:
           type: string
-    ChequesAssignment:
+    ReaderAssignment:
       type: object
       properties:
-        IssuedDeviceTemplate/Values:
+        IssuedReaderDeviceSerialNumber:
+          type: string
+        VersionNumber:
           type: string
         IssueLocation:
           type: string
-        SequenceNumber:
+        IssuedDeviceConfiguration:
+          type: string
+        UsageLog:
+          type: string
+    QuestionAssignment:
+      type: object
+      properties:
+        FormatRules:
+          type: string
+        RecentValues:
+          type: string
+        RequestText:
+          type: string
+        ResponseText:
+          type: string
+        UsageLog:
+          type: string
+    BiometricAssignment:
+      type: object
+      properties:
+        BiometricType:
+          type: string
+        BiometricRegisteredDetail:
           type: string
     HTTPError:
       type: object
@@ -1320,32 +1320,16 @@ components:
       explode: false
       schema:
         type: string
+    ChequesAssignmentID:
+      name: chequesassignmentId
+      in: path
+      required: true
+      style: simple
+      explode: false
+      schema:
+        type: string
     PasswordAssignmentID:
       name: passwordassignmentId
-      in: path
-      required: true
-      style: simple
-      explode: false
-      schema:
-        type: string
-    BiometricAssignmentID:
-      name: biometricassignmentId
-      in: path
-      required: true
-      style: simple
-      explode: false
-      schema:
-        type: string
-    QuestionAssignmentID:
-      name: questionassignmentId
-      in: path
-      required: true
-      style: simple
-      explode: false
-      schema:
-        type: string
-    ReaderAssignmentID:
-      name: readerassignmentId
       in: path
       required: true
       style: simple
@@ -1360,8 +1344,24 @@ components:
       explode: false
       schema:
         type: string
-    ChequesAssignmentID:
-      name: chequesassignmentId
+    ReaderAssignmentID:
+      name: readerassignmentId
+      in: path
+      required: true
+      style: simple
+      explode: false
+      schema:
+        type: string
+    QuestionAssignmentID:
+      name: questionassignmentId
+      in: path
+      required: true
+      style: simple
+      explode: false
+      schema:
+        type: string
+    BiometricAssignmentID:
+      name: biometricassignmentId
       in: path
       required: true
       style: simple

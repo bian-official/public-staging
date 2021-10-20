@@ -1,7 +1,7 @@
 openapi: 3.0.1
 info:
   title: Corporate Loan
-  description: This service domain handles the fulfillment of a corporate loan product. This includes the initial set-up of the loan facility and the completion of scheduled and ad-hoc product processing tasks
+  description: ''
   version: 10.0.0
 servers:
 - description: SwaggerHub API Auto Mocking
@@ -10,20 +10,20 @@ paths:
   /CorporateLoan/Initiate:
     post:
       tags:
-      - CR - CorporateLoanArrangement
+      - CR - CorporateLoanFacility
       summary: InCR Initiate a corporate loan
       description: InCR Initiate a corporate loan
       operationId: Initiate
       parameters: []
       requestBody:
-        $ref: '#/components/requestBodies/CorporateLoanArrangement'
+        $ref: '#/components/requestBodies/CorporateLoanFacility'
       responses:
         200:
           description: Success
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/CorporateLoanArrangement'
+                $ref: '#/components/schemas/CorporateLoanFacility'
         400:
           $ref: '#/components/responses/BadRequestError'
         401:
@@ -39,21 +39,21 @@ paths:
   /CorporateLoan/{corporateloanId}/Update:
     put:
       tags:
-      - CR - CorporateLoanArrangement
+      - CR - CorporateLoanFacility
       summary: UpCR Update details for an existing corporate loan
       description: UpCR Update details for an existing corporate loan
       operationId: Update
       parameters:
       - $ref: '#/components/parameters/CorporateLoanID'
       requestBody:
-        $ref: '#/components/requestBodies/CorporateLoanArrangement'
+        $ref: '#/components/requestBodies/CorporateLoanFacility'
       responses:
         200:
           description: Success
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/CorporateLoanArrangement'
+                $ref: '#/components/schemas/CorporateLoanFacility'
         400:
           $ref: '#/components/responses/BadRequestError'
         401:
@@ -69,7 +69,7 @@ paths:
   /CorporateLoan/{corporateloanId}/Retrieve:
     get:
       tags:
-      - CR - CorporateLoanArrangement
+      - CR - CorporateLoanFacility
       summary: ReCR Retrieve details about a corporate loan
       description: ReCR Retrieve details about a corporate loan
       operationId: Retrieve
@@ -81,7 +81,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/CorporateLoanArrangement'
+                $ref: '#/components/schemas/CorporateLoanFacility'
         400:
           $ref: '#/components/responses/BadRequestError'
         401:
@@ -639,7 +639,7 @@ paths:
           $ref: '#/components/responses/InternalServerError'
 components:
   schemas:
-    CorporateLoanArrangement:
+    CorporateLoanFacility:
       type: object
       properties:
         ProductInstanceReference:
@@ -745,30 +745,6 @@ components:
           type: string
         InterestAccrualCharge:
           type: string
-    Restructuring:
-      type: object
-      properties:
-        RestructuringTask:
-          type: string
-        RestructuringEvaluation:
-          type: string
-        RestructuringWriteDown:
-          type: string
-    Disbursement:
-      type: object
-      properties:
-        DisbursementPayeeReference:
-          type: object
-        DisbursementPayeeProductInstanceReference:
-          type: object
-        DisbursementPayeeBankReference:
-          type: object
-        DisbursementAmount:
-          type: number
-        DisbursementCurrency:
-          type: string
-        DisbursementValueDate:
-          type: string
     ServiceFees:
       type: object
       properties:
@@ -802,22 +778,29 @@ components:
           type: string
         AccrualFeeCharge:
           type: string
-    Repayment:
+    Maintenance:
       type: object
       properties:
-        RepaymentTransactionType:
+        MaintenanceReportType:
           type: string
-        RepaymentTransactionPayerReference:
-          type: object
-        RepaymentTransactionPayerProductInstanceReference:
-          type: object
-        RepaymentTransactionPayerBankReference:
-          type: object
-        RepaymentTransactionAmount:
-          type: number
-        RepaymentTransactionCurrency:
+        LoanTaxReport:
           type: string
-        RepaymentTransactionValueDate:
+        LoanFeeType:
+          type: string
+        LoanFees:
+          type: string
+        Penalties:
+          type: string
+        CollateralValuation:
+          type: string
+    Restructuring:
+      type: object
+      properties:
+        RestructuringTask:
+          type: string
+        RestructuringEvaluation:
+          type: string
+        RestructuringWriteDown:
           type: string
     Withdrawal:
       type: object
@@ -848,20 +831,37 @@ components:
           type: object
         PaymentTransactionStatus:
           type: string
-    Maintenance:
+    Disbursement:
       type: object
       properties:
-        MaintenanceReportType:
+        DisbursementPayeeReference:
+          type: object
+        DisbursementPayeeProductInstanceReference:
+          type: object
+        DisbursementPayeeBankReference:
+          type: object
+        DisbursementAmount:
+          type: number
+        DisbursementCurrency:
           type: string
-        LoanTaxReport:
+        DisbursementValueDate:
           type: string
-        LoanFeeType:
+    Repayment:
+      type: object
+      properties:
+        RepaymentTransactionType:
           type: string
-        LoanFees:
+        RepaymentTransactionPayerReference:
+          type: object
+        RepaymentTransactionPayerProductInstanceReference:
+          type: object
+        RepaymentTransactionPayerBankReference:
+          type: object
+        RepaymentTransactionAmount:
+          type: number
+        RepaymentTransactionCurrency:
           type: string
-        Penalties:
-          type: string
-        CollateralValuation:
+        RepaymentTransactionValueDate:
           type: string
     HTTPError:
       type: object
@@ -875,7 +875,7 @@ components:
     RetrieveInterestResponse:
       type: object
       properties:
-        CorporateLoanArrangement:
+        CorporateLoanFacility:
           type: object
           properties:
             ProductInstanceReference:
@@ -932,7 +932,7 @@ components:
     RetrieveServiceFeesResponse:
       type: object
       properties:
-        CorporateLoanArrangement:
+        CorporateLoanFacility:
           type: object
           properties:
             ProductInstanceReference:
@@ -1001,7 +1001,7 @@ components:
     RetrieveDisbursementResponse:
       type: object
       properties:
-        CorporateLoanArrangement:
+        CorporateLoanFacility:
           type: object
           properties:
             ProductInstanceReference:
@@ -1036,7 +1036,7 @@ components:
     RetrieveMaintenanceResponse:
       type: object
       properties:
-        CorporateLoanArrangement:
+        CorporateLoanFacility:
           type: object
           properties:
             ProductInstanceReference:
@@ -1131,7 +1131,7 @@ components:
     RetrieveWithdrawalResponse:
       type: object
       properties:
-        CorporateLoanArrangement:
+        CorporateLoanFacility:
           type: object
           properties:
             ProductInstanceReference:
@@ -1188,7 +1188,7 @@ components:
     UpdateRepaymentRequest:
       type: object
       properties:
-        CorporateLoanArrangement:
+        CorporateLoanFacility:
           type: object
           properties:
             LoanOutstandingBalance:
@@ -1215,7 +1215,7 @@ components:
     UpdateRepaymentResponse:
       type: object
       properties:
-        CorporateLoanArrangement:
+        CorporateLoanFacility:
           type: object
           properties:
             LoanOutstandingBalance:
@@ -1242,7 +1242,7 @@ components:
     RetrieveRepaymentResponse:
       type: object
       properties:
-        CorporateLoanArrangement:
+        CorporateLoanFacility:
           type: object
           properties:
             ProductInstanceReference:
@@ -1289,7 +1289,7 @@ components:
     InitiateRestructuringRequest:
       type: object
       properties:
-        CorporateLoanArrangement:
+        CorporateLoanFacility:
           type: object
           properties:
             ProductInstanceReference:
@@ -1374,7 +1374,7 @@ components:
     InitiateRestructuringResponse:
       type: object
       properties:
-        CorporateLoanArrangement:
+        CorporateLoanFacility:
           type: object
           properties:
             StagedRepaymentStatement:
@@ -1397,7 +1397,7 @@ components:
     UpdateRestructuringRequest:
       type: object
       properties:
-        CorporateLoanArrangement:
+        CorporateLoanFacility:
           type: object
           properties:
             ProductInstanceReference:
@@ -1486,7 +1486,7 @@ components:
     UpdateRestructuringResponse:
       type: object
       properties:
-        CorporateLoanArrangement:
+        CorporateLoanFacility:
           type: object
           properties:
             ProductInstanceReference:
@@ -1575,7 +1575,7 @@ components:
     RetrieveRestructuringResponse:
       type: object
       properties:
-        CorporateLoanArrangement:
+        CorporateLoanFacility:
           type: object
           properties:
             ProductInstanceReference:
@@ -1678,40 +1678,8 @@ components:
       explode: false
       schema:
         type: string
-    RestructuringID:
-      name: restructuringId
-      in: path
-      required: true
-      style: simple
-      explode: false
-      schema:
-        type: string
-    DisbursementID:
-      name: disbursementId
-      in: path
-      required: true
-      style: simple
-      explode: false
-      schema:
-        type: string
     ServiceFeesID:
       name: servicefeesId
-      in: path
-      required: true
-      style: simple
-      explode: false
-      schema:
-        type: string
-    RepaymentID:
-      name: repaymentId
-      in: path
-      required: true
-      style: simple
-      explode: false
-      schema:
-        type: string
-    WithdrawalID:
-      name: withdrawalId
       in: path
       required: true
       style: simple
@@ -1726,13 +1694,45 @@ components:
       explode: false
       schema:
         type: string
+    RestructuringID:
+      name: restructuringId
+      in: path
+      required: true
+      style: simple
+      explode: false
+      schema:
+        type: string
+    WithdrawalID:
+      name: withdrawalId
+      in: path
+      required: true
+      style: simple
+      explode: false
+      schema:
+        type: string
+    DisbursementID:
+      name: disbursementId
+      in: path
+      required: true
+      style: simple
+      explode: false
+      schema:
+        type: string
+    RepaymentID:
+      name: repaymentId
+      in: path
+      required: true
+      style: simple
+      explode: false
+      schema:
+        type: string
   requestBodies:
-    CorporateLoanArrangement:
+    CorporateLoanFacility:
       required: true
       content:
         application/json:
           schema:
-            $ref: '#/components/schemas/CorporateLoanArrangement'
+            $ref: '#/components/schemas/CorporateLoanFacility'
     ServiceFees:
       required: true
       content:

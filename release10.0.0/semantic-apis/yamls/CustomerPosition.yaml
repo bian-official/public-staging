@@ -1,7 +1,7 @@
 openapi: 3.0.1
 info:
   title: Customer Position
-  description: This service domain maintains a consolidated financial position for a customer, combining details from all products and services in use. The position can cover available funds, credit, collateral, tax exposure and other financial measures as necessary
+  description: ''
   version: 10.0.0
 servers:
 - description: SwaggerHub API Auto Mocking

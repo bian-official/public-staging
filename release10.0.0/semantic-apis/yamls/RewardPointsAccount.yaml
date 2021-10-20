@@ -1,7 +1,7 @@
 openapi: 3.0.1
 info:
   title: Reward Points Account
-  description: Administer the booking and remittance of rewards points
+  description: ''
   version: 10.0.0
 servers:
 - description: SwaggerHub API Auto Mocking
@@ -517,26 +517,12 @@ components:
           type: string
         RewardPointsLogPositionLimitTime:
           type: string
-    Expiration:
+    RewardPointsAccountOutcome:
       type: object
       properties:
-        ExpirationPreconditions:
+        RewardPointsAccountIncident:
           type: string
-        ExpirationEventSchedule:
-          type: string
-        LogEventExpiration:
-          type: object
-        ExpirationPostconditions:
-          type: string
-        ExpirationLogEventExpirationServiceType:
-          type: string
-        ExpirationLogEventExpirationServiceDescription:
-          type: string
-        ExpirationLogEventExpirationServiceInputsandOuputs:
-          type: string
-        ExpirationLogEventExpirationServiceWorkProduct:
-          type: string
-        ExpirationLogEventExpirationServiceName:
+        RewardPointsAccountLog:
           type: string
     Capture:
       type: object
@@ -559,12 +545,26 @@ components:
           type: string
         CaptureServiceName:
           type: string
-    RewardPointsAccountOutcome:
+    Expiration:
       type: object
       properties:
-        RewardPointsAccountIncident:
+        ExpirationPreconditions:
           type: string
-        RewardPointsAccountLog:
+        ExpirationEventSchedule:
+          type: string
+        LogEventExpiration:
+          type: object
+        ExpirationPostconditions:
+          type: string
+        ExpirationLogEventExpirationServiceType:
+          type: string
+        ExpirationLogEventExpirationServiceDescription:
+          type: string
+        ExpirationLogEventExpirationServiceInputsandOuputs:
+          type: string
+        ExpirationLogEventExpirationServiceWorkProduct:
+          type: string
+        ExpirationLogEventExpirationServiceName:
           type: string
     HTTPError:
       type: object
@@ -584,8 +584,8 @@ components:
       explode: false
       schema:
         type: string
-    ExpirationID:
-      name: expirationId
+    RewardPointsAccountOutcomeID:
+      name: rewardpointsaccountoutcomeId
       in: path
       required: true
       style: simple
@@ -600,8 +600,8 @@ components:
       explode: false
       schema:
         type: string
-    RewardPointsAccountOutcomeID:
-      name: rewardpointsaccountoutcomeId
+    ExpirationID:
+      name: expirationId
       in: path
       required: true
       style: simple

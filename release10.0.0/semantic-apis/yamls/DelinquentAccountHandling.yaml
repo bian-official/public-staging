@@ -1,7 +1,7 @@
 openapi: 3.0.1
 info:
   title: Delinquent Account Handling
-  description: This service domain handles delinquent accounts (typically for active credit/charge cards) for follow-up of payments due through periodic review and contacts. This process ends when the account is cancelled and is transferred to Collections
+  description: ''
   version: 10.0.0
 servers:
 - description: SwaggerHub API Auto Mocking
@@ -438,29 +438,6 @@ components:
           type: string
         DelinquentAccountProcessingSchedule:
           type: string
-    Assessment:
-      type: object
-      properties:
-        DelinquentAccountAssessmentWorkProduct:
-          type: string
-        DelinquentAccountAssessmentRecord:
-          type: string
-    Payment:
-      type: object
-      properties:
-        PaymentTransactionReference:
-          type: object
-        PaymentTransaction:
-          type: string
-    Resolution:
-      type: object
-      properties:
-        DelinquentAccountResolutionTaskResult:
-          type: string
-        DelinquentAccountResolutionActionPlan:
-          type: string
-        DelinquentAccountResolutionWorkProduct:
-          type: string
     Contact:
       type: object
       properties:
@@ -483,6 +460,29 @@ components:
         DelinquentAccountContactResult:
           type: string
         DelinquentAccountContactWorkProduct:
+          type: string
+    Assessment:
+      type: object
+      properties:
+        DelinquentAccountAssessmentWorkProduct:
+          type: string
+        DelinquentAccountAssessmentRecord:
+          type: string
+    Payment:
+      type: object
+      properties:
+        PaymentTransactionReference:
+          type: object
+        PaymentTransaction:
+          type: string
+    Resolution:
+      type: object
+      properties:
+        DelinquentAccountResolutionTaskResult:
+          type: string
+        DelinquentAccountResolutionActionPlan:
+          type: string
+        DelinquentAccountResolutionWorkProduct:
           type: string
     HTTPError:
       type: object
@@ -798,6 +798,14 @@ components:
       explode: false
       schema:
         type: string
+    ContactID:
+      name: contactId
+      in: path
+      required: true
+      style: simple
+      explode: false
+      schema:
+        type: string
     AssessmentID:
       name: assessmentId
       in: path
@@ -816,14 +824,6 @@ components:
         type: string
     ResolutionID:
       name: resolutionId
-      in: path
-      required: true
-      style: simple
-      explode: false
-      schema:
-        type: string
-    ContactID:
-      name: contactId
       in: path
       required: true
       style: simple

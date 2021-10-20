@@ -1,7 +1,7 @@
 openapi: 3.0.1
 info:
   title: Customer Surveys
-  description: Define and execute and analyze customer surveys
+  description: ''
   version: 10.0.0
 servers:
 - description: SwaggerHub API Auto Mocking
@@ -608,11 +608,6 @@ components:
           type: string
         CustomerSurveyProcedureResult:
           type: string
-    SurveyAnalysis:
-      type: object
-      properties:
-        CustomerSurveyProcedureSurveyAnalysisResult:
-          type: string
     ReviewerSelection:
       type: object
       properties:
@@ -620,6 +615,17 @@ components:
           type: string
         CustomerSurveyCandidateReference:
           type: object
+    Definition:
+      type: object
+      properties:
+        CustomerSurveyDesignWorkTaskType:
+          type: string
+        CustomerSurveyDesignWorkTaskDescription:
+          type: string
+        CustomerSurveyDesignWorkTaskWorkProducts:
+          type: string
+        CustomerSurveyDesignWorkTaskResult:
+          type: string
     Execution:
       type: object
       properties:
@@ -635,16 +641,10 @@ components:
           type: string
         CustomerSurveyExecutionWorkTaskDate-Time:
           type: string
-    Definition:
+    SurveyAnalysis:
       type: object
       properties:
-        CustomerSurveyDesignWorkTaskType:
-          type: string
-        CustomerSurveyDesignWorkTaskDescription:
-          type: string
-        CustomerSurveyDesignWorkTaskWorkProducts:
-          type: string
-        CustomerSurveyDesignWorkTaskResult:
+        CustomerSurveyProcedureSurveyAnalysisResult:
           type: string
     HTTPError:
       type: object
@@ -979,16 +979,16 @@ components:
       explode: false
       schema:
         type: string
-    SurveyAnalysisID:
-      name: surveyanalysisId
+    ReviewerSelectionID:
+      name: reviewerselectionId
       in: path
       required: true
       style: simple
       explode: false
       schema:
         type: string
-    ReviewerSelectionID:
-      name: reviewerselectionId
+    DefinitionID:
+      name: definitionId
       in: path
       required: true
       style: simple
@@ -1003,8 +1003,8 @@ components:
       explode: false
       schema:
         type: string
-    DefinitionID:
-      name: definitionId
+    SurveyAnalysisID:
+      name: surveyanalysisId
       in: path
       required: true
       style: simple

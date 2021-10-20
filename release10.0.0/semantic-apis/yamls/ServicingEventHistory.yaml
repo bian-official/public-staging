@@ -1,7 +1,7 @@
 openapi: 3.0.1
 info:
   title: Servicing Event History
-  description: This service domain captures, classifies and stores servicing activity and events to support root cause analysis
+  description: ''
   version: 10.0.0
 servers:
 - description: SwaggerHub API Auto Mocking
@@ -489,13 +489,6 @@ components:
           type: string
         ProductionIssueResolutionTask:
           type: string
-    ServicingFacility:
-      type: object
-      properties:
-        ServicingFacilityType:
-          type: string
-        ServicingFacilityInstanceReference:
-          type: object
     Assignment:
       type: object
       properties:
@@ -505,6 +498,13 @@ components:
           type: string
         ServicingPositionActivityStatistics:
           type: string
+    ServicingFacility:
+      type: object
+      properties:
+        ServicingFacilityType:
+          type: string
+        ServicingFacilityInstanceReference:
+          type: object
     Session:
       type: object
       properties:
@@ -594,16 +594,16 @@ components:
       explode: false
       schema:
         type: string
-    ServicingFacilityID:
-      name: servicingfacilityId
+    AssignmentID:
+      name: assignmentId
       in: path
       required: true
       style: simple
       explode: false
       schema:
         type: string
-    AssignmentID:
-      name: assignmentId
+    ServicingFacilityID:
+      name: servicingfacilityId
       in: path
       required: true
       style: simple

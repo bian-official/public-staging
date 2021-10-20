@@ -1,7 +1,7 @@
 openapi: 3.0.1
 info:
   title: Corporate Lease
-  description: The Corporate Lease product provides corporate customers with loans to support leasing activity for property and equipment under an umbrella leasing arrangement
+  description: ''
   version: 10.0.0
 servers:
 - description: SwaggerHub API Auto Mocking
@@ -10,21 +10,21 @@ paths:
   /CorporateLease/{corporateleaseId}/Control:
     put:
       tags:
-      - CR - CorporateLeaseArrangement
-      summary: CoCR Control the processing of Corporate Lease Arrangement
-      description: CoCR Control the processing of Corporate Lease Arrangement
+      - CR - CorporateLeaseFacility
+      summary: CoCR Control the processing of Corporate Lease Facility
+      description: CoCR Control the processing of Corporate Lease Facility
       operationId: Control
       parameters:
       - $ref: '#/components/parameters/CorporateLeaseID'
       requestBody:
-        $ref: '#/components/requestBodies/CorporateLeaseArrangement'
+        $ref: '#/components/requestBodies/CorporateLeaseFacility'
       responses:
         200:
           description: Success
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/CorporateLeaseArrangement'
+                $ref: '#/components/schemas/CorporateLeaseFacility'
         400:
           $ref: '#/components/responses/BadRequestError'
         401:
@@ -40,21 +40,21 @@ paths:
   /CorporateLease/{corporateleaseId}/Exchange:
     put:
       tags:
-      - CR - CorporateLeaseArrangement
-      summary: EcCR Accept, verify, etc. aspects of Corporate Lease Arrangement processing
-      description: EcCR Accept, verify, etc. aspects of Corporate Lease Arrangement processing
+      - CR - CorporateLeaseFacility
+      summary: EcCR Accept, verify, etc. aspects of Corporate Lease Facility processing
+      description: EcCR Accept, verify, etc. aspects of Corporate Lease Facility processing
       operationId: Exchange
       parameters:
       - $ref: '#/components/parameters/CorporateLeaseID'
       requestBody:
-        $ref: '#/components/requestBodies/CorporateLeaseArrangement'
+        $ref: '#/components/requestBodies/CorporateLeaseFacility'
       responses:
         200:
           description: Success
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/CorporateLeaseArrangement'
+                $ref: '#/components/schemas/CorporateLeaseFacility'
         400:
           $ref: '#/components/responses/BadRequestError'
         401:
@@ -70,21 +70,21 @@ paths:
   /CorporateLease/{corporateleaseId}/Execute:
     put:
       tags:
-      - CR - CorporateLeaseArrangement
-      summary: ExCR Execute an available automated action for Corporate Lease Arrangement
-      description: ExCR Execute an available automated action for Corporate Lease Arrangement
+      - CR - CorporateLeaseFacility
+      summary: ExCR Execute an available automated action for Corporate Lease Facility
+      description: ExCR Execute an available automated action for Corporate Lease Facility
       operationId: Execute
       parameters:
       - $ref: '#/components/parameters/CorporateLeaseID'
       requestBody:
-        $ref: '#/components/requestBodies/CorporateLeaseArrangement'
+        $ref: '#/components/requestBodies/CorporateLeaseFacility'
       responses:
         200:
           description: Success
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/CorporateLeaseArrangement'
+                $ref: '#/components/schemas/CorporateLeaseFacility'
         400:
           $ref: '#/components/responses/BadRequestError'
         401:
@@ -100,20 +100,20 @@ paths:
   /CorporateLease/Initiate:
     post:
       tags:
-      - CR - CorporateLeaseArrangement
-      summary: InCR Instantiate a new Corporate Lease Arrangement
-      description: InCR Instantiate a new Corporate Lease Arrangement
+      - CR - CorporateLeaseFacility
+      summary: InCR Instantiate a new Corporate Lease Facility
+      description: InCR Instantiate a new Corporate Lease Facility
       operationId: Initiate
       parameters: []
       requestBody:
-        $ref: '#/components/requestBodies/CorporateLeaseArrangement'
+        $ref: '#/components/requestBodies/CorporateLeaseFacility'
       responses:
         200:
           description: Success
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/CorporateLeaseArrangement'
+                $ref: '#/components/schemas/CorporateLeaseFacility'
         400:
           $ref: '#/components/responses/BadRequestError'
         401:
@@ -129,9 +129,9 @@ paths:
   /CorporateLease/{corporateleaseId}/Retrieve:
     get:
       tags:
-      - CR - CorporateLeaseArrangement
-      summary: ReCR Retrieve details about any aspect of Corporate Lease Arrangement
-      description: ReCR Retrieve details about any aspect of Corporate Lease Arrangement
+      - CR - CorporateLeaseFacility
+      summary: ReCR Retrieve details about any aspect of Corporate Lease Facility
+      description: ReCR Retrieve details about any aspect of Corporate Lease Facility
       operationId: Retrieve
       parameters:
       - $ref: '#/components/parameters/CorporateLeaseID'
@@ -141,7 +141,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/CorporateLeaseArrangement'
+                $ref: '#/components/schemas/CorporateLeaseFacility'
         400:
           $ref: '#/components/responses/BadRequestError'
         401:
@@ -157,21 +157,21 @@ paths:
   /CorporateLease/{corporateleaseId}/Request:
     put:
       tags:
-      - CR - CorporateLeaseArrangement
-      summary: RqCR Request manual intervention or a decision with respect to Corporate Lease Arrangement
-      description: RqCR Request manual intervention or a decision with respect to Corporate Lease Arrangement
+      - CR - CorporateLeaseFacility
+      summary: RqCR Request manual intervention or a decision with respect to Corporate Lease Facility
+      description: RqCR Request manual intervention or a decision with respect to Corporate Lease Facility
       operationId: Request
       parameters:
       - $ref: '#/components/parameters/CorporateLeaseID'
       requestBody:
-        $ref: '#/components/requestBodies/CorporateLeaseArrangement'
+        $ref: '#/components/requestBodies/CorporateLeaseFacility'
       responses:
         200:
           description: Success
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/CorporateLeaseArrangement'
+                $ref: '#/components/schemas/CorporateLeaseFacility'
         400:
           $ref: '#/components/responses/BadRequestError'
         401:
@@ -187,21 +187,21 @@ paths:
   /CorporateLease/{corporateleaseId}/Update:
     put:
       tags:
-      - CR - CorporateLeaseArrangement
-      summary: UpCR Update details relating to Corporate Lease Arrangement
-      description: UpCR Update details relating to Corporate Lease Arrangement
+      - CR - CorporateLeaseFacility
+      summary: UpCR Update details relating to Corporate Lease Facility
+      description: UpCR Update details relating to Corporate Lease Facility
       operationId: Update
       parameters:
       - $ref: '#/components/parameters/CorporateLeaseID'
       requestBody:
-        $ref: '#/components/requestBodies/CorporateLeaseArrangement'
+        $ref: '#/components/requestBodies/CorporateLeaseFacility'
       responses:
         200:
           description: Success
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/CorporateLeaseArrangement'
+                $ref: '#/components/schemas/CorporateLeaseFacility'
         400:
           $ref: '#/components/responses/BadRequestError'
         401:
@@ -552,34 +552,34 @@ paths:
           $ref: '#/components/responses/InternalServerError'
 components:
   schemas:
-    CorporateLeaseArrangement:
+    CorporateLeaseFacility:
       type: object
       properties:
-        CorporateLeaseArrangementParameterType:
+        CorporateLeaseFacilityParameterType:
           type: string
-        CorporateLeaseArrangementSelectedOption:
+        CorporateLeaseFacilitySelectedOption:
           type: string
-        CorporateLeaseArrangementType:
+        CorporateLeaseFacilityType:
           type: string
-        CorporateLeaseArrangementSchedule:
+        CorporateLeaseFacilitySchedule:
           type: string
-        CorporateLeaseArrangementStatus:
+        CorporateLeaseFacilityStatus:
           type: string
-        CorporateLeaseArrangementReference:
+        CorporateLeaseFacilityReference:
           type: object
-        CorporateLeaseArrangementCurrency:
+        CorporateLeaseFacilityCurrency:
           type: string
-        CorporateLeaseArrangementRegulationReference:
+        CorporateLeaseFacilityRegulationReference:
           type: object
-        CorporateLeaseArrangementRegulationType:
+        CorporateLeaseFacilityRegulationType:
           type: string
-        CorporateLeaseArrangementJurisdiction:
+        CorporateLeaseFacilityJurisdiction:
           type: string
-        CorporateLeaseArrangementBookingLocation:
+        CorporateLeaseFacilityBookingLocation:
           type: string
-        CorporateLeaseArrangementAccountType:
+        CorporateLeaseFacilityAccountType:
           type: string
-        CorporateLeaseArrangementAccountReference:
+        CorporateLeaseFacilityAccountReference:
           type: object
     Fulfill:
       type: object
@@ -673,12 +673,12 @@ components:
       schema:
         type: string
   requestBodies:
-    CorporateLeaseArrangement:
+    CorporateLeaseFacility:
       required: true
       content:
         application/json:
           schema:
-            $ref: '#/components/schemas/CorporateLeaseArrangement'
+            $ref: '#/components/schemas/CorporateLeaseFacility'
     Administer:
       required: true
       content:

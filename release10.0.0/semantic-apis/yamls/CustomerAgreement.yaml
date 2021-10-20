@@ -1,7 +1,7 @@
 openapi: 3.0.1
 info:
   title: Customer Agreement
-  description: This service domain maintains the master customer agreement/legal contract. Note that a customer can be a complex corporate entity with many subsidiaries operating in different geopolitical areas. The customer agreement is linked to as many Sales Product Agreements as needed for all in-force products
+  description: ''
   version: 10.0.0
 servers:
 - description: SwaggerHub API Auto Mocking
@@ -357,15 +357,6 @@ components:
           type: object
         PartyLife-cycleManagementReference:
           type: object
-    LegalTerms:
-      type: object
-      properties:
-        Jurisdiction:
-          type: string
-        ApplicableLawReference:
-          type: object
-        ApplicableLawInterpretation:
-          type: string
     PolicyTerms:
       type: object
       properties:
@@ -374,6 +365,15 @@ components:
         ApplicableBankPolicy-RuleReference:
           type: object
         ApplicableBankPolicy-RuleInterpretation:
+          type: string
+    LegalTerms:
+      type: object
+      properties:
+        Jurisdiction:
+          type: string
+        ApplicableLawReference:
+          type: object
+        ApplicableLawInterpretation:
           type: string
     RegulatoryTerms:
       type: object
@@ -524,16 +524,16 @@ components:
       explode: false
       schema:
         type: string
-    LegalTermsID:
-      name: legaltermsId
+    PolicyTermsID:
+      name: policytermsId
       in: path
       required: true
       style: simple
       explode: false
       schema:
         type: string
-    PolicyTermsID:
-      name: policytermsId
+    LegalTermsID:
+      name: legaltermsId
       in: path
       required: true
       style: simple

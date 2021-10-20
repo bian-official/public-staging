@@ -1,7 +1,7 @@
 openapi: 3.0.1
 info:
   title: Credit Facility
-  description: The Credit Facility Service Domain manages the Credit Facilities that a Corporate Customer has with the bank. A Credit Facility is an agreement between the bank and a (corporate) customer to allow the customer to acquire asset products from the bank up to the limit of the credit facility without the need for a full due diligence and underwriting for each of these products.
+  description: ''
   version: 10.0.0
 servers:
 - description: SwaggerHub API Auto Mocking
@@ -10,20 +10,20 @@ paths:
   /CreditFacility/Initiate:
     post:
       tags:
-      - CR - CreditFacilityArrangement
+      - CR - CreditLineFacility
       summary: InCR Initiate a credit facility
       description: InCR Initiate a credit facility
       operationId: Initiate
       parameters: []
       requestBody:
-        $ref: '#/components/requestBodies/CreditFacilityArrangement'
+        $ref: '#/components/requestBodies/CreditLineFacility'
       responses:
         200:
           description: Success
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/CreditFacilityArrangement'
+                $ref: '#/components/schemas/CreditLineFacility'
         400:
           $ref: '#/components/responses/BadRequestError'
         401:
@@ -39,21 +39,21 @@ paths:
   /CreditFacility/{creditfacilityId}/Update:
     put:
       tags:
-      - CR - CreditFacilityArrangement
+      - CR - CreditLineFacility
       summary: UpCR Update details for an existing credit facility
       description: UpCR Update details for an existing credit facility
       operationId: Update
       parameters:
       - $ref: '#/components/parameters/CreditFacilityID'
       requestBody:
-        $ref: '#/components/requestBodies/CreditFacilityArrangement'
+        $ref: '#/components/requestBodies/CreditLineFacility'
       responses:
         200:
           description: Success
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/CreditFacilityArrangement'
+                $ref: '#/components/schemas/CreditLineFacility'
         400:
           $ref: '#/components/responses/BadRequestError'
         401:
@@ -69,7 +69,7 @@ paths:
   /CreditFacility/{creditfacilityId}/Retrieve:
     get:
       tags:
-      - CR - CreditFacilityArrangement
+      - CR - CreditLineFacility
       summary: ReCR Retrieve details about a credit facility
       description: ReCR Retrieve details about a credit facility
       operationId: Retrieve
@@ -81,7 +81,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/CreditFacilityArrangement'
+                $ref: '#/components/schemas/CreditLineFacility'
         400:
           $ref: '#/components/responses/BadRequestError'
         401:
@@ -488,7 +488,7 @@ paths:
           $ref: '#/components/responses/InternalServerError'
 components:
   schemas:
-    CreditFacilityArrangement:
+    CreditLineFacility:
       type: object
       properties:
         ProductInstanceReference:
@@ -575,6 +575,47 @@ components:
           type: string
         Date:
           type: string
+    Restructuring:
+      type: object
+      properties:
+        RestructuringTask:
+          type: string
+        RestructuringEvaluation:
+          type: string
+        RestructuringWriteDown:
+          type: string
+    Maintenance:
+      type: object
+      properties:
+        MaintenanceReportType:
+          type: string
+        CreditFacilityTaxReport:
+          type: string
+        CreditFacilityFeeType:
+          type: string
+        CreditFacilityFees:
+          type: string
+        CreditFacilityPenalties:
+          type: string
+        CreditFacilityCollateralValuation:
+          type: string
+    Repayment:
+      type: object
+      properties:
+        RepaymentTransactionType:
+          type: string
+        RepaymentTransactionPayerReference:
+          type: object
+        RepaymentTransactionPayerProductInstanceReference:
+          type: object
+        RepaymentTransactionPayerBankReference:
+          type: object
+        RepaymentTransactionAmount:
+          type: number
+        RepaymentTransactionCurrency:
+          type: string
+        RepaymentTransactionValueDate:
+          type: string
     ServiceFees:
       type: object
       properties:
@@ -608,21 +649,6 @@ components:
           type: string
         AccrualFeeCharge:
           type: string
-    Maintenance:
-      type: object
-      properties:
-        MaintenanceReportType:
-          type: string
-        CreditFacilityTaxReport:
-          type: string
-        CreditFacilityFeeType:
-          type: string
-        CreditFacilityFees:
-          type: string
-        CreditFacilityPenalties:
-          type: string
-        CreditFacilityCollateralValuation:
-          type: string
     Interest:
       type: object
       properties:
@@ -650,32 +676,6 @@ components:
           type: string
         InterestAccrualCharge:
           type: string
-    Restructuring:
-      type: object
-      properties:
-        RestructuringTask:
-          type: string
-        RestructuringEvaluation:
-          type: string
-        RestructuringWriteDown:
-          type: string
-    Repayment:
-      type: object
-      properties:
-        RepaymentTransactionType:
-          type: string
-        RepaymentTransactionPayerReference:
-          type: object
-        RepaymentTransactionPayerProductInstanceReference:
-          type: object
-        RepaymentTransactionPayerBankReference:
-          type: object
-        RepaymentTransactionAmount:
-          type: number
-        RepaymentTransactionCurrency:
-          type: string
-        RepaymentTransactionValueDate:
-          type: string
     HTTPError:
       type: object
       properties:
@@ -688,7 +688,7 @@ components:
     RetrieveInterestResponse:
       type: object
       properties:
-        CreditFacilityArrangement:
+        CreditLineFacility:
           type: object
           properties:
             ProductInstanceReference:
@@ -745,7 +745,7 @@ components:
     RetrieveServiceFeesResponse:
       type: object
       properties:
-        CreditFacilityArrangement:
+        CreditLineFacility:
           type: object
           properties:
             ProductInstanceReference:
@@ -822,7 +822,7 @@ components:
     RetrieveMaintenanceResponse:
       type: object
       properties:
-        CreditFacilityArrangement:
+        CreditLineFacility:
           type: object
           properties:
             ProductInstanceReference:
@@ -925,7 +925,7 @@ components:
     UpdateRepaymentRequest:
       type: object
       properties:
-        CreditFacilityArrangement:
+        CreditLineFacility:
           type: object
           properties:
             CreditFacilityOutstandingBalance:
@@ -952,7 +952,7 @@ components:
     UpdateRepaymentResponse:
       type: object
       properties:
-        CreditFacilityArrangement:
+        CreditLineFacility:
           type: object
           properties:
             CreditFacilityOutstandingBalance:
@@ -979,7 +979,7 @@ components:
     RetrieveRepaymentResponse:
       type: object
       properties:
-        CreditFacilityArrangement:
+        CreditLineFacility:
           type: object
           properties:
             ProductInstanceReference:
@@ -1034,7 +1034,7 @@ components:
     InitiateRestructuringRequest:
       type: object
       properties:
-        CreditFacilityArrangement:
+        CreditLineFacility:
           type: object
           properties:
             ProductInstanceReference:
@@ -1127,7 +1127,7 @@ components:
     InitiateRestructuringResponse:
       type: object
       properties:
-        CreditFacilityArrangement:
+        CreditLineFacility:
           type: object
           properties:
             StagedRepaymentStatement:
@@ -1150,7 +1150,7 @@ components:
     UpdateRestructuringRequest:
       type: object
       properties:
-        CreditFacilityArrangement:
+        CreditLineFacility:
           type: object
           properties:
             ProductInstanceReference:
@@ -1247,7 +1247,7 @@ components:
     UpdateRestructuringResponse:
       type: object
       properties:
-        CreditFacilityArrangement:
+        CreditLineFacility:
           type: object
           properties:
             ProductInstanceReference:
@@ -1344,7 +1344,7 @@ components:
     RetrieveRestructuringResponse:
       type: object
       properties:
-        CreditFacilityArrangement:
+        CreditLineFacility:
           type: object
           properties:
             ProductInstanceReference:
@@ -1447,8 +1447,8 @@ components:
       explode: false
       schema:
         type: string
-    ServiceFeesID:
-      name: servicefeesId
+    RestructuringID:
+      name: restructuringId
       in: path
       required: true
       style: simple
@@ -1463,22 +1463,6 @@ components:
       explode: false
       schema:
         type: string
-    InterestID:
-      name: interestId
-      in: path
-      required: true
-      style: simple
-      explode: false
-      schema:
-        type: string
-    RestructuringID:
-      name: restructuringId
-      in: path
-      required: true
-      style: simple
-      explode: false
-      schema:
-        type: string
     RepaymentID:
       name: repaymentId
       in: path
@@ -1487,13 +1471,29 @@ components:
       explode: false
       schema:
         type: string
+    ServiceFeesID:
+      name: servicefeesId
+      in: path
+      required: true
+      style: simple
+      explode: false
+      schema:
+        type: string
+    InterestID:
+      name: interestId
+      in: path
+      required: true
+      style: simple
+      explode: false
+      schema:
+        type: string
   requestBodies:
-    CreditFacilityArrangement:
+    CreditLineFacility:
       required: true
       content:
         application/json:
           schema:
-            $ref: '#/components/schemas/CreditFacilityArrangement'
+            $ref: '#/components/schemas/CreditLineFacility'
     ServiceFees:
       required: true
       content:

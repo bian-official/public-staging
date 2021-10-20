@@ -1,7 +1,7 @@
 openapi: 3.0.1
 info:
   title: Custody Administration
-  description: A service to provide safe custody services for marketable securities for bank customers
+  description: ''
   version: 10.0.0
 servers:
 - description: SwaggerHub API Auto Mocking
@@ -10,21 +10,21 @@ paths:
   /CustodyAdministration/{custodyadministrationId}/Control:
     put:
       tags:
-      - CR - CustodyArrangement
-      summary: CoCR Control the processing of Custody Arrangement
-      description: CoCR Control the processing of Custody Arrangement
+      - CR - CustodyFacility
+      summary: CoCR Control the processing of Custody Facility
+      description: CoCR Control the processing of Custody Facility
       operationId: Control
       parameters:
       - $ref: '#/components/parameters/CustodyAdministrationID'
       requestBody:
-        $ref: '#/components/requestBodies/CustodyArrangement'
+        $ref: '#/components/requestBodies/CustodyFacility'
       responses:
         200:
           description: Success
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/CustodyArrangement'
+                $ref: '#/components/schemas/CustodyFacility'
         400:
           $ref: '#/components/responses/BadRequestError'
         401:
@@ -40,21 +40,21 @@ paths:
   /CustodyAdministration/{custodyadministrationId}/Exchange:
     put:
       tags:
-      - CR - CustodyArrangement
-      summary: EcCR Accept, verify, etc. aspects of Custody Arrangement processing
-      description: EcCR Accept, verify, etc. aspects of Custody Arrangement processing
+      - CR - CustodyFacility
+      summary: EcCR Accept, verify, etc. aspects of Custody Facility processing
+      description: EcCR Accept, verify, etc. aspects of Custody Facility processing
       operationId: Exchange
       parameters:
       - $ref: '#/components/parameters/CustodyAdministrationID'
       requestBody:
-        $ref: '#/components/requestBodies/CustodyArrangement'
+        $ref: '#/components/requestBodies/CustodyFacility'
       responses:
         200:
           description: Success
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/CustodyArrangement'
+                $ref: '#/components/schemas/CustodyFacility'
         400:
           $ref: '#/components/responses/BadRequestError'
         401:
@@ -70,21 +70,21 @@ paths:
   /CustodyAdministration/{custodyadministrationId}/Execute:
     put:
       tags:
-      - CR - CustodyArrangement
-      summary: ExCR Execute an available automated action for Custody Arrangement
-      description: ExCR Execute an available automated action for Custody Arrangement
+      - CR - CustodyFacility
+      summary: ExCR Execute an available automated action for Custody Facility
+      description: ExCR Execute an available automated action for Custody Facility
       operationId: Execute
       parameters:
       - $ref: '#/components/parameters/CustodyAdministrationID'
       requestBody:
-        $ref: '#/components/requestBodies/CustodyArrangement'
+        $ref: '#/components/requestBodies/CustodyFacility'
       responses:
         200:
           description: Success
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/CustodyArrangement'
+                $ref: '#/components/schemas/CustodyFacility'
         400:
           $ref: '#/components/responses/BadRequestError'
         401:
@@ -100,20 +100,20 @@ paths:
   /CustodyAdministration/Initiate:
     post:
       tags:
-      - CR - CustodyArrangement
-      summary: InCR Instantiate a new Custody Arrangement
-      description: InCR Instantiate a new Custody Arrangement
+      - CR - CustodyFacility
+      summary: InCR Instantiate a new Custody Facility
+      description: InCR Instantiate a new Custody Facility
       operationId: Initiate
       parameters: []
       requestBody:
-        $ref: '#/components/requestBodies/CustodyArrangement'
+        $ref: '#/components/requestBodies/CustodyFacility'
       responses:
         200:
           description: Success
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/CustodyArrangement'
+                $ref: '#/components/schemas/CustodyFacility'
         400:
           $ref: '#/components/responses/BadRequestError'
         401:
@@ -129,9 +129,9 @@ paths:
   /CustodyAdministration/{custodyadministrationId}/Retrieve:
     get:
       tags:
-      - CR - CustodyArrangement
-      summary: ReCR Retrieve details about any aspect of Custody Arrangement
-      description: ReCR Retrieve details about any aspect of Custody Arrangement
+      - CR - CustodyFacility
+      summary: ReCR Retrieve details about any aspect of Custody Facility
+      description: ReCR Retrieve details about any aspect of Custody Facility
       operationId: Retrieve
       parameters:
       - $ref: '#/components/parameters/CustodyAdministrationID'
@@ -141,7 +141,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/CustodyArrangement'
+                $ref: '#/components/schemas/CustodyFacility'
         400:
           $ref: '#/components/responses/BadRequestError'
         401:
@@ -157,21 +157,21 @@ paths:
   /CustodyAdministration/{custodyadministrationId}/Request:
     put:
       tags:
-      - CR - CustodyArrangement
-      summary: RqCR Request manual intervention or a decision with respect to Custody Arrangement
-      description: RqCR Request manual intervention or a decision with respect to Custody Arrangement
+      - CR - CustodyFacility
+      summary: RqCR Request manual intervention or a decision with respect to Custody Facility
+      description: RqCR Request manual intervention or a decision with respect to Custody Facility
       operationId: Request
       parameters:
       - $ref: '#/components/parameters/CustodyAdministrationID'
       requestBody:
-        $ref: '#/components/requestBodies/CustodyArrangement'
+        $ref: '#/components/requestBodies/CustodyFacility'
       responses:
         200:
           description: Success
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/CustodyArrangement'
+                $ref: '#/components/schemas/CustodyFacility'
         400:
           $ref: '#/components/responses/BadRequestError'
         401:
@@ -187,21 +187,21 @@ paths:
   /CustodyAdministration/{custodyadministrationId}/Update:
     put:
       tags:
-      - CR - CustodyArrangement
-      summary: UpCR Update details relating to Custody Arrangement
-      description: UpCR Update details relating to Custody Arrangement
+      - CR - CustodyFacility
+      summary: UpCR Update details relating to Custody Facility
+      description: UpCR Update details relating to Custody Facility
       operationId: Update
       parameters:
       - $ref: '#/components/parameters/CustodyAdministrationID'
       requestBody:
-        $ref: '#/components/requestBodies/CustodyArrangement'
+        $ref: '#/components/requestBodies/CustodyFacility'
       responses:
         200:
           description: Success
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/CustodyArrangement'
+                $ref: '#/components/schemas/CustodyFacility'
         400:
           $ref: '#/components/responses/BadRequestError'
         401:
@@ -791,34 +791,34 @@ paths:
           $ref: '#/components/responses/InternalServerError'
 components:
   schemas:
-    CustodyArrangement:
+    CustodyFacility:
       type: object
       properties:
-        CustodyArrangementParameterType:
+        CustodyFacilityParameterType:
           type: string
-        CustodyArrangementSelectedOption:
+        CustodyFacilitySelectedOption:
           type: string
-        CustodyArrangementType:
+        CustodyFacilityType:
           type: string
-        CustodyArrangementReference:
+        CustodyFacilityReference:
           type: object
-        CustodyArrangementSchedule:
+        CustodyFacilitySchedule:
           type: string
-        CustodyArrangementStatus:
+        CustodyFacilityStatus:
           type: string
-        CustodyArrangementCurrency:
+        CustodyFacilityCurrency:
           type: string
-        CustodyArrangementRegulationReference:
+        CustodyFacilityRegulationReference:
           type: object
-        CustodyArrangementRegulationType:
+        CustodyFacilityRegulationType:
           type: string
-        CustodyArrangementJurisdiction:
+        CustodyFacilityJurisdiction:
           type: string
-        CustodyArrangementBookingLocation:
+        CustodyFacilityBookingLocation:
           type: string
-        CustodyArrangementAccountType:
+        CustodyFacilityAccountType:
           type: string
-        CustodyArrangementAccountReference:
+        CustodyFacilityAccountReference:
           type: object
     SafeKeeping:
       type: object
@@ -841,33 +841,26 @@ components:
           type: string
         SafeKeepingSecuritiesSafeKeepingServiceName:
           type: string
-    SecuritiesReporting:
+    Settlement:
       type: object
       properties:
-        SecuritiesReportingPreconditions:
+        SettlementPreconditions:
           type: string
-        SecuritiesReportingFeatureSchedule:
+        SettlementFeatureSchedule:
           type: string
-        CustodySecuritiesReporting:
+        BusinessService:
           type: object
-        SecuritiesReportingPostconditions:
+        SettlementPostconditions:
           type: string
-        SecuritiesReportingCustodySecuritiesReportingServiceType:
+        SettlementServiceType:
           type: string
-        SecuritiesReportingCustodySecuritiesReportingServiceDescription:
+        SettlementServiceDescription:
           type: string
-        SecuritiesReportingCustodySecuritiesReportingServiceInputsandOuputs:
+        SettlementServiceInputsandOuputs:
           type: string
-        SecuritiesReportingCustodySecuritiesReportingServiceWorkProduct:
+        SettlementServiceWorkProduct:
           type: string
-        SecuritiesReportingCustodySecuritiesReportingServiceName:
-          type: string
-    CustodyAdministrationOutcome:
-      type: object
-      properties:
-        CustodyAdministrationFinancialFacility:
-          type: string
-        CustodyAdministrationWorkProduct:
+        SettlementServiceName:
           type: string
     DividendsandInterest:
       type: object
@@ -890,26 +883,26 @@ components:
           type: string
         DividendsandInterestCustodyDividendsandInterestServiceName:
           type: string
-    Settlement:
+    SecuritiesReporting:
       type: object
       properties:
-        SettlementPreconditions:
+        SecuritiesReportingPreconditions:
           type: string
-        SettlementFeatureSchedule:
+        SecuritiesReportingFeatureSchedule:
           type: string
-        BusinessService:
+        CustodySecuritiesReporting:
           type: object
-        SettlementPostconditions:
+        SecuritiesReportingPostconditions:
           type: string
-        SettlementServiceType:
+        SecuritiesReportingCustodySecuritiesReportingServiceType:
           type: string
-        SettlementServiceDescription:
+        SecuritiesReportingCustodySecuritiesReportingServiceDescription:
           type: string
-        SettlementServiceInputsandOuputs:
+        SecuritiesReportingCustodySecuritiesReportingServiceInputsandOuputs:
           type: string
-        SettlementServiceWorkProduct:
+        SecuritiesReportingCustodySecuritiesReportingServiceWorkProduct:
           type: string
-        SettlementServiceName:
+        SecuritiesReportingCustodySecuritiesReportingServiceName:
           type: string
     Fees:
       type: object
@@ -931,6 +924,13 @@ components:
         FeesServiceWorkProduct:
           type: string
         FeesServiceName:
+          type: string
+    CustodyAdministrationOutcome:
+      type: object
+      properties:
+        CustodyAdministrationFinancialFacility:
+          type: string
+        CustodyAdministrationWorkProduct:
           type: string
     HTTPError:
       type: object
@@ -958,16 +958,8 @@ components:
       explode: false
       schema:
         type: string
-    SecuritiesReportingID:
-      name: securitiesreportingId
-      in: path
-      required: true
-      style: simple
-      explode: false
-      schema:
-        type: string
-    CustodyAdministrationOutcomeID:
-      name: custodyadministrationoutcomeId
+    SettlementID:
+      name: settlementId
       in: path
       required: true
       style: simple
@@ -982,8 +974,8 @@ components:
       explode: false
       schema:
         type: string
-    SettlementID:
-      name: settlementId
+    SecuritiesReportingID:
+      name: securitiesreportingId
       in: path
       required: true
       style: simple
@@ -998,13 +990,21 @@ components:
       explode: false
       schema:
         type: string
+    CustodyAdministrationOutcomeID:
+      name: custodyadministrationoutcomeId
+      in: path
+      required: true
+      style: simple
+      explode: false
+      schema:
+        type: string
   requestBodies:
-    CustodyArrangement:
+    CustodyFacility:
       required: true
       content:
         application/json:
           schema:
-            $ref: '#/components/schemas/CustodyArrangement'
+            $ref: '#/components/schemas/CustodyFacility'
     SafeKeeping:
       required: true
       content:

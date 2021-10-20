@@ -1,7 +1,7 @@
 openapi: 3.0.1
 info:
   title: ECM And DCM
-  description: Supports the specification, pricing and issuance of equity and debt (bond) primary capital market products for corporate financing services
+  description: ''
   version: 10.0.0
 servers:
 - description: SwaggerHub API Auto Mocking
@@ -10,20 +10,20 @@ paths:
   /ECMAndDCM/Initiate:
     post:
       tags:
-      - CR - ECMAndDCMArrangement
+      - CR - ECMAndDCMFacility
       summary: InCR initiate an ECM And DCM transaction for a corporate customer
       description: InCR initiate an ECM And DCM transaction for a corporate customer
       operationId: Initiate
       parameters: []
       requestBody:
-        $ref: '#/components/requestBodies/ECMAndDCMArrangement'
+        $ref: '#/components/requestBodies/ECMAndDCMFacility'
       responses:
         200:
           description: Success
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/ECMAndDCMArrangement'
+                $ref: '#/components/schemas/ECMAndDCMFacility'
         400:
           $ref: '#/components/responses/BadRequestError'
         401:
@@ -39,21 +39,21 @@ paths:
   /ECMAndDCM/{ecmanddcmId}/Update:
     put:
       tags:
-      - CR - ECMAndDCMArrangement
+      - CR - ECMAndDCMFacility
       summary: UpCR Update details of an active ECM And DCM transaction
       description: UpCR Update details of an active ECM And DCM transaction
       operationId: Update
       parameters:
       - $ref: '#/components/parameters/ECMAndDCMID'
       requestBody:
-        $ref: '#/components/requestBodies/ECMAndDCMArrangement'
+        $ref: '#/components/requestBodies/ECMAndDCMFacility'
       responses:
         200:
           description: Success
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/ECMAndDCMArrangement'
+                $ref: '#/components/schemas/ECMAndDCMFacility'
         400:
           $ref: '#/components/responses/BadRequestError'
         401:
@@ -69,21 +69,21 @@ paths:
   /ECMAndDCM/{ecmanddcmId}/Request:
     put:
       tags:
-      - CR - ECMAndDCMArrangement
+      - CR - ECMAndDCMFacility
       summary: RqCR Request manual intervention to an active ECM And DCM transaction
       description: RqCR Request manual intervention to an active ECM And DCM transaction
       operationId: Request
       parameters:
       - $ref: '#/components/parameters/ECMAndDCMID'
       requestBody:
-        $ref: '#/components/requestBodies/ECMAndDCMArrangement'
+        $ref: '#/components/requestBodies/ECMAndDCMFacility'
       responses:
         200:
           description: Success
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/ECMAndDCMArrangement'
+                $ref: '#/components/schemas/ECMAndDCMFacility'
         400:
           $ref: '#/components/responses/BadRequestError'
         401:
@@ -99,7 +99,7 @@ paths:
   /ECMAndDCM/{ecmanddcmId}/Retrieve:
     get:
       tags:
-      - CR - ECMAndDCMArrangement
+      - CR - ECMAndDCMFacility
       summary: ReCR Retrieve details about an active ECM And DCM transaction
       description: ReCR Retrieve details about an active ECM And DCM transaction
       operationId: Retrieve
@@ -111,7 +111,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/ECMAndDCMArrangement'
+                $ref: '#/components/schemas/ECMAndDCMFacility'
         400:
           $ref: '#/components/responses/BadRequestError'
         401:
@@ -399,7 +399,7 @@ paths:
           $ref: '#/components/responses/InternalServerError'
 components:
   schemas:
-    ECMAndDCMArrangement:
+    ECMAndDCMFacility:
       type: object
       properties:
         ProductInstanceReference:
@@ -427,23 +427,6 @@ components:
         Date:
           type: string
         ECMAndDCMInstrumentRecord:
-          type: string
-    InstrumentDefinition:
-      type: object
-      properties:
-        Employee/BusinessUnitReference:
-          type: object
-        InstrumentDefinitionWorkTaskRecord:
-          type: string
-        InstrumentDefinitionWorkTaskType:
-          type: string
-        InstrumentDefinitionWorkTaskDescription:
-          type: string
-        InstrumentDefinitionWorkTaskWorkProducts:
-          type: string
-        DocumentDirectoryEntryInstanceReference:
-          type: object
-        InstrumentDefinitionSpecification:
           type: string
     Placement:
       type: object
@@ -483,6 +466,23 @@ components:
           type: object
         Prospectus:
           type: string
+    InstrumentDefinition:
+      type: object
+      properties:
+        Employee/BusinessUnitReference:
+          type: object
+        InstrumentDefinitionWorkTaskRecord:
+          type: string
+        InstrumentDefinitionWorkTaskType:
+          type: string
+        InstrumentDefinitionWorkTaskDescription:
+          type: string
+        InstrumentDefinitionWorkTaskWorkProducts:
+          type: string
+        DocumentDirectoryEntryInstanceReference:
+          type: object
+        InstrumentDefinitionSpecification:
+          type: string
     HTTPError:
       type: object
       properties:
@@ -495,14 +495,6 @@ components:
   parameters:
     ECMAndDCMID:
       name: ecmanddcmId
-      in: path
-      required: true
-      style: simple
-      explode: false
-      schema:
-        type: string
-    InstrumentDefinitionID:
-      name: instrumentdefinitionId
       in: path
       required: true
       style: simple
@@ -525,13 +517,21 @@ components:
       explode: false
       schema:
         type: string
+    InstrumentDefinitionID:
+      name: instrumentdefinitionId
+      in: path
+      required: true
+      style: simple
+      explode: false
+      schema:
+        type: string
   requestBodies:
-    ECMAndDCMArrangement:
+    ECMAndDCMFacility:
       required: true
       content:
         application/json:
           schema:
-            $ref: '#/components/schemas/ECMAndDCMArrangement'
+            $ref: '#/components/schemas/ECMAndDCMFacility'
     InstrumentDefinition:
       required: true
       content:

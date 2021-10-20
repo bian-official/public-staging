@@ -1,7 +1,7 @@
 openapi: 3.0.1
 info:
   title: Corporate Tax Advisory
-  description: A fee or commission based product providing tax specific assessments, advice and guidance for corporate customers
+  description: ''
   version: 10.0.0
 servers:
 - description: SwaggerHub API Auto Mocking
@@ -10,20 +10,20 @@ paths:
   /CorporateTaxAdvisory/Initiate:
     post:
       tags:
-      - CR - CorporateTaxAdvisoryArrangement
+      - CR - CorporateTaxAdvisoryFacility
       summary: InCR Initiate a corporate tax advisory service
       description: InCR Initiate a corporate tax advisory service
       operationId: Initiate
       parameters: []
       requestBody:
-        $ref: '#/components/requestBodies/CorporateTaxAdvisoryArrangement'
+        $ref: '#/components/requestBodies/CorporateTaxAdvisoryFacility'
       responses:
         200:
           description: Success
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/CorporateTaxAdvisoryArrangement'
+                $ref: '#/components/schemas/CorporateTaxAdvisoryFacility'
         400:
           $ref: '#/components/responses/BadRequestError'
         401:
@@ -39,21 +39,21 @@ paths:
   /CorporateTaxAdvisory/{corporatetaxadvisoryId}/Update:
     put:
       tags:
-      - CR - CorporateTaxAdvisoryArrangement
+      - CR - CorporateTaxAdvisoryFacility
       summary: UpCR Update details for a corporate tax advisory service
       description: UpCR Update details for a corporate tax advisory service
       operationId: Update
       parameters:
       - $ref: '#/components/parameters/CorporateTaxAdvisoryID'
       requestBody:
-        $ref: '#/components/requestBodies/CorporateTaxAdvisoryArrangement'
+        $ref: '#/components/requestBodies/CorporateTaxAdvisoryFacility'
       responses:
         200:
           description: Success
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/CorporateTaxAdvisoryArrangement'
+                $ref: '#/components/schemas/CorporateTaxAdvisoryFacility'
         400:
           $ref: '#/components/responses/BadRequestError'
         401:
@@ -69,21 +69,21 @@ paths:
   /CorporateTaxAdvisory/{corporatetaxadvisoryId}/Request:
     put:
       tags:
-      - CR - CorporateTaxAdvisoryArrangement
+      - CR - CorporateTaxAdvisoryFacility
       summary: RqCR Request manual intervention during the advisory service
       description: RqCR Request manual intervention during the advisory service
       operationId: Request
       parameters:
       - $ref: '#/components/parameters/CorporateTaxAdvisoryID'
       requestBody:
-        $ref: '#/components/requestBodies/CorporateTaxAdvisoryArrangement'
+        $ref: '#/components/requestBodies/CorporateTaxAdvisoryFacility'
       responses:
         200:
           description: Success
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/CorporateTaxAdvisoryArrangement'
+                $ref: '#/components/schemas/CorporateTaxAdvisoryFacility'
         400:
           $ref: '#/components/responses/BadRequestError'
         401:
@@ -99,7 +99,7 @@ paths:
   /CorporateTaxAdvisory/{corporatetaxadvisoryId}/Retrieve:
     get:
       tags:
-      - CR - CorporateTaxAdvisoryArrangement
+      - CR - CorporateTaxAdvisoryFacility
       summary: ReCR Retrieve details about a corporate tax advisory service arrangement
       description: ReCR Retrieve details about a corporate tax advisory service arrangement
       operationId: Retrieve
@@ -111,7 +111,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/CorporateTaxAdvisoryArrangement'
+                $ref: '#/components/schemas/CorporateTaxAdvisoryFacility'
         400:
           $ref: '#/components/responses/BadRequestError'
         401:
@@ -368,7 +368,7 @@ paths:
           $ref: '#/components/responses/InternalServerError'
 components:
   schemas:
-    CorporateTaxAdvisoryArrangement:
+    CorporateTaxAdvisoryFacility:
       type: object
       properties:
         ProductInstanceReference:
@@ -391,6 +391,19 @@ components:
           type: string
         Date:
           type: string
+    ServiceFees:
+      type: object
+      properties:
+        FeeApplicationRecord:
+          type: string
+        FeeTransaction:
+          type: string
+        FeeTransactionDescription:
+          type: string
+        FeeTransactionType:
+          type: string
+        FeeTransactionCharge:
+          type: string
     TaxOptimization:
       type: object
       properties:
@@ -406,19 +419,6 @@ components:
           type: string
         TaxOptimizationGuidanceAdviceResult:
           type: string
-    ServiceFees:
-      type: object
-      properties:
-        FeeApplicationRecord:
-          type: string
-        FeeTransaction:
-          type: string
-        FeeTransactionDescription:
-          type: string
-        FeeTransactionType:
-          type: string
-        FeeTransactionCharge:
-          type: string
     HTTPError:
       type: object
       properties:
@@ -431,7 +431,7 @@ components:
     InitiateTaxOptimizationRequest:
       type: object
       properties:
-        CorporateTaxAdvisoryArrangement:
+        CorporateTaxAdvisoryFacility:
           type: object
           properties:
             ProductInstanceReference:
@@ -462,7 +462,7 @@ components:
     InitiateTaxOptimizationResponse:
       type: object
       properties:
-        CorporateTaxAdvisoryArrangement:
+        CorporateTaxAdvisoryFacility:
           type: object
           properties:
             BankBranchOrLocationReference:
@@ -501,14 +501,6 @@ components:
       explode: false
       schema:
         type: string
-    TaxOptimizationID:
-      name: taxoptimizationId
-      in: path
-      required: true
-      style: simple
-      explode: false
-      schema:
-        type: string
     ServiceFeesID:
       name: servicefeesId
       in: path
@@ -517,13 +509,21 @@ components:
       explode: false
       schema:
         type: string
+    TaxOptimizationID:
+      name: taxoptimizationId
+      in: path
+      required: true
+      style: simple
+      explode: false
+      schema:
+        type: string
   requestBodies:
-    CorporateTaxAdvisoryArrangement:
+    CorporateTaxAdvisoryFacility:
       required: true
       content:
         application/json:
           schema:
-            $ref: '#/components/schemas/CorporateTaxAdvisoryArrangement'
+            $ref: '#/components/schemas/CorporateTaxAdvisoryFacility'
     InitiateTaxOptimizationRequest:
       required: true
       content:

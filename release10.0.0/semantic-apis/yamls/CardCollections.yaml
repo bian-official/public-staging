@@ -1,7 +1,7 @@
 openapi: 3.0.1
 info:
   title: Card Collections
-  description: This service domain administers the recovery of outstanding amounts from cancelled card accounts through internal or external collection agencies. &nbsp;This may involve negotiating payment terms and/or interest write-downs.
+  description: ''
   version: 10.0.0
 servers:
 - description: SwaggerHub API Auto Mocking
@@ -341,6 +341,21 @@ components:
           type: object
         CardCollectionsProcessingSchedule:
           type: string
+    Assignment:
+      type: object
+      properties:
+        CustomerCreditRatingAssessmentInstanceReference:
+          type: object
+        CustomerCreditRatingAssessment:
+          type: string
+        CollectionAgencyReference:
+          type: object
+        CollectionAgencyAgreement:
+          type: string
+        CardCollectionsAssignmentDecision:
+          type: string
+        CardCollectionsAssignmentWorkProduct:
+          type: string
     PaymentTerms:
       type: object
       properties:
@@ -379,21 +394,6 @@ components:
         CardCollectionsResolutionDecision:
           type: string
         CardCollectionsResolutionWorkProduct:
-          type: string
-    Assignment:
-      type: object
-      properties:
-        CustomerCreditRatingAssessmentInstanceReference:
-          type: object
-        CustomerCreditRatingAssessment:
-          type: string
-        CollectionAgencyReference:
-          type: object
-        CollectionAgencyAgreement:
-          type: string
-        CardCollectionsAssignmentDecision:
-          type: string
-        CardCollectionsAssignmentWorkProduct:
           type: string
     HTTPError:
       type: object
@@ -520,6 +520,14 @@ components:
       explode: false
       schema:
         type: string
+    AssignmentID:
+      name: assignmentId
+      in: path
+      required: true
+      style: simple
+      explode: false
+      schema:
+        type: string
     PaymentTermsID:
       name: paymenttermsId
       in: path
@@ -538,14 +546,6 @@ components:
         type: string
     ResolutionID:
       name: resolutionId
-      in: path
-      required: true
-      style: simple
-      explode: false
-      schema:
-        type: string
-    AssignmentID:
-      name: assignmentId
       in: path
       required: true
       style: simple

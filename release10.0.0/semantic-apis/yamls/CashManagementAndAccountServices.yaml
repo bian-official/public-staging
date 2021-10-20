@@ -1,7 +1,7 @@
 openapi: 3.0.1
 info:
   title: Cash Management And Account Services
-  description: This service domain orchestrates a cash management and accounting services facility typically used by corporations to support additional cash management features over and above the standard facilities of current and savings accounts
+  description: ''
   version: 10.0.0
 servers:
 - description: SwaggerHub API Auto Mocking
@@ -10,20 +10,20 @@ paths:
   /CashManagementAndAccountServices/Initiate:
     post:
       tags:
-      - CR - CashManagementAndAccountServicesArrangement
+      - CR - CashManagementAndAccountServicesFacility
       summary: InCR Initiate a new cash management and accounting services account
       description: InCR Initiate a new cash management and accounting services account
       operationId: Initiate
       parameters: []
       requestBody:
-        $ref: '#/components/requestBodies/CashManagementAndAccountServicesArrangement'
+        $ref: '#/components/requestBodies/CashManagementAndAccountServicesFacility'
       responses:
         200:
           description: Success
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/CashManagementAndAccountServicesArrangement'
+                $ref: '#/components/schemas/CashManagementAndAccountServicesFacility'
         400:
           $ref: '#/components/responses/BadRequestError'
         401:
@@ -39,21 +39,21 @@ paths:
   /CashManagementAndAccountServices/{cashmanagementandaccountservicesId}/Update:
     put:
       tags:
-      - CR - CashManagementAndAccountServicesArrangement
+      - CR - CashManagementAndAccountServicesFacility
       summary: UpCR Update properties of an active cash management and accounting services account
       description: UpCR Update properties of an active cash management and accounting services account
       operationId: Update
       parameters:
       - $ref: '#/components/parameters/CashManagementAndAccountServicesID'
       requestBody:
-        $ref: '#/components/requestBodies/CashManagementAndAccountServicesArrangement'
+        $ref: '#/components/requestBodies/CashManagementAndAccountServicesFacility'
       responses:
         200:
           description: Success
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/CashManagementAndAccountServicesArrangement'
+                $ref: '#/components/schemas/CashManagementAndAccountServicesFacility'
         400:
           $ref: '#/components/responses/BadRequestError'
         401:
@@ -69,7 +69,7 @@ paths:
   /CashManagementAndAccountServices/{cashmanagementandaccountservicesId}/Retrieve:
     get:
       tags:
-      - CR - CashManagementAndAccountServicesArrangement
+      - CR - CashManagementAndAccountServicesFacility
       summary: ReCR Retrieve information about a cash management and accounting services account - either standard canned reports or selected instance attribute values
       description: ReCR Retrieve information about a cash management and accounting services account - either standard canned reports or selected instance attribute values
       operationId: Retrieve
@@ -81,7 +81,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/CashManagementAndAccountServicesArrangement'
+                $ref: '#/components/schemas/CashManagementAndAccountServicesFacility'
         400:
           $ref: '#/components/responses/BadRequestError'
         401:
@@ -442,7 +442,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/CashManagementAndAccountServicesArrangement'
+                $ref: '#/components/schemas/CashManagementAndAccountServicesFacility'
         400:
           $ref: '#/components/responses/BadRequestError'
         401:
@@ -850,7 +850,7 @@ paths:
           $ref: '#/components/responses/InternalServerError'
 components:
   schemas:
-    CashManagementAndAccountServicesArrangement:
+    CashManagementAndAccountServicesFacility:
       type: object
       properties:
         ProductInstanceReference:
@@ -901,17 +901,6 @@ components:
           type: string
         Date:
           type: string
-    PositivePay:
-      type: object
-      properties:
-        PositivePayCheckRegisterReportingSchedule:
-          type: string
-        CheckRegister:
-          type: string
-        DateRange:
-          type: string
-        CheckDetails:
-          type: string
     ServiceFees:
       type: object
       properties:
@@ -945,28 +934,32 @@ components:
           type: string
         AccrualFeeCharge:
           type: string
-    AccountLien:
+    Interest:
       type: object
       properties:
-        LienType:
+        InterestRateType:
           type: string
-        LienDefinition:
+        InterestRateApplicationSchedule:
+          type: object
+        InterestRateConfiguration:
+          type: object
+        InterestRate:
+          type: object
+        InterestApplicationRecord:
           type: string
-        LienProcessingOption:
+        InterestTransaction:
           type: string
-        LienRecord:
+        TransactionDescription:
           type: string
-        LienOriginator:
+        TransactionRateType:
           type: string
-        LienPurpose:
+        TransactionInterestCharge:
           type: string
-        LienAmount:
+        InterestAccrualAmount:
           type: number
-        LienStartDate:
+        InterestAccrualType:
           type: string
-        LienExpiryDate:
-          type: string
-        LienStatus:
+        InterestAccrualCharge:
           type: string
     Payments:
       type: object
@@ -1017,24 +1010,53 @@ components:
           type: object
         PaymentTransactionStatus:
           type: string
-    IssuedDevice:
+    AccountSweep:
       type: object
       properties:
-        IssuedDeviceType:
+        AccountSweepType:
           type: string
-        IssuedDeviceDescription:
+        AccountSweepDefinition:
           type: string
-        IssuedDeviceOptionDefinition:
+        AccountSweepApplicationSchedule:
           type: string
-        IssuedDeviceOptionSetting:
+        AccountSweepConfiguration:
           type: string
-        IssuedDeviceProperty:
+        TargetAccount:
           type: string
-        IssuedDevicePropertyType:
+        SweepMandate:
           type: string
-        IssuedDevicePropertyValue:
+        SweepProcessingSchedule:
           type: string
-        IssuedDeviceStatus:
+        SweepApplicationRecord:
+          type: string
+        AccountSweepTargetAccount:
+          type: string
+        AccountSweepAmount:
+          type: number
+        AccountSweepExecutionDate:
+          type: string
+    AccountLien:
+      type: object
+      properties:
+        LienType:
+          type: string
+        LienDefinition:
+          type: string
+        LienProcessingOption:
+          type: string
+        LienRecord:
+          type: string
+        LienOriginator:
+          type: string
+        LienPurpose:
+          type: string
+        LienAmount:
+          type: number
+        LienStartDate:
+          type: string
+        LienExpiryDate:
+          type: string
+        LienStatus:
           type: string
     DepositsandWithdrawals:
       type: object
@@ -1069,57 +1091,35 @@ components:
           type: number
         WithdrawalTransactionDate:
           type: string
-    AccountSweep:
+    IssuedDevice:
       type: object
       properties:
-        AccountSweepType:
+        IssuedDeviceType:
           type: string
-        AccountSweepDefinition:
+        IssuedDeviceDescription:
           type: string
-        AccountSweepApplicationSchedule:
+        IssuedDeviceOptionDefinition:
           type: string
-        AccountSweepConfiguration:
+        IssuedDeviceOptionSetting:
           type: string
-        TargetAccount:
+        IssuedDeviceProperty:
           type: string
-        SweepMandate:
+        IssuedDevicePropertyType:
           type: string
-        SweepProcessingSchedule:
+        IssuedDevicePropertyValue:
           type: string
-        SweepApplicationRecord:
+        IssuedDeviceStatus:
           type: string
-        AccountSweepTargetAccount:
-          type: string
-        AccountSweepAmount:
-          type: number
-        AccountSweepExecutionDate:
-          type: string
-    Interest:
+    PositivePay:
       type: object
       properties:
-        InterestRateType:
+        PositivePayCheckRegisterReportingSchedule:
           type: string
-        InterestRateApplicationSchedule:
-          type: object
-        InterestRateConfiguration:
-          type: object
-        InterestRate:
-          type: object
-        InterestApplicationRecord:
+        CheckRegister:
           type: string
-        InterestTransaction:
+        DateRange:
           type: string
-        TransactionDescription:
-          type: string
-        TransactionRateType:
-          type: string
-        TransactionInterestCharge:
-          type: string
-        InterestAccrualAmount:
-          type: number
-        InterestAccrualType:
-          type: string
-        InterestAccrualCharge:
+        CheckDetails:
           type: string
     HTTPError:
       type: object
@@ -1133,7 +1133,7 @@ components:
     InitiateServiceFeesRequest:
       type: object
       properties:
-        CashManagementAndAccountServicesArrangement:
+        CashManagementAndAccountServicesFacility:
           type: object
           properties:
             ProductInstanceReference:
@@ -1172,7 +1172,7 @@ components:
     InitiateServiceFeesResponse:
       type: object
       properties:
-        CashManagementAndAccountServicesArrangement:
+        CashManagementAndAccountServicesFacility:
           type: object
           properties:
             DateType:
@@ -1185,7 +1185,7 @@ components:
     InitiateAccountLienRequest:
       type: object
       properties:
-        CashManagementAndAccountServicesArrangement:
+        CashManagementAndAccountServicesFacility:
           type: object
           properties:
             ProductInstanceReference:
@@ -1240,7 +1240,7 @@ components:
     InitiateAccountLienResponse:
       type: object
       properties:
-        CashManagementAndAccountServicesArrangement:
+        CashManagementAndAccountServicesFacility:
           type: object
           properties:
             EntitlementOptionDefinition:
@@ -1265,7 +1265,7 @@ components:
     InitiateAccountSweepRequest:
       type: object
       properties:
-        CashManagementAndAccountServicesArrangement:
+        CashManagementAndAccountServicesFacility:
           type: object
           properties:
             ProductInstanceReference:
@@ -1312,7 +1312,7 @@ components:
     InitiateAccountSweepResponse:
       type: object
       properties:
-        CashManagementAndAccountServicesArrangement:
+        CashManagementAndAccountServicesFacility:
           type: object
           properties:
             DateType:
@@ -1327,7 +1327,7 @@ components:
     InitiateDepositsandWithdrawalsRequest:
       type: object
       properties:
-        CashManagementAndAccountServicesArrangement:
+        CashManagementAndAccountServicesFacility:
           type: object
           properties:
             ProductInstanceReference:
@@ -1362,7 +1362,7 @@ components:
     InitiatePaymentsRequest:
       type: object
       properties:
-        CashManagementAndAccountServicesArrangement:
+        CashManagementAndAccountServicesFacility:
           type: object
           properties:
             ProductInstanceReference:
@@ -1409,7 +1409,7 @@ components:
     InitiatePaymentsResponse:
       type: object
       properties:
-        CashManagementAndAccountServicesArrangement:
+        CashManagementAndAccountServicesFacility:
           type: object
           properties:
             TaxReference:
@@ -1434,7 +1434,7 @@ components:
     InitiateIssuedDeviceRequest:
       type: object
       properties:
-        CashManagementAndAccountServicesArrangement:
+        CashManagementAndAccountServicesFacility:
           type: object
           properties:
             ProductInstanceReference:
@@ -1479,7 +1479,7 @@ components:
     InitiateIssuedDeviceResponse:
       type: object
       properties:
-        CashManagementAndAccountServicesArrangement:
+        CashManagementAndAccountServicesFacility:
           type: object
           properties:
             AssociationType:
@@ -1518,56 +1518,8 @@ components:
       explode: false
       schema:
         type: string
-    PositivePayID:
-      name: positivepayId
-      in: path
-      required: true
-      style: simple
-      explode: false
-      schema:
-        type: string
     ServiceFeesID:
       name: servicefeesId
-      in: path
-      required: true
-      style: simple
-      explode: false
-      schema:
-        type: string
-    AccountLienID:
-      name: accountlienId
-      in: path
-      required: true
-      style: simple
-      explode: false
-      schema:
-        type: string
-    PaymentsID:
-      name: paymentsId
-      in: path
-      required: true
-      style: simple
-      explode: false
-      schema:
-        type: string
-    IssuedDeviceID:
-      name: issueddeviceId
-      in: path
-      required: true
-      style: simple
-      explode: false
-      schema:
-        type: string
-    DepositsandWithdrawalsID:
-      name: depositsandwithdrawalsId
-      in: path
-      required: true
-      style: simple
-      explode: false
-      schema:
-        type: string
-    AccountSweepID:
-      name: accountsweepId
       in: path
       required: true
       style: simple
@@ -1582,13 +1534,61 @@ components:
       explode: false
       schema:
         type: string
+    PaymentsID:
+      name: paymentsId
+      in: path
+      required: true
+      style: simple
+      explode: false
+      schema:
+        type: string
+    AccountSweepID:
+      name: accountsweepId
+      in: path
+      required: true
+      style: simple
+      explode: false
+      schema:
+        type: string
+    AccountLienID:
+      name: accountlienId
+      in: path
+      required: true
+      style: simple
+      explode: false
+      schema:
+        type: string
+    DepositsandWithdrawalsID:
+      name: depositsandwithdrawalsId
+      in: path
+      required: true
+      style: simple
+      explode: false
+      schema:
+        type: string
+    IssuedDeviceID:
+      name: issueddeviceId
+      in: path
+      required: true
+      style: simple
+      explode: false
+      schema:
+        type: string
+    PositivePayID:
+      name: positivepayId
+      in: path
+      required: true
+      style: simple
+      explode: false
+      schema:
+        type: string
   requestBodies:
-    CashManagementAndAccountServicesArrangement:
+    CashManagementAndAccountServicesFacility:
       required: true
       content:
         application/json:
           schema:
-            $ref: '#/components/schemas/CashManagementAndAccountServicesArrangement'
+            $ref: '#/components/schemas/CashManagementAndAccountServicesFacility'
     InitiateServiceFeesRequest:
       required: true
       content:

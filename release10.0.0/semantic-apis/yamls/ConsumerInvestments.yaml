@@ -1,7 +1,7 @@
 openapi: 3.0.1
 info:
   title: Consumer Investments
-  description: Handle the consumer front-end trading requests. These will typically be blocked/netted for market execution
+  description: ''
   version: 10.0.0
 servers:
 - description: SwaggerHub API Auto Mocking
@@ -259,6 +259,11 @@ components:
           type: string
         ConsumerSecuritiesOrderInitiationTaskResult:
           type: string
+    Quote:
+      type: object
+      properties:
+        SecuritiesPrice:
+          type: string
     Compliance:
       type: object
       properties:
@@ -267,11 +272,6 @@ components:
         ConsumerSecuritiesOrderTransactionComplianceCheckResult:
           type: string
         ConsumerSecuritiesOrderTransactionComplianceTaskResult:
-          type: string
-    Quote:
-      type: object
-      properties:
-        SecuritiesPrice:
           type: string
     HTTPError:
       type: object
@@ -463,16 +463,16 @@ components:
       explode: false
       schema:
         type: string
-    ComplianceID:
-      name: complianceId
+    QuoteID:
+      name: quoteId
       in: path
       required: true
       style: simple
       explode: false
       schema:
         type: string
-    QuoteID:
-      name: quoteId
+    ComplianceID:
+      name: complianceId
       in: path
       required: true
       style: simple

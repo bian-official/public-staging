@@ -1,7 +1,7 @@
 openapi: 3.0.1
 info:
   title: Customer Billing
-  description: This service domains provides a central service to compose, issue and track customer billing and invoices
+  description: ''
   version: 10.0.0
 servers:
 - description: SwaggerHub API Auto Mocking
@@ -396,28 +396,6 @@ components:
           type: string
         CustomerBillingPaymentSchedule:
           type: string
-    Invoicing:
-      type: object
-      properties:
-        CustomerInvoiceRecord:
-          type: string
-        InvoiceDate:
-          type: string
-        DocumentDirectoryEntryInstanceReference:
-          type: object
-        CorrespondenceInstanceReference:
-          type: object
-        Invoice:
-          type: string
-        InvoicingWorkProduct:
-          type: string
-    Payments:
-      type: object
-      properties:
-        PaymentTransactionReference:
-          type: object
-        PaymentTransaction:
-          type: string
     TrackingandReminders:
       type: object
       properties:
@@ -432,6 +410,28 @@ components:
         TrackingandRemindersResult:
           type: string
         TrackingandRemindersWorkProduct:
+          type: string
+    Payments:
+      type: object
+      properties:
+        PaymentTransactionReference:
+          type: object
+        PaymentTransaction:
+          type: string
+    Invoicing:
+      type: object
+      properties:
+        CustomerInvoiceRecord:
+          type: string
+        InvoiceDate:
+          type: string
+        DocumentDirectoryEntryInstanceReference:
+          type: object
+        CorrespondenceInstanceReference:
+          type: object
+        Invoice:
+          type: string
+        InvoicingWorkProduct:
           type: string
     HTTPError:
       type: object
@@ -678,8 +678,8 @@ components:
       explode: false
       schema:
         type: string
-    InvoicingID:
-      name: invoicingId
+    TrackingandRemindersID:
+      name: trackingandremindersId
       in: path
       required: true
       style: simple
@@ -694,8 +694,8 @@ components:
       explode: false
       schema:
         type: string
-    TrackingandRemindersID:
-      name: trackingandremindersId
+    InvoicingID:
+      name: invoicingId
       in: path
       required: true
       style: simple

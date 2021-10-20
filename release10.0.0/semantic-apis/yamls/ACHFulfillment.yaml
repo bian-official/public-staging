@@ -1,7 +1,7 @@
 openapi: 3.0.1
 info:
   title: ACH Fulfillment
-  description: This service domain operates the Automated Clearing House (ACH) access gateway between the bank and the ACH service provider
+  description: ''
   version: 10.0.0
 servers:
 - description: SwaggerHub API Auto Mocking
@@ -524,16 +524,11 @@ components:
           type: object
         ACHAccessSchedule:
           type: string
-    Warehousing:
+    Reconciliation:
       type: object
       properties:
-        ScheduleReleaseDate/Time:
+        ACHReconciliationTaskResult:
           type: string
-    OutboundACH:
-      type: object
-      properties:
-        OutboundACHTransactionBatchReference:
-          type: object
     InboundACH:
       type: object
       properties:
@@ -580,10 +575,15 @@ components:
           type: string
         MirrorNostroAccountReference:
           type: object
-    Reconciliation:
+    OutboundACH:
       type: object
       properties:
-        ACHReconciliationTaskResult:
+        OutboundACHTransactionBatchReference:
+          type: object
+    Warehousing:
+      type: object
+      properties:
+        ScheduleReleaseDate/Time:
           type: string
     HTTPError:
       type: object
@@ -1328,16 +1328,8 @@ components:
       explode: false
       schema:
         type: string
-    WarehousingID:
-      name: warehousingId
-      in: path
-      required: true
-      style: simple
-      explode: false
-      schema:
-        type: string
-    OutboundACHID:
-      name: outboundachId
+    ReconciliationID:
+      name: reconciliationId
       in: path
       required: true
       style: simple
@@ -1360,8 +1352,16 @@ components:
       explode: false
       schema:
         type: string
-    ReconciliationID:
-      name: reconciliationId
+    OutboundACHID:
+      name: outboundachId
+      in: path
+      required: true
+      style: simple
+      explode: false
+      schema:
+        type: string
+    WarehousingID:
+      name: warehousingId
       in: path
       required: true
       style: simple

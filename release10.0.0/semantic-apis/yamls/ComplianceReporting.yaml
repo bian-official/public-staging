@@ -1,7 +1,7 @@
 openapi: 3.0.1
 info:
   title: Compliance Reporting
-  description: This service domain administers and orchestrates the tasks required to apply and report on internal audit control and reporting activity
+  description: ''
   version: 10.0.0
 servers:
 - description: SwaggerHub API Auto Mocking
@@ -565,16 +565,28 @@ components:
           type: string
         ComplianceReportingAdministrativePlanReference:
           type: object
-    ComplianceReportingOutcome:
+    Consolidation:
       type: object
       properties:
-        ComplianceReportingPerformanceAnalysis:
+        ConsolidationPreconditions:
           type: string
-        ComplianceReportingActivityAnalysis:
+        ConsolidationBusinessUnit/EmployeeReference:
+          type: object
+        ConsolidationWorkSchedule:
           type: string
-        ComplianceReportingAdministrativePlan:
+        BusinessService:
+          type: object
+        ConsolidationPostconditions:
           type: string
-        ComplianceReportingAdministrationTask:
+        ConsolidationServiceType:
+          type: string
+        ConsolidationServiceDescription:
+          type: string
+        ConsolidationServiceInputsandOuputs:
+          type: string
+        ConsolidationServiceWorkProduct:
+          type: string
+        ConsolidationServiceName:
           type: string
     ComplianceAssessment:
       type: object
@@ -622,28 +634,16 @@ components:
           type: string
         RemediationRemediationAssuranceServiceName:
           type: string
-    Consolidation:
+    ComplianceReportingOutcome:
       type: object
       properties:
-        ConsolidationPreconditions:
+        ComplianceReportingPerformanceAnalysis:
           type: string
-        ConsolidationBusinessUnit/EmployeeReference:
-          type: object
-        ConsolidationWorkSchedule:
+        ComplianceReportingActivityAnalysis:
           type: string
-        BusinessService:
-          type: object
-        ConsolidationPostconditions:
+        ComplianceReportingAdministrativePlan:
           type: string
-        ConsolidationServiceType:
-          type: string
-        ConsolidationServiceDescription:
-          type: string
-        ConsolidationServiceInputsandOuputs:
-          type: string
-        ConsolidationServiceWorkProduct:
-          type: string
-        ConsolidationServiceName:
+        ComplianceReportingAdministrationTask:
           type: string
     HTTPError:
       type: object
@@ -663,8 +663,8 @@ components:
       explode: false
       schema:
         type: string
-    ComplianceReportingOutcomeID:
-      name: compliancereportingoutcomeId
+    ConsolidationID:
+      name: consolidationId
       in: path
       required: true
       style: simple
@@ -687,8 +687,8 @@ components:
       explode: false
       schema:
         type: string
-    ConsolidationID:
-      name: consolidationId
+    ComplianceReportingOutcomeID:
+      name: compliancereportingoutcomeId
       in: path
       required: true
       style: simple

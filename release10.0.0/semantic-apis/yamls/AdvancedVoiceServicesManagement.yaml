@@ -1,7 +1,7 @@
 openapi: 3.0.1
 info:
   title: Advanced Voice Services Management
-  description: Oversee the configuration and operation of the voice channel facilities
+  description: ''
   version: 10.0.0
 servers:
 - description: SwaggerHub API Auto Mocking
@@ -382,6 +382,13 @@ components:
           type: string
         VChannelServiceSchedule:
           type: string
+    Troubleshooting:
+      type: object
+      properties:
+        VChannelProductionIssueRecord:
+          type: string
+        VChannelIssueAnalysisAndRecommendedResponse:
+          type: string
     MaintenanceAndUpgrades:
       type: object
       properties:
@@ -403,13 +410,6 @@ components:
         VChannelPlatformUtilization:
           type: string
         VChannelLoadingProjections:
-          type: string
-    Troubleshooting:
-      type: object
-      properties:
-        VChannelProductionIssueRecord:
-          type: string
-        VChannelIssueAnalysisAndRecommendedResponse:
           type: string
     HTTPError:
       type: object
@@ -511,6 +511,14 @@ components:
       explode: false
       schema:
         type: string
+    TroubleshootingID:
+      name: troubleshootingId
+      in: path
+      required: true
+      style: simple
+      explode: false
+      schema:
+        type: string
     MaintenanceAndUpgradesID:
       name: maintenanceandupgradesId
       in: path
@@ -521,14 +529,6 @@ components:
         type: string
     CapacityPlanningID:
       name: capacityplanningId
-      in: path
-      required: true
-      style: simple
-      explode: false
-      schema:
-        type: string
-    TroubleshootingID:
-      name: troubleshootingId
       in: path
       required: true
       style: simple

@@ -1,7 +1,7 @@
 openapi: 3.0.1
 info:
   title: Contact Center Operations
-  description: Administer the day to day activity in the contact center - allocate positions and track staff availability and performance
+  description: ''
   version: 10.0.0
 servers:
 - description: SwaggerHub API Auto Mocking
@@ -510,19 +510,6 @@ components:
           type: string
         CustomerServicingRepresentativeAssignmentRecord:
           type: string
-    Assignment:
-      type: object
-      properties:
-        AssignmentCustomerServicingRepresentative:
-          type: string
-        AssignmentCustomerServicingPositionReference:
-          type: object
-        AssignmentCustomerServicingPositionProfile:
-          type: string
-        AssignmentCustomerServicingPositionSchedule:
-          type: string
-        CustomerContactSessionProcedureInstanceReference:
-          type: object
     Troubleshooting:
       type: object
       properties:
@@ -543,6 +530,19 @@ components:
           type: string
         PeakLoadResponseDescription:
           type: string
+    Assignment:
+      type: object
+      properties:
+        AssignmentCustomerServicingRepresentative:
+          type: string
+        AssignmentCustomerServicingPositionReference:
+          type: object
+        AssignmentCustomerServicingPositionProfile:
+          type: string
+        AssignmentCustomerServicingPositionSchedule:
+          type: string
+        CustomerContactSessionProcedureInstanceReference:
+          type: object
     HTTPError:
       type: object
       properties:
@@ -561,14 +561,6 @@ components:
       explode: false
       schema:
         type: string
-    AssignmentID:
-      name: assignmentId
-      in: path
-      required: true
-      style: simple
-      explode: false
-      schema:
-        type: string
     TroubleshootingID:
       name: troubleshootingId
       in: path
@@ -579,6 +571,14 @@ components:
         type: string
     PeakLoadID:
       name: peakloadId
+      in: path
+      required: true
+      style: simple
+      explode: false
+      schema:
+        type: string
+    AssignmentID:
+      name: assignmentId
       in: path
       required: true
       style: simple

@@ -1,7 +1,7 @@
 openapi: 3.0.1
 info:
   title: Corporate Current Account
-  description: This service domain orchestrates a corporate checking/demand deposit account. The typical range of services and fees covers payments and deposits, standing orders, sweeps, liens, check and debit card access.
+  description: ''
   version: 10.0.0
 servers:
 - description: SwaggerHub API Auto Mocking
@@ -10,20 +10,20 @@ paths:
   /CorporateCurrentAccount/Initiate:
     post:
       tags:
-      - CR - CorporateCurrentAccountArrangement
+      - CR - CorporateCurrentAccountFacility
       summary: InCR Initiate A new Corporate Current Account
       description: InCR Initiate A new Corporate Current Account
       operationId: Initiate
       parameters: []
       requestBody:
-        $ref: '#/components/requestBodies/CorporateCurrentAccountArrangement'
+        $ref: '#/components/requestBodies/CorporateCurrentAccountFacility'
       responses:
         200:
           description: Success
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/CorporateCurrentAccountArrangement'
+                $ref: '#/components/schemas/CorporateCurrentAccountFacility'
         400:
           $ref: '#/components/responses/BadRequestError'
         401:
@@ -39,21 +39,21 @@ paths:
   /CorporateCurrentAccount/{corporatecurrentaccountId}/Update:
     put:
       tags:
-      - CR - CorporateCurrentAccountArrangement
+      - CR - CorporateCurrentAccountFacility
       summary: UpCR Update properties of an active corporate current account
       description: UpCR Update properties of an active corporate current account
       operationId: Update
       parameters:
       - $ref: '#/components/parameters/CorporateCurrentAccountID'
       requestBody:
-        $ref: '#/components/requestBodies/CorporateCurrentAccountArrangement'
+        $ref: '#/components/requestBodies/CorporateCurrentAccountFacility'
       responses:
         200:
           description: Success
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/CorporateCurrentAccountArrangement'
+                $ref: '#/components/schemas/CorporateCurrentAccountFacility'
         400:
           $ref: '#/components/responses/BadRequestError'
         401:
@@ -69,7 +69,7 @@ paths:
   /CorporateCurrentAccount/{corporatecurrentaccountId}/Retrieve:
     get:
       tags:
-      - CR - CorporateCurrentAccountArrangement
+      - CR - CorporateCurrentAccountFacility
       summary: ReCR Retrieve information about a corporate current account - either standard canned reports or selected instance attribute values
       description: ReCR Retrieve information about a corporate current account - either standard canned reports or selected instance attribute values
       operationId: Retrieve
@@ -81,7 +81,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/CorporateCurrentAccountArrangement'
+                $ref: '#/components/schemas/CorporateCurrentAccountFacility'
         400:
           $ref: '#/components/responses/BadRequestError'
         401:
@@ -442,7 +442,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/CorporateCurrentAccountArrangement'
+                $ref: '#/components/schemas/CorporateCurrentAccountFacility'
         400:
           $ref: '#/components/responses/BadRequestError'
         401:
@@ -790,7 +790,7 @@ paths:
           $ref: '#/components/responses/InternalServerError'
 components:
   schemas:
-    CorporateCurrentAccountArrangement:
+    CorporateCurrentAccountFacility:
       type: object
       properties:
         ProductInstanceReference:
@@ -841,25 +841,6 @@ components:
           type: string
         Date:
           type: string
-    IssuedDevice:
-      type: object
-      properties:
-        IssuedDeviceType:
-          type: string
-        IssuedDeviceDescription:
-          type: string
-        IssuedDeviceOptionDefinition:
-          type: string
-        IssuedDeviceOptionSetting:
-          type: string
-        IssuedDeviceProperty:
-          type: string
-        IssuedDevicePropertyType:
-          type: string
-        IssuedDevicePropertyValue:
-          type: string
-        IssuedDeviceStatus:
-          type: string
     DepositsandWithdrawals:
       type: object
       properties:
@@ -893,6 +874,64 @@ components:
           type: number
         WithdrawalTransactionDate:
           type: string
+    ServiceFees:
+      type: object
+      properties:
+        FeeConfigurationProfile:
+          type: string
+        FeeDefinition:
+          type: string
+        FeeType:
+          type: string
+        FeeApplicationRecord:
+          type: string
+        FeeTransaction:
+          type: string
+        TransactionDescription:
+          type: string
+        TransactionFeeType:
+          type: string
+        TransactionFeeCharge:
+          type: string
+        FeeProjectionsandCommitments:
+          type: string
+        ProjectedTransactionDescription:
+          type: string
+        ProjectedTransactionFeeType:
+          type: string
+        ProjectedTransactionFeeCharge:
+          type: string
+        FeeAccrualAmount:
+          type: number
+        AccrualFeeType:
+          type: string
+        AccrualFeeCharge:
+          type: string
+    AccountSweep:
+      type: object
+      properties:
+        AccountSweepType:
+          type: string
+        AccountSweepDefinition:
+          type: string
+        AccountSweepApplicationSchedule:
+          type: string
+        AccountSweepConfiguration:
+          type: string
+        TargetAccount:
+          type: string
+        SweepMandate:
+          type: string
+        SweepProcessingSchedule:
+          type: string
+        SweepApplicationRecord:
+          type: string
+        AccountSweepTargetAccount:
+          type: string
+        AccountSweepAmount:
+          type: number
+        AccountSweepExecutionDate:
+          type: string
     AccountLien:
       type: object
       properties:
@@ -915,6 +954,52 @@ components:
         LienExpiryDate:
           type: string
         LienStatus:
+          type: string
+    IssuedDevice:
+      type: object
+      properties:
+        IssuedDeviceType:
+          type: string
+        IssuedDeviceDescription:
+          type: string
+        IssuedDeviceOptionDefinition:
+          type: string
+        IssuedDeviceOptionSetting:
+          type: string
+        IssuedDeviceProperty:
+          type: string
+        IssuedDevicePropertyType:
+          type: string
+        IssuedDevicePropertyValue:
+          type: string
+        IssuedDeviceStatus:
+          type: string
+    Interest:
+      type: object
+      properties:
+        InterestRateType:
+          type: string
+        InterestRateApplicationSchedule:
+          type: object
+        InterestRateConfiguration:
+          type: object
+        InterestRate:
+          type: object
+        InterestApplicationRecord:
+          type: string
+        InterestTransaction:
+          type: string
+        TransactionDescription:
+          type: string
+        TransactionRateType:
+          type: string
+        TransactionInterestCharge:
+          type: string
+        InterestAccrualAmount:
+          type: number
+        InterestAccrualType:
+          type: string
+        InterestAccrualCharge:
           type: string
     Payments:
       type: object
@@ -965,91 +1050,6 @@ components:
           type: object
         PaymentTransactionStatus:
           type: string
-    AccountSweep:
-      type: object
-      properties:
-        AccountSweepType:
-          type: string
-        AccountSweepDefinition:
-          type: string
-        AccountSweepApplicationSchedule:
-          type: string
-        AccountSweepConfiguration:
-          type: string
-        TargetAccount:
-          type: string
-        SweepMandate:
-          type: string
-        SweepProcessingSchedule:
-          type: string
-        SweepApplicationRecord:
-          type: string
-        AccountSweepTargetAccount:
-          type: string
-        AccountSweepAmount:
-          type: number
-        AccountSweepExecutionDate:
-          type: string
-    ServiceFees:
-      type: object
-      properties:
-        FeeConfigurationProfile:
-          type: string
-        FeeDefinition:
-          type: string
-        FeeType:
-          type: string
-        FeeApplicationRecord:
-          type: string
-        FeeTransaction:
-          type: string
-        TransactionDescription:
-          type: string
-        TransactionFeeType:
-          type: string
-        TransactionFeeCharge:
-          type: string
-        FeeProjectionsandCommitments:
-          type: string
-        ProjectedTransactionDescription:
-          type: string
-        ProjectedTransactionFeeType:
-          type: string
-        ProjectedTransactionFeeCharge:
-          type: string
-        FeeAccrualAmount:
-          type: number
-        AccrualFeeType:
-          type: string
-        AccrualFeeCharge:
-          type: string
-    Interest:
-      type: object
-      properties:
-        InterestRateType:
-          type: string
-        InterestRateApplicationSchedule:
-          type: object
-        InterestRateConfiguration:
-          type: object
-        InterestRate:
-          type: object
-        InterestApplicationRecord:
-          type: string
-        InterestTransaction:
-          type: string
-        TransactionDescription:
-          type: string
-        TransactionRateType:
-          type: string
-        TransactionInterestCharge:
-          type: string
-        InterestAccrualAmount:
-          type: number
-        InterestAccrualType:
-          type: string
-        InterestAccrualCharge:
-          type: string
     HTTPError:
       type: object
       properties:
@@ -1062,7 +1062,7 @@ components:
     InitiateServiceFeesRequest:
       type: object
       properties:
-        CorporateCurrentAccountArrangement:
+        CorporateCurrentAccountFacility:
           type: object
           properties:
             ProductInstanceReference:
@@ -1101,7 +1101,7 @@ components:
     InitiateServiceFeesResponse:
       type: object
       properties:
-        CorporateCurrentAccountArrangement:
+        CorporateCurrentAccountFacility:
           type: object
           properties:
             DateType:
@@ -1114,7 +1114,7 @@ components:
     InitiateAccountLienRequest:
       type: object
       properties:
-        CorporateCurrentAccountArrangement:
+        CorporateCurrentAccountFacility:
           type: object
           properties:
             ProductInstanceReference:
@@ -1169,7 +1169,7 @@ components:
     InitiateAccountLienResponse:
       type: object
       properties:
-        CorporateCurrentAccountArrangement:
+        CorporateCurrentAccountFacility:
           type: object
           properties:
             EntitlementOptionDefinition:
@@ -1194,7 +1194,7 @@ components:
     InitiateAccountSweepRequest:
       type: object
       properties:
-        CorporateCurrentAccountArrangement:
+        CorporateCurrentAccountFacility:
           type: object
           properties:
             ProductInstanceReference:
@@ -1241,7 +1241,7 @@ components:
     InitiateAccountSweepResponse:
       type: object
       properties:
-        CorporateCurrentAccountArrangement:
+        CorporateCurrentAccountFacility:
           type: object
           properties:
             DateType:
@@ -1256,7 +1256,7 @@ components:
     InitiateDepositsandWithdrawalsRequest:
       type: object
       properties:
-        CorporateCurrentAccountArrangement:
+        CorporateCurrentAccountFacility:
           type: object
           properties:
             ProductInstanceReference:
@@ -1291,7 +1291,7 @@ components:
     InitiatePaymentsRequest:
       type: object
       properties:
-        CorporateCurrentAccountArrangement:
+        CorporateCurrentAccountFacility:
           type: object
           properties:
             ProductInstanceReference:
@@ -1338,7 +1338,7 @@ components:
     InitiatePaymentsResponse:
       type: object
       properties:
-        CorporateCurrentAccountArrangement:
+        CorporateCurrentAccountFacility:
           type: object
           properties:
             TaxReference:
@@ -1363,7 +1363,7 @@ components:
     InitiateIssuedDeviceRequest:
       type: object
       properties:
-        CorporateCurrentAccountArrangement:
+        CorporateCurrentAccountFacility:
           type: object
           properties:
             ProductInstanceReference:
@@ -1408,7 +1408,7 @@ components:
     InitiateIssuedDeviceResponse:
       type: object
       properties:
-        CorporateCurrentAccountArrangement:
+        CorporateCurrentAccountFacility:
           type: object
           properties:
             AssociationType:
@@ -1447,40 +1447,8 @@ components:
       explode: false
       schema:
         type: string
-    IssuedDeviceID:
-      name: issueddeviceId
-      in: path
-      required: true
-      style: simple
-      explode: false
-      schema:
-        type: string
     DepositsandWithdrawalsID:
       name: depositsandwithdrawalsId
-      in: path
-      required: true
-      style: simple
-      explode: false
-      schema:
-        type: string
-    AccountLienID:
-      name: accountlienId
-      in: path
-      required: true
-      style: simple
-      explode: false
-      schema:
-        type: string
-    PaymentsID:
-      name: paymentsId
-      in: path
-      required: true
-      style: simple
-      explode: false
-      schema:
-        type: string
-    AccountSweepID:
-      name: accountsweepId
       in: path
       required: true
       style: simple
@@ -1495,6 +1463,30 @@ components:
       explode: false
       schema:
         type: string
+    AccountSweepID:
+      name: accountsweepId
+      in: path
+      required: true
+      style: simple
+      explode: false
+      schema:
+        type: string
+    AccountLienID:
+      name: accountlienId
+      in: path
+      required: true
+      style: simple
+      explode: false
+      schema:
+        type: string
+    IssuedDeviceID:
+      name: issueddeviceId
+      in: path
+      required: true
+      style: simple
+      explode: false
+      schema:
+        type: string
     InterestID:
       name: interestId
       in: path
@@ -1503,13 +1495,21 @@ components:
       explode: false
       schema:
         type: string
+    PaymentsID:
+      name: paymentsId
+      in: path
+      required: true
+      style: simple
+      explode: false
+      schema:
+        type: string
   requestBodies:
-    CorporateCurrentAccountArrangement:
+    CorporateCurrentAccountFacility:
       required: true
       content:
         application/json:
           schema:
-            $ref: '#/components/schemas/CorporateCurrentAccountArrangement'
+            $ref: '#/components/schemas/CorporateCurrentAccountFacility'
     InitiateServiceFeesRequest:
       required: true
       content:

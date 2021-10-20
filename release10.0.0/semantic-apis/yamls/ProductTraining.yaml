@@ -1,7 +1,7 @@
 openapi: 3.0.1
 info:
   title: Product Training
-  description: Develop and provide product specific training across the workforce. This includes all media and training mechanisms (on-line, self taught, classroom etc.)
+  description: ''
   version: 10.0.0
 servers:
 - description: SwaggerHub API Auto Mocking
@@ -899,29 +899,6 @@ components:
           type: string
         ProductTrainingProcedureCustomerAgreementReference:
           type: object
-    ServiceDelivery:
-      type: object
-      properties:
-        ServiceDeliveryPreconditions:
-          type: string
-        ServiceDeliveryBusinessUnit/EmployeeReference:
-          type: object
-        ServiceDeliveryWorkSchedule:
-          type: string
-        ServiceDelivery:
-          type: object
-        ServiceDeliveryPostconditions:
-          type: string
-        ServiceDeliveryServiceDeliveryServiceType:
-          type: string
-        ServiceDeliveryServiceDeliveryServiceDescription:
-          type: string
-        ServiceDeliveryServiceDeliveryServiceInputsandOuputs:
-          type: string
-        ServiceDeliveryServiceDeliveryServiceWorkProduct:
-          type: string
-        ServiceDeliveryServiceDeliveryServiceName:
-          type: string
     ContentDevelopment:
       type: object
       properties:
@@ -944,13 +921,6 @@ components:
         ContentDevelopmentContentDevelopmentServiceWorkProduct:
           type: string
         ContentDevelopmentContentDevelopmentServiceName:
-          type: string
-    ProductTrainingOutcome:
-      type: object
-      properties:
-        ProductTrainingWorkProduct:
-          type: string
-        ProductTrainingProcedure:
           type: string
     ServiceEvaluation:
       type: object
@@ -975,6 +945,29 @@ components:
           type: string
         ServiceEvaluationServiceEvaluationServiceName:
           type: string
+    ServiceDelivery:
+      type: object
+      properties:
+        ServiceDeliveryPreconditions:
+          type: string
+        ServiceDeliveryBusinessUnit/EmployeeReference:
+          type: object
+        ServiceDeliveryWorkSchedule:
+          type: string
+        ServiceDelivery:
+          type: object
+        ServiceDeliveryPostconditions:
+          type: string
+        ServiceDeliveryServiceDeliveryServiceType:
+          type: string
+        ServiceDeliveryServiceDeliveryServiceDescription:
+          type: string
+        ServiceDeliveryServiceDeliveryServiceInputsandOuputs:
+          type: string
+        ServiceDeliveryServiceDeliveryServiceWorkProduct:
+          type: string
+        ServiceDeliveryServiceDeliveryServiceName:
+          type: string
     ServiceScheduling:
       type: object
       properties:
@@ -998,6 +991,13 @@ components:
           type: string
         ServiceSchedulingServiceSchedulingServiceName:
           type: string
+    ProductTrainingOutcome:
+      type: object
+      properties:
+        ProductTrainingWorkProduct:
+          type: string
+        ProductTrainingProcedure:
+          type: string
     HTTPError:
       type: object
       properties:
@@ -1016,24 +1016,8 @@ components:
       explode: false
       schema:
         type: string
-    ServiceDeliveryID:
-      name: servicedeliveryId
-      in: path
-      required: true
-      style: simple
-      explode: false
-      schema:
-        type: string
     ContentDevelopmentID:
       name: contentdevelopmentId
-      in: path
-      required: true
-      style: simple
-      explode: false
-      schema:
-        type: string
-    ProductTrainingOutcomeID:
-      name: producttrainingoutcomeId
       in: path
       required: true
       style: simple
@@ -1048,8 +1032,24 @@ components:
       explode: false
       schema:
         type: string
+    ServiceDeliveryID:
+      name: servicedeliveryId
+      in: path
+      required: true
+      style: simple
+      explode: false
+      schema:
+        type: string
     ServiceSchedulingID:
       name: serviceschedulingId
+      in: path
+      required: true
+      style: simple
+      explode: false
+      schema:
+        type: string
+    ProductTrainingOutcomeID:
+      name: producttrainingoutcomeId
       in: path
       required: true
       style: simple

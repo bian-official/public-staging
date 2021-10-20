@@ -1,7 +1,7 @@
 openapi: 3.0.1
 info:
   title: Direct Debit
-  description: Fulfils a direct debit agreement. &nbsp;Handles the creditor side of direct debits.
+  description: ''
   version: 10.0.0
 servers:
 - description: SwaggerHub API Auto Mocking
@@ -10,21 +10,21 @@ paths:
   /DirectDebit/{directdebitId}/Control:
     put:
       tags:
-      - CR - DirectDebitArrangement
-      summary: CoCR Control the processing of Direct Debit Arrangement
-      description: CoCR Control the processing of Direct Debit Arrangement
+      - CR - DirectDebitFacility
+      summary: CoCR Control the processing of Direct Debit Facility
+      description: CoCR Control the processing of Direct Debit Facility
       operationId: Control
       parameters:
       - $ref: '#/components/parameters/DirectDebitID'
       requestBody:
-        $ref: '#/components/requestBodies/DirectDebitArrangement'
+        $ref: '#/components/requestBodies/DirectDebitFacility'
       responses:
         200:
           description: Success
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/DirectDebitArrangement'
+                $ref: '#/components/schemas/DirectDebitFacility'
         400:
           $ref: '#/components/responses/BadRequestError'
         401:
@@ -40,21 +40,21 @@ paths:
   /DirectDebit/{directdebitId}/Execute:
     put:
       tags:
-      - CR - DirectDebitArrangement
-      summary: EcCR Accept, verify, etc. aspects of Direct Debit Arrangement processing
-      description: EcCR Accept, verify, etc. aspects of Direct Debit Arrangement processing
+      - CR - DirectDebitFacility
+      summary: EcCR Accept, verify, etc. aspects of Direct Debit Facility processing
+      description: EcCR Accept, verify, etc. aspects of Direct Debit Facility processing
       operationId: Execute
       parameters:
       - $ref: '#/components/parameters/DirectDebitID'
       requestBody:
-        $ref: '#/components/requestBodies/DirectDebitArrangement'
+        $ref: '#/components/requestBodies/DirectDebitFacility'
       responses:
         200:
           description: Success
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/DirectDebitArrangement'
+                $ref: '#/components/schemas/DirectDebitFacility'
         400:
           $ref: '#/components/responses/BadRequestError'
         401:
@@ -70,20 +70,20 @@ paths:
   /DirectDebit/Initiate:
     post:
       tags:
-      - CR - DirectDebitArrangement
-      summary: InCR Instantiate a new Direct Debit Arrangement
-      description: InCR Instantiate a new Direct Debit Arrangement
+      - CR - DirectDebitFacility
+      summary: InCR Instantiate a new Direct Debit Facility
+      description: InCR Instantiate a new Direct Debit Facility
       operationId: Initiate
       parameters: []
       requestBody:
-        $ref: '#/components/requestBodies/DirectDebitArrangement'
+        $ref: '#/components/requestBodies/DirectDebitFacility'
       responses:
         200:
           description: Success
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/DirectDebitArrangement'
+                $ref: '#/components/schemas/DirectDebitFacility'
         400:
           $ref: '#/components/responses/BadRequestError'
         401:
@@ -99,9 +99,9 @@ paths:
   /DirectDebit/{directdebitId}/Retrieve:
     get:
       tags:
-      - CR - DirectDebitArrangement
-      summary: ReCR Retrieve details about any aspect of Direct Debit Arrangement
-      description: ReCR Retrieve details about any aspect of Direct Debit Arrangement
+      - CR - DirectDebitFacility
+      summary: ReCR Retrieve details about any aspect of Direct Debit Facility
+      description: ReCR Retrieve details about any aspect of Direct Debit Facility
       operationId: Retrieve
       parameters:
       - $ref: '#/components/parameters/DirectDebitID'
@@ -111,7 +111,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/DirectDebitArrangement'
+                $ref: '#/components/schemas/DirectDebitFacility'
         400:
           $ref: '#/components/responses/BadRequestError'
         401:
@@ -127,21 +127,21 @@ paths:
   /DirectDebit/{directdebitId}/Request:
     put:
       tags:
-      - CR - DirectDebitArrangement
-      summary: RqCR Request manual intervention or a decision with respect to Direct Debit Arrangement
-      description: RqCR Request manual intervention or a decision with respect to Direct Debit Arrangement
+      - CR - DirectDebitFacility
+      summary: RqCR Request manual intervention or a decision with respect to Direct Debit Facility
+      description: RqCR Request manual intervention or a decision with respect to Direct Debit Facility
       operationId: Request
       parameters:
       - $ref: '#/components/parameters/DirectDebitID'
       requestBody:
-        $ref: '#/components/requestBodies/DirectDebitArrangement'
+        $ref: '#/components/requestBodies/DirectDebitFacility'
       responses:
         200:
           description: Success
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/DirectDebitArrangement'
+                $ref: '#/components/schemas/DirectDebitFacility'
         400:
           $ref: '#/components/responses/BadRequestError'
         401:
@@ -157,21 +157,21 @@ paths:
   /DirectDebit/{directdebitId}/Update:
     put:
       tags:
-      - CR - DirectDebitArrangement
-      summary: UpCR Update details relating to Direct Debit Arrangement
-      description: UpCR Update details relating to Direct Debit Arrangement
+      - CR - DirectDebitFacility
+      summary: UpCR Update details relating to Direct Debit Facility
+      description: UpCR Update details relating to Direct Debit Facility
       operationId: Update
       parameters:
       - $ref: '#/components/parameters/DirectDebitID'
       requestBody:
-        $ref: '#/components/requestBodies/DirectDebitArrangement'
+        $ref: '#/components/requestBodies/DirectDebitFacility'
       responses:
         200:
           description: Success
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/DirectDebitArrangement'
+                $ref: '#/components/schemas/DirectDebitFacility'
         400:
           $ref: '#/components/responses/BadRequestError'
         401:
@@ -577,56 +577,35 @@ paths:
           $ref: '#/components/responses/InternalServerError'
 components:
   schemas:
-    DirectDebitArrangement:
+    DirectDebitFacility:
       type: object
       properties:
-        DirectDebitArrangementParameterType:
+        DirectDebitFacilityParameterType:
           type: string
-        DirectDebitArrangementSelectedOption:
+        DirectDebitFacilitySelectedOption:
           type: string
-        DirectDebitArrangementType:
+        DirectDebitFacilityType:
           type: string
-        DirectDebitArrangementReference:
+        DirectDebitFacilityReference:
           type: object
-        DirectDebitArrangementSchedule:
+        DirectDebitFacilitySchedule:
           type: string
-        DirectDebitArrangementStatus:
+        DirectDebitFacilityStatus:
           type: string
-        DirectDebitArrangementCurrency:
+        DirectDebitFacilityCurrency:
           type: string
-        DirectDebitArrangementRegulationReference:
+        DirectDebitFacilityRegulationReference:
           type: object
-        DirectDebitArrangementRegulationType:
+        DirectDebitFacilityRegulationType:
           type: string
-        DirectDebitArrangementJurisdiction:
+        DirectDebitFacilityJurisdiction:
           type: string
-        DirectDebitArrangementBookingLocation:
+        DirectDebitFacilityBookingLocation:
           type: string
-        DirectDebitArrangementAccountType:
+        DirectDebitFacilityAccountType:
           type: string
-        DirectDebitArrangementAccountReference:
+        DirectDebitFacilityAccountReference:
           type: object
-    Reporting:
-      type: object
-      properties:
-        ReportingPreconditions:
-          type: string
-        ReportingFeatureSchedule:
-          type: string
-        BusinessService:
-          type: object
-        ReportingPostconditions:
-          type: string
-        ReportingServiceType:
-          type: string
-        ReportingServiceDescription:
-          type: string
-        ReportingServiceInputsandOuputs:
-          type: string
-        ReportingServiceWorkProduct:
-          type: string
-        ReportingServiceName:
-          type: string
     FundsAvailableCheck:
       type: object
       properties:
@@ -647,6 +626,48 @@ components:
         FundsAvailableCheckFundsAvailableCheckServiceWorkProduct:
           type: string
         FundsAvailableCheckFundsAvailableCheckServiceName:
+          type: string
+    PaymentTracking:
+      type: object
+      properties:
+        PaymentTrackingPreconditions:
+          type: string
+        PaymentTrackingFeatureSchedule:
+          type: string
+        DirectDebitPaymentTracking:
+          type: object
+        PaymentTrackingPostconditions:
+          type: string
+        PaymentTrackingDirectDebitPaymentTrackingServiceType:
+          type: string
+        PaymentTrackingDirectDebitPaymentTrackingServiceDescription:
+          type: string
+        PaymentTrackingDirectDebitPaymentTrackingServiceInputsandOuputs:
+          type: string
+        PaymentTrackingDirectDebitPaymentTrackingServiceWorkProduct:
+          type: string
+        PaymentTrackingDirectDebitPaymentTrackingServiceName:
+          type: string
+    Reporting:
+      type: object
+      properties:
+        ReportingPreconditions:
+          type: string
+        ReportingFeatureSchedule:
+          type: string
+        BusinessService:
+          type: object
+        ReportingPostconditions:
+          type: string
+        ReportingServiceType:
+          type: string
+        ReportingServiceDescription:
+          type: string
+        ReportingServiceInputsandOuputs:
+          type: string
+        ReportingServiceWorkProduct:
+          type: string
+        ReportingServiceName:
           type: string
     PaymentInitiation:
       type: object
@@ -690,27 +711,6 @@ components:
           type: string
         VerifyMandateDirectDebitMandateCheckServiceName:
           type: string
-    PaymentTracking:
-      type: object
-      properties:
-        PaymentTrackingPreconditions:
-          type: string
-        PaymentTrackingFeatureSchedule:
-          type: string
-        DirectDebitPaymentTracking:
-          type: object
-        PaymentTrackingPostconditions:
-          type: string
-        PaymentTrackingDirectDebitPaymentTrackingServiceType:
-          type: string
-        PaymentTrackingDirectDebitPaymentTrackingServiceDescription:
-          type: string
-        PaymentTrackingDirectDebitPaymentTrackingServiceInputsandOuputs:
-          type: string
-        PaymentTrackingDirectDebitPaymentTrackingServiceWorkProduct:
-          type: string
-        PaymentTrackingDirectDebitPaymentTrackingServiceName:
-          type: string
     DirectDebitOutcome:
       type: object
       properties:
@@ -736,16 +736,24 @@ components:
       explode: false
       schema:
         type: string
-    ReportingID:
-      name: reportingId
+    FundsAvailableCheckID:
+      name: fundsavailablecheckId
       in: path
       required: true
       style: simple
       explode: false
       schema:
         type: string
-    FundsAvailableCheckID:
-      name: fundsavailablecheckId
+    PaymentTrackingID:
+      name: paymenttrackingId
+      in: path
+      required: true
+      style: simple
+      explode: false
+      schema:
+        type: string
+    ReportingID:
+      name: reportingId
       in: path
       required: true
       style: simple
@@ -768,14 +776,6 @@ components:
       explode: false
       schema:
         type: string
-    PaymentTrackingID:
-      name: paymenttrackingId
-      in: path
-      required: true
-      style: simple
-      explode: false
-      schema:
-        type: string
     DirectDebitOutcomeID:
       name: directdebitoutcomeId
       in: path
@@ -785,12 +785,12 @@ components:
       schema:
         type: string
   requestBodies:
-    DirectDebitArrangement:
+    DirectDebitFacility:
       required: true
       content:
         application/json:
           schema:
-            $ref: '#/components/schemas/DirectDebitArrangement'
+            $ref: '#/components/schemas/DirectDebitFacility'
     PaymentTracking:
       required: true
       content:

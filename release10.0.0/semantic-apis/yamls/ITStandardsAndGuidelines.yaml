@@ -1,7 +1,7 @@
 openapi: 3.0.1
 info:
   title: IT Standards And Guidelines
-  description: Define and apply comprehensive IT architectures, policies and standards as appropriate. Also define the IT usage guidelines and procedures governing systems use across the enterprise
+  description: ''
   version: 10.0.0
 servers:
 - description: SwaggerHub API Auto Mocking
@@ -1150,27 +1150,6 @@ components:
           type: string
         TechnologyStandardsSpecificationServiceProviderReference:
           type: object
-    DevelopmentToolingandEnvironment:
-      type: object
-      properties:
-        DevelopmentToolingandEnvironmentPreconditions:
-          type: string
-        DevelopmentToolingandEnvironmentSpecificationSchedule:
-          type: string
-        DevelopmentToolingandEnvironmentVersionNumber:
-          type: string
-        DevelopmentToolingandEnvironment:
-          type: object
-        DevelopmentToolingandEnvironmentServiceType:
-          type: string
-        DevelopmentToolingandEnvironmentServiceDescription:
-          type: string
-        DevelopmentToolingandEnvironmentServiceInputsandOuputs:
-          type: string
-        DevelopmentToolingandEnvironmentServiceWorkProduct:
-          type: string
-        DevelopmentToolingandEnvironmentServiceName:
-          type: string
     ProductionEnvironmentandSupportServices:
       type: object
       properties:
@@ -1192,37 +1171,26 @@ components:
           type: string
         ProductionEnvironmentandSupportServicesServiceName:
           type: string
-    ITStandardsAndGuidelinesOutcome:
+    DevelopmentToolingandEnvironment:
       type: object
       properties:
-        ITStandardsAndGuidelinesTask:
+        DevelopmentToolingandEnvironmentPreconditions:
           type: string
-        ITStandardsAndGuidelinesDesign:
+        DevelopmentToolingandEnvironmentSpecificationSchedule:
           type: string
-        ITStandardsAndGuidelinesWorkProduct:
+        DevelopmentToolingandEnvironmentVersionNumber:
           type: string
-        ITStandardsAndGuidelinesImpactAnalysis:
-          type: string
-    ITPoliciesandGuidelines:
-      type: object
-      properties:
-        ITPoliciesandGuidelinesPreconditions:
-          type: string
-        ITPoliciesandGuidelinesSpecificationSchedule:
-          type: string
-        ITPoliciesandGuidelinesVersionNumber:
-          type: string
-        ITPoliciesandGuidelines:
+        DevelopmentToolingandEnvironment:
           type: object
-        ITPoliciesandGuidelinesServiceType:
+        DevelopmentToolingandEnvironmentServiceType:
           type: string
-        ITPoliciesandGuidelinesServiceDescription:
+        DevelopmentToolingandEnvironmentServiceDescription:
           type: string
-        ITPoliciesandGuidelinesServiceInputsandOuputs:
+        DevelopmentToolingandEnvironmentServiceInputsandOuputs:
           type: string
-        ITPoliciesandGuidelinesServiceWorkProduct:
+        DevelopmentToolingandEnvironmentServiceWorkProduct:
           type: string
-        ITPoliciesandGuidelinesServiceName:
+        DevelopmentToolingandEnvironmentServiceName:
           type: string
     ProductionPlatformsandInfrastructure:
       type: object
@@ -1245,6 +1213,27 @@ components:
           type: string
         ProductionPlatformsandInfrastructureServiceName:
           type: string
+    ITPoliciesandGuidelines:
+      type: object
+      properties:
+        ITPoliciesandGuidelinesPreconditions:
+          type: string
+        ITPoliciesandGuidelinesSpecificationSchedule:
+          type: string
+        ITPoliciesandGuidelinesVersionNumber:
+          type: string
+        ITPoliciesandGuidelines:
+          type: object
+        ITPoliciesandGuidelinesServiceType:
+          type: string
+        ITPoliciesandGuidelinesServiceDescription:
+          type: string
+        ITPoliciesandGuidelinesServiceInputsandOuputs:
+          type: string
+        ITPoliciesandGuidelinesServiceWorkProduct:
+          type: string
+        ITPoliciesandGuidelinesServiceName:
+          type: string
     ProductTestingandDeploymentMechanisms:
       type: object
       properties:
@@ -1266,6 +1255,17 @@ components:
           type: string
         ProductTestingandDeploymentMechanismsServiceName:
           type: string
+    ITStandardsAndGuidelinesOutcome:
+      type: object
+      properties:
+        ITStandardsAndGuidelinesTask:
+          type: string
+        ITStandardsAndGuidelinesDesign:
+          type: string
+        ITStandardsAndGuidelinesWorkProduct:
+          type: string
+        ITStandardsAndGuidelinesImpactAnalysis:
+          type: string
     HTTPError:
       type: object
       properties:
@@ -1284,14 +1284,6 @@ components:
       explode: false
       schema:
         type: string
-    DevelopmentToolingandEnvironmentID:
-      name: developmenttoolingandenvironmentId
-      in: path
-      required: true
-      style: simple
-      explode: false
-      schema:
-        type: string
     ProductionEnvironmentandSupportServicesID:
       name: productionenvironmentandsupportservicesId
       in: path
@@ -1300,16 +1292,8 @@ components:
       explode: false
       schema:
         type: string
-    ITStandardsAndGuidelinesOutcomeID:
-      name: itstandardsandguidelinesoutcomeId
-      in: path
-      required: true
-      style: simple
-      explode: false
-      schema:
-        type: string
-    ITPoliciesandGuidelinesID:
-      name: itpoliciesandguidelinesId
+    DevelopmentToolingandEnvironmentID:
+      name: developmenttoolingandenvironmentId
       in: path
       required: true
       style: simple
@@ -1324,8 +1308,24 @@ components:
       explode: false
       schema:
         type: string
+    ITPoliciesandGuidelinesID:
+      name: itpoliciesandguidelinesId
+      in: path
+      required: true
+      style: simple
+      explode: false
+      schema:
+        type: string
     ProductTestingandDeploymentMechanismsID:
       name: producttestinganddeploymentmechanismsId
+      in: path
+      required: true
+      style: simple
+      explode: false
+      schema:
+        type: string
+    ITStandardsAndGuidelinesOutcomeID:
+      name: itstandardsandguidelinesoutcomeId
       in: path
       required: true
       style: simple

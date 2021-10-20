@@ -1,7 +1,7 @@
 openapi: 3.0.1
 info:
   title: Account Recovery
-  description: This service domain handles the restructuring of a distressed account (loan) after standard recovery procedures have been exhausted
+  description: ''
   version: 10.0.0
 servers:
 - description: SwaggerHub API Auto Mocking
@@ -424,20 +424,12 @@ components:
           type: string
         AccountRecoveryCaseStatus:
           type: string
-    Negotiation:
+    Restructuring:
       type: object
       properties:
-        AccountRecoveryGuidelines:
+        AccountRecoveryRestructuringSchedule:
           type: string
-        CorrespondenceReference:
-          type: object
-        CorrespondenceContent:
-          type: string
-        DocumentReference:
-          type: object
-        DocumentContent:
-          type: string
-        AccountRecoveryCaseNegotiationTaskRecord:
+        AccountRecoveryCaseRestructuringTaskRecord:
           type: string
     Writedown:
       type: object
@@ -453,17 +445,25 @@ components:
           type: string
         AccountRecoveryCasePlanningTaskRecord:
           type: string
+    Negotiation:
+      type: object
+      properties:
+        AccountRecoveryGuidelines:
+          type: string
+        CorrespondenceReference:
+          type: object
+        CorrespondenceContent:
+          type: string
+        DocumentReference:
+          type: object
+        DocumentContent:
+          type: string
+        AccountRecoveryCaseNegotiationTaskRecord:
+          type: string
     Assessment:
       type: object
       properties:
         AccountRecoveryCaseAssessmentTaskRecord:
-          type: string
-    Restructuring:
-      type: object
-      properties:
-        AccountRecoveryRestructuringSchedule:
-          type: string
-        AccountRecoveryCaseRestructuringTaskRecord:
           type: string
     HTTPError:
       type: object
@@ -770,8 +770,8 @@ components:
       explode: false
       schema:
         type: string
-    NegotiationID:
-      name: negotiationId
+    RestructuringID:
+      name: restructuringId
       in: path
       required: true
       style: simple
@@ -794,16 +794,16 @@ components:
       explode: false
       schema:
         type: string
-    AssessmentID:
-      name: assessmentId
+    NegotiationID:
+      name: negotiationId
       in: path
       required: true
       style: simple
       explode: false
       schema:
         type: string
-    RestructuringID:
-      name: restructuringId
+    AssessmentID:
+      name: assessmentId
       in: path
       required: true
       style: simple

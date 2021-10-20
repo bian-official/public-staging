@@ -1,7 +1,7 @@
 openapi: 3.0.1
 info:
   title: Product Inventory Distribution
-  description: Administer the provisioning and distribution of product inventory across the branch network and/or distribute direct to customers (e.g. mail) where appropriate
+  description: ''
   version: 10.0.0
 servers:
 - description: SwaggerHub API Auto Mocking
@@ -743,29 +743,6 @@ components:
           type: string
         ProductInventoryDistributionAdministrativePlanReference:
           type: object
-    Provisioning:
-      type: object
-      properties:
-        ProvisioningPreconditions:
-          type: string
-        ProvisioningBusinessUnit/EmployeeReference:
-          type: object
-        ProvisioningWorkSchedule:
-          type: string
-        BusinessService:
-          type: object
-        ProvisioningPostconditions:
-          type: string
-        ProvisioningServiceType:
-          type: string
-        ProvisioningServiceDescription:
-          type: string
-        ProvisioningServiceInputsandOuputs:
-          type: string
-        ProvisioningServiceWorkProduct:
-          type: string
-        ProvisioningServiceName:
-          type: string
     Mailing:
       type: object
       properties:
@@ -812,16 +789,28 @@ components:
           type: string
         DistributionServiceName:
           type: string
-    ProductInventoryDistributionOutcome:
+    Provisioning:
       type: object
       properties:
-        ProductInventoryDistributionPerformanceAnalysis:
+        ProvisioningPreconditions:
           type: string
-        ProductInventoryDistributionActivityAnalysis:
+        ProvisioningBusinessUnit/EmployeeReference:
+          type: object
+        ProvisioningWorkSchedule:
           type: string
-        ProductInventoryDistributionAdministrativePlan:
+        BusinessService:
+          type: object
+        ProvisioningPostconditions:
           type: string
-        ProductInventoryDistributionAdministrationTask:
+        ProvisioningServiceType:
+          type: string
+        ProvisioningServiceDescription:
+          type: string
+        ProvisioningServiceInputsandOuputs:
+          type: string
+        ProvisioningServiceWorkProduct:
+          type: string
+        ProvisioningServiceName:
           type: string
     Oversight:
       type: object
@@ -846,6 +835,17 @@ components:
           type: string
         OversightAdministrativeOversightServiceName:
           type: string
+    ProductInventoryDistributionOutcome:
+      type: object
+      properties:
+        ProductInventoryDistributionPerformanceAnalysis:
+          type: string
+        ProductInventoryDistributionActivityAnalysis:
+          type: string
+        ProductInventoryDistributionAdministrativePlan:
+          type: string
+        ProductInventoryDistributionAdministrationTask:
+          type: string
     HTTPError:
       type: object
       properties:
@@ -858,14 +858,6 @@ components:
   parameters:
     ProductInventoryDistributionID:
       name: productinventorydistributionId
-      in: path
-      required: true
-      style: simple
-      explode: false
-      schema:
-        type: string
-    ProvisioningID:
-      name: provisioningId
       in: path
       required: true
       style: simple
@@ -888,8 +880,8 @@ components:
       explode: false
       schema:
         type: string
-    ProductInventoryDistributionOutcomeID:
-      name: productinventorydistributionoutcomeId
+    ProvisioningID:
+      name: provisioningId
       in: path
       required: true
       style: simple
@@ -898,6 +890,14 @@ components:
         type: string
     OversightID:
       name: oversightId
+      in: path
+      required: true
+      style: simple
+      explode: false
+      schema:
+        type: string
+    ProductInventoryDistributionOutcomeID:
+      name: productinventorydistributionoutcomeId
       in: path
       required: true
       style: simple

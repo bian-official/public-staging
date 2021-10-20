@@ -1,7 +1,7 @@
 openapi: 3.0.1
 info:
   title: Card Clearing
-  description: This service domain orchestrates the capture and consolidation of card financial transactions originating from various sources, such as POS Network, E-Commerce Gateway, ATM Network, or Card Case Management. It also handles the clearing of the transactions from the Acquirers to the Issuers through the Card Networks
+  description: ''
   version: 10.0.0
 servers:
 - description: SwaggerHub API Auto Mocking
@@ -380,6 +380,33 @@ components:
           type: string
         CardClearingServiceSchedule:
           type: string
+    Reconciliation:
+      type: object
+      properties:
+        ReconciliationTaskResult:
+          type: string
+    Addressing:
+      type: object
+      properties:
+        AddressingTaskResult:
+          type: string
+    Routing:
+      type: object
+      properties:
+        RoutingTaskResult:
+          type: string
+    Matching:
+      type: object
+      properties:
+        MatchingTaskResult:
+          type: string
+    FXConversion:
+      type: object
+      properties:
+        FXConversionRatesandFees:
+          type: object
+        FXConversionTaskResult:
+          type: string
     Capture:
       type: object
       properties:
@@ -415,39 +442,12 @@ components:
           type: string
         CardTransactionAuthorizationRecord:
           type: string
-    Routing:
-      type: object
-      properties:
-        RoutingTaskResult:
-          type: string
     Fees:
       type: object
       properties:
         InterchargeFees:
           type: string
         FeeTaskResult:
-          type: string
-    Addressing:
-      type: object
-      properties:
-        AddressingTaskResult:
-          type: string
-    Matching:
-      type: object
-      properties:
-        MatchingTaskResult:
-          type: string
-    FXConversion:
-      type: object
-      properties:
-        FXConversionRatesandFees:
-          type: object
-        FXConversionTaskResult:
-          type: string
-    Reconciliation:
-      type: object
-      properties:
-        ReconciliationTaskResult:
           type: string
     HTTPError:
       type: object
@@ -782,24 +782,8 @@ components:
       explode: false
       schema:
         type: string
-    CaptureID:
-      name: captureId
-      in: path
-      required: true
-      style: simple
-      explode: false
-      schema:
-        type: string
-    RoutingID:
-      name: routingId
-      in: path
-      required: true
-      style: simple
-      explode: false
-      schema:
-        type: string
-    FeesID:
-      name: feesId
+    ReconciliationID:
+      name: reconciliationId
       in: path
       required: true
       style: simple
@@ -808,6 +792,14 @@ components:
         type: string
     AddressingID:
       name: addressingId
+      in: path
+      required: true
+      style: simple
+      explode: false
+      schema:
+        type: string
+    RoutingID:
+      name: routingId
       in: path
       required: true
       style: simple
@@ -830,8 +822,16 @@ components:
       explode: false
       schema:
         type: string
-    ReconciliationID:
-      name: reconciliationId
+    CaptureID:
+      name: captureId
+      in: path
+      required: true
+      style: simple
+      explode: false
+      schema:
+        type: string
+    FeesID:
+      name: feesId
       in: path
       required: true
       style: simple

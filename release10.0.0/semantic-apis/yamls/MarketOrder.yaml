@@ -1,7 +1,7 @@
 openapi: 3.0.1
 info:
   title: Market Order
-  description: Market Order records an instruction from a customer or his or her representative to buy or sell securities. It follows the order during its lifetime and reports back to the requestor on the execution.
+  description: ''
   version: 10.0.0
 servers:
 - description: SwaggerHub API Auto Mocking
@@ -245,11 +245,6 @@ components:
           type: string
         Date:
           type: string
-    CustomerProcessing:
-      type: object
-      properties:
-        MarketOrderCustomerProcessingCheckResult:
-          type: string
     TradeInitiation:
       type: object
       properties:
@@ -259,11 +254,6 @@ components:
           type: string
         MarketTradeInitiationTaskResult:
           type: string
-    FundingCheck:
-      type: object
-      properties:
-        MarketOrderTransactionFundingCheckResult:
-          type: string
     Compliance:
       type: object
       properties:
@@ -272,6 +262,16 @@ components:
         MarketOrderTransactionComplianceCheckResult:
           type: string
         MarketOrderTransactionComplianceTaskResult:
+          type: string
+    FundingCheck:
+      type: object
+      properties:
+        MarketOrderTransactionFundingCheckResult:
+          type: string
+    CustomerProcessing:
+      type: object
+      properties:
+        MarketOrderCustomerProcessingCheckResult:
           type: string
     HTTPError:
       type: object
@@ -447,16 +447,16 @@ components:
       explode: false
       schema:
         type: string
-    CustomerProcessingID:
-      name: customerprocessingId
+    TradeInitiationID:
+      name: tradeinitiationId
       in: path
       required: true
       style: simple
       explode: false
       schema:
         type: string
-    TradeInitiationID:
-      name: tradeinitiationId
+    ComplianceID:
+      name: complianceId
       in: path
       required: true
       style: simple
@@ -471,8 +471,8 @@ components:
       explode: false
       schema:
         type: string
-    ComplianceID:
-      name: complianceId
+    CustomerProcessingID:
+      name: customerprocessingId
       in: path
       required: true
       style: simple

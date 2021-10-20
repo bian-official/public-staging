@@ -1,12 +1,40 @@
 openapi: 3.0.1
 info:
   title: Product Matching
-  description: Capability used to match eligible product and product combinations to a customer based on prevailing conditions such as customer type, product interest, solicitation/retention, campaign alignment
+  description: ''
   version: 10.0.0
 servers:
 - description: SwaggerHub API Auto Mocking
   url: https://virtserver.swaggerhub.com/B154/ProductMatching/10.0.0
 paths:
+  /ProductMatching/{productmatchingId}/Retrieve:
+    get:
+      tags:
+      - CR - Product/CustomerCombinationAssessment
+      summary: ReCR Retrieve details about a product matching analysis
+      description: ReCR Retrieve details about a product matching analysis
+      operationId: Retrieve
+      parameters:
+      - $ref: '#/components/parameters/ProductMatchingID'
+      responses:
+        200:
+          description: Success
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/RetrieveProduct/CustomerCombinationAssessmentResponse'
+        400:
+          $ref: '#/components/responses/BadRequestError'
+        401:
+          $ref: '#/components/responses/UnauthorizedError'
+        403:
+          $ref: '#/components/responses/ForbiddenError'
+        404:
+          $ref: '#/components/responses/NotFoundError'
+        429:
+          $ref: '#/components/responses/TooManyRequestsError'
+        500:
+          $ref: '#/components/responses/InternalServerError'
   /ProductMatching/{productmatchingId}/Exchange:
     put:
       tags:
@@ -107,34 +135,6 @@ paths:
       parameters: []
       requestBody:
         $ref: '#/components/requestBodies/Product/CustomerCombinationAssessment'
-      responses:
-        200:
-          description: Success
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/Product/CustomerCombinationAssessment'
-        400:
-          $ref: '#/components/responses/BadRequestError'
-        401:
-          $ref: '#/components/responses/UnauthorizedError'
-        403:
-          $ref: '#/components/responses/ForbiddenError'
-        404:
-          $ref: '#/components/responses/NotFoundError'
-        429:
-          $ref: '#/components/responses/TooManyRequestsError'
-        500:
-          $ref: '#/components/responses/InternalServerError'
-  /ProductMatching/{productmatchingId}/Retrieve:
-    get:
-      tags:
-      - CR - Product/CustomerCombinationAssessment
-      summary: ReCR Retrieve details about any aspect of Product/Customer Combination Assessment
-      description: ReCR Retrieve details about any aspect of Product/Customer Combination Assessment
-      operationId: Retrieve
-      parameters:
-      - $ref: '#/components/parameters/ProductMatchingID'
       responses:
         200:
           description: Success
@@ -601,47 +601,26 @@ components:
           type: object
         ProductOrCustomerCombinationAssessmentRequesterReference:
           type: object
-    BankandCampaignAlignment:
+    ContextCriteria:
       type: object
       properties:
-        BankandCampaignAlignmentPreconditions:
+        ContextCriteriaPreconditions:
           type: string
-        BankandCampaignAlignmentAnalysisSchedule:
+        ContextCriteriaAnalysisSchedule:
           type: string
-        BankandCampaignAlignmentVersionNumber:
+        ContextCriteriaVersionNumber:
           type: string
-        BankandCampaignAlignment:
+        ContextCriteria:
           type: object
-        BankandCampaignAlignmentServiceType:
+        ContextCriteriaServiceType:
           type: string
-        BankandCampaignAlignmentServiceDescription:
+        ContextCriteriaServiceDescription:
           type: string
-        BankandCampaignAlignmentServiceInputsandOuputs:
+        ContextCriteriaServiceInputsandOuputs:
           type: string
-        BankandCampaignAlignmentServiceWorkProduct:
+        ContextCriteriaServiceWorkProduct:
           type: string
-        BankandCampaignAlignmentServiceName:
-          type: string
-    ProductEligibility:
-      type: object
-      properties:
-        ProductEligibilityPreconditions:
-          type: string
-        ProductEligibilityAnalysisSchedule:
-          type: string
-        ProductEligibilityVersionNumber:
-          type: string
-        ProductEligibility:
-          type: object
-        ProductEligibilityServiceType:
-          type: string
-        ProductEligibilityServiceDescription:
-          type: string
-        ProductEligibilityServiceInputsandOuputs:
-          type: string
-        ProductEligibilityServiceWorkProduct:
-          type: string
-        ProductEligibilityServiceName:
+        ContextCriteriaServiceName:
           type: string
     ProductTypeSelection:
       type: object
@@ -664,26 +643,47 @@ components:
           type: string
         ProductTypeSelectionServiceName:
           type: string
-    ContextCriteria:
+    ProductEligibility:
       type: object
       properties:
-        ContextCriteriaPreconditions:
+        ProductEligibilityPreconditions:
           type: string
-        ContextCriteriaAnalysisSchedule:
+        ProductEligibilityAnalysisSchedule:
           type: string
-        ContextCriteriaVersionNumber:
+        ProductEligibilityVersionNumber:
           type: string
-        ContextCriteria:
+        ProductEligibility:
           type: object
-        ContextCriteriaServiceType:
+        ProductEligibilityServiceType:
           type: string
-        ContextCriteriaServiceDescription:
+        ProductEligibilityServiceDescription:
           type: string
-        ContextCriteriaServiceInputsandOuputs:
+        ProductEligibilityServiceInputsandOuputs:
           type: string
-        ContextCriteriaServiceWorkProduct:
+        ProductEligibilityServiceWorkProduct:
           type: string
-        ContextCriteriaServiceName:
+        ProductEligibilityServiceName:
+          type: string
+    BankandCampaignAlignment:
+      type: object
+      properties:
+        BankandCampaignAlignmentPreconditions:
+          type: string
+        BankandCampaignAlignmentAnalysisSchedule:
+          type: string
+        BankandCampaignAlignmentVersionNumber:
+          type: string
+        BankandCampaignAlignment:
+          type: object
+        BankandCampaignAlignmentServiceType:
+          type: string
+        BankandCampaignAlignmentServiceDescription:
+          type: string
+        BankandCampaignAlignmentServiceInputsandOuputs:
+          type: string
+        BankandCampaignAlignmentServiceWorkProduct:
+          type: string
+        BankandCampaignAlignmentServiceName:
           type: string
     ProductMatchingOutcome:
       type: object
@@ -701,6 +701,55 @@ components:
           type: string
         message:
           type: string
+    RetrieveProduct/CustomerCombinationAssessmentResponse:
+      type: object
+      properties:
+        file:///C:\Users\32497\Dropbox\IAB\Envizion\bian\BIAN_Model\BIANRelease10.0\BIANVersion10.0.0.xmam/173884:
+          type: object
+          properties:
+            file:OrOrOrC:\Users\32497\Dropbox\IAB\Envizion\bian\BIAN_Model\BIANRelease10.0\BIANVersion10.0.0.xmamOr173887:
+              type: string
+            file:OrOrOrC:\Users\32497\Dropbox\IAB\Envizion\bian\BIAN_Model\BIANRelease10.0\BIANVersion10.0.0.xmamOr173883:
+              type: string
+            file:OrOrOrC:\Users\32497\Dropbox\IAB\Envizion\bian\BIAN_Model\BIANRelease10.0\BIANVersion10.0.0.xmamOr173889:
+              type: string
+            file:OrOrOrC:\Users\32497\Dropbox\IAB\Envizion\bian\BIAN_Model\BIANRelease10.0\BIANVersion10.0.0.xmamOr173880:
+              type: string
+            file:OrOrOrC:\Users\32497\Dropbox\IAB\Envizion\bian\BIAN_Model\BIANRelease10.0\BIANVersion10.0.0.xmamOr173888:
+              type: string
+            file:OrOrOrC:\Users\32497\Dropbox\IAB\Envizion\bian\BIAN_Model\BIANRelease10.0\BIANVersion10.0.0.xmamOr173881:
+              type: string
+            file:OrOrOrC:\Users\32497\Dropbox\IAB\Envizion\bian\BIAN_Model\BIANRelease10.0\BIANVersion10.0.0.xmamOr173879:
+              type: string
+            file:OrOrOrC:\Users\32497\Dropbox\IAB\Envizion\bian\BIAN_Model\BIANRelease10.0\BIANVersion10.0.0.xmamOr173882:
+              type: string
+            file:OrOrOrC:\Users\32497\Dropbox\IAB\Envizion\bian\BIAN_Model\BIANRelease10.0\BIANVersion10.0.0.xmamOr173885:
+              type: string
+            file:OrOrOrC:\Users\32497\Dropbox\IAB\Envizion\bian\BIAN_Model\BIANRelease10.0\BIANVersion10.0.0.xmamOr173886:
+              type: string
+        Product/CustomerCombinationAssessment:
+          type: object
+          properties:
+            ProductOrCustomerCombinationAssessmentParameterType:
+              type: string
+            ProductOrCustomerCombinationAssessmentSelectedOption:
+              type: string
+            ProductOrCustomerCombinationAssessmentType:
+              type: string
+            ProductOrCustomerCombinationAssessmentReference:
+              type: object
+            ProductOrCustomerCombinationAssessmentRequest:
+              type: string
+            ProductOrCustomerCombinationAssessmentSchedule:
+              type: string
+            ProductOrCustomerCombinationAssessmentStatus:
+              type: string
+            ProductOrCustomerCombinationAssessmentUsageLog:
+              type: string
+            ProductOrCustomerCombinationAssessmentServiceProviderReference:
+              type: object
+            ProductOrCustomerCombinationAssessmentRequesterReference:
+              type: object
   parameters:
     ProductMatchingID:
       name: productmatchingId
@@ -710,16 +759,8 @@ components:
       explode: false
       schema:
         type: string
-    BankandCampaignAlignmentID:
-      name: bankandcampaignalignmentId
-      in: path
-      required: true
-      style: simple
-      explode: false
-      schema:
-        type: string
-    ProductEligibilityID:
-      name: producteligibilityId
+    ContextCriteriaID:
+      name: contextcriteriaId
       in: path
       required: true
       style: simple
@@ -734,8 +775,16 @@ components:
       explode: false
       schema:
         type: string
-    ContextCriteriaID:
-      name: contextcriteriaId
+    ProductEligibilityID:
+      name: producteligibilityId
+      in: path
+      required: true
+      style: simple
+      explode: false
+      schema:
+        type: string
+    BankandCampaignAlignmentID:
+      name: bankandcampaignalignmentId
       in: path
       required: true
       style: simple

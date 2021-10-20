@@ -1,7 +1,7 @@
 openapi: 3.0.1
 info:
   title: Customer Tax Handling
-  description: This service domain handles consumer tax reporting obligations including the consolidation and reporting of customer tax related financial activity
+  description: ''
   version: 10.0.0
 servers:
 - description: SwaggerHub API Auto Mocking
@@ -10,20 +10,20 @@ paths:
   /CustomerTaxHandling/Initiate:
     post:
       tags:
-      - CR - CustomerTaxObligationArrangement
+      - CR - CustomerTaxObligationFacility
       summary: InCR Initiate customer tax handling
       description: InCR Initiate customer tax handling
       operationId: Initiate
       parameters: []
       requestBody:
-        $ref: '#/components/requestBodies/CustomerTaxObligationArrangement'
+        $ref: '#/components/requestBodies/CustomerTaxObligationFacility'
       responses:
         200:
           description: Success
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/CustomerTaxObligationArrangement'
+                $ref: '#/components/schemas/CustomerTaxObligationFacility'
         400:
           $ref: '#/components/responses/BadRequestError'
         401:
@@ -39,21 +39,21 @@ paths:
   /CustomerTaxHandling/{customertaxhandlingId}/Update:
     put:
       tags:
-      - CR - CustomerTaxObligationArrangement
+      - CR - CustomerTaxObligationFacility
       summary: UpCR Update details of the customer tax handling facility
       description: UpCR Update details of the customer tax handling facility
       operationId: Update
       parameters:
       - $ref: '#/components/parameters/CustomerTaxHandlingID'
       requestBody:
-        $ref: '#/components/requestBodies/CustomerTaxObligationArrangement'
+        $ref: '#/components/requestBodies/CustomerTaxObligationFacility'
       responses:
         200:
           description: Success
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/CustomerTaxObligationArrangement'
+                $ref: '#/components/schemas/CustomerTaxObligationFacility'
         400:
           $ref: '#/components/responses/BadRequestError'
         401:
@@ -69,7 +69,7 @@ paths:
   /CustomerTaxHandling/{customertaxhandlingId}/Retrieve:
     get:
       tags:
-      - CR - CustomerTaxObligationArrangement
+      - CR - CustomerTaxObligationFacility
       summary: ReCR Retrieve details relating to the customer tax handling
       description: ReCR Retrieve details relating to the customer tax handling
       operationId: Retrieve
@@ -81,7 +81,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/CustomerTaxObligationArrangement'
+                $ref: '#/components/schemas/CustomerTaxObligationFacility'
         400:
           $ref: '#/components/responses/BadRequestError'
         401:
@@ -172,7 +172,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/CustomerTaxObligationArrangement'
+                $ref: '#/components/schemas/CustomerTaxObligationFacility'
         400:
           $ref: '#/components/responses/BadRequestError'
         401:
@@ -201,7 +201,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/CustomerTaxObligationArrangement'
+                $ref: '#/components/schemas/CustomerTaxObligationFacility'
         400:
           $ref: '#/components/responses/BadRequestError'
         401:
@@ -232,7 +232,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/CustomerTaxObligationArrangement'
+                $ref: '#/components/schemas/CustomerTaxObligationFacility'
         400:
           $ref: '#/components/responses/BadRequestError'
         401:
@@ -261,7 +261,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/CustomerTaxObligationArrangement'
+                $ref: '#/components/schemas/CustomerTaxObligationFacility'
         400:
           $ref: '#/components/responses/BadRequestError'
         401:
@@ -276,7 +276,7 @@ paths:
           $ref: '#/components/responses/InternalServerError'
 components:
   schemas:
-    CustomerTaxObligationArrangement:
+    CustomerTaxObligationFacility:
       type: object
       properties:
         CustomerReference:
@@ -340,7 +340,7 @@ components:
     UpdateConsolidationRequest:
       type: object
       properties:
-        CustomerTaxObligationArrangement:
+        CustomerTaxObligationFacility:
           type: object
           properties:
             CustomerReference:
@@ -371,7 +371,7 @@ components:
     UpdateConsolidationResponse:
       type: object
       properties:
-        CustomerTaxObligationArrangement:
+        CustomerTaxObligationFacility:
           type: object
           properties:
             CustomerReference:
@@ -404,7 +404,7 @@ components:
     RetrieveConsolidationResponse:
       type: object
       properties:
-        CustomerTaxObligationArrangement:
+        CustomerTaxObligationFacility:
           type: object
           properties:
             CustomerReference:
@@ -437,7 +437,7 @@ components:
     UpdateAnalysisRequest:
       type: object
       properties:
-        CustomerTaxObligationArrangement:
+        CustomerTaxObligationFacility:
           type: object
           properties:
             CustomerReference:
@@ -458,7 +458,7 @@ components:
     UpdateReportingRequest:
       type: object
       properties:
-        CustomerTaxObligationArrangement:
+        CustomerTaxObligationFacility:
           type: object
           properties:
             CustomerReference:
@@ -518,12 +518,12 @@ components:
       schema:
         type: string
   requestBodies:
-    CustomerTaxObligationArrangement:
+    CustomerTaxObligationFacility:
       required: true
       content:
         application/json:
           schema:
-            $ref: '#/components/schemas/CustomerTaxObligationArrangement'
+            $ref: '#/components/schemas/CustomerTaxObligationFacility'
     UpdateConsolidationRequest:
       required: true
       content:

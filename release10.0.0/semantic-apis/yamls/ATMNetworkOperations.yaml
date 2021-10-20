@@ -1,7 +1,7 @@
 openapi: 3.0.1
 info:
   title: ATM Network Operations
-  description: Handling the automated operation of the ATM network and linked devices, including tracing physical cash and document movements
+  description: ''
   version: 10.0.0
 servers:
 - description: SwaggerHub API Auto Mocking
@@ -875,31 +875,24 @@ components:
           type: string
         ATMNetworkOperatingSessionServiceConfiguration:
           type: string
-    FinancialDocumentHandling:
+    CashDistribution:
       type: object
       properties:
-        FinancialDocumentHandlingPreconditions:
+        CashDistributionPreconditions:
           type: string
-        FinancialDocumentHandlingFunctionSchedule:
+        CashDistributionFunctionSchedule:
           type: string
-        DocumentGenerationandHandling:
+        CashDistribution:
           type: object
-        DocumentGenerationandHandlingServiceType:
+        CashDistributionServiceType:
           type: string
-        DocumentGenerationandHandlingServiceDescription:
+        CashDistributionServiceDescription:
           type: string
-        DocumentGenerationandHandlingServiceInputsandOuputs:
+        CashDistributionServiceInputsandOuputs:
           type: string
-        DocumentGenerationandHandlingServiceWorkProduct:
+        CashDistributionServiceWorkProduct:
           type: string
-        DocumentGenerationandHandlingServiceName:
-          type: string
-    ATMNetworkOperationsOutcome:
-      type: object
-      properties:
-        ATMNetworkOperationsIncident:
-          type: string
-        ATMNetworkOperationsProvision:
+        CashDistributionServiceName:
           type: string
     NetworkOperation:
       type: object
@@ -939,25 +932,6 @@ components:
           type: string
         DeviceTrackingServiceName:
           type: string
-    CashDistribution:
-      type: object
-      properties:
-        CashDistributionPreconditions:
-          type: string
-        CashDistributionFunctionSchedule:
-          type: string
-        CashDistribution:
-          type: object
-        CashDistributionServiceType:
-          type: string
-        CashDistributionServiceDescription:
-          type: string
-        CashDistributionServiceInputsandOuputs:
-          type: string
-        CashDistributionServiceWorkProduct:
-          type: string
-        CashDistributionServiceName:
-          type: string
     FinancialTransactionCapture:
       type: object
       properties:
@@ -977,6 +951,32 @@ components:
           type: string
         ServiceName:
           type: string
+    FinancialDocumentHandling:
+      type: object
+      properties:
+        FinancialDocumentHandlingPreconditions:
+          type: string
+        FinancialDocumentHandlingFunctionSchedule:
+          type: string
+        DocumentGenerationandHandling:
+          type: object
+        DocumentGenerationandHandlingServiceType:
+          type: string
+        DocumentGenerationandHandlingServiceDescription:
+          type: string
+        DocumentGenerationandHandlingServiceInputsandOuputs:
+          type: string
+        DocumentGenerationandHandlingServiceWorkProduct:
+          type: string
+        DocumentGenerationandHandlingServiceName:
+          type: string
+    ATMNetworkOperationsOutcome:
+      type: object
+      properties:
+        ATMNetworkOperationsIncident:
+          type: string
+        ATMNetworkOperationsProvision:
+          type: string
     HTTPError:
       type: object
       properties:
@@ -995,16 +995,8 @@ components:
       explode: false
       schema:
         type: string
-    FinancialDocumentHandlingID:
-      name: financialdocumenthandlingId
-      in: path
-      required: true
-      style: simple
-      explode: false
-      schema:
-        type: string
-    ATMNetworkOperationsOutcomeID:
-      name: atmnetworkoperationsoutcomeId
+    CashDistributionID:
+      name: cashdistributionId
       in: path
       required: true
       style: simple
@@ -1027,16 +1019,24 @@ components:
       explode: false
       schema:
         type: string
-    CashDistributionID:
-      name: cashdistributionId
+    FinancialTransactionCaptureID:
+      name: financialtransactioncaptureId
       in: path
       required: true
       style: simple
       explode: false
       schema:
         type: string
-    FinancialTransactionCaptureID:
-      name: financialtransactioncaptureId
+    FinancialDocumentHandlingID:
+      name: financialdocumenthandlingId
+      in: path
+      required: true
+      style: simple
+      explode: false
+      schema:
+        type: string
+    ATMNetworkOperationsOutcomeID:
+      name: atmnetworkoperationsoutcomeId
       in: path
       required: true
       style: simple

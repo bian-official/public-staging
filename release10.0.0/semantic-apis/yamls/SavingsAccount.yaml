@@ -1,7 +1,7 @@
 openapi: 3.0.1
 info:
   title: Savings Account
-  description: This service domain orchestrates a consumer savings account. The typical range of services and fees covers payments from and scheduled and ad-hoc deposits to the account, standing orders, sweeps, and liens.
+  description: ''
   version: 10.0.0
 servers:
 - description: SwaggerHub API Auto Mocking
@@ -10,20 +10,20 @@ paths:
   /SavingsAccount/Initiate:
     post:
       tags:
-      - CR - SavingsAccountArrangement
+      - CR - SavingsAccountFacility
       summary: InCR Initiate A new savings account
       description: InCR Initiate A new savings account
       operationId: Initiate
       parameters: []
       requestBody:
-        $ref: '#/components/requestBodies/SavingsAccountArrangement'
+        $ref: '#/components/requestBodies/SavingsAccountFacility'
       responses:
         200:
           description: Success
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/SavingsAccountArrangement'
+                $ref: '#/components/schemas/SavingsAccountFacility'
         400:
           $ref: '#/components/responses/BadRequestError'
         401:
@@ -39,21 +39,21 @@ paths:
   /SavingsAccount/{savingsaccountId}/Update:
     put:
       tags:
-      - CR - SavingsAccountArrangement
+      - CR - SavingsAccountFacility
       summary: UpCR Update properties of an active savings account
       description: UpCR Update properties of an active savings account
       operationId: Update
       parameters:
       - $ref: '#/components/parameters/SavingsAccountID'
       requestBody:
-        $ref: '#/components/requestBodies/SavingsAccountArrangement'
+        $ref: '#/components/requestBodies/SavingsAccountFacility'
       responses:
         200:
           description: Success
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/SavingsAccountArrangement'
+                $ref: '#/components/schemas/SavingsAccountFacility'
         400:
           $ref: '#/components/responses/BadRequestError'
         401:
@@ -69,7 +69,7 @@ paths:
   /SavingsAccount/{savingsaccountId}/Retrieve:
     get:
       tags:
-      - CR - SavingsAccountArrangement
+      - CR - SavingsAccountFacility
       summary: ReCR Retrieve information about a savings account - either standard canned reports or selected instance attribute values
       description: ReCR Retrieve information about a savings account - either standard canned reports or selected instance attribute values
       operationId: Retrieve
@@ -81,7 +81,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/SavingsAccountArrangement'
+                $ref: '#/components/schemas/SavingsAccountFacility'
         400:
           $ref: '#/components/responses/BadRequestError'
         401:
@@ -442,7 +442,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/SavingsAccountArrangement'
+                $ref: '#/components/schemas/SavingsAccountFacility'
         400:
           $ref: '#/components/responses/BadRequestError'
         401:
@@ -790,7 +790,7 @@ paths:
           $ref: '#/components/responses/InternalServerError'
 components:
   schemas:
-    SavingsAccountArrangement:
+    SavingsAccountFacility:
       type: object
       properties:
         ProductInstanceReference:
@@ -851,6 +851,39 @@ components:
           type: string
         StatementReport:
           type: string
+    DepositsandWithdrawals:
+      type: object
+      properties:
+        DepositType:
+          type: string
+        WithdrawalType:
+          type: string
+        AccountLimitBreachResponse:
+          type: string
+        DepositTransaction:
+          type: string
+        DepositTransactionSourceReference:
+          type: object
+        DepositTransactionDepositType:
+          type: string
+        DepositTransactionDescription:
+          type: string
+        DepositTransactionAmount:
+          type: number
+        DepositTransactionDate:
+          type: string
+        WithdrawalTransaction:
+          type: string
+        WithdrawalTransactionSourceReference:
+          type: object
+        WithdrawalTransactionWithdrawalType:
+          type: string
+        WithdrawalTransactionDescription:
+          type: string
+        WithdrawalTransactionAmount:
+          type: number
+        WithdrawalTransactionDate:
+          type: string
     Interest:
       type: object
       properties:
@@ -877,29 +910,6 @@ components:
         InterestAccrualType:
           type: string
         InterestAccrualCharge:
-          type: string
-    AccountLien:
-      type: object
-      properties:
-        LienType:
-          type: string
-        LienDefinition:
-          type: string
-        LienProcessingOption:
-          type: string
-        LienRecord:
-          type: string
-        LienOriginator:
-          type: string
-        LienPurpose:
-          type: string
-        LienAmount:
-          type: number
-        LienStartDate:
-          type: string
-        LienExpiryDate:
-          type: string
-        LienStatus:
           type: string
     ServiceFees:
       type: object
@@ -933,83 +943,6 @@ components:
         AccrualFeeType:
           type: string
         AccrualFeeCharge:
-          type: string
-    AccountSweep:
-      type: object
-      properties:
-        AccountSweepType:
-          type: string
-        AccountSweepDefinition:
-          type: string
-        AccountSweepApplicationSchedule:
-          type: string
-        AccountSweepConfiguration:
-          type: string
-        TargetAccount:
-          type: string
-        SweepMandate:
-          type: string
-        SweepProcessingSchedule:
-          type: string
-        SweepApplicationRecord:
-          type: string
-        AccountSweepTargetAccount:
-          type: string
-        AccountSweepAmount:
-          type: number
-        AccountSweepExecutionDate:
-          type: string
-    IssuedDevice:
-      type: object
-      properties:
-        IssuedDeviceType:
-          type: string
-        IssuedDeviceDescription:
-          type: string
-        IssuedDeviceOptionDefinition:
-          type: string
-        IssuedDeviceOptionSetting:
-          type: string
-        IssuedDeviceProperty:
-          type: string
-        IssuedDevicePropertyType:
-          type: string
-        IssuedDevicePropertyValue:
-          type: string
-        IssuedDeviceStatus:
-          type: string
-    DepositsandWithdrawals:
-      type: object
-      properties:
-        DepositType:
-          type: string
-        WithdrawalType:
-          type: string
-        AccountLimitBreachResponse:
-          type: string
-        DepositTransaction:
-          type: string
-        DepositTransactionSourceReference:
-          type: object
-        DepositTransactionDepositType:
-          type: string
-        DepositTransactionDescription:
-          type: string
-        DepositTransactionAmount:
-          type: number
-        DepositTransactionDate:
-          type: string
-        WithdrawalTransaction:
-          type: string
-        WithdrawalTransactionSourceReference:
-          type: object
-        WithdrawalTransactionWithdrawalType:
-          type: string
-        WithdrawalTransactionDescription:
-          type: string
-        WithdrawalTransactionAmount:
-          type: number
-        WithdrawalTransactionDate:
           type: string
     Payments:
       type: object
@@ -1060,6 +993,73 @@ components:
           type: object
         PaymentTransactionStatus:
           type: string
+    AccountLien:
+      type: object
+      properties:
+        LienType:
+          type: string
+        LienDefinition:
+          type: string
+        LienProcessingOption:
+          type: string
+        LienRecord:
+          type: string
+        LienOriginator:
+          type: string
+        LienPurpose:
+          type: string
+        LienAmount:
+          type: number
+        LienStartDate:
+          type: string
+        LienExpiryDate:
+          type: string
+        LienStatus:
+          type: string
+    AccountSweep:
+      type: object
+      properties:
+        AccountSweepType:
+          type: string
+        AccountSweepDefinition:
+          type: string
+        AccountSweepApplicationSchedule:
+          type: string
+        AccountSweepConfiguration:
+          type: string
+        TargetAccount:
+          type: string
+        SweepMandate:
+          type: string
+        SweepProcessingSchedule:
+          type: string
+        SweepApplicationRecord:
+          type: string
+        AccountSweepTargetAccount:
+          type: string
+        AccountSweepAmount:
+          type: number
+        AccountSweepExecutionDate:
+          type: string
+    IssuedDevice:
+      type: object
+      properties:
+        IssuedDeviceType:
+          type: string
+        IssuedDeviceDescription:
+          type: string
+        IssuedDeviceOptionDefinition:
+          type: string
+        IssuedDeviceOptionSetting:
+          type: string
+        IssuedDeviceProperty:
+          type: string
+        IssuedDevicePropertyType:
+          type: string
+        IssuedDevicePropertyValue:
+          type: string
+        IssuedDeviceStatus:
+          type: string
     HTTPError:
       type: object
       properties:
@@ -1072,7 +1072,7 @@ components:
     InitiateServiceFeesRequest:
       type: object
       properties:
-        SavingsAccountArrangement:
+        SavingsAccountFacility:
           type: object
           properties:
             ProductInstanceReference:
@@ -1121,7 +1121,7 @@ components:
     InitiateServiceFeesResponse:
       type: object
       properties:
-        SavingsAccountArrangement:
+        SavingsAccountFacility:
           type: object
           properties:
             DateType:
@@ -1134,7 +1134,7 @@ components:
     InitiateAccountLienRequest:
       type: object
       properties:
-        SavingsAccountArrangement:
+        SavingsAccountFacility:
           type: object
           properties:
             ProductInstanceReference:
@@ -1189,7 +1189,7 @@ components:
     InitiateAccountLienResponse:
       type: object
       properties:
-        SavingsAccountArrangement:
+        SavingsAccountFacility:
           type: object
           properties:
             EntitlementOptionDefinition:
@@ -1214,7 +1214,7 @@ components:
     InitiateAccountSweepRequest:
       type: object
       properties:
-        SavingsAccountArrangement:
+        SavingsAccountFacility:
           type: object
           properties:
             ProductInstanceReference:
@@ -1261,7 +1261,7 @@ components:
     InitiateAccountSweepResponse:
       type: object
       properties:
-        SavingsAccountArrangement:
+        SavingsAccountFacility:
           type: object
           properties:
             DateType:
@@ -1276,7 +1276,7 @@ components:
     InitiateDepositsandWithdrawalsRequest:
       type: object
       properties:
-        SavingsAccountArrangement:
+        SavingsAccountFacility:
           type: object
           properties:
             ProductInstanceReference:
@@ -1311,7 +1311,7 @@ components:
     InitiatePaymentsRequest:
       type: object
       properties:
-        SavingsAccountArrangement:
+        SavingsAccountFacility:
           type: object
           properties:
             ProductInstanceReference:
@@ -1368,7 +1368,7 @@ components:
     InitiatePaymentsResponse:
       type: object
       properties:
-        SavingsAccountArrangement:
+        SavingsAccountFacility:
           type: object
           properties:
             TaxReference:
@@ -1393,7 +1393,7 @@ components:
     InitiateIssuedDeviceRequest:
       type: object
       properties:
-        SavingsAccountArrangement:
+        SavingsAccountFacility:
           type: object
           properties:
             ProductInstanceReference:
@@ -1438,7 +1438,7 @@ components:
     InitiateIssuedDeviceResponse:
       type: object
       properties:
-        SavingsAccountArrangement:
+        SavingsAccountFacility:
           type: object
           properties:
             AssociationType:
@@ -1477,6 +1477,14 @@ components:
       explode: false
       schema:
         type: string
+    DepositsandWithdrawalsID:
+      name: depositsandwithdrawalsId
+      in: path
+      required: true
+      style: simple
+      explode: false
+      schema:
+        type: string
     InterestID:
       name: interestId
       in: path
@@ -1485,16 +1493,24 @@ components:
       explode: false
       schema:
         type: string
-    AccountLienID:
-      name: accountlienId
+    ServiceFeesID:
+      name: servicefeesId
       in: path
       required: true
       style: simple
       explode: false
       schema:
         type: string
-    ServiceFeesID:
-      name: servicefeesId
+    PaymentsID:
+      name: paymentsId
+      in: path
+      required: true
+      style: simple
+      explode: false
+      schema:
+        type: string
+    AccountLienID:
+      name: accountlienId
       in: path
       required: true
       style: simple
@@ -1517,29 +1533,13 @@ components:
       explode: false
       schema:
         type: string
-    DepositsandWithdrawalsID:
-      name: depositsandwithdrawalsId
-      in: path
-      required: true
-      style: simple
-      explode: false
-      schema:
-        type: string
-    PaymentsID:
-      name: paymentsId
-      in: path
-      required: true
-      style: simple
-      explode: false
-      schema:
-        type: string
   requestBodies:
-    SavingsAccountArrangement:
+    SavingsAccountFacility:
       required: true
       content:
         application/json:
           schema:
-            $ref: '#/components/schemas/SavingsAccountArrangement'
+            $ref: '#/components/schemas/SavingsAccountFacility'
     InitiateServiceFeesRequest:
       required: true
       content:

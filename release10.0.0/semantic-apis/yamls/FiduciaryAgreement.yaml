@@ -1,7 +1,7 @@
 openapi: 3.0.1
 info:
   title: Fiduciary Agreement
-  description: An agreement where the bank agrees to act on behalf of the customer in a financial matter and in accordance with the agreement terms
+  description: ''
   version: 10.0.0
 servers:
 - description: SwaggerHub API Auto Mocking
@@ -10,21 +10,21 @@ paths:
   /FiduciaryAgreement/{fiduciaryagreementId}/Control:
     put:
       tags:
-      - CR - FiduciaryRelationshipArrangement
-      summary: CoCR Control the processing of Fiduciary Relationship Arrangement
-      description: CoCR Control the processing of Fiduciary Relationship Arrangement
+      - CR - FiduciaryRelationshipFacility
+      summary: CoCR Control the processing of Fiduciary Relationship Facility
+      description: CoCR Control the processing of Fiduciary Relationship Facility
       operationId: Control
       parameters:
       - $ref: '#/components/parameters/FiduciaryAgreementID'
       requestBody:
-        $ref: '#/components/requestBodies/FiduciaryRelationshipArrangement'
+        $ref: '#/components/requestBodies/FiduciaryRelationshipFacility'
       responses:
         200:
           description: Success
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/FiduciaryRelationshipArrangement'
+                $ref: '#/components/schemas/FiduciaryRelationshipFacility'
         400:
           $ref: '#/components/responses/BadRequestError'
         401:
@@ -40,21 +40,21 @@ paths:
   /FiduciaryAgreement/{fiduciaryagreementId}/Exchange:
     put:
       tags:
-      - CR - FiduciaryRelationshipArrangement
-      summary: EcCR Accept, verify, etc. aspects of Fiduciary Relationship Arrangement processing
-      description: EcCR Accept, verify, etc. aspects of Fiduciary Relationship Arrangement processing
+      - CR - FiduciaryRelationshipFacility
+      summary: EcCR Accept, verify, etc. aspects of Fiduciary Relationship Facility processing
+      description: EcCR Accept, verify, etc. aspects of Fiduciary Relationship Facility processing
       operationId: Exchange
       parameters:
       - $ref: '#/components/parameters/FiduciaryAgreementID'
       requestBody:
-        $ref: '#/components/requestBodies/FiduciaryRelationshipArrangement'
+        $ref: '#/components/requestBodies/FiduciaryRelationshipFacility'
       responses:
         200:
           description: Success
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/FiduciaryRelationshipArrangement'
+                $ref: '#/components/schemas/FiduciaryRelationshipFacility'
         400:
           $ref: '#/components/responses/BadRequestError'
         401:
@@ -70,21 +70,21 @@ paths:
   /FiduciaryAgreement/{fiduciaryagreementId}/Execute:
     put:
       tags:
-      - CR - FiduciaryRelationshipArrangement
-      summary: ExCR Execute an available automated action for Fiduciary Relationship Arrangement
-      description: ExCR Execute an available automated action for Fiduciary Relationship Arrangement
+      - CR - FiduciaryRelationshipFacility
+      summary: ExCR Execute an available automated action for Fiduciary Relationship Facility
+      description: ExCR Execute an available automated action for Fiduciary Relationship Facility
       operationId: Execute
       parameters:
       - $ref: '#/components/parameters/FiduciaryAgreementID'
       requestBody:
-        $ref: '#/components/requestBodies/FiduciaryRelationshipArrangement'
+        $ref: '#/components/requestBodies/FiduciaryRelationshipFacility'
       responses:
         200:
           description: Success
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/FiduciaryRelationshipArrangement'
+                $ref: '#/components/schemas/FiduciaryRelationshipFacility'
         400:
           $ref: '#/components/responses/BadRequestError'
         401:
@@ -100,20 +100,20 @@ paths:
   /FiduciaryAgreement/Initiate:
     post:
       tags:
-      - CR - FiduciaryRelationshipArrangement
-      summary: InCR Instantiate a new Fiduciary Relationship Arrangement
-      description: InCR Instantiate a new Fiduciary Relationship Arrangement
+      - CR - FiduciaryRelationshipFacility
+      summary: InCR Instantiate a new Fiduciary Relationship Facility
+      description: InCR Instantiate a new Fiduciary Relationship Facility
       operationId: Initiate
       parameters: []
       requestBody:
-        $ref: '#/components/requestBodies/FiduciaryRelationshipArrangement'
+        $ref: '#/components/requestBodies/FiduciaryRelationshipFacility'
       responses:
         200:
           description: Success
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/FiduciaryRelationshipArrangement'
+                $ref: '#/components/schemas/FiduciaryRelationshipFacility'
         400:
           $ref: '#/components/responses/BadRequestError'
         401:
@@ -129,9 +129,9 @@ paths:
   /FiduciaryAgreement/{fiduciaryagreementId}/Retrieve:
     get:
       tags:
-      - CR - FiduciaryRelationshipArrangement
-      summary: ReCR Retrieve details about any aspect of Fiduciary Relationship Arrangement
-      description: ReCR Retrieve details about any aspect of Fiduciary Relationship Arrangement
+      - CR - FiduciaryRelationshipFacility
+      summary: ReCR Retrieve details about any aspect of Fiduciary Relationship Facility
+      description: ReCR Retrieve details about any aspect of Fiduciary Relationship Facility
       operationId: Retrieve
       parameters:
       - $ref: '#/components/parameters/FiduciaryAgreementID'
@@ -141,7 +141,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/FiduciaryRelationshipArrangement'
+                $ref: '#/components/schemas/FiduciaryRelationshipFacility'
         400:
           $ref: '#/components/responses/BadRequestError'
         401:
@@ -157,21 +157,21 @@ paths:
   /FiduciaryAgreement/{fiduciaryagreementId}/Request:
     put:
       tags:
-      - CR - FiduciaryRelationshipArrangement
-      summary: RqCR Request manual intervention or a decision with respect to Fiduciary Relationship Arrangement
-      description: RqCR Request manual intervention or a decision with respect to Fiduciary Relationship Arrangement
+      - CR - FiduciaryRelationshipFacility
+      summary: RqCR Request manual intervention or a decision with respect to Fiduciary Relationship Facility
+      description: RqCR Request manual intervention or a decision with respect to Fiduciary Relationship Facility
       operationId: Request
       parameters:
       - $ref: '#/components/parameters/FiduciaryAgreementID'
       requestBody:
-        $ref: '#/components/requestBodies/FiduciaryRelationshipArrangement'
+        $ref: '#/components/requestBodies/FiduciaryRelationshipFacility'
       responses:
         200:
           description: Success
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/FiduciaryRelationshipArrangement'
+                $ref: '#/components/schemas/FiduciaryRelationshipFacility'
         400:
           $ref: '#/components/responses/BadRequestError'
         401:
@@ -187,21 +187,21 @@ paths:
   /FiduciaryAgreement/{fiduciaryagreementId}/Update:
     put:
       tags:
-      - CR - FiduciaryRelationshipArrangement
-      summary: UpCR Update details relating to Fiduciary Relationship Arrangement
-      description: UpCR Update details relating to Fiduciary Relationship Arrangement
+      - CR - FiduciaryRelationshipFacility
+      summary: UpCR Update details relating to Fiduciary Relationship Facility
+      description: UpCR Update details relating to Fiduciary Relationship Facility
       operationId: Update
       parameters:
       - $ref: '#/components/parameters/FiduciaryAgreementID'
       requestBody:
-        $ref: '#/components/requestBodies/FiduciaryRelationshipArrangement'
+        $ref: '#/components/requestBodies/FiduciaryRelationshipFacility'
       responses:
         200:
           description: Success
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/FiduciaryRelationshipArrangement'
+                $ref: '#/components/schemas/FiduciaryRelationshipFacility'
         400:
           $ref: '#/components/responses/BadRequestError'
         401:
@@ -609,83 +609,55 @@ paths:
           $ref: '#/components/responses/InternalServerError'
 components:
   schemas:
-    FiduciaryRelationshipArrangement:
+    FiduciaryRelationshipFacility:
       type: object
       properties:
-        FiduciaryRelationshipArrangementParameterType:
+        FiduciaryRelationshipFacilityParameterType:
           type: string
-        FiduciaryRelationshipArrangementSelectedOption:
+        FiduciaryRelationshipFacilitySelectedOption:
           type: string
-        FiduciaryRelationshipArrangementType:
+        FiduciaryRelationshipFacilityType:
           type: string
-        FiduciaryRelationshipArrangementReference:
+        FiduciaryRelationshipFacilityReference:
           type: object
-        FiduciaryRelationshipArrangementSchedule:
+        FiduciaryRelationshipFacilitySchedule:
           type: string
-        FiduciaryRelationshipArrangementStatus:
+        FiduciaryRelationshipFacilityStatus:
           type: string
-        FiduciaryRelationshipArrangementCurrency:
+        FiduciaryRelationshipFacilityCurrency:
           type: string
-        FiduciaryRelationshipArrangementRegulationReference:
+        FiduciaryRelationshipFacilityRegulationReference:
           type: object
-        FiduciaryRelationshipArrangementRegulationType:
+        FiduciaryRelationshipFacilityRegulationType:
           type: string
-        FiduciaryRelationshipArrangementJurisdiction:
+        FiduciaryRelationshipFacilityJurisdiction:
           type: string
-        FiduciaryRelationshipArrangementBookingLocation:
+        FiduciaryRelationshipFacilityBookingLocation:
           type: string
-        FiduciaryRelationshipArrangementAccountType:
+        FiduciaryRelationshipFacilityAccountType:
           type: string
-        FiduciaryRelationshipArrangementAccountReference:
+        FiduciaryRelationshipFacilityAccountReference:
           type: object
-    Fulfillment:
+    Agreement:
       type: object
       properties:
-        FulfillmentPreconditions:
+        AgreementPreconditions:
           type: string
-        FulfillmentFeatureSchedule:
+        AgreementFeatureSchedule:
           type: string
-        FiduciaryArrangementFulfillment:
+        BusinessService:
           type: object
-        FulfillmentPostconditions:
+        AgreementPostconditions:
           type: string
-        FulfillmentFiduciaryArrangementFulfillmentServiceType:
+        AgreementServiceType:
           type: string
-        FulfillmentFiduciaryArrangementFulfillmentServiceDescription:
+        AgreementServiceDescription:
           type: string
-        FulfillmentFiduciaryArrangementFulfillmentServiceInputsandOuputs:
+        AgreementServiceInputsandOuputs:
           type: string
-        FulfillmentFiduciaryArrangementFulfillmentServiceWorkProduct:
+        AgreementServiceWorkProduct:
           type: string
-        FulfillmentFiduciaryArrangementFulfillmentServiceName:
-          type: string
-    AssessmentandReporting:
-      type: object
-      properties:
-        AssessmentandReportingPreconditions:
-          type: string
-        AssessmentandReportingFeatureSchedule:
-          type: string
-        AnalysisandReporting:
-          type: object
-        AssessmentandReportingPostconditions:
-          type: string
-        AssessmentandReportingAnalysisandReportingServiceType:
-          type: string
-        AssessmentandReportingAnalysisandReportingServiceDescription:
-          type: string
-        AssessmentandReportingAnalysisandReportingServiceInputsandOuputs:
-          type: string
-        AssessmentandReportingAnalysisandReportingServiceWorkProduct:
-          type: string
-        AssessmentandReportingAnalysisandReportingServiceName:
-          type: string
-    FiduciaryAgreementOutcome:
-      type: object
-      properties:
-        FiduciaryAgreementFinancialFacility:
-          type: string
-        FiduciaryAgreementWorkProduct:
+        AgreementServiceName:
           type: string
     Fees:
       type: object
@@ -708,26 +680,54 @@ components:
           type: string
         FeesServiceName:
           type: string
-    Agreement:
+    AssessmentandReporting:
       type: object
       properties:
-        AgreementPreconditions:
+        AssessmentandReportingPreconditions:
           type: string
-        AgreementFeatureSchedule:
+        AssessmentandReportingFeatureSchedule:
           type: string
-        BusinessService:
+        AnalysisandReporting:
           type: object
-        AgreementPostconditions:
+        AssessmentandReportingPostconditions:
           type: string
-        AgreementServiceType:
+        AssessmentandReportingAnalysisandReportingServiceType:
           type: string
-        AgreementServiceDescription:
+        AssessmentandReportingAnalysisandReportingServiceDescription:
           type: string
-        AgreementServiceInputsandOuputs:
+        AssessmentandReportingAnalysisandReportingServiceInputsandOuputs:
           type: string
-        AgreementServiceWorkProduct:
+        AssessmentandReportingAnalysisandReportingServiceWorkProduct:
           type: string
-        AgreementServiceName:
+        AssessmentandReportingAnalysisandReportingServiceName:
+          type: string
+    Fulfillment:
+      type: object
+      properties:
+        FulfillmentPreconditions:
+          type: string
+        FulfillmentFeatureSchedule:
+          type: string
+        FiduciaryArrangementFulfillment:
+          type: object
+        FulfillmentPostconditions:
+          type: string
+        FulfillmentFiduciaryArrangementFulfillmentServiceType:
+          type: string
+        FulfillmentFiduciaryArrangementFulfillmentServiceDescription:
+          type: string
+        FulfillmentFiduciaryArrangementFulfillmentServiceInputsandOuputs:
+          type: string
+        FulfillmentFiduciaryArrangementFulfillmentServiceWorkProduct:
+          type: string
+        FulfillmentFiduciaryArrangementFulfillmentServiceName:
+          type: string
+    FiduciaryAgreementOutcome:
+      type: object
+      properties:
+        FiduciaryAgreementFinancialFacility:
+          type: string
+        FiduciaryAgreementWorkProduct:
           type: string
     HTTPError:
       type: object
@@ -747,24 +747,8 @@ components:
       explode: false
       schema:
         type: string
-    FulfillmentID:
-      name: fulfillmentId
-      in: path
-      required: true
-      style: simple
-      explode: false
-      schema:
-        type: string
-    AssessmentandReportingID:
-      name: assessmentandreportingId
-      in: path
-      required: true
-      style: simple
-      explode: false
-      schema:
-        type: string
-    FiduciaryAgreementOutcomeID:
-      name: fiduciaryagreementoutcomeId
+    AgreementID:
+      name: agreementId
       in: path
       required: true
       style: simple
@@ -779,8 +763,24 @@ components:
       explode: false
       schema:
         type: string
-    AgreementID:
-      name: agreementId
+    AssessmentandReportingID:
+      name: assessmentandreportingId
+      in: path
+      required: true
+      style: simple
+      explode: false
+      schema:
+        type: string
+    FulfillmentID:
+      name: fulfillmentId
+      in: path
+      required: true
+      style: simple
+      explode: false
+      schema:
+        type: string
+    FiduciaryAgreementOutcomeID:
+      name: fiduciaryagreementoutcomeId
       in: path
       required: true
       style: simple
@@ -788,12 +788,12 @@ components:
       schema:
         type: string
   requestBodies:
-    FiduciaryRelationshipArrangement:
+    FiduciaryRelationshipFacility:
       required: true
       content:
         application/json:
           schema:
-            $ref: '#/components/schemas/FiduciaryRelationshipArrangement'
+            $ref: '#/components/schemas/FiduciaryRelationshipFacility'
     Agreement:
       required: true
       content:

@@ -1,7 +1,7 @@
 openapi: 3.0.1
 info:
   title: Branch Currency Distribution
-  description: Schedule and coordinate the secure distribution of cash inventory across the branch and ATM networks.
+  description: ''
   version: 10.0.0
 servers:
 - description: SwaggerHub API Auto Mocking
@@ -685,36 +685,6 @@ components:
           type: string
         CashDistributionProcedureCustomerAgreementReference:
           type: object
-    InventoryDistributionOversight:
-      type: object
-      properties:
-        InventoryDistributionOversightPreconditions:
-          type: string
-        InventoryDistributionOversightBusinessUnit/EmployeeReference:
-          type: object
-        InventoryDistributionOversightWorkSchedule:
-          type: string
-        InventoryDistributionOversight:
-          type: object
-        InventoryDistributionOversightPostconditions:
-          type: string
-        InventoryDistributionOversightInventoryDistributionOversightServiceType:
-          type: string
-        InventoryDistributionOversightInventoryDistributionOversightServiceDescription:
-          type: string
-        InventoryDistributionOversightInventoryDistributionOversightServiceInputsandOuputs:
-          type: string
-        InventoryDistributionOversightInventoryDistributionOversightServiceWorkProduct:
-          type: string
-        InventoryDistributionOversightInventoryDistributionOversightServiceName:
-          type: string
-    BranchCurrencyDistributionOutcome:
-      type: object
-      properties:
-        BranchCurrencyDistributionWorkProduct:
-          type: string
-        BranchCurrencyDistributionProcedure:
-          type: string
     DistributionPlanning:
       type: object
       properties:
@@ -784,6 +754,36 @@ components:
           type: string
         InventoryProvisioningInventoryProvisioningServiceName:
           type: string
+    BranchCurrencyDistributionOutcome:
+      type: object
+      properties:
+        BranchCurrencyDistributionWorkProduct:
+          type: string
+        BranchCurrencyDistributionProcedure:
+          type: string
+    InventoryDistributionOversight:
+      type: object
+      properties:
+        InventoryDistributionOversightPreconditions:
+          type: string
+        InventoryDistributionOversightBusinessUnit/EmployeeReference:
+          type: object
+        InventoryDistributionOversightWorkSchedule:
+          type: string
+        InventoryDistributionOversight:
+          type: object
+        InventoryDistributionOversightPostconditions:
+          type: string
+        InventoryDistributionOversightInventoryDistributionOversightServiceType:
+          type: string
+        InventoryDistributionOversightInventoryDistributionOversightServiceDescription:
+          type: string
+        InventoryDistributionOversightInventoryDistributionOversightServiceInputsandOuputs:
+          type: string
+        InventoryDistributionOversightInventoryDistributionOversightServiceWorkProduct:
+          type: string
+        InventoryDistributionOversightInventoryDistributionOversightServiceName:
+          type: string
     HTTPError:
       type: object
       properties:
@@ -796,22 +796,6 @@ components:
   parameters:
     BranchCurrencyDistributionID:
       name: branchcurrencydistributionId
-      in: path
-      required: true
-      style: simple
-      explode: false
-      schema:
-        type: string
-    InventoryDistributionOversightID:
-      name: inventorydistributionoversightId
-      in: path
-      required: true
-      style: simple
-      explode: false
-      schema:
-        type: string
-    BranchCurrencyDistributionOutcomeID:
-      name: branchcurrencydistributionoutcomeId
       in: path
       required: true
       style: simple
@@ -836,6 +820,22 @@ components:
         type: string
     InventoryProvisioningID:
       name: inventoryprovisioningId
+      in: path
+      required: true
+      style: simple
+      explode: false
+      schema:
+        type: string
+    BranchCurrencyDistributionOutcomeID:
+      name: branchcurrencydistributionoutcomeId
+      in: path
+      required: true
+      style: simple
+      explode: false
+      schema:
+        type: string
+    InventoryDistributionOversightID:
+      name: inventorydistributionoversightId
       in: path
       required: true
       style: simple

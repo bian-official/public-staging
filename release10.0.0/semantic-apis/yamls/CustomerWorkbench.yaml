@@ -1,7 +1,7 @@
 openapi: 3.0.1
 info:
   title: Customer Workbench
-  description: This service domain represents customer side devices. Most commonly providing a customer access portal to the banks products and services through any suitable channel and device
+  description: ''
   version: 10.0.0
 servers:
 - description: SwaggerHub API Auto Mocking
@@ -563,31 +563,6 @@ components:
           type: string
         LastUpdateDateOrTime:
           type: string
-    Broadcast:
-      type: object
-      properties:
-        CustomerWorkbenchBroadcastRecord:
-          type: string
-        CustomerWorkbenchBroadcastRecordDate/Time:
-          type: string
-    SWUpdate:
-      type: object
-      properties:
-        SWUpdateApplication:
-          type: string
-        SWUpdateVersion:
-          type: string
-        SWUpdateImage:
-          type: string
-        Date:
-          type: string
-    Browsing:
-      type: object
-      properties:
-        CustomerURL:
-          type: string
-        BankWebsiteURL:
-          type: string
     ProductandServiceAccess:
       type: object
       properties:
@@ -601,12 +576,37 @@ components:
           type: string
         CustomerResidentFiles:
           type: string
+    Browsing:
+      type: object
+      properties:
+        CustomerURL:
+          type: string
+        BankWebsiteURL:
+          type: string
     Contact:
       type: object
       properties:
         ContactStart/EndTime:
           type: string
         ContactActivityLog:
+          type: string
+    SWUpdate:
+      type: object
+      properties:
+        SWUpdateApplication:
+          type: string
+        SWUpdateVersion:
+          type: string
+        SWUpdateImage:
+          type: string
+        Date:
+          type: string
+    Broadcast:
+      type: object
+      properties:
+        CustomerWorkbenchBroadcastRecord:
+          type: string
+        CustomerWorkbenchBroadcastRecordDate/Time:
           type: string
     HTTPError:
       type: object
@@ -743,16 +743,8 @@ components:
       explode: false
       schema:
         type: string
-    BroadcastID:
-      name: broadcastId
-      in: path
-      required: true
-      style: simple
-      explode: false
-      schema:
-        type: string
-    SWUpdateID:
-      name: swupdateId
+    ProductandServiceAccessID:
+      name: productandserviceaccessId
       in: path
       required: true
       style: simple
@@ -767,16 +759,24 @@ components:
       explode: false
       schema:
         type: string
-    ProductandServiceAccessID:
-      name: productandserviceaccessId
+    ContactID:
+      name: contactId
       in: path
       required: true
       style: simple
       explode: false
       schema:
         type: string
-    ContactID:
-      name: contactId
+    SWUpdateID:
+      name: swupdateId
+      in: path
+      required: true
+      style: simple
+      explode: false
+      schema:
+        type: string
+    BroadcastID:
+      name: broadcastId
       in: path
       required: true
       style: simple

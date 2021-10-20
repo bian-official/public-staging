@@ -1,7 +1,7 @@
 openapi: 3.0.1
 info:
   title: Correspondent Bank Data Management
-  description: This service domain maintains correspondent bank reference details. This includes correspondent bank payment parameters in particular bank limits and capturing transaction activity to track reciprocity
+  description: ''
   version: 10.0.0
 servers:
 - description: SwaggerHub API Auto Mocking

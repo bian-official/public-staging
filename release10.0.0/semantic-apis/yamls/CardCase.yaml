@@ -1,7 +1,7 @@
 openapi: 3.0.1
 info:
   title: Card Case
-  description: This service domain handles the processing of a customer card case, typically a disputed charge
+  description: ''
   version: 10.0.0
 servers:
 - description: SwaggerHub API Auto Mocking
@@ -416,6 +416,28 @@ components:
           type: string
         ResolutionTaskResult:
           type: string
+    Arbitration:
+      type: object
+      properties:
+        ArbitrationCardTransactionRecordReference:
+          type: object
+        NetworkParticipantNetworkServiceRequestReference:
+          type: object
+        NetworkParticipantNetworkServiceRequestRecord:
+          type: string
+        NetworkParticipantServiceType:
+          type: string
+        NetworkParticipantServiceDate/Time:
+          type: string
+        NetworkParticipantServiceResult:
+          type: string
+    Chargeback:
+      type: object
+      properties:
+        ChargebackCardTransactionRecordReference:
+          type: object
+        ChargebackInstruction:
+          type: string
     Consolidation:
       type: object
       properties:
@@ -432,28 +454,6 @@ components:
         ConsolidationTaskWorkProducts:
           type: string
         ConsolidationTaskResult:
-          type: string
-    Chargeback:
-      type: object
-      properties:
-        ChargebackCardTransactionRecordReference:
-          type: object
-        ChargebackInstruction:
-          type: string
-    Arbitration:
-      type: object
-      properties:
-        ArbitrationCardTransactionRecordReference:
-          type: object
-        NetworkParticipantNetworkServiceRequestReference:
-          type: object
-        NetworkParticipantNetworkServiceRequestRecord:
-          type: string
-        NetworkParticipantServiceType:
-          type: string
-        NetworkParticipantServiceDate/Time:
-          type: string
-        NetworkParticipantServiceResult:
           type: string
     HTTPError:
       type: object
@@ -773,8 +773,8 @@ components:
       explode: false
       schema:
         type: string
-    ConsolidationID:
-      name: consolidationId
+    ArbitrationID:
+      name: arbitrationId
       in: path
       required: true
       style: simple
@@ -789,8 +789,8 @@ components:
       explode: false
       schema:
         type: string
-    ArbitrationID:
-      name: arbitrationId
+    ConsolidationID:
+      name: consolidationId
       in: path
       required: true
       style: simple

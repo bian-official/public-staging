@@ -1,7 +1,7 @@
 openapi: 3.0.1
 info:
   title: Production Release
-  description: Maintain and apply production release tests for new and updated systems
+  description: ''
   version: 10.0.0
 servers:
 - description: SwaggerHub API Auto Mocking
@@ -276,17 +276,6 @@ components:
           type: string
         BusinessRiskTestResult:
           type: string
-    ProductionRisk:
-      type: object
-      properties:
-        ProductionRiskSystemTestType:
-          type: string
-        ProductionRiskSystemTestDescription:
-          type: string
-        ProductionRiskSystemTestWorkProduct:
-          type: string
-        ProductionRiskSystemTestResult:
-          type: string
     OperationalRisk:
       type: object
       properties:
@@ -297,6 +286,17 @@ components:
         OperationalRiskSystemTestWorkProduct:
           type: string
         OperationalRiskSystemTestResult:
+          type: string
+    ProductionRisk:
+      type: object
+      properties:
+        ProductionRiskSystemTestType:
+          type: string
+        ProductionRiskSystemTestDescription:
+          type: string
+        ProductionRiskSystemTestWorkProduct:
+          type: string
+        ProductionRiskSystemTestResult:
           type: string
     FunctionalRisk:
       type: object
@@ -475,16 +475,16 @@ components:
       explode: false
       schema:
         type: string
-    ProductionRiskID:
-      name: productionriskId
+    OperationalRiskID:
+      name: operationalriskId
       in: path
       required: true
       style: simple
       explode: false
       schema:
         type: string
-    OperationalRiskID:
-      name: operationalriskId
+    ProductionRiskID:
+      name: productionriskId
       in: path
       required: true
       style: simple

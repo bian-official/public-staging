@@ -1,7 +1,7 @@
 openapi: 3.0.1
 info:
   title: Product Combination
-  description: Product Combination supports bundled products applying necessary constraints on embedded product fulfillment and ensuring product performance analysis takes correct account of embedded products' contribution
+  description: ''
   version: 10.0.0
 servers:
 - description: SwaggerHub API Auto Mocking
@@ -10,21 +10,21 @@ paths:
   /ProductCombination/{productcombinationId}/Control:
     put:
       tags:
-      - CR - ProductCombinationArrangement
-      summary: CoCR Control the processing of Product Combination Arrangement
-      description: CoCR Control the processing of Product Combination Arrangement
+      - CR - ProductCombinationFacility
+      summary: CoCR Control the processing of Product Combination Facility
+      description: CoCR Control the processing of Product Combination Facility
       operationId: Control
       parameters:
       - $ref: '#/components/parameters/ProductCombinationID'
       requestBody:
-        $ref: '#/components/requestBodies/ProductCombinationArrangement'
+        $ref: '#/components/requestBodies/ProductCombinationFacility'
       responses:
         200:
           description: Success
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/ProductCombinationArrangement'
+                $ref: '#/components/schemas/ProductCombinationFacility'
         400:
           $ref: '#/components/responses/BadRequestError'
         401:
@@ -40,21 +40,21 @@ paths:
   /ProductCombination/{productcombinationId}/Exchange:
     put:
       tags:
-      - CR - ProductCombinationArrangement
-      summary: EcCR Accept, verify, etc. aspects of Product Combination Arrangement processing
-      description: EcCR Accept, verify, etc. aspects of Product Combination Arrangement processing
+      - CR - ProductCombinationFacility
+      summary: EcCR Accept, verify, etc. aspects of Product Combination Facility processing
+      description: EcCR Accept, verify, etc. aspects of Product Combination Facility processing
       operationId: Exchange
       parameters:
       - $ref: '#/components/parameters/ProductCombinationID'
       requestBody:
-        $ref: '#/components/requestBodies/ProductCombinationArrangement'
+        $ref: '#/components/requestBodies/ProductCombinationFacility'
       responses:
         200:
           description: Success
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/ProductCombinationArrangement'
+                $ref: '#/components/schemas/ProductCombinationFacility'
         400:
           $ref: '#/components/responses/BadRequestError'
         401:
@@ -70,21 +70,21 @@ paths:
   /ProductCombination/{productcombinationId}/Execute:
     put:
       tags:
-      - CR - ProductCombinationArrangement
-      summary: ExCR Execute an available automated action for Product Combination Arrangement
-      description: ExCR Execute an available automated action for Product Combination Arrangement
+      - CR - ProductCombinationFacility
+      summary: ExCR Execute an available automated action for Product Combination Facility
+      description: ExCR Execute an available automated action for Product Combination Facility
       operationId: Execute
       parameters:
       - $ref: '#/components/parameters/ProductCombinationID'
       requestBody:
-        $ref: '#/components/requestBodies/ProductCombinationArrangement'
+        $ref: '#/components/requestBodies/ProductCombinationFacility'
       responses:
         200:
           description: Success
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/ProductCombinationArrangement'
+                $ref: '#/components/schemas/ProductCombinationFacility'
         400:
           $ref: '#/components/responses/BadRequestError'
         401:
@@ -100,20 +100,20 @@ paths:
   /ProductCombination/Initiate:
     post:
       tags:
-      - CR - ProductCombinationArrangement
-      summary: InCR Instantiate a new Product Combination Arrangement
-      description: InCR Instantiate a new Product Combination Arrangement
+      - CR - ProductCombinationFacility
+      summary: InCR Instantiate a new Product Combination Facility
+      description: InCR Instantiate a new Product Combination Facility
       operationId: Initiate
       parameters: []
       requestBody:
-        $ref: '#/components/requestBodies/ProductCombinationArrangement'
+        $ref: '#/components/requestBodies/ProductCombinationFacility'
       responses:
         200:
           description: Success
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/ProductCombinationArrangement'
+                $ref: '#/components/schemas/ProductCombinationFacility'
         400:
           $ref: '#/components/responses/BadRequestError'
         401:
@@ -129,9 +129,9 @@ paths:
   /ProductCombination/{productcombinationId}/Retrieve:
     get:
       tags:
-      - CR - ProductCombinationArrangement
-      summary: ReCR Retrieve details about any aspect of Product Combination Arrangement
-      description: ReCR Retrieve details about any aspect of Product Combination Arrangement
+      - CR - ProductCombinationFacility
+      summary: ReCR Retrieve details about any aspect of Product Combination Facility
+      description: ReCR Retrieve details about any aspect of Product Combination Facility
       operationId: Retrieve
       parameters:
       - $ref: '#/components/parameters/ProductCombinationID'
@@ -141,7 +141,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/ProductCombinationArrangement'
+                $ref: '#/components/schemas/ProductCombinationFacility'
         400:
           $ref: '#/components/responses/BadRequestError'
         401:
@@ -157,21 +157,21 @@ paths:
   /ProductCombination/{productcombinationId}/Request:
     put:
       tags:
-      - CR - ProductCombinationArrangement
-      summary: RqCR Request manual intervention or a decision with respect to Product Combination Arrangement
-      description: RqCR Request manual intervention or a decision with respect to Product Combination Arrangement
+      - CR - ProductCombinationFacility
+      summary: RqCR Request manual intervention or a decision with respect to Product Combination Facility
+      description: RqCR Request manual intervention or a decision with respect to Product Combination Facility
       operationId: Request
       parameters:
       - $ref: '#/components/parameters/ProductCombinationID'
       requestBody:
-        $ref: '#/components/requestBodies/ProductCombinationArrangement'
+        $ref: '#/components/requestBodies/ProductCombinationFacility'
       responses:
         200:
           description: Success
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/ProductCombinationArrangement'
+                $ref: '#/components/schemas/ProductCombinationFacility'
         400:
           $ref: '#/components/responses/BadRequestError'
         401:
@@ -187,21 +187,21 @@ paths:
   /ProductCombination/{productcombinationId}/Update:
     put:
       tags:
-      - CR - ProductCombinationArrangement
-      summary: UpCR Update details relating to Product Combination Arrangement
-      description: UpCR Update details relating to Product Combination Arrangement
+      - CR - ProductCombinationFacility
+      summary: UpCR Update details relating to Product Combination Facility
+      description: UpCR Update details relating to Product Combination Facility
       operationId: Update
       parameters:
       - $ref: '#/components/parameters/ProductCombinationID'
       requestBody:
-        $ref: '#/components/requestBodies/ProductCombinationArrangement'
+        $ref: '#/components/requestBodies/ProductCombinationFacility'
       responses:
         200:
           description: Success
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/ProductCombinationArrangement'
+                $ref: '#/components/schemas/ProductCombinationFacility'
         400:
           $ref: '#/components/responses/BadRequestError'
         401:
@@ -642,63 +642,35 @@ paths:
           $ref: '#/components/responses/InternalServerError'
 components:
   schemas:
-    ProductCombinationArrangement:
+    ProductCombinationFacility:
       type: object
       properties:
-        ProductCombinationArrangementParameterType:
+        ProductCombinationFacilityParameterType:
           type: string
-        ProductCombinationArrangementSelectedOption:
+        ProductCombinationFacilitySelectedOption:
           type: string
-        ProductCombinationArrangementType:
+        ProductCombinationFacilityType:
           type: string
-        ProductCombinationArrangementReference:
+        ProductCombinationFacilityReference:
           type: object
-        ProductCombinationArrangementSchedule:
+        ProductCombinationFacilitySchedule:
           type: string
-        ProductCombinationArrangementStatus:
+        ProductCombinationFacilityStatus:
           type: string
-        ProductCombinationArrangementCurrency:
+        ProductCombinationFacilityCurrency:
           type: string
-        ProductCombinationArrangementRegulationReference:
+        ProductCombinationFacilityRegulationReference:
           type: object
-        ProductCombinationArrangementRegulationType:
+        ProductCombinationFacilityRegulationType:
           type: string
-        ProductCombinationArrangementJurisdiction:
+        ProductCombinationFacilityJurisdiction:
           type: string
-        ProductCombinationArrangementBookingLocation:
+        ProductCombinationFacilityBookingLocation:
           type: string
-        ProductCombinationArrangementAccountType:
+        ProductCombinationFacilityAccountType:
           type: string
-        ProductCombinationArrangementAccountReference:
+        ProductCombinationFacilityAccountReference:
           type: object
-    TransferPricing:
-      type: object
-      properties:
-        TransferPricingPreconditions:
-          type: string
-        TransferPricingFeatureSchedule:
-          type: string
-        ProductTransferPricing:
-          type: object
-        TransferPricingPostconditions:
-          type: string
-        TransferPricingProductTransferPricingServiceType:
-          type: string
-        TransferPricingProductTransferPricingServiceDescription:
-          type: string
-        TransferPricingProductTransferPricingServiceInputsandOuputs:
-          type: string
-        TransferPricingProductTransferPricingServiceWorkProduct:
-          type: string
-        TransferPricingProductTransferPricingServiceName:
-          type: string
-    ProductCombinationOutcome:
-      type: object
-      properties:
-        ProductCombinationFinancialFacility:
-          type: string
-        ProductCombinationWorkProduct:
-          type: string
     Fulfillment:
       type: object
       properties:
@@ -719,6 +691,27 @@ components:
         FulfillmentFiduciaryArrangementFulfillmentServiceWorkProduct:
           type: string
         FulfillmentFiduciaryArrangementFulfillmentServiceName:
+          type: string
+    TransferPricing:
+      type: object
+      properties:
+        TransferPricingPreconditions:
+          type: string
+        TransferPricingFeatureSchedule:
+          type: string
+        ProductTransferPricing:
+          type: object
+        TransferPricingPostconditions:
+          type: string
+        TransferPricingProductTransferPricingServiceType:
+          type: string
+        TransferPricingProductTransferPricingServiceDescription:
+          type: string
+        TransferPricingProductTransferPricingServiceInputsandOuputs:
+          type: string
+        TransferPricingProductTransferPricingServiceWorkProduct:
+          type: string
+        TransferPricingProductTransferPricingServiceName:
           type: string
     EmbeddedProductControl:
       type: object
@@ -741,6 +734,13 @@ components:
           type: string
         EmbeddedProductControlCombinedProductControlServiceName:
           type: string
+    ProductCombinationOutcome:
+      type: object
+      properties:
+        ProductCombinationFinancialFacility:
+          type: string
+        ProductCombinationWorkProduct:
+          type: string
     HTTPError:
       type: object
       properties:
@@ -759,24 +759,16 @@ components:
       explode: false
       schema:
         type: string
-    TransferPricingID:
-      name: transferpricingId
-      in: path
-      required: true
-      style: simple
-      explode: false
-      schema:
-        type: string
-    ProductCombinationOutcomeID:
-      name: productcombinationoutcomeId
-      in: path
-      required: true
-      style: simple
-      explode: false
-      schema:
-        type: string
     FulfillmentID:
       name: fulfillmentId
+      in: path
+      required: true
+      style: simple
+      explode: false
+      schema:
+        type: string
+    TransferPricingID:
+      name: transferpricingId
       in: path
       required: true
       style: simple
@@ -791,13 +783,21 @@ components:
       explode: false
       schema:
         type: string
+    ProductCombinationOutcomeID:
+      name: productcombinationoutcomeId
+      in: path
+      required: true
+      style: simple
+      explode: false
+      schema:
+        type: string
   requestBodies:
-    ProductCombinationArrangement:
+    ProductCombinationFacility:
       required: true
       content:
         application/json:
           schema:
-            $ref: '#/components/schemas/ProductCombinationArrangement'
+            $ref: '#/components/schemas/ProductCombinationFacility'
     Fulfillment:
       required: true
       content:

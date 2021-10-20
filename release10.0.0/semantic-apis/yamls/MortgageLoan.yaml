@@ -1,7 +1,7 @@
 openapi: 3.0.1
 info:
   title: Mortgage Loan
-  description: Fulfillment of a loan product for &nbsp;the purpose of property purchase. Note different servicing patterns can be applied to interest calculations and principle and interest repayments
+  description: ''
   version: 10.0.0
 servers:
 - description: SwaggerHub API Auto Mocking
@@ -10,21 +10,21 @@ paths:
   /MortgageLoan/{mortgageloanId}/Control:
     put:
       tags:
-      - CR - MortgageLoanArrangement
+      - CR - MortgageLoanFacility
       summary: CoCR Control the processing of Merchandising Loan Arrangement
       description: CoCR Control the processing of Merchandising Loan Arrangement
       operationId: Control
       parameters:
       - $ref: '#/components/parameters/MortgageLoanID'
       requestBody:
-        $ref: '#/components/requestBodies/MortgageLoanArrangement'
+        $ref: '#/components/requestBodies/MortgageLoanFacility'
       responses:
         200:
           description: Success
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/MortgageLoanArrangement'
+                $ref: '#/components/schemas/MortgageLoanFacility'
         400:
           $ref: '#/components/responses/BadRequestError'
         401:
@@ -40,21 +40,21 @@ paths:
   /MortgageLoan/{mortgageloanId}/Exchange:
     put:
       tags:
-      - CR - MortgageLoanArrangement
+      - CR - MortgageLoanFacility
       summary: EcCR Accept, verify, etc. aspects of Merchandising Loan Arrangement processing
       description: EcCR Accept, verify, etc. aspects of Merchandising Loan Arrangement processing
       operationId: Exchange
       parameters:
       - $ref: '#/components/parameters/MortgageLoanID'
       requestBody:
-        $ref: '#/components/requestBodies/MortgageLoanArrangement'
+        $ref: '#/components/requestBodies/MortgageLoanFacility'
       responses:
         200:
           description: Success
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/MortgageLoanArrangement'
+                $ref: '#/components/schemas/MortgageLoanFacility'
         400:
           $ref: '#/components/responses/BadRequestError'
         401:
@@ -70,21 +70,21 @@ paths:
   /MortgageLoan/{mortgageloanId}/Execute:
     put:
       tags:
-      - CR - MortgageLoanArrangement
+      - CR - MortgageLoanFacility
       summary: ExCR Execute an available automated action for Merchandising Loan Arrangement
       description: ExCR Execute an available automated action for Merchandising Loan Arrangement
       operationId: Execute
       parameters:
       - $ref: '#/components/parameters/MortgageLoanID'
       requestBody:
-        $ref: '#/components/requestBodies/MortgageLoanArrangement'
+        $ref: '#/components/requestBodies/MortgageLoanFacility'
       responses:
         200:
           description: Success
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/MortgageLoanArrangement'
+                $ref: '#/components/schemas/MortgageLoanFacility'
         400:
           $ref: '#/components/responses/BadRequestError'
         401:
@@ -100,20 +100,20 @@ paths:
   /MortgageLoan/Initiate:
     post:
       tags:
-      - CR - MortgageLoanArrangement
+      - CR - MortgageLoanFacility
       summary: InCR Instantiate a new Merchandising Loan Arrangement
       description: InCR Instantiate a new Merchandising Loan Arrangement
       operationId: Initiate
       parameters: []
       requestBody:
-        $ref: '#/components/requestBodies/MortgageLoanArrangement'
+        $ref: '#/components/requestBodies/MortgageLoanFacility'
       responses:
         200:
           description: Success
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/MortgageLoanArrangement'
+                $ref: '#/components/schemas/MortgageLoanFacility'
         400:
           $ref: '#/components/responses/BadRequestError'
         401:
@@ -129,7 +129,7 @@ paths:
   /MortgageLoan/{mortgageloanId}/Retrieve:
     get:
       tags:
-      - CR - MortgageLoanArrangement
+      - CR - MortgageLoanFacility
       summary: ReCR Retrieve details about any aspect of Merchandising Loan Arrangement
       description: ReCR Retrieve details about any aspect of Merchandising Loan Arrangement
       operationId: Retrieve
@@ -141,7 +141,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/MortgageLoanArrangement'
+                $ref: '#/components/schemas/MortgageLoanFacility'
         400:
           $ref: '#/components/responses/BadRequestError'
         401:
@@ -157,21 +157,21 @@ paths:
   /MortgageLoan/{mortgageloanId}/Request:
     put:
       tags:
-      - CR - MortgageLoanArrangement
+      - CR - MortgageLoanFacility
       summary: RqCR Request manual intervention or a decision with respect to Merchandising Loan Arrangement
       description: RqCR Request manual intervention or a decision with respect to Merchandising Loan Arrangement
       operationId: Request
       parameters:
       - $ref: '#/components/parameters/MortgageLoanID'
       requestBody:
-        $ref: '#/components/requestBodies/MortgageLoanArrangement'
+        $ref: '#/components/requestBodies/MortgageLoanFacility'
       responses:
         200:
           description: Success
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/MortgageLoanArrangement'
+                $ref: '#/components/schemas/MortgageLoanFacility'
         400:
           $ref: '#/components/responses/BadRequestError'
         401:
@@ -187,21 +187,21 @@ paths:
   /MortgageLoan/{mortgageloanId}/Update:
     put:
       tags:
-      - CR - MortgageLoanArrangement
+      - CR - MortgageLoanFacility
       summary: UpCR Update details relating to Merchandising Loan Arrangement
       description: UpCR Update details relating to Merchandising Loan Arrangement
       operationId: Update
       parameters:
       - $ref: '#/components/parameters/MortgageLoanID'
       requestBody:
-        $ref: '#/components/requestBodies/MortgageLoanArrangement'
+        $ref: '#/components/requestBodies/MortgageLoanFacility'
       responses:
         200:
           description: Success
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/MortgageLoanArrangement'
+                $ref: '#/components/schemas/MortgageLoanFacility'
         400:
           $ref: '#/components/responses/BadRequestError'
         401:
@@ -1453,34 +1453,34 @@ paths:
           $ref: '#/components/responses/InternalServerError'
 components:
   schemas:
-    MortgageLoanArrangement:
+    MortgageLoanFacility:
       type: object
       properties:
-        MortgageLoanArrangementParameterType:
+        MortgageLoanFacilityParameterType:
           type: string
-        MortgageLoanArrangementSelectedOption:
+        MortgageLoanFacilitySelectedOption:
           type: string
-        MortgageLoanArrangementType:
+        MortgageLoanFacilityType:
           type: string
-        MortgageLoanArrangementReference:
+        MortgageLoanFacilityReference:
           type: object
-        MortgageLoanArrangementSchedule:
+        MortgageLoanFacilitySchedule:
           type: string
-        MortgageLoanArrangementStatus:
+        MortgageLoanFacilityStatus:
           type: string
-        MortgageLoanArrangementCurrency:
+        MortgageLoanFacilityCurrency:
           type: string
-        MortgageLoanArrangementRegulationReference:
+        MortgageLoanFacilityRegulationReference:
           type: object
-        MortgageLoanArrangementRegulationType:
+        MortgageLoanFacilityRegulationType:
           type: string
-        MortgageLoanArrangementJurisdiction:
+        MortgageLoanFacilityJurisdiction:
           type: string
-        MortgageLoanArrangementBookingLocation:
+        MortgageLoanFacilityBookingLocation:
           type: string
-        MortgageLoanArrangementAccountType:
+        MortgageLoanFacilityAccountType:
           type: string
-        MortgageLoanArrangementAccountReference:
+        MortgageLoanFacilityAccountReference:
           type: object
     FinancialInstrument:
       type: object
@@ -1503,27 +1503,6 @@ components:
           type: string
         FinancialInstrumentFinancialInstrumentServiceName:
           type: string
-    Fees:
-      type: object
-      properties:
-        FeesPreconditions:
-          type: string
-        FeesFeatureSchedule:
-          type: string
-        BusinessService:
-          type: object
-        FeesPostconditions:
-          type: string
-        FeesServiceType:
-          type: string
-        FeesServiceDescription:
-          type: string
-        FeesServiceInputsandOuputs:
-          type: string
-        FeesServiceWorkProduct:
-          type: string
-        FeesServiceName:
-          type: string
     FinancialAccounting:
       type: object
       properties:
@@ -1544,34 +1523,6 @@ components:
         FinancialAccountingFinancialAccountingServiceWorkProduct:
           type: string
         FinancialAccountingFinancialAccountingServiceName:
-          type: string
-    MortgageLoanOutcome:
-      type: object
-      properties:
-        MortgageLoanFinancialFacility:
-          type: string
-        MortgageLoanWorkProduct:
-          type: string
-    Collateral:
-      type: object
-      properties:
-        CollateralPreconditions:
-          type: string
-        CollateralFeatureSchedule:
-          type: string
-        BusinessService:
-          type: object
-        CollateralPostconditions:
-          type: string
-        CollateralServiceType:
-          type: string
-        CollateralServiceDescription:
-          type: string
-        CollateralServiceInputsandOuputs:
-          type: string
-        CollateralServiceWorkProduct:
-          type: string
-        CollateralServiceName:
           type: string
     Deposits:
       type: object
@@ -1636,27 +1587,6 @@ components:
           type: string
         WithdrawalsWithdrawalProcessingServiceName:
           type: string
-    IssuedDevice:
-      type: object
-      properties:
-        IssuedDevicePreconditions:
-          type: string
-        IssuedDeviceFeatureSchedule:
-          type: string
-        BusinessService:
-          type: object
-        IssuedDevicePostconditions:
-          type: string
-        IssuedDeviceServiceType:
-          type: string
-        IssuedDeviceServiceDescription:
-          type: string
-        IssuedDeviceServiceInputsandOuputs:
-          type: string
-        IssuedDeviceServiceWorkProduct:
-          type: string
-        IssuedDeviceServiceName:
-          type: string
     Sweep:
       type: object
       properties:
@@ -1678,26 +1608,47 @@ components:
           type: string
         SweepServiceName:
           type: string
-    Payments:
+    Collateral:
       type: object
       properties:
-        PaymentsPreconditions:
+        CollateralPreconditions:
           type: string
-        PaymentsFeatureSchedule:
+        CollateralFeatureSchedule:
           type: string
         BusinessService:
           type: object
-        PaymentsPostconditions:
+        CollateralPostconditions:
           type: string
-        PaymentsServiceType:
+        CollateralServiceType:
           type: string
-        PaymentsServiceDescription:
+        CollateralServiceDescription:
           type: string
-        PaymentsServiceInputsandOuputs:
+        CollateralServiceInputsandOuputs:
           type: string
-        PaymentsServiceWorkProduct:
+        CollateralServiceWorkProduct:
           type: string
-        PaymentsServiceName:
+        CollateralServiceName:
+          type: string
+    Fees:
+      type: object
+      properties:
+        FeesPreconditions:
+          type: string
+        FeesFeatureSchedule:
+          type: string
+        BusinessService:
+          type: object
+        FeesPostconditions:
+          type: string
+        FeesServiceType:
+          type: string
+        FeesServiceDescription:
+          type: string
+        FeesServiceInputsandOuputs:
+          type: string
+        FeesServiceWorkProduct:
+          type: string
+        FeesServiceName:
           type: string
     Interest:
       type: object
@@ -1741,6 +1692,55 @@ components:
           type: string
         LienServiceName:
           type: string
+    IssuedDevice:
+      type: object
+      properties:
+        IssuedDevicePreconditions:
+          type: string
+        IssuedDeviceFeatureSchedule:
+          type: string
+        BusinessService:
+          type: object
+        IssuedDevicePostconditions:
+          type: string
+        IssuedDeviceServiceType:
+          type: string
+        IssuedDeviceServiceDescription:
+          type: string
+        IssuedDeviceServiceInputsandOuputs:
+          type: string
+        IssuedDeviceServiceWorkProduct:
+          type: string
+        IssuedDeviceServiceName:
+          type: string
+    MortgageLoanOutcome:
+      type: object
+      properties:
+        MortgageLoanFinancialFacility:
+          type: string
+        MortgageLoanWorkProduct:
+          type: string
+    Payments:
+      type: object
+      properties:
+        PaymentsPreconditions:
+          type: string
+        PaymentsFeatureSchedule:
+          type: string
+        BusinessService:
+          type: object
+        PaymentsPostconditions:
+          type: string
+        PaymentsServiceType:
+          type: string
+        PaymentsServiceDescription:
+          type: string
+        PaymentsServiceInputsandOuputs:
+          type: string
+        PaymentsServiceWorkProduct:
+          type: string
+        PaymentsServiceName:
+          type: string
     HTTPError:
       type: object
       properties:
@@ -1767,32 +1767,8 @@ components:
       explode: false
       schema:
         type: string
-    FeesID:
-      name: feesId
-      in: path
-      required: true
-      style: simple
-      explode: false
-      schema:
-        type: string
     FinancialAccountingID:
       name: financialaccountingId
-      in: path
-      required: true
-      style: simple
-      explode: false
-      schema:
-        type: string
-    MortgageLoanOutcomeID:
-      name: mortgageloanoutcomeId
-      in: path
-      required: true
-      style: simple
-      explode: false
-      schema:
-        type: string
-    CollateralID:
-      name: collateralId
       in: path
       required: true
       style: simple
@@ -1823,14 +1799,6 @@ components:
       explode: false
       schema:
         type: string
-    IssuedDeviceID:
-      name: issueddeviceId
-      in: path
-      required: true
-      style: simple
-      explode: false
-      schema:
-        type: string
     SweepID:
       name: sweepId
       in: path
@@ -1839,8 +1807,16 @@ components:
       explode: false
       schema:
         type: string
-    PaymentsID:
-      name: paymentsId
+    CollateralID:
+      name: collateralId
+      in: path
+      required: true
+      style: simple
+      explode: false
+      schema:
+        type: string
+    FeesID:
+      name: feesId
       in: path
       required: true
       style: simple
@@ -1863,13 +1839,37 @@ components:
       explode: false
       schema:
         type: string
+    IssuedDeviceID:
+      name: issueddeviceId
+      in: path
+      required: true
+      style: simple
+      explode: false
+      schema:
+        type: string
+    MortgageLoanOutcomeID:
+      name: mortgageloanoutcomeId
+      in: path
+      required: true
+      style: simple
+      explode: false
+      schema:
+        type: string
+    PaymentsID:
+      name: paymentsId
+      in: path
+      required: true
+      style: simple
+      explode: false
+      schema:
+        type: string
   requestBodies:
-    MortgageLoanArrangement:
+    MortgageLoanFacility:
       required: true
       content:
         application/json:
           schema:
-            $ref: '#/components/schemas/MortgageLoanArrangement'
+            $ref: '#/components/schemas/MortgageLoanFacility'
     Billing:
       required: true
       content:

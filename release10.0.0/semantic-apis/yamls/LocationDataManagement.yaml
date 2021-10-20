@@ -1,7 +1,7 @@
 openapi: 3.0.1
 info:
   title: Location Data Management
-  description: This service domain maintain details of the use and state of locations of interest to the bank. This can include both physical and virtual addresses. It is used to check for valid use and for sales/marketing activities
+  description: ''
   version: 10.0.0
 servers:
 - description: SwaggerHub API Auto Mocking
@@ -348,23 +348,6 @@ components:
           type: string
         Date:
           type: string
-    Occupancy:
-      type: object
-      properties:
-        CustomerReference:
-          type: object
-        LocationOwner/Title:
-          type: string
-        LocationValue:
-          type: string
-        LocationOccupierType:
-          type: string
-        LocationOccupierReference:
-          type: object
-        LocationOccupierTerms:
-          type: string
-        AlliancePartnerReference:
-          type: object
     Location:
       type: object
       properties:
@@ -391,6 +374,23 @@ components:
           type: string
         LocationUsage:
           type: string
+    Occupancy:
+      type: object
+      properties:
+        CustomerReference:
+          type: object
+        LocationOwner/Title:
+          type: string
+        LocationValue:
+          type: string
+        LocationOccupierType:
+          type: string
+        LocationOccupierReference:
+          type: object
+        LocationOccupierTerms:
+          type: string
+        AlliancePartnerReference:
+          type: object
     HTTPError:
       type: object
       properties:
@@ -662,14 +662,6 @@ components:
       explode: false
       schema:
         type: string
-    OccupancyID:
-      name: occupancyId
-      in: path
-      required: true
-      style: simple
-      explode: false
-      schema:
-        type: string
     LocationID:
       name: locationId
       in: path
@@ -680,6 +672,14 @@ components:
         type: string
     UseID:
       name: useId
+      in: path
+      required: true
+      style: simple
+      explode: false
+      schema:
+        type: string
+    OccupancyID:
+      name: occupancyId
       in: path
       required: true
       style: simple

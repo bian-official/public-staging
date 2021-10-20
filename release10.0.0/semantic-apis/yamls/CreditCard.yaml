@@ -1,7 +1,7 @@
 openapi: 3.0.1
 info:
   title: Credit Card
-  description: This service domain orchestrates the scheduled maintenance and transactional activities associated with credit card product fulfillment
+  description: ''
   version: 10.0.0
 servers:
 - description: SwaggerHub API Auto Mocking
@@ -10,20 +10,20 @@ paths:
   /CreditCard/Initiate:
     post:
       tags:
-      - CR - CreditCardArrangement
+      - CR - CreditCardFacility
       summary: InCR Initiate a new card account
       description: InCR Initiate a new card account
       operationId: Initiate
       parameters: []
       requestBody:
-        $ref: '#/components/requestBodies/CreditCardArrangement'
+        $ref: '#/components/requestBodies/CreditCardFacility'
       responses:
         200:
           description: Success
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/CreditCardArrangement'
+                $ref: '#/components/schemas/CreditCardFacility'
         400:
           $ref: '#/components/responses/BadRequestError'
         401:
@@ -39,21 +39,21 @@ paths:
   /CreditCard/{creditcardId}/Update:
     put:
       tags:
-      - CR - CreditCardArrangement
+      - CR - CreditCardFacility
       summary: UpCR Update details about a card account
       description: UpCR Update details about a card account
       operationId: Update
       parameters:
       - $ref: '#/components/parameters/CreditCardID'
       requestBody:
-        $ref: '#/components/requestBodies/CreditCardArrangement'
+        $ref: '#/components/requestBodies/CreditCardFacility'
       responses:
         200:
           description: Success
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/CreditCardArrangement'
+                $ref: '#/components/schemas/CreditCardFacility'
         400:
           $ref: '#/components/responses/BadRequestError'
         401:
@@ -69,7 +69,7 @@ paths:
   /CreditCard/{creditcardId}/Retrieve:
     get:
       tags:
-      - CR - CreditCardArrangement
+      - CR - CreditCardFacility
       summary: ReCR Retrieve details about a card account
       description: ReCR Retrieve details about a card account
       operationId: Retrieve
@@ -81,7 +81,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/CreditCardArrangement'
+                $ref: '#/components/schemas/CreditCardFacility'
         400:
           $ref: '#/components/responses/BadRequestError'
         401:
@@ -732,7 +732,7 @@ paths:
           $ref: '#/components/responses/InternalServerError'
 components:
   schemas:
-    CreditCardArrangement:
+    CreditCardFacility:
       type: object
       properties:
         ProductInstanceReference:
@@ -761,9 +761,9 @@ components:
           type: string
         ConfigurationOrOptions:
           type: string
-        CreditCardArrangementOptionDefinition:
+        CreditCardFacilityOptionDefinition:
           type: string
-        CreditCardArrangementOptionSetting:
+        CreditCardFacilityOptionSetting:
           type: string
         Associations:
           type: string
@@ -801,32 +801,59 @@ components:
           type: string
         StatementReport:
           type: string
-    Interest:
+    Repayment:
       type: object
       properties:
-        InterestRateType:
+        RepaymentTransaction:
           type: string
-        InterestRateApplicationSchedule:
-          type: object
-        InterestRateConfiguration:
-          type: object
-        InterestRate:
-          type: object
-        InterestApplicationRecord:
+        RepaymentTransactionType:
           type: string
-        InterestTransaction:
+        BillingInstanceReference:
+          type: object
+        RepaymentTransactionPayerReference:
+          type: object
+        RepaymentTransactionPayerProductInstanceReference:
+          type: object
+        RepaymentTransactionPayerBankReference:
+          type: object
+        RepaymentTransactionAmount:
+          type: number
+        RepaymentTransactionCurrency:
+          type: string
+        RepaymentTransactionValueDate:
+          type: string
+    Fees:
+      type: object
+      properties:
+        FeeConfigurationProfile:
+          type: string
+        FeeType:
+          type: string
+        FeeDefinition:
+          type: string
+        FeeApplicationRecord:
+          type: string
+        FeeTransaction:
           type: string
         TransactionDescription:
           type: string
-        TransactionRateType:
+        TransactionFeeType:
           type: string
-        TransactionInterestCharge:
+        TransactionFeeCharge:
           type: string
-        InterestAccrualAmount:
+        FeeProjectionsandCommitments:
+          type: string
+        ProjectedTransactionDescription:
+          type: string
+        ProjectedTransactionFeeType:
+          type: string
+        ProjectedTransactionFeeCharge:
+          type: string
+        FeeAccrualAmount:
           type: number
-        InterestAccrualType:
+        AccrualFeeType:
           type: string
-        InterestAccrualCharge:
+        AccrualFeeCharge:
           type: string
     CardTransaction:
       type: object
@@ -863,6 +890,33 @@ components:
           type: string
         CardTransactionAuthorizationRecord:
           type: string
+    Interest:
+      type: object
+      properties:
+        InterestRateType:
+          type: string
+        InterestRateApplicationSchedule:
+          type: object
+        InterestRateConfiguration:
+          type: object
+        InterestRate:
+          type: object
+        InterestApplicationRecord:
+          type: string
+        InterestTransaction:
+          type: string
+        TransactionDescription:
+          type: string
+        TransactionRateType:
+          type: string
+        TransactionInterestCharge:
+          type: string
+        InterestAccrualAmount:
+          type: number
+        InterestAccrualType:
+          type: string
+        InterestAccrualCharge:
+          type: string
     Billing:
       type: object
       properties:
@@ -883,39 +937,6 @@ components:
         BillingTransactionMinimumRequiredPayment:
           type: string
         BillingTransactionPaymentDueDate:
-          type: string
-    Fees:
-      type: object
-      properties:
-        FeeConfigurationProfile:
-          type: string
-        FeeType:
-          type: string
-        FeeDefinition:
-          type: string
-        FeeApplicationRecord:
-          type: string
-        FeeTransaction:
-          type: string
-        TransactionDescription:
-          type: string
-        TransactionFeeType:
-          type: string
-        TransactionFeeCharge:
-          type: string
-        FeeProjectionsandCommitments:
-          type: string
-        ProjectedTransactionDescription:
-          type: string
-        ProjectedTransactionFeeType:
-          type: string
-        ProjectedTransactionFeeCharge:
-          type: string
-        FeeAccrualAmount:
-          type: number
-        AccrualFeeType:
-          type: string
-        AccrualFeeCharge:
           type: string
     CreditPlan:
       type: object
@@ -945,27 +966,6 @@ components:
           type: string
         IssuedDeviceStatus:
           type: string
-    Repayment:
-      type: object
-      properties:
-        RepaymentTransaction:
-          type: string
-        RepaymentTransactionType:
-          type: string
-        BillingInstanceReference:
-          type: object
-        RepaymentTransactionPayerReference:
-          type: object
-        RepaymentTransactionPayerProductInstanceReference:
-          type: object
-        RepaymentTransactionPayerBankReference:
-          type: object
-        RepaymentTransactionAmount:
-          type: number
-        RepaymentTransactionCurrency:
-          type: string
-        RepaymentTransactionValueDate:
-          type: string
     HTTPError:
       type: object
       properties:
@@ -978,7 +978,7 @@ components:
     RetrieveInterestResponse:
       type: object
       properties:
-        CreditCardArrangement:
+        CreditCardFacility:
           type: object
           properties:
             ProductInstanceReference:
@@ -997,9 +997,9 @@ components:
               type: string
             ConfigurationOrOptions:
               type: string
-            CreditCardArrangementOptionDefinition:
+            CreditCardFacilityOptionDefinition:
               type: string
-            CreditCardArrangementOptionSetting:
+            CreditCardFacilityOptionSetting:
               type: string
             LinkedAccounts:
               type: string
@@ -1045,7 +1045,7 @@ components:
     RetrieveFeesResponse:
       type: object
       properties:
-        CreditCardArrangement:
+        CreditCardFacility:
           type: object
           properties:
             ProductInstanceReference:
@@ -1074,9 +1074,9 @@ components:
               type: string
             ConfigurationOrOptions:
               type: string
-            CreditCardArrangementOptionDefinition:
+            CreditCardFacilityOptionDefinition:
               type: string
-            CreditCardArrangementOptionSetting:
+            CreditCardFacilityOptionSetting:
               type: string
             Associations:
               type: string
@@ -1148,7 +1148,7 @@ components:
     RetrieveBillingResponse:
       type: object
       properties:
-        CreditCardArrangement:
+        CreditCardFacility:
           type: object
           properties:
             ProductInstanceReference:
@@ -1171,9 +1171,9 @@ components:
               type: string
             ConfigurationOrOptions:
               type: string
-            CreditCardArrangementOptionDefinition:
+            CreditCardFacilityOptionDefinition:
               type: string
-            CreditCardArrangementOptionSetting:
+            CreditCardFacilityOptionSetting:
               type: string
             LinkedAccounts:
               type: string
@@ -1249,7 +1249,7 @@ components:
     RetrieveRepaymentResponse:
       type: object
       properties:
-        CreditCardArrangement:
+        CreditCardFacility:
           type: object
           properties:
             ProductInstanceReference:
@@ -1282,7 +1282,7 @@ components:
     RetrieveCardTransactionResponse:
       type: object
       properties:
-        CreditCardArrangement:
+        CreditCardFacility:
           type: object
           properties:
             ProductInstanceReference:
@@ -1325,7 +1325,7 @@ components:
     InitiateIssuedDeviceRequest:
       type: object
       properties:
-        CreditCardArrangement:
+        CreditCardFacility:
           type: object
           properties:
             ProductInstanceReference:
@@ -1340,9 +1340,9 @@ components:
               type: string
             ConfigurationOrOptions:
               type: string
-            CreditCardArrangementOptionDefinition:
+            CreditCardFacilityOptionDefinition:
               type: string
-            CreditCardArrangementOptionSetting:
+            CreditCardFacilityOptionSetting:
               type: string
             Associations:
               type: string
@@ -1390,7 +1390,7 @@ components:
     InitiateIssuedDeviceResponse:
       type: object
       properties:
-        CreditCardArrangement:
+        CreditCardFacility:
           type: object
           properties:
             DateType:
@@ -1415,7 +1415,7 @@ components:
     RetrieveIssuedDeviceResponse:
       type: object
       properties:
-        CreditCardArrangement:
+        CreditCardFacility:
           type: object
           properties:
             ProductInstanceReference:
@@ -1430,9 +1430,9 @@ components:
               type: string
             ConfigurationOrOptions:
               type: string
-            CreditCardArrangementOptionDefinition:
+            CreditCardFacilityOptionDefinition:
               type: string
-            CreditCardArrangementOptionSetting:
+            CreditCardFacilityOptionSetting:
               type: string
             Associations:
               type: string
@@ -1480,7 +1480,7 @@ components:
     InitiateCreditPlanRequest:
       type: object
       properties:
-        CreditCardArrangement:
+        CreditCardFacility:
           type: object
           properties:
             ProductInstanceReference:
@@ -1595,7 +1595,7 @@ components:
     RetrieveCreditPlanResponse:
       type: object
       properties:
-        CreditCardArrangement:
+        CreditCardFacility:
           type: object
           properties:
             ProductInstanceReference:
@@ -1661,8 +1661,16 @@ components:
       explode: false
       schema:
         type: string
-    InterestID:
-      name: interestId
+    RepaymentID:
+      name: repaymentId
+      in: path
+      required: true
+      style: simple
+      explode: false
+      schema:
+        type: string
+    FeesID:
+      name: feesId
       in: path
       required: true
       style: simple
@@ -1677,16 +1685,16 @@ components:
       explode: false
       schema:
         type: string
-    BillingID:
-      name: billingId
+    InterestID:
+      name: interestId
       in: path
       required: true
       style: simple
       explode: false
       schema:
         type: string
-    FeesID:
-      name: feesId
+    BillingID:
+      name: billingId
       in: path
       required: true
       style: simple
@@ -1709,21 +1717,13 @@ components:
       explode: false
       schema:
         type: string
-    RepaymentID:
-      name: repaymentId
-      in: path
-      required: true
-      style: simple
-      explode: false
-      schema:
-        type: string
   requestBodies:
-    CreditCardArrangement:
+    CreditCardFacility:
       required: true
       content:
         application/json:
           schema:
-            $ref: '#/components/schemas/CreditCardArrangement'
+            $ref: '#/components/schemas/CreditCardFacility'
     Fees:
       required: true
       content:

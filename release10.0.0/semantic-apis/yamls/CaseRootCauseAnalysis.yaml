@@ -1,7 +1,7 @@
 openapi: 3.0.1
 info:
   title: Case Root Cause Analysis
-  description: Root cause analysis business function reviews case reports to identify possible improvements to eliminate/mitigate servicing issues
+  description: ''
   version: 10.0.0
 servers:
 - description: SwaggerHub API Auto Mocking
@@ -636,26 +636,26 @@ components:
           type: string
         CaseRootCauseAnalysisAnalysisType:
           type: string
-    OperationsandServicingIssueAnalysis:
+    ProductandServiceIssueAnalysis:
       type: object
       properties:
-        OperationsandServicingIssueAnalysisPreconditions:
+        ProductandServiceIssueAnalysisPreconditions:
           type: string
-        OperationsandServicingIssueAnalysisAnalysisSchedule:
+        ProductandServiceIssueAnalysisAnalysisSchedule:
           type: string
-        OperationsandServicingIssueAnalysisVersionNumber:
+        ProductandServiceIssueAnalysisVersionNumber:
           type: string
-        OperationsandServicingIssueAnalysis:
+        ProductandServiceIssueAnalysis:
           type: object
-        OperationsandServicingIssueAnalysisServiceType:
+        ProductandServiceIssueAnalysisServiceType:
           type: string
-        OperationsandServicingIssueAnalysisServiceDescription:
+        ProductandServiceIssueAnalysisServiceDescription:
           type: string
-        OperationsandServicingIssueAnalysisServiceInputsandOuputs:
+        ProductandServiceIssueAnalysisServiceInputsandOuputs:
           type: string
-        OperationsandServicingIssueAnalysisServiceWorkProduct:
+        ProductandServiceIssueAnalysisServiceWorkProduct:
           type: string
-        OperationsandServicingIssueAnalysisServiceName:
+        ProductandServiceIssueAnalysisServiceName:
           type: string
     CreditandFraudRelatedIssueAnalysis:
       type: object
@@ -678,26 +678,26 @@ components:
           type: string
         CreditandFraudRelatedIssueAnalysisServiceName:
           type: string
-    ProductandServiceIssueAnalysis:
+    OperationsandServicingIssueAnalysis:
       type: object
       properties:
-        ProductandServiceIssueAnalysisPreconditions:
+        OperationsandServicingIssueAnalysisPreconditions:
           type: string
-        ProductandServiceIssueAnalysisAnalysisSchedule:
+        OperationsandServicingIssueAnalysisAnalysisSchedule:
           type: string
-        ProductandServiceIssueAnalysisVersionNumber:
+        OperationsandServicingIssueAnalysisVersionNumber:
           type: string
-        ProductandServiceIssueAnalysis:
+        OperationsandServicingIssueAnalysis:
           type: object
-        ProductandServiceIssueAnalysisServiceType:
+        OperationsandServicingIssueAnalysisServiceType:
           type: string
-        ProductandServiceIssueAnalysisServiceDescription:
+        OperationsandServicingIssueAnalysisServiceDescription:
           type: string
-        ProductandServiceIssueAnalysisServiceInputsandOuputs:
+        OperationsandServicingIssueAnalysisServiceInputsandOuputs:
           type: string
-        ProductandServiceIssueAnalysisServiceWorkProduct:
+        OperationsandServicingIssueAnalysisServiceWorkProduct:
           type: string
-        ProductandServiceIssueAnalysisServiceName:
+        OperationsandServicingIssueAnalysisServiceName:
           type: string
     HTTPError:
       type: object
@@ -725,8 +725,8 @@ components:
       explode: false
       schema:
         type: string
-    OperationsandServicingIssueAnalysisID:
-      name: operationsandservicingissueanalysisId
+    ProductandServiceIssueAnalysisID:
+      name: productandserviceissueanalysisId
       in: path
       required: true
       style: simple
@@ -741,8 +741,8 @@ components:
       explode: false
       schema:
         type: string
-    ProductandServiceIssueAnalysisID:
-      name: productandserviceissueanalysisId
+    OperationsandServicingIssueAnalysisID:
+      name: operationsandservicingissueanalysisId
       in: path
       required: true
       style: simple

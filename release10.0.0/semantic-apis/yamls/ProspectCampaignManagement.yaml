@@ -1,7 +1,7 @@
 openapi: 3.0.1
 info:
   title: Prospect Campaign Management
-  description: Assess the coverage and impact of external/prospect campaigns and redirect campaign development and execution activity accordingly
+  description: ''
   version: 10.0.0
 servers:
 - description: SwaggerHub API Auto Mocking
@@ -548,6 +548,19 @@ components:
           type: string
         ProspectCampaignProcedureResult:
           type: string
+    PerformanceAssessment:
+      type: object
+      properties:
+        PerformanceAssessmentWorkTaskType:
+          type: string
+        PerformanceAssessmentWorkTask:
+          type: string
+        PerformanceAssessmentWorkTaskWorkProducts:
+          type: string
+        PerformanceAssessmentWorkTaskResult:
+          type: string
+        PerformanceAssessmentWorkTaskDate-Time:
+          type: string
     MarketTracking:
       type: object
       properties:
@@ -574,19 +587,6 @@ components:
           type: string
         ProspectCampaignExecutionSchedule:
           type: string
-    PerformanceAssessment:
-      type: object
-      properties:
-        PerformanceAssessmentWorkTaskType:
-          type: string
-        PerformanceAssessmentWorkTask:
-          type: string
-        PerformanceAssessmentWorkTaskWorkProducts:
-          type: string
-        PerformanceAssessmentWorkTaskResult:
-          type: string
-        PerformanceAssessmentWorkTaskDate-Time:
-          type: string
     HTTPError:
       type: object
       properties:
@@ -605,6 +605,14 @@ components:
       explode: false
       schema:
         type: string
+    PerformanceAssessmentID:
+      name: performanceassessmentId
+      in: path
+      required: true
+      style: simple
+      explode: false
+      schema:
+        type: string
     MarketTrackingID:
       name: markettrackingId
       in: path
@@ -615,14 +623,6 @@ components:
         type: string
     CampaignDirectionID:
       name: campaigndirectionId
-      in: path
-      required: true
-      style: simple
-      explode: false
-      schema:
-        type: string
-    PerformanceAssessmentID:
-      name: performanceassessmentId
       in: path
       required: true
       style: simple

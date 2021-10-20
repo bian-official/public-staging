@@ -1,7 +1,7 @@
 openapi: 3.0.1
 info:
   title: Correspondent Bank
-  description: This service domain fulfils correspondent banking arrangements between the bank and its correspondent banking partners. &nbsp;This includes handling the clearing and settlement of payments to/from the correspondent banks, typically using the SWIFT payment network.
+  description: ''
   version: 10.0.0
 servers:
 - description: SwaggerHub API Auto Mocking
@@ -10,20 +10,20 @@ paths:
   /CorrespondentBank/Initiate:
     post:
       tags:
-      - CR - CorrespondentBankArrangement
+      - CR - CorrespondentBankFacility
       summary: InCR Initialize a correspondent fulfillment arrangement
       description: InCR Initialize a correspondent fulfillment arrangement
       operationId: Initiate
       parameters: []
       requestBody:
-        $ref: '#/components/requestBodies/CorrespondentBankArrangement'
+        $ref: '#/components/requestBodies/CorrespondentBankFacility'
       responses:
         200:
           description: Success
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/CorrespondentBankArrangement'
+                $ref: '#/components/schemas/CorrespondentBankFacility'
         400:
           $ref: '#/components/responses/BadRequestError'
         401:
@@ -39,21 +39,21 @@ paths:
   /CorrespondentBank/{correspondentbankId}/Update:
     put:
       tags:
-      - CR - CorrespondentBankArrangement
+      - CR - CorrespondentBankFacility
       summary: UpCR Update details of e correspondent fulfillment arrangement
       description: UpCR Update details of e correspondent fulfillment arrangement
       operationId: Update
       parameters:
       - $ref: '#/components/parameters/CorrespondentBankID'
       requestBody:
-        $ref: '#/components/requestBodies/CorrespondentBankArrangement'
+        $ref: '#/components/requestBodies/CorrespondentBankFacility'
       responses:
         200:
           description: Success
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/CorrespondentBankArrangement'
+                $ref: '#/components/schemas/CorrespondentBankFacility'
         400:
           $ref: '#/components/responses/BadRequestError'
         401:
@@ -69,7 +69,7 @@ paths:
   /CorrespondentBank/{correspondentbankId}/Retrieve:
     get:
       tags:
-      - CR - CorrespondentBankArrangement
+      - CR - CorrespondentBankFacility
       summary: ReCR Retrieve details about a correspondent fulfillment arrangement
       description: ReCR Retrieve details about a correspondent fulfillment arrangement
       operationId: Retrieve
@@ -81,7 +81,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/RetrieveCorrespondentBankArrangementResponse'
+                $ref: '#/components/schemas/RetrieveCorrespondentBankFacilityResponse'
         400:
           $ref: '#/components/responses/BadRequestError'
         401:
@@ -461,12 +461,12 @@ paths:
           $ref: '#/components/responses/InternalServerError'
 components:
   schemas:
-    CorrespondentBankArrangement:
+    CorrespondentBankFacility:
       type: object
       properties:
-        CorrespondentBankArrangementReference:
+        CorrespondentBankFacilityReference:
           type: object
-        CorrespondentBankArrangement:
+        CorrespondentBankFacility:
           type: string
         CorrespondentBankServicingSchedule:
           type: string
@@ -476,6 +476,21 @@ components:
           type: object
         NostroMirrorAccountReference:
           type: object
+    ClearingandSettlement:
+      type: object
+      properties:
+        CorrespondentBankClearingArrangementReference:
+          type: object
+        CorrespondentBankClearingArrangementClearingInstructions:
+          type: string
+        CorrespondentBankClearingArrangementSettlementInstructions:
+          type: string
+        MirrorNostroAccountReference:
+          type: object
+        ClearingTransaction:
+          type: string
+        SettlementTransaction:
+          type: string
     OutboundPayments:
       type: object
       properties:
@@ -506,21 +521,6 @@ components:
         DateType:
           type: string
         Date:
-          type: string
-    ClearingandSettlement:
-      type: object
-      properties:
-        CorrespondentBankClearingArrangementReference:
-          type: object
-        CorrespondentBankClearingArrangementClearingInstructions:
-          type: string
-        CorrespondentBankClearingArrangementSettlementInstructions:
-          type: string
-        MirrorNostroAccountReference:
-          type: object
-        ClearingTransaction:
-          type: string
-        SettlementTransaction:
           type: string
     InboundPayments:
       type: object
@@ -571,13 +571,13 @@ components:
           type: string
         message:
           type: string
-    RetrieveCorrespondentBankArrangementResponse:
+    RetrieveCorrespondentBankFacilityResponse:
       type: object
       properties:
-        CorrespondentBankArrangement:
+        CorrespondentBankFacility:
           type: object
           properties:
-            CorrespondentBankArrangementReference:
+            CorrespondentBankFacilityReference:
               type: object
             CorrespondentBankServicingSchedule:
               type: string
@@ -611,10 +611,10 @@ components:
     RetrieveInboundPaymentsResponse:
       type: object
       properties:
-        CorrespondentBankArrangement:
+        CorrespondentBankFacility:
           type: object
           properties:
-            CorrespondentBankArrangementReference:
+            CorrespondentBankFacilityReference:
               type: object
             CorrespondentBankServicingSchedule:
               type: string
@@ -656,10 +656,10 @@ components:
     RetrieveOutboundPaymentsResponse:
       type: object
       properties:
-        CorrespondentBankArrangement:
+        CorrespondentBankFacility:
           type: object
           properties:
-            CorrespondentBankArrangementReference:
+            CorrespondentBankFacilityReference:
               type: object
             CorrespondentBankServicingSchedule:
               type: string
@@ -701,10 +701,10 @@ components:
     RetrieveClearingandSettlementResponse:
       type: object
       properties:
-        CorrespondentBankArrangement:
+        CorrespondentBankFacility:
           type: object
           properties:
-            CorrespondentBankArrangementReference:
+            CorrespondentBankFacilityReference:
               type: object
             CorrespondentBankServicingSchedule:
               type: string
@@ -724,10 +724,10 @@ components:
     RetrieveReconciliationResponse:
       type: object
       properties:
-        CorrespondentBankArrangement:
+        CorrespondentBankFacility:
           type: object
           properties:
-            CorrespondentBankArrangementReference:
+            CorrespondentBankFacilityReference:
               type: object
             CorrespondentBankServicingSchedule:
               type: string
@@ -755,16 +755,16 @@ components:
       explode: false
       schema:
         type: string
-    OutboundPaymentsID:
-      name: outboundpaymentsId
+    ClearingandSettlementID:
+      name: clearingandsettlementId
       in: path
       required: true
       style: simple
       explode: false
       schema:
         type: string
-    ClearingandSettlementID:
-      name: clearingandsettlementId
+    OutboundPaymentsID:
+      name: outboundpaymentsId
       in: path
       required: true
       style: simple
@@ -788,12 +788,12 @@ components:
       schema:
         type: string
   requestBodies:
-    CorrespondentBankArrangement:
+    CorrespondentBankFacility:
       required: true
       content:
         application/json:
           schema:
-            $ref: '#/components/schemas/CorrespondentBankArrangement'
+            $ref: '#/components/schemas/CorrespondentBankFacility'
     InboundPayments:
       required: true
       content:

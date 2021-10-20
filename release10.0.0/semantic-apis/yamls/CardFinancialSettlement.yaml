@@ -1,7 +1,7 @@
 openapi: 3.0.1
 info:
   title: Card Financial Settlement
-  description: This service domain orchestrates the settlement of the transactions between the Issuers and the Acquirers through the Card Networks.
+  description: ''
   version: 10.0.0
 servers:
 - description: SwaggerHub API Auto Mocking
@@ -351,17 +351,12 @@ components:
           type: object
         ParticipantIssuerBankReference:
           type: object
-    Instruction:
+    Processing:
       type: object
       properties:
-        ParticipantAcquirerBankSettlementAccountStatement:
+        ParticipantAcquirerBankSettlementTerms:
           type: string
-        ParticipantIssuerBankSettlementAccountStatement:
-          type: string
-    Payment:
-      type: object
-      properties:
-        ParticipantPaymentTransaction:
+        ParticipantIssuerBankSettlementTerms:
           type: string
     Consolidation:
       type: object
@@ -392,12 +387,17 @@ components:
           type: object
         CardTransactionDate/Time:
           type: string
-    Processing:
+    Instruction:
       type: object
       properties:
-        ParticipantAcquirerBankSettlementTerms:
+        ParticipantAcquirerBankSettlementAccountStatement:
           type: string
-        ParticipantIssuerBankSettlementTerms:
+        ParticipantIssuerBankSettlementAccountStatement:
+          type: string
+    Payment:
+      type: object
+      properties:
+        ParticipantPaymentTransaction:
           type: string
     HTTPError:
       type: object
@@ -605,16 +605,8 @@ components:
       explode: false
       schema:
         type: string
-    InstructionID:
-      name: instructionId
-      in: path
-      required: true
-      style: simple
-      explode: false
-      schema:
-        type: string
-    PaymentID:
-      name: paymentId
+    ProcessingID:
+      name: processingId
       in: path
       required: true
       style: simple
@@ -629,8 +621,16 @@ components:
       explode: false
       schema:
         type: string
-    ProcessingID:
-      name: processingId
+    InstructionID:
+      name: instructionId
+      in: path
+      required: true
+      style: simple
+      explode: false
+      schema:
+        type: string
+    PaymentID:
+      name: paymentId
       in: path
       required: true
       style: simple

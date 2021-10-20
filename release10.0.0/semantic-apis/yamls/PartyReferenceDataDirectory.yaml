@@ -1,7 +1,7 @@
 openapi: 3.0.1
 info:
   title: Party Reference Data Directory
-  description: This service domain maintains a range of party reference information covering aspects including general reference details, contacts and associations and demographic information
+  description: ''
   version: 10.0.0
 servers:
 - description: SwaggerHub API Auto Mocking
@@ -408,13 +408,6 @@ components:
           type: string
         Date:
           type: string
-    BankRelations:
-      type: object
-      properties:
-        BankRelationType:
-          type: string
-        BusinessUnit/EmployeeReference:
-          type: object
     Demographics:
       type: object
       properties:
@@ -491,6 +484,13 @@ components:
         PreferredBeneficiary:
           type: string
         Proxy/Representative/PowerofAttorneyReference:
+          type: object
+    BankRelations:
+      type: object
+      properties:
+        BankRelationType:
+          type: string
+        BusinessUnit/EmployeeReference:
           type: object
     HTTPError:
       type: object
@@ -945,14 +945,6 @@ components:
       explode: false
       schema:
         type: string
-    BankRelationsID:
-      name: bankrelationsId
-      in: path
-      required: true
-      style: simple
-      explode: false
-      schema:
-        type: string
     DemographicsID:
       name: demographicsId
       in: path
@@ -971,6 +963,14 @@ components:
         type: string
     AssociationsID:
       name: associationsId
+      in: path
+      required: true
+      style: simple
+      explode: false
+      schema:
+        type: string
+    BankRelationsID:
+      name: bankrelationsId
       in: path
       required: true
       style: simple

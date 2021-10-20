@@ -1,7 +1,7 @@
 openapi: 3.0.1
 info:
   title: Credit Risk Models
-  description: This service domain handles the design and maintenance of a portfolio of credit models that are used in all aspects of customer credit assessments
+  description: ''
   version: 10.0.0
 servers:
 - description: SwaggerHub API Auto Mocking
@@ -643,17 +643,6 @@ components:
           type: string
         ServiceName:
           type: string
-    CreditRiskModelsOutcome:
-      type: object
-      properties:
-        CreditRiskModelsTask:
-          type: string
-        CreditRiskModelsDesign:
-          type: string
-        CreditRiskModelsWorkProduct:
-          type: string
-        CreditRiskModelsImpactAnalysis:
-          type: string
     Testing:
       type: object
       properties:
@@ -674,6 +663,17 @@ components:
         ServiceWorkProduct:
           type: string
         ServiceName:
+          type: string
+    CreditRiskModelsOutcome:
+      type: object
+      properties:
+        CreditRiskModelsTask:
+          type: string
+        CreditRiskModelsDesign:
+          type: string
+        CreditRiskModelsWorkProduct:
+          type: string
+        CreditRiskModelsImpactAnalysis:
           type: string
     HTTPError:
       type: object
@@ -709,16 +709,16 @@ components:
       explode: false
       schema:
         type: string
-    CreditRiskModelsOutcomeID:
-      name: creditriskmodelsoutcomeId
+    TestingID:
+      name: testingId
       in: path
       required: true
       style: simple
       explode: false
       schema:
         type: string
-    TestingID:
-      name: testingId
+    CreditRiskModelsOutcomeID:
+      name: creditriskmodelsoutcomeId
       in: path
       required: true
       style: simple

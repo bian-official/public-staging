@@ -1,7 +1,7 @@
 openapi: 3.0.1
 info:
   title: Asset Securitization
-  description: Determine and select assets for securitization as needed to maintain and optimize the Bank's portfolio. Administer the securitization process
+  description: ''
   version: 10.0.0
 servers:
 - description: SwaggerHub API Auto Mocking
@@ -712,26 +712,26 @@ components:
           type: string
         AssetSecuritizationWorkProduct:
           type: string
-    Securitization:
+    Placement:
       type: object
       properties:
-        SecuritizationPreconditions:
+        PlacementPreconditions:
           type: string
-        SecuritizationTaskSchedule:
+        PlacementTaskSchedule:
           type: string
         BusinessService:
           type: object
-        SecuritizationPostconditions:
+        PlacementPostconditions:
           type: string
-        SecuritizationServiceType:
+        PlacementServiceType:
           type: string
-        SecuritizationServiceDescription:
+        PlacementServiceDescription:
           type: string
-        SecuritizationServiceInputsandOuputs:
+        PlacementServiceInputsandOuputs:
           type: string
-        SecuritizationServiceWorkProduct:
+        PlacementServiceWorkProduct:
           type: string
-        SecuritizationServiceName:
+        PlacementServiceName:
           type: string
     Selection:
       type: object
@@ -754,26 +754,26 @@ components:
           type: string
         SelectionAssetSelectionServiceName:
           type: string
-    Placement:
+    Securitization:
       type: object
       properties:
-        PlacementPreconditions:
+        SecuritizationPreconditions:
           type: string
-        PlacementTaskSchedule:
+        SecuritizationTaskSchedule:
           type: string
         BusinessService:
           type: object
-        PlacementPostconditions:
+        SecuritizationPostconditions:
           type: string
-        PlacementServiceType:
+        SecuritizationServiceType:
           type: string
-        PlacementServiceDescription:
+        SecuritizationServiceDescription:
           type: string
-        PlacementServiceInputsandOuputs:
+        SecuritizationServiceInputsandOuputs:
           type: string
-        PlacementServiceWorkProduct:
+        SecuritizationServiceWorkProduct:
           type: string
-        PlacementServiceName:
+        SecuritizationServiceName:
           type: string
     HTTPError:
       type: object
@@ -801,8 +801,8 @@ components:
       explode: false
       schema:
         type: string
-    SecuritizationID:
-      name: securitizationId
+    PlacementID:
+      name: placementId
       in: path
       required: true
       style: simple
@@ -817,8 +817,8 @@ components:
       explode: false
       schema:
         type: string
-    PlacementID:
-      name: placementId
+    SecuritizationID:
+      name: securitizationId
       in: path
       required: true
       style: simple

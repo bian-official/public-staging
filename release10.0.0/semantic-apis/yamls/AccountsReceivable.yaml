@@ -1,7 +1,7 @@
 openapi: 3.0.1
 info:
   title: Accounts Receivable
-  description: This service domain handles accounts receivable for invoices issue by the bank to customers and partners. It includes follow-up and resolution activity for delayed/missed payments
+  description: ''
   version: 10.0.0
 servers:
 - description: SwaggerHub API Auto Mocking
@@ -712,29 +712,6 @@ components:
           type: string
         AccountsReceivableProcedureCustomerAgreementReference:
           type: object
-    Resolution:
-      type: object
-      properties:
-        ResolutionPreconditions:
-          type: string
-        ResolutionBusinessUnit/EmployeeReference:
-          type: object
-        ResolutionWorkSchedule:
-          type: string
-        BusinessService:
-          type: object
-        ResolutionPostconditions:
-          type: string
-        ResolutionServiceType:
-          type: string
-        ResolutionServiceDescription:
-          type: string
-        ResolutionServiceInputsandOuputs:
-          type: string
-        ResolutionServiceWorkProduct:
-          type: string
-        ResolutionServiceName:
-          type: string
     ReceivablesEvaluation:
       type: object
       properties:
@@ -811,6 +788,29 @@ components:
           type: string
         AccountsReceivableProcedure:
           type: string
+    Resolution:
+      type: object
+      properties:
+        ResolutionPreconditions:
+          type: string
+        ResolutionBusinessUnit/EmployeeReference:
+          type: object
+        ResolutionWorkSchedule:
+          type: string
+        BusinessService:
+          type: object
+        ResolutionPostconditions:
+          type: string
+        ResolutionServiceType:
+          type: string
+        ResolutionServiceDescription:
+          type: string
+        ResolutionServiceInputsandOuputs:
+          type: string
+        ResolutionServiceWorkProduct:
+          type: string
+        ResolutionServiceName:
+          type: string
     HTTPError:
       type: object
       properties:
@@ -823,14 +823,6 @@ components:
   parameters:
     AccountsReceivableID:
       name: accountsreceivableId
-      in: path
-      required: true
-      style: simple
-      explode: false
-      schema:
-        type: string
-    ResolutionID:
-      name: resolutionId
       in: path
       required: true
       style: simple
@@ -863,6 +855,14 @@ components:
         type: string
     AccountsReceivableOutcomeID:
       name: accountsreceivableoutcomeId
+      in: path
+      required: true
+      style: simple
+      explode: false
+      schema:
+        type: string
+    ResolutionID:
+      name: resolutionId
       in: path
       required: true
       style: simple

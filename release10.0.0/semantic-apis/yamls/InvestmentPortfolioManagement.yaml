@@ -1,7 +1,7 @@
 openapi: 3.0.1
 info:
   title: Investment Portfolio Management
-  description: Manage an investment portfolio, initiating trading to leverage market opportunities, remaining within portfolio trading policies
+  description: ''
   version: 10.0.0
 servers:
 - description: SwaggerHub API Auto Mocking
@@ -10,20 +10,20 @@ paths:
   /InvestmentPortfolioManagement/Initiate:
     post:
       tags:
-      - CR - ManagedInvestmentPortfolioArrangement
+      - CR - ManagedInvestmentPortfolioFacility
       summary: InCR Initiate investment portfolio management activity for a customer
       description: InCR Initiate investment portfolio management activity for a customer
       operationId: Initiate
       parameters: []
       requestBody:
-        $ref: '#/components/requestBodies/ManagedInvestmentPortfolioArrangement'
+        $ref: '#/components/requestBodies/ManagedInvestmentPortfolioFacility'
       responses:
         200:
           description: Success
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/ManagedInvestmentPortfolioArrangement'
+                $ref: '#/components/schemas/ManagedInvestmentPortfolioFacility'
         400:
           $ref: '#/components/responses/BadRequestError'
         401:
@@ -39,21 +39,21 @@ paths:
   /InvestmentPortfolioManagement/{investmentportfoliomanagementId}/Update:
     put:
       tags:
-      - CR - ManagedInvestmentPortfolioArrangement
+      - CR - ManagedInvestmentPortfolioFacility
       summary: UpCR Update details of an active investment portfolio management arrangement
       description: UpCR Update details of an active investment portfolio management arrangement
       operationId: Update
       parameters:
       - $ref: '#/components/parameters/InvestmentPortfolioManagementID'
       requestBody:
-        $ref: '#/components/requestBodies/ManagedInvestmentPortfolioArrangement'
+        $ref: '#/components/requestBodies/ManagedInvestmentPortfolioFacility'
       responses:
         200:
           description: Success
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/ManagedInvestmentPortfolioArrangement'
+                $ref: '#/components/schemas/ManagedInvestmentPortfolioFacility'
         400:
           $ref: '#/components/responses/BadRequestError'
         401:
@@ -69,21 +69,21 @@ paths:
   /InvestmentPortfolioManagement/{investmentportfoliomanagementId}/Execute:
     put:
       tags:
-      - CR - ManagedInvestmentPortfolioArrangement
+      - CR - ManagedInvestmentPortfolioFacility
       summary: ExCR Execute an automated service
       description: ExCR Execute an automated service
       operationId: Execute
       parameters:
       - $ref: '#/components/parameters/InvestmentPortfolioManagementID'
       requestBody:
-        $ref: '#/components/requestBodies/ManagedInvestmentPortfolioArrangement'
+        $ref: '#/components/requestBodies/ManagedInvestmentPortfolioFacility'
       responses:
         200:
           description: Success
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/ManagedInvestmentPortfolioArrangement'
+                $ref: '#/components/schemas/ManagedInvestmentPortfolioFacility'
         400:
           $ref: '#/components/responses/BadRequestError'
         401:
@@ -99,21 +99,21 @@ paths:
   /InvestmentPortfolioManagement/{investmentportfoliomanagementId}/Request:
     put:
       tags:
-      - CR - ManagedInvestmentPortfolioArrangement
+      - CR - ManagedInvestmentPortfolioFacility
       summary: RqCR Request manual intervention
       description: RqCR Request manual intervention
       operationId: Request
       parameters:
       - $ref: '#/components/parameters/InvestmentPortfolioManagementID'
       requestBody:
-        $ref: '#/components/requestBodies/ManagedInvestmentPortfolioArrangement'
+        $ref: '#/components/requestBodies/ManagedInvestmentPortfolioFacility'
       responses:
         200:
           description: Success
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/ManagedInvestmentPortfolioArrangement'
+                $ref: '#/components/schemas/ManagedInvestmentPortfolioFacility'
         400:
           $ref: '#/components/responses/BadRequestError'
         401:
@@ -129,7 +129,7 @@ paths:
   /InvestmentPortfolioManagement/{investmentportfoliomanagementId}/Retrieve:
     get:
       tags:
-      - CR - ManagedInvestmentPortfolioArrangement
+      - CR - ManagedInvestmentPortfolioFacility
       summary: ReCR Retrieve details about a managed investment portfolio
       description: ReCR Retrieve details about a managed investment portfolio
       operationId: Retrieve
@@ -141,7 +141,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/ManagedInvestmentPortfolioArrangement'
+                $ref: '#/components/schemas/ManagedInvestmentPortfolioFacility'
         400:
           $ref: '#/components/responses/BadRequestError'
         401:
@@ -170,7 +170,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/ManagedInvestmentPortfolioArrangement'
+                $ref: '#/components/schemas/ManagedInvestmentPortfolioFacility'
         400:
           $ref: '#/components/responses/BadRequestError'
         401:
@@ -199,7 +199,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/ManagedInvestmentPortfolioArrangement'
+                $ref: '#/components/schemas/ManagedInvestmentPortfolioFacility'
         400:
           $ref: '#/components/responses/BadRequestError'
         401:
@@ -222,7 +222,7 @@ paths:
       parameters:
       - $ref: '#/components/parameters/InvestmentPortfolioManagementID'
       requestBody:
-        $ref: '#/components/requestBodies/ManagedInvestmentPortfolioArrangement'
+        $ref: '#/components/requestBodies/ManagedInvestmentPortfolioFacility'
       responses:
         200:
           description: Success
@@ -351,7 +351,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/ManagedInvestmentPortfolioArrangement'
+                $ref: '#/components/schemas/ManagedInvestmentPortfolioFacility'
         400:
           $ref: '#/components/responses/BadRequestError'
         401:
@@ -366,7 +366,7 @@ paths:
           $ref: '#/components/responses/InternalServerError'
 components:
   schemas:
-    ManagedInvestmentPortfolioArrangement:
+    ManagedInvestmentPortfolioFacility:
       type: object
       properties:
         InvestmentPortfolioTradingPolicies:
@@ -384,6 +384,13 @@ components:
         InvestmentPortfolioSecurityType:
           type: string
         InvestmentPortfolioSecurityHolding:
+          type: string
+    MarketOpportunities:
+      type: object
+      properties:
+        MarketOpportunityDescription:
+          type: string
+        SecuritiesComparison:
           type: string
     TradeInitiation:
       type: object
@@ -403,13 +410,6 @@ components:
           type: string
         ProjectedPortfolioImpact:
           type: string
-    MarketOpportunities:
-      type: object
-      properties:
-        MarketOpportunityDescription:
-          type: string
-        SecuritiesComparison:
-          type: string
     HTTPError:
       type: object
       properties:
@@ -422,7 +422,7 @@ components:
     InitiateTradeInitiationResponse:
       type: object
       properties:
-        ManagedInvestmentPortfolioArrangement:
+        ManagedInvestmentPortfolioFacility:
           type: object
           properties:
             InvestmentPortfolioTradingPolicies:
@@ -451,6 +451,14 @@ components:
       explode: false
       schema:
         type: string
+    MarketOpportunitiesID:
+      name: marketopportunitiesId
+      in: path
+      required: true
+      style: simple
+      explode: false
+      schema:
+        type: string
     TradeInitiationID:
       name: tradeinitiationId
       in: path
@@ -467,21 +475,13 @@ components:
       explode: false
       schema:
         type: string
-    MarketOpportunitiesID:
-      name: marketopportunitiesId
-      in: path
-      required: true
-      style: simple
-      explode: false
-      schema:
-        type: string
   requestBodies:
-    ManagedInvestmentPortfolioArrangement:
+    ManagedInvestmentPortfolioFacility:
       required: true
       content:
         application/json:
           schema:
-            $ref: '#/components/schemas/ManagedInvestmentPortfolioArrangement'
+            $ref: '#/components/schemas/ManagedInvestmentPortfolioFacility'
     TradeInitiation:
       required: true
       content:

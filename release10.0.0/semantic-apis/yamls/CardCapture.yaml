@@ -1,7 +1,7 @@
 openapi: 3.0.1
 info:
   title: Card Capture
-  description: A distributed facility to capture card transactions at the point of sale
+  description: ''
   version: 10.0.0
 servers:
 - description: SwaggerHub API Auto Mocking
@@ -684,26 +684,26 @@ components:
           type: string
         CreditChargeCardFinancialCaptureTransactionTransaction:
           type: string
-    TransactionAuthorization:
+    TransactionConsolidation:
       type: object
       properties:
-        TransactionAuthorizationPreconditions:
+        TransactionConsolidationPreconditions:
           type: string
-        TransactionAuthorizationTaskSchedule:
+        TransactionConsolidationTaskSchedule:
           type: string
-        BusinessService:
+        CardTransactionConsolidation:
           type: object
-        TransactionAuthorizationPostconditions:
+        TransactionConsolidationPostconditions:
           type: string
-        TransactionAuthorizationServiceType:
+        TransactionConsolidationCardTransactionConsolidationServiceType:
           type: string
-        TransactionAuthorizationServiceDescription:
+        TransactionConsolidationCardTransactionConsolidationServiceDescription:
           type: string
-        TransactionAuthorizationServiceInputsandOuputs:
+        TransactionConsolidationCardTransactionConsolidationServiceInputsandOuputs:
           type: string
-        TransactionAuthorizationServiceWorkProduct:
+        TransactionConsolidationCardTransactionConsolidationServiceWorkProduct:
           type: string
-        TransactionAuthorizationServiceName:
+        TransactionConsolidationCardTransactionConsolidationServiceName:
           type: string
     TransactionCapture:
       type: object
@@ -725,6 +725,48 @@ components:
         TransactionCaptureServiceWorkProduct:
           type: string
         TransactionCaptureServiceName:
+          type: string
+    TransactionAuthorization:
+      type: object
+      properties:
+        TransactionAuthorizationPreconditions:
+          type: string
+        TransactionAuthorizationTaskSchedule:
+          type: string
+        BusinessService:
+          type: object
+        TransactionAuthorizationPostconditions:
+          type: string
+        TransactionAuthorizationServiceType:
+          type: string
+        TransactionAuthorizationServiceDescription:
+          type: string
+        TransactionAuthorizationServiceInputsandOuputs:
+          type: string
+        TransactionAuthorizationServiceWorkProduct:
+          type: string
+        TransactionAuthorizationServiceName:
+          type: string
+    TransactionReversal:
+      type: object
+      properties:
+        TransactionReversalPreconditions:
+          type: string
+        TransactionReversalTaskSchedule:
+          type: string
+        CardTransactionReversal:
+          type: object
+        TransactionReversalPostconditions:
+          type: string
+        TransactionReversalCardTransactionReversalServiceType:
+          type: string
+        TransactionReversalCardTransactionReversalServiceDescription:
+          type: string
+        TransactionReversalCardTransactionReversalServiceInputsandOuputs:
+          type: string
+        TransactionReversalCardTransactionReversalServiceWorkProduct:
+          type: string
+        TransactionReversalCardTransactionReversalServiceName:
           type: string
     CardCaptureOutcome:
       type: object
@@ -751,48 +793,6 @@ components:
           type: string
         CardCaptureWorkProduct:
           type: string
-    TransactionReversal:
-      type: object
-      properties:
-        TransactionReversalPreconditions:
-          type: string
-        TransactionReversalTaskSchedule:
-          type: string
-        CardTransactionReversal:
-          type: object
-        TransactionReversalPostconditions:
-          type: string
-        TransactionReversalCardTransactionReversalServiceType:
-          type: string
-        TransactionReversalCardTransactionReversalServiceDescription:
-          type: string
-        TransactionReversalCardTransactionReversalServiceInputsandOuputs:
-          type: string
-        TransactionReversalCardTransactionReversalServiceWorkProduct:
-          type: string
-        TransactionReversalCardTransactionReversalServiceName:
-          type: string
-    TransactionConsolidation:
-      type: object
-      properties:
-        TransactionConsolidationPreconditions:
-          type: string
-        TransactionConsolidationTaskSchedule:
-          type: string
-        CardTransactionConsolidation:
-          type: object
-        TransactionConsolidationPostconditions:
-          type: string
-        TransactionConsolidationCardTransactionConsolidationServiceType:
-          type: string
-        TransactionConsolidationCardTransactionConsolidationServiceDescription:
-          type: string
-        TransactionConsolidationCardTransactionConsolidationServiceInputsandOuputs:
-          type: string
-        TransactionConsolidationCardTransactionConsolidationServiceWorkProduct:
-          type: string
-        TransactionConsolidationCardTransactionConsolidationServiceName:
-          type: string
     HTTPError:
       type: object
       properties:
@@ -811,8 +811,8 @@ components:
       explode: false
       schema:
         type: string
-    TransactionAuthorizationID:
-      name: transactionauthorizationId
+    TransactionConsolidationID:
+      name: transactionconsolidationId
       in: path
       required: true
       style: simple
@@ -827,8 +827,8 @@ components:
       explode: false
       schema:
         type: string
-    CardCaptureOutcomeID:
-      name: cardcaptureoutcomeId
+    TransactionAuthorizationID:
+      name: transactionauthorizationId
       in: path
       required: true
       style: simple
@@ -843,8 +843,8 @@ components:
       explode: false
       schema:
         type: string
-    TransactionConsolidationID:
-      name: transactionconsolidationId
+    CardCaptureOutcomeID:
+      name: cardcaptureoutcomeId
       in: path
       required: true
       style: simple

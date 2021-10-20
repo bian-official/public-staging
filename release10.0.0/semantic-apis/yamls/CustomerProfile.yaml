@@ -1,7 +1,7 @@
 openapi: 3.0.1
 info:
   title: Customer Profile
-  description: This service domain maintains a small profile of key indicators for a customer that is referenced during customer interactions to facilitate routing, servicing and product/service fulfillment decisions. This can include status (such as account in arrears), ratings (such as high value customer) and alerts (such possible fraud activity detected)
+  description: ''
   version: 10.0.0
 servers:
 - description: SwaggerHub API Auto Mocking
@@ -437,17 +437,6 @@ components:
       properties:
         CustomerReference:
           type: object
-    Alert:
-      type: object
-      properties:
-        CustomerRelationshipAlertType:
-          type: string
-        CustomerRelationshipAlert:
-          type: string
-        CustomerRelationshipAlertNarrative:
-          type: string
-        CustomerRelationshipAlertValidFrom/ToDate:
-          type: string
     Status:
       type: object
       properties:
@@ -458,6 +447,17 @@ components:
         CustomerRelationshipStatusNarrative:
           type: string
         CustomerRelationshipStatusValidFrom/ToDate:
+          type: string
+    Alert:
+      type: object
+      properties:
+        CustomerRelationshipAlertType:
+          type: string
+        CustomerRelationshipAlert:
+          type: string
+        CustomerRelationshipAlertNarrative:
+          type: string
+        CustomerRelationshipAlertValidFrom/ToDate:
           type: string
     Rating:
       type: object
@@ -488,16 +488,16 @@ components:
       explode: false
       schema:
         type: string
-    AlertID:
-      name: alertId
+    StatusID:
+      name: statusId
       in: path
       required: true
       style: simple
       explode: false
       schema:
         type: string
-    StatusID:
-      name: statusId
+    AlertID:
+      name: alertId
       in: path
       required: true
       style: simple

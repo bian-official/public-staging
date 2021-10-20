@@ -1,7 +1,7 @@
 openapi: 3.0.1
 info:
   title: Collections
-  description: Handles the liquidation of assets to offset the losses for problem accounts
+  description: ''
   version: 10.0.0
 servers:
 - description: SwaggerHub API Auto Mocking
@@ -772,28 +772,28 @@ components:
           type: string
         CollateralAssetLiquidationProcedureCustomerAgreementReference:
           type: object
-    CollectionsAccountUpdate:
+    DebtFactoring:
       type: object
       properties:
-        CollectionsAccountUpdatePreconditions:
+        DebtFactoringPreconditions:
           type: string
-        CollectionsAccountUpdateBusinessUnit/EmployeeReference:
+        DebtFactoringBusinessUnit/EmployeeReference:
           type: object
-        CollectionsAccountUpdateWorkSchedule:
+        DebtFactoringWorkSchedule:
           type: string
-        CollectionsAccountUpdate:
+        Factoring:
           type: object
-        CollectionsAccountUpdatePostconditions:
+        DebtFactoringPostconditions:
           type: string
-        CollectionsAccountUpdateCollectionsAccountUpdateServiceType:
+        DebtFactoringFactoringServiceType:
           type: string
-        CollectionsAccountUpdateCollectionsAccountUpdateServiceDescription:
+        DebtFactoringFactoringServiceDescription:
           type: string
-        CollectionsAccountUpdateCollectionsAccountUpdateServiceInputsandOuputs:
+        DebtFactoringFactoringServiceInputsandOuputs:
           type: string
-        CollectionsAccountUpdateCollectionsAccountUpdateServiceWorkProduct:
+        DebtFactoringFactoringServiceWorkProduct:
           type: string
-        CollectionsAccountUpdateCollectionsAccountUpdateServiceName:
+        DebtFactoringFactoringServiceName:
           type: string
     CollectionsAssessment:
       type: object
@@ -818,28 +818,28 @@ components:
           type: string
         CollectionsAssessmentCollectionsAssessmentServiceName:
           type: string
-    DebtFactoring:
+    CollectionsAccountUpdate:
       type: object
       properties:
-        DebtFactoringPreconditions:
+        CollectionsAccountUpdatePreconditions:
           type: string
-        DebtFactoringBusinessUnit/EmployeeReference:
+        CollectionsAccountUpdateBusinessUnit/EmployeeReference:
           type: object
-        DebtFactoringWorkSchedule:
+        CollectionsAccountUpdateWorkSchedule:
           type: string
-        Factoring:
+        CollectionsAccountUpdate:
           type: object
-        DebtFactoringPostconditions:
+        CollectionsAccountUpdatePostconditions:
           type: string
-        DebtFactoringFactoringServiceType:
+        CollectionsAccountUpdateCollectionsAccountUpdateServiceType:
           type: string
-        DebtFactoringFactoringServiceDescription:
+        CollectionsAccountUpdateCollectionsAccountUpdateServiceDescription:
           type: string
-        DebtFactoringFactoringServiceInputsandOuputs:
+        CollectionsAccountUpdateCollectionsAccountUpdateServiceInputsandOuputs:
           type: string
-        DebtFactoringFactoringServiceWorkProduct:
+        CollectionsAccountUpdateCollectionsAccountUpdateServiceWorkProduct:
           type: string
-        DebtFactoringFactoringServiceName:
+        CollectionsAccountUpdateCollectionsAccountUpdateServiceName:
           type: string
     CollateralLiquidation:
       type: object
@@ -864,13 +864,6 @@ components:
           type: string
         CollateralLiquidationCollateralLiquidationServiceName:
           type: string
-    CollectionsOutcome:
-      type: object
-      properties:
-        CollectionsWorkProduct:
-          type: string
-        CollectionsProcedure:
-          type: string
     CollateralValuation:
       type: object
       properties:
@@ -894,6 +887,13 @@ components:
           type: string
         CollateralValuationCollateralValuationServiceName:
           type: string
+    CollectionsOutcome:
+      type: object
+      properties:
+        CollectionsWorkProduct:
+          type: string
+        CollectionsProcedure:
+          type: string
     HTTPError:
       type: object
       properties:
@@ -912,8 +912,8 @@ components:
       explode: false
       schema:
         type: string
-    CollectionsAccountUpdateID:
-      name: collectionsaccountupdateId
+    DebtFactoringID:
+      name: debtfactoringId
       in: path
       required: true
       style: simple
@@ -928,8 +928,8 @@ components:
       explode: false
       schema:
         type: string
-    DebtFactoringID:
-      name: debtfactoringId
+    CollectionsAccountUpdateID:
+      name: collectionsaccountupdateId
       in: path
       required: true
       style: simple
@@ -944,16 +944,16 @@ components:
       explode: false
       schema:
         type: string
-    CollectionsOutcomeID:
-      name: collectionsoutcomeId
+    CollateralValuationID:
+      name: collateralvaluationId
       in: path
       required: true
       style: simple
       explode: false
       schema:
         type: string
-    CollateralValuationID:
-      name: collateralvaluationId
+    CollectionsOutcomeID:
+      name: collectionsoutcomeId
       in: path
       required: true
       style: simple

@@ -1,7 +1,7 @@
 openapi: 3.0.1
 info:
   title: Competitor Analysis
-  description: Solicit, consolidate and analyze competitor specific public domain data to develop competitor insights and comparisons
+  description: ''
   version: 10.0.0
 servers:
 - description: SwaggerHub API Auto Mocking

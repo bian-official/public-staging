@@ -1,7 +1,7 @@
 openapi: 3.0.1
 info:
   title: Card Network Participant Facility
-  description: This service domain orchestrates the activities related to the inclusion of new Acquirers and Issuers in the Card Network, their terms and conditions and their status.
+  description: ''
   version: 10.0.0
 servers:
 - description: SwaggerHub API Auto Mocking
@@ -10,20 +10,20 @@ paths:
   /CardNetworkParticipantFacility/Initiate:
     post:
       tags:
-      - CR - CardNetworkParticipantFacilityArrangement
+      - CR - CardNetworkParticipantFacility
       summary: InCR Initiate a new network participant facility
       description: InCR Initiate a new network participant facility
       operationId: Initiate
       parameters: []
       requestBody:
-        $ref: '#/components/requestBodies/CardNetworkParticipantFacilityArrangement'
+        $ref: '#/components/requestBodies/CardNetworkParticipantFacility'
       responses:
         200:
           description: Success
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/CardNetworkParticipantFacilityArrangement'
+                $ref: '#/components/schemas/CardNetworkParticipantFacility'
         400:
           $ref: '#/components/responses/BadRequestError'
         401:
@@ -39,21 +39,21 @@ paths:
   /CardNetworkParticipantFacility/{cardnetworkparticipantfacilityId}/Update:
     put:
       tags:
-      - CR - CardNetworkParticipantFacilityArrangement
+      - CR - CardNetworkParticipantFacility
       summary: UpCR Update details for an active network participant facility
       description: UpCR Update details for an active network participant facility
       operationId: Update
       parameters:
       - $ref: '#/components/parameters/CardNetworkParticipantFacilityID'
       requestBody:
-        $ref: '#/components/requestBodies/CardNetworkParticipantFacilityArrangement'
+        $ref: '#/components/requestBodies/CardNetworkParticipantFacility'
       responses:
         200:
           description: Success
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/CardNetworkParticipantFacilityArrangement'
+                $ref: '#/components/schemas/CardNetworkParticipantFacility'
         400:
           $ref: '#/components/responses/BadRequestError'
         401:
@@ -69,7 +69,7 @@ paths:
   /CardNetworkParticipantFacility/{cardnetworkparticipantfacilityId}/Retrieve:
     get:
       tags:
-      - CR - CardNetworkParticipantFacilityArrangement
+      - CR - CardNetworkParticipantFacility
       summary: ReCR Retrieve details about a network participant facility
       description: ReCR Retrieve details about a network participant facility
       operationId: Retrieve
@@ -81,7 +81,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/CardNetworkParticipantFacilityArrangement'
+                $ref: '#/components/schemas/CardNetworkParticipantFacility'
         400:
           $ref: '#/components/responses/BadRequestError'
         401:
@@ -172,7 +172,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/CardNetworkParticipantFacilityArrangement'
+                $ref: '#/components/schemas/CardNetworkParticipantFacility'
         400:
           $ref: '#/components/responses/BadRequestError'
         401:
@@ -294,7 +294,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/CardNetworkParticipantFacilityArrangement'
+                $ref: '#/components/schemas/CardNetworkParticipantFacility'
         400:
           $ref: '#/components/responses/BadRequestError'
         401:
@@ -309,7 +309,7 @@ paths:
           $ref: '#/components/responses/InternalServerError'
 components:
   schemas:
-    CardNetworkParticipantFacilityArrangement:
+    CardNetworkParticipantFacility:
       type: object
       properties:
         ProductandServiceReference:
@@ -332,19 +332,6 @@ components:
           type: string
         ParticipantIssuerBankServiceSchedule:
           type: string
-    ParticipantAccount:
-      type: object
-      properties:
-        ParticipantAccountPostingTransaction:
-          type: string
-        NetworkParticipantFacilityAccountPostingPurpose:
-          type: string
-        NetworkParticipantFacilityAccountPostingAmount:
-          type: number
-        NetworkParticipantFacilityAccountPostingValueDate:
-          type: string
-        NetworkParticipantFacilityAccountPostingResult:
-          type: string
     ParticipantService:
       type: object
       properties:
@@ -359,6 +346,19 @@ components:
         NetworkParticipantNetworkServiceRequestWorkProduct:
           type: string
         NetworkParticipantNetworkServiceRequestResult:
+          type: string
+    ParticipantAccount:
+      type: object
+      properties:
+        ParticipantAccountPostingTransaction:
+          type: string
+        NetworkParticipantFacilityAccountPostingPurpose:
+          type: string
+        NetworkParticipantFacilityAccountPostingAmount:
+          type: number
+        NetworkParticipantFacilityAccountPostingValueDate:
+          type: string
+        NetworkParticipantFacilityAccountPostingResult:
           type: string
     HTTPError:
       type: object
@@ -378,14 +378,6 @@ components:
       explode: false
       schema:
         type: string
-    ParticipantAccountID:
-      name: participantaccountId
-      in: path
-      required: true
-      style: simple
-      explode: false
-      schema:
-        type: string
     ParticipantServiceID:
       name: participantserviceId
       in: path
@@ -394,13 +386,21 @@ components:
       explode: false
       schema:
         type: string
+    ParticipantAccountID:
+      name: participantaccountId
+      in: path
+      required: true
+      style: simple
+      explode: false
+      schema:
+        type: string
   requestBodies:
-    CardNetworkParticipantFacilityArrangement:
+    CardNetworkParticipantFacility:
       required: true
       content:
         application/json:
           schema:
-            $ref: '#/components/schemas/CardNetworkParticipantFacilityArrangement'
+            $ref: '#/components/schemas/CardNetworkParticipantFacility'
     ParticipantAccount:
       required: true
       content:

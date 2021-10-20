@@ -1,7 +1,7 @@
 openapi: 3.0.1
 info:
   title: Financial Accounting
-  description: The Financial Accounting Service Domain takes in financial facts and based on these, creates accounting instructions that will update the general ledger and sub ledger accounts
+  description: ''
   version: 10.0.0
 servers:
 - description: SwaggerHub API Auto Mocking

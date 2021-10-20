@@ -1,7 +1,7 @@
 openapi: 3.0.1
 info:
   title: Syndicated Loan
-  description: Handle the processing of syndicated loans with the bank playing the lead coordination role with other syndicate bank members. Note some initial preparation may have been made through prior customer offer processing.
+  description: ''
   version: 10.0.0
 servers:
 - description: SwaggerHub API Auto Mocking
@@ -10,21 +10,21 @@ paths:
   /SyndicatedLoan/{syndicatedloanId}/Control:
     put:
       tags:
-      - CR - SyndicatedLoanArrangement
-      summary: CoCR Control the processing of Syndicated Loan Arrangement
-      description: CoCR Control the processing of Syndicated Loan Arrangement
+      - CR - SyndicatedLoanFacility
+      summary: CoCR Control the processing of Syndicated Loan Facility
+      description: CoCR Control the processing of Syndicated Loan Facility
       operationId: Control
       parameters:
       - $ref: '#/components/parameters/SyndicatedLoanID'
       requestBody:
-        $ref: '#/components/requestBodies/SyndicatedLoanArrangement'
+        $ref: '#/components/requestBodies/SyndicatedLoanFacility'
       responses:
         200:
           description: Success
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/SyndicatedLoanArrangement'
+                $ref: '#/components/schemas/SyndicatedLoanFacility'
         400:
           $ref: '#/components/responses/BadRequestError'
         401:
@@ -40,21 +40,21 @@ paths:
   /SyndicatedLoan/{syndicatedloanId}/Exchange:
     put:
       tags:
-      - CR - SyndicatedLoanArrangement
-      summary: EcCR Accept, verify, etc. aspects of Syndicated Loan Arrangement processing
-      description: EcCR Accept, verify, etc. aspects of Syndicated Loan Arrangement processing
+      - CR - SyndicatedLoanFacility
+      summary: EcCR Accept, verify, etc. aspects of Syndicated Loan Facility processing
+      description: EcCR Accept, verify, etc. aspects of Syndicated Loan Facility processing
       operationId: Exchange
       parameters:
       - $ref: '#/components/parameters/SyndicatedLoanID'
       requestBody:
-        $ref: '#/components/requestBodies/SyndicatedLoanArrangement'
+        $ref: '#/components/requestBodies/SyndicatedLoanFacility'
       responses:
         200:
           description: Success
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/SyndicatedLoanArrangement'
+                $ref: '#/components/schemas/SyndicatedLoanFacility'
         400:
           $ref: '#/components/responses/BadRequestError'
         401:
@@ -70,21 +70,21 @@ paths:
   /SyndicatedLoan/{syndicatedloanId}/Execute:
     put:
       tags:
-      - CR - SyndicatedLoanArrangement
-      summary: ExCR Execute an available automated action for Syndicated Loan Arrangement
-      description: ExCR Execute an available automated action for Syndicated Loan Arrangement
+      - CR - SyndicatedLoanFacility
+      summary: ExCR Execute an available automated action for Syndicated Loan Facility
+      description: ExCR Execute an available automated action for Syndicated Loan Facility
       operationId: Execute
       parameters:
       - $ref: '#/components/parameters/SyndicatedLoanID'
       requestBody:
-        $ref: '#/components/requestBodies/SyndicatedLoanArrangement'
+        $ref: '#/components/requestBodies/SyndicatedLoanFacility'
       responses:
         200:
           description: Success
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/SyndicatedLoanArrangement'
+                $ref: '#/components/schemas/SyndicatedLoanFacility'
         400:
           $ref: '#/components/responses/BadRequestError'
         401:
@@ -100,20 +100,20 @@ paths:
   /SyndicatedLoan/Initiate:
     post:
       tags:
-      - CR - SyndicatedLoanArrangement
-      summary: InCR Instantiate a new Syndicated Loan Arrangement
-      description: InCR Instantiate a new Syndicated Loan Arrangement
+      - CR - SyndicatedLoanFacility
+      summary: InCR Instantiate a new Syndicated Loan Facility
+      description: InCR Instantiate a new Syndicated Loan Facility
       operationId: Initiate
       parameters: []
       requestBody:
-        $ref: '#/components/requestBodies/SyndicatedLoanArrangement'
+        $ref: '#/components/requestBodies/SyndicatedLoanFacility'
       responses:
         200:
           description: Success
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/SyndicatedLoanArrangement'
+                $ref: '#/components/schemas/SyndicatedLoanFacility'
         400:
           $ref: '#/components/responses/BadRequestError'
         401:
@@ -129,9 +129,9 @@ paths:
   /SyndicatedLoan/{syndicatedloanId}/Retrieve:
     get:
       tags:
-      - CR - SyndicatedLoanArrangement
-      summary: ReCR Retrieve details about any aspect of Syndicated Loan Arrangement
-      description: ReCR Retrieve details about any aspect of Syndicated Loan Arrangement
+      - CR - SyndicatedLoanFacility
+      summary: ReCR Retrieve details about any aspect of Syndicated Loan Facility
+      description: ReCR Retrieve details about any aspect of Syndicated Loan Facility
       operationId: Retrieve
       parameters:
       - $ref: '#/components/parameters/SyndicatedLoanID'
@@ -141,7 +141,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/SyndicatedLoanArrangement'
+                $ref: '#/components/schemas/SyndicatedLoanFacility'
         400:
           $ref: '#/components/responses/BadRequestError'
         401:
@@ -157,21 +157,21 @@ paths:
   /SyndicatedLoan/{syndicatedloanId}/Request:
     put:
       tags:
-      - CR - SyndicatedLoanArrangement
-      summary: RqCR Request manual intervention or a decision with respect to Syndicated Loan Arrangement
-      description: RqCR Request manual intervention or a decision with respect to Syndicated Loan Arrangement
+      - CR - SyndicatedLoanFacility
+      summary: RqCR Request manual intervention or a decision with respect to Syndicated Loan Facility
+      description: RqCR Request manual intervention or a decision with respect to Syndicated Loan Facility
       operationId: Request
       parameters:
       - $ref: '#/components/parameters/SyndicatedLoanID'
       requestBody:
-        $ref: '#/components/requestBodies/SyndicatedLoanArrangement'
+        $ref: '#/components/requestBodies/SyndicatedLoanFacility'
       responses:
         200:
           description: Success
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/SyndicatedLoanArrangement'
+                $ref: '#/components/schemas/SyndicatedLoanFacility'
         400:
           $ref: '#/components/responses/BadRequestError'
         401:
@@ -187,21 +187,21 @@ paths:
   /SyndicatedLoan/{syndicatedloanId}/Update:
     put:
       tags:
-      - CR - SyndicatedLoanArrangement
-      summary: UpCR Update details relating to Syndicated Loan Arrangement
-      description: UpCR Update details relating to Syndicated Loan Arrangement
+      - CR - SyndicatedLoanFacility
+      summary: UpCR Update details relating to Syndicated Loan Facility
+      description: UpCR Update details relating to Syndicated Loan Facility
       operationId: Update
       parameters:
       - $ref: '#/components/parameters/SyndicatedLoanID'
       requestBody:
-        $ref: '#/components/requestBodies/SyndicatedLoanArrangement'
+        $ref: '#/components/requestBodies/SyndicatedLoanFacility'
       responses:
         200:
           description: Success
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/SyndicatedLoanArrangement'
+                $ref: '#/components/schemas/SyndicatedLoanFacility'
         400:
           $ref: '#/components/responses/BadRequestError'
         401:
@@ -734,84 +734,35 @@ paths:
           $ref: '#/components/responses/InternalServerError'
 components:
   schemas:
-    SyndicatedLoanArrangement:
+    SyndicatedLoanFacility:
       type: object
       properties:
-        SyndicatedLoanArrangementParameterType:
+        SyndicatedLoanFacilityParameterType:
           type: string
-        SyndicatedLoanArrangementSelectedOption:
+        SyndicatedLoanFacilitySelectedOption:
           type: string
-        SyndicatedLoanArrangementType:
+        SyndicatedLoanFacilityType:
           type: string
-        SyndicatedLoanArrangementReference:
+        SyndicatedLoanFacilityReference:
           type: object
-        SyndicatedLoanArrangementSchedule:
+        SyndicatedLoanFacilitySchedule:
           type: string
-        SyndicatedLoanArrangementStatus:
+        SyndicatedLoanFacilityStatus:
           type: string
-        SyndicatedLoanArrangementCurrency:
+        SyndicatedLoanFacilityCurrency:
           type: string
-        SyndicatedLoanArrangementRegulationReference:
+        SyndicatedLoanFacilityRegulationReference:
           type: object
-        SyndicatedLoanArrangementRegulationType:
+        SyndicatedLoanFacilityRegulationType:
           type: string
-        SyndicatedLoanArrangementJurisdiction:
+        SyndicatedLoanFacilityJurisdiction:
           type: string
-        SyndicatedLoanArrangementBookingLocation:
+        SyndicatedLoanFacilityBookingLocation:
           type: string
-        SyndicatedLoanArrangementAccountType:
+        SyndicatedLoanFacilityAccountType:
           type: string
-        SyndicatedLoanArrangementAccountReference:
+        SyndicatedLoanFacilityAccountReference:
           type: object
-    SyndicateAssembly:
-      type: object
-      properties:
-        SyndicateAssemblyPreconditions:
-          type: string
-        SyndicateAssemblyFeatureSchedule:
-          type: string
-        SyndicatedLoanOrganization:
-          type: object
-        SyndicateAssemblyPostconditions:
-          type: string
-        SyndicateAssemblySyndicatedLoanOrganizationServiceType:
-          type: string
-        SyndicateAssemblySyndicatedLoanOrganizationServiceDescription:
-          type: string
-        SyndicateAssemblySyndicatedLoanOrganizationServiceInputsandOuputs:
-          type: string
-        SyndicateAssemblySyndicatedLoanOrganizationServiceWorkProduct:
-          type: string
-        SyndicateAssemblySyndicatedLoanOrganizationServiceName:
-          type: string
-    SyndicatedLoanOutcome:
-      type: object
-      properties:
-        SyndicatedLoanFinancialFacility:
-          type: string
-        SyndicatedLoanWorkProduct:
-          type: string
-    Fulfillment:
-      type: object
-      properties:
-        FulfillmentPreconditions:
-          type: string
-        FulfillmentFeatureSchedule:
-          type: string
-        FiduciaryArrangementFulfillment:
-          type: object
-        FulfillmentPostconditions:
-          type: string
-        FulfillmentFiduciaryArrangementFulfillmentServiceType:
-          type: string
-        FulfillmentFiduciaryArrangementFulfillmentServiceDescription:
-          type: string
-        FulfillmentFiduciaryArrangementFulfillmentServiceInputsandOuputs:
-          type: string
-        FulfillmentFiduciaryArrangementFulfillmentServiceWorkProduct:
-          type: string
-        FulfillmentFiduciaryArrangementFulfillmentServiceName:
-          type: string
     Origination:
       type: object
       properties:
@@ -840,19 +791,68 @@ components:
           type: string
         StructuringFeatureSchedule:
           type: string
-        SyndicatedLoanArrangement:
+        SyndicatedLoanFacility:
           type: object
         StructuringPostconditions:
           type: string
-        StructuringSyndicatedLoanArrangementServiceType:
+        StructuringSyndicatedLoanFacilityServiceType:
           type: string
-        StructuringSyndicatedLoanArrangementServiceDescription:
+        StructuringSyndicatedLoanFacilityServiceDescription:
           type: string
-        StructuringSyndicatedLoanArrangementServiceInputsandOuputs:
+        StructuringSyndicatedLoanFacilityServiceInputsandOuputs:
           type: string
-        StructuringSyndicatedLoanArrangementServiceWorkProduct:
+        StructuringSyndicatedLoanFacilityServiceWorkProduct:
           type: string
-        StructuringSyndicatedLoanArrangementServiceName:
+        StructuringSyndicatedLoanFacilityServiceName:
+          type: string
+    Fulfillment:
+      type: object
+      properties:
+        FulfillmentPreconditions:
+          type: string
+        FulfillmentFeatureSchedule:
+          type: string
+        FiduciaryArrangementFulfillment:
+          type: object
+        FulfillmentPostconditions:
+          type: string
+        FulfillmentFiduciaryArrangementFulfillmentServiceType:
+          type: string
+        FulfillmentFiduciaryArrangementFulfillmentServiceDescription:
+          type: string
+        FulfillmentFiduciaryArrangementFulfillmentServiceInputsandOuputs:
+          type: string
+        FulfillmentFiduciaryArrangementFulfillmentServiceWorkProduct:
+          type: string
+        FulfillmentFiduciaryArrangementFulfillmentServiceName:
+          type: string
+    SyndicateAssembly:
+      type: object
+      properties:
+        SyndicateAssemblyPreconditions:
+          type: string
+        SyndicateAssemblyFeatureSchedule:
+          type: string
+        SyndicatedLoanOrganization:
+          type: object
+        SyndicateAssemblyPostconditions:
+          type: string
+        SyndicateAssemblySyndicatedLoanOrganizationServiceType:
+          type: string
+        SyndicateAssemblySyndicatedLoanOrganizationServiceDescription:
+          type: string
+        SyndicateAssemblySyndicatedLoanOrganizationServiceInputsandOuputs:
+          type: string
+        SyndicateAssemblySyndicatedLoanOrganizationServiceWorkProduct:
+          type: string
+        SyndicateAssemblySyndicatedLoanOrganizationServiceName:
+          type: string
+    SyndicatedLoanOutcome:
+      type: object
+      properties:
+        SyndicatedLoanFinancialFacility:
+          type: string
+        SyndicatedLoanWorkProduct:
           type: string
     HTTPError:
       type: object
@@ -866,30 +866,6 @@ components:
   parameters:
     SyndicatedLoanID:
       name: syndicatedloanId
-      in: path
-      required: true
-      style: simple
-      explode: false
-      schema:
-        type: string
-    SyndicateAssemblyID:
-      name: syndicateassemblyId
-      in: path
-      required: true
-      style: simple
-      explode: false
-      schema:
-        type: string
-    SyndicatedLoanOutcomeID:
-      name: syndicatedloanoutcomeId
-      in: path
-      required: true
-      style: simple
-      explode: false
-      schema:
-        type: string
-    FulfillmentID:
-      name: fulfillmentId
       in: path
       required: true
       style: simple
@@ -912,13 +888,37 @@ components:
       explode: false
       schema:
         type: string
+    FulfillmentID:
+      name: fulfillmentId
+      in: path
+      required: true
+      style: simple
+      explode: false
+      schema:
+        type: string
+    SyndicateAssemblyID:
+      name: syndicateassemblyId
+      in: path
+      required: true
+      style: simple
+      explode: false
+      schema:
+        type: string
+    SyndicatedLoanOutcomeID:
+      name: syndicatedloanoutcomeId
+      in: path
+      required: true
+      style: simple
+      explode: false
+      schema:
+        type: string
   requestBodies:
-    SyndicatedLoanArrangement:
+    SyndicatedLoanFacility:
       required: true
       content:
         application/json:
           schema:
-            $ref: '#/components/schemas/SyndicatedLoanArrangement'
+            $ref: '#/components/schemas/SyndicatedLoanFacility'
     Fulfillment:
       required: true
       content:

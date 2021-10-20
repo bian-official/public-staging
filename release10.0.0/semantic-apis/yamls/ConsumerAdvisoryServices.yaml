@@ -1,7 +1,7 @@
 openapi: 3.0.1
 info:
   title: Consumer Advisory Services
-  description: Offer financial advisory services to consumer customers, possibly for a fee
+  description: ''
   version: 10.0.0
 servers:
 - description: SwaggerHub API Auto Mocking
@@ -10,20 +10,20 @@ paths:
   /ConsumerAdvisoryServices/Initiate:
     post:
       tags:
-      - CR - ConsumerAdviceArrangement
+      - CR - ConsumerAdviceFacility
       summary: InCR Initiate a consumer advisory session
       description: InCR Initiate a consumer advisory session
       operationId: Initiate
       parameters: []
       requestBody:
-        $ref: '#/components/requestBodies/ConsumerAdviceArrangement'
+        $ref: '#/components/requestBodies/ConsumerAdviceFacility'
       responses:
         200:
           description: Success
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/ConsumerAdviceArrangement'
+                $ref: '#/components/schemas/ConsumerAdviceFacility'
         400:
           $ref: '#/components/responses/BadRequestError'
         401:
@@ -39,21 +39,21 @@ paths:
   /ConsumerAdvisoryServices/{consumeradvisoryservicesId}/Update:
     put:
       tags:
-      - CR - ConsumerAdviceArrangement
+      - CR - ConsumerAdviceFacility
       summary: UpCR Update details for a consumer advisory session
       description: UpCR Update details for a consumer advisory session
       operationId: Update
       parameters:
       - $ref: '#/components/parameters/ConsumerAdvisoryServicesID'
       requestBody:
-        $ref: '#/components/requestBodies/ConsumerAdviceArrangement'
+        $ref: '#/components/requestBodies/ConsumerAdviceFacility'
       responses:
         200:
           description: Success
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/ConsumerAdviceArrangement'
+                $ref: '#/components/schemas/ConsumerAdviceFacility'
         400:
           $ref: '#/components/responses/BadRequestError'
         401:
@@ -69,21 +69,21 @@ paths:
   /ConsumerAdvisoryServices/{consumeradvisoryservicesId}/Request:
     put:
       tags:
-      - CR - ConsumerAdviceArrangement
+      - CR - ConsumerAdviceFacility
       summary: RqCR Request manual intervention in a session
       description: RqCR Request manual intervention in a session
       operationId: Request
       parameters:
       - $ref: '#/components/parameters/ConsumerAdvisoryServicesID'
       requestBody:
-        $ref: '#/components/requestBodies/ConsumerAdviceArrangement'
+        $ref: '#/components/requestBodies/ConsumerAdviceFacility'
       responses:
         200:
           description: Success
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/ConsumerAdviceArrangement'
+                $ref: '#/components/schemas/ConsumerAdviceFacility'
         400:
           $ref: '#/components/responses/BadRequestError'
         401:
@@ -99,7 +99,7 @@ paths:
   /ConsumerAdvisoryServices/{consumeradvisoryservicesId}/Retrieve:
     get:
       tags:
-      - CR - ConsumerAdviceArrangement
+      - CR - ConsumerAdviceFacility
       summary: ReCR Retrieve details about a consumer advisory session
       description: ReCR Retrieve details about a consumer advisory session
       operationId: Retrieve
@@ -111,7 +111,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/ConsumerAdviceArrangement'
+                $ref: '#/components/schemas/ConsumerAdviceFacility'
         400:
           $ref: '#/components/responses/BadRequestError'
         401:
@@ -518,7 +518,7 @@ paths:
           $ref: '#/components/responses/InternalServerError'
 components:
   schemas:
-    ConsumerAdviceArrangement:
+    ConsumerAdviceFacility:
       type: object
       properties:
         ProductInstanceReference:
@@ -544,6 +544,13 @@ components:
         DateType:
           type: string
         Date:
+          type: string
+    TaxOptimization:
+      type: object
+      properties:
+        ProductandServiceReference:
+          type: object
+        TaxOptimizationAdviceResult:
           type: string
     ProductGuidance:
       type: object
@@ -580,13 +587,6 @@ components:
           type: object
         FinancialPlanningAdviceResult:
           type: string
-    TaxOptimization:
-      type: object
-      properties:
-        ProductandServiceReference:
-          type: object
-        TaxOptimizationAdviceResult:
-          type: string
     HTTPError:
       type: object
       properties:
@@ -599,7 +599,7 @@ components:
     InitiateFinancialPlanningRequest:
       type: object
       properties:
-        ConsumerAdviceArrangement:
+        ConsumerAdviceFacility:
           type: object
           properties:
             ProductInstanceReference:
@@ -630,7 +630,7 @@ components:
     InitiateFinancialPlanningResponse:
       type: object
       properties:
-        ConsumerAdviceArrangement:
+        ConsumerAdviceFacility:
           type: object
           properties:
             BankBranchOrLocationReference:
@@ -659,7 +659,7 @@ components:
     InitiateTaxOptimizationRequest:
       type: object
       properties:
-        ConsumerAdviceArrangement:
+        ConsumerAdviceFacility:
           type: object
           properties:
             ProductInstanceReference:
@@ -690,7 +690,7 @@ components:
     InitiateTaxOptimizationResponse:
       type: object
       properties:
-        ConsumerAdviceArrangement:
+        ConsumerAdviceFacility:
           type: object
           properties:
             BankBranchOrLocationReference:
@@ -719,7 +719,7 @@ components:
     InitiateProductGuidanceRequest:
       type: object
       properties:
-        ConsumerAdviceArrangement:
+        ConsumerAdviceFacility:
           type: object
           properties:
             ProductInstanceReference:
@@ -754,7 +754,7 @@ components:
     InitiateProductGuidanceResponse:
       type: object
       properties:
-        ConsumerAdviceArrangement:
+        ConsumerAdviceFacility:
           type: object
           properties:
             BankBranchOrLocationReference:
@@ -797,6 +797,14 @@ components:
       explode: false
       schema:
         type: string
+    TaxOptimizationID:
+      name: taxoptimizationId
+      in: path
+      required: true
+      style: simple
+      explode: false
+      schema:
+        type: string
     ProductGuidanceID:
       name: productguidanceId
       in: path
@@ -821,21 +829,13 @@ components:
       explode: false
       schema:
         type: string
-    TaxOptimizationID:
-      name: taxoptimizationId
-      in: path
-      required: true
-      style: simple
-      explode: false
-      schema:
-        type: string
   requestBodies:
-    ConsumerAdviceArrangement:
+    ConsumerAdviceFacility:
       required: true
       content:
         application/json:
           schema:
-            $ref: '#/components/schemas/ConsumerAdviceArrangement'
+            $ref: '#/components/schemas/ConsumerAdviceFacility'
     InitiateFinancialPlanningRequest:
       required: true
       content:

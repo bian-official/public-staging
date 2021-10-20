@@ -1,7 +1,7 @@
 openapi: 3.0.1
 info:
   title: Market Data Switch Operation
-  description: This service domain operates the internal information distribution facility/switch in compliance with administered external subscription information feed service access rights. Note the content is retrieved by the Market Feed Operation service domain from the various external feed services. Internal information can also be published over the switch from various bank sources (such as bank rates provided by treasury).
+  description: ''
   version: 10.0.0
 servers:
 - description: SwaggerHub API Auto Mocking
@@ -407,6 +407,15 @@ components:
           type: object
         MarketInformationFeedServiceProfile:
           type: string
+    Distribution:
+      type: object
+      properties:
+        MarketDataSwitchUserAccessRightsRecordReference:
+          type: object
+        MarketDataSwitchUserAccessRightsRecord:
+          type: string
+        MarketDataSwitchServiceUserSessionRecord:
+          type: string
     FeedUpload:
       type: object
       properties:
@@ -424,15 +433,6 @@ components:
         InternalInformationFeedServiceRecordReference:
           type: object
         InternalInformationFeedServiceRecord:
-          type: string
-    Distribution:
-      type: object
-      properties:
-        MarketDataSwitchUserAccessRightsRecordReference:
-          type: object
-        MarketDataSwitchUserAccessRightsRecord:
-          type: string
-        MarketDataSwitchServiceUserSessionRecord:
           type: string
     HTTPError:
       type: object
@@ -452,6 +452,14 @@ components:
       explode: false
       schema:
         type: string
+    DistributionID:
+      name: distributionId
+      in: path
+      required: true
+      style: simple
+      explode: false
+      schema:
+        type: string
     FeedUploadID:
       name: feeduploadId
       in: path
@@ -462,14 +470,6 @@ components:
         type: string
     InternalPublicationID:
       name: internalpublicationId
-      in: path
-      required: true
-      style: simple
-      explode: false
-      schema:
-        type: string
-    DistributionID:
-      name: distributionId
       in: path
       required: true
       style: simple

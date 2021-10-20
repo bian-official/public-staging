@@ -1,7 +1,7 @@
 openapi: 3.0.1
 info:
   title: Card Terminal Operation
-  description: This service domain handle POS operations including processing, capture and tracking of the transactions originating at the Point of Sale devices.
+  description: ''
   version: 10.0.0
 servers:
 - description: SwaggerHub API Auto Mocking
@@ -434,11 +434,6 @@ components:
       properties:
         CardPOSTerminalOperatingSchedule:
           type: string
-    Batch:
-      type: object
-      properties:
-        CardTransactionBatchReference:
-          type: object
     Capture:
       type: object
       properties:
@@ -481,6 +476,11 @@ components:
       properties:
         AuthorizationTransactionDate/Time:
           type: string
+    Batch:
+      type: object
+      properties:
+        CardTransactionBatchReference:
+          type: object
     HTTPError:
       type: object
       properties:
@@ -1035,14 +1035,6 @@ components:
       explode: false
       schema:
         type: string
-    BatchID:
-      name: batchId
-      in: path
-      required: true
-      style: simple
-      explode: false
-      schema:
-        type: string
     CaptureID:
       name: captureId
       in: path
@@ -1053,6 +1045,14 @@ components:
         type: string
     AuthorizationID:
       name: authorizationId
+      in: path
+      required: true
+      style: simple
+      explode: false
+      schema:
+        type: string
+    BatchID:
+      name: batchId
       in: path
       required: true
       style: simple

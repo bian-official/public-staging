@@ -1,7 +1,7 @@
 openapi: 3.0.1
 info:
   title: Business Unit Management
-  description: Track and report on business unit activity and financial performance
+  description: ''
   version: 10.0.0
 servers:
 - description: SwaggerHub API Auto Mocking
@@ -355,6 +355,13 @@ components:
           type: string
         BusinessUnitTrainingPlan:
           type: string
+    Troubleshooting:
+      type: object
+      properties:
+        BusinessUnitProductionIssueRecord:
+          type: string
+        BusinessUnitIssueAnalysisAndRecommendedResponse:
+          type: string
     Performance:
       type: object
       properties:
@@ -371,13 +378,6 @@ components:
         BusinessUnitPerformanceStatisticInterpretation:
           type: string
         BusinessUnitPerformanceStatisticRecommendation:
-          type: string
-    Troubleshooting:
-      type: object
-      properties:
-        BusinessUnitProductionIssueRecord:
-          type: string
-        BusinessUnitIssueAnalysisAndRecommendedResponse:
           type: string
     HTTPError:
       type: object
@@ -397,16 +397,16 @@ components:
       explode: false
       schema:
         type: string
-    PerformanceID:
-      name: performanceId
+    TroubleshootingID:
+      name: troubleshootingId
       in: path
       required: true
       style: simple
       explode: false
       schema:
         type: string
-    TroubleshootingID:
-      name: troubleshootingId
+    PerformanceID:
+      name: performanceId
       in: path
       required: true
       style: simple

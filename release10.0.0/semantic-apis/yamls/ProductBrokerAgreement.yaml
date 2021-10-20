@@ -1,7 +1,7 @@
 openapi: 3.0.1
 info:
   title: Product Broker Agreement
-  description: This service domain maintains product broker contractual and service level agreements and tracks and confirms compliance and service related activity/volume goals when necessary
+  description: ''
   version: 10.0.0
 servers:
 - description: SwaggerHub API Auto Mocking
@@ -381,15 +381,6 @@ components:
           type: string
         DocumentDirectoryEntryInstanceReference:
           type: object
-    PolicyTerms:
-      type: object
-      properties:
-        BankPolicy-RuleType:
-          type: string
-        ApplicableBankPolicy-RuleReference:
-          type: object
-        ApplicableBankPolicy-RuleInterpretation:
-          type: string
     LegalTerms:
       type: object
       properties:
@@ -407,6 +398,15 @@ components:
         ApplicableRegulationReference:
           type: object
         ApplicableRegulationInterpretation:
+          type: string
+    PolicyTerms:
+      type: object
+      properties:
+        BankPolicy-RuleType:
+          type: string
+        ApplicableBankPolicy-RuleReference:
+          type: object
+        ApplicableBankPolicy-RuleInterpretation:
           type: string
     HTTPError:
       type: object
@@ -524,14 +524,6 @@ components:
       explode: false
       schema:
         type: string
-    PolicyTermsID:
-      name: policytermsId
-      in: path
-      required: true
-      style: simple
-      explode: false
-      schema:
-        type: string
     LegalTermsID:
       name: legaltermsId
       in: path
@@ -542,6 +534,14 @@ components:
         type: string
     RegulatoryTermsID:
       name: regulatorytermsId
+      in: path
+      required: true
+      style: simple
+      explode: false
+      schema:
+        type: string
+    PolicyTermsID:
+      name: policytermsId
       in: path
       required: true
       style: simple

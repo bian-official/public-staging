@@ -1,7 +1,7 @@
 openapi: 3.0.1
 info:
   title: Promotional Events
-  description: Develop the plan for and oversee promotional event activity, including budget and resource management
+  description: ''
   version: 10.0.0
 servers:
 - description: SwaggerHub API Auto Mocking
@@ -509,20 +509,18 @@ components:
           type: string
         PromotionalEventPerformanceRecord:
           type: string
-    MarketTracking:
+    ImpactAssessment:
       type: object
       properties:
-        MarketTrackingWorkTaskType:
+        ImpactAssessmentWorkTaskType:
           type: string
-        MarketTrackingWorkTask:
+        ImpactAssessmentWorkTask:
           type: string
-        GeneralMarketResearchDirectoryEntryInstanceReference:
-          type: object
-        MarketTrackingWorkTaskWorkProducts:
+        ImpactAssessmentWorkTaskWorkProducts:
           type: string
-        MarketTrackingWorkTaskResult:
+        ImpactAssessmentWorkTaskResult:
           type: string
-        MarketTrackingWorkTaskDate-Time:
+        ImpactAssessmentWorkTaskDate-Time:
           type: string
     Participation:
       type: object
@@ -537,18 +535,20 @@ components:
           type: string
         PromotionalEventResult:
           type: string
-    ImpactAssessment:
+    MarketTracking:
       type: object
       properties:
-        ImpactAssessmentWorkTaskType:
+        MarketTrackingWorkTaskType:
           type: string
-        ImpactAssessmentWorkTask:
+        MarketTrackingWorkTask:
           type: string
-        ImpactAssessmentWorkTaskWorkProducts:
+        GeneralMarketResearchDirectoryEntryInstanceReference:
+          type: object
+        MarketTrackingWorkTaskWorkProducts:
           type: string
-        ImpactAssessmentWorkTaskResult:
+        MarketTrackingWorkTaskResult:
           type: string
-        ImpactAssessmentWorkTaskDate-Time:
+        MarketTrackingWorkTaskDate-Time:
           type: string
     HTTPError:
       type: object
@@ -1018,8 +1018,8 @@ components:
       explode: false
       schema:
         type: string
-    MarketTrackingID:
-      name: markettrackingId
+    ImpactAssessmentID:
+      name: impactassessmentId
       in: path
       required: true
       style: simple
@@ -1034,8 +1034,8 @@ components:
       explode: false
       schema:
         type: string
-    ImpactAssessmentID:
-      name: impactassessmentId
+    MarketTrackingID:
+      name: markettrackingId
       in: path
       required: true
       style: simple

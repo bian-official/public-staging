@@ -1,7 +1,7 @@
 openapi: 3.0.1
 info:
   title: Consumer Loan
-  description: This service domain handles the fulfillment of a consumer loan product. This includes the initial set-up of the loan facility and the completion of scheduled and ad-hoc product processing tasks
+  description: ''
   version: 10.0.0
 servers:
 - description: SwaggerHub API Auto Mocking
@@ -10,20 +10,20 @@ paths:
   /ConsumerLoan/Initiate:
     post:
       tags:
-      - CR - ConsumerLoanArrangement
+      - CR - ConsumerLoanFacility
       summary: InCR Initiate a consumer loan
       description: InCR Initiate a consumer loan
       operationId: Initiate
       parameters: []
       requestBody:
-        $ref: '#/components/requestBodies/ConsumerLoanArrangement'
+        $ref: '#/components/requestBodies/ConsumerLoanFacility'
       responses:
         200:
           description: Success
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/ConsumerLoanArrangement'
+                $ref: '#/components/schemas/ConsumerLoanFacility'
         400:
           $ref: '#/components/responses/BadRequestError'
         401:
@@ -39,21 +39,21 @@ paths:
   /ConsumerLoan/{consumerloanId}/Update:
     put:
       tags:
-      - CR - ConsumerLoanArrangement
+      - CR - ConsumerLoanFacility
       summary: UpCR Update details for an existing consumer loan
       description: UpCR Update details for an existing consumer loan
       operationId: Update
       parameters:
       - $ref: '#/components/parameters/ConsumerLoanID'
       requestBody:
-        $ref: '#/components/requestBodies/ConsumerLoanArrangement'
+        $ref: '#/components/requestBodies/ConsumerLoanFacility'
       responses:
         200:
           description: Success
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/ConsumerLoanArrangement'
+                $ref: '#/components/schemas/ConsumerLoanFacility'
         400:
           $ref: '#/components/responses/BadRequestError'
         401:
@@ -69,7 +69,7 @@ paths:
   /ConsumerLoan/{consumerloanId}/Retrieve:
     get:
       tags:
-      - CR - ConsumerLoanArrangement
+      - CR - ConsumerLoanFacility
       summary: ReCR Retrieve details about a consumer loan
       description: ReCR Retrieve details about a consumer loan
       operationId: Retrieve
@@ -81,36 +81,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/ConsumerLoanArrangement'
-        400:
-          $ref: '#/components/responses/BadRequestError'
-        401:
-          $ref: '#/components/responses/UnauthorizedError'
-        403:
-          $ref: '#/components/responses/ForbiddenError'
-        404:
-          $ref: '#/components/responses/NotFoundError'
-        429:
-          $ref: '#/components/responses/TooManyRequestsError'
-        500:
-          $ref: '#/components/responses/InternalServerError'
-  /ConsumerLoan/Activate:
-    post:
-      tags:
-      - CR - ConsumerLoanArrangement
-      summary: RqBQ Request a maintenance activity for a consumer load (e.g. obtain a fee statement)
-      description: RqBQ Request a maintenance activity for a consumer load (e.g. obtain a fee statement)
-      operationId: Activate
-      parameters: []
-      requestBody:
-        $ref: '#/components/requestBodies/ActivateConsumerLoanArrangementRequest'
-      responses:
-        200:
-          description: Success
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/ActivateConsumerLoanArrangementResponse'
+                $ref: '#/components/schemas/ConsumerLoanFacility'
         400:
           $ref: '#/components/responses/BadRequestError'
         401:
@@ -241,6 +212,37 @@ paths:
           $ref: '#/components/responses/TooManyRequestsError'
         500:
           $ref: '#/components/responses/InternalServerError'
+  /ConsumerLoan/{consumerloanId}/Maintenance/{maintenanceId}/Request:
+    put:
+      tags:
+      - BQ - Maintenance
+      summary: RqBQ Request a maintenance activity for a consumer load (e.g. obtain a fee statement)
+      description: RqBQ Request a maintenance activity for a consumer load (e.g. obtain a fee statement)
+      operationId: RequestMaintenance
+      parameters:
+      - $ref: '#/components/parameters/ConsumerLoanID'
+      - $ref: '#/components/parameters/MaintenanceID'
+      requestBody:
+        $ref: '#/components/requestBodies/Maintenance'
+      responses:
+        200:
+          description: Success
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Maintenance'
+        400:
+          $ref: '#/components/responses/BadRequestError'
+        401:
+          $ref: '#/components/responses/UnauthorizedError'
+        403:
+          $ref: '#/components/responses/ForbiddenError'
+        404:
+          $ref: '#/components/responses/NotFoundError'
+        429:
+          $ref: '#/components/responses/TooManyRequestsError'
+        500:
+          $ref: '#/components/responses/InternalServerError'
   /ConsumerLoan/{consumerloanId}/Maintenance/{maintenanceId}/Retrieve:
     get:
       tags:
@@ -332,6 +334,37 @@ paths:
           $ref: '#/components/responses/TooManyRequestsError'
         500:
           $ref: '#/components/responses/InternalServerError'
+  /ConsumerLoan/{consumerloanId}/Withdrawal/{withdrawalId}/Request:
+    put:
+      tags:
+      - BQ - Withdrawal
+      summary: RqBQ Request handling of a withdrawal (e.g. negotiate an exception)
+      description: RqBQ Request handling of a withdrawal (e.g. negotiate an exception)
+      operationId: RequestWithdrawal
+      parameters:
+      - $ref: '#/components/parameters/ConsumerLoanID'
+      - $ref: '#/components/parameters/WithdrawalID'
+      requestBody:
+        $ref: '#/components/requestBodies/Withdrawal'
+      responses:
+        200:
+          description: Success
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Withdrawal'
+        400:
+          $ref: '#/components/responses/BadRequestError'
+        401:
+          $ref: '#/components/responses/UnauthorizedError'
+        403:
+          $ref: '#/components/responses/ForbiddenError'
+        404:
+          $ref: '#/components/responses/NotFoundError'
+        429:
+          $ref: '#/components/responses/TooManyRequestsError'
+        500:
+          $ref: '#/components/responses/InternalServerError'
   /ConsumerLoan/{consumerloanId}/Withdrawal/{withdrawalId}/Retrieve:
     get:
       tags:
@@ -380,6 +413,68 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/UpdateRepaymentResponse'
+        400:
+          $ref: '#/components/responses/BadRequestError'
+        401:
+          $ref: '#/components/responses/UnauthorizedError'
+        403:
+          $ref: '#/components/responses/ForbiddenError'
+        404:
+          $ref: '#/components/responses/NotFoundError'
+        429:
+          $ref: '#/components/responses/TooManyRequestsError'
+        500:
+          $ref: '#/components/responses/InternalServerError'
+  /ConsumerLoan/{consumerloanId}/Repayment/{repaymentId}/Execute:
+    put:
+      tags:
+      - BQ - Repayment
+      summary: ExBQ Execute an automated repayment transaction
+      description: ExBQ Execute an automated repayment transaction
+      operationId: ExecuteRepayment
+      parameters:
+      - $ref: '#/components/parameters/ConsumerLoanID'
+      - $ref: '#/components/parameters/RepaymentID'
+      requestBody:
+        $ref: '#/components/requestBodies/Repayment'
+      responses:
+        200:
+          description: Success
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Repayment'
+        400:
+          $ref: '#/components/responses/BadRequestError'
+        401:
+          $ref: '#/components/responses/UnauthorizedError'
+        403:
+          $ref: '#/components/responses/ForbiddenError'
+        404:
+          $ref: '#/components/responses/NotFoundError'
+        429:
+          $ref: '#/components/responses/TooManyRequestsError'
+        500:
+          $ref: '#/components/responses/InternalServerError'
+  /ConsumerLoan/{consumerloanId}/Repayment/{repaymentId}/Request:
+    put:
+      tags:
+      - BQ - Repayment
+      summary: RqBQ Request handling of an exceptional repayment
+      description: RqBQ Request handling of an exceptional repayment
+      operationId: RequestRepayment
+      parameters:
+      - $ref: '#/components/parameters/ConsumerLoanID'
+      - $ref: '#/components/parameters/RepaymentID'
+      requestBody:
+        $ref: '#/components/requestBodies/Repayment'
+      responses:
+        200:
+          description: Success
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Repayment'
         400:
           $ref: '#/components/responses/BadRequestError'
         401:
@@ -482,6 +577,37 @@ paths:
           $ref: '#/components/responses/TooManyRequestsError'
         500:
           $ref: '#/components/responses/InternalServerError'
+  /ConsumerLoan/{consumerloanId}/Restructuring/{restructuringId}/Request:
+    put:
+      tags:
+      - BQ - Restructuring
+      summary: RqBQ Request activity associated with a restructuring effort (e.g. negotiate)
+      description: RqBQ Request activity associated with a restructuring effort (e.g. negotiate)
+      operationId: RequestRestructuring
+      parameters:
+      - $ref: '#/components/parameters/ConsumerLoanID'
+      - $ref: '#/components/parameters/RestructuringID'
+      requestBody:
+        $ref: '#/components/requestBodies/Restructuring'
+      responses:
+        200:
+          description: Success
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Restructuring'
+        400:
+          $ref: '#/components/responses/BadRequestError'
+        401:
+          $ref: '#/components/responses/UnauthorizedError'
+        403:
+          $ref: '#/components/responses/ForbiddenError'
+        404:
+          $ref: '#/components/responses/NotFoundError'
+        429:
+          $ref: '#/components/responses/TooManyRequestsError'
+        500:
+          $ref: '#/components/responses/InternalServerError'
   /ConsumerLoan/{consumerloanId}/Restructuring/{restructuringId}/Retrieve:
     get:
       tags:
@@ -513,7 +639,7 @@ paths:
           $ref: '#/components/responses/InternalServerError'
 components:
   schemas:
-    ConsumerLoanArrangement:
+    ConsumerLoanFacility:
       type: object
       properties:
         ProductInstanceReference:
@@ -591,21 +717,6 @@ components:
         DateType:
           type: string
         Date:
-          type: string
-    Disbursement:
-      type: object
-      properties:
-        DisbursementPayeeReference:
-          type: object
-        DisbursementPayeeProductInstanceReference:
-          type: object
-        DisbursementPayeeBankReference:
-          type: object
-        DisbursementAmount:
-          type: number
-        DisbursementCurrency:
-          type: string
-        DisbursementValueDate:
           type: string
     Maintenance:
       type: object
@@ -695,15 +806,6 @@ components:
           type: string
         RepaymentTransactionValueDate:
           type: string
-    Restructuring:
-      type: object
-      properties:
-        RestructuringTask:
-          type: string
-        RestructuringEvaluation:
-          type: string
-        RestructuringWriteDown:
-          type: string
     ServiceFees:
       type: object
       properties:
@@ -737,6 +839,30 @@ components:
           type: string
         AccrualFeeCharge:
           type: string
+    Disbursement:
+      type: object
+      properties:
+        DisbursementPayeeReference:
+          type: object
+        DisbursementPayeeProductInstanceReference:
+          type: object
+        DisbursementPayeeBankReference:
+          type: object
+        DisbursementAmount:
+          type: number
+        DisbursementCurrency:
+          type: string
+        DisbursementValueDate:
+          type: string
+    Restructuring:
+      type: object
+      properties:
+        RestructuringTask:
+          type: string
+        RestructuringEvaluation:
+          type: string
+        RestructuringWriteDown:
+          type: string
     HTTPError:
       type: object
       properties:
@@ -746,104 +872,10 @@ components:
           type: string
         message:
           type: string
-    ActivateConsumerLoanArrangementRequest:
-      type: object
-      properties:
-        Maintenance:
-          type: object
-          properties:
-            MaintenanceReportType:
-              type: string
-        Withdrawal:
-          type: object
-          properties:
-            PaymentTransaction:
-              type: string
-            PaymentTransactionType:
-              type: string
-            PaymentTransactionPayeeReference:
-              type: object
-            PaymentTransactionPayeeAccountReference:
-              type: object
-            PaymentTransactionPayeeBankReference:
-              type: object
-            PaymentTransactionAmount:
-              type: number
-            PaymentTransactionFeeType:
-              type: string
-            PaymentTransactionFeeCharge:
-              type: string
-            PaymentTransactionDate:
-              type: string
-            PaymentTransactionPaymentMechanism:
-              type: string
-            PaymentTransactionPaymentPurpose:
-              type: string
-            PaymentTransactionBankBranchOrLocationReference:
-              type: object
-            PaymentTransactionStatus:
-              type: string
-        Repayment:
-          type: object
-          properties:
-            RepaymentTransactionType:
-              type: string
-            RepaymentTransactionPayerReference:
-              type: object
-            RepaymentTransactionPayerProductInstanceReference:
-              type: object
-            RepaymentTransactionPayerBankReference:
-              type: object
-            RepaymentTransactionAmount:
-              type: number
-            RepaymentTransactionCurrency:
-              type: string
-            RepaymentTransactionValueDate:
-              type: string
-        Restructuring:
-          type: object
-          properties:
-            RestructuringTask:
-              type: string
-    ActivateConsumerLoanArrangementResponse:
-      type: object
-      properties:
-        Maintenance:
-          type: object
-          properties:
-            LoanTaxReport:
-              type: string
-            LoanFeeType:
-              type: string
-            LoanFees:
-              type: string
-            Penalties:
-              type: string
-            CollateralValuation:
-              type: string
-        Withdrawal:
-          type: object
-          properties:
-            PaymentTransactionStatus:
-              type: string
-        Repayment:
-          type: object
-          properties:
-            RepaymentTransactionValueDate:
-              type: string
-        Restructuring:
-          type: object
-          properties:
-            RestructuringTask:
-              type: string
-            RestructuringEvaluation:
-              type: string
-            RestructuringWriteDown:
-              type: string
     RetrieveInterestResponse:
       type: object
       properties:
-        ConsumerLoanArrangement:
+        ConsumerLoanFacility:
           type: object
           properties:
             ProductInstanceReference:
@@ -900,7 +932,7 @@ components:
     RetrieveServiceFeesResponse:
       type: object
       properties:
-        ConsumerLoanArrangement:
+        ConsumerLoanFacility:
           type: object
           properties:
             ProductInstanceReference:
@@ -969,7 +1001,7 @@ components:
     RetrieveDisbursementResponse:
       type: object
       properties:
-        ConsumerLoanArrangement:
+        ConsumerLoanFacility:
           type: object
           properties:
             ProductInstanceReference:
@@ -1004,7 +1036,7 @@ components:
     RetrieveMaintenanceResponse:
       type: object
       properties:
-        ConsumerLoanArrangement:
+        ConsumerLoanFacility:
           type: object
           properties:
             ProductInstanceReference:
@@ -1099,7 +1131,7 @@ components:
     RetrieveWithdrawalResponse:
       type: object
       properties:
-        ConsumerLoanArrangement:
+        ConsumerLoanFacility:
           type: object
           properties:
             ProductInstanceReference:
@@ -1156,7 +1188,7 @@ components:
     UpdateRepaymentRequest:
       type: object
       properties:
-        ConsumerLoanArrangement:
+        ConsumerLoanFacility:
           type: object
           properties:
             LoanOutstandingBalance:
@@ -1183,7 +1215,7 @@ components:
     UpdateRepaymentResponse:
       type: object
       properties:
-        ConsumerLoanArrangement:
+        ConsumerLoanFacility:
           type: object
           properties:
             LoanOutstandingBalance:
@@ -1210,7 +1242,7 @@ components:
     RetrieveRepaymentResponse:
       type: object
       properties:
-        ConsumerLoanArrangement:
+        ConsumerLoanFacility:
           type: object
           properties:
             ProductInstanceReference:
@@ -1257,7 +1289,7 @@ components:
     InitiateRestructuringRequest:
       type: object
       properties:
-        ConsumerLoanArrangement:
+        ConsumerLoanFacility:
           type: object
           properties:
             ProductInstanceReference:
@@ -1342,7 +1374,7 @@ components:
     InitiateRestructuringResponse:
       type: object
       properties:
-        ConsumerLoanArrangement:
+        ConsumerLoanFacility:
           type: object
           properties:
             StagedRepaymentStatement:
@@ -1365,7 +1397,7 @@ components:
     UpdateRestructuringRequest:
       type: object
       properties:
-        ConsumerLoanArrangement:
+        ConsumerLoanFacility:
           type: object
           properties:
             ProductInstanceReference:
@@ -1454,7 +1486,7 @@ components:
     UpdateRestructuringResponse:
       type: object
       properties:
-        ConsumerLoanArrangement:
+        ConsumerLoanFacility:
           type: object
           properties:
             ProductInstanceReference:
@@ -1543,7 +1575,7 @@ components:
     RetrieveRestructuringResponse:
       type: object
       properties:
-        ConsumerLoanArrangement:
+        ConsumerLoanFacility:
           type: object
           properties:
             ProductInstanceReference:
@@ -1638,14 +1670,6 @@ components:
       explode: false
       schema:
         type: string
-    DisbursementID:
-      name: disbursementId
-      in: path
-      required: true
-      style: simple
-      explode: false
-      schema:
-        type: string
     MaintenanceID:
       name: maintenanceId
       in: path
@@ -1678,14 +1702,6 @@ components:
       explode: false
       schema:
         type: string
-    RestructuringID:
-      name: restructuringId
-      in: path
-      required: true
-      style: simple
-      explode: false
-      schema:
-        type: string
     ServiceFeesID:
       name: servicefeesId
       in: path
@@ -1694,25 +1710,41 @@ components:
       explode: false
       schema:
         type: string
+    DisbursementID:
+      name: disbursementId
+      in: path
+      required: true
+      style: simple
+      explode: false
+      schema:
+        type: string
+    RestructuringID:
+      name: restructuringId
+      in: path
+      required: true
+      style: simple
+      explode: false
+      schema:
+        type: string
   requestBodies:
-    ConsumerLoanArrangement:
+    ConsumerLoanFacility:
       required: true
       content:
         application/json:
           schema:
-            $ref: '#/components/schemas/ConsumerLoanArrangement'
-    ActivateConsumerLoanArrangementRequest:
-      required: true
-      content:
-        application/json:
-          schema:
-            $ref: '#/components/schemas/ActivateConsumerLoanArrangementRequest'
+            $ref: '#/components/schemas/ConsumerLoanFacility'
     ServiceFees:
       required: true
       content:
         application/json:
           schema:
             $ref: '#/components/schemas/ServiceFees'
+    Maintenance:
+      required: true
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/Maintenance'
     Withdrawal:
       required: true
       content:
@@ -1725,6 +1757,12 @@ components:
         application/json:
           schema:
             $ref: '#/components/schemas/UpdateRepaymentRequest'
+    Repayment:
+      required: true
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/Repayment'
     InitiateRestructuringRequest:
       required: true
       content:
@@ -1737,6 +1775,12 @@ components:
         application/json:
           schema:
             $ref: '#/components/schemas/UpdateRestructuringRequest'
+    Restructuring:
+      required: true
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/Restructuring'
   responses:
     HTTPError:
       description: Bad Request

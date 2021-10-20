@@ -1,7 +1,7 @@
 openapi: 3.0.1
 info:
   title: Commissions
-  description: The service domain processes commissions for transactions for eligible employees
+  description: ''
   version: 10.0.0
 servers:
 - description: SwaggerHub API Auto Mocking
@@ -534,27 +534,6 @@ components:
           type: string
         CommissionTransactionTransaction:
           type: string
-    Check:
-      type: object
-      properties:
-        CheckPreconditions:
-          type: string
-        CheckTaskSchedule:
-          type: string
-        BusinessService:
-          type: object
-        CheckPostconditions:
-          type: string
-        CheckServiceType:
-          type: string
-        CheckServiceDescription:
-          type: string
-        CheckServiceInputsandOuputs:
-          type: string
-        CheckServiceWorkProduct:
-          type: string
-        CheckServiceName:
-          type: string
     Calculation:
       type: object
       properties:
@@ -596,6 +575,27 @@ components:
         PaymentServiceWorkProduct:
           type: string
         PaymentServiceName:
+          type: string
+    Check:
+      type: object
+      properties:
+        CheckPreconditions:
+          type: string
+        CheckTaskSchedule:
+          type: string
+        BusinessService:
+          type: object
+        CheckPostconditions:
+          type: string
+        CheckServiceType:
+          type: string
+        CheckServiceDescription:
+          type: string
+        CheckServiceInputsandOuputs:
+          type: string
+        CheckServiceWorkProduct:
+          type: string
+        CheckServiceName:
           type: string
     CommissionsOutcome:
       type: object
@@ -640,14 +640,6 @@ components:
       explode: false
       schema:
         type: string
-    CheckID:
-      name: checkId
-      in: path
-      required: true
-      style: simple
-      explode: false
-      schema:
-        type: string
     CalculationID:
       name: calculationId
       in: path
@@ -658,6 +650,14 @@ components:
         type: string
     PaymentID:
       name: paymentId
+      in: path
+      required: true
+      style: simple
+      explode: false
+      schema:
+        type: string
+    CheckID:
+      name: checkId
       in: path
       required: true
       style: simple

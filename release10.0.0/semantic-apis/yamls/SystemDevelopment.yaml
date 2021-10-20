@@ -1,7 +1,7 @@
 openapi: 3.0.1
 info:
   title: System Development
-  description: Develop new, enhance existing applications and integrate package based systems solutions
+  description: ''
   version: 10.0.0
 servers:
 - description: SwaggerHub API Auto Mocking
@@ -757,6 +757,17 @@ components:
           type: string
         Date:
           type: string
+    UsageSpecification:
+      type: object
+      properties:
+        UsageSpecificationTaskDefinition:
+          type: string
+        UsageSpecificationTaskWorkProducts:
+          type: string
+        DocumentDirectoryEntryInstanceReference:
+          type: object
+        SystemFunctionalSpecification:
+          type: string
     SoftwareandDataSpecification:
       type: object
       properties:
@@ -767,6 +778,17 @@ components:
         DocumentDirectoryEntryInstanceReference:
           type: object
         SystemSoftwareandDataSpecification:
+          type: string
+    TestingSpecification:
+      type: object
+      properties:
+        TestingSpecificationTaskDefinition:
+          type: string
+        TestingSpecificationTaskWorkProducts:
+          type: string
+        DocumentDirectoryEntryInstanceReference:
+          type: object
+        SystemTestingSpecification:
           type: string
     TechnicalSpecification:
       type: object
@@ -789,28 +811,6 @@ components:
         DocumentDirectoryEntryInstanceReference:
           type: object
         SystemFunctionalSpecification:
-          type: string
-    UsageSpecification:
-      type: object
-      properties:
-        UsageSpecificationTaskDefinition:
-          type: string
-        UsageSpecificationTaskWorkProducts:
-          type: string
-        DocumentDirectoryEntryInstanceReference:
-          type: object
-        SystemFunctionalSpecification:
-          type: string
-    TestingSpecification:
-      type: object
-      properties:
-        TestingSpecificationTaskDefinition:
-          type: string
-        TestingSpecificationTaskWorkProducts:
-          type: string
-        DocumentDirectoryEntryInstanceReference:
-          type: object
-        SystemTestingSpecification:
           type: string
     HTTPError:
       type: object
@@ -1165,8 +1165,24 @@ components:
       explode: false
       schema:
         type: string
+    UsageSpecificationID:
+      name: usagespecificationId
+      in: path
+      required: true
+      style: simple
+      explode: false
+      schema:
+        type: string
     SoftwareandDataSpecificationID:
       name: softwareanddataspecificationId
+      in: path
+      required: true
+      style: simple
+      explode: false
+      schema:
+        type: string
+    TestingSpecificationID:
+      name: testingspecificationId
       in: path
       required: true
       style: simple
@@ -1183,22 +1199,6 @@ components:
         type: string
     FunctionalSpecificationID:
       name: functionalspecificationId
-      in: path
-      required: true
-      style: simple
-      explode: false
-      schema:
-        type: string
-    UsageSpecificationID:
-      name: usagespecificationId
-      in: path
-      required: true
-      style: simple
-      explode: false
-      schema:
-        type: string
-    TestingSpecificationID:
-      name: testingspecificationId
       in: path
       required: true
       style: simple

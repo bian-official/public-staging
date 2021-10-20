@@ -1,7 +1,7 @@
 openapi: 3.0.1
 info:
   title: Leasing
-  description: The leasing products enables customers to finance equipment purchases using the leased item as collateral when necessary
+  description: ''
   version: 10.0.0
 servers:
 - description: SwaggerHub API Auto Mocking
@@ -10,21 +10,21 @@ paths:
   /Leasing/{leasingId}/Control:
     put:
       tags:
-      - CR - LeasingArrangement
-      summary: CoCR Control the processing of Leasing Arrangement
-      description: CoCR Control the processing of Leasing Arrangement
+      - CR - LeasingFacility
+      summary: CoCR Control the processing of Leasing Facility
+      description: CoCR Control the processing of Leasing Facility
       operationId: Control
       parameters:
       - $ref: '#/components/parameters/LeasingID'
       requestBody:
-        $ref: '#/components/requestBodies/LeasingArrangement'
+        $ref: '#/components/requestBodies/LeasingFacility'
       responses:
         200:
           description: Success
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/LeasingArrangement'
+                $ref: '#/components/schemas/LeasingFacility'
         400:
           $ref: '#/components/responses/BadRequestError'
         401:
@@ -40,21 +40,21 @@ paths:
   /Leasing/{leasingId}/Exchange:
     put:
       tags:
-      - CR - LeasingArrangement
-      summary: EcCR Accept, verify, etc. aspects of Leasing Arrangement processing
-      description: EcCR Accept, verify, etc. aspects of Leasing Arrangement processing
+      - CR - LeasingFacility
+      summary: EcCR Accept, verify, etc. aspects of Leasing Facility processing
+      description: EcCR Accept, verify, etc. aspects of Leasing Facility processing
       operationId: Exchange
       parameters:
       - $ref: '#/components/parameters/LeasingID'
       requestBody:
-        $ref: '#/components/requestBodies/LeasingArrangement'
+        $ref: '#/components/requestBodies/LeasingFacility'
       responses:
         200:
           description: Success
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/LeasingArrangement'
+                $ref: '#/components/schemas/LeasingFacility'
         400:
           $ref: '#/components/responses/BadRequestError'
         401:
@@ -70,21 +70,21 @@ paths:
   /Leasing/{leasingId}/Execute:
     put:
       tags:
-      - CR - LeasingArrangement
-      summary: ExCR Execute an available automated action for Leasing Arrangement
-      description: ExCR Execute an available automated action for Leasing Arrangement
+      - CR - LeasingFacility
+      summary: ExCR Execute an available automated action for Leasing Facility
+      description: ExCR Execute an available automated action for Leasing Facility
       operationId: Execute
       parameters:
       - $ref: '#/components/parameters/LeasingID'
       requestBody:
-        $ref: '#/components/requestBodies/LeasingArrangement'
+        $ref: '#/components/requestBodies/LeasingFacility'
       responses:
         200:
           description: Success
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/LeasingArrangement'
+                $ref: '#/components/schemas/LeasingFacility'
         400:
           $ref: '#/components/responses/BadRequestError'
         401:
@@ -100,20 +100,20 @@ paths:
   /Leasing/Initiate:
     post:
       tags:
-      - CR - LeasingArrangement
-      summary: InCR Instantiate a new Leasing Arrangement
-      description: InCR Instantiate a new Leasing Arrangement
+      - CR - LeasingFacility
+      summary: InCR Instantiate a new Leasing Facility
+      description: InCR Instantiate a new Leasing Facility
       operationId: Initiate
       parameters: []
       requestBody:
-        $ref: '#/components/requestBodies/LeasingArrangement'
+        $ref: '#/components/requestBodies/LeasingFacility'
       responses:
         200:
           description: Success
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/LeasingArrangement'
+                $ref: '#/components/schemas/LeasingFacility'
         400:
           $ref: '#/components/responses/BadRequestError'
         401:
@@ -129,9 +129,9 @@ paths:
   /Leasing/{leasingId}/Retrieve:
     get:
       tags:
-      - CR - LeasingArrangement
-      summary: ReCR Retrieve details about any aspect of Leasing Arrangement
-      description: ReCR Retrieve details about any aspect of Leasing Arrangement
+      - CR - LeasingFacility
+      summary: ReCR Retrieve details about any aspect of Leasing Facility
+      description: ReCR Retrieve details about any aspect of Leasing Facility
       operationId: Retrieve
       parameters:
       - $ref: '#/components/parameters/LeasingID'
@@ -141,7 +141,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/LeasingArrangement'
+                $ref: '#/components/schemas/LeasingFacility'
         400:
           $ref: '#/components/responses/BadRequestError'
         401:
@@ -157,21 +157,21 @@ paths:
   /Leasing/{leasingId}/Request:
     put:
       tags:
-      - CR - LeasingArrangement
-      summary: RqCR Request manual intervention or a decision with respect to Leasing Arrangement
-      description: RqCR Request manual intervention or a decision with respect to Leasing Arrangement
+      - CR - LeasingFacility
+      summary: RqCR Request manual intervention or a decision with respect to Leasing Facility
+      description: RqCR Request manual intervention or a decision with respect to Leasing Facility
       operationId: Request
       parameters:
       - $ref: '#/components/parameters/LeasingID'
       requestBody:
-        $ref: '#/components/requestBodies/LeasingArrangement'
+        $ref: '#/components/requestBodies/LeasingFacility'
       responses:
         200:
           description: Success
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/LeasingArrangement'
+                $ref: '#/components/schemas/LeasingFacility'
         400:
           $ref: '#/components/responses/BadRequestError'
         401:
@@ -187,21 +187,21 @@ paths:
   /Leasing/{leasingId}/Update:
     put:
       tags:
-      - CR - LeasingArrangement
-      summary: UpCR Update details relating to Leasing Arrangement
-      description: UpCR Update details relating to Leasing Arrangement
+      - CR - LeasingFacility
+      summary: UpCR Update details relating to Leasing Facility
+      description: UpCR Update details relating to Leasing Facility
       operationId: Update
       parameters:
       - $ref: '#/components/parameters/LeasingID'
       requestBody:
-        $ref: '#/components/requestBodies/LeasingArrangement'
+        $ref: '#/components/requestBodies/LeasingFacility'
       responses:
         200:
           description: Success
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/LeasingArrangement'
+                $ref: '#/components/schemas/LeasingFacility'
         400:
           $ref: '#/components/responses/BadRequestError'
         401:
@@ -1362,188 +1362,91 @@ paths:
           $ref: '#/components/responses/InternalServerError'
 components:
   schemas:
-    LeasingArrangement:
+    LeasingFacility:
       type: object
       properties:
-        LeasingArrangementParameterType:
+        LeasingFacilityParameterType:
           type: string
-        LeasingArrangementSelectedOption:
+        LeasingFacilitySelectedOption:
           type: string
-        LeasingArrangementType:
+        LeasingFacilityType:
           type: string
-        LeasingArrangementReference:
+        LeasingFacilityReference:
           type: object
-        LeasingArrangementSchedule:
+        LeasingFacilitySchedule:
           type: string
-        LeasingArrangementStatus:
+        LeasingFacilityStatus:
           type: string
-        LeasingArrangementCurrency:
+        LeasingFacilityCurrency:
           type: string
-        LeasingArrangementRegulationReference:
+        LeasingFacilityRegulationReference:
           type: object
-        LeasingArrangementRegulationType:
+        LeasingFacilityRegulationType:
           type: string
-        LeasingArrangementJurisdiction:
+        LeasingFacilityJurisdiction:
           type: string
-        LeasingArrangementBookingLocation:
+        LeasingFacilityBookingLocation:
           type: string
-        LeasingArrangementAccountType:
+        LeasingFacilityAccountType:
           type: string
-        LeasingArrangementAccountReference:
+        LeasingFacilityAccountReference:
           type: object
-    FinancialInstrument:
+    ClearingandSettlement:
       type: object
       properties:
-        FinancialInstrumentPreconditions:
-          type: string
-        FinancialInstrumentFeatureSchedule:
-          type: string
-        FinancialInstrument:
+        CorrespondentBankClearingArrangementReference:
           type: object
-        FinancialInstrumentPostconditions:
+        CorrespondentBankClearingArrangementClearingInstructions:
           type: string
-        FinancialInstrumentFinancialInstrumentServiceType:
+        CorrespondentBankClearingArrangementSettlementInstructions:
           type: string
-        FinancialInstrumentFinancialInstrumentServiceDescription:
+        MirrorNostroAccountReference:
+          type: object
+        ClearingTransaction:
           type: string
-        FinancialInstrumentFinancialInstrumentServiceInputsandOuputs:
+        SettlementTransaction:
           type: string
-        FinancialInstrumentFinancialInstrumentServiceWorkProduct:
-          type: string
-        FinancialInstrumentFinancialInstrumentServiceName:
-          type: string
-    FinancialAccounting:
+    Sweep:
       type: object
       properties:
-        FinancialAccountingPreconditions:
+        SweepPreconditions:
           type: string
-        FinancialAccountingFeatureSchedule:
-          type: string
-        FinancialAccounting:
-          type: object
-        FinancialAccountingPostconditions:
-          type: string
-        FinancialAccountingFinancialAccountingServiceType:
-          type: string
-        FinancialAccountingFinancialAccountingServiceDescription:
-          type: string
-        FinancialAccountingFinancialAccountingServiceInputsandOuputs:
-          type: string
-        FinancialAccountingFinancialAccountingServiceWorkProduct:
-          type: string
-        FinancialAccountingFinancialAccountingServiceName:
-          type: string
-    IssuedDevice:
-      type: object
-      properties:
-        IssuedDevicePreconditions:
-          type: string
-        IssuedDeviceFeatureSchedule:
+        SweepFeatureSchedule:
           type: string
         BusinessService:
           type: object
-        IssuedDevicePostconditions:
+        SweepPostconditions:
           type: string
-        IssuedDeviceServiceType:
+        SweepServiceType:
           type: string
-        IssuedDeviceServiceDescription:
+        SweepServiceDescription:
           type: string
-        IssuedDeviceServiceInputsandOuputs:
+        SweepServiceInputsandOuputs:
           type: string
-        IssuedDeviceServiceWorkProduct:
+        SweepServiceWorkProduct:
           type: string
-        IssuedDeviceServiceName:
+        SweepServiceName:
           type: string
-    CorporateAction:
+    Interest:
       type: object
       properties:
-        CorporateActionPreconditions:
+        InterestPreconditions:
           type: string
-        CorporateActionFeatureSchedule:
-          type: string
-        BS-CorporateActionProcessing:
-          type: object
-        CorporateActionPostconditions:
-          type: string
-        CorporateActionBS-CorporateActionProcessingServiceType:
-          type: string
-        CorporateActionBS-CorporateActionProcessingServiceDescription:
-          type: string
-        CorporateActionBS-CorporateActionProcessingServiceInputsandOuputs:
-          type: string
-        CorporateActionBS-CorporateActionProcessingServiceWorkProduct:
-          type: string
-        CorporateActionBS-CorporateActionProcessingServiceName:
-          type: string
-    Deposits:
-      type: object
-      properties:
-        DepositsPreconditions:
-          type: string
-        DepositsFeatureSchedule:
-          type: string
-        DepositProcessing:
-          type: object
-        DepositsPostconditions:
-          type: string
-        DepositsDepositProcessingServiceType:
-          type: string
-        DepositsDepositProcessingServiceDescription:
-          type: string
-        DepositsDepositProcessingServiceInputsandOuputs:
-          type: string
-        DepositsDepositProcessingServiceWorkProduct:
-          type: string
-        DepositsDepositProcessingServiceName:
-          type: string
-    LeasingOutcome:
-      type: object
-      properties:
-        LeasingFinancialFacility:
-          type: string
-        LeasingWorkProduct:
-          type: string
-    Fees:
-      type: object
-      properties:
-        FeesPreconditions:
-          type: string
-        FeesFeatureSchedule:
+        InterestFeatureSchedule:
           type: string
         BusinessService:
           type: object
-        FeesPostconditions:
+        InterestPostconditions:
           type: string
-        FeesServiceType:
+        InterestServiceType:
           type: string
-        FeesServiceDescription:
+        InterestServiceDescription:
           type: string
-        FeesServiceInputsandOuputs:
+        InterestServiceInputsandOuputs:
           type: string
-        FeesServiceWorkProduct:
+        InterestServiceWorkProduct:
           type: string
-        FeesServiceName:
-          type: string
-    Collateral:
-      type: object
-      properties:
-        CollateralPreconditions:
-          type: string
-        CollateralFeatureSchedule:
-          type: string
-        BusinessService:
-          type: object
-        CollateralPostconditions:
-          type: string
-        CollateralServiceType:
-          type: string
-        CollateralServiceDescription:
-          type: string
-        CollateralServiceInputsandOuputs:
-          type: string
-        CollateralServiceWorkProduct:
-          type: string
-        CollateralServiceName:
+        InterestServiceName:
           type: string
     Lien:
       type: object
@@ -1587,26 +1490,68 @@ components:
           type: string
         PaymentsServiceName:
           type: string
-    Interest:
+    Fees:
       type: object
       properties:
-        InterestPreconditions:
+        FeesPreconditions:
           type: string
-        InterestFeatureSchedule:
+        FeesFeatureSchedule:
           type: string
         BusinessService:
           type: object
-        InterestPostconditions:
+        FeesPostconditions:
           type: string
-        InterestServiceType:
+        FeesServiceType:
           type: string
-        InterestServiceDescription:
+        FeesServiceDescription:
           type: string
-        InterestServiceInputsandOuputs:
+        FeesServiceInputsandOuputs:
           type: string
-        InterestServiceWorkProduct:
+        FeesServiceWorkProduct:
           type: string
-        InterestServiceName:
+        FeesServiceName:
+          type: string
+    IssuedDevice:
+      type: object
+      properties:
+        IssuedDevicePreconditions:
+          type: string
+        IssuedDeviceFeatureSchedule:
+          type: string
+        BusinessService:
+          type: object
+        IssuedDevicePostconditions:
+          type: string
+        IssuedDeviceServiceType:
+          type: string
+        IssuedDeviceServiceDescription:
+          type: string
+        IssuedDeviceServiceInputsandOuputs:
+          type: string
+        IssuedDeviceServiceWorkProduct:
+          type: string
+        IssuedDeviceServiceName:
+          type: string
+    Collateral:
+      type: object
+      properties:
+        CollateralPreconditions:
+          type: string
+        CollateralFeatureSchedule:
+          type: string
+        BusinessService:
+          type: object
+        CollateralPostconditions:
+          type: string
+        CollateralServiceType:
+          type: string
+        CollateralServiceDescription:
+          type: string
+        CollateralServiceInputsandOuputs:
+          type: string
+        CollateralServiceWorkProduct:
+          type: string
+        CollateralServiceName:
           type: string
     Withdrawals:
       type: object
@@ -1629,41 +1574,96 @@ components:
           type: string
         WithdrawalsWithdrawalProcessingServiceName:
           type: string
-    ClearingandSettlement:
+    Deposits:
       type: object
       properties:
-        CorrespondentBankClearingArrangementReference:
+        DepositsPreconditions:
+          type: string
+        DepositsFeatureSchedule:
+          type: string
+        DepositProcessing:
           type: object
-        CorrespondentBankClearingArrangementClearingInstructions:
+        DepositsPostconditions:
           type: string
-        CorrespondentBankClearingArrangementSettlementInstructions:
+        DepositsDepositProcessingServiceType:
           type: string
-        MirrorNostroAccountReference:
-          type: object
-        ClearingTransaction:
+        DepositsDepositProcessingServiceDescription:
           type: string
-        SettlementTransaction:
+        DepositsDepositProcessingServiceInputsandOuputs:
           type: string
-    Sweep:
+        DepositsDepositProcessingServiceWorkProduct:
+          type: string
+        DepositsDepositProcessingServiceName:
+          type: string
+    FinancialInstrument:
       type: object
       properties:
-        SweepPreconditions:
+        FinancialInstrumentPreconditions:
           type: string
-        SweepFeatureSchedule:
+        FinancialInstrumentFeatureSchedule:
           type: string
-        BusinessService:
+        FinancialInstrument:
           type: object
-        SweepPostconditions:
+        FinancialInstrumentPostconditions:
           type: string
-        SweepServiceType:
+        FinancialInstrumentFinancialInstrumentServiceType:
           type: string
-        SweepServiceDescription:
+        FinancialInstrumentFinancialInstrumentServiceDescription:
           type: string
-        SweepServiceInputsandOuputs:
+        FinancialInstrumentFinancialInstrumentServiceInputsandOuputs:
           type: string
-        SweepServiceWorkProduct:
+        FinancialInstrumentFinancialInstrumentServiceWorkProduct:
           type: string
-        SweepServiceName:
+        FinancialInstrumentFinancialInstrumentServiceName:
+          type: string
+    FinancialAccounting:
+      type: object
+      properties:
+        FinancialAccountingPreconditions:
+          type: string
+        FinancialAccountingFeatureSchedule:
+          type: string
+        FinancialAccounting:
+          type: object
+        FinancialAccountingPostconditions:
+          type: string
+        FinancialAccountingFinancialAccountingServiceType:
+          type: string
+        FinancialAccountingFinancialAccountingServiceDescription:
+          type: string
+        FinancialAccountingFinancialAccountingServiceInputsandOuputs:
+          type: string
+        FinancialAccountingFinancialAccountingServiceWorkProduct:
+          type: string
+        FinancialAccountingFinancialAccountingServiceName:
+          type: string
+    CorporateAction:
+      type: object
+      properties:
+        CorporateActionPreconditions:
+          type: string
+        CorporateActionFeatureSchedule:
+          type: string
+        BS-CorporateActionProcessing:
+          type: object
+        CorporateActionPostconditions:
+          type: string
+        CorporateActionBS-CorporateActionProcessingServiceType:
+          type: string
+        CorporateActionBS-CorporateActionProcessingServiceDescription:
+          type: string
+        CorporateActionBS-CorporateActionProcessingServiceInputsandOuputs:
+          type: string
+        CorporateActionBS-CorporateActionProcessingServiceWorkProduct:
+          type: string
+        CorporateActionBS-CorporateActionProcessingServiceName:
+          type: string
+    LeasingOutcome:
+      type: object
+      properties:
+        LeasingFinancialFacility:
+          type: string
+        LeasingWorkProduct:
           type: string
     HTTPError:
       type: object
@@ -1677,102 +1677,6 @@ components:
   parameters:
     LeasingID:
       name: leasingId
-      in: path
-      required: true
-      style: simple
-      explode: false
-      schema:
-        type: string
-    FinancialInstrumentID:
-      name: financialinstrumentId
-      in: path
-      required: true
-      style: simple
-      explode: false
-      schema:
-        type: string
-    FinancialAccountingID:
-      name: financialaccountingId
-      in: path
-      required: true
-      style: simple
-      explode: false
-      schema:
-        type: string
-    IssuedDeviceID:
-      name: issueddeviceId
-      in: path
-      required: true
-      style: simple
-      explode: false
-      schema:
-        type: string
-    CorporateActionID:
-      name: corporateactionId
-      in: path
-      required: true
-      style: simple
-      explode: false
-      schema:
-        type: string
-    DepositsID:
-      name: depositsId
-      in: path
-      required: true
-      style: simple
-      explode: false
-      schema:
-        type: string
-    LeasingOutcomeID:
-      name: leasingoutcomeId
-      in: path
-      required: true
-      style: simple
-      explode: false
-      schema:
-        type: string
-    FeesID:
-      name: feesId
-      in: path
-      required: true
-      style: simple
-      explode: false
-      schema:
-        type: string
-    CollateralID:
-      name: collateralId
-      in: path
-      required: true
-      style: simple
-      explode: false
-      schema:
-        type: string
-    LienID:
-      name: lienId
-      in: path
-      required: true
-      style: simple
-      explode: false
-      schema:
-        type: string
-    PaymentsID:
-      name: paymentsId
-      in: path
-      required: true
-      style: simple
-      explode: false
-      schema:
-        type: string
-    InterestID:
-      name: interestId
-      in: path
-      required: true
-      style: simple
-      explode: false
-      schema:
-        type: string
-    WithdrawalsID:
-      name: withdrawalsId
       in: path
       required: true
       style: simple
@@ -1795,13 +1699,109 @@ components:
       explode: false
       schema:
         type: string
+    InterestID:
+      name: interestId
+      in: path
+      required: true
+      style: simple
+      explode: false
+      schema:
+        type: string
+    LienID:
+      name: lienId
+      in: path
+      required: true
+      style: simple
+      explode: false
+      schema:
+        type: string
+    PaymentsID:
+      name: paymentsId
+      in: path
+      required: true
+      style: simple
+      explode: false
+      schema:
+        type: string
+    FeesID:
+      name: feesId
+      in: path
+      required: true
+      style: simple
+      explode: false
+      schema:
+        type: string
+    IssuedDeviceID:
+      name: issueddeviceId
+      in: path
+      required: true
+      style: simple
+      explode: false
+      schema:
+        type: string
+    CollateralID:
+      name: collateralId
+      in: path
+      required: true
+      style: simple
+      explode: false
+      schema:
+        type: string
+    WithdrawalsID:
+      name: withdrawalsId
+      in: path
+      required: true
+      style: simple
+      explode: false
+      schema:
+        type: string
+    DepositsID:
+      name: depositsId
+      in: path
+      required: true
+      style: simple
+      explode: false
+      schema:
+        type: string
+    FinancialInstrumentID:
+      name: financialinstrumentId
+      in: path
+      required: true
+      style: simple
+      explode: false
+      schema:
+        type: string
+    FinancialAccountingID:
+      name: financialaccountingId
+      in: path
+      required: true
+      style: simple
+      explode: false
+      schema:
+        type: string
+    CorporateActionID:
+      name: corporateactionId
+      in: path
+      required: true
+      style: simple
+      explode: false
+      schema:
+        type: string
+    LeasingOutcomeID:
+      name: leasingoutcomeId
+      in: path
+      required: true
+      style: simple
+      explode: false
+      schema:
+        type: string
   requestBodies:
-    LeasingArrangement:
+    LeasingFacility:
       required: true
       content:
         application/json:
           schema:
-            $ref: '#/components/schemas/LeasingArrangement'
+            $ref: '#/components/schemas/LeasingFacility'
     Fees:
       required: true
       content:

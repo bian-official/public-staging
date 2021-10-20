@@ -1,7 +1,7 @@
 openapi: 3.0.1
 info:
   title: Product Directory
-  description: This service domain maintains a comprehensive directory of the bank's products and services. It can be referenced to obtain product details used to support activities including product selection, sales and marketing, on-boarding, servicing and product fulfillment.
+  description: ''
   version: 10.0.0
 servers:
 - description: SwaggerHub API Auto Mocking
@@ -498,17 +498,6 @@ components:
           type: string
         ProductDirectoryEntryConfiguration:
           type: string
-    Servicing:
-      type: object
-      properties:
-        ProductandServiceFeature:
-          type: string
-        ProductandServiceFeatureGuideline:
-          type: string
-        ProductandServiceFeatureProblemDiagnosis:
-          type: string
-        ProductandServiceFeatureProblemResolution:
-          type: string
     SalesandMarketing:
       type: object
       properties:
@@ -528,15 +517,6 @@ components:
           type: string
         ProductandServiceOfferProcessingRequirements:
           type: string
-    Production:
-      type: object
-      properties:
-        ProductandServiceLocationAvailability:
-          type: string
-        ProductandServiceTimeAvailability:
-          type: string
-        ProductandServiceAccessAvailability:
-          type: string
     Operations:
       type: object
       properties:
@@ -547,6 +527,26 @@ components:
         ProductandServiceConfigurationParameterDescription:
           type: string
         ProductandServiceConfigurationParameterSetting:
+          type: string
+    Servicing:
+      type: object
+      properties:
+        ProductandServiceFeature:
+          type: string
+        ProductandServiceFeatureGuideline:
+          type: string
+        ProductandServiceFeatureProblemDiagnosis:
+          type: string
+        ProductandServiceFeatureProblemResolution:
+          type: string
+    Production:
+      type: object
+      properties:
+        ProductandServiceLocationAvailability:
+          type: string
+        ProductandServiceTimeAvailability:
+          type: string
+        ProductandServiceAccessAvailability:
           type: string
     HTTPError:
       type: object
@@ -566,14 +566,6 @@ components:
       explode: false
       schema:
         type: string
-    ServicingID:
-      name: servicingId
-      in: path
-      required: true
-      style: simple
-      explode: false
-      schema:
-        type: string
     SalesandMarketingID:
       name: salesandmarketingId
       in: path
@@ -582,16 +574,24 @@ components:
       explode: false
       schema:
         type: string
-    ProductionID:
-      name: productionId
+    OperationsID:
+      name: operationsId
       in: path
       required: true
       style: simple
       explode: false
       schema:
         type: string
-    OperationsID:
-      name: operationsId
+    ServicingID:
+      name: servicingId
+      in: path
+      required: true
+      style: simple
+      explode: false
+      schema:
+        type: string
+    ProductionID:
+      name: productionId
       in: path
       required: true
       style: simple

@@ -1,7 +1,7 @@
 openapi: 3.0.1
 info:
   title: Product Deployment
-  description: Plan and administer the production deployment new and updated products and services
+  description: ''
   version: 10.0.0
 servers:
 - description: SwaggerHub API Auto Mocking
@@ -814,16 +814,27 @@ components:
           type: string
         Date:
           type: string
-    ITOperations:
+    Servicing:
       type: object
       properties:
-        ProductandServiceDeploymentITOperationsRequirements:
+        ProductandServiceDeploymentServicingRequirements:
           type: string
-        ProductandServiceDeploymentITOperationsRequirementsWorkProducts:
+        ProductandServiceDeploymentServicingRequirementsWorkProducts:
           type: string
         DocumentDirectoryEntryInstanceReference:
           type: object
-        ProductandServiceDeploymentITOperationsRequirementsTaskSpecification:
+        ProductandServiceDeploymentServicingRequirementsTaskSpecification:
+          type: string
+    Production:
+      type: object
+      properties:
+        ProductandServiceDeploymentProductionRequirements:
+          type: string
+        ProductandServiceDeploymentProductionRequirementsWorkProducts:
+          type: string
+        DocumentDirectoryEntryInstanceReference:
+          type: object
+        ProductandServiceDeploymentProductionRequirementsTaskSpecification:
           type: string
     Systems:
       type: object
@@ -835,6 +846,17 @@ components:
         DocumentDirectoryEntryInstanceReference:
           type: object
         ProductandServiceDeploymentSystemsRequirementsTaskSpecification:
+          type: string
+    ITOperations:
+      type: object
+      properties:
+        ProductandServiceDeploymentITOperationsRequirements:
+          type: string
+        ProductandServiceDeploymentITOperationsRequirementsWorkProducts:
+          type: string
+        DocumentDirectoryEntryInstanceReference:
+          type: object
+        ProductandServiceDeploymentITOperationsRequirementsTaskSpecification:
           type: string
     HROperations:
       type: object
@@ -868,28 +890,6 @@ components:
         DocumentDirectoryEntryInstanceReference:
           type: object
         ProductandServiceDeploymentProductionSupportRequirementsTaskSpecification:
-          type: string
-    Servicing:
-      type: object
-      properties:
-        ProductandServiceDeploymentServicingRequirements:
-          type: string
-        ProductandServiceDeploymentServicingRequirementsWorkProducts:
-          type: string
-        DocumentDirectoryEntryInstanceReference:
-          type: object
-        ProductandServiceDeploymentServicingRequirementsTaskSpecification:
-          type: string
-    Production:
-      type: object
-      properties:
-        ProductandServiceDeploymentProductionRequirements:
-          type: string
-        ProductandServiceDeploymentProductionRequirementsWorkProducts:
-          type: string
-        DocumentDirectoryEntryInstanceReference:
-          type: object
-        ProductandServiceDeploymentProductionRequirementsTaskSpecification:
           type: string
     HTTPError:
       type: object
@@ -1854,8 +1854,16 @@ components:
       explode: false
       schema:
         type: string
-    ITOperationsID:
-      name: itoperationsId
+    ServicingID:
+      name: servicingId
+      in: path
+      required: true
+      style: simple
+      explode: false
+      schema:
+        type: string
+    ProductionID:
+      name: productionId
       in: path
       required: true
       style: simple
@@ -1864,6 +1872,14 @@ components:
         type: string
     SystemsID:
       name: systemsId
+      in: path
+      required: true
+      style: simple
+      explode: false
+      schema:
+        type: string
+    ITOperationsID:
+      name: itoperationsId
       in: path
       required: true
       style: simple
@@ -1888,22 +1904,6 @@ components:
         type: string
     ProductionSupportID:
       name: productionsupportId
-      in: path
-      required: true
-      style: simple
-      explode: false
-      schema:
-        type: string
-    ServicingID:
-      name: servicingId
-      in: path
-      required: true
-      style: simple
-      explode: false
-      schema:
-        type: string
-    ProductionID:
-      name: productionId
       in: path
       required: true
       style: simple

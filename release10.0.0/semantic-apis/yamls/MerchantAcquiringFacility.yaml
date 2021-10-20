@@ -1,7 +1,7 @@
 openapi: 3.0.1
 info:
   title: Merchant Acquiring Facility
-  description: This service domain orchestrates the activities related to Merchant fulfillment, Merchant Account maintenance, Merchant transactional activities and settlement, including the billing of merchant fees and charges.
+  description: ''
   version: 10.0.0
 servers:
 - description: SwaggerHub API Auto Mocking
@@ -10,20 +10,20 @@ paths:
   /MerchantAcquiringFacility/Initiate:
     post:
       tags:
-      - CR - MerchantAcquiringFacilityArrangement
+      - CR - MerchantAcquiringFacility
       summary: InCR Initiate a new merchant acquiring facility
       description: InCR Initiate a new merchant acquiring facility
       operationId: Initiate
       parameters: []
       requestBody:
-        $ref: '#/components/requestBodies/MerchantAcquiringFacilityArrangement'
+        $ref: '#/components/requestBodies/MerchantAcquiringFacility'
       responses:
         200:
           description: Success
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/MerchantAcquiringFacilityArrangement'
+                $ref: '#/components/schemas/MerchantAcquiringFacility'
         400:
           $ref: '#/components/responses/BadRequestError'
         401:
@@ -39,21 +39,21 @@ paths:
   /MerchantAcquiringFacility/{merchantacquiringfacilityId}/Update:
     put:
       tags:
-      - CR - MerchantAcquiringFacilityArrangement
+      - CR - MerchantAcquiringFacility
       summary: UpCR Update details of the merchant acquiring facility
       description: UpCR Update details of the merchant acquiring facility
       operationId: Update
       parameters:
       - $ref: '#/components/parameters/MerchantAcquiringFacilityID'
       requestBody:
-        $ref: '#/components/requestBodies/MerchantAcquiringFacilityArrangement'
+        $ref: '#/components/requestBodies/MerchantAcquiringFacility'
       responses:
         200:
           description: Success
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/MerchantAcquiringFacilityArrangement'
+                $ref: '#/components/schemas/MerchantAcquiringFacility'
         400:
           $ref: '#/components/responses/BadRequestError'
         401:
@@ -69,7 +69,7 @@ paths:
   /MerchantAcquiringFacility/{merchantacquiringfacilityId}/Retrieve:
     get:
       tags:
-      - CR - MerchantAcquiringFacilityArrangement
+      - CR - MerchantAcquiringFacility
       summary: ReCR Retrieve details about a merchant facility
       description: ReCR Retrieve details about a merchant facility
       operationId: Retrieve
@@ -81,7 +81,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/MerchantAcquiringFacilityArrangement'
+                $ref: '#/components/schemas/MerchantAcquiringFacility'
         400:
           $ref: '#/components/responses/BadRequestError'
         401:
@@ -110,7 +110,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/MerchantAcquiringFacilityArrangement'
+                $ref: '#/components/schemas/MerchantAcquiringFacility'
         400:
           $ref: '#/components/responses/BadRequestError'
         401:
@@ -383,7 +383,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/MerchantAcquiringFacilityArrangement'
+                $ref: '#/components/schemas/MerchantAcquiringFacility'
         400:
           $ref: '#/components/responses/BadRequestError'
         401:
@@ -474,7 +474,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/MerchantAcquiringFacilityArrangement'
+                $ref: '#/components/schemas/MerchantAcquiringFacility'
         400:
           $ref: '#/components/responses/BadRequestError'
         401:
@@ -489,7 +489,7 @@ paths:
           $ref: '#/components/responses/InternalServerError'
 components:
   schemas:
-    MerchantAcquiringFacilityArrangement:
+    MerchantAcquiringFacility:
       type: object
       properties:
         ProductInstanceReference:
@@ -513,6 +513,98 @@ components:
         MerchantPositionLimitSettings:
           type: string
         MerchantPositionLimitValue:
+          type: string
+    MerchantAccount:
+      type: object
+      properties:
+        MerchantAccountPostingTransaction:
+          type: string
+        MerchantAcquiringAccountPostingPurpose:
+          type: string
+        MerchantAcquiringAccountPostingAmount:
+          type: number
+        MerchantAcquiringAccountPostingValueDate:
+          type: string
+        MerchantAcquiringAccountPostingResult:
+          type: string
+    Clearing:
+      type: object
+      properties:
+        CardTransactionRecordReference:
+          type: object
+        CardTransactionProductInstanceReference:
+          type: object
+        CardHolderReference:
+          type: object
+        CardTransactionIssuedDeviceReference:
+          type: object
+        CardTransactionNetworkReference:
+          type: object
+        CardTransactionIssuingBankReference:
+          type: object
+        CardTransactionMerchantAcquiringBankReference:
+          type: object
+        CardTransactionType:
+          type: string
+        CardTransactionCurrency:
+          type: string
+        CardTransactionAmountType:
+          type: string
+        CardTransactionAmount:
+          type: number
+        CardTransactionMerchantReference:
+          type: object
+        CardTransactionLocationReference:
+          type: object
+        CardTransactionProductandServiceReference:
+          type: object
+        CardTransactionDate/Time:
+          type: string
+        CardTransactionFXConversionCharge:
+          type: string
+        CardTransactionInterchargeFee:
+          type: string
+        CardTransactionAuthorizationRecord:
+          type: string
+    ServiceFees:
+      type: object
+      properties:
+        MerchantFeeConfigurationProfile:
+          type: string
+        MerchantFeeType:
+          type: string
+        MerchantFeeDefinition:
+          type: string
+        MerchantFeeApplicationRecord:
+          type: string
+        MerchantFeeTransaction:
+          type: string
+        TransactionDescription:
+          type: string
+        TransactionFeeType:
+          type: string
+        TransactionFeeCharge:
+          type: string
+        MerchantFeeProjectionsandCommitments:
+          type: string
+        ProjectedTransactionDescription:
+          type: string
+        ProjectedTransactionFeeType:
+          type: string
+        ProjectedTransactionFeeCharge:
+          type: string
+    Settlement:
+      type: object
+      properties:
+        ParticipantMerchantAcquirerBankReference:
+          type: object
+        ParticipantIssuerBankReference:
+          type: object
+        CardFinancialSettlementServicePaymentAdviceRecord:
+          type: string
+        ParticipantPaymentTransaction:
+          type: string
+        ParticipantAcquirerBankSettlementAccountStatement:
           type: string
     Chargeback:
       type: object
@@ -554,98 +646,6 @@ components:
         CardTransactionInterchargeFee:
           type: string
         CardTransactionAuthorizationRecord:
-          type: string
-    Clearing:
-      type: object
-      properties:
-        CardTransactionRecordReference:
-          type: object
-        CardTransactionProductInstanceReference:
-          type: object
-        CardHolderReference:
-          type: object
-        CardTransactionIssuedDeviceReference:
-          type: object
-        CardTransactionNetworkReference:
-          type: object
-        CardTransactionIssuingBankReference:
-          type: object
-        CardTransactionMerchantAcquiringBankReference:
-          type: object
-        CardTransactionType:
-          type: string
-        CardTransactionCurrency:
-          type: string
-        CardTransactionAmountType:
-          type: string
-        CardTransactionAmount:
-          type: number
-        CardTransactionMerchantReference:
-          type: object
-        CardTransactionLocationReference:
-          type: object
-        CardTransactionProductandServiceReference:
-          type: object
-        CardTransactionDate/Time:
-          type: string
-        CardTransactionFXConversionCharge:
-          type: string
-        CardTransactionInterchargeFee:
-          type: string
-        CardTransactionAuthorizationRecord:
-          type: string
-    MerchantAccount:
-      type: object
-      properties:
-        MerchantAccountPostingTransaction:
-          type: string
-        MerchantAcquiringAccountPostingPurpose:
-          type: string
-        MerchantAcquiringAccountPostingAmount:
-          type: number
-        MerchantAcquiringAccountPostingValueDate:
-          type: string
-        MerchantAcquiringAccountPostingResult:
-          type: string
-    Settlement:
-      type: object
-      properties:
-        ParticipantMerchantAcquirerBankReference:
-          type: object
-        ParticipantIssuerBankReference:
-          type: object
-        CardFinancialSettlementServicePaymentAdviceRecord:
-          type: string
-        ParticipantPaymentTransaction:
-          type: string
-        ParticipantAcquirerBankSettlementAccountStatement:
-          type: string
-    ServiceFees:
-      type: object
-      properties:
-        MerchantFeeConfigurationProfile:
-          type: string
-        MerchantFeeType:
-          type: string
-        MerchantFeeDefinition:
-          type: string
-        MerchantFeeApplicationRecord:
-          type: string
-        MerchantFeeTransaction:
-          type: string
-        TransactionDescription:
-          type: string
-        TransactionFeeType:
-          type: string
-        TransactionFeeCharge:
-          type: string
-        MerchantFeeProjectionsandCommitments:
-          type: string
-        ProjectedTransactionDescription:
-          type: string
-        ProjectedTransactionFeeType:
-          type: string
-        ProjectedTransactionFeeCharge:
           type: string
     HTTPError:
       type: object
@@ -835,7 +835,7 @@ components:
     RetrieveClearingResponse:
       type: object
       properties:
-        MerchantAcquiringFacilityArrangement:
+        MerchantAcquiringFacility:
           type: object
           properties:
             ProductInstanceReference:
@@ -1095,7 +1095,7 @@ components:
     RetrieveChargebackResponse:
       type: object
       properties:
-        MerchantAcquiringFacilityArrangement:
+        MerchantAcquiringFacility:
           type: object
           properties:
             ProductInstanceReference:
@@ -1276,8 +1276,8 @@ components:
       explode: false
       schema:
         type: string
-    ChargebackID:
-      name: chargebackId
+    MerchantAccountID:
+      name: merchantaccountId
       in: path
       required: true
       style: simple
@@ -1292,8 +1292,8 @@ components:
       explode: false
       schema:
         type: string
-    MerchantAccountID:
-      name: merchantaccountId
+    ServiceFeesID:
+      name: servicefeesId
       in: path
       required: true
       style: simple
@@ -1308,8 +1308,8 @@ components:
       explode: false
       schema:
         type: string
-    ServiceFeesID:
-      name: servicefeesId
+    ChargebackID:
+      name: chargebackId
       in: path
       required: true
       style: simple
@@ -1317,12 +1317,12 @@ components:
       schema:
         type: string
   requestBodies:
-    MerchantAcquiringFacilityArrangement:
+    MerchantAcquiringFacility:
       required: true
       content:
         application/json:
           schema:
-            $ref: '#/components/schemas/MerchantAcquiringFacilityArrangement'
+            $ref: '#/components/schemas/MerchantAcquiringFacility'
     UpdateClearingRequest:
       required: true
       content:

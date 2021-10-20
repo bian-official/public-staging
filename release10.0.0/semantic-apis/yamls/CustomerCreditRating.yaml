@@ -1,7 +1,7 @@
 openapi: 3.0.1
 info:
   title: Customer Credit Rating
-  description: This service domain maintains and administers the bank's credit assessment for customers based on consolidated internal data and optionally by referencing external credit agency reports
+  description: ''
   version: 10.0.0
 servers:
 - description: SwaggerHub API Auto Mocking
@@ -337,15 +337,6 @@ components:
           type: string
         CustomerCreditRatingDate:
           type: string
-    InternalReporting:
-      type: object
-      properties:
-        ProductandServiceActivityReportReference:
-          type: object
-        ProductandServiceActivityReportSchedule:
-          type: string
-        ProductandServiceActivityReport:
-          type: string
     Alerts:
       type: object
       properties:
@@ -358,6 +349,15 @@ components:
         CustomerCreditAlertDescription:
           type: string
         Date:
+          type: string
+    InternalReporting:
+      type: object
+      properties:
+        ProductandServiceActivityReportReference:
+          type: object
+        ProductandServiceActivityReportSchedule:
+          type: string
+        ProductandServiceActivityReport:
           type: string
     ExternalReporting:
       type: object
@@ -498,16 +498,16 @@ components:
       explode: false
       schema:
         type: string
-    InternalReportingID:
-      name: internalreportingId
+    AlertsID:
+      name: alertsId
       in: path
       required: true
       style: simple
       explode: false
       schema:
         type: string
-    AlertsID:
-      name: alertsId
+    InternalReportingID:
+      name: internalreportingId
       in: path
       required: true
       style: simple

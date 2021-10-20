@@ -1,7 +1,7 @@
 openapi: 3.0.1
 info:
   title: Fraud Resolution
-  description: This service domain sets up and processes a fraud case resulting from fraud behavior that has been detected during production processing
+  description: ''
   version: 10.0.0
 servers:
 - description: SwaggerHub API Auto Mocking
@@ -263,11 +263,6 @@ components:
           type: object
         PaymentOrderReference:
           type: object
-    CaseAnalysis:
-      type: object
-      properties:
-        FraudCaseRootCause:
-          type: string
     CaseDetermination:
       type: object
       properties:
@@ -284,6 +279,11 @@ components:
         InterestedPartyAgreement:
           type: string
         FraudCaseDeterminationRecord:
+          type: string
+    CaseAnalysis:
+      type: object
+      properties:
+        FraudCaseRootCause:
           type: string
     HTTPError:
       type: object
@@ -420,16 +420,16 @@ components:
       explode: false
       schema:
         type: string
-    CaseAnalysisID:
-      name: caseanalysisId
+    CaseDeterminationID:
+      name: casedeterminationId
       in: path
       required: true
       style: simple
       explode: false
       schema:
         type: string
-    CaseDeterminationID:
-      name: casedeterminationId
+    CaseAnalysisID:
+      name: caseanalysisId
       in: path
       required: true
       style: simple

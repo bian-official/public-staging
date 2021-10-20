@@ -1,7 +1,7 @@
 openapi: 3.0.1
 info:
   title: Session Dialogue
-  description: This service domain handles/structures the customer narrative during an interactive session. It consolidates and presents pertinent customer information and provides servicing guidelines with standard dialogue/scripting as appropriate. It can include the capability to provoke questions to capture key relationship and sales triggers. It also ensures the correct sequencing, dialogue content and actions are performed/initiated during the customer interaction. It may further leverage the session by passing on customer notifications, status updates and triggering sales/marketing efforts.
+  description: ''
   version: 10.0.0
 servers:
 - description: SwaggerHub API Auto Mocking
@@ -931,26 +931,44 @@ components:
           type: string
         SessionDialogueResult:
           type: string
+    Intelligence:
+      type: object
+      properties:
+        IntelligenceRecord:
+          type: string
+        CustomerInsightType:
+          type: string
+        CustomerInsight:
+          type: string
+        InsightTaskResult:
+          type: string
+    Sales:
+      type: object
+      properties:
+        ProductandServiceType:
+          type: string
+        ProductandServiceProperties:
+          type: string
+        SalesTaskResult:
+          type: string
+    ProductorService:
+      type: object
+      properties:
+        ProductInstanceReference:
+          type: object
+        ProductandServiceTaskResult:
+          type: string
+    History:
+      type: object
+      properties:
+        HistoryTaskResult:
+          type: string
     Authentication:
       type: object
       properties:
         RequiredAuthenticationLevel:
           type: string
         AuthenticationTaskResult:
-          type: string
-    Query:
-      type: object
-      properties:
-        QueryType:
-          type: string
-        QueryTaskResult:
-          type: string
-    Offer:
-      type: object
-      properties:
-        ProductandServiceType:
-          type: string
-        OfferTaskResult:
           type: string
     Order:
       type: object
@@ -963,37 +981,12 @@ components:
           type: string
         OrderTaskWorkResult:
           type: string
-    ProductorService:
-      type: object
-      properties:
-        ProductInstanceReference:
-          type: object
-        ProductandServiceTaskResult:
-          type: string
-    Sales:
+    Offer:
       type: object
       properties:
         ProductandServiceType:
           type: string
-        ProductandServiceProperties:
-          type: string
-        SalesTaskResult:
-          type: string
-    History:
-      type: object
-      properties:
-        HistoryTaskResult:
-          type: string
-    Intelligence:
-      type: object
-      properties:
-        IntelligenceRecord:
-          type: string
-        CustomerInsightType:
-          type: string
-        CustomerInsight:
-          type: string
-        InsightTaskResult:
+        OfferTaskResult:
           type: string
     Case:
       type: object
@@ -1003,6 +996,13 @@ components:
         CustomerCaseType:
           type: string
         CaseTaskResult:
+          type: string
+    Query:
+      type: object
+      properties:
+        QueryType:
+          type: string
+        QueryTaskResult:
           type: string
     HTTPError:
       type: object
@@ -2053,40 +2053,8 @@ components:
       explode: false
       schema:
         type: string
-    AuthenticationID:
-      name: authenticationId
-      in: path
-      required: true
-      style: simple
-      explode: false
-      schema:
-        type: string
-    QueryID:
-      name: queryId
-      in: path
-      required: true
-      style: simple
-      explode: false
-      schema:
-        type: string
-    OfferID:
-      name: offerId
-      in: path
-      required: true
-      style: simple
-      explode: false
-      schema:
-        type: string
-    OrderID:
-      name: orderId
-      in: path
-      required: true
-      style: simple
-      explode: false
-      schema:
-        type: string
-    ProductorServiceID:
-      name: productorserviceId
+    IntelligenceID:
+      name: intelligenceId
       in: path
       required: true
       style: simple
@@ -2101,6 +2069,14 @@ components:
       explode: false
       schema:
         type: string
+    ProductorServiceID:
+      name: productorserviceId
+      in: path
+      required: true
+      style: simple
+      explode: false
+      schema:
+        type: string
     HistoryID:
       name: historyId
       in: path
@@ -2109,8 +2085,24 @@ components:
       explode: false
       schema:
         type: string
-    IntelligenceID:
-      name: intelligenceId
+    AuthenticationID:
+      name: authenticationId
+      in: path
+      required: true
+      style: simple
+      explode: false
+      schema:
+        type: string
+    OrderID:
+      name: orderId
+      in: path
+      required: true
+      style: simple
+      explode: false
+      schema:
+        type: string
+    OfferID:
+      name: offerId
       in: path
       required: true
       style: simple
@@ -2119,6 +2111,14 @@ components:
         type: string
     CaseID:
       name: caseId
+      in: path
+      required: true
+      style: simple
+      explode: false
+      schema:
+        type: string
+    QueryID:
+      name: queryId
       in: path
       required: true
       style: simple

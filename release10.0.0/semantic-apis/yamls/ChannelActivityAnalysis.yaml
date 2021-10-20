@@ -1,7 +1,7 @@
 openapi: 3.0.1
 info:
   title: Channel Activity Analysis
-  description: This service domain tracks and analyzes channel activity to support relationship development, to detect unwanted behavior, possible fraud, and to constrain channel use as necessary (for example tracking usage frequency and cumulative transaction amounts within a period)
+  description: ''
   version: 10.0.0
 servers:
 - description: SwaggerHub API Auto Mocking
@@ -501,42 +501,6 @@ components:
           type: string
         ChannelActivityHistoryReport:
           type: string
-    CustomerFraud:
-      type: object
-      properties:
-        ChannelActivityCustomerFraudAnalysisAlgorithmSpecification:
-          type: string
-        ChannelActivityCustomerFraudAnalysisReference:
-          type: object
-        ChannelActivityCustomerFraudAnalysisResult:
-          type: string
-    Bot:
-      type: object
-      properties:
-        ChannelActivityBotDetectionAnalysisAlgorithmSpecification:
-          type: string
-        ChannelActivityBotDetectionAnalysisReference:
-          type: object
-        ChannelActivityBotDetectionAnalysisResult:
-          type: string
-    MerchantFraud:
-      type: object
-      properties:
-        ChannelActivityMerchantFraudAnalysisAlgorithmSpecification:
-          type: string
-        ChannelActivityMerchantFraudAnalysisReference:
-          type: object
-        ChannelActivityMerchantFraudAnalysisResult:
-          type: string
-    MerchantBehavior:
-      type: object
-      properties:
-        ChannelActivityMerchantBehaviorAnalysisAlgorithmSpecification:
-          type: string
-        ChannelActivityMerchantBehaviorAnalysisReference:
-          type: object
-        ChannelActivityMerchantBehaviorAnalysisResult:
-          type: string
     DeviceError:
       type: object
       properties:
@@ -554,6 +518,42 @@ components:
         ChannelActivityCustomerBehaviorAnalysisReference:
           type: object
         ChannelActivityCustomerBehaviorAnalysisResult:
+          type: string
+    MerchantBehavior:
+      type: object
+      properties:
+        ChannelActivityMerchantBehaviorAnalysisAlgorithmSpecification:
+          type: string
+        ChannelActivityMerchantBehaviorAnalysisReference:
+          type: object
+        ChannelActivityMerchantBehaviorAnalysisResult:
+          type: string
+    MerchantFraud:
+      type: object
+      properties:
+        ChannelActivityMerchantFraudAnalysisAlgorithmSpecification:
+          type: string
+        ChannelActivityMerchantFraudAnalysisReference:
+          type: object
+        ChannelActivityMerchantFraudAnalysisResult:
+          type: string
+    CustomerFraud:
+      type: object
+      properties:
+        ChannelActivityCustomerFraudAnalysisAlgorithmSpecification:
+          type: string
+        ChannelActivityCustomerFraudAnalysisReference:
+          type: object
+        ChannelActivityCustomerFraudAnalysisResult:
+          type: string
+    Bot:
+      type: object
+      properties:
+        ChannelActivityBotDetectionAnalysisAlgorithmSpecification:
+          type: string
+        ChannelActivityBotDetectionAnalysisReference:
+          type: object
+        ChannelActivityBotDetectionAnalysisResult:
           type: string
     HTTPError:
       type: object
@@ -825,24 +825,16 @@ components:
       explode: false
       schema:
         type: string
-    CustomerFraudID:
-      name: customerfraudId
+    DeviceErrorID:
+      name: deviceerrorId
       in: path
       required: true
       style: simple
       explode: false
       schema:
         type: string
-    BotID:
-      name: botId
-      in: path
-      required: true
-      style: simple
-      explode: false
-      schema:
-        type: string
-    MerchantFraudID:
-      name: merchantfraudId
+    CustomerBehaviorID:
+      name: customerbehaviorId
       in: path
       required: true
       style: simple
@@ -857,16 +849,24 @@ components:
       explode: false
       schema:
         type: string
-    DeviceErrorID:
-      name: deviceerrorId
+    MerchantFraudID:
+      name: merchantfraudId
       in: path
       required: true
       style: simple
       explode: false
       schema:
         type: string
-    CustomerBehaviorID:
-      name: customerbehaviorId
+    CustomerFraudID:
+      name: customerfraudId
+      in: path
+      required: true
+      style: simple
+      explode: false
+      schema:
+        type: string
+    BotID:
+      name: botId
       in: path
       required: true
       style: simple

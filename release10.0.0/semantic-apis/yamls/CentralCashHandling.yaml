@@ -1,7 +1,7 @@
 openapi: 3.0.1
 info:
   title: Central Cash Handling
-  description: Track cash inventory, project demand and allocate inventory across the branch/ATM network
+  description: ''
   version: 10.0.0
 servers:
 - description: SwaggerHub API Auto Mocking
@@ -608,13 +608,6 @@ components:
           type: string
         CashInventoryProjectionServiceName:
           type: string
-    CentralCashHandlingOutcome:
-      type: object
-      properties:
-        CentralCashHandlingAllocation:
-          type: string
-        CentralCashHandlingWorkProduct:
-          type: string
     TrackingandAllocation:
       type: object
       properties:
@@ -633,6 +626,13 @@ components:
         ServiceWorkProduct:
           type: string
         ServiceName:
+          type: string
+    CentralCashHandlingOutcome:
+      type: object
+      properties:
+        CentralCashHandlingAllocation:
+          type: string
+        CentralCashHandlingWorkProduct:
           type: string
     HTTPError:
       type: object
@@ -660,16 +660,16 @@ components:
       explode: false
       schema:
         type: string
-    CentralCashHandlingOutcomeID:
-      name: centralcashhandlingoutcomeId
+    TrackingandAllocationID:
+      name: trackingandallocationId
       in: path
       required: true
       style: simple
       explode: false
       schema:
         type: string
-    TrackingandAllocationID:
-      name: trackingandallocationId
+    CentralCashHandlingOutcomeID:
+      name: centralcashhandlingoutcomeId
       in: path
       required: true
       style: simple
