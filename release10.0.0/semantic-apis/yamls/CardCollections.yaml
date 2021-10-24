@@ -356,6 +356,13 @@ components:
           type: string
         CardCollectionsAssignmentWorkProduct:
           type: string
+    Resolution:
+      type: object
+      properties:
+        CardCollectionsResolutionDecision:
+          type: string
+        CardCollectionsResolutionWorkProduct:
+          type: string
     PaymentTerms:
       type: object
       properties:
@@ -387,13 +394,6 @@ components:
         PaymentTransaction:
           type: string
         CardCollectionsPaymentNotificationRecord:
-          type: string
-    Resolution:
-      type: object
-      properties:
-        CardCollectionsResolutionDecision:
-          type: string
-        CardCollectionsResolutionWorkProduct:
           type: string
     HTTPError:
       type: object
@@ -528,6 +528,14 @@ components:
       explode: false
       schema:
         type: string
+    ResolutionID:
+      name: resolutionId
+      in: path
+      required: true
+      style: simple
+      explode: false
+      schema:
+        type: string
     PaymentTermsID:
       name: paymenttermsId
       in: path
@@ -538,14 +546,6 @@ components:
         type: string
     PaymentID:
       name: paymentId
-      in: path
-      required: true
-      style: simple
-      explode: false
-      schema:
-        type: string
-    ResolutionID:
-      name: resolutionId
       in: path
       required: true
       style: simple

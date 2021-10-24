@@ -925,25 +925,6 @@ components:
           type: string
         ServicingIssueProcedureReference:
           type: string
-    ProductionIssueResolutionWorkstep:
-      type: object
-      properties:
-        Preconditions:
-          type: object
-        BusinessUnit/EmployeeReference:
-          type: object
-        Schedule:
-          type: object
-        BusinessService:
-          type: object
-        Postconditions:
-          type: object
-        ServicingIssueProcedureReference:
-          type: string
-        ProductionIssueResolutionWorkstepReference:
-          type: string
-        ProductionIssueResolutionWorkstepType:
-          type: string
     ProductionIssueAnalysisWorkstep:
       type: object
       properties:
@@ -962,13 +943,6 @@ components:
         ProductionIssueAnalysisWorkstepReference:
           type: string
         ProductionIssueAnalysisWorkstepType:
-          type: string
-    ServicingIssueOutcome:
-      type: object
-      properties:
-        ServicingIssueWorkProduct:
-          type: object
-        ServicingIssueProcedure:
           type: string
     ProductionIssueDeterminationWorkstep:
       type: object
@@ -989,6 +963,32 @@ components:
           type: string
         ProductionIssueDeterminationWorkstepType:
           type: string
+    ProductionIssueResolutionWorkstep:
+      type: object
+      properties:
+        Preconditions:
+          type: object
+        BusinessUnit/EmployeeReference:
+          type: object
+        Schedule:
+          type: object
+        BusinessService:
+          type: object
+        Postconditions:
+          type: object
+        ServicingIssueProcedureReference:
+          type: string
+        ProductionIssueResolutionWorkstepReference:
+          type: string
+        ProductionIssueResolutionWorkstepType:
+          type: string
+    ServicingIssueOutcome:
+      type: object
+      properties:
+        ServicingIssueWorkProduct:
+          type: object
+        ServicingIssueProcedure:
+          type: string
     HTTPError:
       type: object
       properties:
@@ -1007,14 +1007,6 @@ components:
       explode: false
       schema:
         type: string
-    ProductionIssueResolutionWorkstepID:
-      name: productionissueresolutionworkstepId
-      in: path
-      required: true
-      style: simple
-      explode: false
-      schema:
-        type: string
     ProductionIssueAnalysisWorkstepID:
       name: productionissueanalysisworkstepId
       in: path
@@ -1023,16 +1015,24 @@ components:
       explode: false
       schema:
         type: string
-    ServicingIssueOutcomeID:
-      name: servicingissueoutcomeId
+    ProductionIssueDeterminationWorkstepID:
+      name: productionissuedeterminationworkstepId
       in: path
       required: true
       style: simple
       explode: false
       schema:
         type: string
-    ProductionIssueDeterminationWorkstepID:
-      name: productionissuedeterminationworkstepId
+    ProductionIssueResolutionWorkstepID:
+      name: productionissueresolutionworkstepId
+      in: path
+      required: true
+      style: simple
+      explode: false
+      schema:
+        type: string
+    ServicingIssueOutcomeID:
+      name: servicingissueoutcomeId
       in: path
       required: true
       style: simple

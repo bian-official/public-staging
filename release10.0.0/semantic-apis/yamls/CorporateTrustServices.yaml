@@ -1767,6 +1767,23 @@ components:
           type: string
         CorporateTrustServicesFacilityReference:
           type: string
+    TrustAssetMaintenanceandManagementFulfillment:
+      type: object
+      properties:
+        Preconditions:
+          type: object
+        Schedule:
+          type: object
+        BusinessService:
+          type: object
+        Postconditions:
+          type: object
+        CorporateTrustServicesFacilityReference:
+          type: string
+        TrustAssetMaintenanceandManagementFulfillmentReference:
+          type: object
+        TrustAssetMaintenanceandManagementFulfillmentType:
+          type: string
     CorporateDebtIssueOversightFulfillment:
       type: object
       properties:
@@ -1783,23 +1800,6 @@ components:
         CorporateDebtIssueOversightFulfillmentReference:
           type: object
         CorporateDebtIssueOversightFulfillmentType:
-          type: string
-    TrustEstate,InheritanceandIncomeTaxFulfillment:
-      type: object
-      properties:
-        Preconditions:
-          type: object
-        Schedule:
-          type: object
-        BusinessService:
-          type: object
-        Postconditions:
-          type: object
-        CorporateTrustServicesFacilityReference:
-          type: string
-        TrustEstate,InheritanceandIncomeTaxFulfillmentReference:
-          type: object
-        TrustEstate,InheritanceandIncomeTaxFulfillmentType:
           type: string
     TrustTaxandExpenseFulfillment:
       type: object
@@ -1835,6 +1835,23 @@ components:
           type: object
         EscrowAccountFulfillmentType:
           type: string
+    TrustEstate,InheritanceandIncomeTaxFulfillment:
+      type: object
+      properties:
+        Preconditions:
+          type: object
+        Schedule:
+          type: object
+        BusinessService:
+          type: object
+        Postconditions:
+          type: object
+        CorporateTrustServicesFacilityReference:
+          type: string
+        TrustEstate,InheritanceandIncomeTaxFulfillmentReference:
+          type: object
+        TrustEstate,InheritanceandIncomeTaxFulfillmentType:
+          type: string
     TrustCourtAdministrationFulfillment:
       type: object
       properties:
@@ -1851,23 +1868,6 @@ components:
         TrustCourtAdministrationFulfillmentReference:
           type: object
         TrustCourtAdministrationFulfillmentType:
-          type: string
-    TrustAssetMaintenanceandManagementFulfillment:
-      type: object
-      properties:
-        Preconditions:
-          type: object
-        Schedule:
-          type: object
-        BusinessService:
-          type: object
-        Postconditions:
-          type: object
-        CorporateTrustServicesFacilityReference:
-          type: string
-        TrustAssetMaintenanceandManagementFulfillmentReference:
-          type: object
-        TrustAssetMaintenanceandManagementFulfillmentType:
           type: string
     DebtTrusteeFulfillment:
       type: object
@@ -1911,16 +1911,16 @@ components:
       explode: false
       schema:
         type: string
-    CorporateDebtIssueOversightFulfillmentID:
-      name: corporatedebtissueoversightfulfillmentId
+    TrustAssetMaintenanceandManagementFulfillmentID:
+      name: trustassetmaintenanceandmanagementfulfillmentId
       in: path
       required: true
       style: simple
       explode: false
       schema:
         type: string
-    TrustEstate,InheritanceandIncomeTaxFulfillmentID:
-      name: trustestate,inheritanceandincometaxfulfillmentId
+    CorporateDebtIssueOversightFulfillmentID:
+      name: corporatedebtissueoversightfulfillmentId
       in: path
       required: true
       style: simple
@@ -1943,16 +1943,16 @@ components:
       explode: false
       schema:
         type: string
-    TrustCourtAdministrationFulfillmentID:
-      name: trustcourtadministrationfulfillmentId
+    TrustEstate,InheritanceandIncomeTaxFulfillmentID:
+      name: trustestate,inheritanceandincometaxfulfillmentId
       in: path
       required: true
       style: simple
       explode: false
       schema:
         type: string
-    TrustAssetMaintenanceandManagementFulfillmentID:
-      name: trustassetmaintenanceandmanagementfulfillmentId
+    TrustCourtAdministrationFulfillmentID:
+      name: trustcourtadministrationfulfillmentId
       in: path
       required: true
       style: simple

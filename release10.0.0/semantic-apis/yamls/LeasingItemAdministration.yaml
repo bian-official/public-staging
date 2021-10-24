@@ -668,17 +668,6 @@ components:
           type: string
         AssuranceCollateralItemAssuranceServiceName:
           type: string
-    LeasingItemAdministrationOutcome:
-      type: object
-      properties:
-        LeasingItemAdministrationPerformanceAnalysis:
-          type: string
-        LeasingItemAdministrationActivityAnalysis:
-          type: string
-        LeasingItemAdministrationAdministrativePlan:
-          type: string
-        LeasingItemAdministrationAdministrationTask:
-          type: string
     Registration:
       type: object
       properties:
@@ -701,6 +690,17 @@ components:
         RegistrationCollateralRegistrationServiceWorkProduct:
           type: string
         RegistrationCollateralRegistrationServiceName:
+          type: string
+    LeasingItemAdministrationOutcome:
+      type: object
+      properties:
+        LeasingItemAdministrationPerformanceAnalysis:
+          type: string
+        LeasingItemAdministrationActivityAnalysis:
+          type: string
+        LeasingItemAdministrationAdministrativePlan:
+          type: string
+        LeasingItemAdministrationAdministrationTask:
           type: string
     HTTPError:
       type: object
@@ -736,16 +736,16 @@ components:
       explode: false
       schema:
         type: string
-    LeasingItemAdministrationOutcomeID:
-      name: leasingitemadministrationoutcomeId
+    RegistrationID:
+      name: registrationId
       in: path
       required: true
       style: simple
       explode: false
       schema:
         type: string
-    RegistrationID:
-      name: registrationId
+    LeasingItemAdministrationOutcomeID:
+      name: leasingitemadministrationoutcomeId
       in: path
       required: true
       style: simple

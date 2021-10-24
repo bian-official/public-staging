@@ -919,7 +919,7 @@ components:
           type: string
         EmployeePaymentServicesFacilityReference:
           type: string
-    CorporatePayrollPaymentsFulfillment:
+    EmployeePayrollDetailsMaintenanceFulfillment:
       type: object
       properties:
         Preconditions:
@@ -932,9 +932,9 @@ components:
           type: object
         EmployeePaymentServicesFacilityReference:
           type: string
-        CorporatePayrollPaymentsFulfillmentReference:
+        EmployeePayrollDetailsMaintenanceFulfillmentReference:
           type: object
-        CorporatePayrollPaymentsFulfillmentType:
+        EmployeePayrollDetailsMaintenanceFulfillmentType:
           type: string
     ProductionServiceReportingFulfillment:
       type: object
@@ -953,14 +953,7 @@ components:
           type: object
         ProductionServiceReportingFulfillmentType:
           type: string
-    CorporatePayrollServicesOutcome:
-      type: object
-      properties:
-        CorporatePayrollServicesFinancialFacility:
-          type: string
-        CorporatePayrollServicesWorkProduct:
-          type: object
-    EmployeePayrollDetailsMaintenanceFulfillment:
+    CorporatePayrollPaymentsFulfillment:
       type: object
       properties:
         Preconditions:
@@ -973,10 +966,17 @@ components:
           type: object
         EmployeePaymentServicesFacilityReference:
           type: string
-        EmployeePayrollDetailsMaintenanceFulfillmentReference:
+        CorporatePayrollPaymentsFulfillmentReference:
           type: object
-        EmployeePayrollDetailsMaintenanceFulfillmentType:
+        CorporatePayrollPaymentsFulfillmentType:
           type: string
+    CorporatePayrollServicesOutcome:
+      type: object
+      properties:
+        CorporatePayrollServicesFinancialFacility:
+          type: string
+        CorporatePayrollServicesWorkProduct:
+          type: object
     HTTPError:
       type: object
       properties:
@@ -995,8 +995,8 @@ components:
       explode: false
       schema:
         type: string
-    CorporatePayrollPaymentsFulfillmentID:
-      name: corporatepayrollpaymentsfulfillmentId
+    EmployeePayrollDetailsMaintenanceFulfillmentID:
+      name: employeepayrolldetailsmaintenancefulfillmentId
       in: path
       required: true
       style: simple
@@ -1011,16 +1011,16 @@ components:
       explode: false
       schema:
         type: string
-    CorporatePayrollServicesOutcomeID:
-      name: corporatepayrollservicesoutcomeId
+    CorporatePayrollPaymentsFulfillmentID:
+      name: corporatepayrollpaymentsfulfillmentId
       in: path
       required: true
       style: simple
       explode: false
       schema:
         type: string
-    EmployeePayrollDetailsMaintenanceFulfillmentID:
-      name: employeepayrolldetailsmaintenancefulfillmentId
+    CorporatePayrollServicesOutcomeID:
+      name: corporatepayrollservicesoutcomeId
       in: path
       required: true
       style: simple

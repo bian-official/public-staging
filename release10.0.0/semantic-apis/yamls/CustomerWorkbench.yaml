@@ -576,6 +576,13 @@ components:
           type: string
         CustomerResidentFiles:
           type: string
+    Broadcast:
+      type: object
+      properties:
+        CustomerWorkbenchBroadcastRecord:
+          type: string
+        CustomerWorkbenchBroadcastRecordDate/Time:
+          type: string
     Browsing:
       type: object
       properties:
@@ -600,13 +607,6 @@ components:
         SWUpdateImage:
           type: string
         Date:
-          type: string
-    Broadcast:
-      type: object
-      properties:
-        CustomerWorkbenchBroadcastRecord:
-          type: string
-        CustomerWorkbenchBroadcastRecordDate/Time:
           type: string
     HTTPError:
       type: object
@@ -751,6 +751,14 @@ components:
       explode: false
       schema:
         type: string
+    BroadcastID:
+      name: broadcastId
+      in: path
+      required: true
+      style: simple
+      explode: false
+      schema:
+        type: string
     BrowsingID:
       name: browsingId
       in: path
@@ -769,14 +777,6 @@ components:
         type: string
     SWUpdateID:
       name: swupdateId
-      in: path
-      required: true
-      style: simple
-      explode: false
-      schema:
-        type: string
-    BroadcastID:
-      name: broadcastId
       in: path
       required: true
       style: simple

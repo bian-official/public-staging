@@ -443,27 +443,6 @@ components:
           type: string
         RewardPointsTransactionTransaction:
           type: string
-    Redemption:
-      type: object
-      properties:
-        RedemptionPreconditions:
-          type: string
-        RedemptionTaskSchedule:
-          type: string
-        AwardsRedemption:
-          type: object
-        RedemptionPostconditions:
-          type: string
-        RedemptionAwardsRedemptionServiceType:
-          type: string
-        RedemptionAwardsRedemptionServiceDescription:
-          type: string
-        RedemptionAwardsRedemptionServiceInputsandOuputs:
-          type: string
-        RedemptionAwardsRedemptionServiceWorkProduct:
-          type: string
-        RedemptionAwardsRedemptionServiceName:
-          type: string
     RewardPointsAwardsAndRedemptionOutcome:
       type: object
       properties:
@@ -510,6 +489,27 @@ components:
           type: string
         AwardAwardsServiceName:
           type: string
+    Redemption:
+      type: object
+      properties:
+        RedemptionPreconditions:
+          type: string
+        RedemptionTaskSchedule:
+          type: string
+        AwardsRedemption:
+          type: object
+        RedemptionPostconditions:
+          type: string
+        RedemptionAwardsRedemptionServiceType:
+          type: string
+        RedemptionAwardsRedemptionServiceDescription:
+          type: string
+        RedemptionAwardsRedemptionServiceInputsandOuputs:
+          type: string
+        RedemptionAwardsRedemptionServiceWorkProduct:
+          type: string
+        RedemptionAwardsRedemptionServiceName:
+          type: string
     HTTPError:
       type: object
       properties:
@@ -528,14 +528,6 @@ components:
       explode: false
       schema:
         type: string
-    RedemptionID:
-      name: redemptionId
-      in: path
-      required: true
-      style: simple
-      explode: false
-      schema:
-        type: string
     RewardPointsAwardsAndRedemptionOutcomeID:
       name: rewardpointsawardsandredemptionoutcomeId
       in: path
@@ -546,6 +538,14 @@ components:
         type: string
     AwardID:
       name: awardId
+      in: path
+      required: true
+      style: simple
+      explode: false
+      schema:
+        type: string
+    RedemptionID:
+      name: redemptionId
       in: path
       required: true
       style: simple

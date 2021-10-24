@@ -1327,6 +1327,13 @@ components:
           type: string
         TradedPositionOperatingSessionReference:
           type: string
+    TraderPositionOperationsOutcome:
+      type: object
+      properties:
+        TraderPositionOperationsIncident:
+          type: string
+        TraderPositionOperationsProvision:
+          type: string
     TradeQuoteandPricingFunction:
       type: object
       properties:
@@ -1342,14 +1349,7 @@ components:
           type: string
         TradeQuoteandPricingFunctionType:
           type: string
-    TraderPositionOperationsOutcome:
-      type: object
-      properties:
-        TraderPositionOperationsIncident:
-          type: string
-        TraderPositionOperationsProvision:
-          type: string
-    TraderSecurityPositionManagementandAnalysisFunction:
+    TraderTradingPermissionsandLimitsFunction:
       type: object
       properties:
         Preconditions:
@@ -1360,9 +1360,9 @@ components:
           type: object
         TradedPositionOperatingSessionReference:
           type: string
-        TraderSecurityPositionManagementandAnalysisFunctionReference:
+        TraderTradingPermissionsandLimitsFunctionReference:
           type: string
-        TraderSecurityPositionManagementandAnalysisFunctionType:
+        TraderTradingPermissionsandLimitsFunctionType:
           type: string
     TradeCaptureandReportingFunction:
       type: object
@@ -1379,6 +1379,21 @@ components:
           type: string
         TradeCaptureandReportingFunctionType:
           type: string
+    TraderSecurityPositionManagementandAnalysisFunction:
+      type: object
+      properties:
+        Preconditions:
+          type: object
+        Schedule:
+          type: object
+        BusinessService:
+          type: object
+        TradedPositionOperatingSessionReference:
+          type: string
+        TraderSecurityPositionManagementandAnalysisFunctionReference:
+          type: string
+        TraderSecurityPositionManagementandAnalysisFunctionType:
+          type: string
     TradeDealBlotterFunction:
       type: object
       properties:
@@ -1393,21 +1408,6 @@ components:
         TradeDealBlotterFunctionReference:
           type: string
         TradeDealBlotterFunctionType:
-          type: string
-    TraderTradingPermissionsandLimitsFunction:
-      type: object
-      properties:
-        Preconditions:
-          type: object
-        Schedule:
-          type: object
-        BusinessService:
-          type: object
-        TradedPositionOperatingSessionReference:
-          type: string
-        TraderTradingPermissionsandLimitsFunctionReference:
-          type: string
-        TraderTradingPermissionsandLimitsFunctionType:
           type: string
     HTTPError:
       type: object
@@ -1427,14 +1427,6 @@ components:
       explode: false
       schema:
         type: string
-    TradeQuoteandPricingFunctionID:
-      name: tradequoteandpricingfunctionId
-      in: path
-      required: true
-      style: simple
-      explode: false
-      schema:
-        type: string
     TraderPositionOperationsOutcomeID:
       name: traderpositionoperationsoutcomeId
       in: path
@@ -1443,8 +1435,16 @@ components:
       explode: false
       schema:
         type: string
-    TraderSecurityPositionManagementandAnalysisFunctionID:
-      name: tradersecuritypositionmanagementandanalysisfunctionId
+    TradeQuoteandPricingFunctionID:
+      name: tradequoteandpricingfunctionId
+      in: path
+      required: true
+      style: simple
+      explode: false
+      schema:
+        type: string
+    TraderTradingPermissionsandLimitsFunctionID:
+      name: tradertradingpermissionsandlimitsfunctionId
       in: path
       required: true
       style: simple
@@ -1459,16 +1459,16 @@ components:
       explode: false
       schema:
         type: string
-    TradeDealBlotterFunctionID:
-      name: tradedealblotterfunctionId
+    TraderSecurityPositionManagementandAnalysisFunctionID:
+      name: tradersecuritypositionmanagementandanalysisfunctionId
       in: path
       required: true
       style: simple
       explode: false
       schema:
         type: string
-    TraderTradingPermissionsandLimitsFunctionID:
-      name: tradertradingpermissionsandlimitsfunctionId
+    TradeDealBlotterFunctionID:
+      name: tradedealblotterfunctionId
       in: path
       required: true
       style: simple

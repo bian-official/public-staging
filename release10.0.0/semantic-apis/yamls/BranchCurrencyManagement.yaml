@@ -406,13 +406,6 @@ components:
           type: object
         BranchCashAllocationInstance:
           type: string
-    BranchCurrencyManagementOutcome:
-      type: object
-      properties:
-        BranchCurrencyManagementAllocation:
-          type: string
-        BranchCurrencyManagementWorkProduct:
-          type: string
     InventoryAllocation:
       type: object
       properties:
@@ -432,6 +425,13 @@ components:
           type: string
         CashInventoryAllocationServiceName:
           type: string
+    BranchCurrencyManagementOutcome:
+      type: object
+      properties:
+        BranchCurrencyManagementAllocation:
+          type: string
+        BranchCurrencyManagementWorkProduct:
+          type: string
     HTTPError:
       type: object
       properties:
@@ -450,16 +450,16 @@ components:
       explode: false
       schema:
         type: string
-    BranchCurrencyManagementOutcomeID:
-      name: branchcurrencymanagementoutcomeId
+    InventoryAllocationID:
+      name: inventoryallocationId
       in: path
       required: true
       style: simple
       explode: false
       schema:
         type: string
-    InventoryAllocationID:
-      name: inventoryallocationId
+    BranchCurrencyManagementOutcomeID:
+      name: branchcurrencymanagementoutcomeId
       in: path
       required: true
       style: simple

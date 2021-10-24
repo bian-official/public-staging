@@ -713,25 +713,6 @@ components:
           type: string
         SecurityTradingFailsProcedureReference:
           type: string
-    SecuritiesFailAnalysisWorkstep:
-      type: object
-      properties:
-        Preconditions:
-          type: object
-        BusinessUnit/EmployeeReference:
-          type: object
-        Schedule:
-          type: object
-        BusinessService:
-          type: object
-        Postconditions:
-          type: object
-        SecurityTradingFailsProcedureReference:
-          type: string
-        SecuritiesFailAnalysisWorkstepReference:
-          type: string
-        SecuritiesFailAnalysisWorkstepType:
-          type: string
     SecuritiesFailDeterminationWorkstep:
       type: object
       properties:
@@ -750,6 +731,25 @@ components:
         SecuritiesFailDeterminationWorkstepReference:
           type: string
         SecuritiesFailDeterminationWorkstepType:
+          type: string
+    SecuritiesFailAnalysisWorkstep:
+      type: object
+      properties:
+        Preconditions:
+          type: object
+        BusinessUnit/EmployeeReference:
+          type: object
+        Schedule:
+          type: object
+        BusinessService:
+          type: object
+        Postconditions:
+          type: object
+        SecurityTradingFailsProcedureReference:
+          type: string
+        SecuritiesFailAnalysisWorkstepReference:
+          type: string
+        SecuritiesFailAnalysisWorkstepType:
           type: string
     SecuritiesFailsProcessingOutcome:
       type: object
@@ -776,16 +776,16 @@ components:
       explode: false
       schema:
         type: string
-    SecuritiesFailAnalysisWorkstepID:
-      name: securitiesfailanalysisworkstepId
+    SecuritiesFailDeterminationWorkstepID:
+      name: securitiesfaildeterminationworkstepId
       in: path
       required: true
       style: simple
       explode: false
       schema:
         type: string
-    SecuritiesFailDeterminationWorkstepID:
-      name: securitiesfaildeterminationworkstepId
+    SecuritiesFailAnalysisWorkstepID:
+      name: securitiesfailanalysisworkstepId
       in: path
       required: true
       style: simple

@@ -1526,54 +1526,26 @@ components:
           type: string
         LienServiceName:
           type: string
-    MerchandisingLoanOutcome:
+    Fees:
       type: object
       properties:
-        MerchandisingLoanFinancialFacility:
+        FeesPreconditions:
           type: string
-        MerchandisingLoanWorkProduct:
-          type: string
-    Collateral:
-      type: object
-      properties:
-        CollateralPreconditions:
-          type: string
-        CollateralFeatureSchedule:
+        FeesFeatureSchedule:
           type: string
         BusinessService:
           type: object
-        CollateralPostconditions:
+        FeesPostconditions:
           type: string
-        CollateralServiceType:
+        FeesServiceType:
           type: string
-        CollateralServiceDescription:
+        FeesServiceDescription:
           type: string
-        CollateralServiceInputsandOuputs:
+        FeesServiceInputsandOuputs:
           type: string
-        CollateralServiceWorkProduct:
+        FeesServiceWorkProduct:
           type: string
-        CollateralServiceName:
-          type: string
-    IssuedDevice:
-      type: object
-      properties:
-        IssuedDevicePreconditions:
-          type: string
-        IssuedDeviceFeatureSchedule:
-          type: string
-        BusinessService:
-          type: object
-        IssuedDevicePostconditions:
-          type: string
-        IssuedDeviceServiceType:
-          type: string
-        IssuedDeviceServiceDescription:
-          type: string
-        IssuedDeviceServiceInputsandOuputs:
-          type: string
-        IssuedDeviceServiceWorkProduct:
-          type: string
-        IssuedDeviceServiceName:
+        FeesServiceName:
           type: string
     Sweep:
       type: object
@@ -1596,27 +1568,6 @@ components:
           type: string
         SweepServiceName:
           type: string
-    Fees:
-      type: object
-      properties:
-        FeesPreconditions:
-          type: string
-        FeesFeatureSchedule:
-          type: string
-        BusinessService:
-          type: object
-        FeesPostconditions:
-          type: string
-        FeesServiceType:
-          type: string
-        FeesServiceDescription:
-          type: string
-        FeesServiceInputsandOuputs:
-          type: string
-        FeesServiceWorkProduct:
-          type: string
-        FeesServiceName:
-          type: string
     Billing:
       type: object
       properties:
@@ -1638,6 +1589,55 @@ components:
           type: string
         BillingServiceName:
           type: string
+    IssuedDevice:
+      type: object
+      properties:
+        IssuedDevicePreconditions:
+          type: string
+        IssuedDeviceFeatureSchedule:
+          type: string
+        BusinessService:
+          type: object
+        IssuedDevicePostconditions:
+          type: string
+        IssuedDeviceServiceType:
+          type: string
+        IssuedDeviceServiceDescription:
+          type: string
+        IssuedDeviceServiceInputsandOuputs:
+          type: string
+        IssuedDeviceServiceWorkProduct:
+          type: string
+        IssuedDeviceServiceName:
+          type: string
+    MerchandisingLoanOutcome:
+      type: object
+      properties:
+        MerchandisingLoanFinancialFacility:
+          type: string
+        MerchandisingLoanWorkProduct:
+          type: string
+    Withdrawals:
+      type: object
+      properties:
+        WithdrawalsPreconditions:
+          type: string
+        WithdrawalsFeatureSchedule:
+          type: string
+        WithdrawalProcessing:
+          type: object
+        WithdrawalsPostconditions:
+          type: string
+        WithdrawalsWithdrawalProcessingServiceType:
+          type: string
+        WithdrawalsWithdrawalProcessingServiceDescription:
+          type: string
+        WithdrawalsWithdrawalProcessingServiceInputsandOuputs:
+          type: string
+        WithdrawalsWithdrawalProcessingServiceWorkProduct:
+          type: string
+        WithdrawalsWithdrawalProcessingServiceName:
+          type: string
     Interest:
       type: object
       properties:
@@ -1658,6 +1658,27 @@ components:
         InterestServiceWorkProduct:
           type: string
         InterestServiceName:
+          type: string
+    Collateral:
+      type: object
+      properties:
+        CollateralPreconditions:
+          type: string
+        CollateralFeatureSchedule:
+          type: string
+        BusinessService:
+          type: object
+        CollateralPostconditions:
+          type: string
+        CollateralServiceType:
+          type: string
+        CollateralServiceDescription:
+          type: string
+        CollateralServiceInputsandOuputs:
+          type: string
+        CollateralServiceWorkProduct:
+          type: string
+        CollateralServiceName:
           type: string
     Payments:
       type: object
@@ -1700,27 +1721,6 @@ components:
         FinancialInstrumentFinancialInstrumentServiceWorkProduct:
           type: string
         FinancialInstrumentFinancialInstrumentServiceName:
-          type: string
-    Withdrawals:
-      type: object
-      properties:
-        WithdrawalsPreconditions:
-          type: string
-        WithdrawalsFeatureSchedule:
-          type: string
-        WithdrawalProcessing:
-          type: object
-        WithdrawalsPostconditions:
-          type: string
-        WithdrawalsWithdrawalProcessingServiceType:
-          type: string
-        WithdrawalsWithdrawalProcessingServiceDescription:
-          type: string
-        WithdrawalsWithdrawalProcessingServiceInputsandOuputs:
-          type: string
-        WithdrawalsWithdrawalProcessingServiceWorkProduct:
-          type: string
-        WithdrawalsWithdrawalProcessingServiceName:
           type: string
     FinancialAccounting:
       type: object
@@ -1777,24 +1777,8 @@ components:
       explode: false
       schema:
         type: string
-    MerchandisingLoanOutcomeID:
-      name: merchandisingloanoutcomeId
-      in: path
-      required: true
-      style: simple
-      explode: false
-      schema:
-        type: string
-    CollateralID:
-      name: collateralId
-      in: path
-      required: true
-      style: simple
-      explode: false
-      schema:
-        type: string
-    IssuedDeviceID:
-      name: issueddeviceId
+    FeesID:
+      name: feesId
       in: path
       required: true
       style: simple
@@ -1809,14 +1793,6 @@ components:
       explode: false
       schema:
         type: string
-    FeesID:
-      name: feesId
-      in: path
-      required: true
-      style: simple
-      explode: false
-      schema:
-        type: string
     BillingID:
       name: billingId
       in: path
@@ -1825,8 +1801,40 @@ components:
       explode: false
       schema:
         type: string
+    IssuedDeviceID:
+      name: issueddeviceId
+      in: path
+      required: true
+      style: simple
+      explode: false
+      schema:
+        type: string
+    MerchandisingLoanOutcomeID:
+      name: merchandisingloanoutcomeId
+      in: path
+      required: true
+      style: simple
+      explode: false
+      schema:
+        type: string
+    WithdrawalsID:
+      name: withdrawalsId
+      in: path
+      required: true
+      style: simple
+      explode: false
+      schema:
+        type: string
     InterestID:
       name: interestId
+      in: path
+      required: true
+      style: simple
+      explode: false
+      schema:
+        type: string
+    CollateralID:
+      name: collateralId
       in: path
       required: true
       style: simple
@@ -1843,14 +1851,6 @@ components:
         type: string
     FinancialInstrumentID:
       name: financialinstrumentId
-      in: path
-      required: true
-      style: simple
-      explode: false
-      schema:
-        type: string
-    WithdrawalsID:
-      name: withdrawalsId
       in: path
       required: true
       style: simple

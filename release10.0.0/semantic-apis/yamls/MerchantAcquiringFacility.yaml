@@ -527,6 +527,19 @@ components:
           type: string
         MerchantAcquiringAccountPostingResult:
           type: string
+    Settlement:
+      type: object
+      properties:
+        ParticipantMerchantAcquirerBankReference:
+          type: object
+        ParticipantIssuerBankReference:
+          type: object
+        CardFinancialSettlementServicePaymentAdviceRecord:
+          type: string
+        ParticipantPaymentTransaction:
+          type: string
+        ParticipantAcquirerBankSettlementAccountStatement:
+          type: string
     Clearing:
       type: object
       properties:
@@ -592,19 +605,6 @@ components:
         ProjectedTransactionFeeType:
           type: string
         ProjectedTransactionFeeCharge:
-          type: string
-    Settlement:
-      type: object
-      properties:
-        ParticipantMerchantAcquirerBankReference:
-          type: object
-        ParticipantIssuerBankReference:
-          type: object
-        CardFinancialSettlementServicePaymentAdviceRecord:
-          type: string
-        ParticipantPaymentTransaction:
-          type: string
-        ParticipantAcquirerBankSettlementAccountStatement:
           type: string
     Chargeback:
       type: object
@@ -1284,6 +1284,14 @@ components:
       explode: false
       schema:
         type: string
+    SettlementID:
+      name: settlementId
+      in: path
+      required: true
+      style: simple
+      explode: false
+      schema:
+        type: string
     ClearingID:
       name: clearingId
       in: path
@@ -1294,14 +1302,6 @@ components:
         type: string
     ServiceFeesID:
       name: servicefeesId
-      in: path
-      required: true
-      style: simple
-      explode: false
-      schema:
-        type: string
-    SettlementID:
-      name: settlementId
       in: path
       required: true
       style: simple

@@ -875,6 +875,25 @@ components:
           type: string
         ATMNetworkOperatingSessionServiceConfiguration:
           type: string
+    FinancialTransactionCapture:
+      type: object
+      properties:
+        FinancialTransactionCapturePreconditions:
+          type: string
+        FinancialTransactionCaptureFunctionSchedule:
+          type: string
+        BusinessService:
+          type: object
+        ServiceType:
+          type: string
+        ServiceDescription:
+          type: string
+        ServiceInputsandOuputs:
+          type: string
+        ServiceWorkProduct:
+          type: string
+        ServiceName:
+          type: string
     CashDistribution:
       type: object
       properties:
@@ -893,25 +912,6 @@ components:
         CashDistributionServiceWorkProduct:
           type: string
         CashDistributionServiceName:
-          type: string
-    NetworkOperation:
-      type: object
-      properties:
-        NetworkOperationPreconditions:
-          type: string
-        NetworkOperationFunctionSchedule:
-          type: string
-        NetworkOperation:
-          type: object
-        NetworkOperationServiceType:
-          type: string
-        NetworkOperationServiceDescription:
-          type: string
-        NetworkOperationServiceInputsandOuputs:
-          type: string
-        NetworkOperationServiceWorkProduct:
-          type: string
-        NetworkOperationServiceName:
           type: string
     DeviceTracking:
       type: object
@@ -932,24 +932,12 @@ components:
           type: string
         DeviceTrackingServiceName:
           type: string
-    FinancialTransactionCapture:
+    ATMNetworkOperationsOutcome:
       type: object
       properties:
-        FinancialTransactionCapturePreconditions:
+        ATMNetworkOperationsIncident:
           type: string
-        FinancialTransactionCaptureFunctionSchedule:
-          type: string
-        BusinessService:
-          type: object
-        ServiceType:
-          type: string
-        ServiceDescription:
-          type: string
-        ServiceInputsandOuputs:
-          type: string
-        ServiceWorkProduct:
-          type: string
-        ServiceName:
+        ATMNetworkOperationsProvision:
           type: string
     FinancialDocumentHandling:
       type: object
@@ -970,12 +958,24 @@ components:
           type: string
         DocumentGenerationandHandlingServiceName:
           type: string
-    ATMNetworkOperationsOutcome:
+    NetworkOperation:
       type: object
       properties:
-        ATMNetworkOperationsIncident:
+        NetworkOperationPreconditions:
           type: string
-        ATMNetworkOperationsProvision:
+        NetworkOperationFunctionSchedule:
+          type: string
+        NetworkOperation:
+          type: object
+        NetworkOperationServiceType:
+          type: string
+        NetworkOperationServiceDescription:
+          type: string
+        NetworkOperationServiceInputsandOuputs:
+          type: string
+        NetworkOperationServiceWorkProduct:
+          type: string
+        NetworkOperationServiceName:
           type: string
     HTTPError:
       type: object
@@ -995,16 +995,16 @@ components:
       explode: false
       schema:
         type: string
-    CashDistributionID:
-      name: cashdistributionId
+    FinancialTransactionCaptureID:
+      name: financialtransactioncaptureId
       in: path
       required: true
       style: simple
       explode: false
       schema:
         type: string
-    NetworkOperationID:
-      name: networkoperationId
+    CashDistributionID:
+      name: cashdistributionId
       in: path
       required: true
       style: simple
@@ -1019,8 +1019,8 @@ components:
       explode: false
       schema:
         type: string
-    FinancialTransactionCaptureID:
-      name: financialtransactioncaptureId
+    ATMNetworkOperationsOutcomeID:
+      name: atmnetworkoperationsoutcomeId
       in: path
       required: true
       style: simple
@@ -1035,8 +1035,8 @@ components:
       explode: false
       schema:
         type: string
-    ATMNetworkOperationsOutcomeID:
-      name: atmnetworkoperationsoutcomeId
+    NetworkOperationID:
+      name: networkoperationId
       in: path
       required: true
       style: simple

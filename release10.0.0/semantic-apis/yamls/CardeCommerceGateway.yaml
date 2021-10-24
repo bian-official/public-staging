@@ -376,6 +376,13 @@ components:
     eCommerceGatewayOperatingSession:
       type: object
       properties: {}
+    CardAuthentication:
+      type: object
+      properties:
+        eCommerceTransactionInstanceReference:
+          type: object
+        eCommerceTransactionAuthenticationResponse:
+          type: string
     CardTransaction:
       type: object
       properties:
@@ -415,13 +422,6 @@ components:
         TransactionMerchantReference:
           type: object
         eCommerceBatchTransactionRecord:
-          type: string
-    CardAuthentication:
-      type: object
-      properties:
-        eCommerceTransactionInstanceReference:
-          type: object
-        eCommerceTransactionAuthenticationResponse:
           type: string
     TransactionAuthorization:
       type: object
@@ -916,6 +916,14 @@ components:
       explode: false
       schema:
         type: string
+    CardAuthenticationID:
+      name: cardauthenticationId
+      in: path
+      required: true
+      style: simple
+      explode: false
+      schema:
+        type: string
     CardTransactionID:
       name: cardtransactionId
       in: path
@@ -926,14 +934,6 @@ components:
         type: string
     TransactionBatchID:
       name: transactionbatchId
-      in: path
-      required: true
-      style: simple
-      explode: false
-      schema:
-        type: string
-    CardAuthenticationID:
-      name: cardauthenticationId
       in: path
       required: true
       style: simple

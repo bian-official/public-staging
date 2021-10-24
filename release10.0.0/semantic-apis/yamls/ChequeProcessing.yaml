@@ -405,25 +405,6 @@ components:
           type: string
         FinancialTransactionInitiationServiceName:
           type: string
-    ChequeExtraction:
-      type: object
-      properties:
-        ChequeExtractionPreconditions:
-          type: string
-        ChequeExtractionFunctionSchedule:
-          type: string
-        ChequeExtraction:
-          type: object
-        ChequeExtractionServiceType:
-          type: string
-        ChequeExtractionServiceDescription:
-          type: string
-        ChequeExtractionServiceInputsandOuputs:
-          type: string
-        ChequeExtractionServiceWorkProduct:
-          type: string
-        ChequeExtractionServiceName:
-          type: string
     CancelledChequeHandling:
       type: object
       properties:
@@ -449,6 +430,25 @@ components:
         ChequeProcessingIncident:
           type: string
         ChequeProcessingProvision:
+          type: string
+    ChequeExtraction:
+      type: object
+      properties:
+        ChequeExtractionPreconditions:
+          type: string
+        ChequeExtractionFunctionSchedule:
+          type: string
+        ChequeExtraction:
+          type: object
+        ChequeExtractionServiceType:
+          type: string
+        ChequeExtractionServiceDescription:
+          type: string
+        ChequeExtractionServiceInputsandOuputs:
+          type: string
+        ChequeExtractionServiceWorkProduct:
+          type: string
+        ChequeExtractionServiceName:
           type: string
     HTTPError:
       type: object
@@ -476,14 +476,6 @@ components:
       explode: false
       schema:
         type: string
-    ChequeExtractionID:
-      name: chequeextractionId
-      in: path
-      required: true
-      style: simple
-      explode: false
-      schema:
-        type: string
     CancelledChequeHandlingID:
       name: cancelledchequehandlingId
       in: path
@@ -494,6 +486,14 @@ components:
         type: string
     ChequeProcessingOutcomeID:
       name: chequeprocessingoutcomeId
+      in: path
+      required: true
+      style: simple
+      explode: false
+      schema:
+        type: string
+    ChequeExtractionID:
+      name: chequeextractionId
       in: path
       required: true
       style: simple

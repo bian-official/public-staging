@@ -228,6 +228,11 @@ components:
           type: object
         DocumentContent:
           type: string
+    FundingCheck:
+      type: object
+      properties:
+        PaymentTransactionFundingCheckResult:
+          type: string
     Compliance:
       type: object
       properties:
@@ -245,11 +250,6 @@ components:
         PaymentOrderProcedureInstanceStatus:
           type: string
         OrderInitiationTaskResult:
-          type: string
-    FundingCheck:
-      type: object
-      properties:
-        PaymentTransactionFundingCheckResult:
           type: string
     HTTPError:
       type: object
@@ -388,6 +388,14 @@ components:
       explode: false
       schema:
         type: string
+    FundingCheckID:
+      name: fundingcheckId
+      in: path
+      required: true
+      style: simple
+      explode: false
+      schema:
+        type: string
     ComplianceID:
       name: complianceId
       in: path
@@ -398,14 +406,6 @@ components:
         type: string
     OrderInitiationID:
       name: orderinitiationId
-      in: path
-      required: true
-      style: simple
-      explode: false
-      schema:
-        type: string
-    FundingCheckID:
-      name: fundingcheckId
       in: path
       required: true
       style: simple

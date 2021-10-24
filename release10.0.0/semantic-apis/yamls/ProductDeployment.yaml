@@ -814,38 +814,16 @@ components:
           type: string
         Date:
           type: string
-    Servicing:
+    ProductionSupport:
       type: object
       properties:
-        ProductandServiceDeploymentServicingRequirements:
+        ProductandServiceDeploymentProductionSupportRequirements:
           type: string
-        ProductandServiceDeploymentServicingRequirementsWorkProducts:
+        ProductandServiceDeploymentProductionSupportRequirementsWorkProducts:
           type: string
         DocumentDirectoryEntryInstanceReference:
           type: object
-        ProductandServiceDeploymentServicingRequirementsTaskSpecification:
-          type: string
-    Production:
-      type: object
-      properties:
-        ProductandServiceDeploymentProductionRequirements:
-          type: string
-        ProductandServiceDeploymentProductionRequirementsWorkProducts:
-          type: string
-        DocumentDirectoryEntryInstanceReference:
-          type: object
-        ProductandServiceDeploymentProductionRequirementsTaskSpecification:
-          type: string
-    Systems:
-      type: object
-      properties:
-        ProductandServiceDeploymentSystemsRequirements:
-          type: string
-        ProductandServiceDeploymentSystemsRequirementsWorkProducts:
-          type: string
-        DocumentDirectoryEntryInstanceReference:
-          type: object
-        ProductandServiceDeploymentSystemsRequirementsTaskSpecification:
+        ProductandServiceDeploymentProductionSupportRequirementsTaskSpecification:
           type: string
     ITOperations:
       type: object
@@ -858,16 +836,16 @@ components:
           type: object
         ProductandServiceDeploymentITOperationsRequirementsTaskSpecification:
           type: string
-    HROperations:
+    Production:
       type: object
       properties:
-        ProductandServiceDeploymentHROperationsRequirements:
+        ProductandServiceDeploymentProductionRequirements:
           type: string
-        ProductandServiceDeploymentHROperationsRequirementsWorkProducts:
+        ProductandServiceDeploymentProductionRequirementsWorkProducts:
           type: string
         DocumentDirectoryEntryInstanceReference:
           type: object
-        ProductandServiceDeploymentHROperationsRequirementsTaskSpecification:
+        ProductandServiceDeploymentProductionRequirementsTaskSpecification:
           type: string
     SalesandMarketing:
       type: object
@@ -880,16 +858,38 @@ components:
           type: object
         ProductandServiceDeploymentSalesandMarketingRequirementsTaskSpecification:
           type: string
-    ProductionSupport:
+    Systems:
       type: object
       properties:
-        ProductandServiceDeploymentProductionSupportRequirements:
+        ProductandServiceDeploymentSystemsRequirements:
           type: string
-        ProductandServiceDeploymentProductionSupportRequirementsWorkProducts:
+        ProductandServiceDeploymentSystemsRequirementsWorkProducts:
           type: string
         DocumentDirectoryEntryInstanceReference:
           type: object
-        ProductandServiceDeploymentProductionSupportRequirementsTaskSpecification:
+        ProductandServiceDeploymentSystemsRequirementsTaskSpecification:
+          type: string
+    HROperations:
+      type: object
+      properties:
+        ProductandServiceDeploymentHROperationsRequirements:
+          type: string
+        ProductandServiceDeploymentHROperationsRequirementsWorkProducts:
+          type: string
+        DocumentDirectoryEntryInstanceReference:
+          type: object
+        ProductandServiceDeploymentHROperationsRequirementsTaskSpecification:
+          type: string
+    Servicing:
+      type: object
+      properties:
+        ProductandServiceDeploymentServicingRequirements:
+          type: string
+        ProductandServiceDeploymentServicingRequirementsWorkProducts:
+          type: string
+        DocumentDirectoryEntryInstanceReference:
+          type: object
+        ProductandServiceDeploymentServicingRequirementsTaskSpecification:
           type: string
     HTTPError:
       type: object
@@ -1854,24 +1854,8 @@ components:
       explode: false
       schema:
         type: string
-    ServicingID:
-      name: servicingId
-      in: path
-      required: true
-      style: simple
-      explode: false
-      schema:
-        type: string
-    ProductionID:
-      name: productionId
-      in: path
-      required: true
-      style: simple
-      explode: false
-      schema:
-        type: string
-    SystemsID:
-      name: systemsId
+    ProductionSupportID:
+      name: productionsupportId
       in: path
       required: true
       style: simple
@@ -1886,8 +1870,8 @@ components:
       explode: false
       schema:
         type: string
-    HROperationsID:
-      name: hroperationsId
+    ProductionID:
+      name: productionId
       in: path
       required: true
       style: simple
@@ -1902,8 +1886,24 @@ components:
       explode: false
       schema:
         type: string
-    ProductionSupportID:
-      name: productionsupportId
+    SystemsID:
+      name: systemsId
+      in: path
+      required: true
+      style: simple
+      explode: false
+      schema:
+        type: string
+    HROperationsID:
+      name: hroperationsId
+      in: path
+      required: true
+      style: simple
+      explode: false
+      schema:
+        type: string
+    ServicingID:
+      name: servicingId
       in: path
       required: true
       style: simple

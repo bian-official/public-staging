@@ -358,15 +358,6 @@ components:
           type: object
         WholesaleTradeStatus:
           type: string
-    Quote:
-      type: object
-      properties:
-        QuoteSecurityType:
-          type: string
-        QuoteType:
-          type: string
-        Quote:
-          type: string
     TradeInitiation:
       type: object
       properties:
@@ -375,6 +366,15 @@ components:
         MarketTradeTransactionInstanceProcessingStatus:
           type: string
         MarketTradeInitiationTaskResult:
+          type: string
+    Quote:
+      type: object
+      properties:
+        QuoteSecurityType:
+          type: string
+        QuoteType:
+          type: string
+        Quote:
           type: string
     HTTPError:
       type: object
@@ -608,16 +608,16 @@ components:
       explode: false
       schema:
         type: string
-    QuoteID:
-      name: quoteId
+    TradeInitiationID:
+      name: tradeinitiationId
       in: path
       required: true
       style: simple
       explode: false
       schema:
         type: string
-    TradeInitiationID:
-      name: tradeinitiationId
+    QuoteID:
+      name: quoteId
       in: path
       required: true
       style: simple

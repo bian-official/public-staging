@@ -595,23 +595,6 @@ components:
           type: string
         CounterpartyDirectoryEntryReference:
           type: string
-    CounterpartyPermittedTransactionproperty:
-      type: object
-      properties:
-        Preconditions:
-          type: object
-        Schedule:
-          type: object
-        VersionNumber:
-          type: string
-        BusinessService:
-          type: object
-        CounterpartyDirectoryEntryReference:
-          type: string
-        CounterpartyPermittedTransactionpropertyReference:
-          type: object
-        CounterpartyPermittedTransactionpropertyType:
-          type: string
     CounterpartyEntityReferenceproperty:
       type: object
       properties:
@@ -628,6 +611,23 @@ components:
         CounterpartyEntityReferencepropertyReference:
           type: object
         CounterpartyEntityReferencepropertyType:
+          type: string
+    CounterpartyPermittedTransactionproperty:
+      type: object
+      properties:
+        Preconditions:
+          type: object
+        Schedule:
+          type: object
+        VersionNumber:
+          type: string
+        BusinessService:
+          type: object
+        CounterpartyDirectoryEntryReference:
+          type: string
+        CounterpartyPermittedTransactionpropertyReference:
+          type: object
+        CounterpartyPermittedTransactionpropertyType:
           type: string
     CounterpartyAdministrationOutcome:
       type: object
@@ -654,16 +654,16 @@ components:
       explode: false
       schema:
         type: string
-    CounterpartyPermittedTransactionpropertyID:
-      name: counterpartypermittedtransactionpropertyId
+    CounterpartyEntityReferencepropertyID:
+      name: counterpartyentityreferencepropertyId
       in: path
       required: true
       style: simple
       explode: false
       schema:
         type: string
-    CounterpartyEntityReferencepropertyID:
-      name: counterpartyentityreferencepropertyId
+    CounterpartyPermittedTransactionpropertyID:
+      name: counterpartypermittedtransactionpropertyId
       in: path
       required: true
       style: simple

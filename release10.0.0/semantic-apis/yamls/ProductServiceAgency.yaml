@@ -828,7 +828,7 @@ components:
           type: string
         ServiceProviderAgreementAssociatedAgreementReference:
           type: string
-    LegalTerm:
+    RegulatoryTerm:
       type: object
       properties:
         Preconditions:
@@ -839,15 +839,15 @@ components:
           type: object
         ServiceProviderAgreementReference:
           type: string
-        LegalTermReference:
+        RegulatoryTermReference:
           type: string
-        LegalTermType:
+        RegulatoryTermType:
           type: string
-        Jurisdiction:
+        RegulatoryAuthority:
           type: string
-        ApplicableLawReference:
+        ApplicableRegulationReference:
           type: object
-        ApplicableLawInterpretation:
+        ApplicableRegulationInterpretation:
           type: string
     PolicyTerm:
       type: object
@@ -870,7 +870,7 @@ components:
           type: object
         ApplicableBankPolicy-RuleInterpretation:
           type: string
-    RegulatoryTerm:
+    LegalTerm:
       type: object
       properties:
         Preconditions:
@@ -881,15 +881,15 @@ components:
           type: object
         ServiceProviderAgreementReference:
           type: string
-        RegulatoryTermReference:
+        LegalTermReference:
           type: string
-        RegulatoryTermType:
+        LegalTermType:
           type: string
-        RegulatoryAuthority:
+        Jurisdiction:
           type: string
-        ApplicableRegulationReference:
+        ApplicableLawReference:
           type: object
-        ApplicableRegulationInterpretation:
+        ApplicableLawInterpretation:
           type: string
     ProductServiceAgencyOutcome:
       type: object
@@ -918,8 +918,8 @@ components:
       explode: false
       schema:
         type: string
-    LegalTermID:
-      name: legaltermId
+    RegulatoryTermID:
+      name: regulatorytermId
       in: path
       required: true
       style: simple
@@ -934,8 +934,8 @@ components:
       explode: false
       schema:
         type: string
-    RegulatoryTermID:
-      name: regulatorytermId
+    LegalTermID:
+      name: legaltermId
       in: path
       required: true
       style: simple

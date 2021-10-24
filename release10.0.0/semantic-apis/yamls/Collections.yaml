@@ -795,6 +795,36 @@ components:
           type: string
         DebtFactoringFactoringServiceName:
           type: string
+    CollateralLiquidation:
+      type: object
+      properties:
+        CollateralLiquidationPreconditions:
+          type: string
+        CollateralLiquidationBusinessUnit/EmployeeReference:
+          type: object
+        CollateralLiquidationWorkSchedule:
+          type: string
+        CollateralLiquidation:
+          type: object
+        CollateralLiquidationPostconditions:
+          type: string
+        CollateralLiquidationCollateralLiquidationServiceType:
+          type: string
+        CollateralLiquidationCollateralLiquidationServiceDescription:
+          type: string
+        CollateralLiquidationCollateralLiquidationServiceInputsandOuputs:
+          type: string
+        CollateralLiquidationCollateralLiquidationServiceWorkProduct:
+          type: string
+        CollateralLiquidationCollateralLiquidationServiceName:
+          type: string
+    CollectionsOutcome:
+      type: object
+      properties:
+        CollectionsWorkProduct:
+          type: string
+        CollectionsProcedure:
+          type: string
     CollectionsAssessment:
       type: object
       properties:
@@ -841,29 +871,6 @@ components:
           type: string
         CollectionsAccountUpdateCollectionsAccountUpdateServiceName:
           type: string
-    CollateralLiquidation:
-      type: object
-      properties:
-        CollateralLiquidationPreconditions:
-          type: string
-        CollateralLiquidationBusinessUnit/EmployeeReference:
-          type: object
-        CollateralLiquidationWorkSchedule:
-          type: string
-        CollateralLiquidation:
-          type: object
-        CollateralLiquidationPostconditions:
-          type: string
-        CollateralLiquidationCollateralLiquidationServiceType:
-          type: string
-        CollateralLiquidationCollateralLiquidationServiceDescription:
-          type: string
-        CollateralLiquidationCollateralLiquidationServiceInputsandOuputs:
-          type: string
-        CollateralLiquidationCollateralLiquidationServiceWorkProduct:
-          type: string
-        CollateralLiquidationCollateralLiquidationServiceName:
-          type: string
     CollateralValuation:
       type: object
       properties:
@@ -886,13 +893,6 @@ components:
         CollateralValuationCollateralValuationServiceWorkProduct:
           type: string
         CollateralValuationCollateralValuationServiceName:
-          type: string
-    CollectionsOutcome:
-      type: object
-      properties:
-        CollectionsWorkProduct:
-          type: string
-        CollectionsProcedure:
           type: string
     HTTPError:
       type: object
@@ -920,6 +920,22 @@ components:
       explode: false
       schema:
         type: string
+    CollateralLiquidationID:
+      name: collateralliquidationId
+      in: path
+      required: true
+      style: simple
+      explode: false
+      schema:
+        type: string
+    CollectionsOutcomeID:
+      name: collectionsoutcomeId
+      in: path
+      required: true
+      style: simple
+      explode: false
+      schema:
+        type: string
     CollectionsAssessmentID:
       name: collectionsassessmentId
       in: path
@@ -936,24 +952,8 @@ components:
       explode: false
       schema:
         type: string
-    CollateralLiquidationID:
-      name: collateralliquidationId
-      in: path
-      required: true
-      style: simple
-      explode: false
-      schema:
-        type: string
     CollateralValuationID:
       name: collateralvaluationId
-      in: path
-      required: true
-      style: simple
-      explode: false
-      schema:
-        type: string
-    CollectionsOutcomeID:
-      name: collectionsoutcomeId
       in: path
       required: true
       style: simple

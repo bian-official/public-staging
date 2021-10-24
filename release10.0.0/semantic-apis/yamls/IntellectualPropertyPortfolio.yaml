@@ -363,21 +363,6 @@ components:
           type: string
         Date:
           type: string
-    Assignment:
-      type: object
-      properties:
-        IntellectualPropertyAssetAssignmentSchedule:
-          type: string
-        IntellectualPropertyAssetAssignmentRecord:
-          type: string
-        IntellectualPropertyAssetAssignmentType:
-          type: string
-        IntellectualPropertyAssetAssignmentDescription:
-          type: string
-        DocumentDirectoryEntryInstanceReference:
-          type: object
-        IntellectualPropertyAssetAssignmentTransaction:
-          type: string
     Maintenance:
       type: object
       properties:
@@ -398,6 +383,21 @@ components:
         DocumentDirectoryEntryInstanceReference:
           type: object
         IntellectualPropertyAssetMaintenanceTransaction:
+          type: string
+    Assignment:
+      type: object
+      properties:
+        IntellectualPropertyAssetAssignmentSchedule:
+          type: string
+        IntellectualPropertyAssetAssignmentRecord:
+          type: string
+        IntellectualPropertyAssetAssignmentType:
+          type: string
+        IntellectualPropertyAssetAssignmentDescription:
+          type: string
+        DocumentDirectoryEntryInstanceReference:
+          type: object
+        IntellectualPropertyAssetAssignmentTransaction:
           type: string
     HTTPError:
       type: object
@@ -747,16 +747,16 @@ components:
       explode: false
       schema:
         type: string
-    AssignmentID:
-      name: assignmentId
+    MaintenanceID:
+      name: maintenanceId
       in: path
       required: true
       style: simple
       explode: false
       schema:
         type: string
-    MaintenanceID:
-      name: maintenanceId
+    AssignmentID:
+      name: assignmentId
       in: path
       required: true
       style: simple

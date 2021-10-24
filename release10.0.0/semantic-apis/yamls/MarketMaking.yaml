@@ -919,6 +919,23 @@ components:
           type: string
         MarketMakingFacilityReference:
           type: string
+    MarketMakingSecurityTradedPositionFulfillment:
+      type: object
+      properties:
+        Preconditions:
+          type: object
+        Schedule:
+          type: object
+        BusinessService:
+          type: object
+        Postconditions:
+          type: object
+        MarketMakingFacilityReference:
+          type: string
+        MarketMakingSecurityTradedPositionFulfillmentReference:
+          type: object
+        MarketMakingSecurityTradedPositionFulfillmentType:
+          type: string
     MarketMakingBuyandSellOrderFulfillment:
       type: object
       properties:
@@ -953,23 +970,6 @@ components:
           type: object
         MarketMakingQuoteFulfillmentType:
           type: string
-    MarketMakingSecurityTradedPositionFulfillment:
-      type: object
-      properties:
-        Preconditions:
-          type: object
-        Schedule:
-          type: object
-        BusinessService:
-          type: object
-        Postconditions:
-          type: object
-        MarketMakingFacilityReference:
-          type: string
-        MarketMakingSecurityTradedPositionFulfillmentReference:
-          type: object
-        MarketMakingSecurityTradedPositionFulfillmentType:
-          type: string
     MarketMakingOutcome:
       type: object
       properties:
@@ -995,6 +995,14 @@ components:
       explode: false
       schema:
         type: string
+    MarketMakingSecurityTradedPositionFulfillmentID:
+      name: marketmakingsecuritytradedpositionfulfillmentId
+      in: path
+      required: true
+      style: simple
+      explode: false
+      schema:
+        type: string
     MarketMakingBuyandSellOrderFulfillmentID:
       name: marketmakingbuyandsellorderfulfillmentId
       in: path
@@ -1005,14 +1013,6 @@ components:
         type: string
     MarketMakingQuoteFulfillmentID:
       name: marketmakingquotefulfillmentId
-      in: path
-      required: true
-      style: simple
-      explode: false
-      schema:
-        type: string
-    MarketMakingSecurityTradedPositionFulfillmentID:
-      name: marketmakingsecuritytradedpositionfulfillmentId
       in: path
       required: true
       style: simple

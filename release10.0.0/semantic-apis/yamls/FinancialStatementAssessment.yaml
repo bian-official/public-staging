@@ -809,6 +809,40 @@ components:
           type: object
         FinancialStatementAssessmentServiceProviderReference:
           type: object
+    SensitivityTest:
+      type: object
+      properties:
+        Preconditions:
+          type: object
+        Schedule:
+          type: object
+        VersionNumber:
+          type: string
+        BusinessService:
+          type: object
+        FinancialStatementAssessmentReference:
+          type: string
+        SensitivityTestReference:
+          type: string
+        SensitivityTestType:
+          type: string
+    LiquidityandCashFlowTest:
+      type: object
+      properties:
+        Preconditions:
+          type: object
+        Schedule:
+          type: object
+        VersionNumber:
+          type: string
+        BusinessService:
+          type: object
+        FinancialStatementAssessmentReference:
+          type: string
+        LiquidityandCashFlowTestReference:
+          type: string
+        LiquidityandCashFlowTestType:
+          type: string
     AssetandLiabilityValuationTest:
       type: object
       properties:
@@ -843,40 +877,6 @@ components:
           type: string
         RiskTestType:
           type: string
-    LiquidityandCashFlowTest:
-      type: object
-      properties:
-        Preconditions:
-          type: object
-        Schedule:
-          type: object
-        VersionNumber:
-          type: string
-        BusinessService:
-          type: object
-        FinancialStatementAssessmentReference:
-          type: string
-        LiquidityandCashFlowTestReference:
-          type: string
-        LiquidityandCashFlowTestType:
-          type: string
-    SensitivityTest:
-      type: object
-      properties:
-        Preconditions:
-          type: object
-        Schedule:
-          type: object
-        VersionNumber:
-          type: string
-        BusinessService:
-          type: object
-        FinancialStatementAssessmentReference:
-          type: string
-        SensitivityTestReference:
-          type: string
-        SensitivityTestType:
-          type: string
     FinancialStatementAssessmentOutcome:
       type: object
       properties:
@@ -902,16 +902,8 @@ components:
       explode: false
       schema:
         type: string
-    AssetandLiabilityValuationTestID:
-      name: assetandliabilityvaluationtestId
-      in: path
-      required: true
-      style: simple
-      explode: false
-      schema:
-        type: string
-    RiskTestID:
-      name: risktestId
+    SensitivityTestID:
+      name: sensitivitytestId
       in: path
       required: true
       style: simple
@@ -926,8 +918,16 @@ components:
       explode: false
       schema:
         type: string
-    SensitivityTestID:
-      name: sensitivitytestId
+    AssetandLiabilityValuationTestID:
+      name: assetandliabilityvaluationtestId
+      in: path
+      required: true
+      style: simple
+      explode: false
+      schema:
+        type: string
+    RiskTestID:
+      name: risktestId
       in: path
       required: true
       style: simple

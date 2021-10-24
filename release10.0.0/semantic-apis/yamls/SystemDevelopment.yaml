@@ -757,12 +757,23 @@ components:
           type: string
         Date:
           type: string
-    UsageSpecification:
+    TestingSpecification:
       type: object
       properties:
-        UsageSpecificationTaskDefinition:
+        TestingSpecificationTaskDefinition:
           type: string
-        UsageSpecificationTaskWorkProducts:
+        TestingSpecificationTaskWorkProducts:
+          type: string
+        DocumentDirectoryEntryInstanceReference:
+          type: object
+        SystemTestingSpecification:
+          type: string
+    FunctionalSpecification:
+      type: object
+      properties:
+        FunctionalSpecificationTaskDefinition:
+          type: string
+        FunctionalSpecificationTaskWorkProducts:
           type: string
         DocumentDirectoryEntryInstanceReference:
           type: object
@@ -779,16 +790,16 @@ components:
           type: object
         SystemSoftwareandDataSpecification:
           type: string
-    TestingSpecification:
+    UsageSpecification:
       type: object
       properties:
-        TestingSpecificationTaskDefinition:
+        UsageSpecificationTaskDefinition:
           type: string
-        TestingSpecificationTaskWorkProducts:
+        UsageSpecificationTaskWorkProducts:
           type: string
         DocumentDirectoryEntryInstanceReference:
           type: object
-        SystemTestingSpecification:
+        SystemFunctionalSpecification:
           type: string
     TechnicalSpecification:
       type: object
@@ -800,17 +811,6 @@ components:
         DocumentDirectoryEntryInstanceReference:
           type: object
         SystemTechnicalSpecification:
-          type: string
-    FunctionalSpecification:
-      type: object
-      properties:
-        FunctionalSpecificationTaskDefinition:
-          type: string
-        FunctionalSpecificationTaskWorkProducts:
-          type: string
-        DocumentDirectoryEntryInstanceReference:
-          type: object
-        SystemFunctionalSpecification:
           type: string
     HTTPError:
       type: object
@@ -1165,8 +1165,16 @@ components:
       explode: false
       schema:
         type: string
-    UsageSpecificationID:
-      name: usagespecificationId
+    TestingSpecificationID:
+      name: testingspecificationId
+      in: path
+      required: true
+      style: simple
+      explode: false
+      schema:
+        type: string
+    FunctionalSpecificationID:
+      name: functionalspecificationId
       in: path
       required: true
       style: simple
@@ -1181,8 +1189,8 @@ components:
       explode: false
       schema:
         type: string
-    TestingSpecificationID:
-      name: testingspecificationId
+    UsageSpecificationID:
+      name: usagespecificationId
       in: path
       required: true
       style: simple
@@ -1191,14 +1199,6 @@ components:
         type: string
     TechnicalSpecificationID:
       name: technicalspecificationId
-      in: path
-      required: true
-      style: simple
-      explode: false
-      schema:
-        type: string
-    FunctionalSpecificationID:
-      name: functionalspecificationId
       in: path
       required: true
       style: simple

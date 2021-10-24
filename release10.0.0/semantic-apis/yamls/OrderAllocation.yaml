@@ -732,13 +732,6 @@ components:
           type: string
         ApplyOrderAllocationRulesWorkstepType:
           type: string
-    OrderAllocationOutcome:
-      type: object
-      properties:
-        OrderAllocationWorkProduct:
-          type: object
-        OrderAllocationProcedure:
-          type: string
     Update(PartiallyCompleted)MarketOrderWorkstep:
       type: object
       properties:
@@ -757,6 +750,13 @@ components:
         Update(PartiallyCompleted)MarketOrderWorkstepReference:
           type: string
         Update(PartiallyCompleted)MarketOrderWorkstepType:
+          type: string
+    OrderAllocationOutcome:
+      type: object
+      properties:
+        OrderAllocationWorkProduct:
+          type: object
+        OrderAllocationProcedure:
           type: string
     HTTPError:
       type: object
@@ -784,16 +784,16 @@ components:
       explode: false
       schema:
         type: string
-    OrderAllocationOutcomeID:
-      name: orderallocationoutcomeId
+    Update(PartiallyCompleted)MarketOrderWorkstepID:
+      name: update(partiallycompleted)marketorderworkstepId
       in: path
       required: true
       style: simple
       explode: false
       schema:
         type: string
-    Update(PartiallyCompleted)MarketOrderWorkstepID:
-      name: update(partiallycompleted)marketorderworkstepId
+    OrderAllocationOutcomeID:
+      name: orderallocationoutcomeId
       in: path
       required: true
       style: simple

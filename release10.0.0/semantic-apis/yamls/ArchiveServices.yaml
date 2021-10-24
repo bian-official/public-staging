@@ -903,7 +903,7 @@ components:
           type: string
         ArchiveOperatingSessionReference:
           type: string
-    DocumentMaintenanceFunction:
+    DocumentCaptureFunction:
       type: object
       properties:
         Preconditions:
@@ -914,9 +914,9 @@ components:
           type: object
         ArchiveOperatingSessionReference:
           type: string
-        DocumentMaintenanceFunctionReference:
+        DocumentCaptureFunctionReference:
           type: string
-        DocumentMaintenanceFunctionType:
+        DocumentCaptureFunctionType:
           type: string
     DocumentRetrievalFunction:
       type: object
@@ -933,7 +933,7 @@ components:
           type: string
         DocumentRetrievalFunctionType:
           type: string
-    DocumentCaptureFunction:
+    DocumentMaintenanceFunction:
       type: object
       properties:
         Preconditions:
@@ -944,9 +944,9 @@ components:
           type: object
         ArchiveOperatingSessionReference:
           type: string
-        DocumentCaptureFunctionReference:
+        DocumentMaintenanceFunctionReference:
           type: string
-        DocumentCaptureFunctionType:
+        DocumentMaintenanceFunctionType:
           type: string
     ArchiveServicesOutcome:
       type: object
@@ -973,8 +973,8 @@ components:
       explode: false
       schema:
         type: string
-    DocumentMaintenanceFunctionID:
-      name: documentmaintenancefunctionId
+    DocumentCaptureFunctionID:
+      name: documentcapturefunctionId
       in: path
       required: true
       style: simple
@@ -989,8 +989,8 @@ components:
       explode: false
       schema:
         type: string
-    DocumentCaptureFunctionID:
-      name: documentcapturefunctionId
+    DocumentMaintenanceFunctionID:
+      name: documentmaintenancefunctionId
       in: path
       required: true
       style: simple

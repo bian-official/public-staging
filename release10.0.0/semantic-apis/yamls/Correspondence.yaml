@@ -497,6 +497,11 @@ components:
           type: string
         CorrespondenceServiceSessionDate:
           type: string
+    BlockMailing:
+      type: object
+      properties:
+        BlockmailingRecord:
+          type: string
     Outbound:
       type: object
       properties:
@@ -563,11 +568,6 @@ components:
         DateType:
           type: string
         Date:
-          type: string
-    BlockMailing:
-      type: object
-      properties:
-        BlockmailingRecord:
           type: string
     HTTPError:
       type: object
@@ -1355,6 +1355,14 @@ components:
       explode: false
       schema:
         type: string
+    BlockMailingID:
+      name: blockmailingId
+      in: path
+      required: true
+      style: simple
+      explode: false
+      schema:
+        type: string
     OutboundID:
       name: outboundId
       in: path
@@ -1373,14 +1381,6 @@ components:
         type: string
     InboundID:
       name: inboundId
-      in: path
-      required: true
-      style: simple
-      explode: false
-      schema:
-        type: string
-    BlockMailingID:
-      name: blockmailingId
       in: path
       required: true
       style: simple

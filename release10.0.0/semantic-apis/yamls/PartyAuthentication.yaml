@@ -546,19 +546,6 @@ components:
           type: string
         AuthenticationPasswordTestResult:
           type: string
-    Device:
-      type: object
-      properties:
-        AuthenticationDeviceReference:
-          type: object
-        AuthenticationDevicePropertyValue:
-          type: string
-        IssuedDeviceInstanceReference:
-          type: object
-        IssuedDevicePropertyValue:
-          type: string
-        DeviceTestResult:
-          type: string
     Question:
       type: object
       properties:
@@ -591,6 +578,19 @@ components:
         RegisteredBehaviorInstanceReference:
           type: object
         BehaviorTestResult:
+          type: string
+    Device:
+      type: object
+      properties:
+        AuthenticationDeviceReference:
+          type: object
+        AuthenticationDevicePropertyValue:
+          type: string
+        IssuedDeviceInstanceReference:
+          type: object
+        IssuedDevicePropertyValue:
+          type: string
+        DeviceTestResult:
           type: string
     Document:
       type: object
@@ -924,14 +924,6 @@ components:
       explode: false
       schema:
         type: string
-    DeviceID:
-      name: deviceId
-      in: path
-      required: true
-      style: simple
-      explode: false
-      schema:
-        type: string
     QuestionID:
       name: questionId
       in: path
@@ -950,6 +942,14 @@ components:
         type: string
     BehaviorID:
       name: behaviorId
+      in: path
+      required: true
+      style: simple
+      explode: false
+      schema:
+        type: string
+    DeviceID:
+      name: deviceId
       in: path
       required: true
       style: simple

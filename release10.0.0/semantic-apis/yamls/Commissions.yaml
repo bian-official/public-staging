@@ -534,26 +534,30 @@ components:
           type: string
         CommissionTransactionTransaction:
           type: string
-    Calculation:
+    CommissionsOutcome:
       type: object
       properties:
-        CalculationPreconditions:
+        CommissionsCalendar:
           type: string
-        CalculationTaskSchedule:
+        CommissionsCounterparty:
           type: string
-        CommissionCalculation:
+        CommissionsDividend:
+          type: string
+        CommissionsFees:
+          type: string
+        CommissionsInterest:
+          type: string
+        CommissionsMargining:
+          type: string
+        CommissionsNotionalPrincipal:
+          type: string
+        CommissionsOptions:
+          type: string
+        CommissionsRates:
           type: object
-        CalculationPostconditions:
+        CommissionsSettlement:
           type: string
-        CalculationCommissionCalculationServiceType:
-          type: string
-        CalculationCommissionCalculationServiceDescription:
-          type: string
-        CalculationCommissionCalculationServiceInputsandOuputs:
-          type: string
-        CalculationCommissionCalculationServiceWorkProduct:
-          type: string
-        CalculationCommissionCalculationServiceName:
+        CommissionsWorkProduct:
           type: string
     Payment:
       type: object
@@ -597,30 +601,26 @@ components:
           type: string
         CheckServiceName:
           type: string
-    CommissionsOutcome:
+    Calculation:
       type: object
       properties:
-        CommissionsCalendar:
+        CalculationPreconditions:
           type: string
-        CommissionsCounterparty:
+        CalculationTaskSchedule:
           type: string
-        CommissionsDividend:
-          type: string
-        CommissionsFees:
-          type: string
-        CommissionsInterest:
-          type: string
-        CommissionsMargining:
-          type: string
-        CommissionsNotionalPrincipal:
-          type: string
-        CommissionsOptions:
-          type: string
-        CommissionsRates:
+        CommissionCalculation:
           type: object
-        CommissionsSettlement:
+        CalculationPostconditions:
           type: string
-        CommissionsWorkProduct:
+        CalculationCommissionCalculationServiceType:
+          type: string
+        CalculationCommissionCalculationServiceDescription:
+          type: string
+        CalculationCommissionCalculationServiceInputsandOuputs:
+          type: string
+        CalculationCommissionCalculationServiceWorkProduct:
+          type: string
+        CalculationCommissionCalculationServiceName:
           type: string
     HTTPError:
       type: object
@@ -640,8 +640,8 @@ components:
       explode: false
       schema:
         type: string
-    CalculationID:
-      name: calculationId
+    CommissionsOutcomeID:
+      name: commissionsoutcomeId
       in: path
       required: true
       style: simple
@@ -664,8 +664,8 @@ components:
       explode: false
       schema:
         type: string
-    CommissionsOutcomeID:
-      name: commissionsoutcomeId
+    CalculationID:
+      name: calculationId
       in: path
       required: true
       style: simple

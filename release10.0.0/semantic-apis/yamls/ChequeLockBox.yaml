@@ -919,23 +919,6 @@ components:
           type: string
         LockBoxFacilityReference:
           type: string
-    LockBoxReportingandIssueResolutionFulfillment:
-      type: object
-      properties:
-        Preconditions:
-          type: object
-        Schedule:
-          type: object
-        BusinessService:
-          type: object
-        Postconditions:
-          type: object
-        LockBoxFacilityReference:
-          type: string
-        LockBoxReportingandIssueResolutionFulfillmentReference:
-          type: object
-        LockBoxReportingandIssueResolutionFulfillmentType:
-          type: string
     PaperCheckProcessingFulfillment:
       type: object
       properties:
@@ -952,6 +935,23 @@ components:
         PaperCheckProcessingFulfillmentReference:
           type: object
         PaperCheckProcessingFulfillmentType:
+          type: string
+    LockBoxReportingandIssueResolutionFulfillment:
+      type: object
+      properties:
+        Preconditions:
+          type: object
+        Schedule:
+          type: object
+        BusinessService:
+          type: object
+        Postconditions:
+          type: object
+        LockBoxFacilityReference:
+          type: string
+        LockBoxReportingandIssueResolutionFulfillmentReference:
+          type: object
+        LockBoxReportingandIssueResolutionFulfillmentType:
           type: string
     CheckClearingandSettlementFulfillment:
       type: object
@@ -1009,16 +1009,16 @@ components:
       explode: false
       schema:
         type: string
-    LockBoxReportingandIssueResolutionFulfillmentID:
-      name: lockboxreportingandissueresolutionfulfillmentId
+    PaperCheckProcessingFulfillmentID:
+      name: papercheckprocessingfulfillmentId
       in: path
       required: true
       style: simple
       explode: false
       schema:
         type: string
-    PaperCheckProcessingFulfillmentID:
-      name: papercheckprocessingfulfillmentId
+    LockBoxReportingandIssueResolutionFulfillmentID:
+      name: lockboxreportingandissueresolutionfulfillmentId
       in: path
       required: true
       style: simple

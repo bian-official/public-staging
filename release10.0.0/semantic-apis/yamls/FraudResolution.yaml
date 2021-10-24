@@ -246,6 +246,11 @@ components:
           type: string
         FraudCaseStatus:
           type: string
+    CaseAnalysis:
+      type: object
+      properties:
+        FraudCaseRootCause:
+          type: string
     CaseResolution:
       type: object
       properties:
@@ -279,11 +284,6 @@ components:
         InterestedPartyAgreement:
           type: string
         FraudCaseDeterminationRecord:
-          type: string
-    CaseAnalysis:
-      type: object
-      properties:
-        FraudCaseRootCause:
           type: string
     HTTPError:
       type: object
@@ -412,6 +412,14 @@ components:
       explode: false
       schema:
         type: string
+    CaseAnalysisID:
+      name: caseanalysisId
+      in: path
+      required: true
+      style: simple
+      explode: false
+      schema:
+        type: string
     CaseResolutionID:
       name: caseresolutionId
       in: path
@@ -422,14 +430,6 @@ components:
         type: string
     CaseDeterminationID:
       name: casedeterminationId
-      in: path
-      required: true
-      style: simple
-      explode: false
-      schema:
-        type: string
-    CaseAnalysisID:
-      name: caseanalysisId
       in: path
       required: true
       style: simple

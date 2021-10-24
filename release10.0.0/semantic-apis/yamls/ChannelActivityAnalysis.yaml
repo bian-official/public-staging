@@ -510,15 +510,6 @@ components:
           type: object
         ChannelActivityDeviceErrorDetectionAnalysisResult:
           type: string
-    CustomerBehavior:
-      type: object
-      properties:
-        ChannelActivityCustomerBehaviorAnalysisAlgorithmSpecification:
-          type: string
-        ChannelActivityCustomerBehaviorAnalysisReference:
-          type: object
-        ChannelActivityCustomerBehaviorAnalysisResult:
-          type: string
     MerchantBehavior:
       type: object
       properties:
@@ -537,6 +528,15 @@ components:
           type: object
         ChannelActivityMerchantFraudAnalysisResult:
           type: string
+    Bot:
+      type: object
+      properties:
+        ChannelActivityBotDetectionAnalysisAlgorithmSpecification:
+          type: string
+        ChannelActivityBotDetectionAnalysisReference:
+          type: object
+        ChannelActivityBotDetectionAnalysisResult:
+          type: string
     CustomerFraud:
       type: object
       properties:
@@ -546,14 +546,14 @@ components:
           type: object
         ChannelActivityCustomerFraudAnalysisResult:
           type: string
-    Bot:
+    CustomerBehavior:
       type: object
       properties:
-        ChannelActivityBotDetectionAnalysisAlgorithmSpecification:
+        ChannelActivityCustomerBehaviorAnalysisAlgorithmSpecification:
           type: string
-        ChannelActivityBotDetectionAnalysisReference:
+        ChannelActivityCustomerBehaviorAnalysisReference:
           type: object
-        ChannelActivityBotDetectionAnalysisResult:
+        ChannelActivityCustomerBehaviorAnalysisResult:
           type: string
     HTTPError:
       type: object
@@ -833,14 +833,6 @@ components:
       explode: false
       schema:
         type: string
-    CustomerBehaviorID:
-      name: customerbehaviorId
-      in: path
-      required: true
-      style: simple
-      explode: false
-      schema:
-        type: string
     MerchantBehaviorID:
       name: merchantbehaviorId
       in: path
@@ -857,6 +849,14 @@ components:
       explode: false
       schema:
         type: string
+    BotID:
+      name: botId
+      in: path
+      required: true
+      style: simple
+      explode: false
+      schema:
+        type: string
     CustomerFraudID:
       name: customerfraudId
       in: path
@@ -865,8 +865,8 @@ components:
       explode: false
       schema:
         type: string
-    BotID:
-      name: botId
+    CustomerBehaviorID:
+      name: customerbehaviorId
       in: path
       required: true
       style: simple

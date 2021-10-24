@@ -763,26 +763,26 @@ components:
           type: string
         SyndicatedLoanFacilityAccountReference:
           type: object
-    Origination:
+    SyndicateAssembly:
       type: object
       properties:
-        OriginationPreconditions:
+        SyndicateAssemblyPreconditions:
           type: string
-        OriginationFeatureSchedule:
+        SyndicateAssemblyFeatureSchedule:
           type: string
-        SyndicatedLoanOrigination:
+        SyndicatedLoanOrganization:
           type: object
-        OriginationPostconditions:
+        SyndicateAssemblyPostconditions:
           type: string
-        OriginationSyndicatedLoanOriginationServiceType:
+        SyndicateAssemblySyndicatedLoanOrganizationServiceType:
           type: string
-        OriginationSyndicatedLoanOriginationServiceDescription:
+        SyndicateAssemblySyndicatedLoanOrganizationServiceDescription:
           type: string
-        OriginationSyndicatedLoanOriginationServiceInputsandOuputs:
+        SyndicateAssemblySyndicatedLoanOrganizationServiceInputsandOuputs:
           type: string
-        OriginationSyndicatedLoanOriginationServiceWorkProduct:
+        SyndicateAssemblySyndicatedLoanOrganizationServiceWorkProduct:
           type: string
-        OriginationSyndicatedLoanOriginationServiceName:
+        SyndicateAssemblySyndicatedLoanOrganizationServiceName:
           type: string
     Structuring:
       type: object
@@ -805,6 +805,34 @@ components:
           type: string
         StructuringSyndicatedLoanFacilityServiceName:
           type: string
+    Origination:
+      type: object
+      properties:
+        OriginationPreconditions:
+          type: string
+        OriginationFeatureSchedule:
+          type: string
+        SyndicatedLoanOrigination:
+          type: object
+        OriginationPostconditions:
+          type: string
+        OriginationSyndicatedLoanOriginationServiceType:
+          type: string
+        OriginationSyndicatedLoanOriginationServiceDescription:
+          type: string
+        OriginationSyndicatedLoanOriginationServiceInputsandOuputs:
+          type: string
+        OriginationSyndicatedLoanOriginationServiceWorkProduct:
+          type: string
+        OriginationSyndicatedLoanOriginationServiceName:
+          type: string
+    SyndicatedLoanOutcome:
+      type: object
+      properties:
+        SyndicatedLoanFinancialFacility:
+          type: string
+        SyndicatedLoanWorkProduct:
+          type: string
     Fulfillment:
       type: object
       properties:
@@ -826,34 +854,6 @@ components:
           type: string
         FulfillmentFiduciaryArrangementFulfillmentServiceName:
           type: string
-    SyndicateAssembly:
-      type: object
-      properties:
-        SyndicateAssemblyPreconditions:
-          type: string
-        SyndicateAssemblyFeatureSchedule:
-          type: string
-        SyndicatedLoanOrganization:
-          type: object
-        SyndicateAssemblyPostconditions:
-          type: string
-        SyndicateAssemblySyndicatedLoanOrganizationServiceType:
-          type: string
-        SyndicateAssemblySyndicatedLoanOrganizationServiceDescription:
-          type: string
-        SyndicateAssemblySyndicatedLoanOrganizationServiceInputsandOuputs:
-          type: string
-        SyndicateAssemblySyndicatedLoanOrganizationServiceWorkProduct:
-          type: string
-        SyndicateAssemblySyndicatedLoanOrganizationServiceName:
-          type: string
-    SyndicatedLoanOutcome:
-      type: object
-      properties:
-        SyndicatedLoanFinancialFacility:
-          type: string
-        SyndicatedLoanWorkProduct:
-          type: string
     HTTPError:
       type: object
       properties:
@@ -872,8 +872,8 @@ components:
       explode: false
       schema:
         type: string
-    OriginationID:
-      name: originationId
+    SyndicateAssemblyID:
+      name: syndicateassemblyId
       in: path
       required: true
       style: simple
@@ -888,16 +888,8 @@ components:
       explode: false
       schema:
         type: string
-    FulfillmentID:
-      name: fulfillmentId
-      in: path
-      required: true
-      style: simple
-      explode: false
-      schema:
-        type: string
-    SyndicateAssemblyID:
-      name: syndicateassemblyId
+    OriginationID:
+      name: originationId
       in: path
       required: true
       style: simple
@@ -906,6 +898,14 @@ components:
         type: string
     SyndicatedLoanOutcomeID:
       name: syndicatedloanoutcomeId
+      in: path
+      required: true
+      style: simple
+      explode: false
+      schema:
+        type: string
+    FulfillmentID:
+      name: fulfillmentId
       in: path
       required: true
       style: simple

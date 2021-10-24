@@ -903,13 +903,6 @@ components:
           type: string
         ProgramTradingOperatingSessionReference:
           type: string
-    ProgramTradingOutcome:
-      type: object
-      properties:
-        ProgramTradingIncident:
-          type: string
-        ProgramTradingProvision:
-          type: string
     ProgramTradeExecutionFunction:
       type: object
       properties:
@@ -924,6 +917,21 @@ components:
         ProgramTradeExecutionFunctionReference:
           type: string
         ProgramTradeExecutionFunctionType:
+          type: string
+    ProgramTradedPortfolioAlgorithmFunction:
+      type: object
+      properties:
+        Preconditions:
+          type: object
+        Schedule:
+          type: object
+        BusinessService:
+          type: object
+        ProgramTradingOperatingSessionReference:
+          type: string
+        ProgramTradedPortfolioAlgorithmFunctionReference:
+          type: string
+        ProgramTradedPortfolioAlgorithmFunctionType:
           type: string
     ProgramTradedPortfolioMaintenanceFunction:
       type: object
@@ -940,20 +948,12 @@ components:
           type: string
         ProgramTradedPortfolioMaintenanceFunctionType:
           type: string
-    ProgramTradedPortfolioAlgorithmFunction:
+    ProgramTradingOutcome:
       type: object
       properties:
-        Preconditions:
-          type: object
-        Schedule:
-          type: object
-        BusinessService:
-          type: object
-        ProgramTradingOperatingSessionReference:
+        ProgramTradingIncident:
           type: string
-        ProgramTradedPortfolioAlgorithmFunctionReference:
-          type: string
-        ProgramTradedPortfolioAlgorithmFunctionType:
+        ProgramTradingProvision:
           type: string
     HTTPError:
       type: object
@@ -973,16 +973,16 @@ components:
       explode: false
       schema:
         type: string
-    ProgramTradingOutcomeID:
-      name: programtradingoutcomeId
+    ProgramTradeExecutionFunctionID:
+      name: programtradeexecutionfunctionId
       in: path
       required: true
       style: simple
       explode: false
       schema:
         type: string
-    ProgramTradeExecutionFunctionID:
-      name: programtradeexecutionfunctionId
+    ProgramTradedPortfolioAlgorithmFunctionID:
+      name: programtradedportfolioalgorithmfunctionId
       in: path
       required: true
       style: simple
@@ -997,8 +997,8 @@ components:
       explode: false
       schema:
         type: string
-    ProgramTradedPortfolioAlgorithmFunctionID:
-      name: programtradedportfolioalgorithmfunctionId
+    ProgramTradingOutcomeID:
+      name: programtradingoutcomeId
       in: path
       required: true
       style: simple

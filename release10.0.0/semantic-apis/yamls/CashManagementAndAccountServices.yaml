@@ -901,38 +901,24 @@ components:
           type: string
         Date:
           type: string
-    ServiceFees:
+    IssuedDevice:
       type: object
       properties:
-        FeeConfigurationProfile:
+        IssuedDeviceType:
           type: string
-        FeeDefinition:
+        IssuedDeviceDescription:
           type: string
-        FeeType:
+        IssuedDeviceOptionDefinition:
           type: string
-        FeeApplicationRecord:
+        IssuedDeviceOptionSetting:
           type: string
-        FeeTransaction:
+        IssuedDeviceProperty:
           type: string
-        TransactionDescription:
+        IssuedDevicePropertyType:
           type: string
-        TransactionFeeType:
+        IssuedDevicePropertyValue:
           type: string
-        TransactionFeeCharge:
-          type: string
-        FeeProjectionsandCommitments:
-          type: string
-        ProjectedTransactionDescription:
-          type: string
-        ProjectedTransactionFeeType:
-          type: string
-        ProjectedTransactionFeeCharge:
-          type: string
-        FeeAccrualAmount:
-          type: number
-        AccrualFeeType:
-          type: string
-        AccrualFeeCharge:
+        IssuedDeviceStatus:
           type: string
     Interest:
       type: object
@@ -960,6 +946,75 @@ components:
         InterestAccrualType:
           type: string
         InterestAccrualCharge:
+          type: string
+    DepositsandWithdrawals:
+      type: object
+      properties:
+        DepositType:
+          type: string
+        WithdrawalType:
+          type: string
+        AccountLimitBreachResponse:
+          type: string
+        DepositTransaction:
+          type: string
+        DepositTransactionSourceReference:
+          type: object
+        DepositTransactionDepositType:
+          type: string
+        DepositTransactionDescription:
+          type: string
+        DepositTransactionAmount:
+          type: number
+        DepositTransactionDate:
+          type: string
+        WithdrawalTransaction:
+          type: string
+        WithdrawalTransactionSourceReference:
+          type: object
+        WithdrawalTransactionWithdrawalType:
+          type: string
+        WithdrawalTransactionDescription:
+          type: string
+        WithdrawalTransactionAmount:
+          type: number
+        WithdrawalTransactionDate:
+          type: string
+    PositivePay:
+      type: object
+      properties:
+        PositivePayCheckRegisterReportingSchedule:
+          type: string
+        CheckRegister:
+          type: string
+        DateRange:
+          type: string
+        CheckDetails:
+          type: string
+    AccountSweep:
+      type: object
+      properties:
+        AccountSweepType:
+          type: string
+        AccountSweepDefinition:
+          type: string
+        AccountSweepApplicationSchedule:
+          type: string
+        AccountSweepConfiguration:
+          type: string
+        TargetAccount:
+          type: string
+        SweepMandate:
+          type: string
+        SweepProcessingSchedule:
+          type: string
+        SweepApplicationRecord:
+          type: string
+        AccountSweepTargetAccount:
+          type: string
+        AccountSweepAmount:
+          type: number
+        AccountSweepExecutionDate:
           type: string
     Payments:
       type: object
@@ -1010,31 +1065,6 @@ components:
           type: object
         PaymentTransactionStatus:
           type: string
-    AccountSweep:
-      type: object
-      properties:
-        AccountSweepType:
-          type: string
-        AccountSweepDefinition:
-          type: string
-        AccountSweepApplicationSchedule:
-          type: string
-        AccountSweepConfiguration:
-          type: string
-        TargetAccount:
-          type: string
-        SweepMandate:
-          type: string
-        SweepProcessingSchedule:
-          type: string
-        SweepApplicationRecord:
-          type: string
-        AccountSweepTargetAccount:
-          type: string
-        AccountSweepAmount:
-          type: number
-        AccountSweepExecutionDate:
-          type: string
     AccountLien:
       type: object
       properties:
@@ -1058,68 +1088,38 @@ components:
           type: string
         LienStatus:
           type: string
-    DepositsandWithdrawals:
+    ServiceFees:
       type: object
       properties:
-        DepositType:
+        FeeConfigurationProfile:
           type: string
-        WithdrawalType:
+        FeeDefinition:
           type: string
-        AccountLimitBreachResponse:
+        FeeType:
           type: string
-        DepositTransaction:
+        FeeApplicationRecord:
           type: string
-        DepositTransactionSourceReference:
-          type: object
-        DepositTransactionDepositType:
+        FeeTransaction:
           type: string
-        DepositTransactionDescription:
+        TransactionDescription:
           type: string
-        DepositTransactionAmount:
+        TransactionFeeType:
+          type: string
+        TransactionFeeCharge:
+          type: string
+        FeeProjectionsandCommitments:
+          type: string
+        ProjectedTransactionDescription:
+          type: string
+        ProjectedTransactionFeeType:
+          type: string
+        ProjectedTransactionFeeCharge:
+          type: string
+        FeeAccrualAmount:
           type: number
-        DepositTransactionDate:
+        AccrualFeeType:
           type: string
-        WithdrawalTransaction:
-          type: string
-        WithdrawalTransactionSourceReference:
-          type: object
-        WithdrawalTransactionWithdrawalType:
-          type: string
-        WithdrawalTransactionDescription:
-          type: string
-        WithdrawalTransactionAmount:
-          type: number
-        WithdrawalTransactionDate:
-          type: string
-    IssuedDevice:
-      type: object
-      properties:
-        IssuedDeviceType:
-          type: string
-        IssuedDeviceDescription:
-          type: string
-        IssuedDeviceOptionDefinition:
-          type: string
-        IssuedDeviceOptionSetting:
-          type: string
-        IssuedDeviceProperty:
-          type: string
-        IssuedDevicePropertyType:
-          type: string
-        IssuedDevicePropertyValue:
-          type: string
-        IssuedDeviceStatus:
-          type: string
-    PositivePay:
-      type: object
-      properties:
-        PositivePayCheckRegisterReportingSchedule:
-          type: string
-        CheckRegister:
-          type: string
-        DateRange:
-          type: string
-        CheckDetails:
+        AccrualFeeCharge:
           type: string
     HTTPError:
       type: object
@@ -1518,8 +1518,8 @@ components:
       explode: false
       schema:
         type: string
-    ServiceFeesID:
-      name: servicefeesId
+    IssuedDeviceID:
+      name: issueddeviceId
       in: path
       required: true
       style: simple
@@ -1534,8 +1534,16 @@ components:
       explode: false
       schema:
         type: string
-    PaymentsID:
-      name: paymentsId
+    DepositsandWithdrawalsID:
+      name: depositsandwithdrawalsId
+      in: path
+      required: true
+      style: simple
+      explode: false
+      schema:
+        type: string
+    PositivePayID:
+      name: positivepayId
       in: path
       required: true
       style: simple
@@ -1550,6 +1558,14 @@ components:
       explode: false
       schema:
         type: string
+    PaymentsID:
+      name: paymentsId
+      in: path
+      required: true
+      style: simple
+      explode: false
+      schema:
+        type: string
     AccountLienID:
       name: accountlienId
       in: path
@@ -1558,24 +1574,8 @@ components:
       explode: false
       schema:
         type: string
-    DepositsandWithdrawalsID:
-      name: depositsandwithdrawalsId
-      in: path
-      required: true
-      style: simple
-      explode: false
-      schema:
-        type: string
-    IssuedDeviceID:
-      name: issueddeviceId
-      in: path
-      required: true
-      style: simple
-      explode: false
-      schema:
-        type: string
-    PositivePayID:
-      name: positivepayId
+    ServiceFeesID:
+      name: servicefeesId
       in: path
       required: true
       style: simple

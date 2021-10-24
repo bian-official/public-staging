@@ -367,13 +367,6 @@ components:
           type: string
         LocationNeighborhoodType:
           type: string
-    Use:
-      type: object
-      properties:
-        LocationZoningType:
-          type: string
-        LocationUsage:
-          type: string
     Occupancy:
       type: object
       properties:
@@ -391,6 +384,13 @@ components:
           type: string
         AlliancePartnerReference:
           type: object
+    Use:
+      type: object
+      properties:
+        LocationZoningType:
+          type: string
+        LocationUsage:
+          type: string
     HTTPError:
       type: object
       properties:
@@ -670,16 +670,16 @@ components:
       explode: false
       schema:
         type: string
-    UseID:
-      name: useId
+    OccupancyID:
+      name: occupancyId
       in: path
       required: true
       style: simple
       explode: false
       schema:
         type: string
-    OccupancyID:
-      name: occupancyId
+    UseID:
+      name: useId
       in: path
       required: true
       style: simple

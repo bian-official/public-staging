@@ -1406,25 +1406,6 @@ components:
           type: string
         MarketTradeFundsandSecurityAvailabilityAssuranceWorkstepType:
           type: string
-    MarketTradeSettlementInitiationWorkstep:
-      type: object
-      properties:
-        Preconditions:
-          type: object
-        BusinessUnit/EmployeeReference:
-          type: object
-        Schedule:
-          type: object
-        BusinessService:
-          type: object
-        Postconditions:
-          type: object
-        TradeClearingProcedureReference:
-          type: string
-        MarketTradeSettlementInitiationWorkstepReference:
-          type: string
-        MarketTradeSettlementInitiationWorkstepType:
-          type: string
     MarketTradeOutTradeResolutionWorkstep:
       type: object
       properties:
@@ -1443,6 +1424,25 @@ components:
         MarketTradeOutTradeResolutionWorkstepReference:
           type: string
         MarketTradeOutTradeResolutionWorkstepType:
+          type: string
+    MarketTradeSettlementInitiationWorkstep:
+      type: object
+      properties:
+        Preconditions:
+          type: object
+        BusinessUnit/EmployeeReference:
+          type: object
+        Schedule:
+          type: object
+        BusinessService:
+          type: object
+        Postconditions:
+          type: object
+        TradeClearingProcedureReference:
+          type: string
+        MarketTradeSettlementInitiationWorkstepReference:
+          type: string
+        MarketTradeSettlementInitiationWorkstepType:
           type: string
     TradeClearingOutcome:
       type: object
@@ -1493,16 +1493,16 @@ components:
       explode: false
       schema:
         type: string
-    MarketTradeSettlementInitiationWorkstepID:
-      name: markettradesettlementinitiationworkstepId
+    MarketTradeOutTradeResolutionWorkstepID:
+      name: markettradeouttraderesolutionworkstepId
       in: path
       required: true
       style: simple
       explode: false
       schema:
         type: string
-    MarketTradeOutTradeResolutionWorkstepID:
-      name: markettradeouttraderesolutionworkstepId
+    MarketTradeSettlementInitiationWorkstepID:
+      name: markettradesettlementinitiationworkstepId
       in: path
       required: true
       style: simple

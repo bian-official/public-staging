@@ -851,114 +851,6 @@ components:
           type: string
         StatementReport:
           type: string
-    AccountSweep:
-      type: object
-      properties:
-        AccountSweepType:
-          type: string
-        AccountSweepDefinition:
-          type: string
-        AccountSweepApplicationSchedule:
-          type: string
-        AccountSweepConfiguration:
-          type: string
-        TargetAccount:
-          type: string
-        SweepMandate:
-          type: string
-        SweepProcessingSchedule:
-          type: string
-        SweepApplicationRecord:
-          type: string
-        AccountSweepTargetAccount:
-          type: string
-        AccountSweepAmount:
-          type: number
-        AccountSweepExecutionDate:
-          type: string
-    ServiceFees:
-      type: object
-      properties:
-        FeeConfigurationProfile:
-          type: string
-        FeeType:
-          type: string
-        FeeDefinition:
-          type: string
-        FeeApplicationRecord:
-          type: string
-        FeeTransaction:
-          type: string
-        TransactionDescription:
-          type: string
-        TransactionFeeType:
-          type: string
-        TransactionFeeCharge:
-          type: string
-        FeeProjectionsandCommitments:
-          type: string
-        ProjectedTransactionDescription:
-          type: string
-        ProjectedTransactionFeeType:
-          type: string
-        ProjectedTransactionFeeCharge:
-          type: string
-        FeeAccrualAmount:
-          type: number
-        AccrualFeeType:
-          type: string
-        AccrualFeeCharge:
-          type: string
-    Interest:
-      type: object
-      properties:
-        InterestRateType:
-          type: string
-        InterestRateApplicationSchedule:
-          type: object
-        InterestRateConfiguration:
-          type: object
-        Rate:
-          type: string
-        InterestApplicationRecord:
-          type: string
-        InterestTransaction:
-          type: string
-        TransactionDescription:
-          type: string
-        TransactionRateType:
-          type: string
-        TransactionInterestCharge:
-          type: string
-        InterestAccrualAmount:
-          type: number
-        InterestAccrualType:
-          type: string
-        InterestAccrualCharge:
-          type: string
-    AccountLien:
-      type: object
-      properties:
-        LienType:
-          type: string
-        LienDefinition:
-          type: string
-        LienProcessingOption:
-          type: string
-        LienRecord:
-          type: string
-        LienOriginator:
-          type: string
-        LienPurpose:
-          type: string
-        LienAmount:
-          type: number
-        LienStartDate:
-          type: string
-        LienExpiryDate:
-          type: string
-        LienStatus:
-          type: string
     DepositsandWithdrawals:
       type: object
       properties:
@@ -992,24 +884,65 @@ components:
           type: number
         WithdrawalTransactionDate:
           type: string
-    IssuedDevice:
+    Interest:
       type: object
       properties:
-        IssuedDeviceType:
+        InterestRateType:
           type: string
-        IssuedDeviceDescription:
+        InterestRateApplicationSchedule:
+          type: object
+        InterestRateConfiguration:
+          type: object
+        Rate:
           type: string
-        IssuedDeviceOptionDefinition:
+        InterestApplicationRecord:
           type: string
-        IssuedDeviceOptionSetting:
+        InterestTransaction:
           type: string
-        IssuedDeviceProperty:
+        TransactionDescription:
           type: string
-        IssuedDevicePropertyType:
+        TransactionRateType:
           type: string
-        IssuedDevicePropertyValue:
+        TransactionInterestCharge:
           type: string
-        IssuedDeviceStatus:
+        InterestAccrualAmount:
+          type: number
+        InterestAccrualType:
+          type: string
+        InterestAccrualCharge:
+          type: string
+    ServiceFees:
+      type: object
+      properties:
+        FeeConfigurationProfile:
+          type: string
+        FeeType:
+          type: string
+        FeeDefinition:
+          type: string
+        FeeApplicationRecord:
+          type: string
+        FeeTransaction:
+          type: string
+        TransactionDescription:
+          type: string
+        TransactionFeeType:
+          type: string
+        TransactionFeeCharge:
+          type: string
+        FeeProjectionsandCommitments:
+          type: string
+        ProjectedTransactionDescription:
+          type: string
+        ProjectedTransactionFeeType:
+          type: string
+        ProjectedTransactionFeeCharge:
+          type: string
+        FeeAccrualAmount:
+          type: number
+        AccrualFeeType:
+          type: string
+        AccrualFeeCharge:
           type: string
     Payments:
       type: object
@@ -1059,6 +992,73 @@ components:
         PaymentTransactionBankBranch/LocationReference:
           type: object
         PaymentTransactionStatus:
+          type: string
+    AccountLien:
+      type: object
+      properties:
+        LienType:
+          type: string
+        LienDefinition:
+          type: string
+        LienProcessingOption:
+          type: string
+        LienRecord:
+          type: string
+        LienOriginator:
+          type: string
+        LienPurpose:
+          type: string
+        LienAmount:
+          type: number
+        LienStartDate:
+          type: string
+        LienExpiryDate:
+          type: string
+        LienStatus:
+          type: string
+    IssuedDevice:
+      type: object
+      properties:
+        IssuedDeviceType:
+          type: string
+        IssuedDeviceDescription:
+          type: string
+        IssuedDeviceOptionDefinition:
+          type: string
+        IssuedDeviceOptionSetting:
+          type: string
+        IssuedDeviceProperty:
+          type: string
+        IssuedDevicePropertyType:
+          type: string
+        IssuedDevicePropertyValue:
+          type: string
+        IssuedDeviceStatus:
+          type: string
+    AccountSweep:
+      type: object
+      properties:
+        AccountSweepType:
+          type: string
+        AccountSweepDefinition:
+          type: string
+        AccountSweepApplicationSchedule:
+          type: string
+        AccountSweepConfiguration:
+          type: string
+        TargetAccount:
+          type: string
+        SweepMandate:
+          type: string
+        SweepProcessingSchedule:
+          type: string
+        SweepApplicationRecord:
+          type: string
+        AccountSweepTargetAccount:
+          type: string
+        AccountSweepAmount:
+          type: number
+        AccountSweepExecutionDate:
           type: string
     HTTPError:
       type: object
@@ -1477,16 +1477,8 @@ components:
       explode: false
       schema:
         type: string
-    AccountSweepID:
-      name: accountsweepId
-      in: path
-      required: true
-      style: simple
-      explode: false
-      schema:
-        type: string
-    ServiceFeesID:
-      name: servicefeesId
+    DepositsandWithdrawalsID:
+      name: depositsandwithdrawalsId
       in: path
       required: true
       style: simple
@@ -1501,16 +1493,24 @@ components:
       explode: false
       schema:
         type: string
-    AccountLienID:
-      name: accountlienId
+    ServiceFeesID:
+      name: servicefeesId
       in: path
       required: true
       style: simple
       explode: false
       schema:
         type: string
-    DepositsandWithdrawalsID:
-      name: depositsandwithdrawalsId
+    PaymentsID:
+      name: paymentsId
+      in: path
+      required: true
+      style: simple
+      explode: false
+      schema:
+        type: string
+    AccountLienID:
+      name: accountlienId
       in: path
       required: true
       style: simple
@@ -1525,8 +1525,8 @@ components:
       explode: false
       schema:
         type: string
-    PaymentsID:
-      name: paymentsId
+    AccountSweepID:
+      name: accountsweepId
       in: path
       required: true
       style: simple

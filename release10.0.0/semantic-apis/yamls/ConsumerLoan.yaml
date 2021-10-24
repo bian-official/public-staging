@@ -718,21 +718,6 @@ components:
           type: string
         Date:
           type: string
-    Maintenance:
-      type: object
-      properties:
-        MaintenanceReportType:
-          type: string
-        LoanTaxReport:
-          type: string
-        LoanFeeType:
-          type: string
-        LoanFees:
-          type: string
-        Penalties:
-          type: string
-        CollateralValuation:
-          type: string
     Interest:
       type: object
       properties:
@@ -760,35 +745,6 @@ components:
           type: string
         InterestAccrualCharge:
           type: string
-    Withdrawal:
-      type: object
-      properties:
-        PaymentTransaction:
-          type: string
-        PaymentTransactionType:
-          type: string
-        PaymentTransactionPayeeReference:
-          type: object
-        PaymentTransactionPayeeAccountReference:
-          type: object
-        PaymentTransactionPayeeBankReference:
-          type: object
-        PaymentTransactionAmount:
-          type: number
-        PaymentTransactionFeeType:
-          type: string
-        PaymentTransactionFeeCharge:
-          type: string
-        PaymentTransactionDate:
-          type: string
-        PaymentTransactionPaymentMechanism:
-          type: string
-        PaymentTransactionPaymentPurpose:
-          type: string
-        PaymentTransactionBankBranch/LocationReference:
-          type: object
-        PaymentTransactionStatus:
-          type: string
     Repayment:
       type: object
       properties:
@@ -805,6 +761,30 @@ components:
         RepaymentTransactionCurrency:
           type: string
         RepaymentTransactionValueDate:
+          type: string
+    Restructuring:
+      type: object
+      properties:
+        RestructuringTask:
+          type: string
+        RestructuringEvaluation:
+          type: string
+        RestructuringWriteDown:
+          type: string
+    Maintenance:
+      type: object
+      properties:
+        MaintenanceReportType:
+          type: string
+        LoanTaxReport:
+          type: string
+        LoanFeeType:
+          type: string
+        LoanFees:
+          type: string
+        Penalties:
+          type: string
+        CollateralValuation:
           type: string
     ServiceFees:
       type: object
@@ -839,6 +819,35 @@ components:
           type: string
         AccrualFeeCharge:
           type: string
+    Withdrawal:
+      type: object
+      properties:
+        PaymentTransaction:
+          type: string
+        PaymentTransactionType:
+          type: string
+        PaymentTransactionPayeeReference:
+          type: object
+        PaymentTransactionPayeeAccountReference:
+          type: object
+        PaymentTransactionPayeeBankReference:
+          type: object
+        PaymentTransactionAmount:
+          type: number
+        PaymentTransactionFeeType:
+          type: string
+        PaymentTransactionFeeCharge:
+          type: string
+        PaymentTransactionDate:
+          type: string
+        PaymentTransactionPaymentMechanism:
+          type: string
+        PaymentTransactionPaymentPurpose:
+          type: string
+        PaymentTransactionBankBranch/LocationReference:
+          type: object
+        PaymentTransactionStatus:
+          type: string
     Disbursement:
       type: object
       properties:
@@ -853,15 +862,6 @@ components:
         DisbursementCurrency:
           type: string
         DisbursementValueDate:
-          type: string
-    Restructuring:
-      type: object
-      properties:
-        RestructuringTask:
-          type: string
-        RestructuringEvaluation:
-          type: string
-        RestructuringWriteDown:
           type: string
     HTTPError:
       type: object
@@ -1670,24 +1670,8 @@ components:
       explode: false
       schema:
         type: string
-    MaintenanceID:
-      name: maintenanceId
-      in: path
-      required: true
-      style: simple
-      explode: false
-      schema:
-        type: string
     InterestID:
       name: interestId
-      in: path
-      required: true
-      style: simple
-      explode: false
-      schema:
-        type: string
-    WithdrawalID:
-      name: withdrawalId
       in: path
       required: true
       style: simple
@@ -1702,6 +1686,22 @@ components:
       explode: false
       schema:
         type: string
+    RestructuringID:
+      name: restructuringId
+      in: path
+      required: true
+      style: simple
+      explode: false
+      schema:
+        type: string
+    MaintenanceID:
+      name: maintenanceId
+      in: path
+      required: true
+      style: simple
+      explode: false
+      schema:
+        type: string
     ServiceFeesID:
       name: servicefeesId
       in: path
@@ -1710,16 +1710,16 @@ components:
       explode: false
       schema:
         type: string
-    DisbursementID:
-      name: disbursementId
+    WithdrawalID:
+      name: withdrawalId
       in: path
       required: true
       style: simple
       explode: false
       schema:
         type: string
-    RestructuringID:
-      name: restructuringId
+    DisbursementID:
+      name: disbursementId
       in: path
       required: true
       style: simple

@@ -631,25 +631,6 @@ components:
           type: object
         TradingPositionManagementPlanSubjectMatter:
           type: object
-    TradingBookRiskMitigationDuty:
-      type: object
-      properties:
-        Preconditions:
-          type: object
-        BusinessUnit/EmployeeReference:
-          type: object
-        Schedule:
-          type: object
-        BusinessService:
-          type: object
-        Postconditions:
-          type: object
-        TradingPositionManagementPlanReference:
-          type: string
-        TradingBookRiskMitigationDutyReference:
-          type: string
-        TradingBookRiskMitigationDutyType:
-          type: string
     TradingBookAnalysisandReportingDuty:
       type: object
       properties:
@@ -668,6 +649,25 @@ components:
         TradingBookAnalysisandReportingDutyReference:
           type: string
         TradingBookAnalysisandReportingDutyType:
+          type: string
+    TradingBookRiskMitigationDuty:
+      type: object
+      properties:
+        Preconditions:
+          type: object
+        BusinessUnit/EmployeeReference:
+          type: object
+        Schedule:
+          type: object
+        BusinessService:
+          type: object
+        Postconditions:
+          type: object
+        TradingPositionManagementPlanReference:
+          type: string
+        TradingBookRiskMitigationDutyReference:
+          type: string
+        TradingBookRiskMitigationDutyType:
           type: string
     TradingBookOversightOutcome:
       type: object
@@ -700,16 +700,16 @@ components:
       explode: false
       schema:
         type: string
-    TradingBookRiskMitigationDutyID:
-      name: tradingbookriskmitigationdutyId
+    TradingBookAnalysisandReportingDutyID:
+      name: tradingbookanalysisandreportingdutyId
       in: path
       required: true
       style: simple
       explode: false
       schema:
         type: string
-    TradingBookAnalysisandReportingDutyID:
-      name: tradingbookanalysisandreportingdutyId
+    TradingBookRiskMitigationDutyID:
+      name: tradingbookriskmitigationdutyId
       in: path
       required: true
       style: simple

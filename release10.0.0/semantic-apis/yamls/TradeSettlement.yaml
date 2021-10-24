@@ -925,6 +925,25 @@ components:
           type: string
         TradeSettlementProcedureReference:
           type: string
+    MarketTradeCashSettlementWorkstep:
+      type: object
+      properties:
+        Preconditions:
+          type: object
+        BusinessUnit/EmployeeReference:
+          type: object
+        Schedule:
+          type: object
+        BusinessService:
+          type: object
+        Postconditions:
+          type: object
+        TradeSettlementProcedureReference:
+          type: string
+        MarketTradeCashSettlementWorkstepReference:
+          type: string
+        MarketTradeCashSettlementWorkstepType:
+          type: string
     MarketTradeSettlementConfirmationWorkstep:
       type: object
       properties:
@@ -963,25 +982,6 @@ components:
           type: string
         MarketTradeSecuritiesSettlementWorkstepType:
           type: string
-    MarketTradeCashSettlementWorkstep:
-      type: object
-      properties:
-        Preconditions:
-          type: object
-        BusinessUnit/EmployeeReference:
-          type: object
-        Schedule:
-          type: object
-        BusinessService:
-          type: object
-        Postconditions:
-          type: object
-        TradeSettlementProcedureReference:
-          type: string
-        MarketTradeCashSettlementWorkstepReference:
-          type: string
-        MarketTradeCashSettlementWorkstepType:
-          type: string
     TradeSettlementOutcome:
       type: object
       properties:
@@ -1007,6 +1007,14 @@ components:
       explode: false
       schema:
         type: string
+    MarketTradeCashSettlementWorkstepID:
+      name: markettradecashsettlementworkstepId
+      in: path
+      required: true
+      style: simple
+      explode: false
+      schema:
+        type: string
     MarketTradeSettlementConfirmationWorkstepID:
       name: markettradesettlementconfirmationworkstepId
       in: path
@@ -1017,14 +1025,6 @@ components:
         type: string
     MarketTradeSecuritiesSettlementWorkstepID:
       name: markettradesecuritiessettlementworkstepId
-      in: path
-      required: true
-      style: simple
-      explode: false
-      schema:
-        type: string
-    MarketTradeCashSettlementWorkstepID:
-      name: markettradecashsettlementworkstepId
       in: path
       required: true
       style: simple

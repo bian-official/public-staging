@@ -303,23 +303,6 @@ components:
           type: string
         PositionNotificationRecord:
           type: string
-    TrialTransaction:
-      type: object
-      properties:
-        TrialTransactionReference:
-          type: object
-        TrialTransactionType:
-          type: string
-        TrialTransactionRecord:
-          type: string
-        TrialTransactionAmount:
-          type: number
-        TrialTransactionDate:
-          type: string
-        TrialTransactionBookingEntity:
-          type: string
-        TrailTransactionPositionImpactAssessment:
-          type: string
     TransactionApplication:
       type: object
       properties:
@@ -336,6 +319,23 @@ components:
         TransactionBookingEntity:
           type: string
         TransactionPositionImpactAssessment:
+          type: string
+    TrialTransaction:
+      type: object
+      properties:
+        TrialTransactionReference:
+          type: object
+        TrialTransactionType:
+          type: string
+        TrialTransactionRecord:
+          type: string
+        TrialTransactionAmount:
+          type: number
+        TrialTransactionDate:
+          type: string
+        TrialTransactionBookingEntity:
+          type: string
+        TrailTransactionPositionImpactAssessment:
           type: string
     HTTPError:
       type: object
@@ -355,16 +355,16 @@ components:
       explode: false
       schema:
         type: string
-    TrialTransactionID:
-      name: trialtransactionId
+    TransactionApplicationID:
+      name: transactionapplicationId
       in: path
       required: true
       style: simple
       explode: false
       schema:
         type: string
-    TransactionApplicationID:
-      name: transactionapplicationId
+    TrialTransactionID:
+      name: trialtransactionId
       in: path
       required: true
       style: simple

@@ -685,75 +685,6 @@ components:
           type: string
         CashDistributionProcedureCustomerAgreementReference:
           type: object
-    DistributionPlanning:
-      type: object
-      properties:
-        DistributionPlanningPreconditions:
-          type: string
-        DistributionPlanningBusinessUnit/EmployeeReference:
-          type: object
-        DistributionPlanningWorkSchedule:
-          type: string
-        DistributionPlanning:
-          type: object
-        DistributionPlanningPostconditions:
-          type: string
-        DistributionPlanningDistributionPlanningServiceType:
-          type: string
-        DistributionPlanningDistributionPlanningServiceDescription:
-          type: string
-        DistributionPlanningDistributionPlanningServiceInputsandOuputs:
-          type: string
-        DistributionPlanningDistributionPlanningServiceWorkProduct:
-          type: string
-        DistributionPlanningDistributionPlanningServiceName:
-          type: string
-    DistributionVehicleAdministration:
-      type: object
-      properties:
-        DistributionVehicleAdministrationPreconditions:
-          type: string
-        DistributionVehicleAdministrationBusinessUnit/EmployeeReference:
-          type: object
-        DistributionVehicleAdministrationWorkSchedule:
-          type: string
-        VehicleAdministration:
-          type: object
-        DistributionVehicleAdministrationPostconditions:
-          type: string
-        DistributionVehicleAdministrationVehicleAdministrationServiceType:
-          type: string
-        DistributionVehicleAdministrationVehicleAdministrationServiceDescription:
-          type: string
-        DistributionVehicleAdministrationVehicleAdministrationServiceInputsandOuputs:
-          type: string
-        DistributionVehicleAdministrationVehicleAdministrationServiceWorkProduct:
-          type: string
-        DistributionVehicleAdministrationVehicleAdministrationServiceName:
-          type: string
-    InventoryProvisioning:
-      type: object
-      properties:
-        InventoryProvisioningPreconditions:
-          type: string
-        InventoryProvisioningBusinessUnit/EmployeeReference:
-          type: object
-        InventoryProvisioningWorkSchedule:
-          type: string
-        InventoryProvisioning:
-          type: object
-        InventoryProvisioningPostconditions:
-          type: string
-        InventoryProvisioningInventoryProvisioningServiceType:
-          type: string
-        InventoryProvisioningInventoryProvisioningServiceDescription:
-          type: string
-        InventoryProvisioningInventoryProvisioningServiceInputsandOuputs:
-          type: string
-        InventoryProvisioningInventoryProvisioningServiceWorkProduct:
-          type: string
-        InventoryProvisioningInventoryProvisioningServiceName:
-          type: string
     BranchCurrencyDistributionOutcome:
       type: object
       properties:
@@ -784,6 +715,75 @@ components:
           type: string
         InventoryDistributionOversightInventoryDistributionOversightServiceName:
           type: string
+    DistributionPlanning:
+      type: object
+      properties:
+        DistributionPlanningPreconditions:
+          type: string
+        DistributionPlanningBusinessUnit/EmployeeReference:
+          type: object
+        DistributionPlanningWorkSchedule:
+          type: string
+        DistributionPlanning:
+          type: object
+        DistributionPlanningPostconditions:
+          type: string
+        DistributionPlanningDistributionPlanningServiceType:
+          type: string
+        DistributionPlanningDistributionPlanningServiceDescription:
+          type: string
+        DistributionPlanningDistributionPlanningServiceInputsandOuputs:
+          type: string
+        DistributionPlanningDistributionPlanningServiceWorkProduct:
+          type: string
+        DistributionPlanningDistributionPlanningServiceName:
+          type: string
+    InventoryProvisioning:
+      type: object
+      properties:
+        InventoryProvisioningPreconditions:
+          type: string
+        InventoryProvisioningBusinessUnit/EmployeeReference:
+          type: object
+        InventoryProvisioningWorkSchedule:
+          type: string
+        InventoryProvisioning:
+          type: object
+        InventoryProvisioningPostconditions:
+          type: string
+        InventoryProvisioningInventoryProvisioningServiceType:
+          type: string
+        InventoryProvisioningInventoryProvisioningServiceDescription:
+          type: string
+        InventoryProvisioningInventoryProvisioningServiceInputsandOuputs:
+          type: string
+        InventoryProvisioningInventoryProvisioningServiceWorkProduct:
+          type: string
+        InventoryProvisioningInventoryProvisioningServiceName:
+          type: string
+    DistributionVehicleAdministration:
+      type: object
+      properties:
+        DistributionVehicleAdministrationPreconditions:
+          type: string
+        DistributionVehicleAdministrationBusinessUnit/EmployeeReference:
+          type: object
+        DistributionVehicleAdministrationWorkSchedule:
+          type: string
+        VehicleAdministration:
+          type: object
+        DistributionVehicleAdministrationPostconditions:
+          type: string
+        DistributionVehicleAdministrationVehicleAdministrationServiceType:
+          type: string
+        DistributionVehicleAdministrationVehicleAdministrationServiceDescription:
+          type: string
+        DistributionVehicleAdministrationVehicleAdministrationServiceInputsandOuputs:
+          type: string
+        DistributionVehicleAdministrationVehicleAdministrationServiceWorkProduct:
+          type: string
+        DistributionVehicleAdministrationVehicleAdministrationServiceName:
+          type: string
     HTTPError:
       type: object
       properties:
@@ -802,16 +802,24 @@ components:
       explode: false
       schema:
         type: string
-    DistributionPlanningID:
-      name: distributionplanningId
+    BranchCurrencyDistributionOutcomeID:
+      name: branchcurrencydistributionoutcomeId
       in: path
       required: true
       style: simple
       explode: false
       schema:
         type: string
-    DistributionVehicleAdministrationID:
-      name: distributionvehicleadministrationId
+    InventoryDistributionOversightID:
+      name: inventorydistributionoversightId
+      in: path
+      required: true
+      style: simple
+      explode: false
+      schema:
+        type: string
+    DistributionPlanningID:
+      name: distributionplanningId
       in: path
       required: true
       style: simple
@@ -826,16 +834,8 @@ components:
       explode: false
       schema:
         type: string
-    BranchCurrencyDistributionOutcomeID:
-      name: branchcurrencydistributionoutcomeId
-      in: path
-      required: true
-      style: simple
-      explode: false
-      schema:
-        type: string
-    InventoryDistributionOversightID:
-      name: inventorydistributionoversightId
+    DistributionVehicleAdministrationID:
+      name: distributionvehicleadministrationId
       in: path
       required: true
       style: simple

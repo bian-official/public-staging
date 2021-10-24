@@ -575,15 +575,6 @@ components:
           type: string
         Date:
           type: string
-    Restructuring:
-      type: object
-      properties:
-        RestructuringTask:
-          type: string
-        RestructuringEvaluation:
-          type: string
-        RestructuringWriteDown:
-          type: string
     Maintenance:
       type: object
       properties:
@@ -598,6 +589,33 @@ components:
         CreditFacilityPenalties:
           type: string
         CreditFacilityCollateralValuation:
+          type: string
+    Interest:
+      type: object
+      properties:
+        InterestRateType:
+          type: string
+        InterestRateApplicationSchedule:
+          type: object
+        InterestRateConfiguration:
+          type: object
+        InterestRate:
+          type: object
+        InterestApplicationRecord:
+          type: string
+        InterestTransaction:
+          type: string
+        TransactionDescription:
+          type: string
+        TransactionRateType:
+          type: string
+        TransactionInterestCharge:
+          type: string
+        InterestAccrualAmount:
+          type: number
+        InterestAccrualType:
+          type: string
+        InterestAccrualCharge:
           type: string
     Repayment:
       type: object
@@ -615,6 +633,15 @@ components:
         RepaymentTransactionCurrency:
           type: string
         RepaymentTransactionValueDate:
+          type: string
+    Restructuring:
+      type: object
+      properties:
+        RestructuringTask:
+          type: string
+        RestructuringEvaluation:
+          type: string
+        RestructuringWriteDown:
           type: string
     ServiceFees:
       type: object
@@ -648,33 +675,6 @@ components:
         AccrualFeeType:
           type: string
         AccrualFeeCharge:
-          type: string
-    Interest:
-      type: object
-      properties:
-        InterestRateType:
-          type: string
-        InterestRateApplicationSchedule:
-          type: object
-        InterestRateConfiguration:
-          type: object
-        InterestRate:
-          type: object
-        InterestApplicationRecord:
-          type: string
-        InterestTransaction:
-          type: string
-        TransactionDescription:
-          type: string
-        TransactionRateType:
-          type: string
-        TransactionInterestCharge:
-          type: string
-        InterestAccrualAmount:
-          type: number
-        InterestAccrualType:
-          type: string
-        InterestAccrualCharge:
           type: string
     HTTPError:
       type: object
@@ -1447,16 +1447,16 @@ components:
       explode: false
       schema:
         type: string
-    RestructuringID:
-      name: restructuringId
+    MaintenanceID:
+      name: maintenanceId
       in: path
       required: true
       style: simple
       explode: false
       schema:
         type: string
-    MaintenanceID:
-      name: maintenanceId
+    InterestID:
+      name: interestId
       in: path
       required: true
       style: simple
@@ -1471,16 +1471,16 @@ components:
       explode: false
       schema:
         type: string
-    ServiceFeesID:
-      name: servicefeesId
+    RestructuringID:
+      name: restructuringId
       in: path
       required: true
       style: simple
       explode: false
       schema:
         type: string
-    InterestID:
-      name: interestId
+    ServiceFeesID:
+      name: servicefeesId
       in: path
       required: true
       style: simple

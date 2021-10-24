@@ -463,6 +463,13 @@ components:
           type: string
         EmployeeCommissionAgreementAccountReference:
           type: object
+    CommissionAgreementOutcome:
+      type: object
+      properties:
+        CommissionAgreementAgreement:
+          type: string
+        CommissionAgreementWorkProduct:
+          type: string
     CommissionTerms:
       type: object
       properties:
@@ -482,13 +489,6 @@ components:
           type: string
         CommissionTermsServiceName:
           type: string
-    CommissionAgreementOutcome:
-      type: object
-      properties:
-        CommissionAgreementAgreement:
-          type: string
-        CommissionAgreementWorkProduct:
-          type: string
     HTTPError:
       type: object
       properties:
@@ -507,16 +507,16 @@ components:
       explode: false
       schema:
         type: string
-    CommissionTermsID:
-      name: commissiontermsId
+    CommissionAgreementOutcomeID:
+      name: commissionagreementoutcomeId
       in: path
       required: true
       style: simple
       explode: false
       schema:
         type: string
-    CommissionAgreementOutcomeID:
-      name: commissionagreementoutcomeId
+    CommissionTermsID:
+      name: commissiontermsId
       in: path
       required: true
       style: simple

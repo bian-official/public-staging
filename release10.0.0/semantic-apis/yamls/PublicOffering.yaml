@@ -1555,6 +1555,57 @@ components:
           type: string
         PublicOfferingFacilityReference:
           type: string
+    PublicPlacementRoadshowandMarketingFulfillment:
+      type: object
+      properties:
+        Preconditions:
+          type: object
+        Schedule:
+          type: object
+        BusinessService:
+          type: object
+        Postconditions:
+          type: object
+        PublicOfferingFacilityReference:
+          type: string
+        PublicPlacementRoadshowandMarketingFulfillmentReference:
+          type: object
+        PublicPlacementRoadshowandMarketingFulfillmentType:
+          type: string
+    PublicPlacementFinancialAssessmentandAuditFulfillment:
+      type: object
+      properties:
+        Preconditions:
+          type: object
+        Schedule:
+          type: object
+        BusinessService:
+          type: object
+        Postconditions:
+          type: object
+        PublicOfferingFacilityReference:
+          type: string
+        PublicPlacementFinancialAssessmentandAuditFulfillmentReference:
+          type: object
+        PublicPlacementFinancialAssessmentandAuditFulfillmentType:
+          type: string
+    PublicPlacementInstrumentRegistrationFulfillment:
+      type: object
+      properties:
+        Preconditions:
+          type: object
+        Schedule:
+          type: object
+        BusinessService:
+          type: object
+        Postconditions:
+          type: object
+        PublicOfferingFacilityReference:
+          type: string
+        PublicPlacementInstrumentRegistrationFulfillmentReference:
+          type: object
+        PublicPlacementInstrumentRegistrationFulfillmentType:
+          type: string
     PublicPlacementInstrumentSpecificationFulfillment:
       type: object
       properties:
@@ -1589,64 +1640,6 @@ components:
           type: object
         PublicPlacementIPOandUnderwritingFulfillmentType:
           type: string
-    PublicPlacementInstrumentRegistrationFulfillment:
-      type: object
-      properties:
-        Preconditions:
-          type: object
-        Schedule:
-          type: object
-        BusinessService:
-          type: object
-        Postconditions:
-          type: object
-        PublicOfferingFacilityReference:
-          type: string
-        PublicPlacementInstrumentRegistrationFulfillmentReference:
-          type: object
-        PublicPlacementInstrumentRegistrationFulfillmentType:
-          type: string
-    PublicPlacementFinancialAssessmentandAuditFulfillment:
-      type: object
-      properties:
-        Preconditions:
-          type: object
-        Schedule:
-          type: object
-        BusinessService:
-          type: object
-        Postconditions:
-          type: object
-        PublicOfferingFacilityReference:
-          type: string
-        PublicPlacementFinancialAssessmentandAuditFulfillmentReference:
-          type: object
-        PublicPlacementFinancialAssessmentandAuditFulfillmentType:
-          type: string
-    PublicOfferingOutcome:
-      type: object
-      properties:
-        PublicOfferingFinancialFacility:
-          type: string
-        PublicOfferingWorkProduct:
-          type: object
-    PublicPlacementRoadshowandMarketingFulfillment:
-      type: object
-      properties:
-        Preconditions:
-          type: object
-        Schedule:
-          type: object
-        BusinessService:
-          type: object
-        Postconditions:
-          type: object
-        PublicOfferingFacilityReference:
-          type: string
-        PublicPlacementRoadshowandMarketingFulfillmentReference:
-          type: object
-        PublicPlacementRoadshowandMarketingFulfillmentType:
-          type: string
     PublicPlacementProspectusFulfillment:
       type: object
       properties:
@@ -1664,6 +1657,13 @@ components:
           type: object
         PublicPlacementProspectusFulfillmentType:
           type: string
+    PublicOfferingOutcome:
+      type: object
+      properties:
+        PublicOfferingFinancialFacility:
+          type: string
+        PublicOfferingWorkProduct:
+          type: object
     HTTPError:
       type: object
       properties:
@@ -1676,6 +1676,30 @@ components:
   parameters:
     PublicOfferingID:
       name: publicofferingId
+      in: path
+      required: true
+      style: simple
+      explode: false
+      schema:
+        type: string
+    PublicPlacementRoadshowandMarketingFulfillmentID:
+      name: publicplacementroadshowandmarketingfulfillmentId
+      in: path
+      required: true
+      style: simple
+      explode: false
+      schema:
+        type: string
+    PublicPlacementFinancialAssessmentandAuditFulfillmentID:
+      name: publicplacementfinancialassessmentandauditfulfillmentId
+      in: path
+      required: true
+      style: simple
+      explode: false
+      schema:
+        type: string
+    PublicPlacementInstrumentRegistrationFulfillmentID:
+      name: publicplacementinstrumentregistrationfulfillmentId
       in: path
       required: true
       style: simple
@@ -1698,16 +1722,8 @@ components:
       explode: false
       schema:
         type: string
-    PublicPlacementInstrumentRegistrationFulfillmentID:
-      name: publicplacementinstrumentregistrationfulfillmentId
-      in: path
-      required: true
-      style: simple
-      explode: false
-      schema:
-        type: string
-    PublicPlacementFinancialAssessmentandAuditFulfillmentID:
-      name: publicplacementfinancialassessmentandauditfulfillmentId
+    PublicPlacementProspectusFulfillmentID:
+      name: publicplacementprospectusfulfillmentId
       in: path
       required: true
       style: simple
@@ -1716,22 +1732,6 @@ components:
         type: string
     PublicOfferingOutcomeID:
       name: publicofferingoutcomeId
-      in: path
-      required: true
-      style: simple
-      explode: false
-      schema:
-        type: string
-    PublicPlacementRoadshowandMarketingFulfillmentID:
-      name: publicplacementroadshowandmarketingfulfillmentId
-      in: path
-      required: true
-      style: simple
-      explode: false
-      schema:
-        type: string
-    PublicPlacementProspectusFulfillmentID:
-      name: publicplacementprospectusfulfillmentId
       in: path
       required: true
       style: simple

@@ -436,6 +436,11 @@ components:
           type: string
         CustomerContactRecordResult:
           type: string
+    Authentication:
+      type: object
+      properties:
+        AuthenticationTaskRecord:
+          type: string
     Session:
       type: object
       properties:
@@ -452,11 +457,6 @@ components:
       type: object
       properties:
         RoutingTaskRecord:
-          type: string
-    Authentication:
-      type: object
-      properties:
-        AuthenticationTaskRecord:
           type: string
     HTTPError:
       type: object
@@ -765,6 +765,14 @@ components:
       explode: false
       schema:
         type: string
+    AuthenticationID:
+      name: authenticationId
+      in: path
+      required: true
+      style: simple
+      explode: false
+      schema:
+        type: string
     SessionID:
       name: sessionId
       in: path
@@ -783,14 +791,6 @@ components:
         type: string
     RoutingID:
       name: routingId
-      in: path
-      required: true
-      style: simple
-      explode: false
-      schema:
-        type: string
-    AuthenticationID:
-      name: authenticationId
       in: path
       required: true
       style: simple

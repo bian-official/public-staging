@@ -434,6 +434,16 @@ components:
       properties:
         CardPOSTerminalOperatingSchedule:
           type: string
+    Authorization:
+      type: object
+      properties:
+        AuthorizationTransactionDate/Time:
+          type: string
+    Batch:
+      type: object
+      properties:
+        CardTransactionBatchReference:
+          type: object
     Capture:
       type: object
       properties:
@@ -471,16 +481,6 @@ components:
           type: string
         CardTransactionAuthorizationRecord:
           type: string
-    Authorization:
-      type: object
-      properties:
-        AuthorizationTransactionDate/Time:
-          type: string
-    Batch:
-      type: object
-      properties:
-        CardTransactionBatchReference:
-          type: object
     HTTPError:
       type: object
       properties:
@@ -1035,14 +1035,6 @@ components:
       explode: false
       schema:
         type: string
-    CaptureID:
-      name: captureId
-      in: path
-      required: true
-      style: simple
-      explode: false
-      schema:
-        type: string
     AuthorizationID:
       name: authorizationId
       in: path
@@ -1053,6 +1045,14 @@ components:
         type: string
     BatchID:
       name: batchId
+      in: path
+      required: true
+      style: simple
+      explode: false
+      schema:
+        type: string
+    CaptureID:
+      name: captureId
       in: path
       required: true
       style: simple

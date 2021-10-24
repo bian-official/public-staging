@@ -659,48 +659,6 @@ components:
           type: string
         AgreementServiceName:
           type: string
-    Fees:
-      type: object
-      properties:
-        FeesPreconditions:
-          type: string
-        FeesFeatureSchedule:
-          type: string
-        BusinessService:
-          type: object
-        FeesPostconditions:
-          type: string
-        FeesServiceType:
-          type: string
-        FeesServiceDescription:
-          type: string
-        FeesServiceInputsandOuputs:
-          type: string
-        FeesServiceWorkProduct:
-          type: string
-        FeesServiceName:
-          type: string
-    AssessmentandReporting:
-      type: object
-      properties:
-        AssessmentandReportingPreconditions:
-          type: string
-        AssessmentandReportingFeatureSchedule:
-          type: string
-        AnalysisandReporting:
-          type: object
-        AssessmentandReportingPostconditions:
-          type: string
-        AssessmentandReportingAnalysisandReportingServiceType:
-          type: string
-        AssessmentandReportingAnalysisandReportingServiceDescription:
-          type: string
-        AssessmentandReportingAnalysisandReportingServiceInputsandOuputs:
-          type: string
-        AssessmentandReportingAnalysisandReportingServiceWorkProduct:
-          type: string
-        AssessmentandReportingAnalysisandReportingServiceName:
-          type: string
     Fulfillment:
       type: object
       properties:
@@ -729,6 +687,48 @@ components:
           type: string
         FiduciaryAgreementWorkProduct:
           type: string
+    AssessmentandReporting:
+      type: object
+      properties:
+        AssessmentandReportingPreconditions:
+          type: string
+        AssessmentandReportingFeatureSchedule:
+          type: string
+        AnalysisandReporting:
+          type: object
+        AssessmentandReportingPostconditions:
+          type: string
+        AssessmentandReportingAnalysisandReportingServiceType:
+          type: string
+        AssessmentandReportingAnalysisandReportingServiceDescription:
+          type: string
+        AssessmentandReportingAnalysisandReportingServiceInputsandOuputs:
+          type: string
+        AssessmentandReportingAnalysisandReportingServiceWorkProduct:
+          type: string
+        AssessmentandReportingAnalysisandReportingServiceName:
+          type: string
+    Fees:
+      type: object
+      properties:
+        FeesPreconditions:
+          type: string
+        FeesFeatureSchedule:
+          type: string
+        BusinessService:
+          type: object
+        FeesPostconditions:
+          type: string
+        FeesServiceType:
+          type: string
+        FeesServiceDescription:
+          type: string
+        FeesServiceInputsandOuputs:
+          type: string
+        FeesServiceWorkProduct:
+          type: string
+        FeesServiceName:
+          type: string
     HTTPError:
       type: object
       properties:
@@ -755,8 +755,16 @@ components:
       explode: false
       schema:
         type: string
-    FeesID:
-      name: feesId
+    FulfillmentID:
+      name: fulfillmentId
+      in: path
+      required: true
+      style: simple
+      explode: false
+      schema:
+        type: string
+    FiduciaryAgreementOutcomeID:
+      name: fiduciaryagreementoutcomeId
       in: path
       required: true
       style: simple
@@ -771,16 +779,8 @@ components:
       explode: false
       schema:
         type: string
-    FulfillmentID:
-      name: fulfillmentId
-      in: path
-      required: true
-      style: simple
-      explode: false
-      schema:
-        type: string
-    FiduciaryAgreementOutcomeID:
-      name: fiduciaryagreementoutcomeId
+    FeesID:
+      name: feesId
       in: path
       required: true
       style: simple

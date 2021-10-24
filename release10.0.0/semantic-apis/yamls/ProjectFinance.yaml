@@ -1131,6 +1131,23 @@ components:
           type: string
         ProjectFinanceFacilityReference:
           type: string
+    ProjectFinancePlacementFulfillment:
+      type: object
+      properties:
+        Preconditions:
+          type: object
+        Schedule:
+          type: object
+        BusinessService:
+          type: object
+        Postconditions:
+          type: object
+        ProjectFinanceFacilityReference:
+          type: string
+        ProjectFinancePlacementFulfillmentReference:
+          type: object
+        ProjectFinancePlacementFulfillmentType:
+          type: string
     ProjectFinanceRepaymentFulfillment:
       type: object
       properties:
@@ -1164,7 +1181,7 @@ components:
           type: string
         RepaymentTransactionValueDate:
           type: string
-    ProjectFinancePlacementFulfillment:
+    ProjectFinanceSPVFulfillment:
       type: object
       properties:
         Preconditions:
@@ -1177,9 +1194,9 @@ components:
           type: object
         ProjectFinanceFacilityReference:
           type: string
-        ProjectFinancePlacementFulfillmentReference:
+        ProjectFinanceSPVFulfillmentReference:
           type: object
-        ProjectFinancePlacementFulfillmentType:
+        ProjectFinanceSPVFulfillmentType:
           type: string
     ProjectFinanceArrangementFulfillment:
       type: object
@@ -1197,23 +1214,6 @@ components:
         ProjectFinanceArrangementFulfillmentReference:
           type: object
         ProjectFinanceArrangementFulfillmentType:
-          type: string
-    ProjectFinanceSPVFulfillment:
-      type: object
-      properties:
-        Preconditions:
-          type: object
-        Schedule:
-          type: object
-        BusinessService:
-          type: object
-        Postconditions:
-          type: object
-        ProjectFinanceFacilityReference:
-          type: string
-        ProjectFinanceSPVFulfillmentReference:
-          type: object
-        ProjectFinanceSPVFulfillmentType:
           type: string
     ProjectFinanceOutcome:
       type: object
@@ -1240,14 +1240,6 @@ components:
       explode: false
       schema:
         type: string
-    ProjectFinanceRepaymentFulfillmentID:
-      name: projectfinancerepaymentfulfillmentId
-      in: path
-      required: true
-      style: simple
-      explode: false
-      schema:
-        type: string
     ProjectFinancePlacementFulfillmentID:
       name: projectfinanceplacementfulfillmentId
       in: path
@@ -1256,8 +1248,8 @@ components:
       explode: false
       schema:
         type: string
-    ProjectFinanceArrangementFulfillmentID:
-      name: projectfinancearrangementfulfillmentId
+    ProjectFinanceRepaymentFulfillmentID:
+      name: projectfinancerepaymentfulfillmentId
       in: path
       required: true
       style: simple
@@ -1266,6 +1258,14 @@ components:
         type: string
     ProjectFinanceSPVFulfillmentID:
       name: projectfinancespvfulfillmentId
+      in: path
+      required: true
+      style: simple
+      explode: false
+      schema:
+        type: string
+    ProjectFinanceArrangementFulfillmentID:
+      name: projectfinancearrangementfulfillmentId
       in: path
       required: true
       style: simple

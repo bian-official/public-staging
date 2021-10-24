@@ -842,28 +842,18 @@ components:
           type: string
         BranchLocationManagementPlanDescription:
           type: string
-    ProductandServicePlanning:
+    BranchLocationManagementOutcome:
       type: object
       properties:
-        ProductandServicePlanningPreconditions:
+        BranchLocationManagementPerformanceAnalysis:
           type: string
-        ProductandServicePlanningBusinessUnit/EmployeeReference:
-          type: object
-        ProductandServicePlanningWorkSchedule:
+        BranchLocationManagementActivityAnalysis:
           type: string
-        ProductandServicePlanning:
-          type: object
-        ProductandServicePlanningPostconditions:
+        BranchLocationManagementCharter:
           type: string
-        ProductandServicePlanningProductandServicePlanningServiceType:
+        BranchLocationManagementTask:
           type: string
-        ProductandServicePlanningProductandServicePlanningServiceDescription:
-          type: string
-        ProductandServicePlanningProductandServicePlanningServiceInputsandOuputs:
-          type: string
-        ProductandServicePlanningProductandServicePlanningServiceWorkProduct:
-          type: string
-        ProductandServicePlanningProductandServicePlanningServiceName:
+        BranchLocationManagementProject:
           type: string
     StaffandLocationPlanning:
       type: object
@@ -911,18 +901,28 @@ components:
           type: string
         CustomerLiaisonCustomerLiaisonServiceName:
           type: string
-    BranchLocationManagementOutcome:
+    ProductandServicePlanning:
       type: object
       properties:
-        BranchLocationManagementPerformanceAnalysis:
+        ProductandServicePlanningPreconditions:
           type: string
-        BranchLocationManagementActivityAnalysis:
+        ProductandServicePlanningBusinessUnit/EmployeeReference:
+          type: object
+        ProductandServicePlanningWorkSchedule:
           type: string
-        BranchLocationManagementCharter:
+        ProductandServicePlanning:
+          type: object
+        ProductandServicePlanningPostconditions:
           type: string
-        BranchLocationManagementTask:
+        ProductandServicePlanningProductandServicePlanningServiceType:
           type: string
-        BranchLocationManagementProject:
+        ProductandServicePlanningProductandServicePlanningServiceDescription:
+          type: string
+        ProductandServicePlanningProductandServicePlanningServiceInputsandOuputs:
+          type: string
+        ProductandServicePlanningProductandServicePlanningServiceWorkProduct:
+          type: string
+        ProductandServicePlanningProductandServicePlanningServiceName:
           type: string
     Troubleshooting:
       type: object
@@ -965,8 +965,8 @@ components:
       explode: false
       schema:
         type: string
-    ProductandServicePlanningID:
-      name: productandserviceplanningId
+    BranchLocationManagementOutcomeID:
+      name: branchlocationmanagementoutcomeId
       in: path
       required: true
       style: simple
@@ -989,8 +989,8 @@ components:
       explode: false
       schema:
         type: string
-    BranchLocationManagementOutcomeID:
-      name: branchlocationmanagementoutcomeId
+    ProductandServicePlanningID:
+      name: productandserviceplanningId
       in: path
       required: true
       style: simple

@@ -841,27 +841,6 @@ components:
           type: string
         SafeKeepingSecuritiesSafeKeepingServiceName:
           type: string
-    Settlement:
-      type: object
-      properties:
-        SettlementPreconditions:
-          type: string
-        SettlementFeatureSchedule:
-          type: string
-        BusinessService:
-          type: object
-        SettlementPostconditions:
-          type: string
-        SettlementServiceType:
-          type: string
-        SettlementServiceDescription:
-          type: string
-        SettlementServiceInputsandOuputs:
-          type: string
-        SettlementServiceWorkProduct:
-          type: string
-        SettlementServiceName:
-          type: string
     DividendsandInterest:
       type: object
       properties:
@@ -882,6 +861,13 @@ components:
         DividendsandInterestCustodyDividendsandInterestServiceWorkProduct:
           type: string
         DividendsandInterestCustodyDividendsandInterestServiceName:
+          type: string
+    CustodyAdministrationOutcome:
+      type: object
+      properties:
+        CustodyAdministrationFinancialFacility:
+          type: string
+        CustodyAdministrationWorkProduct:
           type: string
     SecuritiesReporting:
       type: object
@@ -904,6 +890,27 @@ components:
           type: string
         SecuritiesReportingCustodySecuritiesReportingServiceName:
           type: string
+    Settlement:
+      type: object
+      properties:
+        SettlementPreconditions:
+          type: string
+        SettlementFeatureSchedule:
+          type: string
+        BusinessService:
+          type: object
+        SettlementPostconditions:
+          type: string
+        SettlementServiceType:
+          type: string
+        SettlementServiceDescription:
+          type: string
+        SettlementServiceInputsandOuputs:
+          type: string
+        SettlementServiceWorkProduct:
+          type: string
+        SettlementServiceName:
+          type: string
     Fees:
       type: object
       properties:
@@ -924,13 +931,6 @@ components:
         FeesServiceWorkProduct:
           type: string
         FeesServiceName:
-          type: string
-    CustodyAdministrationOutcome:
-      type: object
-      properties:
-        CustodyAdministrationFinancialFacility:
-          type: string
-        CustodyAdministrationWorkProduct:
           type: string
     HTTPError:
       type: object
@@ -958,16 +958,16 @@ components:
       explode: false
       schema:
         type: string
-    SettlementID:
-      name: settlementId
+    DividendsandInterestID:
+      name: dividendsandinterestId
       in: path
       required: true
       style: simple
       explode: false
       schema:
         type: string
-    DividendsandInterestID:
-      name: dividendsandinterestId
+    CustodyAdministrationOutcomeID:
+      name: custodyadministrationoutcomeId
       in: path
       required: true
       style: simple
@@ -982,16 +982,16 @@ components:
       explode: false
       schema:
         type: string
-    FeesID:
-      name: feesId
+    SettlementID:
+      name: settlementId
       in: path
       required: true
       style: simple
       explode: false
       schema:
         type: string
-    CustodyAdministrationOutcomeID:
-      name: custodyadministrationoutcomeId
+    FeesID:
+      name: feesId
       in: path
       required: true
       style: simple

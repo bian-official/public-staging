@@ -903,21 +903,6 @@ components:
           type: string
         OperationalGatewayOperatingSessionReference:
           type: string
-    OutboundWithResponseFunction:
-      type: object
-      properties:
-        Preconditions:
-          type: object
-        Schedule:
-          type: object
-        BusinessService:
-          type: object
-        OperationalGatewayOperatingSessionReference:
-          type: string
-        OutboundWithResponseFunctionReference:
-          type: string
-        OutboundWithResponseFunctionType:
-          type: string
     InboundMessageFunction:
       type: object
       properties:
@@ -932,6 +917,21 @@ components:
         InboundMessageFunctionReference:
           type: string
         InboundMessageFunctionType:
+          type: string
+    OutboundWithResponseFunction:
+      type: object
+      properties:
+        Preconditions:
+          type: object
+        Schedule:
+          type: object
+        BusinessService:
+          type: object
+        OperationalGatewayOperatingSessionReference:
+          type: string
+        OutboundWithResponseFunctionReference:
+          type: string
+        OutboundWithResponseFunctionType:
           type: string
     OutboundMessageFunction:
       type: object
@@ -973,16 +973,16 @@ components:
       explode: false
       schema:
         type: string
-    OutboundWithResponseFunctionID:
-      name: outboundwithresponsefunctionId
+    InboundMessageFunctionID:
+      name: inboundmessagefunctionId
       in: path
       required: true
       style: simple
       explode: false
       schema:
         type: string
-    InboundMessageFunctionID:
-      name: inboundmessagefunctionId
+    OutboundWithResponseFunctionID:
+      name: outboundwithresponsefunctionId
       in: path
       required: true
       style: simple

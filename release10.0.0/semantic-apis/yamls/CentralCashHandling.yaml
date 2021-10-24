@@ -589,25 +589,6 @@ components:
           type: object
         CentralCashAllocationInstance:
           type: string
-    ProjectionandAllocation:
-      type: object
-      properties:
-        ProjectionandAllocationPreconditions:
-          type: string
-        ProjectionandAllocationAllocationSchedule:
-          type: string
-        CashInventoryProjection:
-          type: object
-        CashInventoryProjectionServiceType:
-          type: string
-        CashInventoryProjectionServiceDescription:
-          type: string
-        CashInventoryProjectionServiceInputsandOuputs:
-          type: string
-        CashInventoryProjectionServiceWorkProduct:
-          type: string
-        CashInventoryProjectionServiceName:
-          type: string
     TrackingandAllocation:
       type: object
       properties:
@@ -634,6 +615,25 @@ components:
           type: string
         CentralCashHandlingWorkProduct:
           type: string
+    ProjectionandAllocation:
+      type: object
+      properties:
+        ProjectionandAllocationPreconditions:
+          type: string
+        ProjectionandAllocationAllocationSchedule:
+          type: string
+        CashInventoryProjection:
+          type: object
+        CashInventoryProjectionServiceType:
+          type: string
+        CashInventoryProjectionServiceDescription:
+          type: string
+        CashInventoryProjectionServiceInputsandOuputs:
+          type: string
+        CashInventoryProjectionServiceWorkProduct:
+          type: string
+        CashInventoryProjectionServiceName:
+          type: string
     HTTPError:
       type: object
       properties:
@@ -652,14 +652,6 @@ components:
       explode: false
       schema:
         type: string
-    ProjectionandAllocationID:
-      name: projectionandallocationId
-      in: path
-      required: true
-      style: simple
-      explode: false
-      schema:
-        type: string
     TrackingandAllocationID:
       name: trackingandallocationId
       in: path
@@ -670,6 +662,14 @@ components:
         type: string
     CentralCashHandlingOutcomeID:
       name: centralcashhandlingoutcomeId
+      in: path
+      required: true
+      style: simple
+      explode: false
+      schema:
+        type: string
+    ProjectionandAllocationID:
+      name: projectionandallocationId
       in: path
       required: true
       style: simple

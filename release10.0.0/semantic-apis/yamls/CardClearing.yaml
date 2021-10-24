@@ -380,16 +380,6 @@ components:
           type: string
         CardClearingServiceSchedule:
           type: string
-    Reconciliation:
-      type: object
-      properties:
-        ReconciliationTaskResult:
-          type: string
-    Addressing:
-      type: object
-      properties:
-        AddressingTaskResult:
-          type: string
     Routing:
       type: object
       properties:
@@ -400,12 +390,17 @@ components:
       properties:
         MatchingTaskResult:
           type: string
-    FXConversion:
+    Fees:
       type: object
       properties:
-        FXConversionRatesandFees:
-          type: object
-        FXConversionTaskResult:
+        InterchargeFees:
+          type: string
+        FeeTaskResult:
+          type: string
+    Reconciliation:
+      type: object
+      properties:
+        ReconciliationTaskResult:
           type: string
     Capture:
       type: object
@@ -442,12 +437,17 @@ components:
           type: string
         CardTransactionAuthorizationRecord:
           type: string
-    Fees:
+    Addressing:
       type: object
       properties:
-        InterchargeFees:
+        AddressingTaskResult:
           type: string
-        FeeTaskResult:
+    FXConversion:
+      type: object
+      properties:
+        FXConversionRatesandFees:
+          type: object
+        FXConversionTaskResult:
           type: string
     HTTPError:
       type: object
@@ -782,22 +782,6 @@ components:
       explode: false
       schema:
         type: string
-    ReconciliationID:
-      name: reconciliationId
-      in: path
-      required: true
-      style: simple
-      explode: false
-      schema:
-        type: string
-    AddressingID:
-      name: addressingId
-      in: path
-      required: true
-      style: simple
-      explode: false
-      schema:
-        type: string
     RoutingID:
       name: routingId
       in: path
@@ -814,8 +798,16 @@ components:
       explode: false
       schema:
         type: string
-    FXConversionID:
-      name: fxconversionId
+    FeesID:
+      name: feesId
+      in: path
+      required: true
+      style: simple
+      explode: false
+      schema:
+        type: string
+    ReconciliationID:
+      name: reconciliationId
       in: path
       required: true
       style: simple
@@ -830,8 +822,16 @@ components:
       explode: false
       schema:
         type: string
-    FeesID:
-      name: feesId
+    AddressingID:
+      name: addressingId
+      in: path
+      required: true
+      style: simple
+      explode: false
+      schema:
+        type: string
+    FXConversionID:
+      name: fxconversionId
       in: path
       required: true
       style: simple

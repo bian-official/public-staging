@@ -687,31 +687,6 @@ components:
           type: string
         AssetSecuritizationTransactionTransaction:
           type: string
-    AssetSecuritizationOutcome:
-      type: object
-      properties:
-        AssetSecuritizationCalendar:
-          type: string
-        AssetSecuritizationCounterparty:
-          type: string
-        AssetSecuritizationDividend:
-          type: string
-        AssetSecuritizationFees:
-          type: string
-        AssetSecuritizationInterest:
-          type: string
-        AssetSecuritizationMargining:
-          type: string
-        AssetSecuritizationNotionalPrincipal:
-          type: string
-        AssetSecuritizationOptions:
-          type: string
-        AssetSecuritizationRates:
-          type: object
-        AssetSecuritizationSettlement:
-          type: string
-        AssetSecuritizationWorkProduct:
-          type: string
     Placement:
       type: object
       properties:
@@ -754,6 +729,31 @@ components:
           type: string
         SelectionAssetSelectionServiceName:
           type: string
+    AssetSecuritizationOutcome:
+      type: object
+      properties:
+        AssetSecuritizationCalendar:
+          type: string
+        AssetSecuritizationCounterparty:
+          type: string
+        AssetSecuritizationDividend:
+          type: string
+        AssetSecuritizationFees:
+          type: string
+        AssetSecuritizationInterest:
+          type: string
+        AssetSecuritizationMargining:
+          type: string
+        AssetSecuritizationNotionalPrincipal:
+          type: string
+        AssetSecuritizationOptions:
+          type: string
+        AssetSecuritizationRates:
+          type: object
+        AssetSecuritizationSettlement:
+          type: string
+        AssetSecuritizationWorkProduct:
+          type: string
     Securitization:
       type: object
       properties:
@@ -793,14 +793,6 @@ components:
       explode: false
       schema:
         type: string
-    AssetSecuritizationOutcomeID:
-      name: assetsecuritizationoutcomeId
-      in: path
-      required: true
-      style: simple
-      explode: false
-      schema:
-        type: string
     PlacementID:
       name: placementId
       in: path
@@ -811,6 +803,14 @@ components:
         type: string
     SelectionID:
       name: selectionId
+      in: path
+      required: true
+      style: simple
+      explode: false
+      schema:
+        type: string
+    AssetSecuritizationOutcomeID:
+      name: assetsecuritizationoutcomeId
       in: path
       required: true
       style: simple

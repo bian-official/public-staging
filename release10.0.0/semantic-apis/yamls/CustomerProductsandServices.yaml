@@ -595,23 +595,6 @@ components:
           type: string
         CustomerProductsAndServicesDirectoryEntryReference:
           type: string
-    In-forceProductproperty:
-      type: object
-      properties:
-        Preconditions:
-          type: object
-        Schedule:
-          type: object
-        VersionNumber:
-          type: string
-        BusinessService:
-          type: object
-        CustomerProductsAndServicesDirectoryEntryReference:
-          type: string
-        In-forceProductpropertyReference:
-          type: object
-        In-forceProductpropertyType:
-          type: string
     In-forceServiceproperty:
       type: object
       properties:
@@ -628,6 +611,23 @@ components:
         In-forceServicepropertyReference:
           type: object
         In-forceServicepropertyType:
+          type: string
+    In-forceProductproperty:
+      type: object
+      properties:
+        Preconditions:
+          type: object
+        Schedule:
+          type: object
+        VersionNumber:
+          type: string
+        BusinessService:
+          type: object
+        CustomerProductsAndServicesDirectoryEntryReference:
+          type: string
+        In-forceProductpropertyReference:
+          type: object
+        In-forceProductpropertyType:
           type: string
     CustomerProductsandServicesOutcome:
       type: object
@@ -654,16 +654,16 @@ components:
       explode: false
       schema:
         type: string
-    In-forceProductpropertyID:
-      name: in-forceproductpropertyId
+    In-forceServicepropertyID:
+      name: in-forceservicepropertyId
       in: path
       required: true
       style: simple
       explode: false
       schema:
         type: string
-    In-forceServicepropertyID:
-      name: in-forceservicepropertyId
+    In-forceProductpropertyID:
+      name: in-forceproductpropertyId
       in: path
       required: true
       style: simple

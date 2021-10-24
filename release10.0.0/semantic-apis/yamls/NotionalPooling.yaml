@@ -919,7 +919,7 @@ components:
           type: string
         NotionalPoolingFacilityReference:
           type: string
-    NotionalAccountArrangementFulfillment:
+    NotionalAccountInterestAllocationFulfillment:
       type: object
       properties:
         Preconditions:
@@ -932,9 +932,9 @@ components:
           type: object
         NotionalPoolingFacilityReference:
           type: string
-        NotionalAccountArrangementFulfillmentReference:
+        NotionalAccountInterestAllocationFulfillmentReference:
           type: object
-        NotionalAccountArrangementFulfillmentType:
+        NotionalAccountInterestAllocationFulfillmentType:
           type: string
     NotionalAccountConsolidatedPositionFulfillment:
       type: object
@@ -953,7 +953,7 @@ components:
           type: object
         NotionalAccountConsolidatedPositionFulfillmentType:
           type: string
-    NotionalAccountInterestAllocationFulfillment:
+    NotionalAccountArrangementFulfillment:
       type: object
       properties:
         Preconditions:
@@ -966,9 +966,9 @@ components:
           type: object
         NotionalPoolingFacilityReference:
           type: string
-        NotionalAccountInterestAllocationFulfillmentReference:
+        NotionalAccountArrangementFulfillmentReference:
           type: object
-        NotionalAccountInterestAllocationFulfillmentType:
+        NotionalAccountArrangementFulfillmentType:
           type: string
     NotionalPoolingOutcome:
       type: object
@@ -995,8 +995,8 @@ components:
       explode: false
       schema:
         type: string
-    NotionalAccountArrangementFulfillmentID:
-      name: notionalaccountarrangementfulfillmentId
+    NotionalAccountInterestAllocationFulfillmentID:
+      name: notionalaccountinterestallocationfulfillmentId
       in: path
       required: true
       style: simple
@@ -1011,8 +1011,8 @@ components:
       explode: false
       schema:
         type: string
-    NotionalAccountInterestAllocationFulfillmentID:
-      name: notionalaccountinterestallocationfulfillmentId
+    NotionalAccountArrangementFulfillmentID:
+      name: notionalaccountarrangementfulfillmentId
       in: path
       required: true
       style: simple

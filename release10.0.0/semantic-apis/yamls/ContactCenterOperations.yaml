@@ -510,26 +510,6 @@ components:
           type: string
         CustomerServicingRepresentativeAssignmentRecord:
           type: string
-    Troubleshooting:
-      type: object
-      properties:
-        ContactCenterProductionIssueRecord:
-          type: string
-        ContactCenterIssueAnalysisAndRecommendedResponse:
-          type: string
-    PeakLoad:
-      type: object
-      properties:
-        ContactCenterServiceStatistics:
-          type: string
-        ContactCenterServiceStatisticType:
-          type: string
-        PeakLoadResponseTask:
-          type: string
-        PeakLoadResponseTaskType:
-          type: string
-        PeakLoadResponseDescription:
-          type: string
     Assignment:
       type: object
       properties:
@@ -543,6 +523,26 @@ components:
           type: string
         CustomerContactSessionProcedureInstanceReference:
           type: object
+    PeakLoad:
+      type: object
+      properties:
+        ContactCenterServiceStatistics:
+          type: string
+        ContactCenterServiceStatisticType:
+          type: string
+        PeakLoadResponseTask:
+          type: string
+        PeakLoadResponseTaskType:
+          type: string
+        PeakLoadResponseDescription:
+          type: string
+    Troubleshooting:
+      type: object
+      properties:
+        ContactCenterProductionIssueRecord:
+          type: string
+        ContactCenterIssueAnalysisAndRecommendedResponse:
+          type: string
     HTTPError:
       type: object
       properties:
@@ -561,8 +561,8 @@ components:
       explode: false
       schema:
         type: string
-    TroubleshootingID:
-      name: troubleshootingId
+    AssignmentID:
+      name: assignmentId
       in: path
       required: true
       style: simple
@@ -577,8 +577,8 @@ components:
       explode: false
       schema:
         type: string
-    AssignmentID:
-      name: assignmentId
+    TroubleshootingID:
+      name: troubleshootingId
       in: path
       required: true
       style: simple

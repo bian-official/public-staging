@@ -548,13 +548,6 @@ components:
           type: string
         AdvertisingCampaignProcedureResult:
           type: string
-    CampaignDirection:
-      type: object
-      properties:
-        AdvertisingCampaignDevelopmentSchedule:
-          type: string
-        AdvertisingCampaignExecutionSchedule:
-          type: string
     MarketTracking:
       type: object
       properties:
@@ -583,6 +576,13 @@ components:
           type: string
         PerformanceAssessmentWorkTaskDate-Time:
           type: string
+    CampaignDirection:
+      type: object
+      properties:
+        AdvertisingCampaignDevelopmentSchedule:
+          type: string
+        AdvertisingCampaignExecutionSchedule:
+          type: string
     HTTPError:
       type: object
       properties:
@@ -601,14 +601,6 @@ components:
       explode: false
       schema:
         type: string
-    CampaignDirectionID:
-      name: campaigndirectionId
-      in: path
-      required: true
-      style: simple
-      explode: false
-      schema:
-        type: string
     MarketTrackingID:
       name: markettrackingId
       in: path
@@ -619,6 +611,14 @@ components:
         type: string
     PerformanceAssessmentID:
       name: performanceassessmentId
+      in: path
+      required: true
+      style: simple
+      explode: false
+      schema:
+        type: string
+    CampaignDirectionID:
+      name: campaigndirectionId
       in: path
       required: true
       style: simple

@@ -563,27 +563,6 @@ components:
           type: string
         CurrencyExchangeTransactionTransaction:
           type: string
-    FXTransactionPricing:
-      type: object
-      properties:
-        FXTransactionPricingPreconditions:
-          type: string
-        FXTransactionPricingTaskSchedule:
-          type: string
-        OTCFXTransactionPricing:
-          type: object
-        FXTransactionPricingPostconditions:
-          type: string
-        FXTransactionPricingOTCFXTransactionPricingServiceType:
-          type: string
-        FXTransactionPricingOTCFXTransactionPricingServiceDescription:
-          type: string
-        FXTransactionPricingOTCFXTransactionPricingServiceInputsandOuputs:
-          type: string
-        FXTransactionPricingOTCFXTransactionPricingServiceWorkProduct:
-          type: string
-        FXTransactionPricingOTCFXTransactionPricingServiceName:
-          type: string
     DocumentHandling:
       type: object
       properties:
@@ -625,6 +604,27 @@ components:
         FXTransactionCaptureFXTransactionCaptureServiceWorkProduct:
           type: string
         FXTransactionCaptureFXTransactionCaptureServiceName:
+          type: string
+    FXTransactionPricing:
+      type: object
+      properties:
+        FXTransactionPricingPreconditions:
+          type: string
+        FXTransactionPricingTaskSchedule:
+          type: string
+        OTCFXTransactionPricing:
+          type: object
+        FXTransactionPricingPostconditions:
+          type: string
+        FXTransactionPricingOTCFXTransactionPricingServiceType:
+          type: string
+        FXTransactionPricingOTCFXTransactionPricingServiceDescription:
+          type: string
+        FXTransactionPricingOTCFXTransactionPricingServiceInputsandOuputs:
+          type: string
+        FXTransactionPricingOTCFXTransactionPricingServiceWorkProduct:
+          type: string
+        FXTransactionPricingOTCFXTransactionPricingServiceName:
           type: string
     CurrencyExchangeOutcome:
       type: object
@@ -669,14 +669,6 @@ components:
       explode: false
       schema:
         type: string
-    FXTransactionPricingID:
-      name: fxtransactionpricingId
-      in: path
-      required: true
-      style: simple
-      explode: false
-      schema:
-        type: string
     DocumentHandlingID:
       name: documenthandlingId
       in: path
@@ -687,6 +679,14 @@ components:
         type: string
     FXTransactionCaptureID:
       name: fxtransactioncaptureId
+      in: path
+      required: true
+      style: simple
+      explode: false
+      schema:
+        type: string
+    FXTransactionPricingID:
+      name: fxtransactionpricingId
       in: path
       required: true
       style: simple

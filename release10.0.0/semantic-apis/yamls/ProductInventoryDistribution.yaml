@@ -743,6 +743,63 @@ components:
           type: string
         ProductInventoryDistributionAdministrativePlanReference:
           type: object
+    Oversight:
+      type: object
+      properties:
+        OversightPreconditions:
+          type: string
+        OversightBusinessUnit/EmployeeReference:
+          type: object
+        OversightWorkSchedule:
+          type: string
+        AdministrativeOversight:
+          type: object
+        OversightPostconditions:
+          type: string
+        OversightAdministrativeOversightServiceType:
+          type: string
+        OversightAdministrativeOversightServiceDescription:
+          type: string
+        OversightAdministrativeOversightServiceInputsandOuputs:
+          type: string
+        OversightAdministrativeOversightServiceWorkProduct:
+          type: string
+        OversightAdministrativeOversightServiceName:
+          type: string
+    Provisioning:
+      type: object
+      properties:
+        ProvisioningPreconditions:
+          type: string
+        ProvisioningBusinessUnit/EmployeeReference:
+          type: object
+        ProvisioningWorkSchedule:
+          type: string
+        BusinessService:
+          type: object
+        ProvisioningPostconditions:
+          type: string
+        ProvisioningServiceType:
+          type: string
+        ProvisioningServiceDescription:
+          type: string
+        ProvisioningServiceInputsandOuputs:
+          type: string
+        ProvisioningServiceWorkProduct:
+          type: string
+        ProvisioningServiceName:
+          type: string
+    ProductInventoryDistributionOutcome:
+      type: object
+      properties:
+        ProductInventoryDistributionPerformanceAnalysis:
+          type: string
+        ProductInventoryDistributionActivityAnalysis:
+          type: string
+        ProductInventoryDistributionAdministrativePlan:
+          type: string
+        ProductInventoryDistributionAdministrationTask:
+          type: string
     Mailing:
       type: object
       properties:
@@ -789,63 +846,6 @@ components:
           type: string
         DistributionServiceName:
           type: string
-    Provisioning:
-      type: object
-      properties:
-        ProvisioningPreconditions:
-          type: string
-        ProvisioningBusinessUnit/EmployeeReference:
-          type: object
-        ProvisioningWorkSchedule:
-          type: string
-        BusinessService:
-          type: object
-        ProvisioningPostconditions:
-          type: string
-        ProvisioningServiceType:
-          type: string
-        ProvisioningServiceDescription:
-          type: string
-        ProvisioningServiceInputsandOuputs:
-          type: string
-        ProvisioningServiceWorkProduct:
-          type: string
-        ProvisioningServiceName:
-          type: string
-    Oversight:
-      type: object
-      properties:
-        OversightPreconditions:
-          type: string
-        OversightBusinessUnit/EmployeeReference:
-          type: object
-        OversightWorkSchedule:
-          type: string
-        AdministrativeOversight:
-          type: object
-        OversightPostconditions:
-          type: string
-        OversightAdministrativeOversightServiceType:
-          type: string
-        OversightAdministrativeOversightServiceDescription:
-          type: string
-        OversightAdministrativeOversightServiceInputsandOuputs:
-          type: string
-        OversightAdministrativeOversightServiceWorkProduct:
-          type: string
-        OversightAdministrativeOversightServiceName:
-          type: string
-    ProductInventoryDistributionOutcome:
-      type: object
-      properties:
-        ProductInventoryDistributionPerformanceAnalysis:
-          type: string
-        ProductInventoryDistributionActivityAnalysis:
-          type: string
-        ProductInventoryDistributionAdministrativePlan:
-          type: string
-        ProductInventoryDistributionAdministrationTask:
-          type: string
     HTTPError:
       type: object
       properties:
@@ -864,16 +864,8 @@ components:
       explode: false
       schema:
         type: string
-    MailingID:
-      name: mailingId
-      in: path
-      required: true
-      style: simple
-      explode: false
-      schema:
-        type: string
-    DistributionID:
-      name: distributionId
+    OversightID:
+      name: oversightId
       in: path
       required: true
       style: simple
@@ -888,16 +880,24 @@ components:
       explode: false
       schema:
         type: string
-    OversightID:
-      name: oversightId
+    ProductInventoryDistributionOutcomeID:
+      name: productinventorydistributionoutcomeId
       in: path
       required: true
       style: simple
       explode: false
       schema:
         type: string
-    ProductInventoryDistributionOutcomeID:
-      name: productinventorydistributionoutcomeId
+    MailingID:
+      name: mailingId
+      in: path
+      required: true
+      style: simple
+      explode: false
+      schema:
+        type: string
+    DistributionID:
+      name: distributionId
       in: path
       required: true
       style: simple

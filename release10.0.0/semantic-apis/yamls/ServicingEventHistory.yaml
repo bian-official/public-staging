@@ -472,6 +472,13 @@ components:
           type: object
         EmployeeOrBusinessUnitReference:
           type: object
+    ServicingFacility:
+      type: object
+      properties:
+        ServicingFacilityType:
+          type: string
+        ServicingFacilityInstanceReference:
+          type: object
     Issue:
       type: object
       properties:
@@ -498,13 +505,6 @@ components:
           type: string
         ServicingPositionActivityStatistics:
           type: string
-    ServicingFacility:
-      type: object
-      properties:
-        ServicingFacilityType:
-          type: string
-        ServicingFacilityInstanceReference:
-          type: object
     Session:
       type: object
       properties:
@@ -586,6 +586,14 @@ components:
       explode: false
       schema:
         type: string
+    ServicingFacilityID:
+      name: servicingfacilityId
+      in: path
+      required: true
+      style: simple
+      explode: false
+      schema:
+        type: string
     IssueID:
       name: issueId
       in: path
@@ -596,14 +604,6 @@ components:
         type: string
     AssignmentID:
       name: assignmentId
-      in: path
-      required: true
-      style: simple
-      explode: false
-      schema:
-        type: string
-    ServicingFacilityID:
-      name: servicingfacilityId
       in: path
       required: true
       style: simple

@@ -1165,23 +1165,6 @@ components:
           type: object
         TrustAssetMaintenanceandManagementFulfillmentType:
           type: string
-    TrustEstate,InheritanceandIncomeTaxFulfillment:
-      type: object
-      properties:
-        Preconditions:
-          type: object
-        Schedule:
-          type: object
-        BusinessService:
-          type: object
-        Postconditions:
-          type: object
-        CorporateTrustServicesFacilityReference:
-          type: string
-        TrustEstate,InheritanceandIncomeTaxFulfillmentReference:
-          type: object
-        TrustEstate,InheritanceandIncomeTaxFulfillmentType:
-          type: string
     TrustCourtAdministrationFulfillment:
       type: object
       properties:
@@ -1198,6 +1181,23 @@ components:
         TrustCourtAdministrationFulfillmentReference:
           type: object
         TrustCourtAdministrationFulfillmentType:
+          type: string
+    TrustEstate,InheritanceandIncomeTaxFulfillment:
+      type: object
+      properties:
+        Preconditions:
+          type: object
+        Schedule:
+          type: object
+        BusinessService:
+          type: object
+        Postconditions:
+          type: object
+        CorporateTrustServicesFacilityReference:
+          type: string
+        TrustEstate,InheritanceandIncomeTaxFulfillmentReference:
+          type: object
+        TrustEstate,InheritanceandIncomeTaxFulfillmentType:
           type: string
     TrustServicesOutcome:
       type: object
@@ -1240,16 +1240,16 @@ components:
       explode: false
       schema:
         type: string
-    TrustEstate,InheritanceandIncomeTaxFulfillmentID:
-      name: trustestate,inheritanceandincometaxfulfillmentId
+    TrustCourtAdministrationFulfillmentID:
+      name: trustcourtadministrationfulfillmentId
       in: path
       required: true
       style: simple
       explode: false
       schema:
         type: string
-    TrustCourtAdministrationFulfillmentID:
-      name: trustcourtadministrationfulfillmentId
+    TrustEstate,InheritanceandIncomeTaxFulfillmentID:
+      name: trustestate,inheritanceandincometaxfulfillmentId
       in: path
       required: true
       style: simple

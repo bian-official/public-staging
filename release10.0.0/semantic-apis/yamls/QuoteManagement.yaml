@@ -732,13 +732,6 @@ components:
           type: string
         MarketQuoteSelectionWorkstepType:
           type: string
-    QuoteManagementOutcome:
-      type: object
-      properties:
-        QuoteManagementWorkProduct:
-          type: object
-        QuoteManagementProcedure:
-          type: string
     MarketQuoteRequestWorkstep:
       type: object
       properties:
@@ -757,6 +750,13 @@ components:
         MarketQuoteRequestWorkstepReference:
           type: string
         MarketQuoteRequestWorkstepType:
+          type: string
+    QuoteManagementOutcome:
+      type: object
+      properties:
+        QuoteManagementWorkProduct:
+          type: object
+        QuoteManagementProcedure:
           type: string
     HTTPError:
       type: object
@@ -784,16 +784,16 @@ components:
       explode: false
       schema:
         type: string
-    QuoteManagementOutcomeID:
-      name: quotemanagementoutcomeId
+    MarketQuoteRequestWorkstepID:
+      name: marketquoterequestworkstepId
       in: path
       required: true
       style: simple
       explode: false
       schema:
         type: string
-    MarketQuoteRequestWorkstepID:
-      name: marketquoterequestworkstepId
+    QuoteManagementOutcomeID:
+      name: quotemanagementoutcomeId
       in: path
       required: true
       style: simple

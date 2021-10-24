@@ -828,6 +828,27 @@ components:
           type: string
         SubCustodianAgreementAssociatedAgreementReference:
           type: string
+    LegalTerm:
+      type: object
+      properties:
+        Preconditions:
+          type: object
+        Schedule:
+          type: object
+        BusinessService:
+          type: object
+        SubCustodianAgreementReference:
+          type: string
+        LegalTermReference:
+          type: string
+        LegalTermType:
+          type: string
+        Jurisdiction:
+          type: string
+        ApplicableLawReference:
+          type: object
+        ApplicableLawInterpretation:
+          type: string
     PolicyTerm:
       type: object
       properties:
@@ -870,27 +891,6 @@ components:
           type: object
         ApplicableRegulationInterpretation:
           type: string
-    LegalTerm:
-      type: object
-      properties:
-        Preconditions:
-          type: object
-        Schedule:
-          type: object
-        BusinessService:
-          type: object
-        SubCustodianAgreementReference:
-          type: string
-        LegalTermReference:
-          type: string
-        LegalTermType:
-          type: string
-        Jurisdiction:
-          type: string
-        ApplicableLawReference:
-          type: object
-        ApplicableLawInterpretation:
-          type: string
     SubCustodianAgreementOutcome:
       type: object
       properties:
@@ -918,6 +918,14 @@ components:
       explode: false
       schema:
         type: string
+    LegalTermID:
+      name: legaltermId
+      in: path
+      required: true
+      style: simple
+      explode: false
+      schema:
+        type: string
     PolicyTermID:
       name: policytermId
       in: path
@@ -928,14 +936,6 @@ components:
         type: string
     RegulatoryTermID:
       name: regulatorytermId
-      in: path
-      required: true
-      style: simple
-      explode: false
-      schema:
-        type: string
-    LegalTermID:
-      name: legaltermId
       in: path
       required: true
       style: simple

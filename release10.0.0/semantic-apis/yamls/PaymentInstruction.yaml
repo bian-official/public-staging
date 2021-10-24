@@ -925,25 +925,6 @@ components:
           type: string
         PaymentInstructionProcedureReference:
           type: string
-    PaymentInstructionWorkstep:
-      type: object
-      properties:
-        Preconditions:
-          type: object
-        BusinessUnit/EmployeeReference:
-          type: object
-        Schedule:
-          type: object
-        BusinessService:
-          type: object
-        Postconditions:
-          type: object
-        PaymentInstructionProcedureReference:
-          type: string
-        PaymentInstructionWorkstepReference:
-          type: string
-        PaymentInstructionWorkstepType:
-          type: string
     ComplianceCheckWorkstep:
       type: object
       properties:
@@ -982,6 +963,25 @@ components:
           type: string
         AgreementConfirmationWorkstepType:
           type: string
+    PaymentInstructionWorkstep:
+      type: object
+      properties:
+        Preconditions:
+          type: object
+        BusinessUnit/EmployeeReference:
+          type: object
+        Schedule:
+          type: object
+        BusinessService:
+          type: object
+        Postconditions:
+          type: object
+        PaymentInstructionProcedureReference:
+          type: string
+        PaymentInstructionWorkstepReference:
+          type: string
+        PaymentInstructionWorkstepType:
+          type: string
     PaymentInstructionOutcome:
       type: object
       properties:
@@ -1007,14 +1007,6 @@ components:
       explode: false
       schema:
         type: string
-    PaymentInstructionWorkstepID:
-      name: paymentinstructionworkstepId
-      in: path
-      required: true
-      style: simple
-      explode: false
-      schema:
-        type: string
     ComplianceCheckWorkstepID:
       name: compliancecheckworkstepId
       in: path
@@ -1025,6 +1017,14 @@ components:
         type: string
     AgreementConfirmationWorkstepID:
       name: agreementconfirmationworkstepId
+      in: path
+      required: true
+      style: simple
+      explode: false
+      schema:
+        type: string
+    PaymentInstructionWorkstepID:
+      name: paymentinstructionworkstepId
       in: path
       required: true
       style: simple

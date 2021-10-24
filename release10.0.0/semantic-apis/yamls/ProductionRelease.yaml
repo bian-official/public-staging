@@ -276,6 +276,17 @@ components:
           type: string
         BusinessRiskTestResult:
           type: string
+    FunctionalRisk:
+      type: object
+      properties:
+        FunctionalRiskSystemTestType:
+          type: string
+        FunctionalRiskSystemTestDescription:
+          type: string
+        FunctionalRiskSystemTestWorkProduct:
+          type: string
+        FunctionalRiskSystemTestResult:
+          type: string
     OperationalRisk:
       type: object
       properties:
@@ -297,17 +308,6 @@ components:
         ProductionRiskSystemTestWorkProduct:
           type: string
         ProductionRiskSystemTestResult:
-          type: string
-    FunctionalRisk:
-      type: object
-      properties:
-        FunctionalRiskSystemTestType:
-          type: string
-        FunctionalRiskSystemTestDescription:
-          type: string
-        FunctionalRiskSystemTestWorkProduct:
-          type: string
-        FunctionalRiskSystemTestResult:
           type: string
     HTTPError:
       type: object
@@ -475,6 +475,14 @@ components:
       explode: false
       schema:
         type: string
+    FunctionalRiskID:
+      name: functionalriskId
+      in: path
+      required: true
+      style: simple
+      explode: false
+      schema:
+        type: string
     OperationalRiskID:
       name: operationalriskId
       in: path
@@ -485,14 +493,6 @@ components:
         type: string
     ProductionRiskID:
       name: productionriskId
-      in: path
-      required: true
-      style: simple
-      explode: false
-      schema:
-        type: string
-    FunctionalRiskID:
-      name: functionalriskId
       in: path
       required: true
       style: simple

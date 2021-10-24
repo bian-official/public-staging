@@ -1387,6 +1387,25 @@ components:
           type: string
         SecurityRightsIssueActionWorkstepType:
           type: string
+    StockSplitorReversalActionWorkstep:
+      type: object
+      properties:
+        Preconditions:
+          type: object
+        BusinessUnit/EmployeeReference:
+          type: object
+        Schedule:
+          type: object
+        BusinessService:
+          type: object
+        Postconditions:
+          type: object
+        CorporateActionProcedureReference:
+          type: string
+        StockSplitorReversalActionWorkstepReference:
+          type: string
+        StockSplitorReversalActionWorkstepType:
+          type: string
     SecurityDividendPaymentWorkstep:
       type: object
       properties:
@@ -1432,25 +1451,6 @@ components:
           type: object
         CorporateActionProcedure:
           type: string
-    StockSplitorReversalActionWorkstep:
-      type: object
-      properties:
-        Preconditions:
-          type: object
-        BusinessUnit/EmployeeReference:
-          type: object
-        Schedule:
-          type: object
-        BusinessService:
-          type: object
-        Postconditions:
-          type: object
-        CorporateActionProcedureReference:
-          type: string
-        StockSplitorReversalActionWorkstepReference:
-          type: string
-        StockSplitorReversalActionWorkstepType:
-          type: string
     HTTPError:
       type: object
       properties:
@@ -1485,6 +1485,14 @@ components:
       explode: false
       schema:
         type: string
+    StockSplitorReversalActionWorkstepID:
+      name: stocksplitorreversalactionworkstepId
+      in: path
+      required: true
+      style: simple
+      explode: false
+      schema:
+        type: string
     SecurityDividendPaymentWorkstepID:
       name: securitydividendpaymentworkstepId
       in: path
@@ -1503,14 +1511,6 @@ components:
         type: string
     CorporateActionOutcomeID:
       name: corporateactionoutcomeId
-      in: path
-      required: true
-      style: simple
-      explode: false
-      schema:
-        type: string
-    StockSplitorReversalActionWorkstepID:
-      name: stocksplitorreversalactionworkstepId
       in: path
       required: true
       style: simple

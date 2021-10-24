@@ -271,6 +271,19 @@ components:
           type: string
         ProductionIssueStatus:
           type: string
+    Inbound:
+      type: object
+      properties:
+        EBranchDeviceReference:
+          type: object
+        EBranchDevicePropertyValue:
+          type: string
+        EBranchInboundConnectionStartTime:
+          type: string
+        EBranchInboundConnectionDuration:
+          type: string
+        EBranchInboundConnectionContactRecordReference:
+          type: object
     Outbound:
       type: object
       properties:
@@ -286,19 +299,6 @@ components:
           type: string
         EBranchOutboundConnectionDuration:
           type: string
-    Inbound:
-      type: object
-      properties:
-        EBranchDeviceReference:
-          type: object
-        EBranchDevicePropertyValue:
-          type: string
-        EBranchInboundConnectionStartTime:
-          type: string
-        EBranchInboundConnectionDuration:
-          type: string
-        EBranchInboundConnectionContactRecordReference:
-          type: object
     HTTPError:
       type: object
       properties:
@@ -431,16 +431,16 @@ components:
       explode: false
       schema:
         type: string
-    OutboundID:
-      name: outboundId
+    InboundID:
+      name: inboundId
       in: path
       required: true
       style: simple
       explode: false
       schema:
         type: string
-    InboundID:
-      name: inboundId
+    OutboundID:
+      name: outboundId
       in: path
       required: true
       style: simple

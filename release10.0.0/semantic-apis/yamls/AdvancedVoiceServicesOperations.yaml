@@ -271,19 +271,6 @@ components:
           type: string
         ProductionIssueStatus:
           type: string
-    Inbound:
-      type: object
-      properties:
-        VChannelDeviceReference:
-          type: object
-        VChannelDevicePropertyValue:
-          type: string
-        VChannelInboundConnectionStartTime:
-          type: string
-        VChannelInboundConnectionDuration:
-          type: string
-        VChannelInboundConnectionContactReference:
-          type: object
     Outbound:
       type: object
       properties:
@@ -299,6 +286,19 @@ components:
           type: string
         VChannelOutboundConnectionDuration:
           type: string
+    Inbound:
+      type: object
+      properties:
+        VChannelDeviceReference:
+          type: object
+        VChannelDevicePropertyValue:
+          type: string
+        VChannelInboundConnectionStartTime:
+          type: string
+        VChannelInboundConnectionDuration:
+          type: string
+        VChannelInboundConnectionContactReference:
+          type: object
     HTTPError:
       type: object
       properties:
@@ -431,16 +431,16 @@ components:
       explode: false
       schema:
         type: string
-    InboundID:
-      name: inboundId
+    OutboundID:
+      name: outboundId
       in: path
       required: true
       style: simple
       explode: false
       schema:
         type: string
-    OutboundID:
-      name: outboundId
+    InboundID:
+      name: inboundId
       in: path
       required: true
       style: simple

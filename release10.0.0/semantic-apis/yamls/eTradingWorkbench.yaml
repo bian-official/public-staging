@@ -1115,21 +1115,6 @@ components:
           type: string
         eTradingWorkbenchOperatingSessionReference:
           type: string
-    MarketOrderInitiationFunction:
-      type: object
-      properties:
-        Preconditions:
-          type: object
-        Schedule:
-          type: object
-        BusinessService:
-          type: object
-        eTradingWorkbenchOperatingSessionReference:
-          type: string
-        MarketOrderInitiationFunctionReference:
-          type: string
-        MarketOrderInitiationFunctionType:
-          type: string
     InvestmentPortfolioValuationFunction:
       type: object
       properties:
@@ -1144,6 +1129,21 @@ components:
         InvestmentPortfolioValuationFunctionReference:
           type: string
         InvestmentPortfolioValuationFunctionType:
+          type: string
+    MarketOrderQuotationFunction:
+      type: object
+      properties:
+        Preconditions:
+          type: object
+        Schedule:
+          type: object
+        BusinessService:
+          type: object
+        eTradingWorkbenchOperatingSessionReference:
+          type: string
+        MarketOrderQuotationFunctionReference:
+          type: string
+        MarketOrderQuotationFunctionType:
           type: string
     MarketPriceAnalysisFunction:
       type: object
@@ -1160,7 +1160,7 @@ components:
           type: string
         MarketPriceAnalysisFunctionType:
           type: string
-    MarketOrderQuotationFunction:
+    MarketOrderInitiationFunction:
       type: object
       properties:
         Preconditions:
@@ -1171,9 +1171,9 @@ components:
           type: object
         eTradingWorkbenchOperatingSessionReference:
           type: string
-        MarketOrderQuotationFunctionReference:
+        MarketOrderInitiationFunctionReference:
           type: string
-        MarketOrderQuotationFunctionType:
+        MarketOrderInitiationFunctionType:
           type: string
     eTradingWorkbenchOutcome:
       type: object
@@ -1200,16 +1200,16 @@ components:
       explode: false
       schema:
         type: string
-    MarketOrderInitiationFunctionID:
-      name: marketorderinitiationfunctionId
+    InvestmentPortfolioValuationFunctionID:
+      name: investmentportfoliovaluationfunctionId
       in: path
       required: true
       style: simple
       explode: false
       schema:
         type: string
-    InvestmentPortfolioValuationFunctionID:
-      name: investmentportfoliovaluationfunctionId
+    MarketOrderQuotationFunctionID:
+      name: marketorderquotationfunctionId
       in: path
       required: true
       style: simple
@@ -1224,8 +1224,8 @@ components:
       explode: false
       schema:
         type: string
-    MarketOrderQuotationFunctionID:
-      name: marketorderquotationfunctionId
+    MarketOrderInitiationFunctionID:
+      name: marketorderinitiationfunctionId
       in: path
       required: true
       style: simple

@@ -1138,7 +1138,7 @@ components:
           type: string
         FinancialInstrumentDirectoryEntryReference:
           type: string
-    OptionInstrumentproperty:
+    EquityInstrumentproperty:
       type: object
       properties:
         Preconditions:
@@ -1151,9 +1151,9 @@ components:
           type: object
         FinancialInstrumentDirectoryEntryReference:
           type: string
-        OptionInstrumentpropertyReference:
+        EquityInstrumentpropertyReference:
           type: object
-        OptionInstrumentpropertyType:
+        EquityInstrumentpropertyType:
           type: string
     WarrantInstrumentproperty:
       type: object
@@ -1172,7 +1172,7 @@ components:
           type: object
         WarrantInstrumentpropertyType:
           type: string
-    FuturesInstrumentproperty:
+    OptionInstrumentproperty:
       type: object
       properties:
         Preconditions:
@@ -1185,9 +1185,9 @@ components:
           type: object
         FinancialInstrumentDirectoryEntryReference:
           type: string
-        FuturesInstrumentpropertyReference:
+        OptionInstrumentpropertyReference:
           type: object
-        FuturesInstrumentpropertyType:
+        OptionInstrumentpropertyType:
           type: string
     DebtInstrumentproperty:
       type: object
@@ -1206,7 +1206,7 @@ components:
           type: object
         DebtInstrumentpropertyType:
           type: string
-    EquityInstrumentproperty:
+    FuturesInstrumentproperty:
       type: object
       properties:
         Preconditions:
@@ -1219,9 +1219,9 @@ components:
           type: object
         FinancialInstrumentDirectoryEntryReference:
           type: string
-        EquityInstrumentpropertyReference:
+        FuturesInstrumentpropertyReference:
           type: object
-        EquityInstrumentpropertyType:
+        FuturesInstrumentpropertyType:
           type: string
     FinancialInstrumentReferenceDataManagementOutcome:
       type: object
@@ -1248,8 +1248,8 @@ components:
       explode: false
       schema:
         type: string
-    OptionInstrumentpropertyID:
-      name: optioninstrumentpropertyId
+    EquityInstrumentpropertyID:
+      name: equityinstrumentpropertyId
       in: path
       required: true
       style: simple
@@ -1264,8 +1264,8 @@ components:
       explode: false
       schema:
         type: string
-    FuturesInstrumentpropertyID:
-      name: futuresinstrumentpropertyId
+    OptionInstrumentpropertyID:
+      name: optioninstrumentpropertyId
       in: path
       required: true
       style: simple
@@ -1280,8 +1280,8 @@ components:
       explode: false
       schema:
         type: string
-    EquityInstrumentpropertyID:
-      name: equityinstrumentpropertyId
+    FuturesInstrumentpropertyID:
+      name: futuresinstrumentpropertyId
       in: path
       required: true
       style: simple

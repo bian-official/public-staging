@@ -922,29 +922,6 @@ components:
           type: string
         ContentDevelopmentContentDevelopmentServiceName:
           type: string
-    ServiceEvaluation:
-      type: object
-      properties:
-        ServiceEvaluationPreconditions:
-          type: string
-        ServiceEvaluationBusinessUnit/EmployeeReference:
-          type: object
-        ServiceEvaluationWorkSchedule:
-          type: string
-        ServiceEvaluation:
-          type: object
-        ServiceEvaluationPostconditions:
-          type: string
-        ServiceEvaluationServiceEvaluationServiceType:
-          type: string
-        ServiceEvaluationServiceEvaluationServiceDescription:
-          type: string
-        ServiceEvaluationServiceEvaluationServiceInputsandOuputs:
-          type: string
-        ServiceEvaluationServiceEvaluationServiceWorkProduct:
-          type: string
-        ServiceEvaluationServiceEvaluationServiceName:
-          type: string
     ServiceDelivery:
       type: object
       properties:
@@ -998,6 +975,29 @@ components:
           type: string
         ProductTrainingProcedure:
           type: string
+    ServiceEvaluation:
+      type: object
+      properties:
+        ServiceEvaluationPreconditions:
+          type: string
+        ServiceEvaluationBusinessUnit/EmployeeReference:
+          type: object
+        ServiceEvaluationWorkSchedule:
+          type: string
+        ServiceEvaluation:
+          type: object
+        ServiceEvaluationPostconditions:
+          type: string
+        ServiceEvaluationServiceEvaluationServiceType:
+          type: string
+        ServiceEvaluationServiceEvaluationServiceDescription:
+          type: string
+        ServiceEvaluationServiceEvaluationServiceInputsandOuputs:
+          type: string
+        ServiceEvaluationServiceEvaluationServiceWorkProduct:
+          type: string
+        ServiceEvaluationServiceEvaluationServiceName:
+          type: string
     HTTPError:
       type: object
       properties:
@@ -1024,14 +1024,6 @@ components:
       explode: false
       schema:
         type: string
-    ServiceEvaluationID:
-      name: serviceevaluationId
-      in: path
-      required: true
-      style: simple
-      explode: false
-      schema:
-        type: string
     ServiceDeliveryID:
       name: servicedeliveryId
       in: path
@@ -1050,6 +1042,14 @@ components:
         type: string
     ProductTrainingOutcomeID:
       name: producttrainingoutcomeId
+      in: path
+      required: true
+      style: simple
+      explode: false
+      schema:
+        type: string
+    ServiceEvaluationID:
+      name: serviceevaluationId
       in: path
       required: true
       style: simple

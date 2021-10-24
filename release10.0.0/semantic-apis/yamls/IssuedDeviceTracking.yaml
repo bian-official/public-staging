@@ -287,9 +287,11 @@ components:
           type: object
         IssuedDeviceAllocationStatus:
           type: string
-    InternalNotification:
+    ExternalReport:
       type: object
       properties:
+        InformationFeedServiceContentRecord:
+          type: string
         IssuedDeviceReference:
           type: object
         IssuedDeviceType:
@@ -304,11 +306,9 @@ components:
           type: string
         Date:
           type: string
-    ExternalReport:
+    InternalNotification:
       type: object
       properties:
-        InformationFeedServiceContentRecord:
-          type: string
         IssuedDeviceReference:
           type: object
         IssuedDeviceType:
@@ -509,16 +509,16 @@ components:
       explode: false
       schema:
         type: string
-    InternalNotificationID:
-      name: internalnotificationId
+    ExternalReportID:
+      name: externalreportId
       in: path
       required: true
       style: simple
       explode: false
       schema:
         type: string
-    ExternalReportID:
-      name: externalreportId
+    InternalNotificationID:
+      name: internalnotificationId
       in: path
       required: true
       style: simple

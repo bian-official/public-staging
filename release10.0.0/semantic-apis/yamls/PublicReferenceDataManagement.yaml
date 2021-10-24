@@ -294,17 +294,6 @@ components:
           type: string
         GlobalStandardSpecificationServiceProviderReference:
           type: object
-    PublicReferenceDataManagementOutcome:
-      type: object
-      properties:
-        PublicReferenceDataManagementTask:
-          type: object
-        PublicReferenceDataManagementDesign:
-          type: object
-        PublicReferenceDataManagementWorkProduct:
-          type: object
-        PublicReferenceDataManagementImpactAnalysis:
-          type: object
     GlobalReferenceData:
       type: object
       properties:
@@ -326,6 +315,17 @@ components:
           type: object
         ExternalReferenceDataServiceName:
           type: object
+    PublicReferenceDataManagementOutcome:
+      type: object
+      properties:
+        PublicReferenceDataManagementTask:
+          type: object
+        PublicReferenceDataManagementDesign:
+          type: object
+        PublicReferenceDataManagementWorkProduct:
+          type: object
+        PublicReferenceDataManagementImpactAnalysis:
+          type: object
     HTTPError:
       type: object
       properties:
@@ -344,16 +344,16 @@ components:
       explode: false
       schema:
         type: string
-    PublicReferenceDataManagementOutcomeID:
-      name: publicreferencedatamanagementoutcomeId
+    GlobalReferenceDataID:
+      name: globalreferencedataId
       in: path
       required: true
       style: simple
       explode: false
       schema:
         type: string
-    GlobalReferenceDataID:
-      name: globalreferencedataId
+    PublicReferenceDataManagementOutcomeID:
+      name: publicreferencedatamanagementoutcomeId
       in: path
       required: true
       style: simple

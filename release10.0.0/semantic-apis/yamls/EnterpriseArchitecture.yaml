@@ -887,27 +887,6 @@ components:
           type: string
         ApplicationArchitectureServiceName:
           type: string
-    Organization:
-      type: object
-      properties:
-        OrganizationPreconditions:
-          type: string
-        OrganizationSpecificationSchedule:
-          type: string
-        OrganizationVersionNumber:
-          type: string
-        OrganizationalModel:
-          type: object
-        OrganizationalModelServiceType:
-          type: string
-        OrganizationalModelServiceDescription:
-          type: string
-        OrganizationalModelServiceInputsandOuputs:
-          type: string
-        OrganizationalModelServiceWorkProduct:
-          type: string
-        OrganizationalModelServiceName:
-          type: string
     InformationArchitecture:
       type: object
       properties:
@@ -929,6 +908,38 @@ components:
           type: string
         InformationArchitectureServiceName:
           type: string
+    Organization:
+      type: object
+      properties:
+        OrganizationPreconditions:
+          type: string
+        OrganizationSpecificationSchedule:
+          type: string
+        OrganizationVersionNumber:
+          type: string
+        OrganizationalModel:
+          type: object
+        OrganizationalModelServiceType:
+          type: string
+        OrganizationalModelServiceDescription:
+          type: string
+        OrganizationalModelServiceInputsandOuputs:
+          type: string
+        OrganizationalModelServiceWorkProduct:
+          type: string
+        OrganizationalModelServiceName:
+          type: string
+    EnterpriseArchitectureOutcome:
+      type: object
+      properties:
+        EnterpriseArchitectureTask:
+          type: string
+        EnterpriseArchitectureDesign:
+          type: string
+        EnterpriseArchitectureWorkProduct:
+          type: string
+        EnterpriseArchitectureImpactAnalysis:
+          type: string
     TechnologyInfrastructure:
       type: object
       properties:
@@ -949,17 +960,6 @@ components:
         TechnologyInfrastructureServiceWorkProduct:
           type: string
         TechnologyInfrastructureServiceName:
-          type: string
-    EnterpriseArchitectureOutcome:
-      type: object
-      properties:
-        EnterpriseArchitectureTask:
-          type: string
-        EnterpriseArchitectureDesign:
-          type: string
-        EnterpriseArchitectureWorkProduct:
-          type: string
-        EnterpriseArchitectureImpactAnalysis:
           type: string
     HTTPError:
       type: object
@@ -995,14 +995,6 @@ components:
       explode: false
       schema:
         type: string
-    OrganizationID:
-      name: organizationId
-      in: path
-      required: true
-      style: simple
-      explode: false
-      schema:
-        type: string
     InformationArchitectureID:
       name: informationarchitectureId
       in: path
@@ -1011,8 +1003,8 @@ components:
       explode: false
       schema:
         type: string
-    TechnologyInfrastructureID:
-      name: technologyinfrastructureId
+    OrganizationID:
+      name: organizationId
       in: path
       required: true
       style: simple
@@ -1021,6 +1013,14 @@ components:
         type: string
     EnterpriseArchitectureOutcomeID:
       name: enterprisearchitectureoutcomeId
+      in: path
+      required: true
+      style: simple
+      explode: false
+      schema:
+        type: string
+    TechnologyInfrastructureID:
+      name: technologyinfrastructureId
       in: path
       required: true
       style: simple

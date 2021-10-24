@@ -712,6 +712,29 @@ components:
           type: string
         AccountsReceivableProcedureCustomerAgreementReference:
           type: object
+    Resolution:
+      type: object
+      properties:
+        ResolutionPreconditions:
+          type: string
+        ResolutionBusinessUnit/EmployeeReference:
+          type: object
+        ResolutionWorkSchedule:
+          type: string
+        BusinessService:
+          type: object
+        ResolutionPostconditions:
+          type: string
+        ResolutionServiceType:
+          type: string
+        ResolutionServiceDescription:
+          type: string
+        ResolutionServiceInputsandOuputs:
+          type: string
+        ResolutionServiceWorkProduct:
+          type: string
+        ResolutionServiceName:
+          type: string
     ReceivablesEvaluation:
       type: object
       properties:
@@ -734,29 +757,6 @@ components:
         ReceivablesEvaluationReceivablesEvaluationServiceWorkProduct:
           type: string
         ReceivablesEvaluationReceivablesEvaluationServiceName:
-          type: string
-    CustomerNegotiation:
-      type: object
-      properties:
-        CustomerNegotiationPreconditions:
-          type: string
-        CustomerNegotiationBusinessUnit/EmployeeReference:
-          type: object
-        CustomerNegotiationWorkSchedule:
-          type: string
-        PaymentNegotation:
-          type: object
-        CustomerNegotiationPostconditions:
-          type: string
-        CustomerNegotiationPaymentNegotationServiceType:
-          type: string
-        CustomerNegotiationPaymentNegotationServiceDescription:
-          type: string
-        CustomerNegotiationPaymentNegotationServiceInputsandOuputs:
-          type: string
-        CustomerNegotiationPaymentNegotationServiceWorkProduct:
-          type: string
-        CustomerNegotiationPaymentNegotationServiceName:
           type: string
     Payment:
       type: object
@@ -781,35 +781,35 @@ components:
           type: string
         PaymentServiceName:
           type: string
+    CustomerNegotiation:
+      type: object
+      properties:
+        CustomerNegotiationPreconditions:
+          type: string
+        CustomerNegotiationBusinessUnit/EmployeeReference:
+          type: object
+        CustomerNegotiationWorkSchedule:
+          type: string
+        PaymentNegotation:
+          type: object
+        CustomerNegotiationPostconditions:
+          type: string
+        CustomerNegotiationPaymentNegotationServiceType:
+          type: string
+        CustomerNegotiationPaymentNegotationServiceDescription:
+          type: string
+        CustomerNegotiationPaymentNegotationServiceInputsandOuputs:
+          type: string
+        CustomerNegotiationPaymentNegotationServiceWorkProduct:
+          type: string
+        CustomerNegotiationPaymentNegotationServiceName:
+          type: string
     AccountsReceivableOutcome:
       type: object
       properties:
         AccountsReceivableWorkProduct:
           type: string
         AccountsReceivableProcedure:
-          type: string
-    Resolution:
-      type: object
-      properties:
-        ResolutionPreconditions:
-          type: string
-        ResolutionBusinessUnit/EmployeeReference:
-          type: object
-        ResolutionWorkSchedule:
-          type: string
-        BusinessService:
-          type: object
-        ResolutionPostconditions:
-          type: string
-        ResolutionServiceType:
-          type: string
-        ResolutionServiceDescription:
-          type: string
-        ResolutionServiceInputsandOuputs:
-          type: string
-        ResolutionServiceWorkProduct:
-          type: string
-        ResolutionServiceName:
           type: string
     HTTPError:
       type: object
@@ -829,16 +829,16 @@ components:
       explode: false
       schema:
         type: string
-    ReceivablesEvaluationID:
-      name: receivablesevaluationId
+    ResolutionID:
+      name: resolutionId
       in: path
       required: true
       style: simple
       explode: false
       schema:
         type: string
-    CustomerNegotiationID:
-      name: customernegotiationId
+    ReceivablesEvaluationID:
+      name: receivablesevaluationId
       in: path
       required: true
       style: simple
@@ -853,16 +853,16 @@ components:
       explode: false
       schema:
         type: string
-    AccountsReceivableOutcomeID:
-      name: accountsreceivableoutcomeId
+    CustomerNegotiationID:
+      name: customernegotiationId
       in: path
       required: true
       style: simple
       explode: false
       schema:
         type: string
-    ResolutionID:
-      name: resolutionId
+    AccountsReceivableOutcomeID:
+      name: accountsreceivableoutcomeId
       in: path
       required: true
       style: simple

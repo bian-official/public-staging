@@ -2420,104 +2420,6 @@ components:
           type: object
         AccountMaintenanceFulfillmentType:
           type: string
-    AccountBillingFulfillment:
-      type: object
-      properties:
-        Preconditions:
-          type: object
-        Schedule:
-          type: object
-        BusinessService:
-          type: object
-        Postconditions:
-          type: object
-        TradeFinanceFacilityReference:
-          type: string
-        AccountBillingFulfillmentReference:
-          type: object
-        AccountBillingFulfillmentType:
-          type: string
-        BillingInstanceReference:
-          type: object
-        BillingParameters:
-          type: string
-        BillingTransactionParty:
-          type: string
-        BillingTransactionAddress:
-          type: string
-        BillingTransactionPeriod:
-          type: string
-        BillingTransactionStatementReference:
-          type: object
-        BillingTransactionAmount:
-          type: number
-        BillingTransactionMinimumRequiredPayment:
-          type: string
-        BillingTransactionPaymentDueDate:
-          type: string
-    PaymentFulfillment:
-      type: object
-      properties:
-        Preconditions:
-          type: object
-        Schedule:
-          type: object
-        BusinessService:
-          type: object
-        Postconditions:
-          type: object
-        TradeFinanceFacilityReference:
-          type: string
-        PaymentFulfillmentReference:
-          type: object
-        PaymentFulfillmentType:
-          type: string
-        PaymentFulfillmentInstanceReference:
-          type: object
-        PaymentType:
-          type: string
-        PaymentDefinition:
-          type: string
-        PaymentProcessinngOptionDefinition:
-          type: string
-        PaymentProcessingOptionSetting:
-          type: string
-        PaymentSchedule:
-          type: string
-        DirectDebitMandateReference:
-          type: object
-        DirectDebitMandateSettings:
-          type: string
-        BillPayMandateReference:
-          type: object
-        BilPayMandateSettings:
-          type: string
-        PaymentTransaction:
-          type: string
-        PaymentTransactionType:
-          type: string
-        PaymentTransactionPayeeReference:
-          type: object
-        PaymentTransactionPayeeAccountReference:
-          type: object
-        PaymentTransactionPayeeBankReference:
-          type: object
-        PaymentTransactionAmount:
-          type: number
-        PaymentTransactionFeeType:
-          type: string
-        PaymentTransactionFeeCharge:
-          type: string
-        PaymentTransactionDate:
-          type: string
-        PaymentTransactionPaymentMechanism:
-          type: string
-        PaymentTransactionPaymentPurpose:
-          type: string
-        PaymentTransactionBankBranch/LocationReference:
-          type: object
-        PaymentTransactionStatus:
-          type: string
     CollateralFulfillment:
       type: object
       properties:
@@ -2606,7 +2508,7 @@ components:
           type: number
         AccountSweepExecutionDate:
           type: string
-    FeeFulfillment:
+    AccountFulfillment:
       type: object
       properties:
         Preconditions:
@@ -2619,29 +2521,9 @@ components:
           type: object
         TradeFinanceFacilityReference:
           type: string
-        FeeFulfillmentReference:
+        AccountFulfillmentReference:
           type: object
-        FeeFulfillmentType:
-          type: string
-        FeeType:
-          type: string
-        FeeTransactionDescription:
-          type: string
-        FeeTransactionFeeType:
-          type: string
-        FeeTransactionFeeCharge:
-          type: number
-        AccruedFeeType:
-          type: string
-        AccruedFeeAmount:
-          type: number
-        FeeArrangement:
-          type: string
-        FeeInstanceReference:
-          type: object
-        FeeModality:
-          type: string
-        FeeModalityType:
+        AccountFulfillmentType:
           type: string
     InterestFulfillment:
       type: object
@@ -2686,37 +2568,6 @@ components:
           type: object
         InterestTransactionType:
           type: string
-    DepositFulfillment:
-      type: object
-      properties:
-        Preconditions:
-          type: object
-        Schedule:
-          type: object
-        BusinessService:
-          type: object
-        Postconditions:
-          type: object
-        TradeFinanceFacilityReference:
-          type: string
-        DepositFulfillmentReference:
-          type: object
-        DepositFulfillmentType:
-          type: string
-        DepositType:
-          type: string
-        DepositTransactionSourceReference:
-          type: object
-        DepositTransactionDepositType:
-          type: string
-        DepositTransactionDescription:
-          type: string
-        DepositTransactionAmount:
-          type: number
-        DepositTransactionDate:
-          type: string
-        DepositFulfillmentInstanceReference:
-          type: object
     WithdrawalFulfillment:
       type: object
       properties:
@@ -2748,7 +2599,7 @@ components:
           type: string
         WithdrawalFulfillmentInstanceReference:
           type: object
-    AccountFulfillment:
+    DepositFulfillment:
       type: object
       properties:
         Preconditions:
@@ -2761,9 +2612,158 @@ components:
           type: object
         TradeFinanceFacilityReference:
           type: string
-        AccountFulfillmentReference:
+        DepositFulfillmentReference:
           type: object
-        AccountFulfillmentType:
+        DepositFulfillmentType:
+          type: string
+        DepositType:
+          type: string
+        DepositTransactionSourceReference:
+          type: object
+        DepositTransactionDepositType:
+          type: string
+        DepositTransactionDescription:
+          type: string
+        DepositTransactionAmount:
+          type: number
+        DepositTransactionDate:
+          type: string
+        DepositFulfillmentInstanceReference:
+          type: object
+    PaymentFulfillment:
+      type: object
+      properties:
+        Preconditions:
+          type: object
+        Schedule:
+          type: object
+        BusinessService:
+          type: object
+        Postconditions:
+          type: object
+        TradeFinanceFacilityReference:
+          type: string
+        PaymentFulfillmentReference:
+          type: object
+        PaymentFulfillmentType:
+          type: string
+        PaymentFulfillmentInstanceReference:
+          type: object
+        PaymentType:
+          type: string
+        PaymentDefinition:
+          type: string
+        PaymentProcessinngOptionDefinition:
+          type: string
+        PaymentProcessingOptionSetting:
+          type: string
+        PaymentSchedule:
+          type: string
+        DirectDebitMandateReference:
+          type: object
+        DirectDebitMandateSettings:
+          type: string
+        BillPayMandateReference:
+          type: object
+        BilPayMandateSettings:
+          type: string
+        PaymentTransaction:
+          type: string
+        PaymentTransactionType:
+          type: string
+        PaymentTransactionPayeeReference:
+          type: object
+        PaymentTransactionPayeeAccountReference:
+          type: object
+        PaymentTransactionPayeeBankReference:
+          type: object
+        PaymentTransactionAmount:
+          type: number
+        PaymentTransactionFeeType:
+          type: string
+        PaymentTransactionFeeCharge:
+          type: string
+        PaymentTransactionDate:
+          type: string
+        PaymentTransactionPaymentMechanism:
+          type: string
+        PaymentTransactionPaymentPurpose:
+          type: string
+        PaymentTransactionBankBranch/LocationReference:
+          type: object
+        PaymentTransactionStatus:
+          type: string
+    AccountBillingFulfillment:
+      type: object
+      properties:
+        Preconditions:
+          type: object
+        Schedule:
+          type: object
+        BusinessService:
+          type: object
+        Postconditions:
+          type: object
+        TradeFinanceFacilityReference:
+          type: string
+        AccountBillingFulfillmentReference:
+          type: object
+        AccountBillingFulfillmentType:
+          type: string
+        BillingInstanceReference:
+          type: object
+        BillingParameters:
+          type: string
+        BillingTransactionParty:
+          type: string
+        BillingTransactionAddress:
+          type: string
+        BillingTransactionPeriod:
+          type: string
+        BillingTransactionStatementReference:
+          type: object
+        BillingTransactionAmount:
+          type: number
+        BillingTransactionMinimumRequiredPayment:
+          type: string
+        BillingTransactionPaymentDueDate:
+          type: string
+    FeeFulfillment:
+      type: object
+      properties:
+        Preconditions:
+          type: object
+        Schedule:
+          type: object
+        BusinessService:
+          type: object
+        Postconditions:
+          type: object
+        TradeFinanceFacilityReference:
+          type: string
+        FeeFulfillmentReference:
+          type: object
+        FeeFulfillmentType:
+          type: string
+        FeeType:
+          type: string
+        FeeTransactionDescription:
+          type: string
+        FeeTransactionFeeType:
+          type: string
+        FeeTransactionFeeCharge:
+          type: number
+        AccruedFeeType:
+          type: string
+        AccruedFeeAmount:
+          type: number
+        FeeArrangement:
+          type: string
+        FeeInstanceReference:
+          type: object
+        FeeModality:
+          type: string
+        FeeModalityType:
           type: string
     TradeFinanceOutcome:
       type: object
@@ -2798,22 +2798,6 @@ components:
       explode: false
       schema:
         type: string
-    AccountBillingFulfillmentID:
-      name: accountbillingfulfillmentId
-      in: path
-      required: true
-      style: simple
-      explode: false
-      schema:
-        type: string
-    PaymentFulfillmentID:
-      name: paymentfulfillmentId
-      in: path
-      required: true
-      style: simple
-      explode: false
-      schema:
-        type: string
     CollateralFulfillmentID:
       name: collateralfulfillmentId
       in: path
@@ -2830,8 +2814,8 @@ components:
       explode: false
       schema:
         type: string
-    FeeFulfillmentID:
-      name: feefulfillmentId
+    AccountFulfillmentID:
+      name: accountfulfillmentId
       in: path
       required: true
       style: simple
@@ -2846,14 +2830,6 @@ components:
       explode: false
       schema:
         type: string
-    DepositFulfillmentID:
-      name: depositfulfillmentId
-      in: path
-      required: true
-      style: simple
-      explode: false
-      schema:
-        type: string
     WithdrawalFulfillmentID:
       name: withdrawalfulfillmentId
       in: path
@@ -2862,8 +2838,32 @@ components:
       explode: false
       schema:
         type: string
-    AccountFulfillmentID:
-      name: accountfulfillmentId
+    DepositFulfillmentID:
+      name: depositfulfillmentId
+      in: path
+      required: true
+      style: simple
+      explode: false
+      schema:
+        type: string
+    PaymentFulfillmentID:
+      name: paymentfulfillmentId
+      in: path
+      required: true
+      style: simple
+      explode: false
+      schema:
+        type: string
+    AccountBillingFulfillmentID:
+      name: accountbillingfulfillmentId
+      in: path
+      required: true
+      style: simple
+      explode: false
+      schema:
+        type: string
+    FeeFulfillmentID:
+      name: feefulfillmentId
       in: path
       required: true
       style: simple

@@ -1905,7 +1905,7 @@ components:
           type: string
         HedgeFundAdministrativePlanDescription:
           type: string
-    FundAccountingRoutine:
+    FundManagementRoutine:
       type: object
       properties:
         Preconditions:
@@ -1920,9 +1920,9 @@ components:
           type: object
         HedgeFundAdministrativePlanReference:
           type: string
-        FundAccountingRoutineReference:
+        FundManagementRoutineReference:
           type: string
-        FundAccountingRoutineType:
+        FundManagementRoutineType:
           type: string
     FundFinancialReportingRoutine:
       type: object
@@ -1943,63 +1943,6 @@ components:
           type: string
         FundFinancialReportingRoutineType:
           type: string
-    FundManagementRoutine:
-      type: object
-      properties:
-        Preconditions:
-          type: object
-        BusinessUnit/EmployeeReference:
-          type: object
-        Schedule:
-          type: object
-        BusinessService:
-          type: object
-        Postconditions:
-          type: object
-        HedgeFundAdministrativePlanReference:
-          type: string
-        FundManagementRoutineReference:
-          type: string
-        FundManagementRoutineType:
-          type: string
-    FundEnrolmentCertificationRoutine:
-      type: object
-      properties:
-        Preconditions:
-          type: object
-        BusinessUnit/EmployeeReference:
-          type: object
-        Schedule:
-          type: object
-        BusinessService:
-          type: object
-        Postconditions:
-          type: object
-        HedgeFundAdministrativePlanReference:
-          type: string
-        FundEnrolmentCertificationRoutineReference:
-          type: string
-        FundEnrolmentCertificationRoutineType:
-          type: string
-    FundTaxAdministrationRoutine:
-      type: object
-      properties:
-        Preconditions:
-          type: object
-        BusinessUnit/EmployeeReference:
-          type: object
-        Schedule:
-          type: object
-        BusinessService:
-          type: object
-        Postconditions:
-          type: object
-        HedgeFundAdministrativePlanReference:
-          type: string
-        FundTaxAdministrationRoutineReference:
-          type: string
-        FundTaxAdministrationRoutineType:
-          type: string
     FundPerformanceFeeRoutine:
       type: object
       properties:
@@ -2019,7 +1962,7 @@ components:
           type: string
         FundPerformanceFeeRoutineType:
           type: string
-    FundInvestor,MiddleandBackOfficeServiceRoutine:
+    FundAccountingRoutine:
       type: object
       properties:
         Preconditions:
@@ -2034,9 +1977,9 @@ components:
           type: object
         HedgeFundAdministrativePlanReference:
           type: string
-        FundInvestor,MiddleandBackOfficeServiceRoutineReference:
+        FundAccountingRoutineReference:
           type: string
-        FundInvestor,MiddleandBackOfficeServiceRoutineType:
+        FundAccountingRoutineType:
           type: string
     FundDevelopmentRoutine:
       type: object
@@ -2057,17 +2000,6 @@ components:
           type: string
         FundDevelopmentRoutineType:
           type: string
-    HedgeFundAdministrationOutcome:
-      type: object
-      properties:
-        HedgeFundAdministrationPerformanceAnalysis:
-          type: string
-        HedgeFundAdministrationActivityAnalysis:
-          type: string
-        HedgeFundAdministrationAdministrativePlan:
-          type: string
-        HedgeFundAdministrationAdministrationTask:
-          type: string
     FundInflowsandOutflowRoutine:
       type: object
       properties:
@@ -2087,6 +2019,74 @@ components:
           type: string
         FundInflowsandOutflowRoutineType:
           type: string
+    FundTaxAdministrationRoutine:
+      type: object
+      properties:
+        Preconditions:
+          type: object
+        BusinessUnit/EmployeeReference:
+          type: object
+        Schedule:
+          type: object
+        BusinessService:
+          type: object
+        Postconditions:
+          type: object
+        HedgeFundAdministrativePlanReference:
+          type: string
+        FundTaxAdministrationRoutineReference:
+          type: string
+        FundTaxAdministrationRoutineType:
+          type: string
+    FundEnrolmentCertificationRoutine:
+      type: object
+      properties:
+        Preconditions:
+          type: object
+        BusinessUnit/EmployeeReference:
+          type: object
+        Schedule:
+          type: object
+        BusinessService:
+          type: object
+        Postconditions:
+          type: object
+        HedgeFundAdministrativePlanReference:
+          type: string
+        FundEnrolmentCertificationRoutineReference:
+          type: string
+        FundEnrolmentCertificationRoutineType:
+          type: string
+    FundInvestor,MiddleandBackOfficeServiceRoutine:
+      type: object
+      properties:
+        Preconditions:
+          type: object
+        BusinessUnit/EmployeeReference:
+          type: object
+        Schedule:
+          type: object
+        BusinessService:
+          type: object
+        Postconditions:
+          type: object
+        HedgeFundAdministrativePlanReference:
+          type: string
+        FundInvestor,MiddleandBackOfficeServiceRoutineReference:
+          type: string
+        FundInvestor,MiddleandBackOfficeServiceRoutineType:
+          type: string
+    HedgeFundAdministrationOutcome:
+      type: object
+      properties:
+        HedgeFundAdministrationPerformanceAnalysis:
+          type: string
+        HedgeFundAdministrationActivityAnalysis:
+          type: string
+        HedgeFundAdministrationAdministrativePlan:
+          type: string
+        HedgeFundAdministrationAdministrationTask:
+          type: string
     HTTPError:
       type: object
       properties:
@@ -2105,8 +2105,8 @@ components:
       explode: false
       schema:
         type: string
-    FundAccountingRoutineID:
-      name: fundaccountingroutineId
+    FundManagementRoutineID:
+      name: fundmanagementroutineId
       in: path
       required: true
       style: simple
@@ -2121,30 +2121,6 @@ components:
       explode: false
       schema:
         type: string
-    FundManagementRoutineID:
-      name: fundmanagementroutineId
-      in: path
-      required: true
-      style: simple
-      explode: false
-      schema:
-        type: string
-    FundEnrolmentCertificationRoutineID:
-      name: fundenrolmentcertificationroutineId
-      in: path
-      required: true
-      style: simple
-      explode: false
-      schema:
-        type: string
-    FundTaxAdministrationRoutineID:
-      name: fundtaxadministrationroutineId
-      in: path
-      required: true
-      style: simple
-      explode: false
-      schema:
-        type: string
     FundPerformanceFeeRoutineID:
       name: fundperformancefeeroutineId
       in: path
@@ -2153,8 +2129,8 @@ components:
       explode: false
       schema:
         type: string
-    FundInvestor,MiddleandBackOfficeServiceRoutineID:
-      name: fundinvestor,middleandbackofficeserviceroutineId
+    FundAccountingRoutineID:
+      name: fundaccountingroutineId
       in: path
       required: true
       style: simple
@@ -2169,16 +2145,40 @@ components:
       explode: false
       schema:
         type: string
-    HedgeFundAdministrationOutcomeID:
-      name: hedgefundadministrationoutcomeId
+    FundInflowsandOutflowRoutineID:
+      name: fundinflowsandoutflowroutineId
       in: path
       required: true
       style: simple
       explode: false
       schema:
         type: string
-    FundInflowsandOutflowRoutineID:
-      name: fundinflowsandoutflowroutineId
+    FundTaxAdministrationRoutineID:
+      name: fundtaxadministrationroutineId
+      in: path
+      required: true
+      style: simple
+      explode: false
+      schema:
+        type: string
+    FundEnrolmentCertificationRoutineID:
+      name: fundenrolmentcertificationroutineId
+      in: path
+      required: true
+      style: simple
+      explode: false
+      schema:
+        type: string
+    FundInvestor,MiddleandBackOfficeServiceRoutineID:
+      name: fundinvestor,middleandbackofficeserviceroutineId
+      in: path
+      required: true
+      style: simple
+      explode: false
+      schema:
+        type: string
+    HedgeFundAdministrationOutcomeID:
+      name: hedgefundadministrationoutcomeId
       in: path
       required: true
       style: simple

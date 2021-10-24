@@ -602,6 +602,13 @@ components:
           type: string
         FulfillCorporateLeaseFulfillmentServiceName:
           type: string
+    CorporateLeaseOutcome:
+      type: object
+      properties:
+        CorporateLeaseFinancialFacility:
+          type: string
+        CorporateLeaseWorkProduct:
+          type: string
     Administer:
       type: object
       properties:
@@ -622,13 +629,6 @@ components:
         AdministerCorporateLeaseAdministrationServiceWorkProduct:
           type: string
         AdministerCorporateLeaseAdministrationServiceName:
-          type: string
-    CorporateLeaseOutcome:
-      type: object
-      properties:
-        CorporateLeaseFinancialFacility:
-          type: string
-        CorporateLeaseWorkProduct:
           type: string
     HTTPError:
       type: object
@@ -656,16 +656,16 @@ components:
       explode: false
       schema:
         type: string
-    AdministerID:
-      name: administerId
+    CorporateLeaseOutcomeID:
+      name: corporateleaseoutcomeId
       in: path
       required: true
       style: simple
       explode: false
       schema:
         type: string
-    CorporateLeaseOutcomeID:
-      name: corporateleaseoutcomeId
+    AdministerID:
+      name: administerId
       in: path
       required: true
       style: simple

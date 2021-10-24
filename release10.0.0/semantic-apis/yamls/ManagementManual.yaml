@@ -961,6 +961,48 @@ components:
           type: string
         ManagementManualSpecificationServiceProviderReference:
           type: object
+    LegalandRegulatoryObligationsandGuidelines:
+      type: object
+      properties:
+        LegalandRegulatoryObligationsandGuidelinesPreconditions:
+          type: string
+        LegalandRegulatoryObligationsandGuidelinesSpecificationSchedule:
+          type: string
+        LegalandRegulatoryObligationsandGuidelinesVersionNumber:
+          type: string
+        LegalandRegulatoryObligationsandGuidelines:
+          type: object
+        LegalandRegulatoryObligationsandGuidelinesServiceType:
+          type: string
+        LegalandRegulatoryObligationsandGuidelinesServiceDescription:
+          type: string
+        LegalandRegulatoryObligationsandGuidelinesServiceInputsandOuputs:
+          type: string
+        LegalandRegulatoryObligationsandGuidelinesServiceWorkProduct:
+          type: string
+        LegalandRegulatoryObligationsandGuidelinesServiceName:
+          type: string
+    CompanyMissionandPolicies:
+      type: object
+      properties:
+        CompanyMissionandPoliciesPreconditions:
+          type: string
+        CompanyMissionandPoliciesSpecificationSchedule:
+          type: string
+        CompanyMissionandPoliciesVersionNumber:
+          type: string
+        CompanyMissionandPolicies:
+          type: object
+        CompanyMissionandPoliciesServiceType:
+          type: string
+        CompanyMissionandPoliciesServiceDescription:
+          type: string
+        CompanyMissionandPoliciesServiceInputsandOuputs:
+          type: string
+        CompanyMissionandPoliciesServiceWorkProduct:
+          type: string
+        CompanyMissionandPoliciesServiceName:
+          type: string
     OperationalandProductionProceduresandGuidelines:
       type: object
       properties:
@@ -1003,27 +1045,6 @@ components:
           type: string
         OperationalSecurityProceduresandGuidelinesServiceName:
           type: string
-    LegalandRegulatoryObligationsandGuidelines:
-      type: object
-      properties:
-        LegalandRegulatoryObligationsandGuidelinesPreconditions:
-          type: string
-        LegalandRegulatoryObligationsandGuidelinesSpecificationSchedule:
-          type: string
-        LegalandRegulatoryObligationsandGuidelinesVersionNumber:
-          type: string
-        LegalandRegulatoryObligationsandGuidelines:
-          type: object
-        LegalandRegulatoryObligationsandGuidelinesServiceType:
-          type: string
-        LegalandRegulatoryObligationsandGuidelinesServiceDescription:
-          type: string
-        LegalandRegulatoryObligationsandGuidelinesServiceInputsandOuputs:
-          type: string
-        LegalandRegulatoryObligationsandGuidelinesServiceWorkProduct:
-          type: string
-        LegalandRegulatoryObligationsandGuidelinesServiceName:
-          type: string
     ManagementManualOutcome:
       type: object
       properties:
@@ -1034,48 +1055,6 @@ components:
         ManagementManualWorkProduct:
           type: string
         ManagementManualImpactAnalysis:
-          type: string
-    CompanyMissionandPolicies:
-      type: object
-      properties:
-        CompanyMissionandPoliciesPreconditions:
-          type: string
-        CompanyMissionandPoliciesSpecificationSchedule:
-          type: string
-        CompanyMissionandPoliciesVersionNumber:
-          type: string
-        CompanyMissionandPolicies:
-          type: object
-        CompanyMissionandPoliciesServiceType:
-          type: string
-        CompanyMissionandPoliciesServiceDescription:
-          type: string
-        CompanyMissionandPoliciesServiceInputsandOuputs:
-          type: string
-        CompanyMissionandPoliciesServiceWorkProduct:
-          type: string
-        CompanyMissionandPoliciesServiceName:
-          type: string
-    StaffManagementProceduresandGuidelines:
-      type: object
-      properties:
-        StaffManagementProceduresandGuidelinesPreconditions:
-          type: string
-        StaffManagementProceduresandGuidelinesSpecificationSchedule:
-          type: string
-        StaffManagementProceduresandGuidelinesVersionNumber:
-          type: string
-        StaffManagementProceduresandGuidelines:
-          type: object
-        StaffManagementProceduresandGuidelinesServiceType:
-          type: string
-        StaffManagementProceduresandGuidelinesServiceDescription:
-          type: string
-        StaffManagementProceduresandGuidelinesServiceInputsandOuputs:
-          type: string
-        StaffManagementProceduresandGuidelinesServiceWorkProduct:
-          type: string
-        StaffManagementProceduresandGuidelinesServiceName:
           type: string
     EmploymentRelatedProceduresandGuidelines:
       type: object
@@ -1098,6 +1077,27 @@ components:
           type: string
         EmploymentRelatedProceduresandGuidelinesServiceName:
           type: string
+    StaffManagementProceduresandGuidelines:
+      type: object
+      properties:
+        StaffManagementProceduresandGuidelinesPreconditions:
+          type: string
+        StaffManagementProceduresandGuidelinesSpecificationSchedule:
+          type: string
+        StaffManagementProceduresandGuidelinesVersionNumber:
+          type: string
+        StaffManagementProceduresandGuidelines:
+          type: object
+        StaffManagementProceduresandGuidelinesServiceType:
+          type: string
+        StaffManagementProceduresandGuidelinesServiceDescription:
+          type: string
+        StaffManagementProceduresandGuidelinesServiceInputsandOuputs:
+          type: string
+        StaffManagementProceduresandGuidelinesServiceWorkProduct:
+          type: string
+        StaffManagementProceduresandGuidelinesServiceName:
+          type: string
     HTTPError:
       type: object
       properties:
@@ -1110,6 +1110,22 @@ components:
   parameters:
     ManagementManualID:
       name: managementmanualId
+      in: path
+      required: true
+      style: simple
+      explode: false
+      schema:
+        type: string
+    LegalandRegulatoryObligationsandGuidelinesID:
+      name: legalandregulatoryobligationsandguidelinesId
+      in: path
+      required: true
+      style: simple
+      explode: false
+      schema:
+        type: string
+    CompanyMissionandPoliciesID:
+      name: companymissionandpoliciesId
       in: path
       required: true
       style: simple
@@ -1132,14 +1148,6 @@ components:
       explode: false
       schema:
         type: string
-    LegalandRegulatoryObligationsandGuidelinesID:
-      name: legalandregulatoryobligationsandguidelinesId
-      in: path
-      required: true
-      style: simple
-      explode: false
-      schema:
-        type: string
     ManagementManualOutcomeID:
       name: managementmanualoutcomeId
       in: path
@@ -1148,8 +1156,8 @@ components:
       explode: false
       schema:
         type: string
-    CompanyMissionandPoliciesID:
-      name: companymissionandpoliciesId
+    EmploymentRelatedProceduresandGuidelinesID:
+      name: employmentrelatedproceduresandguidelinesId
       in: path
       required: true
       style: simple
@@ -1158,14 +1166,6 @@ components:
         type: string
     StaffManagementProceduresandGuidelinesID:
       name: staffmanagementproceduresandguidelinesId
-      in: path
-      required: true
-      style: simple
-      explode: false
-      schema:
-        type: string
-    EmploymentRelatedProceduresandGuidelinesID:
-      name: employmentrelatedproceduresandguidelinesId
       in: path
       required: true
       style: simple

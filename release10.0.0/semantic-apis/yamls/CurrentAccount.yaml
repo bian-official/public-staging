@@ -868,6 +868,55 @@ components:
           type: string
         InterestAccrualCharge:
           type: string
+    Payments:
+      type: object
+      properties:
+        PaymentType:
+          type: string
+        PaymentDefinition:
+          type: string
+        PaymentProcessinngOptionDefinition:
+          type: string
+        PaymentProcessingOptionSetting:
+          type: string
+        PaymentConfiguration:
+          type: string
+        PaymentSchedule:
+          type: string
+        DirectDebitMandateReference:
+          type: object
+        DirectDebitMandateSettings:
+          type: string
+        BillPayMandateReference:
+          type: object
+        BilPayMandateSettings:
+          type: string
+        PaymentTransaction:
+          type: string
+        PaymentTransactionType:
+          type: string
+        PaymentTransactionPayeeReference:
+          type: object
+        PaymentTransactionPayeeAccountReference:
+          type: object
+        PaymentTransactionPayeeBankReference:
+          type: object
+        PaymentTransactionAmount:
+          type: number
+        PaymentTransactionFeeType:
+          type: string
+        PaymentTransactionFeeCharge:
+          type: string
+        PaymentTransactionDate:
+          type: string
+        PaymentTransactionPaymentMechanism:
+          type: string
+        PaymentTransactionPaymentPurpose:
+          type: string
+        PaymentTransactionBankBranch/LocationReference:
+          type: object
+        PaymentTransactionStatus:
+          type: string
     DepositsandWithdrawals:
       type: object
       properties:
@@ -926,6 +975,46 @@ components:
           type: number
         AccountSweepExecutionDate:
           type: string
+    IssuedDevice:
+      type: object
+      properties:
+        IssuedInventoryType:
+          type: string
+        IssuedInventoryDescription:
+          type: string
+        IssuedInventoryOptionDefinition:
+          type: string
+        IssuedInventoryOptionSetting:
+          type: string
+        IssuedInventoryPropertyType:
+          type: string
+        IssuedInventoryPropertyValue:
+          type: string
+        IssuedInventoryStatus:
+          type: string
+    AccountLien:
+      type: object
+      properties:
+        LienType:
+          type: string
+        LienDefinition:
+          type: string
+        LienProcessingOption:
+          type: string
+        LienRecord:
+          type: string
+        LienOriginator:
+          type: string
+        LienPurpose:
+          type: string
+        LienAmount:
+          type: number
+        LienStartDate:
+          type: string
+        LienExpiryDate:
+          type: string
+        LienStatus:
+          type: string
     ServiceFees:
       type: object
       properties:
@@ -958,95 +1047,6 @@ components:
         AccrualFeeType:
           type: string
         AccrualFeeCharge:
-          type: string
-    AccountLien:
-      type: object
-      properties:
-        LienType:
-          type: string
-        LienDefinition:
-          type: string
-        LienProcessingOption:
-          type: string
-        LienRecord:
-          type: string
-        LienOriginator:
-          type: string
-        LienPurpose:
-          type: string
-        LienAmount:
-          type: number
-        LienStartDate:
-          type: string
-        LienExpiryDate:
-          type: string
-        LienStatus:
-          type: string
-    IssuedDevice:
-      type: object
-      properties:
-        IssuedInventoryType:
-          type: string
-        IssuedInventoryDescription:
-          type: string
-        IssuedInventoryOptionDefinition:
-          type: string
-        IssuedInventoryOptionSetting:
-          type: string
-        IssuedInventoryPropertyType:
-          type: string
-        IssuedInventoryPropertyValue:
-          type: string
-        IssuedInventoryStatus:
-          type: string
-    Payments:
-      type: object
-      properties:
-        PaymentType:
-          type: string
-        PaymentDefinition:
-          type: string
-        PaymentProcessinngOptionDefinition:
-          type: string
-        PaymentProcessingOptionSetting:
-          type: string
-        PaymentConfiguration:
-          type: string
-        PaymentSchedule:
-          type: string
-        DirectDebitMandateReference:
-          type: object
-        DirectDebitMandateSettings:
-          type: string
-        BillPayMandateReference:
-          type: object
-        BilPayMandateSettings:
-          type: string
-        PaymentTransaction:
-          type: string
-        PaymentTransactionType:
-          type: string
-        PaymentTransactionPayeeReference:
-          type: object
-        PaymentTransactionPayeeAccountReference:
-          type: object
-        PaymentTransactionPayeeBankReference:
-          type: object
-        PaymentTransactionAmount:
-          type: number
-        PaymentTransactionFeeType:
-          type: string
-        PaymentTransactionFeeCharge:
-          type: string
-        PaymentTransactionDate:
-          type: string
-        PaymentTransactionPaymentMechanism:
-          type: string
-        PaymentTransactionPaymentPurpose:
-          type: string
-        PaymentTransactionBankBranch/LocationReference:
-          type: object
-        PaymentTransactionStatus:
           type: string
     HTTPError:
       type: object
@@ -1449,6 +1449,14 @@ components:
       explode: false
       schema:
         type: string
+    PaymentsID:
+      name: paymentsId
+      in: path
+      required: true
+      style: simple
+      explode: false
+      schema:
+        type: string
     DepositsandWithdrawalsID:
       name: depositsandwithdrawalsId
       in: path
@@ -1465,8 +1473,8 @@ components:
       explode: false
       schema:
         type: string
-    ServiceFeesID:
-      name: servicefeesId
+    IssuedDeviceID:
+      name: issueddeviceId
       in: path
       required: true
       style: simple
@@ -1481,16 +1489,8 @@ components:
       explode: false
       schema:
         type: string
-    IssuedDeviceID:
-      name: issueddeviceId
-      in: path
-      required: true
-      style: simple
-      explode: false
-      schema:
-        type: string
-    PaymentsID:
-      name: paymentsId
+    ServiceFeesID:
+      name: servicefeesId
       in: path
       required: true
       style: simple

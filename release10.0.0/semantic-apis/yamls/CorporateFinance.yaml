@@ -1124,14 +1124,14 @@ components:
           type: string
         CorporateFinanceWorkforceAssignment:
           type: string
-    StrategicFundingTopic:
+    CapitalStructuringTopic:
       type: object
       properties:
         CorporateFinanceServicesAdviceReference:
           type: object
-        StrategicFundingTopicReference:
+        CapitalStructuringTopicReference:
           type: object
-        StrategicFundingTopicType:
+        CapitalStructuringTopicType:
           type: string
         BusinessService:
           type: object
@@ -1143,14 +1143,14 @@ components:
           type: object
         Schedule:
           type: object
-    CapitalStructuringTopic:
+    StrategicFundingTopic:
       type: object
       properties:
         CorporateFinanceServicesAdviceReference:
           type: object
-        CapitalStructuringTopicReference:
+        StrategicFundingTopicReference:
           type: object
-        CapitalStructuringTopicType:
+        StrategicFundingTopicType:
           type: string
         BusinessService:
           type: object
@@ -1226,16 +1226,16 @@ components:
       explode: false
       schema:
         type: string
-    StrategicFundingTopicID:
-      name: strategicfundingtopicId
+    CapitalStructuringTopicID:
+      name: capitalstructuringtopicId
       in: path
       required: true
       style: simple
       explode: false
       schema:
         type: string
-    CapitalStructuringTopicID:
-      name: capitalstructuringtopicId
+    StrategicFundingTopicID:
+      name: strategicfundingtopicId
       in: path
       required: true
       style: simple

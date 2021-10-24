@@ -741,24 +741,12 @@ components:
           type: string
         ContentCaptureandClassificationServiceName:
           type: string
-    IndexingandPublication:
+    KnowledgeExchangeOutcome:
       type: object
       properties:
-        IndexingandPublicationPreconditions:
+        KnowledgeExchangeIncident:
           type: string
-        IndexingandPublicationFunctionSchedule:
-          type: string
-        ContentIndexingandPublication:
-          type: object
-        ContentIndexingandPublicationServiceType:
-          type: string
-        ContentIndexingandPublicationServiceDescription:
-          type: string
-        ContentIndexingandPublicationServiceInputsandOuputs:
-          type: string
-        ContentIndexingandPublicationServiceWorkProduct:
-          type: string
-        ContentIndexingandPublicationServiceName:
+        KnowledgeExchangeProvision:
           type: string
     Archiving:
       type: object
@@ -778,6 +766,25 @@ components:
         ContentArchivingServiceWorkProduct:
           type: string
         ContentArchivingServiceName:
+          type: string
+    IndexingandPublication:
+      type: object
+      properties:
+        IndexingandPublicationPreconditions:
+          type: string
+        IndexingandPublicationFunctionSchedule:
+          type: string
+        ContentIndexingandPublication:
+          type: object
+        ContentIndexingandPublicationServiceType:
+          type: string
+        ContentIndexingandPublicationServiceDescription:
+          type: string
+        ContentIndexingandPublicationServiceInputsandOuputs:
+          type: string
+        ContentIndexingandPublicationServiceWorkProduct:
+          type: string
+        ContentIndexingandPublicationServiceName:
           type: string
     Review,RefinementandEditing:
       type: object
@@ -817,13 +824,6 @@ components:
           type: string
         ContentMaintenanceandAccessAdministrationServiceName:
           type: string
-    KnowledgeExchangeOutcome:
-      type: object
-      properties:
-        KnowledgeExchangeIncident:
-          type: string
-        KnowledgeExchangeProvision:
-          type: string
     HTTPError:
       type: object
       properties:
@@ -850,8 +850,8 @@ components:
       explode: false
       schema:
         type: string
-    IndexingandPublicationID:
-      name: indexingandpublicationId
+    KnowledgeExchangeOutcomeID:
+      name: knowledgeexchangeoutcomeId
       in: path
       required: true
       style: simple
@@ -860,6 +860,14 @@ components:
         type: string
     ArchivingID:
       name: archivingId
+      in: path
+      required: true
+      style: simple
+      explode: false
+      schema:
+        type: string
+    IndexingandPublicationID:
+      name: indexingandpublicationId
       in: path
       required: true
       style: simple
@@ -876,14 +884,6 @@ components:
         type: string
     MaintenanceandAccessAdministrationID:
       name: maintenanceandaccessadministrationId
-      in: path
-      required: true
-      style: simple
-      explode: false
-      schema:
-        type: string
-    KnowledgeExchangeOutcomeID:
-      name: knowledgeexchangeoutcomeId
       in: path
       required: true
       style: simple

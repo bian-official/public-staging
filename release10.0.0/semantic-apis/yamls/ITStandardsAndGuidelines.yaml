@@ -1171,27 +1171,6 @@ components:
           type: string
         ProductionEnvironmentandSupportServicesServiceName:
           type: string
-    DevelopmentToolingandEnvironment:
-      type: object
-      properties:
-        DevelopmentToolingandEnvironmentPreconditions:
-          type: string
-        DevelopmentToolingandEnvironmentSpecificationSchedule:
-          type: string
-        DevelopmentToolingandEnvironmentVersionNumber:
-          type: string
-        DevelopmentToolingandEnvironment:
-          type: object
-        DevelopmentToolingandEnvironmentServiceType:
-          type: string
-        DevelopmentToolingandEnvironmentServiceDescription:
-          type: string
-        DevelopmentToolingandEnvironmentServiceInputsandOuputs:
-          type: string
-        DevelopmentToolingandEnvironmentServiceWorkProduct:
-          type: string
-        DevelopmentToolingandEnvironmentServiceName:
-          type: string
     ProductionPlatformsandInfrastructure:
       type: object
       properties:
@@ -1234,6 +1213,38 @@ components:
           type: string
         ITPoliciesandGuidelinesServiceName:
           type: string
+    DevelopmentToolingandEnvironment:
+      type: object
+      properties:
+        DevelopmentToolingandEnvironmentPreconditions:
+          type: string
+        DevelopmentToolingandEnvironmentSpecificationSchedule:
+          type: string
+        DevelopmentToolingandEnvironmentVersionNumber:
+          type: string
+        DevelopmentToolingandEnvironment:
+          type: object
+        DevelopmentToolingandEnvironmentServiceType:
+          type: string
+        DevelopmentToolingandEnvironmentServiceDescription:
+          type: string
+        DevelopmentToolingandEnvironmentServiceInputsandOuputs:
+          type: string
+        DevelopmentToolingandEnvironmentServiceWorkProduct:
+          type: string
+        DevelopmentToolingandEnvironmentServiceName:
+          type: string
+    ITStandardsAndGuidelinesOutcome:
+      type: object
+      properties:
+        ITStandardsAndGuidelinesTask:
+          type: string
+        ITStandardsAndGuidelinesDesign:
+          type: string
+        ITStandardsAndGuidelinesWorkProduct:
+          type: string
+        ITStandardsAndGuidelinesImpactAnalysis:
+          type: string
     ProductTestingandDeploymentMechanisms:
       type: object
       properties:
@@ -1254,17 +1265,6 @@ components:
         ProductTestingandDeploymentMechanismsServiceWorkProduct:
           type: string
         ProductTestingandDeploymentMechanismsServiceName:
-          type: string
-    ITStandardsAndGuidelinesOutcome:
-      type: object
-      properties:
-        ITStandardsAndGuidelinesTask:
-          type: string
-        ITStandardsAndGuidelinesDesign:
-          type: string
-        ITStandardsAndGuidelinesWorkProduct:
-          type: string
-        ITStandardsAndGuidelinesImpactAnalysis:
           type: string
     HTTPError:
       type: object
@@ -1292,14 +1292,6 @@ components:
       explode: false
       schema:
         type: string
-    DevelopmentToolingandEnvironmentID:
-      name: developmenttoolingandenvironmentId
-      in: path
-      required: true
-      style: simple
-      explode: false
-      schema:
-        type: string
     ProductionPlatformsandInfrastructureID:
       name: productionplatformsandinfrastructureId
       in: path
@@ -1316,8 +1308,8 @@ components:
       explode: false
       schema:
         type: string
-    ProductTestingandDeploymentMechanismsID:
-      name: producttestinganddeploymentmechanismsId
+    DevelopmentToolingandEnvironmentID:
+      name: developmenttoolingandenvironmentId
       in: path
       required: true
       style: simple
@@ -1326,6 +1318,14 @@ components:
         type: string
     ITStandardsAndGuidelinesOutcomeID:
       name: itstandardsandguidelinesoutcomeId
+      in: path
+      required: true
+      style: simple
+      explode: false
+      schema:
+        type: string
+    ProductTestingandDeploymentMechanismsID:
+      name: producttestinganddeploymentmechanismsId
       in: path
       required: true
       style: simple

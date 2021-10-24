@@ -813,6 +813,25 @@ components:
           type: object
         BrokeredProductManagementPlanSubjectMatter:
           type: object
+    ProductionTroubleshootingDuty:
+      type: object
+      properties:
+        Preconditions:
+          type: object
+        BusinessUnit/EmployeeReference:
+          type: object
+        Schedule:
+          type: object
+        BusinessService:
+          type: object
+        Postconditions:
+          type: object
+        BrokeredProductManagementPlanReference:
+          type: string
+        ProductionTroubleshootingDutyReference:
+          type: string
+        ProductionTroubleshootingDutyType:
+          type: string
     ServiceLevelAgreementOversightDuty:
       type: object
       properties:
@@ -851,25 +870,6 @@ components:
           type: string
         ProductionPerformanceAssessmentDutyType:
           type: string
-    ProductionTroubleshootingDuty:
-      type: object
-      properties:
-        Preconditions:
-          type: object
-        BusinessUnit/EmployeeReference:
-          type: object
-        Schedule:
-          type: object
-        BusinessService:
-          type: object
-        Postconditions:
-          type: object
-        BrokeredProductManagementPlanReference:
-          type: string
-        ProductionTroubleshootingDutyReference:
-          type: string
-        ProductionTroubleshootingDutyType:
-          type: string
     BrokeredProductOutcome:
       type: object
       properties:
@@ -901,6 +901,14 @@ components:
       explode: false
       schema:
         type: string
+    ProductionTroubleshootingDutyID:
+      name: productiontroubleshootingdutyId
+      in: path
+      required: true
+      style: simple
+      explode: false
+      schema:
+        type: string
     ServiceLevelAgreementOversightDutyID:
       name: servicelevelagreementoversightdutyId
       in: path
@@ -911,14 +919,6 @@ components:
         type: string
     ProductionPerformanceAssessmentDutyID:
       name: productionperformanceassessmentdutyId
-      in: path
-      required: true
-      style: simple
-      explode: false
-      schema:
-        type: string
-    ProductionTroubleshootingDutyID:
-      name: productiontroubleshootingdutyId
       in: path
       required: true
       style: simple

@@ -1359,25 +1359,6 @@ components:
           type: string
         UnitTrustAdministrativePlanDescription:
           type: string
-    FundAccountingRoutine:
-      type: object
-      properties:
-        Preconditions:
-          type: object
-        BusinessUnit/EmployeeReference:
-          type: object
-        Schedule:
-          type: object
-        BusinessService:
-          type: object
-        Postconditions:
-          type: object
-        UnitTrustAdministrativePlanReference:
-          type: string
-        FundAccountingRoutineReference:
-          type: string
-        FundAccountingRoutineType:
-          type: string
     FundManagementFeeRoutine:
       type: object
       properties:
@@ -1397,7 +1378,7 @@ components:
           type: string
         FundManagementFeeRoutineType:
           type: string
-    FundInvestor,MiddleandBackOfficeServiceRoutine:
+    FundFinancialReportingRoutine:
       type: object
       properties:
         Preconditions:
@@ -1412,28 +1393,9 @@ components:
           type: object
         UnitTrustAdministrativePlanReference:
           type: string
-        FundInvestor,MiddleandBackOfficeServiceRoutineReference:
+        FundFinancialReportingRoutineReference:
           type: string
-        FundInvestor,MiddleandBackOfficeServiceRoutineType:
-          type: string
-    FundTaxAdministrationRoutine:
-      type: object
-      properties:
-        Preconditions:
-          type: object
-        BusinessUnit/EmployeeReference:
-          type: object
-        Schedule:
-          type: object
-        BusinessService:
-          type: object
-        Postconditions:
-          type: object
-        UnitTrustAdministrativePlanReference:
-          type: string
-        FundTaxAdministrationRoutineReference:
-          type: string
-        FundTaxAdministrationRoutineType:
+        FundFinancialReportingRoutineType:
           type: string
     FundEnrolmentRoutine:
       type: object
@@ -1454,7 +1416,7 @@ components:
           type: string
         FundEnrolmentRoutineType:
           type: string
-    FundFinancialReportingRoutine:
+    FundAccountingRoutine:
       type: object
       properties:
         Preconditions:
@@ -1469,9 +1431,47 @@ components:
           type: object
         UnitTrustAdministrativePlanReference:
           type: string
-        FundFinancialReportingRoutineReference:
+        FundAccountingRoutineReference:
           type: string
-        FundFinancialReportingRoutineType:
+        FundAccountingRoutineType:
+          type: string
+    FundTaxAdministrationRoutine:
+      type: object
+      properties:
+        Preconditions:
+          type: object
+        BusinessUnit/EmployeeReference:
+          type: object
+        Schedule:
+          type: object
+        BusinessService:
+          type: object
+        Postconditions:
+          type: object
+        UnitTrustAdministrativePlanReference:
+          type: string
+        FundTaxAdministrationRoutineReference:
+          type: string
+        FundTaxAdministrationRoutineType:
+          type: string
+    FundInvestor,MiddleandBackOfficeServiceRoutine:
+      type: object
+      properties:
+        Preconditions:
+          type: object
+        BusinessUnit/EmployeeReference:
+          type: object
+        Schedule:
+          type: object
+        BusinessService:
+          type: object
+        Postconditions:
+          type: object
+        UnitTrustAdministrativePlanReference:
+          type: string
+        FundInvestor,MiddleandBackOfficeServiceRoutineReference:
+          type: string
+        FundInvestor,MiddleandBackOfficeServiceRoutineType:
           type: string
     UnitTrustAdministrationOutcome:
       type: object
@@ -1502,14 +1502,6 @@ components:
       explode: false
       schema:
         type: string
-    FundAccountingRoutineID:
-      name: fundaccountingroutineId
-      in: path
-      required: true
-      style: simple
-      explode: false
-      schema:
-        type: string
     FundManagementFeeRoutineID:
       name: fundmanagementfeeroutineId
       in: path
@@ -1518,16 +1510,8 @@ components:
       explode: false
       schema:
         type: string
-    FundInvestor,MiddleandBackOfficeServiceRoutineID:
-      name: fundinvestor,middleandbackofficeserviceroutineId
-      in: path
-      required: true
-      style: simple
-      explode: false
-      schema:
-        type: string
-    FundTaxAdministrationRoutineID:
-      name: fundtaxadministrationroutineId
+    FundFinancialReportingRoutineID:
+      name: fundfinancialreportingroutineId
       in: path
       required: true
       style: simple
@@ -1542,8 +1526,24 @@ components:
       explode: false
       schema:
         type: string
-    FundFinancialReportingRoutineID:
-      name: fundfinancialreportingroutineId
+    FundAccountingRoutineID:
+      name: fundaccountingroutineId
+      in: path
+      required: true
+      style: simple
+      explode: false
+      schema:
+        type: string
+    FundTaxAdministrationRoutineID:
+      name: fundtaxadministrationroutineId
+      in: path
+      required: true
+      style: simple
+      explode: false
+      schema:
+        type: string
+    FundInvestor,MiddleandBackOfficeServiceRoutineID:
+      name: fundinvestor,middleandbackofficeserviceroutineId
       in: path
       required: true
       style: simple

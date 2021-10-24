@@ -601,6 +601,27 @@ components:
           type: object
         ProductandServiceAssessmentRequesterReference:
           type: object
+    UsabilityChecks:
+      type: object
+      properties:
+        UsabilityChecksPreconditions:
+          type: string
+        UsabilityChecksAnalysisSchedule:
+          type: string
+        UsabilityChecksVersionNumber:
+          type: string
+        UsabilityChecks:
+          type: object
+        UsabilityChecksServiceType:
+          type: string
+        UsabilityChecksServiceDescription:
+          type: string
+        UsabilityChecksServiceInputsandOuputs:
+          type: string
+        UsabilityChecksServiceWorkProduct:
+          type: string
+        UsabilityChecksServiceName:
+          type: string
     ResiliencyandPerformanceChecks:
       type: object
       properties:
@@ -621,27 +642,6 @@ components:
         ResiliencyandPerformanceChecksServiceWorkProduct:
           type: string
         ResiliencyandPerformanceChecksServiceName:
-          type: string
-    FunctionalConsistencyChecks:
-      type: object
-      properties:
-        FunctionalConsistencyChecksPreconditions:
-          type: string
-        FunctionalConsistencyChecksAnalysisSchedule:
-          type: string
-        FunctionalConsistencyChecksVersionNumber:
-          type: string
-        FunctionalConsistencyChecks:
-          type: object
-        FunctionalConsistencyChecksServiceType:
-          type: string
-        FunctionalConsistencyChecksServiceDescription:
-          type: string
-        FunctionalConsistencyChecksServiceInputsandOuputs:
-          type: string
-        FunctionalConsistencyChecksServiceWorkProduct:
-          type: string
-        FunctionalConsistencyChecksServiceName:
           type: string
     ProcessingErrorandIntegrityChecks:
       type: object
@@ -664,26 +664,26 @@ components:
           type: string
         ProcessingErrorandIntegrityChecksServiceName:
           type: string
-    UsabilityChecks:
+    FunctionalConsistencyChecks:
       type: object
       properties:
-        UsabilityChecksPreconditions:
+        FunctionalConsistencyChecksPreconditions:
           type: string
-        UsabilityChecksAnalysisSchedule:
+        FunctionalConsistencyChecksAnalysisSchedule:
           type: string
-        UsabilityChecksVersionNumber:
+        FunctionalConsistencyChecksVersionNumber:
           type: string
-        UsabilityChecks:
+        FunctionalConsistencyChecks:
           type: object
-        UsabilityChecksServiceType:
+        FunctionalConsistencyChecksServiceType:
           type: string
-        UsabilityChecksServiceDescription:
+        FunctionalConsistencyChecksServiceDescription:
           type: string
-        UsabilityChecksServiceInputsandOuputs:
+        FunctionalConsistencyChecksServiceInputsandOuputs:
           type: string
-        UsabilityChecksServiceWorkProduct:
+        FunctionalConsistencyChecksServiceWorkProduct:
           type: string
-        UsabilityChecksServiceName:
+        FunctionalConsistencyChecksServiceName:
           type: string
     ProductQualityAssuranceOutcome:
       type: object
@@ -710,16 +710,16 @@ components:
       explode: false
       schema:
         type: string
-    ResiliencyandPerformanceChecksID:
-      name: resiliencyandperformancechecksId
+    UsabilityChecksID:
+      name: usabilitychecksId
       in: path
       required: true
       style: simple
       explode: false
       schema:
         type: string
-    FunctionalConsistencyChecksID:
-      name: functionalconsistencychecksId
+    ResiliencyandPerformanceChecksID:
+      name: resiliencyandperformancechecksId
       in: path
       required: true
       style: simple
@@ -734,8 +734,8 @@ components:
       explode: false
       schema:
         type: string
-    UsabilityChecksID:
-      name: usabilitychecksId
+    FunctionalConsistencyChecksID:
+      name: functionalconsistencychecksId
       in: path
       required: true
       style: simple

@@ -903,21 +903,6 @@ components:
           type: string
         TradeMatchingOperatingSessionReference:
           type: string
-    TransactionConfirmation/AffirmationFunction:
-      type: object
-      properties:
-        Preconditions:
-          type: object
-        Schedule:
-          type: object
-        BusinessService:
-          type: object
-        TradeMatchingOperatingSessionReference:
-          type: string
-        TransactionConfirmation/AffirmationFunctionReference:
-          type: string
-        TransactionConfirmation/AffirmationFunctionType:
-          type: string
     UnmatchedMarketTradeEscalationFunction:
       type: object
       properties:
@@ -932,6 +917,21 @@ components:
         UnmatchedMarketTradeEscalationFunctionReference:
           type: string
         UnmatchedMarketTradeEscalationFunctionType:
+          type: string
+    TransactionConfirmation/AffirmationFunction:
+      type: object
+      properties:
+        Preconditions:
+          type: object
+        Schedule:
+          type: object
+        BusinessService:
+          type: object
+        TradeMatchingOperatingSessionReference:
+          type: string
+        TransactionConfirmation/AffirmationFunctionReference:
+          type: string
+        TransactionConfirmation/AffirmationFunctionType:
           type: string
     TransactionReportingFunction:
       type: object
@@ -973,16 +973,16 @@ components:
       explode: false
       schema:
         type: string
-    TransactionConfirmation/AffirmationFunctionID:
-      name: transactionconfirmation/affirmationfunctionId
+    UnmatchedMarketTradeEscalationFunctionID:
+      name: unmatchedmarkettradeescalationfunctionId
       in: path
       required: true
       style: simple
       explode: false
       schema:
         type: string
-    UnmatchedMarketTradeEscalationFunctionID:
-      name: unmatchedmarkettradeescalationfunctionId
+    TransactionConfirmation/AffirmationFunctionID:
+      name: transactionconfirmation/affirmationfunctionId
       in: path
       required: true
       style: simple

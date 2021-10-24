@@ -608,13 +608,11 @@ components:
           type: string
         CustomerSurveyProcedureResult:
           type: string
-    ReviewerSelection:
+    SurveyAnalysis:
       type: object
       properties:
-        CustomerSurveySelectionCriteria:
+        CustomerSurveyProcedureSurveyAnalysisResult:
           type: string
-        CustomerSurveyCandidateReference:
-          type: object
     Definition:
       type: object
       properties:
@@ -626,6 +624,13 @@ components:
           type: string
         CustomerSurveyDesignWorkTaskResult:
           type: string
+    ReviewerSelection:
+      type: object
+      properties:
+        CustomerSurveySelectionCriteria:
+          type: string
+        CustomerSurveyCandidateReference:
+          type: object
     Execution:
       type: object
       properties:
@@ -640,11 +645,6 @@ components:
         CustomerSurveyExecutionWorkTaskResult:
           type: string
         CustomerSurveyExecutionWorkTaskDate-Time:
-          type: string
-    SurveyAnalysis:
-      type: object
-      properties:
-        CustomerSurveyProcedureSurveyAnalysisResult:
           type: string
     HTTPError:
       type: object
@@ -979,8 +979,8 @@ components:
       explode: false
       schema:
         type: string
-    ReviewerSelectionID:
-      name: reviewerselectionId
+    SurveyAnalysisID:
+      name: surveyanalysisId
       in: path
       required: true
       style: simple
@@ -995,16 +995,16 @@ components:
       explode: false
       schema:
         type: string
-    ExecutionID:
-      name: executionId
+    ReviewerSelectionID:
+      name: reviewerselectionId
       in: path
       required: true
       style: simple
       explode: false
       schema:
         type: string
-    SurveyAnalysisID:
-      name: surveyanalysisId
+    ExecutionID:
+      name: executionId
       in: path
       required: true
       style: simple

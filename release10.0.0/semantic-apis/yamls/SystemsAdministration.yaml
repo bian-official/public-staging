@@ -793,29 +793,6 @@ components:
           type: string
         AssuranceCollateralItemAssuranceServiceName:
           type: string
-    Configuration:
-      type: object
-      properties:
-        ConfigurationPreconditions:
-          type: string
-        ConfigurationBusinessUnit/EmployeeReference:
-          type: object
-        ConfigurationWorkSchedule:
-          type: string
-        SystemsConfigurationAdministration:
-          type: object
-        ConfigurationPostconditions:
-          type: string
-        ConfigurationSystemsConfigurationAdministrationServiceType:
-          type: string
-        ConfigurationSystemsConfigurationAdministrationServiceDescription:
-          type: string
-        ConfigurationSystemsConfigurationAdministrationServiceInputsandOuputs:
-          type: string
-        ConfigurationSystemsConfigurationAdministrationServiceWorkProduct:
-          type: string
-        ConfigurationSystemsConfigurationAdministrationServiceName:
-          type: string
     CapacityPlanningandResilience:
       type: object
       properties:
@@ -838,6 +815,29 @@ components:
         CapacityPlanningandResilienceCapacityPlanningandResilienceServiceWorkProduct:
           type: string
         CapacityPlanningandResilienceCapacityPlanningandResilienceServiceName:
+          type: string
+    Configuration:
+      type: object
+      properties:
+        ConfigurationPreconditions:
+          type: string
+        ConfigurationBusinessUnit/EmployeeReference:
+          type: object
+        ConfigurationWorkSchedule:
+          type: string
+        SystemsConfigurationAdministration:
+          type: object
+        ConfigurationPostconditions:
+          type: string
+        ConfigurationSystemsConfigurationAdministrationServiceType:
+          type: string
+        ConfigurationSystemsConfigurationAdministrationServiceDescription:
+          type: string
+        ConfigurationSystemsConfigurationAdministrationServiceInputsandOuputs:
+          type: string
+        ConfigurationSystemsConfigurationAdministrationServiceWorkProduct:
+          type: string
+        ConfigurationSystemsConfigurationAdministrationServiceName:
           type: string
     SystemsAdministrationOutcome:
       type: object
@@ -884,16 +884,16 @@ components:
       explode: false
       schema:
         type: string
-    ConfigurationID:
-      name: configurationId
+    CapacityPlanningandResilienceID:
+      name: capacityplanningandresilienceId
       in: path
       required: true
       style: simple
       explode: false
       schema:
         type: string
-    CapacityPlanningandResilienceID:
-      name: capacityplanningandresilienceId
+    ConfigurationID:
+      name: configurationId
       in: path
       required: true
       style: simple

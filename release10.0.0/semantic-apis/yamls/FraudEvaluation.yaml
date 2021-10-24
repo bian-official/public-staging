@@ -141,19 +141,19 @@ components:
           type: string
         FraudEvaluationProductionAnomalyProductionTransactionReference:
           type: object
-    Models:
-      type: object
-      properties:
-        ModelsTestResult:
-          type: string
-        ModelsTestWorkProduct:
-          type: string
     RuleSetsandDecisionTrees:
       type: object
       properties:
         RuleSetsAndDecisionTreesTestResult:
           type: string
         RuleSetsAndDecisionTreesTestWorkProduct:
+          type: string
+    Models:
+      type: object
+      properties:
+        ModelsTestResult:
+          type: string
+        ModelsTestWorkProduct:
           type: string
     HTTPError:
       type: object
@@ -173,16 +173,16 @@ components:
       explode: false
       schema:
         type: string
-    ModelsID:
-      name: modelsId
+    RuleSetsandDecisionTreesID:
+      name: rulesetsanddecisiontreesId
       in: path
       required: true
       style: simple
       explode: false
       schema:
         type: string
-    RuleSetsandDecisionTreesID:
-      name: rulesetsanddecisiontreesId
+    ModelsID:
+      name: modelsId
       in: path
       required: true
       style: simple

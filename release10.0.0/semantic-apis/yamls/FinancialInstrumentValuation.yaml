@@ -925,6 +925,25 @@ components:
           type: string
         MarketAssetValuationProcedureReference:
           type: string
+    AssetValuationWorkstep:
+      type: object
+      properties:
+        Preconditions:
+          type: object
+        BusinessUnit/EmployeeReference:
+          type: object
+        Schedule:
+          type: object
+        BusinessService:
+          type: object
+        Postconditions:
+          type: object
+        MarketAssetValuationProcedureReference:
+          type: string
+        AssetValuationWorkstepReference:
+          type: string
+        AssetValuationWorkstepType:
+          type: string
     AssetValuationApproachSelectionWorkstep:
       type: object
       properties:
@@ -963,25 +982,6 @@ components:
           type: string
         AssetValuationInformationConsolidationWorkstepType:
           type: string
-    AssetValuationWorkstep:
-      type: object
-      properties:
-        Preconditions:
-          type: object
-        BusinessUnit/EmployeeReference:
-          type: object
-        Schedule:
-          type: object
-        BusinessService:
-          type: object
-        Postconditions:
-          type: object
-        MarketAssetValuationProcedureReference:
-          type: string
-        AssetValuationWorkstepReference:
-          type: string
-        AssetValuationWorkstepType:
-          type: string
     FinancialInstrumentValuationOutcome:
       type: object
       properties:
@@ -1007,6 +1007,14 @@ components:
       explode: false
       schema:
         type: string
+    AssetValuationWorkstepID:
+      name: assetvaluationworkstepId
+      in: path
+      required: true
+      style: simple
+      explode: false
+      schema:
+        type: string
     AssetValuationApproachSelectionWorkstepID:
       name: assetvaluationapproachselectionworkstepId
       in: path
@@ -1017,14 +1025,6 @@ components:
         type: string
     AssetValuationInformationConsolidationWorkstepID:
       name: assetvaluationinformationconsolidationworkstepId
-      in: path
-      required: true
-      style: simple
-      explode: false
-      schema:
-        type: string
-    AssetValuationWorkstepID:
-      name: assetvaluationworkstepId
       in: path
       required: true
       style: simple

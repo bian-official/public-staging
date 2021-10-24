@@ -684,6 +684,17 @@ components:
           type: string
         ValidFrom-ToDate:
           type: string
+    PasswordAssignment:
+      type: object
+      properties:
+        FormatRules:
+          type: string
+        RecentValues:
+          type: string
+        PasswordValue:
+          type: string
+        UsageLog:
+          type: string
     ChequesAssignment:
       type: object
       properties:
@@ -693,14 +704,16 @@ components:
           type: string
         SequenceNumber:
           type: string
-    PasswordAssignment:
+    ReaderAssignment:
       type: object
       properties:
-        FormatRules:
+        IssuedReaderDeviceSerialNumber:
           type: string
-        RecentValues:
+        VersionNumber:
           type: string
-        PasswordValue:
+        IssueLocation:
+          type: string
+        IssuedDeviceConfiguration:
           type: string
         UsageLog:
           type: string
@@ -714,19 +727,6 @@ components:
         CustomerCustomizationReference:
           type: object
         Deliverymethod:
-          type: string
-        IssueLocation:
-          type: string
-        IssuedDeviceConfiguration:
-          type: string
-        UsageLog:
-          type: string
-    ReaderAssignment:
-      type: object
-      properties:
-        IssuedReaderDeviceSerialNumber:
-          type: string
-        VersionNumber:
           type: string
         IssueLocation:
           type: string
@@ -1320,14 +1320,6 @@ components:
       explode: false
       schema:
         type: string
-    ChequesAssignmentID:
-      name: chequesassignmentId
-      in: path
-      required: true
-      style: simple
-      explode: false
-      schema:
-        type: string
     PasswordAssignmentID:
       name: passwordassignmentId
       in: path
@@ -1336,8 +1328,8 @@ components:
       explode: false
       schema:
         type: string
-    DeviceAssignmentID:
-      name: deviceassignmentId
+    ChequesAssignmentID:
+      name: chequesassignmentId
       in: path
       required: true
       style: simple
@@ -1346,6 +1338,14 @@ components:
         type: string
     ReaderAssignmentID:
       name: readerassignmentId
+      in: path
+      required: true
+      style: simple
+      explode: false
+      schema:
+        type: string
+    DeviceAssignmentID:
+      name: deviceassignmentId
       in: path
       required: true
       style: simple

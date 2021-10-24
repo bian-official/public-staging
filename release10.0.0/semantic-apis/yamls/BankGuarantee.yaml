@@ -1529,6 +1529,40 @@ components:
           type: string
         BankGuaranteeTransactionReference:
           type: string
+    BankGuaranteeCollectionsTask:
+      type: object
+      properties:
+        Preconditions:
+          type: object
+        Schedule:
+          type: object
+        BusinessService:
+          type: object
+        Postconditions:
+          type: object
+        BankGuaranteeTransactionReference:
+          type: string
+        BankGuaranteeCollectionsTaskReference:
+          type: string
+        BankGuaranteeCollectionsTaskType:
+          type: string
+    CustomerCollateralAllocationTask:
+      type: object
+      properties:
+        Preconditions:
+          type: object
+        Schedule:
+          type: object
+        BusinessService:
+          type: object
+        Postconditions:
+          type: object
+        BankGuaranteeTransactionReference:
+          type: string
+        CustomerCollateralAllocationTaskReference:
+          type: string
+        CustomerCollateralAllocationTaskType:
+          type: string
     BankGuaranteeDefinitionandPricingTask:
       type: object
       properties:
@@ -1563,23 +1597,6 @@ components:
           type: string
         BankGuaranteeIssuanceandBookingTaskType:
           type: string
-    BankGuaranteeCollectionsTask:
-      type: object
-      properties:
-        Preconditions:
-          type: object
-        Schedule:
-          type: object
-        BusinessService:
-          type: object
-        Postconditions:
-          type: object
-        BankGuaranteeTransactionReference:
-          type: string
-        BankGuaranteeCollectionsTaskReference:
-          type: string
-        BankGuaranteeCollectionsTaskType:
-          type: string
     CustomerPaymentTask:
       type: object
       properties:
@@ -1596,23 +1613,6 @@ components:
         CustomerPaymentTaskReference:
           type: string
         CustomerPaymentTaskType:
-          type: string
-    CustomerCollateralAllocationTask:
-      type: object
-      properties:
-        Preconditions:
-          type: object
-        Schedule:
-          type: object
-        BusinessService:
-          type: object
-        Postconditions:
-          type: object
-        BankGuaranteeTransactionReference:
-          type: string
-        CustomerCollateralAllocationTaskReference:
-          type: string
-        CustomerCollateralAllocationTaskType:
           type: string
     BankGuaranteePayoutTask:
       type: object
@@ -1674,6 +1674,22 @@ components:
       explode: false
       schema:
         type: string
+    BankGuaranteeCollectionsTaskID:
+      name: bankguaranteecollectionstaskId
+      in: path
+      required: true
+      style: simple
+      explode: false
+      schema:
+        type: string
+    CustomerCollateralAllocationTaskID:
+      name: customercollateralallocationtaskId
+      in: path
+      required: true
+      style: simple
+      explode: false
+      schema:
+        type: string
     BankGuaranteeDefinitionandPricingTaskID:
       name: bankguaranteedefinitionandpricingtaskId
       in: path
@@ -1690,24 +1706,8 @@ components:
       explode: false
       schema:
         type: string
-    BankGuaranteeCollectionsTaskID:
-      name: bankguaranteecollectionstaskId
-      in: path
-      required: true
-      style: simple
-      explode: false
-      schema:
-        type: string
     CustomerPaymentTaskID:
       name: customerpaymenttaskId
-      in: path
-      required: true
-      style: simple
-      explode: false
-      schema:
-        type: string
-    CustomerCollateralAllocationTaskID:
-      name: customercollateralallocationtaskId
       in: path
       required: true
       style: simple

@@ -654,23 +654,6 @@ components:
       properties:
         CustomerReference:
           type: object
-    Sales:
-      type: object
-      properties:
-        CustomerSalesEventType:
-          type: string
-        Employee/UnitReference:
-          type: object
-        ProductandServiceType:
-          type: string
-        LeadandOpportunityReference:
-          type: object
-        CustomerSalesEventRecord:
-          type: string
-        CommissionAgreementReference:
-          type: object
-        Date/Time/Location:
-          type: string
     Servicing:
       type: object
       properties:
@@ -705,19 +688,17 @@ components:
           type: string
         Date/Time/Location:
           type: string
-    Fraud:
+    Life:
       type: object
       properties:
-        CustomerFraudCaseEventType:
+        CustomerLifeEventType:
           type: string
         CustomerContactRecordReference:
           type: object
-        AccessedProductandService:
-          type: string
         Employee/UnitReference:
           type: object
-        FraudCaseReference:
-          type: object
+        CustomerLifeEventRecord:
+          type: string
         Date/Time/Location:
           type: string
     ProductProcessing:
@@ -737,17 +718,36 @@ components:
           type: string
         Date/Time/Location:
           type: string
-    Life:
+    Sales:
       type: object
       properties:
-        CustomerLifeEventType:
+        CustomerSalesEventType:
+          type: string
+        Employee/UnitReference:
+          type: object
+        ProductandServiceType:
+          type: string
+        LeadandOpportunityReference:
+          type: object
+        CustomerSalesEventRecord:
+          type: string
+        CommissionAgreementReference:
+          type: object
+        Date/Time/Location:
+          type: string
+    Fraud:
+      type: object
+      properties:
+        CustomerFraudCaseEventType:
           type: string
         CustomerContactRecordReference:
           type: object
+        AccessedProductandService:
+          type: string
         Employee/UnitReference:
           type: object
-        CustomerLifeEventRecord:
-          type: string
+        FraudCaseReference:
+          type: object
         Date/Time/Location:
           type: string
     HTTPError:
@@ -762,14 +762,6 @@ components:
   parameters:
     CustomerEventHistoryID:
       name: customereventhistoryId
-      in: path
-      required: true
-      style: simple
-      explode: false
-      schema:
-        type: string
-    SalesID:
-      name: salesId
       in: path
       required: true
       style: simple
@@ -792,8 +784,8 @@ components:
       explode: false
       schema:
         type: string
-    FraudID:
-      name: fraudId
+    LifeID:
+      name: lifeId
       in: path
       required: true
       style: simple
@@ -808,8 +800,16 @@ components:
       explode: false
       schema:
         type: string
-    LifeID:
-      name: lifeId
+    SalesID:
+      name: salesId
+      in: path
+      required: true
+      style: simple
+      explode: false
+      schema:
+        type: string
+    FraudID:
+      name: fraudId
       in: path
       required: true
       style: simple

@@ -335,13 +335,6 @@ components:
           type: string
         CreditCardPositionLogReference:
           type: string
-    CreditCardPositionKeepingOutcome:
-      type: object
-      properties:
-        CreditCardPositionKeepingIncident:
-          type: string
-        CreditCardPositionKeepingLog:
-          type: string
     CardTransactionEvent:
       type: object
       properties:
@@ -358,6 +351,13 @@ components:
         CardTransactionEventReference:
           type: string
         CardTransactionEventType:
+          type: string
+    CreditCardPositionKeepingOutcome:
+      type: object
+      properties:
+        CreditCardPositionKeepingIncident:
+          type: string
+        CreditCardPositionKeepingLog:
           type: string
     HTTPError:
       type: object
@@ -377,16 +377,16 @@ components:
       explode: false
       schema:
         type: string
-    CreditCardPositionKeepingOutcomeID:
-      name: creditcardpositionkeepingoutcomeId
+    CardTransactionEventID:
+      name: cardtransactioneventId
       in: path
       required: true
       style: simple
       explode: false
       schema:
         type: string
-    CardTransactionEventID:
-      name: cardtransactioneventId
+    CreditCardPositionKeepingOutcomeID:
+      name: creditcardpositionkeepingoutcomeId
       in: path
       required: true
       style: simple

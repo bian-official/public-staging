@@ -407,6 +407,17 @@ components:
           type: object
         MarketInformationFeedServiceProfile:
           type: string
+    InternalPublication:
+      type: object
+      properties:
+        InternalInformationFeedServiceReference:
+          type: object
+        InternalInformationFeedServiceProfile:
+          type: string
+        InternalInformationFeedServiceRecordReference:
+          type: object
+        InternalInformationFeedServiceRecord:
+          type: string
     Distribution:
       type: object
       properties:
@@ -422,17 +433,6 @@ components:
         MarketInformationFeedServiceRecordReference:
           type: object
         MarketInformationFeedServiceRecord:
-          type: string
-    InternalPublication:
-      type: object
-      properties:
-        InternalInformationFeedServiceReference:
-          type: object
-        InternalInformationFeedServiceProfile:
-          type: string
-        InternalInformationFeedServiceRecordReference:
-          type: object
-        InternalInformationFeedServiceRecord:
           type: string
     HTTPError:
       type: object
@@ -452,6 +452,14 @@ components:
       explode: false
       schema:
         type: string
+    InternalPublicationID:
+      name: internalpublicationId
+      in: path
+      required: true
+      style: simple
+      explode: false
+      schema:
+        type: string
     DistributionID:
       name: distributionId
       in: path
@@ -462,14 +470,6 @@ components:
         type: string
     FeedUploadID:
       name: feeduploadId
-      in: path
-      required: true
-      style: simple
-      explode: false
-      schema:
-        type: string
-    InternalPublicationID:
-      name: internalpublicationId
       in: path
       required: true
       style: simple

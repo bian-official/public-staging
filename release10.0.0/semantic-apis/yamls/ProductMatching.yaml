@@ -601,48 +601,6 @@ components:
           type: object
         ProductOrCustomerCombinationAssessmentRequesterReference:
           type: object
-    ContextCriteria:
-      type: object
-      properties:
-        ContextCriteriaPreconditions:
-          type: string
-        ContextCriteriaAnalysisSchedule:
-          type: string
-        ContextCriteriaVersionNumber:
-          type: string
-        ContextCriteria:
-          type: object
-        ContextCriteriaServiceType:
-          type: string
-        ContextCriteriaServiceDescription:
-          type: string
-        ContextCriteriaServiceInputsandOuputs:
-          type: string
-        ContextCriteriaServiceWorkProduct:
-          type: string
-        ContextCriteriaServiceName:
-          type: string
-    ProductTypeSelection:
-      type: object
-      properties:
-        ProductTypeSelectionPreconditions:
-          type: string
-        ProductTypeSelectionAnalysisSchedule:
-          type: string
-        ProductTypeSelectionVersionNumber:
-          type: string
-        ProductTypeSelection:
-          type: object
-        ProductTypeSelectionServiceType:
-          type: string
-        ProductTypeSelectionServiceDescription:
-          type: string
-        ProductTypeSelectionServiceInputsandOuputs:
-          type: string
-        ProductTypeSelectionServiceWorkProduct:
-          type: string
-        ProductTypeSelectionServiceName:
-          type: string
     ProductEligibility:
       type: object
       properties:
@@ -663,6 +621,27 @@ components:
         ProductEligibilityServiceWorkProduct:
           type: string
         ProductEligibilityServiceName:
+          type: string
+    ContextCriteria:
+      type: object
+      properties:
+        ContextCriteriaPreconditions:
+          type: string
+        ContextCriteriaAnalysisSchedule:
+          type: string
+        ContextCriteriaVersionNumber:
+          type: string
+        ContextCriteria:
+          type: object
+        ContextCriteriaServiceType:
+          type: string
+        ContextCriteriaServiceDescription:
+          type: string
+        ContextCriteriaServiceInputsandOuputs:
+          type: string
+        ContextCriteriaServiceWorkProduct:
+          type: string
+        ContextCriteriaServiceName:
           type: string
     BankandCampaignAlignment:
       type: object
@@ -692,6 +671,27 @@ components:
           type: string
         ProductMatchingAssessmentType:
           type: string
+    ProductTypeSelection:
+      type: object
+      properties:
+        ProductTypeSelectionPreconditions:
+          type: string
+        ProductTypeSelectionAnalysisSchedule:
+          type: string
+        ProductTypeSelectionVersionNumber:
+          type: string
+        ProductTypeSelection:
+          type: object
+        ProductTypeSelectionServiceType:
+          type: string
+        ProductTypeSelectionServiceDescription:
+          type: string
+        ProductTypeSelectionServiceInputsandOuputs:
+          type: string
+        ProductTypeSelectionServiceWorkProduct:
+          type: string
+        ProductTypeSelectionServiceName:
+          type: string
     HTTPError:
       type: object
       properties:
@@ -704,28 +704,28 @@ components:
     RetrieveProduct/CustomerCombinationAssessmentResponse:
       type: object
       properties:
-        file:///C:\Users\32497\Dropbox\IAB\Envizion\bian\BIAN_Model\BIANRelease10.0\BIANVersion10.0.0.xmam/173884:
+        rwc:973a94b2-aa0e-5879-cd94-93b577cadb99/273091:
           type: object
           properties:
-            file:OrOrOrC:\Users\32497\Dropbox\IAB\Envizion\bian\BIAN_Model\BIANRelease10.0\BIANVersion10.0.0.xmamOr173887:
+            rwc:973a94b2-aa0e-5879-cd94-93b577cadb99Or273095:
               type: string
-            file:OrOrOrC:\Users\32497\Dropbox\IAB\Envizion\bian\BIAN_Model\BIANRelease10.0\BIANVersion10.0.0.xmamOr173883:
+            rwc:973a94b2-aa0e-5879-cd94-93b577cadb99Or273090:
               type: string
-            file:OrOrOrC:\Users\32497\Dropbox\IAB\Envizion\bian\BIAN_Model\BIANRelease10.0\BIANVersion10.0.0.xmamOr173889:
+            rwc:973a94b2-aa0e-5879-cd94-93b577cadb99Or273092:
               type: string
-            file:OrOrOrC:\Users\32497\Dropbox\IAB\Envizion\bian\BIAN_Model\BIANRelease10.0\BIANVersion10.0.0.xmamOr173880:
+            rwc:973a94b2-aa0e-5879-cd94-93b577cadb99Or273088:
               type: string
-            file:OrOrOrC:\Users\32497\Dropbox\IAB\Envizion\bian\BIAN_Model\BIANRelease10.0\BIANVersion10.0.0.xmamOr173888:
+            rwc:973a94b2-aa0e-5879-cd94-93b577cadb99Or273089:
               type: string
-            file:OrOrOrC:\Users\32497\Dropbox\IAB\Envizion\bian\BIAN_Model\BIANRelease10.0\BIANVersion10.0.0.xmamOr173881:
+            rwc:973a94b2-aa0e-5879-cd94-93b577cadb99Or273094:
               type: string
-            file:OrOrOrC:\Users\32497\Dropbox\IAB\Envizion\bian\BIAN_Model\BIANRelease10.0\BIANVersion10.0.0.xmamOr173879:
+            rwc:973a94b2-aa0e-5879-cd94-93b577cadb99Or273096:
               type: string
-            file:OrOrOrC:\Users\32497\Dropbox\IAB\Envizion\bian\BIAN_Model\BIANRelease10.0\BIANVersion10.0.0.xmamOr173882:
+            rwc:973a94b2-aa0e-5879-cd94-93b577cadb99Or273093:
               type: string
-            file:OrOrOrC:\Users\32497\Dropbox\IAB\Envizion\bian\BIAN_Model\BIANRelease10.0\BIANVersion10.0.0.xmamOr173885:
+            rwc:973a94b2-aa0e-5879-cd94-93b577cadb99Or273086:
               type: string
-            file:OrOrOrC:\Users\32497\Dropbox\IAB\Envizion\bian\BIAN_Model\BIANRelease10.0\BIANVersion10.0.0.xmamOr173886:
+            rwc:973a94b2-aa0e-5879-cd94-93b577cadb99Or273087:
               type: string
         Product/CustomerCombinationAssessment:
           type: object
@@ -759,24 +759,16 @@ components:
       explode: false
       schema:
         type: string
-    ContextCriteriaID:
-      name: contextcriteriaId
-      in: path
-      required: true
-      style: simple
-      explode: false
-      schema:
-        type: string
-    ProductTypeSelectionID:
-      name: producttypeselectionId
-      in: path
-      required: true
-      style: simple
-      explode: false
-      schema:
-        type: string
     ProductEligibilityID:
       name: producteligibilityId
+      in: path
+      required: true
+      style: simple
+      explode: false
+      schema:
+        type: string
+    ContextCriteriaID:
+      name: contextcriteriaId
       in: path
       required: true
       style: simple
@@ -793,6 +785,14 @@ components:
         type: string
     ProductMatchingOutcomeID:
       name: productmatchingoutcomeId
+      in: path
+      required: true
+      style: simple
+      explode: false
+      schema:
+        type: string
+    ProductTypeSelectionID:
+      name: producttypeselectionId
       in: path
       required: true
       style: simple

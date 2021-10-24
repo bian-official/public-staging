@@ -629,13 +629,6 @@ components:
           type: string
         CustomerCaseRootCauseAnalysisRequesterReference:
           type: object
-    CaseRootCauseAnalysisOutcome:
-      type: object
-      properties:
-        CaseRootCauseAnalysisWorkProduct:
-          type: string
-        CaseRootCauseAnalysisAnalysisType:
-          type: string
     ProductandServiceIssueAnalysis:
       type: object
       properties:
@@ -656,6 +649,13 @@ components:
         ProductandServiceIssueAnalysisServiceWorkProduct:
           type: string
         ProductandServiceIssueAnalysisServiceName:
+          type: string
+    CaseRootCauseAnalysisOutcome:
+      type: object
+      properties:
+        CaseRootCauseAnalysisWorkProduct:
+          type: string
+        CaseRootCauseAnalysisAnalysisType:
           type: string
     CreditandFraudRelatedIssueAnalysis:
       type: object
@@ -717,16 +717,16 @@ components:
       explode: false
       schema:
         type: string
-    CaseRootCauseAnalysisOutcomeID:
-      name: caserootcauseanalysisoutcomeId
+    ProductandServiceIssueAnalysisID:
+      name: productandserviceissueanalysisId
       in: path
       required: true
       style: simple
       explode: false
       schema:
         type: string
-    ProductandServiceIssueAnalysisID:
-      name: productandserviceissueanalysisId
+    CaseRootCauseAnalysisOutcomeID:
+      name: caserootcauseanalysisoutcomeId
       in: path
       required: true
       style: simple

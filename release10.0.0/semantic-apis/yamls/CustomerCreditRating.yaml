@@ -337,6 +337,19 @@ components:
           type: string
         CustomerCreditRatingDate:
           type: string
+    ExternalReporting:
+      type: object
+      properties:
+        RatingAgencyReportSchedule:
+          type: string
+        RatingAgencyCreditReportType:
+          type: string
+        Referencetotheratingagencycreditreport:
+          type: string
+        RatingAgencyCreditReport:
+          type: string
+        RatingAgencyCreditReportDate:
+          type: string
     Alerts:
       type: object
       properties:
@@ -358,19 +371,6 @@ components:
         ProductandServiceActivityReportSchedule:
           type: string
         ProductandServiceActivityReport:
-          type: string
-    ExternalReporting:
-      type: object
-      properties:
-        RatingAgencyReportSchedule:
-          type: string
-        RatingAgencyCreditReportType:
-          type: string
-        Referencetotheratingagencycreditreport:
-          type: string
-        RatingAgencyCreditReport:
-          type: string
-        RatingAgencyCreditReportDate:
           type: string
     HTTPError:
       type: object
@@ -498,6 +498,14 @@ components:
       explode: false
       schema:
         type: string
+    ExternalReportingID:
+      name: externalreportingId
+      in: path
+      required: true
+      style: simple
+      explode: false
+      schema:
+        type: string
     AlertsID:
       name: alertsId
       in: path
@@ -508,14 +516,6 @@ components:
         type: string
     InternalReportingID:
       name: internalreportingId
-      in: path
-      required: true
-      style: simple
-      explode: false
-      schema:
-        type: string
-    ExternalReportingID:
-      name: externalreportingId
       in: path
       required: true
       style: simple

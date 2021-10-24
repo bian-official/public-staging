@@ -662,15 +662,6 @@ components:
           type: string
         CustomerDefinedProductandServiceTermType:
           type: string
-    CustomerPropositionOutcome:
-      type: object
-      properties:
-        CustomerPropositionAgreement:
-          type: string
-        CustomerPropositionWorkProduct:
-          type: object
-        CustomerPropositionWorkProductType:
-          type: string
     BankDefinedProductandServiceTerm:
       type: object
       properties:
@@ -685,6 +676,15 @@ components:
         BankDefinedProductandServiceTermReference:
           type: string
         BankDefinedProductandServiceTermType:
+          type: string
+    CustomerPropositionOutcome:
+      type: object
+      properties:
+        CustomerPropositionAgreement:
+          type: string
+        CustomerPropositionWorkProduct:
+          type: object
+        CustomerPropositionWorkProductType:
           type: string
     HTTPError:
       type: object
@@ -712,16 +712,16 @@ components:
       explode: false
       schema:
         type: string
-    CustomerPropositionOutcomeID:
-      name: customerpropositionoutcomeId
+    BankDefinedProductandServiceTermID:
+      name: bankdefinedproductandservicetermId
       in: path
       required: true
       style: simple
       explode: false
       schema:
         type: string
-    BankDefinedProductandServiceTermID:
-      name: bankdefinedproductandservicetermId
+    CustomerPropositionOutcomeID:
+      name: customerpropositionoutcomeId
       in: path
       required: true
       style: simple

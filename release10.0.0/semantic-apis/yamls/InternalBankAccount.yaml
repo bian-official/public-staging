@@ -1175,57 +1175,6 @@ components:
           type: string
         InternalBankAccountLogReference:
           type: string
-    WithdrawalFulfillment:
-      type: object
-      properties:
-        Preconditions:
-          type: object
-        Schedule:
-          type: object
-        BusinessService:
-          type: object
-        Postconditions:
-          type: object
-        InternalBankAccountLogReference:
-          type: string
-        WithdrawalFulfillmentReference:
-          type: string
-        WithdrawalFulfillmentType:
-          type: string
-    DepositFulfillment:
-      type: object
-      properties:
-        Preconditions:
-          type: object
-        Schedule:
-          type: object
-        BusinessService:
-          type: object
-        Postconditions:
-          type: object
-        InternalBankAccountLogReference:
-          type: string
-        DepositFulfillmentReference:
-          type: string
-        DepositFulfillmentType:
-          type: string
-    AccountFulfillment:
-      type: object
-      properties:
-        Preconditions:
-          type: object
-        Schedule:
-          type: object
-        BusinessService:
-          type: object
-        Postconditions:
-          type: object
-        InternalBankAccountLogReference:
-          type: string
-        AccountFulfillmentReference:
-          type: string
-        AccountFulfillmentType:
-          type: string
     InterestFulfillment:
       type: object
       properties:
@@ -1242,23 +1191,6 @@ components:
         InterestFulfillmentReference:
           type: string
         InterestFulfillmentType:
-          type: string
-    AccountMaintenanceFulfillment:
-      type: object
-      properties:
-        Preconditions:
-          type: object
-        Schedule:
-          type: object
-        BusinessService:
-          type: object
-        Postconditions:
-          type: object
-        InternalBankAccountLogReference:
-          type: string
-        AccountMaintenanceFulfillmentReference:
-          type: string
-        AccountMaintenanceFulfillmentType:
           type: string
     AccountBillingFulfillment:
       type: object
@@ -1277,7 +1209,7 @@ components:
           type: string
         AccountBillingFulfillmentType:
           type: string
-    AccountSweepFulfillment:
+    DepositFulfillment:
       type: object
       properties:
         Preconditions:
@@ -1290,9 +1222,9 @@ components:
           type: object
         InternalBankAccountLogReference:
           type: string
-        AccountSweepFulfillmentReference:
+        DepositFulfillmentReference:
           type: string
-        AccountSweepFulfillmentType:
+        DepositFulfillmentType:
           type: string
     FeeFulfillment:
       type: object
@@ -1310,6 +1242,74 @@ components:
         FeeFulfillmentReference:
           type: string
         FeeFulfillmentType:
+          type: string
+    WithdrawalFulfillment:
+      type: object
+      properties:
+        Preconditions:
+          type: object
+        Schedule:
+          type: object
+        BusinessService:
+          type: object
+        Postconditions:
+          type: object
+        InternalBankAccountLogReference:
+          type: string
+        WithdrawalFulfillmentReference:
+          type: string
+        WithdrawalFulfillmentType:
+          type: string
+    AccountMaintenanceFulfillment:
+      type: object
+      properties:
+        Preconditions:
+          type: object
+        Schedule:
+          type: object
+        BusinessService:
+          type: object
+        Postconditions:
+          type: object
+        InternalBankAccountLogReference:
+          type: string
+        AccountMaintenanceFulfillmentReference:
+          type: string
+        AccountMaintenanceFulfillmentType:
+          type: string
+    AccountSweepFulfillment:
+      type: object
+      properties:
+        Preconditions:
+          type: object
+        Schedule:
+          type: object
+        BusinessService:
+          type: object
+        Postconditions:
+          type: object
+        InternalBankAccountLogReference:
+          type: string
+        AccountSweepFulfillmentReference:
+          type: string
+        AccountSweepFulfillmentType:
+          type: string
+    AccountFulfillment:
+      type: object
+      properties:
+        Preconditions:
+          type: object
+        Schedule:
+          type: object
+        BusinessService:
+          type: object
+        Postconditions:
+          type: object
+        InternalBankAccountLogReference:
+          type: string
+        AccountFulfillmentReference:
+          type: string
+        AccountFulfillmentType:
           type: string
     InternalBankAccountOutcome:
       type: object
@@ -1336,40 +1336,8 @@ components:
       explode: false
       schema:
         type: string
-    WithdrawalFulfillmentID:
-      name: withdrawalfulfillmentId
-      in: path
-      required: true
-      style: simple
-      explode: false
-      schema:
-        type: string
-    DepositFulfillmentID:
-      name: depositfulfillmentId
-      in: path
-      required: true
-      style: simple
-      explode: false
-      schema:
-        type: string
-    AccountFulfillmentID:
-      name: accountfulfillmentId
-      in: path
-      required: true
-      style: simple
-      explode: false
-      schema:
-        type: string
     InterestFulfillmentID:
       name: interestfulfillmentId
-      in: path
-      required: true
-      style: simple
-      explode: false
-      schema:
-        type: string
-    AccountMaintenanceFulfillmentID:
-      name: accountmaintenancefulfillmentId
       in: path
       required: true
       style: simple
@@ -1384,8 +1352,8 @@ components:
       explode: false
       schema:
         type: string
-    AccountSweepFulfillmentID:
-      name: accountsweepfulfillmentId
+    DepositFulfillmentID:
+      name: depositfulfillmentId
       in: path
       required: true
       style: simple
@@ -1394,6 +1362,38 @@ components:
         type: string
     FeeFulfillmentID:
       name: feefulfillmentId
+      in: path
+      required: true
+      style: simple
+      explode: false
+      schema:
+        type: string
+    WithdrawalFulfillmentID:
+      name: withdrawalfulfillmentId
+      in: path
+      required: true
+      style: simple
+      explode: false
+      schema:
+        type: string
+    AccountMaintenanceFulfillmentID:
+      name: accountmaintenancefulfillmentId
+      in: path
+      required: true
+      style: simple
+      explode: false
+      schema:
+        type: string
+    AccountSweepFulfillmentID:
+      name: accountsweepfulfillmentId
+      in: path
+      required: true
+      style: simple
+      explode: false
+      schema:
+        type: string
+    AccountFulfillmentID:
+      name: accountfulfillmentId
       in: path
       required: true
       style: simple

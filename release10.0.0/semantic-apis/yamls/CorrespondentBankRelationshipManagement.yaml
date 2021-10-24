@@ -813,6 +813,25 @@ components:
           type: object
         CorrepondentBankRelationshipManagementPlanSubjectMatter:
           type: object
+    IncidentTroubleshootingOversightDuty:
+      type: object
+      properties:
+        Preconditions:
+          type: object
+        BusinessUnit/EmployeeReference:
+          type: object
+        Schedule:
+          type: object
+        BusinessService:
+          type: object
+        Postconditions:
+          type: object
+        CorrepondentBankRelationshipManagementPlanReference:
+          type: string
+        IncidentTroubleshootingOversightDutyReference:
+          type: string
+        IncidentTroubleshootingOversightDutyType:
+          type: string
     RelationshipDevelopmentDuty:
       type: object
       properties:
@@ -851,25 +870,6 @@ components:
           type: string
         RelationshipReciprocityAssessmentDutyType:
           type: string
-    IncidentTroubleshootingOversightDuty:
-      type: object
-      properties:
-        Preconditions:
-          type: object
-        BusinessUnit/EmployeeReference:
-          type: object
-        Schedule:
-          type: object
-        BusinessService:
-          type: object
-        Postconditions:
-          type: object
-        CorrepondentBankRelationshipManagementPlanReference:
-          type: string
-        IncidentTroubleshootingOversightDutyReference:
-          type: string
-        IncidentTroubleshootingOversightDutyType:
-          type: string
     CorrespondentBankRelationshipManagementOutcome:
       type: object
       properties:
@@ -901,6 +901,14 @@ components:
       explode: false
       schema:
         type: string
+    IncidentTroubleshootingOversightDutyID:
+      name: incidenttroubleshootingoversightdutyId
+      in: path
+      required: true
+      style: simple
+      explode: false
+      schema:
+        type: string
     RelationshipDevelopmentDutyID:
       name: relationshipdevelopmentdutyId
       in: path
@@ -911,14 +919,6 @@ components:
         type: string
     RelationshipReciprocityAssessmentDutyID:
       name: relationshipreciprocityassessmentdutyId
-      in: path
-      required: true
-      style: simple
-      explode: false
-      schema:
-        type: string
-    IncidentTroubleshootingOversightDutyID:
-      name: incidenttroubleshootingoversightdutyId
       in: path
       required: true
       style: simple

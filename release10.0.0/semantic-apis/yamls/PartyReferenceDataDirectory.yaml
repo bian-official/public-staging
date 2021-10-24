@@ -408,21 +408,32 @@ components:
           type: string
         Date:
           type: string
-    Demographics:
+    BankRelations:
       type: object
       properties:
-        Socio-EconomicClassification:
+        BankRelationType:
           type: string
-        Ethnicity/Religion:
+        BusinessUnit/EmployeeReference:
+          type: object
+    Associations:
+      type: object
+      properties:
+        EmployeeReference:
+          type: object
+        AssociateReference:
+          type: object
+        AssociateType:
           type: string
-        Employment:
+        AssociateObligation/DependencyDescription:
           type: string
-        EmploymentHistory:
+        AssociationValidFrom/ToDate:
           type: string
-        EducationHistory:
+        ProductInstanceReference:
+          type: object
+        PreferredBeneficiary:
           type: string
-        ServicingConstraints:
-          type: string
+        Proxy/Representative/PowerofAttorneyReference:
+          type: object
     Reference:
       type: object
       properties:
@@ -466,32 +477,21 @@ components:
           type: string
         CustomerSinceDate:
           type: string
-    Associations:
+    Demographics:
       type: object
       properties:
-        EmployeeReference:
-          type: object
-        AssociateReference:
-          type: object
-        AssociateType:
+        Socio-EconomicClassification:
           type: string
-        AssociateObligation/DependencyDescription:
+        Ethnicity/Religion:
           type: string
-        AssociationValidFrom/ToDate:
+        Employment:
           type: string
-        ProductInstanceReference:
-          type: object
-        PreferredBeneficiary:
+        EmploymentHistory:
           type: string
-        Proxy/Representative/PowerofAttorneyReference:
-          type: object
-    BankRelations:
-      type: object
-      properties:
-        BankRelationType:
+        EducationHistory:
           type: string
-        BusinessUnit/EmployeeReference:
-          type: object
+        ServicingConstraints:
+          type: string
     HTTPError:
       type: object
       properties:
@@ -945,16 +945,8 @@ components:
       explode: false
       schema:
         type: string
-    DemographicsID:
-      name: demographicsId
-      in: path
-      required: true
-      style: simple
-      explode: false
-      schema:
-        type: string
-    ReferenceID:
-      name: referenceId
+    BankRelationsID:
+      name: bankrelationsId
       in: path
       required: true
       style: simple
@@ -969,8 +961,16 @@ components:
       explode: false
       schema:
         type: string
-    BankRelationsID:
-      name: bankrelationsId
+    ReferenceID:
+      name: referenceId
+      in: path
+      required: true
+      style: simple
+      explode: false
+      schema:
+        type: string
+    DemographicsID:
+      name: demographicsId
       in: path
       required: true
       style: simple

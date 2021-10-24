@@ -250,20 +250,6 @@ components:
       properties:
         ConsumerSecuritiesOrderTransactionFundingCheckResult:
           type: string
-    OrderInitiation:
-      type: object
-      properties:
-        ConsumerSecuritiesOrderTransactionInstanceReference:
-          type: object
-        ConsumerSecuritiesOrderTransactionInstanceStatus:
-          type: string
-        ConsumerSecuritiesOrderInitiationTaskResult:
-          type: string
-    Quote:
-      type: object
-      properties:
-        SecuritiesPrice:
-          type: string
     Compliance:
       type: object
       properties:
@@ -272,6 +258,20 @@ components:
         ConsumerSecuritiesOrderTransactionComplianceCheckResult:
           type: string
         ConsumerSecuritiesOrderTransactionComplianceTaskResult:
+          type: string
+    Quote:
+      type: object
+      properties:
+        SecuritiesPrice:
+          type: string
+    OrderInitiation:
+      type: object
+      properties:
+        ConsumerSecuritiesOrderTransactionInstanceReference:
+          type: object
+        ConsumerSecuritiesOrderTransactionInstanceStatus:
+          type: string
+        ConsumerSecuritiesOrderInitiationTaskResult:
           type: string
     HTTPError:
       type: object
@@ -455,8 +455,8 @@ components:
       explode: false
       schema:
         type: string
-    OrderInitiationID:
-      name: orderinitiationId
+    ComplianceID:
+      name: complianceId
       in: path
       required: true
       style: simple
@@ -471,8 +471,8 @@ components:
       explode: false
       schema:
         type: string
-    ComplianceID:
-      name: complianceId
+    OrderInitiationID:
+      name: orderinitiationId
       in: path
       required: true
       style: simple

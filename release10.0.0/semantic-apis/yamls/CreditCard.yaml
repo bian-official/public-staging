@@ -822,39 +822,6 @@ components:
           type: string
         RepaymentTransactionValueDate:
           type: string
-    Fees:
-      type: object
-      properties:
-        FeeConfigurationProfile:
-          type: string
-        FeeType:
-          type: string
-        FeeDefinition:
-          type: string
-        FeeApplicationRecord:
-          type: string
-        FeeTransaction:
-          type: string
-        TransactionDescription:
-          type: string
-        TransactionFeeType:
-          type: string
-        TransactionFeeCharge:
-          type: string
-        FeeProjectionsandCommitments:
-          type: string
-        ProjectedTransactionDescription:
-          type: string
-        ProjectedTransactionFeeType:
-          type: string
-        ProjectedTransactionFeeCharge:
-          type: string
-        FeeAccrualAmount:
-          type: number
-        AccrualFeeType:
-          type: string
-        AccrualFeeCharge:
-          type: string
     CardTransaction:
       type: object
       properties:
@@ -890,6 +857,46 @@ components:
           type: string
         CardTransactionAuthorizationRecord:
           type: string
+    Billing:
+      type: object
+      properties:
+        BillingParameters:
+          type: string
+        BillingTransaction:
+          type: string
+        BillingTransactionParty:
+          type: string
+        BillingTransactionAddress:
+          type: string
+        BillingTransactionPeriod:
+          type: string
+        BillingTransactionStatementReference:
+          type: object
+        BillingTransactionAmount:
+          type: number
+        BillingTransactionMinimumRequiredPayment:
+          type: string
+        BillingTransactionPaymentDueDate:
+          type: string
+    IssuedDevice:
+      type: object
+      properties:
+        IssuedDeviceType:
+          type: string
+        IssuedDeviceDescription:
+          type: string
+        IssuedDeviceOptionDefinition:
+          type: string
+        IssuedDeviceOptionSetting:
+          type: string
+        IssuedDeviceProperty:
+          type: string
+        IssuedDevicePropertyType:
+          type: string
+        IssuedDevicePropertyValue:
+          type: string
+        IssuedDeviceStatus:
+          type: string
     Interest:
       type: object
       properties:
@@ -917,27 +924,6 @@ components:
           type: string
         InterestAccrualCharge:
           type: string
-    Billing:
-      type: object
-      properties:
-        BillingParameters:
-          type: string
-        BillingTransaction:
-          type: string
-        BillingTransactionParty:
-          type: string
-        BillingTransactionAddress:
-          type: string
-        BillingTransactionPeriod:
-          type: string
-        BillingTransactionStatementReference:
-          type: object
-        BillingTransactionAmount:
-          type: number
-        BillingTransactionMinimumRequiredPayment:
-          type: string
-        BillingTransactionPaymentDueDate:
-          type: string
     CreditPlan:
       type: object
       properties:
@@ -947,24 +933,38 @@ components:
           type: string
         CreditPlanAccountReference:
           type: object
-    IssuedDevice:
+    Fees:
       type: object
       properties:
-        IssuedDeviceType:
+        FeeConfigurationProfile:
           type: string
-        IssuedDeviceDescription:
+        FeeType:
           type: string
-        IssuedDeviceOptionDefinition:
+        FeeDefinition:
           type: string
-        IssuedDeviceOptionSetting:
+        FeeApplicationRecord:
           type: string
-        IssuedDeviceProperty:
+        FeeTransaction:
           type: string
-        IssuedDevicePropertyType:
+        TransactionDescription:
           type: string
-        IssuedDevicePropertyValue:
+        TransactionFeeType:
           type: string
-        IssuedDeviceStatus:
+        TransactionFeeCharge:
+          type: string
+        FeeProjectionsandCommitments:
+          type: string
+        ProjectedTransactionDescription:
+          type: string
+        ProjectedTransactionFeeType:
+          type: string
+        ProjectedTransactionFeeCharge:
+          type: string
+        FeeAccrualAmount:
+          type: number
+        AccrualFeeType:
+          type: string
+        AccrualFeeCharge:
           type: string
     HTTPError:
       type: object
@@ -1669,24 +1669,8 @@ components:
       explode: false
       schema:
         type: string
-    FeesID:
-      name: feesId
-      in: path
-      required: true
-      style: simple
-      explode: false
-      schema:
-        type: string
     CardTransactionID:
       name: cardtransactionId
-      in: path
-      required: true
-      style: simple
-      explode: false
-      schema:
-        type: string
-    InterestID:
-      name: interestId
       in: path
       required: true
       style: simple
@@ -1701,6 +1685,22 @@ components:
       explode: false
       schema:
         type: string
+    IssuedDeviceID:
+      name: issueddeviceId
+      in: path
+      required: true
+      style: simple
+      explode: false
+      schema:
+        type: string
+    InterestID:
+      name: interestId
+      in: path
+      required: true
+      style: simple
+      explode: false
+      schema:
+        type: string
     CreditPlanID:
       name: creditplanId
       in: path
@@ -1709,8 +1709,8 @@ components:
       explode: false
       schema:
         type: string
-    IssuedDeviceID:
-      name: issueddeviceId
+    FeesID:
+      name: feesId
       in: path
       required: true
       style: simple

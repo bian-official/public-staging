@@ -684,48 +684,6 @@ components:
           type: string
         CreditChargeCardFinancialCaptureTransactionTransaction:
           type: string
-    TransactionConsolidation:
-      type: object
-      properties:
-        TransactionConsolidationPreconditions:
-          type: string
-        TransactionConsolidationTaskSchedule:
-          type: string
-        CardTransactionConsolidation:
-          type: object
-        TransactionConsolidationPostconditions:
-          type: string
-        TransactionConsolidationCardTransactionConsolidationServiceType:
-          type: string
-        TransactionConsolidationCardTransactionConsolidationServiceDescription:
-          type: string
-        TransactionConsolidationCardTransactionConsolidationServiceInputsandOuputs:
-          type: string
-        TransactionConsolidationCardTransactionConsolidationServiceWorkProduct:
-          type: string
-        TransactionConsolidationCardTransactionConsolidationServiceName:
-          type: string
-    TransactionCapture:
-      type: object
-      properties:
-        TransactionCapturePreconditions:
-          type: string
-        TransactionCaptureTaskSchedule:
-          type: string
-        BusinessService:
-          type: object
-        TransactionCapturePostconditions:
-          type: string
-        TransactionCaptureServiceType:
-          type: string
-        TransactionCaptureServiceDescription:
-          type: string
-        TransactionCaptureServiceInputsandOuputs:
-          type: string
-        TransactionCaptureServiceWorkProduct:
-          type: string
-        TransactionCaptureServiceName:
-          type: string
     TransactionAuthorization:
       type: object
       properties:
@@ -747,6 +705,27 @@ components:
           type: string
         TransactionAuthorizationServiceName:
           type: string
+    TransactionConsolidation:
+      type: object
+      properties:
+        TransactionConsolidationPreconditions:
+          type: string
+        TransactionConsolidationTaskSchedule:
+          type: string
+        CardTransactionConsolidation:
+          type: object
+        TransactionConsolidationPostconditions:
+          type: string
+        TransactionConsolidationCardTransactionConsolidationServiceType:
+          type: string
+        TransactionConsolidationCardTransactionConsolidationServiceDescription:
+          type: string
+        TransactionConsolidationCardTransactionConsolidationServiceInputsandOuputs:
+          type: string
+        TransactionConsolidationCardTransactionConsolidationServiceWorkProduct:
+          type: string
+        TransactionConsolidationCardTransactionConsolidationServiceName:
+          type: string
     TransactionReversal:
       type: object
       properties:
@@ -767,6 +746,27 @@ components:
         TransactionReversalCardTransactionReversalServiceWorkProduct:
           type: string
         TransactionReversalCardTransactionReversalServiceName:
+          type: string
+    TransactionCapture:
+      type: object
+      properties:
+        TransactionCapturePreconditions:
+          type: string
+        TransactionCaptureTaskSchedule:
+          type: string
+        BusinessService:
+          type: object
+        TransactionCapturePostconditions:
+          type: string
+        TransactionCaptureServiceType:
+          type: string
+        TransactionCaptureServiceDescription:
+          type: string
+        TransactionCaptureServiceInputsandOuputs:
+          type: string
+        TransactionCaptureServiceWorkProduct:
+          type: string
+        TransactionCaptureServiceName:
           type: string
     CardCaptureOutcome:
       type: object
@@ -811,22 +811,6 @@ components:
       explode: false
       schema:
         type: string
-    TransactionConsolidationID:
-      name: transactionconsolidationId
-      in: path
-      required: true
-      style: simple
-      explode: false
-      schema:
-        type: string
-    TransactionCaptureID:
-      name: transactioncaptureId
-      in: path
-      required: true
-      style: simple
-      explode: false
-      schema:
-        type: string
     TransactionAuthorizationID:
       name: transactionauthorizationId
       in: path
@@ -835,8 +819,24 @@ components:
       explode: false
       schema:
         type: string
+    TransactionConsolidationID:
+      name: transactionconsolidationId
+      in: path
+      required: true
+      style: simple
+      explode: false
+      schema:
+        type: string
     TransactionReversalID:
       name: transactionreversalId
+      in: path
+      required: true
+      style: simple
+      explode: false
+      schema:
+        type: string
+    TransactionCaptureID:
+      name: transactioncaptureId
       in: path
       required: true
       style: simple

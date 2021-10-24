@@ -382,12 +382,12 @@ components:
           type: string
         VChannelServiceSchedule:
           type: string
-    Troubleshooting:
+    CapacityPlanning:
       type: object
       properties:
-        VChannelProductionIssueRecord:
+        VChannelPlatformUtilization:
           type: string
-        VChannelIssueAnalysisAndRecommendedResponse:
+        VChannelLoadingProjections:
           type: string
     MaintenanceAndUpgrades:
       type: object
@@ -404,12 +404,12 @@ components:
           type: string
         VChannelMaintenanceandUpgradeWorkTaskDate-Time:
           type: string
-    CapacityPlanning:
+    Troubleshooting:
       type: object
       properties:
-        VChannelPlatformUtilization:
+        VChannelProductionIssueRecord:
           type: string
-        VChannelLoadingProjections:
+        VChannelIssueAnalysisAndRecommendedResponse:
           type: string
     HTTPError:
       type: object
@@ -511,8 +511,8 @@ components:
       explode: false
       schema:
         type: string
-    TroubleshootingID:
-      name: troubleshootingId
+    CapacityPlanningID:
+      name: capacityplanningId
       in: path
       required: true
       style: simple
@@ -527,8 +527,8 @@ components:
       explode: false
       schema:
         type: string
-    CapacityPlanningID:
-      name: capacityplanningId
+    TroubleshootingID:
+      name: troubleshootingId
       in: path
       required: true
       style: simple

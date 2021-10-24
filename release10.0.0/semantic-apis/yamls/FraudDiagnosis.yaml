@@ -231,20 +231,6 @@ components:
           type: string
         FraudDiagnosisRecommendation:
           type: string
-    EconomicModel:
-      type: object
-      properties:
-        EconomicModelAnalysisResult:
-          type: string
-        EconomicModelWorkProduct:
-          type: string
-    CustomerBehavior:
-      type: object
-      properties:
-        CustomerBehaviorAnalysisResult:
-          type: string
-        CustomerBehaviorAnalysisWorkProduct:
-          type: string
     AnalystReview:
       type: object
       properties:
@@ -257,6 +243,20 @@ components:
         AnalystReviewWorkProduct:
           type: string
         AnalystReviewRecommendedAction:
+          type: string
+    CustomerBehavior:
+      type: object
+      properties:
+        CustomerBehaviorAnalysisResult:
+          type: string
+        CustomerBehaviorAnalysisWorkProduct:
+          type: string
+    EconomicModel:
+      type: object
+      properties:
+        EconomicModelAnalysisResult:
+          type: string
+        EconomicModelWorkProduct:
           type: string
     HTTPError:
       type: object
@@ -276,8 +276,8 @@ components:
       explode: false
       schema:
         type: string
-    EconomicModelID:
-      name: economicmodelId
+    AnalystReviewID:
+      name: analystreviewId
       in: path
       required: true
       style: simple
@@ -292,8 +292,8 @@ components:
       explode: false
       schema:
         type: string
-    AnalystReviewID:
-      name: analystreviewId
+    EconomicModelID:
+      name: economicmodelId
       in: path
       required: true
       style: simple

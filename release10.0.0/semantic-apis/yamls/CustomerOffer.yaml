@@ -837,24 +837,18 @@ components:
           type: string
         CustomerOfferProcessingTaskResult:
           type: string
-    FacilityApplication:
+    Audit:
       type: object
       properties:
-        FacilityOption:
+        GuidelineComplianceCheckType:
           type: string
-        FacilityOptionDescription:
+        GuidelineComplianceCheckRequirement:
           type: string
-        FacilityOptionSetting:
+        GuidelineComplianceCheckSubmission:
           type: string
-        FacilityPricing:
+        GuidelineComplianceAdjustmentRequirement:
           type: string
-        NegotiationGuidelines/Rules:
-          type: string
-        AgreedPricing:
-          type: string
-        PricingAdjustments:
-          type: string
-        FacilitySchedule:
+        GuidelineComplianceCheckAssessment:
           type: string
     Agreement:
       type: object
@@ -887,11 +881,25 @@ components:
           type: boolean
         DocumentReference(forcustomersignature/acceptancerecord):
           type: object
-    ProductInitialization:
+    FacilityApplication:
       type: object
       properties:
-        ProductInstanceReference:
-          type: object
+        FacilityOption:
+          type: string
+        FacilityOptionDescription:
+          type: string
+        FacilityOptionSetting:
+          type: string
+        FacilityPricing:
+          type: string
+        NegotiationGuidelines/Rules:
+          type: string
+        AgreedPricing:
+          type: string
+        PricingAdjustments:
+          type: string
+        FacilitySchedule:
+          type: string
     Credit:
       type: object
       properties:
@@ -901,6 +909,15 @@ components:
           type: object
         CreditAuthorizationDecision:
           type: string
+    Collateral:
+      type: object
+      properties:
+        CollateralRequirement:
+          type: string
+        CollateralEarmarkReference:
+          type: object
+        CollateralAssetReference:
+          type: object
     Underwriting:
       type: object
       properties:
@@ -921,6 +938,11 @@ components:
           type: string
         Amount:
           type: string
+    ProductInitialization:
+      type: object
+      properties:
+        ProductInstanceReference:
+          type: object
     CorrespondenceandDocuments:
       type: object
       properties:
@@ -933,28 +955,6 @@ components:
         DocumentDirectoryEntryInstanceReference:
           type: object
         DocumentContent:
-          type: string
-    Collateral:
-      type: object
-      properties:
-        CollateralRequirement:
-          type: string
-        CollateralEarmarkReference:
-          type: object
-        CollateralAssetReference:
-          type: object
-    Audit:
-      type: object
-      properties:
-        GuidelineComplianceCheckType:
-          type: string
-        GuidelineComplianceCheckRequirement:
-          type: string
-        GuidelineComplianceCheckSubmission:
-          type: string
-        GuidelineComplianceAdjustmentRequirement:
-          type: string
-        GuidelineComplianceCheckAssessment:
           type: string
     HTTPError:
       type: object
@@ -1801,8 +1801,8 @@ components:
       explode: false
       schema:
         type: string
-    FacilityApplicationID:
-      name: facilityapplicationId
+    AuditID:
+      name: auditId
       in: path
       required: true
       style: simple
@@ -1833,8 +1833,8 @@ components:
       explode: false
       schema:
         type: string
-    ProductInitializationID:
-      name: productinitializationId
+    FacilityApplicationID:
+      name: facilityapplicationId
       in: path
       required: true
       style: simple
@@ -1843,6 +1843,14 @@ components:
         type: string
     CreditID:
       name: creditId
+      in: path
+      required: true
+      style: simple
+      explode: false
+      schema:
+        type: string
+    CollateralID:
+      name: collateralId
       in: path
       required: true
       style: simple
@@ -1865,24 +1873,16 @@ components:
       explode: false
       schema:
         type: string
+    ProductInitializationID:
+      name: productinitializationId
+      in: path
+      required: true
+      style: simple
+      explode: false
+      schema:
+        type: string
     CorrespondenceandDocumentsID:
       name: correspondenceanddocumentsId
-      in: path
-      required: true
-      style: simple
-      explode: false
-      schema:
-        type: string
-    CollateralID:
-      name: collateralId
-      in: path
-      required: true
-      style: simple
-      explode: false
-      schema:
-        type: string
-    AuditID:
-      name: auditId
       in: path
       required: true
       style: simple

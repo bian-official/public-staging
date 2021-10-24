@@ -381,15 +381,6 @@ components:
           type: string
         DocumentDirectoryEntryInstanceReference:
           type: object
-    LegalTerms:
-      type: object
-      properties:
-        Jurisdiction:
-          type: string
-        ApplicableLawReference:
-          type: object
-        ApplicableLawInterpretation:
-          type: string
     RegulatoryTerms:
       type: object
       properties:
@@ -398,6 +389,15 @@ components:
         ApplicableRegulationReference:
           type: object
         ApplicableRegulationInterpretation:
+          type: string
+    LegalTerms:
+      type: object
+      properties:
+        Jurisdiction:
+          type: string
+        ApplicableLawReference:
+          type: object
+        ApplicableLawInterpretation:
           type: string
     PolicyTerms:
       type: object
@@ -524,16 +524,16 @@ components:
       explode: false
       schema:
         type: string
-    LegalTermsID:
-      name: legaltermsId
+    RegulatoryTermsID:
+      name: regulatorytermsId
       in: path
       required: true
       style: simple
       explode: false
       schema:
         type: string
-    RegulatoryTermsID:
-      name: regulatorytermsId
+    LegalTermsID:
+      name: legaltermsId
       in: path
       required: true
       style: simple

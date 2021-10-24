@@ -385,6 +385,15 @@ components:
           type: string
         InvestmentPortfolioSecurityHolding:
           type: string
+    Track:
+      type: object
+      properties:
+        InvestmentPortfolioSecuritySensitivity:
+          type: string
+        ProjectedValuation:
+          type: string
+        ProjectedPortfolioImpact:
+          type: string
     MarketOpportunities:
       type: object
       properties:
@@ -400,15 +409,6 @@ components:
         InvestmentPortfolioTradeSecurityType:
           type: string
         InvestmentPortfolioTradeSecurityTradeDescription:
-          type: string
-    Track:
-      type: object
-      properties:
-        InvestmentPortfolioSecuritySensitivity:
-          type: string
-        ProjectedValuation:
-          type: string
-        ProjectedPortfolioImpact:
           type: string
     HTTPError:
       type: object
@@ -451,6 +451,14 @@ components:
       explode: false
       schema:
         type: string
+    TrackID:
+      name: trackId
+      in: path
+      required: true
+      style: simple
+      explode: false
+      schema:
+        type: string
     MarketOpportunitiesID:
       name: marketopportunitiesId
       in: path
@@ -461,14 +469,6 @@ components:
         type: string
     TradeInitiationID:
       name: tradeinitiationId
-      in: path
-      required: true
-      style: simple
-      explode: false
-      schema:
-        type: string
-    TrackID:
-      name: trackId
       in: path
       required: true
       style: simple

@@ -348,6 +348,13 @@ components:
           type: string
         CardTransactionAuthorizationRecord:
           type: string
+    StandIn:
+      type: object
+      properties:
+        NegativeFileReference:
+          type: object
+        CardAccountStandInAuthorizationResult:
+          type: string
     DeviceCheck:
       type: object
       properties:
@@ -365,6 +372,16 @@ components:
           type: string
         IssuedDeviceCheckResult:
           type: string
+    FraudCheck:
+      type: object
+      properties:
+        FraudCheckResult:
+          type: string
+    CreditCheck:
+      type: object
+      properties:
+        CardAccountavailablebalancecheckresult:
+          type: string
     Authentication:
       type: object
       properties:
@@ -381,23 +398,6 @@ components:
         AuthenticationSecretQuestionValue:
           type: string
         AuthenticationCheckResult:
-          type: string
-    CreditCheck:
-      type: object
-      properties:
-        CardAccountavailablebalancecheckresult:
-          type: string
-    StandIn:
-      type: object
-      properties:
-        NegativeFileReference:
-          type: object
-        CardAccountStandInAuthorizationResult:
-          type: string
-    FraudCheck:
-      type: object
-      properties:
-        FraudCheckResult:
           type: string
     HTTPError:
       type: object
@@ -510,6 +510,14 @@ components:
       explode: false
       schema:
         type: string
+    StandInID:
+      name: standinId
+      in: path
+      required: true
+      style: simple
+      explode: false
+      schema:
+        type: string
     DeviceCheckID:
       name: devicecheckId
       in: path
@@ -518,8 +526,8 @@ components:
       explode: false
       schema:
         type: string
-    AuthenticationID:
-      name: authenticationId
+    FraudCheckID:
+      name: fraudcheckId
       in: path
       required: true
       style: simple
@@ -534,16 +542,8 @@ components:
       explode: false
       schema:
         type: string
-    StandInID:
-      name: standinId
-      in: path
-      required: true
-      style: simple
-      explode: false
-      schema:
-        type: string
-    FraudCheckID:
-      name: fraudcheckId
+    AuthenticationID:
+      name: authenticationId
       in: path
       required: true
       style: simple

@@ -931,25 +931,12 @@ components:
           type: string
         SessionDialogueResult:
           type: string
-    Intelligence:
+    Query:
       type: object
       properties:
-        IntelligenceRecord:
+        QueryType:
           type: string
-        CustomerInsightType:
-          type: string
-        CustomerInsight:
-          type: string
-        InsightTaskResult:
-          type: string
-    Sales:
-      type: object
-      properties:
-        ProductandServiceType:
-          type: string
-        ProductandServiceProperties:
-          type: string
-        SalesTaskResult:
+        QueryTaskResult:
           type: string
     ProductorService:
       type: object
@@ -958,17 +945,12 @@ components:
           type: object
         ProductandServiceTaskResult:
           type: string
-    History:
+    Offer:
       type: object
       properties:
-        HistoryTaskResult:
+        ProductandServiceType:
           type: string
-    Authentication:
-      type: object
-      properties:
-        RequiredAuthenticationLevel:
-          type: string
-        AuthenticationTaskResult:
+        OfferTaskResult:
           type: string
     Order:
       type: object
@@ -981,12 +963,19 @@ components:
           type: string
         OrderTaskWorkResult:
           type: string
-    Offer:
+    Sales:
       type: object
       properties:
         ProductandServiceType:
           type: string
-        OfferTaskResult:
+        ProductandServiceProperties:
+          type: string
+        SalesTaskResult:
+          type: string
+    History:
+      type: object
+      properties:
+        HistoryTaskResult:
           type: string
     Case:
       type: object
@@ -997,12 +986,23 @@ components:
           type: string
         CaseTaskResult:
           type: string
-    Query:
+    Intelligence:
       type: object
       properties:
-        QueryType:
+        IntelligenceRecord:
           type: string
-        QueryTaskResult:
+        CustomerInsightType:
+          type: string
+        CustomerInsight:
+          type: string
+        InsightTaskResult:
+          type: string
+    Authentication:
+      type: object
+      properties:
+        RequiredAuthenticationLevel:
+          type: string
+        AuthenticationTaskResult:
           type: string
     HTTPError:
       type: object
@@ -2053,16 +2053,8 @@ components:
       explode: false
       schema:
         type: string
-    IntelligenceID:
-      name: intelligenceId
-      in: path
-      required: true
-      style: simple
-      explode: false
-      schema:
-        type: string
-    SalesID:
-      name: salesId
+    QueryID:
+      name: queryId
       in: path
       required: true
       style: simple
@@ -2077,16 +2069,8 @@ components:
       explode: false
       schema:
         type: string
-    HistoryID:
-      name: historyId
-      in: path
-      required: true
-      style: simple
-      explode: false
-      schema:
-        type: string
-    AuthenticationID:
-      name: authenticationId
+    OfferID:
+      name: offerId
       in: path
       required: true
       style: simple
@@ -2101,8 +2085,16 @@ components:
       explode: false
       schema:
         type: string
-    OfferID:
-      name: offerId
+    SalesID:
+      name: salesId
+      in: path
+      required: true
+      style: simple
+      explode: false
+      schema:
+        type: string
+    HistoryID:
+      name: historyId
       in: path
       required: true
       style: simple
@@ -2117,8 +2109,16 @@ components:
       explode: false
       schema:
         type: string
-    QueryID:
-      name: queryId
+    IntelligenceID:
+      name: intelligenceId
+      in: path
+      required: true
+      style: simple
+      explode: false
+      schema:
+        type: string
+    AuthenticationID:
+      name: authenticationId
       in: path
       required: true
       style: simple

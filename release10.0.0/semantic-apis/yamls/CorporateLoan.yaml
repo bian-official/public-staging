@@ -745,6 +745,32 @@ components:
           type: string
         InterestAccrualCharge:
           type: string
+    Repayment:
+      type: object
+      properties:
+        RepaymentTransactionType:
+          type: string
+        RepaymentTransactionPayerReference:
+          type: object
+        RepaymentTransactionPayerProductInstanceReference:
+          type: object
+        RepaymentTransactionPayerBankReference:
+          type: object
+        RepaymentTransactionAmount:
+          type: number
+        RepaymentTransactionCurrency:
+          type: string
+        RepaymentTransactionValueDate:
+          type: string
+    Restructuring:
+      type: object
+      properties:
+        RestructuringTask:
+          type: string
+        RestructuringEvaluation:
+          type: string
+        RestructuringWriteDown:
+          type: string
     ServiceFees:
       type: object
       properties:
@@ -793,15 +819,6 @@ components:
           type: string
         CollateralValuation:
           type: string
-    Restructuring:
-      type: object
-      properties:
-        RestructuringTask:
-          type: string
-        RestructuringEvaluation:
-          type: string
-        RestructuringWriteDown:
-          type: string
     Withdrawal:
       type: object
       properties:
@@ -845,23 +862,6 @@ components:
         DisbursementCurrency:
           type: string
         DisbursementValueDate:
-          type: string
-    Repayment:
-      type: object
-      properties:
-        RepaymentTransactionType:
-          type: string
-        RepaymentTransactionPayerReference:
-          type: object
-        RepaymentTransactionPayerProductInstanceReference:
-          type: object
-        RepaymentTransactionPayerBankReference:
-          type: object
-        RepaymentTransactionAmount:
-          type: number
-        RepaymentTransactionCurrency:
-          type: string
-        RepaymentTransactionValueDate:
           type: string
     HTTPError:
       type: object
@@ -1678,6 +1678,22 @@ components:
       explode: false
       schema:
         type: string
+    RepaymentID:
+      name: repaymentId
+      in: path
+      required: true
+      style: simple
+      explode: false
+      schema:
+        type: string
+    RestructuringID:
+      name: restructuringId
+      in: path
+      required: true
+      style: simple
+      explode: false
+      schema:
+        type: string
     ServiceFeesID:
       name: servicefeesId
       in: path
@@ -1694,14 +1710,6 @@ components:
       explode: false
       schema:
         type: string
-    RestructuringID:
-      name: restructuringId
-      in: path
-      required: true
-      style: simple
-      explode: false
-      schema:
-        type: string
     WithdrawalID:
       name: withdrawalId
       in: path
@@ -1712,14 +1720,6 @@ components:
         type: string
     DisbursementID:
       name: disbursementId
-      in: path
-      required: true
-      style: simple
-      explode: false
-      schema:
-        type: string
-    RepaymentID:
-      name: repaymentId
       in: path
       required: true
       style: simple

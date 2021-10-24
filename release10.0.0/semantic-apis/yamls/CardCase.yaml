@@ -393,28 +393,22 @@ components:
           type: string
         CardCaseResolutionSchedule:
           type: string
-    Resolution:
+    Consolidation:
       type: object
       properties:
-        ResolutionCardTransactionRecordReference:
+        ConsolidationCardTransactionRecordReference:
           type: object
-        ResolutionTaskRecord:
+        ConsolidationTaskRecord:
           type: string
-        CorrespondenceInstanceReference:
+        ConsolidationInstruction:
+          type: string
+        CorrespondenceReference:
           type: object
-        CorrespondenceContent:
-          type: string
         DocumentDirectoryEntryInstanceReference:
           type: object
-        DocumentContent:
+        ConsolidationTaskWorkProducts:
           type: string
-        Employee/BusinessUnitReference:
-          type: object
-        PaymentOrderReference:
-          type: object
-        ResolutionTaskWorkProducts:
-          type: string
-        ResolutionTaskResult:
+        ConsolidationTaskResult:
           type: string
     Arbitration:
       type: object
@@ -438,22 +432,28 @@ components:
           type: object
         ChargebackInstruction:
           type: string
-    Consolidation:
+    Resolution:
       type: object
       properties:
-        ConsolidationCardTransactionRecordReference:
+        ResolutionCardTransactionRecordReference:
           type: object
-        ConsolidationTaskRecord:
+        ResolutionTaskRecord:
           type: string
-        ConsolidationInstruction:
-          type: string
-        CorrespondenceReference:
+        CorrespondenceInstanceReference:
           type: object
+        CorrespondenceContent:
+          type: string
         DocumentDirectoryEntryInstanceReference:
           type: object
-        ConsolidationTaskWorkProducts:
+        DocumentContent:
           type: string
-        ConsolidationTaskResult:
+        Employee/BusinessUnitReference:
+          type: object
+        PaymentOrderReference:
+          type: object
+        ResolutionTaskWorkProducts:
+          type: string
+        ResolutionTaskResult:
           type: string
     HTTPError:
       type: object
@@ -765,8 +765,8 @@ components:
       explode: false
       schema:
         type: string
-    ResolutionID:
-      name: resolutionId
+    ConsolidationID:
+      name: consolidationId
       in: path
       required: true
       style: simple
@@ -789,8 +789,8 @@ components:
       explode: false
       schema:
         type: string
-    ConsolidationID:
-      name: consolidationId
+    ResolutionID:
+      name: resolutionId
       in: path
       required: true
       style: simple

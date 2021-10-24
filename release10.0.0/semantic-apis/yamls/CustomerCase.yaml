@@ -299,6 +299,15 @@ components:
           type: object
         CustomerCaseResolutionSchedule:
           type: string
+    Analysis:
+      type: object
+      properties:
+        CustomerContactRecord:
+          type: string
+        CaseAnalysisWorkProduct:
+          type: string
+        CaseAnalysisWorkTaskResult:
+          type: string
     Resolution:
       type: object
       properties:
@@ -324,15 +333,6 @@ components:
         CaseDeterminationWorkProduct:
           type: string
         CaseDeterminationWorkTaskResult:
-          type: string
-    Analysis:
-      type: object
-      properties:
-        CustomerContactRecord:
-          type: string
-        CaseAnalysisWorkProduct:
-          type: string
-        CaseAnalysisWorkTaskResult:
           type: string
     HTTPError:
       type: object
@@ -474,6 +474,14 @@ components:
       explode: false
       schema:
         type: string
+    AnalysisID:
+      name: analysisId
+      in: path
+      required: true
+      style: simple
+      explode: false
+      schema:
+        type: string
     ResolutionID:
       name: resolutionId
       in: path
@@ -484,14 +492,6 @@ components:
         type: string
     DeterminationID:
       name: determinationId
-      in: path
-      required: true
-      style: simple
-      explode: false
-      schema:
-        type: string
-    AnalysisID:
-      name: analysisId
       in: path
       required: true
       style: simple

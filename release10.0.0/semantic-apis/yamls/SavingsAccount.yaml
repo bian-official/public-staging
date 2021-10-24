@@ -851,38 +851,24 @@ components:
           type: string
         StatementReport:
           type: string
-    DepositsandWithdrawals:
+    IssuedDevice:
       type: object
       properties:
-        DepositType:
+        IssuedDeviceType:
           type: string
-        WithdrawalType:
+        IssuedDeviceDescription:
           type: string
-        AccountLimitBreachResponse:
+        IssuedDeviceOptionDefinition:
           type: string
-        DepositTransaction:
+        IssuedDeviceOptionSetting:
           type: string
-        DepositTransactionSourceReference:
-          type: object
-        DepositTransactionDepositType:
+        IssuedDeviceProperty:
           type: string
-        DepositTransactionDescription:
+        IssuedDevicePropertyType:
           type: string
-        DepositTransactionAmount:
-          type: number
-        DepositTransactionDate:
+        IssuedDevicePropertyValue:
           type: string
-        WithdrawalTransaction:
-          type: string
-        WithdrawalTransactionSourceReference:
-          type: object
-        WithdrawalTransactionWithdrawalType:
-          type: string
-        WithdrawalTransactionDescription:
-          type: string
-        WithdrawalTransactionAmount:
-          type: number
-        WithdrawalTransactionDate:
+        IssuedDeviceStatus:
           type: string
     Interest:
       type: object
@@ -993,29 +979,6 @@ components:
           type: object
         PaymentTransactionStatus:
           type: string
-    AccountLien:
-      type: object
-      properties:
-        LienType:
-          type: string
-        LienDefinition:
-          type: string
-        LienProcessingOption:
-          type: string
-        LienRecord:
-          type: string
-        LienOriginator:
-          type: string
-        LienPurpose:
-          type: string
-        LienAmount:
-          type: number
-        LienStartDate:
-          type: string
-        LienExpiryDate:
-          type: string
-        LienStatus:
-          type: string
     AccountSweep:
       type: object
       properties:
@@ -1041,24 +1004,61 @@ components:
           type: number
         AccountSweepExecutionDate:
           type: string
-    IssuedDevice:
+    AccountLien:
       type: object
       properties:
-        IssuedDeviceType:
+        LienType:
           type: string
-        IssuedDeviceDescription:
+        LienDefinition:
           type: string
-        IssuedDeviceOptionDefinition:
+        LienProcessingOption:
           type: string
-        IssuedDeviceOptionSetting:
+        LienRecord:
           type: string
-        IssuedDeviceProperty:
+        LienOriginator:
           type: string
-        IssuedDevicePropertyType:
+        LienPurpose:
           type: string
-        IssuedDevicePropertyValue:
+        LienAmount:
+          type: number
+        LienStartDate:
           type: string
-        IssuedDeviceStatus:
+        LienExpiryDate:
+          type: string
+        LienStatus:
+          type: string
+    DepositsandWithdrawals:
+      type: object
+      properties:
+        DepositType:
+          type: string
+        WithdrawalType:
+          type: string
+        AccountLimitBreachResponse:
+          type: string
+        DepositTransaction:
+          type: string
+        DepositTransactionSourceReference:
+          type: object
+        DepositTransactionDepositType:
+          type: string
+        DepositTransactionDescription:
+          type: string
+        DepositTransactionAmount:
+          type: number
+        DepositTransactionDate:
+          type: string
+        WithdrawalTransaction:
+          type: string
+        WithdrawalTransactionSourceReference:
+          type: object
+        WithdrawalTransactionWithdrawalType:
+          type: string
+        WithdrawalTransactionDescription:
+          type: string
+        WithdrawalTransactionAmount:
+          type: number
+        WithdrawalTransactionDate:
           type: string
     HTTPError:
       type: object
@@ -1477,8 +1477,8 @@ components:
       explode: false
       schema:
         type: string
-    DepositsandWithdrawalsID:
-      name: depositsandwithdrawalsId
+    IssuedDeviceID:
+      name: issueddeviceId
       in: path
       required: true
       style: simple
@@ -1509,14 +1509,6 @@ components:
       explode: false
       schema:
         type: string
-    AccountLienID:
-      name: accountlienId
-      in: path
-      required: true
-      style: simple
-      explode: false
-      schema:
-        type: string
     AccountSweepID:
       name: accountsweepId
       in: path
@@ -1525,8 +1517,16 @@ components:
       explode: false
       schema:
         type: string
-    IssuedDeviceID:
-      name: issueddeviceId
+    AccountLienID:
+      name: accountlienId
+      in: path
+      required: true
+      style: simple
+      explode: false
+      schema:
+        type: string
+    DepositsandWithdrawalsID:
+      name: depositsandwithdrawalsId
       in: path
       required: true
       style: simple

@@ -396,6 +396,13 @@ components:
           type: string
         CustomerBillingPaymentSchedule:
           type: string
+    Payments:
+      type: object
+      properties:
+        PaymentTransactionReference:
+          type: object
+        PaymentTransaction:
+          type: string
     TrackingandReminders:
       type: object
       properties:
@@ -410,13 +417,6 @@ components:
         TrackingandRemindersResult:
           type: string
         TrackingandRemindersWorkProduct:
-          type: string
-    Payments:
-      type: object
-      properties:
-        PaymentTransactionReference:
-          type: object
-        PaymentTransaction:
           type: string
     Invoicing:
       type: object
@@ -678,16 +678,16 @@ components:
       explode: false
       schema:
         type: string
-    TrackingandRemindersID:
-      name: trackingandremindersId
+    PaymentsID:
+      name: paymentsId
       in: path
       required: true
       style: simple
       explode: false
       schema:
         type: string
-    PaymentsID:
-      name: paymentsId
+    TrackingandRemindersID:
+      name: trackingandremindersId
       in: path
       required: true
       style: simple

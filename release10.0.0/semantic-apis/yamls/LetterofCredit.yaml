@@ -1529,6 +1529,40 @@ components:
           type: string
         LetterOfCreditTransactionReference:
           type: string
+    LetterofCreditIssuanceandBookingTask:
+      type: object
+      properties:
+        Preconditions:
+          type: object
+        Schedule:
+          type: object
+        BusinessService:
+          type: object
+        Postconditions:
+          type: object
+        LetterOfCreditTransactionReference:
+          type: string
+        LetterofCreditIssuanceandBookingTaskReference:
+          type: string
+        LetterofCreditIssuanceandBookingTaskType:
+          type: string
+    LetterofCreditDefinitionandPricingTask:
+      type: object
+      properties:
+        Preconditions:
+          type: object
+        Schedule:
+          type: object
+        BusinessService:
+          type: object
+        Postconditions:
+          type: object
+        LetterOfCreditTransactionReference:
+          type: string
+        LetterofCreditDefinitionandPricingTaskReference:
+          type: string
+        LetterofCreditDefinitionandPricingTaskType:
+          type: string
     LetterofCreditPayoutTask:
       type: object
       properties:
@@ -1563,7 +1597,7 @@ components:
           type: string
         SellerObligationConfirmationTaskType:
           type: string
-    LetterofCreditIssuanceandBookingTask:
+    CustomerPaymentTask:
       type: object
       properties:
         Preconditions:
@@ -1576,9 +1610,9 @@ components:
           type: object
         LetterOfCreditTransactionReference:
           type: string
-        LetterofCreditIssuanceandBookingTaskReference:
+        CustomerPaymentTaskReference:
           type: string
-        LetterofCreditIssuanceandBookingTaskType:
+        CustomerPaymentTaskType:
           type: string
     CustomerCollateralAllocationTask:
       type: object
@@ -1596,23 +1630,6 @@ components:
         CustomerCollateralAllocationTaskReference:
           type: string
         CustomerCollateralAllocationTaskType:
-          type: string
-    LetterofCreditDefinitionandPricingTask:
-      type: object
-      properties:
-        Preconditions:
-          type: object
-        Schedule:
-          type: object
-        BusinessService:
-          type: object
-        Postconditions:
-          type: object
-        LetterOfCreditTransactionReference:
-          type: string
-        LetterofCreditDefinitionandPricingTaskReference:
-          type: string
-        LetterofCreditDefinitionandPricingTaskType:
           type: string
     LetterofCreditOutcome:
       type: object
@@ -1639,23 +1656,6 @@ components:
           type: string
         LetterofCreditWorkProduct:
           type: object
-    CustomerPaymentTask:
-      type: object
-      properties:
-        Preconditions:
-          type: object
-        Schedule:
-          type: object
-        BusinessService:
-          type: object
-        Postconditions:
-          type: object
-        LetterOfCreditTransactionReference:
-          type: string
-        CustomerPaymentTaskReference:
-          type: string
-        CustomerPaymentTaskType:
-          type: string
     HTTPError:
       type: object
       properties:
@@ -1668,6 +1668,22 @@ components:
   parameters:
     LetterofCreditID:
       name: letterofcreditId
+      in: path
+      required: true
+      style: simple
+      explode: false
+      schema:
+        type: string
+    LetterofCreditIssuanceandBookingTaskID:
+      name: letterofcreditissuanceandbookingtaskId
+      in: path
+      required: true
+      style: simple
+      explode: false
+      schema:
+        type: string
+    LetterofCreditDefinitionandPricingTaskID:
+      name: letterofcreditdefinitionandpricingtaskId
       in: path
       required: true
       style: simple
@@ -1690,8 +1706,8 @@ components:
       explode: false
       schema:
         type: string
-    LetterofCreditIssuanceandBookingTaskID:
-      name: letterofcreditissuanceandbookingtaskId
+    CustomerPaymentTaskID:
+      name: customerpaymenttaskId
       in: path
       required: true
       style: simple
@@ -1706,24 +1722,8 @@ components:
       explode: false
       schema:
         type: string
-    LetterofCreditDefinitionandPricingTaskID:
-      name: letterofcreditdefinitionandpricingtaskId
-      in: path
-      required: true
-      style: simple
-      explode: false
-      schema:
-        type: string
     LetterofCreditOutcomeID:
       name: letterofcreditoutcomeId
-      in: path
-      required: true
-      style: simple
-      explode: false
-      schema:
-        type: string
-    CustomerPaymentTaskID:
-      name: customerpaymenttaskId
       in: path
       required: true
       style: simple
