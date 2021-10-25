@@ -837,26 +837,35 @@ components:
           type: string
         CustomerOfferProcessingTaskResult:
           type: string
-    Audit:
+    Disclosures:
       type: object
       properties:
-        GuidelineComplianceCheckType:
+        DisclosureType:
           type: string
-        GuidelineComplianceCheckRequirement:
+        DisclosureText/Description:
           type: string
-        GuidelineComplianceCheckSubmission:
-          type: string
-        GuidelineComplianceAdjustmentRequirement:
-          type: string
-        GuidelineComplianceCheckAssessment:
-          type: string
-    Agreement:
+        CustomerAcceptanceIndicator:
+          type: boolean
+        DocumentReference(forcustomersignature/acceptancerecord):
+          type: object
+    Booking:
       type: object
       properties:
-        CustomerAgreementInstanceReference:
+        BusinessUnitReference:
           type: object
-        SalesProductAgreementInstanceReference:
+        Asset/LiabilityType:
+          type: string
+        Amount:
+          type: string
+    Credit:
+      type: object
+      properties:
+        CustomerCreditRating:
+          type: string
+        CreditAuthorizationDecisionReference:
           type: object
+        CreditAuthorizationDecision:
+          type: string
     Compliance:
       type: object
       properties:
@@ -870,16 +879,21 @@ components:
           type: string
         RegulatoryComplianceCheckAssessment:
           type: string
-    Disclosures:
+    ProductInitialization:
       type: object
       properties:
-        DisclosureType:
+        ProductInstanceReference:
+          type: object
+    Underwriting:
+      type: object
+      properties:
+        CustomerIncomeStatement:
           type: string
-        DisclosureText/Description:
+        CustomerDebtStatement:
           type: string
-        CustomerAcceptanceIndicator:
-          type: boolean
-        DocumentReference(forcustomersignature/acceptancerecord):
+        CustomerAssetStatement:
+          type: string
+        UnderwritingAssessmentReference:
           type: object
     FacilityApplication:
       type: object
@@ -900,15 +914,6 @@ components:
           type: string
         FacilitySchedule:
           type: string
-    Credit:
-      type: object
-      properties:
-        CustomerCreditRating:
-          type: string
-        CreditAuthorizationDecisionReference:
-          type: object
-        CreditAuthorizationDecision:
-          type: string
     Collateral:
       type: object
       properties:
@@ -918,31 +923,26 @@ components:
           type: object
         CollateralAssetReference:
           type: object
-    Underwriting:
+    Agreement:
       type: object
       properties:
-        CustomerIncomeStatement:
-          type: string
-        CustomerDebtStatement:
-          type: string
-        CustomerAssetStatement:
-          type: string
-        UnderwritingAssessmentReference:
+        CustomerAgreementInstanceReference:
           type: object
-    Booking:
+        SalesProductAgreementInstanceReference:
+          type: object
+    Audit:
       type: object
       properties:
-        BusinessUnitReference:
-          type: object
-        Asset/LiabilityType:
+        GuidelineComplianceCheckType:
           type: string
-        Amount:
+        GuidelineComplianceCheckRequirement:
           type: string
-    ProductInitialization:
-      type: object
-      properties:
-        ProductInstanceReference:
-          type: object
+        GuidelineComplianceCheckSubmission:
+          type: string
+        GuidelineComplianceAdjustmentRequirement:
+          type: string
+        GuidelineComplianceCheckAssessment:
+          type: string
     CorrespondenceandDocuments:
       type: object
       properties:
@@ -1801,64 +1801,8 @@ components:
       explode: false
       schema:
         type: string
-    AuditID:
-      name: auditId
-      in: path
-      required: true
-      style: simple
-      explode: false
-      schema:
-        type: string
-    AgreementID:
-      name: agreementId
-      in: path
-      required: true
-      style: simple
-      explode: false
-      schema:
-        type: string
-    ComplianceID:
-      name: complianceId
-      in: path
-      required: true
-      style: simple
-      explode: false
-      schema:
-        type: string
     DisclosuresID:
       name: disclosuresId
-      in: path
-      required: true
-      style: simple
-      explode: false
-      schema:
-        type: string
-    FacilityApplicationID:
-      name: facilityapplicationId
-      in: path
-      required: true
-      style: simple
-      explode: false
-      schema:
-        type: string
-    CreditID:
-      name: creditId
-      in: path
-      required: true
-      style: simple
-      explode: false
-      schema:
-        type: string
-    CollateralID:
-      name: collateralId
-      in: path
-      required: true
-      style: simple
-      explode: false
-      schema:
-        type: string
-    UnderwritingID:
-      name: underwritingId
       in: path
       required: true
       style: simple
@@ -1873,8 +1817,64 @@ components:
       explode: false
       schema:
         type: string
+    CreditID:
+      name: creditId
+      in: path
+      required: true
+      style: simple
+      explode: false
+      schema:
+        type: string
+    ComplianceID:
+      name: complianceId
+      in: path
+      required: true
+      style: simple
+      explode: false
+      schema:
+        type: string
     ProductInitializationID:
       name: productinitializationId
+      in: path
+      required: true
+      style: simple
+      explode: false
+      schema:
+        type: string
+    UnderwritingID:
+      name: underwritingId
+      in: path
+      required: true
+      style: simple
+      explode: false
+      schema:
+        type: string
+    FacilityApplicationID:
+      name: facilityapplicationId
+      in: path
+      required: true
+      style: simple
+      explode: false
+      schema:
+        type: string
+    CollateralID:
+      name: collateralId
+      in: path
+      required: true
+      style: simple
+      explode: false
+      schema:
+        type: string
+    AgreementID:
+      name: agreementId
+      in: path
+      required: true
+      style: simple
+      explode: false
+      schema:
+        type: string
+    AuditID:
+      name: auditId
       in: path
       required: true
       style: simple

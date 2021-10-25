@@ -899,29 +899,6 @@ components:
           type: string
         ProductTrainingProcedureCustomerAgreementReference:
           type: object
-    ContentDevelopment:
-      type: object
-      properties:
-        ContentDevelopmentPreconditions:
-          type: string
-        ContentDevelopmentBusinessUnit/EmployeeReference:
-          type: object
-        ContentDevelopmentWorkSchedule:
-          type: string
-        ContentDevelopment:
-          type: object
-        ContentDevelopmentPostconditions:
-          type: string
-        ContentDevelopmentContentDevelopmentServiceType:
-          type: string
-        ContentDevelopmentContentDevelopmentServiceDescription:
-          type: string
-        ContentDevelopmentContentDevelopmentServiceInputsandOuputs:
-          type: string
-        ContentDevelopmentContentDevelopmentServiceWorkProduct:
-          type: string
-        ContentDevelopmentContentDevelopmentServiceName:
-          type: string
     ServiceDelivery:
       type: object
       properties:
@@ -998,6 +975,29 @@ components:
           type: string
         ServiceEvaluationServiceEvaluationServiceName:
           type: string
+    ContentDevelopment:
+      type: object
+      properties:
+        ContentDevelopmentPreconditions:
+          type: string
+        ContentDevelopmentBusinessUnit/EmployeeReference:
+          type: object
+        ContentDevelopmentWorkSchedule:
+          type: string
+        ContentDevelopment:
+          type: object
+        ContentDevelopmentPostconditions:
+          type: string
+        ContentDevelopmentContentDevelopmentServiceType:
+          type: string
+        ContentDevelopmentContentDevelopmentServiceDescription:
+          type: string
+        ContentDevelopmentContentDevelopmentServiceInputsandOuputs:
+          type: string
+        ContentDevelopmentContentDevelopmentServiceWorkProduct:
+          type: string
+        ContentDevelopmentContentDevelopmentServiceName:
+          type: string
     HTTPError:
       type: object
       properties:
@@ -1010,14 +1010,6 @@ components:
   parameters:
     ProductTrainingID:
       name: producttrainingId
-      in: path
-      required: true
-      style: simple
-      explode: false
-      schema:
-        type: string
-    ContentDevelopmentID:
-      name: contentdevelopmentId
       in: path
       required: true
       style: simple
@@ -1050,6 +1042,14 @@ components:
         type: string
     ServiceEvaluationID:
       name: serviceevaluationId
+      in: path
+      required: true
+      style: simple
+      explode: false
+      schema:
+        type: string
+    ContentDevelopmentID:
+      name: contentdevelopmentId
       in: path
       required: true
       style: simple

@@ -743,6 +743,29 @@ components:
           type: string
         ProductInventoryDistributionAdministrativePlanReference:
           type: object
+    Distribution:
+      type: object
+      properties:
+        DistributionPreconditions:
+          type: string
+        DistributionBusinessUnit/EmployeeReference:
+          type: object
+        DistributionWorkSchedule:
+          type: string
+        BusinessService:
+          type: object
+        DistributionPostconditions:
+          type: string
+        DistributionServiceType:
+          type: string
+        DistributionServiceDescription:
+          type: string
+        DistributionServiceInputsandOuputs:
+          type: string
+        DistributionServiceWorkProduct:
+          type: string
+        DistributionServiceName:
+          type: string
     Oversight:
       type: object
       properties:
@@ -789,17 +812,6 @@ components:
           type: string
         ProvisioningServiceName:
           type: string
-    ProductInventoryDistributionOutcome:
-      type: object
-      properties:
-        ProductInventoryDistributionPerformanceAnalysis:
-          type: string
-        ProductInventoryDistributionActivityAnalysis:
-          type: string
-        ProductInventoryDistributionAdministrativePlan:
-          type: string
-        ProductInventoryDistributionAdministrationTask:
-          type: string
     Mailing:
       type: object
       properties:
@@ -823,28 +835,16 @@ components:
           type: string
         MailingMailingServiceName:
           type: string
-    Distribution:
+    ProductInventoryDistributionOutcome:
       type: object
       properties:
-        DistributionPreconditions:
+        ProductInventoryDistributionPerformanceAnalysis:
           type: string
-        DistributionBusinessUnit/EmployeeReference:
-          type: object
-        DistributionWorkSchedule:
+        ProductInventoryDistributionActivityAnalysis:
           type: string
-        BusinessService:
-          type: object
-        DistributionPostconditions:
+        ProductInventoryDistributionAdministrativePlan:
           type: string
-        DistributionServiceType:
-          type: string
-        DistributionServiceDescription:
-          type: string
-        DistributionServiceInputsandOuputs:
-          type: string
-        DistributionServiceWorkProduct:
-          type: string
-        DistributionServiceName:
+        ProductInventoryDistributionAdministrationTask:
           type: string
     HTTPError:
       type: object
@@ -858,6 +858,14 @@ components:
   parameters:
     ProductInventoryDistributionID:
       name: productinventorydistributionId
+      in: path
+      required: true
+      style: simple
+      explode: false
+      schema:
+        type: string
+    DistributionID:
+      name: distributionId
       in: path
       required: true
       style: simple
@@ -880,14 +888,6 @@ components:
       explode: false
       schema:
         type: string
-    ProductInventoryDistributionOutcomeID:
-      name: productinventorydistributionoutcomeId
-      in: path
-      required: true
-      style: simple
-      explode: false
-      schema:
-        type: string
     MailingID:
       name: mailingId
       in: path
@@ -896,8 +896,8 @@ components:
       explode: false
       schema:
         type: string
-    DistributionID:
-      name: distributionId
+    ProductInventoryDistributionOutcomeID:
+      name: productinventorydistributionoutcomeId
       in: path
       required: true
       style: simple

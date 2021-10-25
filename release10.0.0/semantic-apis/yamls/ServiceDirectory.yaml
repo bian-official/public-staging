@@ -1319,6 +1319,40 @@ components:
           type: string
         ServiceDirectoryEntryReference:
           type: string
+    ArrangementServicingProperties:
+      type: object
+      properties:
+        Preconditions:
+          type: object
+        Schedule:
+          type: object
+        VersionNumber:
+          type: string
+        BusinessService:
+          type: object
+        ServiceDirectoryEntryReference:
+          type: string
+        ArrangementServicingPropertiesReference:
+          type: object
+        ArrangementServicingPropertiesType:
+          type: string
+    ServiceDeliveryServicingProperties:
+      type: object
+      properties:
+        Preconditions:
+          type: object
+        Schedule:
+          type: object
+        VersionNumber:
+          type: string
+        BusinessService:
+          type: object
+        ServiceDirectoryEntryReference:
+          type: string
+        ServiceDeliveryServicingPropertiesReference:
+          type: object
+        ServiceDeliveryServicingPropertiesType:
+          type: string
     ProductAccessServicingProperties:
       type: object
       properties:
@@ -1370,40 +1404,6 @@ components:
           type: object
         RelationshipServicingPropertiesType:
           type: string
-    ArrangementServicingProperties:
-      type: object
-      properties:
-        Preconditions:
-          type: object
-        Schedule:
-          type: object
-        VersionNumber:
-          type: string
-        BusinessService:
-          type: object
-        ServiceDirectoryEntryReference:
-          type: string
-        ArrangementServicingPropertiesReference:
-          type: object
-        ArrangementServicingPropertiesType:
-          type: string
-    ServiceDeliveryServicingProperties:
-      type: object
-      properties:
-        Preconditions:
-          type: object
-        Schedule:
-          type: object
-        VersionNumber:
-          type: string
-        BusinessService:
-          type: object
-        ServiceDirectoryEntryReference:
-          type: string
-        ServiceDeliveryServicingPropertiesReference:
-          type: object
-        ServiceDeliveryServicingPropertiesType:
-          type: string
     AccessControlServicingProperties:
       type: object
       properties:
@@ -1446,6 +1446,22 @@ components:
       explode: false
       schema:
         type: string
+    ArrangementServicingPropertiesID:
+      name: arrangementservicingpropertiesId
+      in: path
+      required: true
+      style: simple
+      explode: false
+      schema:
+        type: string
+    ServiceDeliveryServicingPropertiesID:
+      name: servicedeliveryservicingpropertiesId
+      in: path
+      required: true
+      style: simple
+      explode: false
+      schema:
+        type: string
     ProductAccessServicingPropertiesID:
       name: productaccessservicingpropertiesId
       in: path
@@ -1464,22 +1480,6 @@ components:
         type: string
     RelationshipServicingPropertiesID:
       name: relationshipservicingpropertiesId
-      in: path
-      required: true
-      style: simple
-      explode: false
-      schema:
-        type: string
-    ArrangementServicingPropertiesID:
-      name: arrangementservicingpropertiesId
-      in: path
-      required: true
-      style: simple
-      explode: false
-      schema:
-        type: string
-    ServiceDeliveryServicingPropertiesID:
-      name: servicedeliveryservicingpropertiesId
       in: path
       required: true
       style: simple

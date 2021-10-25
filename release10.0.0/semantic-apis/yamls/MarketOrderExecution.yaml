@@ -333,6 +333,15 @@ components:
           type: string
         MarketOrderTradeInitiationInstanceReference:
           type: object
+    TradeInitiation:
+      type: object
+      properties:
+        WholesaleTradeReference:
+          type: object
+        MarketTradeTransactionInstanceProcessingStatus:
+          type: string
+        MarketTradeInitiationTaskResult:
+          type: string
     Position:
       type: object
       properties:
@@ -357,15 +366,6 @@ components:
         CorrespondenceInstanceReference:
           type: object
         WholesaleTradeStatus:
-          type: string
-    TradeInitiation:
-      type: object
-      properties:
-        WholesaleTradeReference:
-          type: object
-        MarketTradeTransactionInstanceProcessingStatus:
-          type: string
-        MarketTradeInitiationTaskResult:
           type: string
     Quote:
       type: object
@@ -600,16 +600,16 @@ components:
       explode: false
       schema:
         type: string
-    PositionID:
-      name: positionId
+    TradeInitiationID:
+      name: tradeinitiationId
       in: path
       required: true
       style: simple
       explode: false
       schema:
         type: string
-    TradeInitiationID:
-      name: tradeinitiationId
+    PositionID:
+      name: positionId
       in: path
       required: true
       style: simple

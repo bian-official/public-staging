@@ -1131,23 +1131,6 @@ components:
           type: string
         CorporateTrustServicesFacilityReference:
           type: string
-    TrustTaxandExpenseFulfillment:
-      type: object
-      properties:
-        Preconditions:
-          type: object
-        Schedule:
-          type: object
-        BusinessService:
-          type: object
-        Postconditions:
-          type: object
-        CorporateTrustServicesFacilityReference:
-          type: string
-        TrustTaxandExpenseFulfillmentReference:
-          type: object
-        TrustTaxandExpenseFulfillmentType:
-          type: string
     TrustAssetMaintenanceandManagementFulfillment:
       type: object
       properties:
@@ -1164,6 +1147,23 @@ components:
         TrustAssetMaintenanceandManagementFulfillmentReference:
           type: object
         TrustAssetMaintenanceandManagementFulfillmentType:
+          type: string
+    TrustTaxandExpenseFulfillment:
+      type: object
+      properties:
+        Preconditions:
+          type: object
+        Schedule:
+          type: object
+        BusinessService:
+          type: object
+        Postconditions:
+          type: object
+        CorporateTrustServicesFacilityReference:
+          type: string
+        TrustTaxandExpenseFulfillmentReference:
+          type: object
+        TrustTaxandExpenseFulfillmentType:
           type: string
     TrustCourtAdministrationFulfillment:
       type: object
@@ -1224,16 +1224,16 @@ components:
       explode: false
       schema:
         type: string
-    TrustTaxandExpenseFulfillmentID:
-      name: trusttaxandexpensefulfillmentId
+    TrustAssetMaintenanceandManagementFulfillmentID:
+      name: trustassetmaintenanceandmanagementfulfillmentId
       in: path
       required: true
       style: simple
       explode: false
       schema:
         type: string
-    TrustAssetMaintenanceandManagementFulfillmentID:
-      name: trustassetmaintenanceandmanagementfulfillmentId
+    TrustTaxandExpenseFulfillmentID:
+      name: trusttaxandexpensefulfillmentId
       in: path
       required: true
       style: simple

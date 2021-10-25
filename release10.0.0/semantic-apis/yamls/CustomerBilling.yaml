@@ -403,21 +403,6 @@ components:
           type: object
         PaymentTransaction:
           type: string
-    TrackingandReminders:
-      type: object
-      properties:
-        CustomerReminderContactRecord:
-          type: string
-        ContactMessage:
-          type: string
-        ContactDate:
-          type: string
-        ContactResult:
-          type: string
-        TrackingandRemindersResult:
-          type: string
-        TrackingandRemindersWorkProduct:
-          type: string
     Invoicing:
       type: object
       properties:
@@ -432,6 +417,21 @@ components:
         Invoice:
           type: string
         InvoicingWorkProduct:
+          type: string
+    TrackingandReminders:
+      type: object
+      properties:
+        CustomerReminderContactRecord:
+          type: string
+        ContactMessage:
+          type: string
+        ContactDate:
+          type: string
+        ContactResult:
+          type: string
+        TrackingandRemindersResult:
+          type: string
+        TrackingandRemindersWorkProduct:
           type: string
     HTTPError:
       type: object
@@ -686,16 +686,16 @@ components:
       explode: false
       schema:
         type: string
-    TrackingandRemindersID:
-      name: trackingandremindersId
+    InvoicingID:
+      name: invoicingId
       in: path
       required: true
       style: simple
       explode: false
       schema:
         type: string
-    InvoicingID:
-      name: invoicingId
+    TrackingandRemindersID:
+      name: trackingandremindersId
       in: path
       required: true
       style: simple

@@ -548,21 +548,6 @@ components:
           type: string
         AdvertisingCampaignProcedureResult:
           type: string
-    MarketTracking:
-      type: object
-      properties:
-        MarketTrackingWorkTaskType:
-          type: string
-        MarketTrackingWorkTask:
-          type: string
-        GeneralMarketResearchDirectoryEntryInstanceReference:
-          type: object
-        MarketTrackingWorkTaskWorkProducts:
-          type: string
-        MarketTrackingWorkTaskResult:
-          type: string
-        MarketTrackingWorkTaskDate-Time:
-          type: string
     PerformanceAssessment:
       type: object
       properties:
@@ -583,6 +568,21 @@ components:
           type: string
         AdvertisingCampaignExecutionSchedule:
           type: string
+    MarketTracking:
+      type: object
+      properties:
+        MarketTrackingWorkTaskType:
+          type: string
+        MarketTrackingWorkTask:
+          type: string
+        GeneralMarketResearchDirectoryEntryInstanceReference:
+          type: object
+        MarketTrackingWorkTaskWorkProducts:
+          type: string
+        MarketTrackingWorkTaskResult:
+          type: string
+        MarketTrackingWorkTaskDate-Time:
+          type: string
     HTTPError:
       type: object
       properties:
@@ -601,14 +601,6 @@ components:
       explode: false
       schema:
         type: string
-    MarketTrackingID:
-      name: markettrackingId
-      in: path
-      required: true
-      style: simple
-      explode: false
-      schema:
-        type: string
     PerformanceAssessmentID:
       name: performanceassessmentId
       in: path
@@ -619,6 +611,14 @@ components:
         type: string
     CampaignDirectionID:
       name: campaigndirectionId
+      in: path
+      required: true
+      style: simple
+      explode: false
+      schema:
+        type: string
+    MarketTrackingID:
+      name: markettrackingId
       in: path
       required: true
       style: simple

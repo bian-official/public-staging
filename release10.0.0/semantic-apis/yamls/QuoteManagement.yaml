@@ -713,25 +713,6 @@ components:
           type: string
         QuotationProcedureReference:
           type: string
-    MarketQuoteSelectionWorkstep:
-      type: object
-      properties:
-        Preconditions:
-          type: object
-        BusinessUnit/EmployeeReference:
-          type: object
-        Schedule:
-          type: object
-        BusinessService:
-          type: object
-        Postconditions:
-          type: object
-        QuotationProcedureReference:
-          type: string
-        MarketQuoteSelectionWorkstepReference:
-          type: string
-        MarketQuoteSelectionWorkstepType:
-          type: string
     MarketQuoteRequestWorkstep:
       type: object
       properties:
@@ -750,6 +731,25 @@ components:
         MarketQuoteRequestWorkstepReference:
           type: string
         MarketQuoteRequestWorkstepType:
+          type: string
+    MarketQuoteSelectionWorkstep:
+      type: object
+      properties:
+        Preconditions:
+          type: object
+        BusinessUnit/EmployeeReference:
+          type: object
+        Schedule:
+          type: object
+        BusinessService:
+          type: object
+        Postconditions:
+          type: object
+        QuotationProcedureReference:
+          type: string
+        MarketQuoteSelectionWorkstepReference:
+          type: string
+        MarketQuoteSelectionWorkstepType:
           type: string
     QuoteManagementOutcome:
       type: object
@@ -776,16 +776,16 @@ components:
       explode: false
       schema:
         type: string
-    MarketQuoteSelectionWorkstepID:
-      name: marketquoteselectionworkstepId
+    MarketQuoteRequestWorkstepID:
+      name: marketquoterequestworkstepId
       in: path
       required: true
       style: simple
       explode: false
       schema:
         type: string
-    MarketQuoteRequestWorkstepID:
-      name: marketquoterequestworkstepId
+    MarketQuoteSelectionWorkstepID:
+      name: marketquoteselectionworkstepId
       in: path
       required: true
       style: simple

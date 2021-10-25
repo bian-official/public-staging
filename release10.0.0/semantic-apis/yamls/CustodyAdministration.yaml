@@ -820,27 +820,6 @@ components:
           type: string
         CustodyFacilityAccountReference:
           type: object
-    SafeKeeping:
-      type: object
-      properties:
-        SafeKeepingPreconditions:
-          type: string
-        SafeKeepingFeatureSchedule:
-          type: string
-        SecuritiesSafeKeeping:
-          type: object
-        SafeKeepingPostconditions:
-          type: string
-        SafeKeepingSecuritiesSafeKeepingServiceType:
-          type: string
-        SafeKeepingSecuritiesSafeKeepingServiceDescription:
-          type: string
-        SafeKeepingSecuritiesSafeKeepingServiceInputsandOuputs:
-          type: string
-        SafeKeepingSecuritiesSafeKeepingServiceWorkProduct:
-          type: string
-        SafeKeepingSecuritiesSafeKeepingServiceName:
-          type: string
     DividendsandInterest:
       type: object
       properties:
@@ -869,26 +848,26 @@ components:
           type: string
         CustodyAdministrationWorkProduct:
           type: string
-    SecuritiesReporting:
+    SafeKeeping:
       type: object
       properties:
-        SecuritiesReportingPreconditions:
+        SafeKeepingPreconditions:
           type: string
-        SecuritiesReportingFeatureSchedule:
+        SafeKeepingFeatureSchedule:
           type: string
-        CustodySecuritiesReporting:
+        SecuritiesSafeKeeping:
           type: object
-        SecuritiesReportingPostconditions:
+        SafeKeepingPostconditions:
           type: string
-        SecuritiesReportingCustodySecuritiesReportingServiceType:
+        SafeKeepingSecuritiesSafeKeepingServiceType:
           type: string
-        SecuritiesReportingCustodySecuritiesReportingServiceDescription:
+        SafeKeepingSecuritiesSafeKeepingServiceDescription:
           type: string
-        SecuritiesReportingCustodySecuritiesReportingServiceInputsandOuputs:
+        SafeKeepingSecuritiesSafeKeepingServiceInputsandOuputs:
           type: string
-        SecuritiesReportingCustodySecuritiesReportingServiceWorkProduct:
+        SafeKeepingSecuritiesSafeKeepingServiceWorkProduct:
           type: string
-        SecuritiesReportingCustodySecuritiesReportingServiceName:
+        SafeKeepingSecuritiesSafeKeepingServiceName:
           type: string
     Settlement:
       type: object
@@ -910,6 +889,27 @@ components:
         SettlementServiceWorkProduct:
           type: string
         SettlementServiceName:
+          type: string
+    SecuritiesReporting:
+      type: object
+      properties:
+        SecuritiesReportingPreconditions:
+          type: string
+        SecuritiesReportingFeatureSchedule:
+          type: string
+        CustodySecuritiesReporting:
+          type: object
+        SecuritiesReportingPostconditions:
+          type: string
+        SecuritiesReportingCustodySecuritiesReportingServiceType:
+          type: string
+        SecuritiesReportingCustodySecuritiesReportingServiceDescription:
+          type: string
+        SecuritiesReportingCustodySecuritiesReportingServiceInputsandOuputs:
+          type: string
+        SecuritiesReportingCustodySecuritiesReportingServiceWorkProduct:
+          type: string
+        SecuritiesReportingCustodySecuritiesReportingServiceName:
           type: string
     Fees:
       type: object
@@ -950,14 +950,6 @@ components:
       explode: false
       schema:
         type: string
-    SafeKeepingID:
-      name: safekeepingId
-      in: path
-      required: true
-      style: simple
-      explode: false
-      schema:
-        type: string
     DividendsandInterestID:
       name: dividendsandinterestId
       in: path
@@ -974,8 +966,8 @@ components:
       explode: false
       schema:
         type: string
-    SecuritiesReportingID:
-      name: securitiesreportingId
+    SafeKeepingID:
+      name: safekeepingId
       in: path
       required: true
       style: simple
@@ -984,6 +976,14 @@ components:
         type: string
     SettlementID:
       name: settlementId
+      in: path
+      required: true
+      style: simple
+      explode: false
+      schema:
+        type: string
+    SecuritiesReportingID:
+      name: securitiesreportingId
       in: path
       required: true
       style: simple

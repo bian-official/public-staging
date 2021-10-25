@@ -1767,6 +1767,23 @@ components:
           type: string
         CorporateTrustServicesFacilityReference:
           type: string
+    TrustTaxandExpenseFulfillment:
+      type: object
+      properties:
+        Preconditions:
+          type: object
+        Schedule:
+          type: object
+        BusinessService:
+          type: object
+        Postconditions:
+          type: object
+        CorporateTrustServicesFacilityReference:
+          type: string
+        TrustTaxandExpenseFulfillmentReference:
+          type: object
+        TrustTaxandExpenseFulfillmentType:
+          type: string
     TrustAssetMaintenanceandManagementFulfillment:
       type: object
       properties:
@@ -1800,23 +1817,6 @@ components:
         CorporateDebtIssueOversightFulfillmentReference:
           type: object
         CorporateDebtIssueOversightFulfillmentType:
-          type: string
-    TrustTaxandExpenseFulfillment:
-      type: object
-      properties:
-        Preconditions:
-          type: object
-        Schedule:
-          type: object
-        BusinessService:
-          type: object
-        Postconditions:
-          type: object
-        CorporateTrustServicesFacilityReference:
-          type: string
-        TrustTaxandExpenseFulfillmentReference:
-          type: object
-        TrustTaxandExpenseFulfillmentType:
           type: string
     EscrowAccountFulfillment:
       type: object
@@ -1911,6 +1911,14 @@ components:
       explode: false
       schema:
         type: string
+    TrustTaxandExpenseFulfillmentID:
+      name: trusttaxandexpensefulfillmentId
+      in: path
+      required: true
+      style: simple
+      explode: false
+      schema:
+        type: string
     TrustAssetMaintenanceandManagementFulfillmentID:
       name: trustassetmaintenanceandmanagementfulfillmentId
       in: path
@@ -1921,14 +1929,6 @@ components:
         type: string
     CorporateDebtIssueOversightFulfillmentID:
       name: corporatedebtissueoversightfulfillmentId
-      in: path
-      required: true
-      style: simple
-      explode: false
-      schema:
-        type: string
-    TrustTaxandExpenseFulfillmentID:
-      name: trusttaxandexpensefulfillmentId
       in: path
       required: true
       style: simple

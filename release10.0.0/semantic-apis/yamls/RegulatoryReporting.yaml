@@ -321,19 +321,6 @@ components:
           type: object
         RegulatoryReportType:
           type: string
-    Consolidation:
-      type: object
-      properties:
-        RegulatoryReportTypeContentRequirements:
-          type: string
-        SourceBusinessUnit/EmployeeReference:
-          type: object
-        SourceProductandServiceReference:
-          type: object
-        SourceCustomerReference:
-          type: object
-        SourceTransactionRecords:
-          type: string
     Enquiries:
       type: object
       properties:
@@ -353,6 +340,19 @@ components:
           type: string
         RegulatoryEnquiryDocumentReference:
           type: object
+    Consolidation:
+      type: object
+      properties:
+        RegulatoryReportTypeContentRequirements:
+          type: string
+        SourceBusinessUnit/EmployeeReference:
+          type: object
+        SourceProductandServiceReference:
+          type: object
+        SourceCustomerReference:
+          type: object
+        SourceTransactionRecords:
+          type: string
     Authoring:
       type: object
       properties:
@@ -470,16 +470,16 @@ components:
       explode: false
       schema:
         type: string
-    ConsolidationID:
-      name: consolidationId
+    EnquiriesID:
+      name: enquiriesId
       in: path
       required: true
       style: simple
       explode: false
       schema:
         type: string
-    EnquiriesID:
-      name: enquiriesId
+    ConsolidationID:
+      name: consolidationId
       in: path
       required: true
       style: simple

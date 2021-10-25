@@ -525,38 +525,6 @@ components:
           type: string
         CustomerContactAuthenticationLevel:
           type: string
-    Password:
-      type: object
-      properties:
-        AuthenticationReferenceDataReference:
-          type: object
-        AuthenticationReferenceDataType:
-          type: string
-        AuthenticationReferenceDataValue:
-          type: object
-        AuthenticationPasswordReference:
-          type: object
-        AuthenticationPasswordTemplate:
-          type: string
-        AuthenticationPasswordStoredValue:
-          type: string
-        AuthenticationPasswordValidFrom/ToDate:
-          type: string
-        AuthenticationPasswordPresentedValue:
-          type: string
-        AuthenticationPasswordTestResult:
-          type: string
-    Question:
-      type: object
-      properties:
-        AuthenticationSecretQuestionReference:
-          type: object
-        AuthenticationSecretQuestionTemplate:
-          type: string
-        AuthenticationSecretQuestionValue:
-          type: string
-        SecretQuestionTestResult:
-          type: string
     Biometric:
       type: object
       properties:
@@ -592,6 +560,17 @@ components:
           type: string
         DeviceTestResult:
           type: string
+    Question:
+      type: object
+      properties:
+        AuthenticationSecretQuestionReference:
+          type: object
+        AuthenticationSecretQuestionTemplate:
+          type: string
+        AuthenticationSecretQuestionValue:
+          type: string
+        SecretQuestionTestResult:
+          type: string
     Document:
       type: object
       properties:
@@ -604,6 +583,27 @@ components:
         DocumentContent:
           type: string
         AuthenticationDocumentComparisonTestResult:
+          type: string
+    Password:
+      type: object
+      properties:
+        AuthenticationReferenceDataReference:
+          type: object
+        AuthenticationReferenceDataType:
+          type: string
+        AuthenticationReferenceDataValue:
+          type: object
+        AuthenticationPasswordReference:
+          type: object
+        AuthenticationPasswordTemplate:
+          type: string
+        AuthenticationPasswordStoredValue:
+          type: string
+        AuthenticationPasswordValidFrom/ToDate:
+          type: string
+        AuthenticationPasswordPresentedValue:
+          type: string
+        AuthenticationPasswordTestResult:
           type: string
     HTTPError:
       type: object
@@ -916,22 +916,6 @@ components:
       explode: false
       schema:
         type: string
-    PasswordID:
-      name: passwordId
-      in: path
-      required: true
-      style: simple
-      explode: false
-      schema:
-        type: string
-    QuestionID:
-      name: questionId
-      in: path
-      required: true
-      style: simple
-      explode: false
-      schema:
-        type: string
     BiometricID:
       name: biometricId
       in: path
@@ -956,8 +940,24 @@ components:
       explode: false
       schema:
         type: string
+    QuestionID:
+      name: questionId
+      in: path
+      required: true
+      style: simple
+      explode: false
+      schema:
+        type: string
     DocumentID:
       name: documentId
+      in: path
+      required: true
+      style: simple
+      explode: false
+      schema:
+        type: string
+    PasswordID:
+      name: passwordId
       in: path
       required: true
       style: simple

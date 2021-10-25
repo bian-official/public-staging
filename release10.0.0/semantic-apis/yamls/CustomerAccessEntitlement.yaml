@@ -319,6 +319,21 @@ components:
           type: string
         DocumentDirectoryEntryInstanceReference:
           type: object
+    Restrictions:
+      type: object
+      properties:
+        ChannelAccessRestrictionsRecord:
+          type: string
+        ChannelAccessProductandServiceTypeUsage:
+          type: string
+        ChannelAccessProductandServiceChannel/DeviceRestrictions:
+          type: string
+        ChannelAccessProductandServiceLocationRestrictions:
+          type: string
+        ChannelAccessProductandServiceFrequency/LimitRestrictions:
+          type: string
+        ChannelAccessProductandServiceTime/DurationRestrictions:
+          type: string
     Preferences:
       type: object
       properties:
@@ -335,21 +350,6 @@ components:
         ChannelAccessChannel/DeviceTypePreference:
           type: string
         ProductandServiceType:
-          type: string
-    Restrictions:
-      type: object
-      properties:
-        ChannelAccessRestrictionsRecord:
-          type: string
-        ChannelAccessProductandServiceTypeUsage:
-          type: string
-        ChannelAccessProductandServiceChannel/DeviceRestrictions:
-          type: string
-        ChannelAccessProductandServiceLocationRestrictions:
-          type: string
-        ChannelAccessProductandServiceFrequency/LimitRestrictions:
-          type: string
-        ChannelAccessProductandServiceTime/DurationRestrictions:
           type: string
     HTTPError:
       type: object
@@ -577,16 +577,16 @@ components:
       explode: false
       schema:
         type: string
-    PreferencesID:
-      name: preferencesId
+    RestrictionsID:
+      name: restrictionsId
       in: path
       required: true
       style: simple
       explode: false
       schema:
         type: string
-    RestrictionsID:
-      name: restrictionsId
+    PreferencesID:
+      name: preferencesId
       in: path
       required: true
       style: simple

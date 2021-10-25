@@ -713,24 +713,12 @@ components:
           type: string
         AccountReconciliationProcedureReference:
           type: string
-    AccountAssessmentWorkstep:
+    AccountReconciliationOutcome:
       type: object
       properties:
-        Preconditions:
+        AccountReconciliationWorkProduct:
           type: object
-        BusinessUnit/EmployeeReference:
-          type: object
-        Schedule:
-          type: object
-        BusinessService:
-          type: object
-        Postconditions:
-          type: object
-        AccountReconciliationProcedureReference:
-          type: string
-        AccountAssessmentWorkstepReference:
-          type: string
-        AccountAssessmentWorkstepType:
+        AccountReconciliationProcedure:
           type: string
     AccountResolutionWorkstep:
       type: object
@@ -751,12 +739,24 @@ components:
           type: string
         AccountResolutionWorkstepType:
           type: string
-    AccountReconciliationOutcome:
+    AccountAssessmentWorkstep:
       type: object
       properties:
-        AccountReconciliationWorkProduct:
+        Preconditions:
           type: object
-        AccountReconciliationProcedure:
+        BusinessUnit/EmployeeReference:
+          type: object
+        Schedule:
+          type: object
+        BusinessService:
+          type: object
+        Postconditions:
+          type: object
+        AccountReconciliationProcedureReference:
+          type: string
+        AccountAssessmentWorkstepReference:
+          type: string
+        AccountAssessmentWorkstepType:
           type: string
     HTTPError:
       type: object
@@ -776,8 +776,8 @@ components:
       explode: false
       schema:
         type: string
-    AccountAssessmentWorkstepID:
-      name: accountassessmentworkstepId
+    AccountReconciliationOutcomeID:
+      name: accountreconciliationoutcomeId
       in: path
       required: true
       style: simple
@@ -792,8 +792,8 @@ components:
       explode: false
       schema:
         type: string
-    AccountReconciliationOutcomeID:
-      name: accountreconciliationoutcomeId
+    AccountAssessmentWorkstepID:
+      name: accountassessmentworkstepId
       in: path
       required: true
       style: simple

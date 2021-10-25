@@ -961,6 +961,59 @@ components:
           type: string
         ManagementManualSpecificationServiceProviderReference:
           type: object
+    EmploymentRelatedProceduresandGuidelines:
+      type: object
+      properties:
+        EmploymentRelatedProceduresandGuidelinesPreconditions:
+          type: string
+        EmploymentRelatedProceduresandGuidelinesSpecificationSchedule:
+          type: string
+        EmploymentRelatedProceduresandGuidelinesVersionNumber:
+          type: string
+        EmploymentRelatedProceduresandGuidelines:
+          type: object
+        EmploymentRelatedProceduresandGuidelinesServiceType:
+          type: string
+        EmploymentRelatedProceduresandGuidelinesServiceDescription:
+          type: string
+        EmploymentRelatedProceduresandGuidelinesServiceInputsandOuputs:
+          type: string
+        EmploymentRelatedProceduresandGuidelinesServiceWorkProduct:
+          type: string
+        EmploymentRelatedProceduresandGuidelinesServiceName:
+          type: string
+    StaffManagementProceduresandGuidelines:
+      type: object
+      properties:
+        StaffManagementProceduresandGuidelinesPreconditions:
+          type: string
+        StaffManagementProceduresandGuidelinesSpecificationSchedule:
+          type: string
+        StaffManagementProceduresandGuidelinesVersionNumber:
+          type: string
+        StaffManagementProceduresandGuidelines:
+          type: object
+        StaffManagementProceduresandGuidelinesServiceType:
+          type: string
+        StaffManagementProceduresandGuidelinesServiceDescription:
+          type: string
+        StaffManagementProceduresandGuidelinesServiceInputsandOuputs:
+          type: string
+        StaffManagementProceduresandGuidelinesServiceWorkProduct:
+          type: string
+        StaffManagementProceduresandGuidelinesServiceName:
+          type: string
+    ManagementManualOutcome:
+      type: object
+      properties:
+        ManagementManualTask:
+          type: string
+        ManagementManualDesign:
+          type: string
+        ManagementManualWorkProduct:
+          type: string
+        ManagementManualImpactAnalysis:
+          type: string
     LegalandRegulatoryObligationsandGuidelines:
       type: object
       properties:
@@ -981,6 +1034,27 @@ components:
         LegalandRegulatoryObligationsandGuidelinesServiceWorkProduct:
           type: string
         LegalandRegulatoryObligationsandGuidelinesServiceName:
+          type: string
+    OperationalSecurityProceduresandGuidelines:
+      type: object
+      properties:
+        OperationalSecurityProceduresandGuidelinesPreconditions:
+          type: string
+        OperationalSecurityProceduresandGuidelinesSpecificationSchedule:
+          type: string
+        OperationalSecurityProceduresandGuidelinesVersionNumber:
+          type: string
+        OperationalSecurityProceduresandGuidelines:
+          type: object
+        OperationalSecurityProceduresandGuidelinesServiceType:
+          type: string
+        OperationalSecurityProceduresandGuidelinesServiceDescription:
+          type: string
+        OperationalSecurityProceduresandGuidelinesServiceInputsandOuputs:
+          type: string
+        OperationalSecurityProceduresandGuidelinesServiceWorkProduct:
+          type: string
+        OperationalSecurityProceduresandGuidelinesServiceName:
           type: string
     CompanyMissionandPolicies:
       type: object
@@ -1024,80 +1098,6 @@ components:
           type: string
         OperationalandProductionProceduresandGuidelinesServiceName:
           type: string
-    OperationalSecurityProceduresandGuidelines:
-      type: object
-      properties:
-        OperationalSecurityProceduresandGuidelinesPreconditions:
-          type: string
-        OperationalSecurityProceduresandGuidelinesSpecificationSchedule:
-          type: string
-        OperationalSecurityProceduresandGuidelinesVersionNumber:
-          type: string
-        OperationalSecurityProceduresandGuidelines:
-          type: object
-        OperationalSecurityProceduresandGuidelinesServiceType:
-          type: string
-        OperationalSecurityProceduresandGuidelinesServiceDescription:
-          type: string
-        OperationalSecurityProceduresandGuidelinesServiceInputsandOuputs:
-          type: string
-        OperationalSecurityProceduresandGuidelinesServiceWorkProduct:
-          type: string
-        OperationalSecurityProceduresandGuidelinesServiceName:
-          type: string
-    ManagementManualOutcome:
-      type: object
-      properties:
-        ManagementManualTask:
-          type: string
-        ManagementManualDesign:
-          type: string
-        ManagementManualWorkProduct:
-          type: string
-        ManagementManualImpactAnalysis:
-          type: string
-    EmploymentRelatedProceduresandGuidelines:
-      type: object
-      properties:
-        EmploymentRelatedProceduresandGuidelinesPreconditions:
-          type: string
-        EmploymentRelatedProceduresandGuidelinesSpecificationSchedule:
-          type: string
-        EmploymentRelatedProceduresandGuidelinesVersionNumber:
-          type: string
-        EmploymentRelatedProceduresandGuidelines:
-          type: object
-        EmploymentRelatedProceduresandGuidelinesServiceType:
-          type: string
-        EmploymentRelatedProceduresandGuidelinesServiceDescription:
-          type: string
-        EmploymentRelatedProceduresandGuidelinesServiceInputsandOuputs:
-          type: string
-        EmploymentRelatedProceduresandGuidelinesServiceWorkProduct:
-          type: string
-        EmploymentRelatedProceduresandGuidelinesServiceName:
-          type: string
-    StaffManagementProceduresandGuidelines:
-      type: object
-      properties:
-        StaffManagementProceduresandGuidelinesPreconditions:
-          type: string
-        StaffManagementProceduresandGuidelinesSpecificationSchedule:
-          type: string
-        StaffManagementProceduresandGuidelinesVersionNumber:
-          type: string
-        StaffManagementProceduresandGuidelines:
-          type: object
-        StaffManagementProceduresandGuidelinesServiceType:
-          type: string
-        StaffManagementProceduresandGuidelinesServiceDescription:
-          type: string
-        StaffManagementProceduresandGuidelinesServiceInputsandOuputs:
-          type: string
-        StaffManagementProceduresandGuidelinesServiceWorkProduct:
-          type: string
-        StaffManagementProceduresandGuidelinesServiceName:
-          type: string
     HTTPError:
       type: object
       properties:
@@ -1116,8 +1116,40 @@ components:
       explode: false
       schema:
         type: string
+    EmploymentRelatedProceduresandGuidelinesID:
+      name: employmentrelatedproceduresandguidelinesId
+      in: path
+      required: true
+      style: simple
+      explode: false
+      schema:
+        type: string
+    StaffManagementProceduresandGuidelinesID:
+      name: staffmanagementproceduresandguidelinesId
+      in: path
+      required: true
+      style: simple
+      explode: false
+      schema:
+        type: string
+    ManagementManualOutcomeID:
+      name: managementmanualoutcomeId
+      in: path
+      required: true
+      style: simple
+      explode: false
+      schema:
+        type: string
     LegalandRegulatoryObligationsandGuidelinesID:
       name: legalandregulatoryobligationsandguidelinesId
+      in: path
+      required: true
+      style: simple
+      explode: false
+      schema:
+        type: string
+    OperationalSecurityProceduresandGuidelinesID:
+      name: operationalsecurityproceduresandguidelinesId
       in: path
       required: true
       style: simple
@@ -1134,38 +1166,6 @@ components:
         type: string
     OperationalandProductionProceduresandGuidelinesID:
       name: operationalandproductionproceduresandguidelinesId
-      in: path
-      required: true
-      style: simple
-      explode: false
-      schema:
-        type: string
-    OperationalSecurityProceduresandGuidelinesID:
-      name: operationalsecurityproceduresandguidelinesId
-      in: path
-      required: true
-      style: simple
-      explode: false
-      schema:
-        type: string
-    ManagementManualOutcomeID:
-      name: managementmanualoutcomeId
-      in: path
-      required: true
-      style: simple
-      explode: false
-      schema:
-        type: string
-    EmploymentRelatedProceduresandGuidelinesID:
-      name: employmentrelatedproceduresandguidelinesId
-      in: path
-      required: true
-      style: simple
-      explode: false
-      schema:
-        type: string
-    StaffManagementProceduresandGuidelinesID:
-      name: staffmanagementproceduresandguidelinesId
       in: path
       required: true
       style: simple

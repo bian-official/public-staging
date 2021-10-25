@@ -565,40 +565,6 @@ components:
           type: string
         ComplianceReportingAdministrativePlanReference:
           type: object
-    ComplianceAssessment:
-      type: object
-      properties:
-        ComplianceAssessmentPreconditions:
-          type: string
-        ComplianceAssessmentBusinessUnit/EmployeeReference:
-          type: object
-        ComplianceAssessmentWorkSchedule:
-          type: string
-        AuditandReporting:
-          type: object
-        ComplianceAssessmentPostconditions:
-          type: string
-        ComplianceAssessmentAuditandReportingServiceType:
-          type: string
-        ComplianceAssessmentAuditandReportingServiceDescription:
-          type: string
-        ComplianceAssessmentAuditandReportingServiceInputsandOuputs:
-          type: string
-        ComplianceAssessmentAuditandReportingServiceWorkProduct:
-          type: string
-        ComplianceAssessmentAuditandReportingServiceName:
-          type: string
-    ComplianceReportingOutcome:
-      type: object
-      properties:
-        ComplianceReportingPerformanceAnalysis:
-          type: string
-        ComplianceReportingActivityAnalysis:
-          type: string
-        ComplianceReportingAdministrativePlan:
-          type: string
-        ComplianceReportingAdministrationTask:
-          type: string
     Consolidation:
       type: object
       properties:
@@ -621,6 +587,17 @@ components:
         ConsolidationServiceWorkProduct:
           type: string
         ConsolidationServiceName:
+          type: string
+    ComplianceReportingOutcome:
+      type: object
+      properties:
+        ComplianceReportingPerformanceAnalysis:
+          type: string
+        ComplianceReportingActivityAnalysis:
+          type: string
+        ComplianceReportingAdministrativePlan:
+          type: string
+        ComplianceReportingAdministrationTask:
           type: string
     Remediation:
       type: object
@@ -645,6 +622,29 @@ components:
           type: string
         RemediationRemediationAssuranceServiceName:
           type: string
+    ComplianceAssessment:
+      type: object
+      properties:
+        ComplianceAssessmentPreconditions:
+          type: string
+        ComplianceAssessmentBusinessUnit/EmployeeReference:
+          type: object
+        ComplianceAssessmentWorkSchedule:
+          type: string
+        AuditandReporting:
+          type: object
+        ComplianceAssessmentPostconditions:
+          type: string
+        ComplianceAssessmentAuditandReportingServiceType:
+          type: string
+        ComplianceAssessmentAuditandReportingServiceDescription:
+          type: string
+        ComplianceAssessmentAuditandReportingServiceInputsandOuputs:
+          type: string
+        ComplianceAssessmentAuditandReportingServiceWorkProduct:
+          type: string
+        ComplianceAssessmentAuditandReportingServiceName:
+          type: string
     HTTPError:
       type: object
       properties:
@@ -663,8 +663,8 @@ components:
       explode: false
       schema:
         type: string
-    ComplianceAssessmentID:
-      name: complianceassessmentId
+    ConsolidationID:
+      name: consolidationId
       in: path
       required: true
       style: simple
@@ -679,16 +679,16 @@ components:
       explode: false
       schema:
         type: string
-    ConsolidationID:
-      name: consolidationId
+    RemediationID:
+      name: remediationId
       in: path
       required: true
       style: simple
       explode: false
       schema:
         type: string
-    RemediationID:
-      name: remediationId
+    ComplianceAssessmentID:
+      name: complianceassessmentId
       in: path
       required: true
       style: simple

@@ -380,10 +380,12 @@ components:
           type: string
         CardClearingServiceSchedule:
           type: string
-    Routing:
+    FXConversion:
       type: object
       properties:
-        RoutingTaskResult:
+        FXConversionRatesandFees:
+          type: object
+        FXConversionTaskResult:
           type: string
     Matching:
       type: object
@@ -396,6 +398,16 @@ components:
         InterchargeFees:
           type: string
         FeeTaskResult:
+          type: string
+    Routing:
+      type: object
+      properties:
+        RoutingTaskResult:
+          type: string
+    Addressing:
+      type: object
+      properties:
+        AddressingTaskResult:
           type: string
     Reconciliation:
       type: object
@@ -436,18 +448,6 @@ components:
         CardTransactionInterchargeFee:
           type: string
         CardTransactionAuthorizationRecord:
-          type: string
-    Addressing:
-      type: object
-      properties:
-        AddressingTaskResult:
-          type: string
-    FXConversion:
-      type: object
-      properties:
-        FXConversionRatesandFees:
-          type: object
-        FXConversionTaskResult:
           type: string
     HTTPError:
       type: object
@@ -782,8 +782,8 @@ components:
       explode: false
       schema:
         type: string
-    RoutingID:
-      name: routingId
+    FXConversionID:
+      name: fxconversionId
       in: path
       required: true
       style: simple
@@ -806,16 +806,8 @@ components:
       explode: false
       schema:
         type: string
-    ReconciliationID:
-      name: reconciliationId
-      in: path
-      required: true
-      style: simple
-      explode: false
-      schema:
-        type: string
-    CaptureID:
-      name: captureId
+    RoutingID:
+      name: routingId
       in: path
       required: true
       style: simple
@@ -830,8 +822,16 @@ components:
       explode: false
       schema:
         type: string
-    FXConversionID:
-      name: fxconversionId
+    ReconciliationID:
+      name: reconciliationId
+      in: path
+      required: true
+      style: simple
+      explode: false
+      schema:
+        type: string
+    CaptureID:
+      name: captureId
       in: path
       required: true
       style: simple

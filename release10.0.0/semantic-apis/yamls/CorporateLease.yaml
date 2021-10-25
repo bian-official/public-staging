@@ -581,34 +581,6 @@ components:
           type: string
         CorporateLeaseFacilityAccountReference:
           type: object
-    Fulfill:
-      type: object
-      properties:
-        FulfillPreconditions:
-          type: string
-        FulfillFeatureSchedule:
-          type: string
-        CorporateLeaseFulfillment:
-          type: object
-        FulfillPostconditions:
-          type: string
-        FulfillCorporateLeaseFulfillmentServiceType:
-          type: string
-        FulfillCorporateLeaseFulfillmentServiceDescription:
-          type: string
-        FulfillCorporateLeaseFulfillmentServiceInputsandOuputs:
-          type: string
-        FulfillCorporateLeaseFulfillmentServiceWorkProduct:
-          type: string
-        FulfillCorporateLeaseFulfillmentServiceName:
-          type: string
-    CorporateLeaseOutcome:
-      type: object
-      properties:
-        CorporateLeaseFinancialFacility:
-          type: string
-        CorporateLeaseWorkProduct:
-          type: string
     Administer:
       type: object
       properties:
@@ -630,6 +602,34 @@ components:
           type: string
         AdministerCorporateLeaseAdministrationServiceName:
           type: string
+    CorporateLeaseOutcome:
+      type: object
+      properties:
+        CorporateLeaseFinancialFacility:
+          type: string
+        CorporateLeaseWorkProduct:
+          type: string
+    Fulfill:
+      type: object
+      properties:
+        FulfillPreconditions:
+          type: string
+        FulfillFeatureSchedule:
+          type: string
+        CorporateLeaseFulfillment:
+          type: object
+        FulfillPostconditions:
+          type: string
+        FulfillCorporateLeaseFulfillmentServiceType:
+          type: string
+        FulfillCorporateLeaseFulfillmentServiceDescription:
+          type: string
+        FulfillCorporateLeaseFulfillmentServiceInputsandOuputs:
+          type: string
+        FulfillCorporateLeaseFulfillmentServiceWorkProduct:
+          type: string
+        FulfillCorporateLeaseFulfillmentServiceName:
+          type: string
     HTTPError:
       type: object
       properties:
@@ -648,8 +648,8 @@ components:
       explode: false
       schema:
         type: string
-    FulfillID:
-      name: fulfillId
+    AdministerID:
+      name: administerId
       in: path
       required: true
       style: simple
@@ -664,8 +664,8 @@ components:
       explode: false
       schema:
         type: string
-    AdministerID:
-      name: administerId
+    FulfillID:
+      name: fulfillId
       in: path
       required: true
       style: simple

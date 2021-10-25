@@ -399,6 +399,22 @@ components:
           type: string
         PartyLifecycleManagementProcedureInstanceReference:
           type: object
+    CandidateSelection:
+      type: object
+      properties:
+        ProspectCampaignSelectionCriteria:
+          type: string
+        ProspectCampaignCandidateEmployee/BusinessUnitReference:
+          type: object
+        ProspectCampaignCandidateReference:
+          type: object
+    AnalysisFeedback:
+      type: object
+      properties:
+        ProspectCampaignProcedureAnalysisResult:
+          type: string
+        ProspectCampaignProcedureAnalysisFeedbackResult:
+          type: string
     Execution:
       type: object
       properties:
@@ -414,22 +430,6 @@ components:
           type: string
         ProspectCampaignProcedureWorkTaskDate-Time:
           type: string
-    AnalysisFeedback:
-      type: object
-      properties:
-        ProspectCampaignProcedureAnalysisResult:
-          type: string
-        ProspectCampaignProcedureAnalysisFeedbackResult:
-          type: string
-    CandidateSelection:
-      type: object
-      properties:
-        ProspectCampaignSelectionCriteria:
-          type: string
-        ProspectCampaignCandidateEmployee/BusinessUnitReference:
-          type: object
-        ProspectCampaignCandidateReference:
-          type: object
     HTTPError:
       type: object
       properties:
@@ -923,8 +923,8 @@ components:
       explode: false
       schema:
         type: string
-    ExecutionID:
-      name: executionId
+    CandidateSelectionID:
+      name: candidateselectionId
       in: path
       required: true
       style: simple
@@ -939,8 +939,8 @@ components:
       explode: false
       schema:
         type: string
-    CandidateSelectionID:
-      name: candidateselectionId
+    ExecutionID:
+      name: executionId
       in: path
       required: true
       style: simple

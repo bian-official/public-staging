@@ -722,32 +722,6 @@ components:
           type: string
         IntellectualPropertyExchangeOperatingSessionServiceConfiguration:
           type: string
-    CaptureandClassification:
-      type: object
-      properties:
-        CaptureandClassificationPreconditions:
-          type: string
-        CaptureandClassificationFunctionSchedule:
-          type: string
-        ContentCaptureandClassification:
-          type: object
-        ContentCaptureandClassificationServiceType:
-          type: string
-        ContentCaptureandClassificationServiceDescription:
-          type: string
-        ContentCaptureandClassificationServiceInputsandOuputs:
-          type: string
-        ContentCaptureandClassificationServiceWorkProduct:
-          type: string
-        ContentCaptureandClassificationServiceName:
-          type: string
-    KnowledgeExchangeOutcome:
-      type: object
-      properties:
-        KnowledgeExchangeIncident:
-          type: string
-        KnowledgeExchangeProvision:
-          type: string
     Archiving:
       type: object
       properties:
@@ -766,44 +740,6 @@ components:
         ContentArchivingServiceWorkProduct:
           type: string
         ContentArchivingServiceName:
-          type: string
-    IndexingandPublication:
-      type: object
-      properties:
-        IndexingandPublicationPreconditions:
-          type: string
-        IndexingandPublicationFunctionSchedule:
-          type: string
-        ContentIndexingandPublication:
-          type: object
-        ContentIndexingandPublicationServiceType:
-          type: string
-        ContentIndexingandPublicationServiceDescription:
-          type: string
-        ContentIndexingandPublicationServiceInputsandOuputs:
-          type: string
-        ContentIndexingandPublicationServiceWorkProduct:
-          type: string
-        ContentIndexingandPublicationServiceName:
-          type: string
-    Review,RefinementandEditing:
-      type: object
-      properties:
-        Review,RefinementandEditingPreconditions:
-          type: string
-        Review,RefinementandEditingFunctionSchedule:
-          type: string
-        ContentReview,RefinementandEditing:
-          type: object
-        ContentReview,RefinementandEditingServiceType:
-          type: string
-        ContentReview,RefinementandEditingServiceDescription:
-          type: string
-        ContentReview,RefinementandEditingServiceInputsandOuputs:
-          type: string
-        ContentReview,RefinementandEditingServiceWorkProduct:
-          type: string
-        ContentReview,RefinementandEditingServiceName:
           type: string
     MaintenanceandAccessAdministration:
       type: object
@@ -824,6 +760,70 @@ components:
           type: string
         ContentMaintenanceandAccessAdministrationServiceName:
           type: string
+    KnowledgeExchangeOutcome:
+      type: object
+      properties:
+        KnowledgeExchangeIncident:
+          type: string
+        KnowledgeExchangeProvision:
+          type: string
+    Review,RefinementandEditing:
+      type: object
+      properties:
+        Review,RefinementandEditingPreconditions:
+          type: string
+        Review,RefinementandEditingFunctionSchedule:
+          type: string
+        ContentReview,RefinementandEditing:
+          type: object
+        ContentReview,RefinementandEditingServiceType:
+          type: string
+        ContentReview,RefinementandEditingServiceDescription:
+          type: string
+        ContentReview,RefinementandEditingServiceInputsandOuputs:
+          type: string
+        ContentReview,RefinementandEditingServiceWorkProduct:
+          type: string
+        ContentReview,RefinementandEditingServiceName:
+          type: string
+    IndexingandPublication:
+      type: object
+      properties:
+        IndexingandPublicationPreconditions:
+          type: string
+        IndexingandPublicationFunctionSchedule:
+          type: string
+        ContentIndexingandPublication:
+          type: object
+        ContentIndexingandPublicationServiceType:
+          type: string
+        ContentIndexingandPublicationServiceDescription:
+          type: string
+        ContentIndexingandPublicationServiceInputsandOuputs:
+          type: string
+        ContentIndexingandPublicationServiceWorkProduct:
+          type: string
+        ContentIndexingandPublicationServiceName:
+          type: string
+    CaptureandClassification:
+      type: object
+      properties:
+        CaptureandClassificationPreconditions:
+          type: string
+        CaptureandClassificationFunctionSchedule:
+          type: string
+        ContentCaptureandClassification:
+          type: object
+        ContentCaptureandClassificationServiceType:
+          type: string
+        ContentCaptureandClassificationServiceDescription:
+          type: string
+        ContentCaptureandClassificationServiceInputsandOuputs:
+          type: string
+        ContentCaptureandClassificationServiceWorkProduct:
+          type: string
+        ContentCaptureandClassificationServiceName:
+          type: string
     HTTPError:
       type: object
       properties:
@@ -842,8 +842,16 @@ components:
       explode: false
       schema:
         type: string
-    CaptureandClassificationID:
-      name: captureandclassificationId
+    ArchivingID:
+      name: archivingId
+      in: path
+      required: true
+      style: simple
+      explode: false
+      schema:
+        type: string
+    MaintenanceandAccessAdministrationID:
+      name: maintenanceandaccessadministrationId
       in: path
       required: true
       style: simple
@@ -858,8 +866,8 @@ components:
       explode: false
       schema:
         type: string
-    ArchivingID:
-      name: archivingId
+    Review,RefinementandEditingID:
+      name: review,refinementandeditingId
       in: path
       required: true
       style: simple
@@ -874,16 +882,8 @@ components:
       explode: false
       schema:
         type: string
-    Review,RefinementandEditingID:
-      name: review,refinementandeditingId
-      in: path
-      required: true
-      style: simple
-      explode: false
-      schema:
-        type: string
-    MaintenanceandAccessAdministrationID:
-      name: maintenanceandaccessadministrationId
+    CaptureandClassificationID:
+      name: captureandclassificationId
       in: path
       required: true
       style: simple

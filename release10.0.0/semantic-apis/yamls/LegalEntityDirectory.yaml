@@ -350,6 +350,21 @@ components:
           type: string
         Date:
           type: string
+    Profile:
+      type: object
+      properties:
+        OrganizationCapitalization:
+          type: string
+        OrganizationDebtLevel:
+          type: string
+        OrganizationEconomicIntent:
+          type: string
+        OrganizationGrowthRate:
+          type: object
+        OrganizationProfitability/Stocks:
+          type: string
+        OrganizationRevenue/Turnover:
+          type: string
     Reference:
       type: object
       properties:
@@ -391,21 +406,6 @@ components:
         SubsidiaryLegalEntityReference:
           type: object
         ShareholdingProfile:
-          type: string
-    Profile:
-      type: object
-      properties:
-        OrganizationCapitalization:
-          type: string
-        OrganizationDebtLevel:
-          type: string
-        OrganizationEconomicIntent:
-          type: string
-        OrganizationGrowthRate:
-          type: object
-        OrganizationProfitability/Stocks:
-          type: string
-        OrganizationRevenue/Turnover:
           type: string
     HTTPError:
       type: object
@@ -680,6 +680,14 @@ components:
       explode: false
       schema:
         type: string
+    ProfileID:
+      name: profileId
+      in: path
+      required: true
+      style: simple
+      explode: false
+      schema:
+        type: string
     ReferenceID:
       name: referenceId
       in: path
@@ -690,14 +698,6 @@ components:
         type: string
     AssociationsID:
       name: associationsId
-      in: path
-      required: true
-      style: simple
-      explode: false
-      schema:
-        type: string
-    ProfileID:
-      name: profileId
       in: path
       required: true
       style: simple

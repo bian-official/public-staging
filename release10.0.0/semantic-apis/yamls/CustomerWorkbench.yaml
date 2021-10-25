@@ -583,6 +583,17 @@ components:
           type: string
         CustomerWorkbenchBroadcastRecordDate/Time:
           type: string
+    SWUpdate:
+      type: object
+      properties:
+        SWUpdateApplication:
+          type: string
+        SWUpdateVersion:
+          type: string
+        SWUpdateImage:
+          type: string
+        Date:
+          type: string
     Browsing:
       type: object
       properties:
@@ -596,17 +607,6 @@ components:
         ContactStart/EndTime:
           type: string
         ContactActivityLog:
-          type: string
-    SWUpdate:
-      type: object
-      properties:
-        SWUpdateApplication:
-          type: string
-        SWUpdateVersion:
-          type: string
-        SWUpdateImage:
-          type: string
-        Date:
           type: string
     HTTPError:
       type: object
@@ -759,6 +759,14 @@ components:
       explode: false
       schema:
         type: string
+    SWUpdateID:
+      name: swupdateId
+      in: path
+      required: true
+      style: simple
+      explode: false
+      schema:
+        type: string
     BrowsingID:
       name: browsingId
       in: path
@@ -769,14 +777,6 @@ components:
         type: string
     ContactID:
       name: contactId
-      in: path
-      required: true
-      style: simple
-      explode: false
-      schema:
-        type: string
-    SWUpdateID:
-      name: swupdateId
       in: path
       required: true
       style: simple

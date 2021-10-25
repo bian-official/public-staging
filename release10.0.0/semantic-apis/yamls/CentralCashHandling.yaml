@@ -589,6 +589,13 @@ components:
           type: object
         CentralCashAllocationInstance:
           type: string
+    CentralCashHandlingOutcome:
+      type: object
+      properties:
+        CentralCashHandlingAllocation:
+          type: string
+        CentralCashHandlingWorkProduct:
+          type: string
     TrackingandAllocation:
       type: object
       properties:
@@ -607,13 +614,6 @@ components:
         ServiceWorkProduct:
           type: string
         ServiceName:
-          type: string
-    CentralCashHandlingOutcome:
-      type: object
-      properties:
-        CentralCashHandlingAllocation:
-          type: string
-        CentralCashHandlingWorkProduct:
           type: string
     ProjectionandAllocation:
       type: object
@@ -652,16 +652,16 @@ components:
       explode: false
       schema:
         type: string
-    TrackingandAllocationID:
-      name: trackingandallocationId
+    CentralCashHandlingOutcomeID:
+      name: centralcashhandlingoutcomeId
       in: path
       required: true
       style: simple
       explode: false
       schema:
         type: string
-    CentralCashHandlingOutcomeID:
-      name: centralcashhandlingoutcomeId
+    TrackingandAllocationID:
+      name: trackingandallocationId
       in: path
       required: true
       style: simple

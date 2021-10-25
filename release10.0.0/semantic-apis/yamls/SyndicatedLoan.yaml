@@ -763,27 +763,6 @@ components:
           type: string
         SyndicatedLoanFacilityAccountReference:
           type: object
-    SyndicateAssembly:
-      type: object
-      properties:
-        SyndicateAssemblyPreconditions:
-          type: string
-        SyndicateAssemblyFeatureSchedule:
-          type: string
-        SyndicatedLoanOrganization:
-          type: object
-        SyndicateAssemblyPostconditions:
-          type: string
-        SyndicateAssemblySyndicatedLoanOrganizationServiceType:
-          type: string
-        SyndicateAssemblySyndicatedLoanOrganizationServiceDescription:
-          type: string
-        SyndicateAssemblySyndicatedLoanOrganizationServiceInputsandOuputs:
-          type: string
-        SyndicateAssemblySyndicatedLoanOrganizationServiceWorkProduct:
-          type: string
-        SyndicateAssemblySyndicatedLoanOrganizationServiceName:
-          type: string
     Structuring:
       type: object
       properties:
@@ -825,6 +804,27 @@ components:
         OriginationSyndicatedLoanOriginationServiceWorkProduct:
           type: string
         OriginationSyndicatedLoanOriginationServiceName:
+          type: string
+    SyndicateAssembly:
+      type: object
+      properties:
+        SyndicateAssemblyPreconditions:
+          type: string
+        SyndicateAssemblyFeatureSchedule:
+          type: string
+        SyndicatedLoanOrganization:
+          type: object
+        SyndicateAssemblyPostconditions:
+          type: string
+        SyndicateAssemblySyndicatedLoanOrganizationServiceType:
+          type: string
+        SyndicateAssemblySyndicatedLoanOrganizationServiceDescription:
+          type: string
+        SyndicateAssemblySyndicatedLoanOrganizationServiceInputsandOuputs:
+          type: string
+        SyndicateAssemblySyndicatedLoanOrganizationServiceWorkProduct:
+          type: string
+        SyndicateAssemblySyndicatedLoanOrganizationServiceName:
           type: string
     SyndicatedLoanOutcome:
       type: object
@@ -872,14 +872,6 @@ components:
       explode: false
       schema:
         type: string
-    SyndicateAssemblyID:
-      name: syndicateassemblyId
-      in: path
-      required: true
-      style: simple
-      explode: false
-      schema:
-        type: string
     StructuringID:
       name: structuringId
       in: path
@@ -890,6 +882,14 @@ components:
         type: string
     OriginationID:
       name: originationId
+      in: path
+      required: true
+      style: simple
+      explode: false
+      schema:
+        type: string
+    SyndicateAssemblyID:
+      name: syndicateassemblyId
       in: path
       required: true
       style: simple

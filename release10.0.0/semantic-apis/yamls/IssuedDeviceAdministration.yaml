@@ -695,14 +695,18 @@ components:
           type: string
         UsageLog:
           type: string
-    ChequesAssignment:
+    QuestionAssignment:
       type: object
       properties:
-        IssuedDeviceTemplate/Values:
+        FormatRules:
           type: string
-        IssueLocation:
+        RecentValues:
           type: string
-        SequenceNumber:
+        RequestText:
+          type: string
+        ResponseText:
+          type: string
+        UsageLog:
           type: string
     ReaderAssignment:
       type: object
@@ -716,6 +720,13 @@ components:
         IssuedDeviceConfiguration:
           type: string
         UsageLog:
+          type: string
+    BiometricAssignment:
+      type: object
+      properties:
+        BiometricType:
+          type: string
+        BiometricRegisteredDetail:
           type: string
     DeviceAssignment:
       type: object
@@ -734,25 +745,14 @@ components:
           type: string
         UsageLog:
           type: string
-    QuestionAssignment:
+    ChequesAssignment:
       type: object
       properties:
-        FormatRules:
+        IssuedDeviceTemplate/Values:
           type: string
-        RecentValues:
+        IssueLocation:
           type: string
-        RequestText:
-          type: string
-        ResponseText:
-          type: string
-        UsageLog:
-          type: string
-    BiometricAssignment:
-      type: object
-      properties:
-        BiometricType:
-          type: string
-        BiometricRegisteredDetail:
+        SequenceNumber:
           type: string
     HTTPError:
       type: object
@@ -1328,8 +1328,8 @@ components:
       explode: false
       schema:
         type: string
-    ChequesAssignmentID:
-      name: chequesassignmentId
+    QuestionAssignmentID:
+      name: questionassignmentId
       in: path
       required: true
       style: simple
@@ -1344,6 +1344,14 @@ components:
       explode: false
       schema:
         type: string
+    BiometricAssignmentID:
+      name: biometricassignmentId
+      in: path
+      required: true
+      style: simple
+      explode: false
+      schema:
+        type: string
     DeviceAssignmentID:
       name: deviceassignmentId
       in: path
@@ -1352,16 +1360,8 @@ components:
       explode: false
       schema:
         type: string
-    QuestionAssignmentID:
-      name: questionassignmentId
-      in: path
-      required: true
-      style: simple
-      explode: false
-      schema:
-        type: string
-    BiometricAssignmentID:
-      name: biometricassignmentId
+    ChequesAssignmentID:
+      name: chequesassignmentId
       in: path
       required: true
       style: simple

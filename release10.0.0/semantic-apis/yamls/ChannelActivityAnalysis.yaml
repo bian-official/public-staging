@@ -501,14 +501,23 @@ components:
           type: string
         ChannelActivityHistoryReport:
           type: string
-    DeviceError:
+    Bot:
       type: object
       properties:
-        ChannelActivityDeviceErrorDetectionAnalysisAlgorithmSpecification:
+        ChannelActivityBotDetectionAnalysisAlgorithmSpecification:
           type: string
-        ChannelActivityDeviceErrorDetectionAnalysisReference:
+        ChannelActivityBotDetectionAnalysisReference:
           type: object
-        ChannelActivityDeviceErrorDetectionAnalysisResult:
+        ChannelActivityBotDetectionAnalysisResult:
+          type: string
+    CustomerBehavior:
+      type: object
+      properties:
+        ChannelActivityCustomerBehaviorAnalysisAlgorithmSpecification:
+          type: string
+        ChannelActivityCustomerBehaviorAnalysisReference:
+          type: object
+        ChannelActivityCustomerBehaviorAnalysisResult:
           type: string
     MerchantBehavior:
       type: object
@@ -519,24 +528,6 @@ components:
           type: object
         ChannelActivityMerchantBehaviorAnalysisResult:
           type: string
-    MerchantFraud:
-      type: object
-      properties:
-        ChannelActivityMerchantFraudAnalysisAlgorithmSpecification:
-          type: string
-        ChannelActivityMerchantFraudAnalysisReference:
-          type: object
-        ChannelActivityMerchantFraudAnalysisResult:
-          type: string
-    Bot:
-      type: object
-      properties:
-        ChannelActivityBotDetectionAnalysisAlgorithmSpecification:
-          type: string
-        ChannelActivityBotDetectionAnalysisReference:
-          type: object
-        ChannelActivityBotDetectionAnalysisResult:
-          type: string
     CustomerFraud:
       type: object
       properties:
@@ -546,14 +537,23 @@ components:
           type: object
         ChannelActivityCustomerFraudAnalysisResult:
           type: string
-    CustomerBehavior:
+    DeviceError:
       type: object
       properties:
-        ChannelActivityCustomerBehaviorAnalysisAlgorithmSpecification:
+        ChannelActivityDeviceErrorDetectionAnalysisAlgorithmSpecification:
           type: string
-        ChannelActivityCustomerBehaviorAnalysisReference:
+        ChannelActivityDeviceErrorDetectionAnalysisReference:
           type: object
-        ChannelActivityCustomerBehaviorAnalysisResult:
+        ChannelActivityDeviceErrorDetectionAnalysisResult:
+          type: string
+    MerchantFraud:
+      type: object
+      properties:
+        ChannelActivityMerchantFraudAnalysisAlgorithmSpecification:
+          type: string
+        ChannelActivityMerchantFraudAnalysisReference:
+          type: object
+        ChannelActivityMerchantFraudAnalysisResult:
           type: string
     HTTPError:
       type: object
@@ -825,8 +825,16 @@ components:
       explode: false
       schema:
         type: string
-    DeviceErrorID:
-      name: deviceerrorId
+    BotID:
+      name: botId
+      in: path
+      required: true
+      style: simple
+      explode: false
+      schema:
+        type: string
+    CustomerBehaviorID:
+      name: customerbehaviorId
       in: path
       required: true
       style: simple
@@ -841,22 +849,6 @@ components:
       explode: false
       schema:
         type: string
-    MerchantFraudID:
-      name: merchantfraudId
-      in: path
-      required: true
-      style: simple
-      explode: false
-      schema:
-        type: string
-    BotID:
-      name: botId
-      in: path
-      required: true
-      style: simple
-      explode: false
-      schema:
-        type: string
     CustomerFraudID:
       name: customerfraudId
       in: path
@@ -865,8 +857,16 @@ components:
       explode: false
       schema:
         type: string
-    CustomerBehaviorID:
-      name: customerbehaviorId
+    DeviceErrorID:
+      name: deviceerrorId
+      in: path
+      required: true
+      style: simple
+      explode: false
+      schema:
+        type: string
+    MerchantFraudID:
+      name: merchantfraudId
       in: path
       required: true
       style: simple

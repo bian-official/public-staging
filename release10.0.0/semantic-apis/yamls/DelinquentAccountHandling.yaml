@@ -438,6 +438,13 @@ components:
           type: string
         DelinquentAccountProcessingSchedule:
           type: string
+    Payment:
+      type: object
+      properties:
+        PaymentTransactionReference:
+          type: object
+        PaymentTransaction:
+          type: string
     Contact:
       type: object
       properties:
@@ -476,13 +483,6 @@ components:
         DelinquentAccountResolutionActionPlan:
           type: string
         DelinquentAccountResolutionWorkProduct:
-          type: string
-    Payment:
-      type: object
-      properties:
-        PaymentTransactionReference:
-          type: object
-        PaymentTransaction:
           type: string
     HTTPError:
       type: object
@@ -798,6 +798,14 @@ components:
       explode: false
       schema:
         type: string
+    PaymentID:
+      name: paymentId
+      in: path
+      required: true
+      style: simple
+      explode: false
+      schema:
+        type: string
     ContactID:
       name: contactId
       in: path
@@ -816,14 +824,6 @@ components:
         type: string
     ResolutionID:
       name: resolutionId
-      in: path
-      required: true
-      style: simple
-      explode: false
-      schema:
-        type: string
-    PaymentID:
-      name: paymentId
       in: path
       required: true
       style: simple

@@ -348,6 +348,23 @@ components:
           type: string
         Date:
           type: string
+    Occupancy:
+      type: object
+      properties:
+        CustomerReference:
+          type: object
+        LocationOwner/Title:
+          type: string
+        LocationValue:
+          type: string
+        LocationOccupierType:
+          type: string
+        LocationOccupierReference:
+          type: object
+        LocationOccupierTerms:
+          type: string
+        AlliancePartnerReference:
+          type: object
     Location:
       type: object
       properties:
@@ -367,23 +384,6 @@ components:
           type: string
         LocationNeighborhoodType:
           type: string
-    Occupancy:
-      type: object
-      properties:
-        CustomerReference:
-          type: object
-        LocationOwner/Title:
-          type: string
-        LocationValue:
-          type: string
-        LocationOccupierType:
-          type: string
-        LocationOccupierReference:
-          type: object
-        LocationOccupierTerms:
-          type: string
-        AlliancePartnerReference:
-          type: object
     Use:
       type: object
       properties:
@@ -662,16 +662,16 @@ components:
       explode: false
       schema:
         type: string
-    LocationID:
-      name: locationId
+    OccupancyID:
+      name: occupancyId
       in: path
       required: true
       style: simple
       explode: false
       schema:
         type: string
-    OccupancyID:
-      name: occupancyId
+    LocationID:
+      name: locationId
       in: path
       required: true
       style: simple

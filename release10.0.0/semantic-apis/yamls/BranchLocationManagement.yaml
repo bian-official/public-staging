@@ -842,42 +842,6 @@ components:
           type: string
         BranchLocationManagementPlanDescription:
           type: string
-    BranchLocationManagementOutcome:
-      type: object
-      properties:
-        BranchLocationManagementPerformanceAnalysis:
-          type: string
-        BranchLocationManagementActivityAnalysis:
-          type: string
-        BranchLocationManagementCharter:
-          type: string
-        BranchLocationManagementTask:
-          type: string
-        BranchLocationManagementProject:
-          type: string
-    StaffandLocationPlanning:
-      type: object
-      properties:
-        StaffandLocationPlanningPreconditions:
-          type: string
-        StaffandLocationPlanningBusinessUnit/EmployeeReference:
-          type: object
-        StaffandLocationPlanningWorkSchedule:
-          type: string
-        StaffandLocationPlanning:
-          type: object
-        StaffandLocationPlanningPostconditions:
-          type: string
-        StaffandLocationPlanningStaffandLocationPlanningServiceType:
-          type: string
-        StaffandLocationPlanningStaffandLocationPlanningServiceDescription:
-          type: string
-        StaffandLocationPlanningStaffandLocationPlanningServiceInputsandOuputs:
-          type: string
-        StaffandLocationPlanningStaffandLocationPlanningServiceWorkProduct:
-          type: string
-        StaffandLocationPlanningStaffandLocationPlanningServiceName:
-          type: string
     CustomerLiaison:
       type: object
       properties:
@@ -900,6 +864,19 @@ components:
         CustomerLiaisonCustomerLiaisonServiceWorkProduct:
           type: string
         CustomerLiaisonCustomerLiaisonServiceName:
+          type: string
+    BranchLocationManagementOutcome:
+      type: object
+      properties:
+        BranchLocationManagementPerformanceAnalysis:
+          type: string
+        BranchLocationManagementActivityAnalysis:
+          type: string
+        BranchLocationManagementCharter:
+          type: string
+        BranchLocationManagementTask:
+          type: string
+        BranchLocationManagementProject:
           type: string
     ProductandServicePlanning:
       type: object
@@ -947,6 +924,29 @@ components:
           type: string
         TroubleshootingServiceName:
           type: string
+    StaffandLocationPlanning:
+      type: object
+      properties:
+        StaffandLocationPlanningPreconditions:
+          type: string
+        StaffandLocationPlanningBusinessUnit/EmployeeReference:
+          type: object
+        StaffandLocationPlanningWorkSchedule:
+          type: string
+        StaffandLocationPlanning:
+          type: object
+        StaffandLocationPlanningPostconditions:
+          type: string
+        StaffandLocationPlanningStaffandLocationPlanningServiceType:
+          type: string
+        StaffandLocationPlanningStaffandLocationPlanningServiceDescription:
+          type: string
+        StaffandLocationPlanningStaffandLocationPlanningServiceInputsandOuputs:
+          type: string
+        StaffandLocationPlanningStaffandLocationPlanningServiceWorkProduct:
+          type: string
+        StaffandLocationPlanningStaffandLocationPlanningServiceName:
+          type: string
     HTTPError:
       type: object
       properties:
@@ -965,24 +965,16 @@ components:
       explode: false
       schema:
         type: string
-    BranchLocationManagementOutcomeID:
-      name: branchlocationmanagementoutcomeId
-      in: path
-      required: true
-      style: simple
-      explode: false
-      schema:
-        type: string
-    StaffandLocationPlanningID:
-      name: staffandlocationplanningId
-      in: path
-      required: true
-      style: simple
-      explode: false
-      schema:
-        type: string
     CustomerLiaisonID:
       name: customerliaisonId
+      in: path
+      required: true
+      style: simple
+      explode: false
+      schema:
+        type: string
+    BranchLocationManagementOutcomeID:
+      name: branchlocationmanagementoutcomeId
       in: path
       required: true
       style: simple
@@ -999,6 +991,14 @@ components:
         type: string
     TroubleshootingID:
       name: troubleshootingId
+      in: path
+      required: true
+      style: simple
+      explode: false
+      schema:
+        type: string
+    StaffandLocationPlanningID:
+      name: staffandlocationplanningId
       in: path
       required: true
       style: simple

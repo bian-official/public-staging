@@ -428,6 +428,29 @@ components:
           type: string
         ProductandServiceSpecification:
           type: string
+    Testing:
+      type: object
+      properties:
+        ProductandServiceSpecificationTestReference:
+          type: object
+        ProductandServiceSpecificationTestType:
+          type: string
+        ProductandServiceSpecificationTestHarnessReference:
+          type: object
+        ProductandServiceSpecificationTestResult:
+          type: string
+        ProductandServiceSpecificationTestingTaskReference:
+          type: object
+        ProductandServiceSpecificationTestingTaskRecord:
+          type: string
+        ProductandServiceSpecificationComplianceTaskReference:
+          type: object
+        ProductandServiceSpecificationComplianceTaskRecord:
+          type: string
+        ProductandServiceSpecificationComplianceTestReference:
+          type: object
+        ProductandServiceSpecificationComplianceTestType:
+          type: string
     FunctionalRequirements:
       type: object
       properties:
@@ -451,29 +474,6 @@ components:
         ProductandServiceSpecificationAllowedUsage:
           type: string
         ProductandServiceSpecificationUsageGuidelines:
-          type: string
-    Testing:
-      type: object
-      properties:
-        ProductandServiceSpecificationTestReference:
-          type: object
-        ProductandServiceSpecificationTestType:
-          type: string
-        ProductandServiceSpecificationTestHarnessReference:
-          type: object
-        ProductandServiceSpecificationTestResult:
-          type: string
-        ProductandServiceSpecificationTestingTaskReference:
-          type: object
-        ProductandServiceSpecificationTestingTaskRecord:
-          type: string
-        ProductandServiceSpecificationComplianceTaskReference:
-          type: object
-        ProductandServiceSpecificationComplianceTaskRecord:
-          type: string
-        ProductandServiceSpecificationComplianceTestReference:
-          type: object
-        ProductandServiceSpecificationComplianceTestType:
           type: string
     HTTPError:
       type: object
@@ -761,6 +761,14 @@ components:
       explode: false
       schema:
         type: string
+    TestingID:
+      name: testingId
+      in: path
+      required: true
+      style: simple
+      explode: false
+      schema:
+        type: string
     FunctionalRequirementsID:
       name: functionalrequirementsId
       in: path
@@ -771,14 +779,6 @@ components:
         type: string
     ProductionID:
       name: productionId
-      in: path
-      required: true
-      style: simple
-      explode: false
-      schema:
-        type: string
-    TestingID:
-      name: testingId
       in: path
       required: true
       style: simple

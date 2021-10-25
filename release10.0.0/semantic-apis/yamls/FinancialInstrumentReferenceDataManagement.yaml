@@ -1138,23 +1138,6 @@ components:
           type: string
         FinancialInstrumentDirectoryEntryReference:
           type: string
-    EquityInstrumentproperty:
-      type: object
-      properties:
-        Preconditions:
-          type: object
-        Schedule:
-          type: object
-        VersionNumber:
-          type: string
-        BusinessService:
-          type: object
-        FinancialInstrumentDirectoryEntryReference:
-          type: string
-        EquityInstrumentpropertyReference:
-          type: object
-        EquityInstrumentpropertyType:
-          type: string
     WarrantInstrumentproperty:
       type: object
       properties:
@@ -1171,6 +1154,23 @@ components:
         WarrantInstrumentpropertyReference:
           type: object
         WarrantInstrumentpropertyType:
+          type: string
+    EquityInstrumentproperty:
+      type: object
+      properties:
+        Preconditions:
+          type: object
+        Schedule:
+          type: object
+        VersionNumber:
+          type: string
+        BusinessService:
+          type: object
+        FinancialInstrumentDirectoryEntryReference:
+          type: string
+        EquityInstrumentpropertyReference:
+          type: object
+        EquityInstrumentpropertyType:
           type: string
     OptionInstrumentproperty:
       type: object
@@ -1248,16 +1248,16 @@ components:
       explode: false
       schema:
         type: string
-    EquityInstrumentpropertyID:
-      name: equityinstrumentpropertyId
+    WarrantInstrumentpropertyID:
+      name: warrantinstrumentpropertyId
       in: path
       required: true
       style: simple
       explode: false
       schema:
         type: string
-    WarrantInstrumentpropertyID:
-      name: warrantinstrumentpropertyId
+    EquityInstrumentpropertyID:
+      name: equityinstrumentpropertyId
       in: path
       required: true
       style: simple

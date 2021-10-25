@@ -448,17 +448,6 @@ components:
           type: string
         CustomerRelationshipStatusValidFrom/ToDate:
           type: string
-    Alert:
-      type: object
-      properties:
-        CustomerRelationshipAlertType:
-          type: string
-        CustomerRelationshipAlert:
-          type: string
-        CustomerRelationshipAlertNarrative:
-          type: string
-        CustomerRelationshipAlertValidFrom/ToDate:
-          type: string
     Rating:
       type: object
       properties:
@@ -469,6 +458,17 @@ components:
         CustomerRelationshipRatingNarrative:
           type: string
         CustomerRelationshipRatingValidFrom/ToDate:
+          type: string
+    Alert:
+      type: object
+      properties:
+        CustomerRelationshipAlertType:
+          type: string
+        CustomerRelationshipAlert:
+          type: string
+        CustomerRelationshipAlertNarrative:
+          type: string
+        CustomerRelationshipAlertValidFrom/ToDate:
           type: string
     HTTPError:
       type: object
@@ -496,16 +496,16 @@ components:
       explode: false
       schema:
         type: string
-    AlertID:
-      name: alertId
+    RatingID:
+      name: ratingId
       in: path
       required: true
       style: simple
       explode: false
       schema:
         type: string
-    RatingID:
-      name: ratingId
+    AlertID:
+      name: alertId
       in: path
       required: true
       style: simple

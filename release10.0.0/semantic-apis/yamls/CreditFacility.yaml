@@ -575,48 +575,6 @@ components:
           type: string
         Date:
           type: string
-    Maintenance:
-      type: object
-      properties:
-        MaintenanceReportType:
-          type: string
-        CreditFacilityTaxReport:
-          type: string
-        CreditFacilityFeeType:
-          type: string
-        CreditFacilityFees:
-          type: string
-        CreditFacilityPenalties:
-          type: string
-        CreditFacilityCollateralValuation:
-          type: string
-    Interest:
-      type: object
-      properties:
-        InterestRateType:
-          type: string
-        InterestRateApplicationSchedule:
-          type: object
-        InterestRateConfiguration:
-          type: object
-        InterestRate:
-          type: object
-        InterestApplicationRecord:
-          type: string
-        InterestTransaction:
-          type: string
-        TransactionDescription:
-          type: string
-        TransactionRateType:
-          type: string
-        TransactionInterestCharge:
-          type: string
-        InterestAccrualAmount:
-          type: number
-        InterestAccrualType:
-          type: string
-        InterestAccrualCharge:
-          type: string
     Repayment:
       type: object
       properties:
@@ -675,6 +633,48 @@ components:
         AccrualFeeType:
           type: string
         AccrualFeeCharge:
+          type: string
+    Interest:
+      type: object
+      properties:
+        InterestRateType:
+          type: string
+        InterestRateApplicationSchedule:
+          type: object
+        InterestRateConfiguration:
+          type: object
+        InterestRate:
+          type: object
+        InterestApplicationRecord:
+          type: string
+        InterestTransaction:
+          type: string
+        TransactionDescription:
+          type: string
+        TransactionRateType:
+          type: string
+        TransactionInterestCharge:
+          type: string
+        InterestAccrualAmount:
+          type: number
+        InterestAccrualType:
+          type: string
+        InterestAccrualCharge:
+          type: string
+    Maintenance:
+      type: object
+      properties:
+        MaintenanceReportType:
+          type: string
+        CreditFacilityTaxReport:
+          type: string
+        CreditFacilityFeeType:
+          type: string
+        CreditFacilityFees:
+          type: string
+        CreditFacilityPenalties:
+          type: string
+        CreditFacilityCollateralValuation:
           type: string
     HTTPError:
       type: object
@@ -1447,22 +1447,6 @@ components:
       explode: false
       schema:
         type: string
-    MaintenanceID:
-      name: maintenanceId
-      in: path
-      required: true
-      style: simple
-      explode: false
-      schema:
-        type: string
-    InterestID:
-      name: interestId
-      in: path
-      required: true
-      style: simple
-      explode: false
-      schema:
-        type: string
     RepaymentID:
       name: repaymentId
       in: path
@@ -1481,6 +1465,22 @@ components:
         type: string
     ServiceFeesID:
       name: servicefeesId
+      in: path
+      required: true
+      style: simple
+      explode: false
+      schema:
+        type: string
+    InterestID:
+      name: interestId
+      in: path
+      required: true
+      style: simple
+      explode: false
+      schema:
+        type: string
+    MaintenanceID:
+      name: maintenanceId
       in: path
       required: true
       style: simple

@@ -925,6 +925,13 @@ components:
           type: string
         ServicingIssueProcedureReference:
           type: string
+    ServicingIssueOutcome:
+      type: object
+      properties:
+        ServicingIssueWorkProduct:
+          type: object
+        ServicingIssueProcedure:
+          type: string
     ProductionIssueAnalysisWorkstep:
       type: object
       properties:
@@ -982,13 +989,6 @@ components:
           type: string
         ProductionIssueResolutionWorkstepType:
           type: string
-    ServicingIssueOutcome:
-      type: object
-      properties:
-        ServicingIssueWorkProduct:
-          type: object
-        ServicingIssueProcedure:
-          type: string
     HTTPError:
       type: object
       properties:
@@ -1001,6 +1001,14 @@ components:
   parameters:
     ServicingIssueID:
       name: servicingissueId
+      in: path
+      required: true
+      style: simple
+      explode: false
+      schema:
+        type: string
+    ServicingIssueOutcomeID:
+      name: servicingissueoutcomeId
       in: path
       required: true
       style: simple
@@ -1025,14 +1033,6 @@ components:
         type: string
     ProductionIssueResolutionWorkstepID:
       name: productionissueresolutionworkstepId
-      in: path
-      required: true
-      style: simple
-      explode: false
-      schema:
-        type: string
-    ServicingIssueOutcomeID:
-      name: servicingissueoutcomeId
       in: path
       required: true
       style: simple

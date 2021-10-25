@@ -901,51 +901,38 @@ components:
           type: string
         Date:
           type: string
-    IssuedDevice:
+    ServiceFees:
       type: object
       properties:
-        IssuedDeviceType:
+        FeeConfigurationProfile:
           type: string
-        IssuedDeviceDescription:
+        FeeDefinition:
           type: string
-        IssuedDeviceOptionDefinition:
+        FeeType:
           type: string
-        IssuedDeviceOptionSetting:
+        FeeApplicationRecord:
           type: string
-        IssuedDeviceProperty:
-          type: string
-        IssuedDevicePropertyType:
-          type: string
-        IssuedDevicePropertyValue:
-          type: string
-        IssuedDeviceStatus:
-          type: string
-    Interest:
-      type: object
-      properties:
-        InterestRateType:
-          type: string
-        InterestRateApplicationSchedule:
-          type: object
-        InterestRateConfiguration:
-          type: object
-        InterestRate:
-          type: object
-        InterestApplicationRecord:
-          type: string
-        InterestTransaction:
+        FeeTransaction:
           type: string
         TransactionDescription:
           type: string
-        TransactionRateType:
+        TransactionFeeType:
           type: string
-        TransactionInterestCharge:
+        TransactionFeeCharge:
           type: string
-        InterestAccrualAmount:
+        FeeProjectionsandCommitments:
+          type: string
+        ProjectedTransactionDescription:
+          type: string
+        ProjectedTransactionFeeType:
+          type: string
+        ProjectedTransactionFeeCharge:
+          type: string
+        FeeAccrualAmount:
           type: number
-        InterestAccrualType:
+        AccrualFeeType:
           type: string
-        InterestAccrualCharge:
+        AccrualFeeCharge:
           type: string
     DepositsandWithdrawals:
       type: object
@@ -980,41 +967,24 @@ components:
           type: number
         WithdrawalTransactionDate:
           type: string
-    PositivePay:
+    IssuedDevice:
       type: object
       properties:
-        PositivePayCheckRegisterReportingSchedule:
+        IssuedDeviceType:
           type: string
-        CheckRegister:
+        IssuedDeviceDescription:
           type: string
-        DateRange:
+        IssuedDeviceOptionDefinition:
           type: string
-        CheckDetails:
+        IssuedDeviceOptionSetting:
           type: string
-    AccountSweep:
-      type: object
-      properties:
-        AccountSweepType:
+        IssuedDeviceProperty:
           type: string
-        AccountSweepDefinition:
+        IssuedDevicePropertyType:
           type: string
-        AccountSweepApplicationSchedule:
+        IssuedDevicePropertyValue:
           type: string
-        AccountSweepConfiguration:
-          type: string
-        TargetAccount:
-          type: string
-        SweepMandate:
-          type: string
-        SweepProcessingSchedule:
-          type: string
-        SweepApplicationRecord:
-          type: string
-        AccountSweepTargetAccount:
-          type: string
-        AccountSweepAmount:
-          type: number
-        AccountSweepExecutionDate:
+        IssuedDeviceStatus:
           type: string
     Payments:
       type: object
@@ -1065,6 +1035,33 @@ components:
           type: object
         PaymentTransactionStatus:
           type: string
+    Interest:
+      type: object
+      properties:
+        InterestRateType:
+          type: string
+        InterestRateApplicationSchedule:
+          type: object
+        InterestRateConfiguration:
+          type: object
+        InterestRate:
+          type: object
+        InterestApplicationRecord:
+          type: string
+        InterestTransaction:
+          type: string
+        TransactionDescription:
+          type: string
+        TransactionRateType:
+          type: string
+        TransactionInterestCharge:
+          type: string
+        InterestAccrualAmount:
+          type: number
+        InterestAccrualType:
+          type: string
+        InterestAccrualCharge:
+          type: string
     AccountLien:
       type: object
       properties:
@@ -1088,38 +1085,41 @@ components:
           type: string
         LienStatus:
           type: string
-    ServiceFees:
+    AccountSweep:
       type: object
       properties:
-        FeeConfigurationProfile:
+        AccountSweepType:
           type: string
-        FeeDefinition:
+        AccountSweepDefinition:
           type: string
-        FeeType:
+        AccountSweepApplicationSchedule:
           type: string
-        FeeApplicationRecord:
+        AccountSweepConfiguration:
           type: string
-        FeeTransaction:
+        TargetAccount:
           type: string
-        TransactionDescription:
+        SweepMandate:
           type: string
-        TransactionFeeType:
+        SweepProcessingSchedule:
           type: string
-        TransactionFeeCharge:
+        SweepApplicationRecord:
           type: string
-        FeeProjectionsandCommitments:
+        AccountSweepTargetAccount:
           type: string
-        ProjectedTransactionDescription:
-          type: string
-        ProjectedTransactionFeeType:
-          type: string
-        ProjectedTransactionFeeCharge:
-          type: string
-        FeeAccrualAmount:
+        AccountSweepAmount:
           type: number
-        AccrualFeeType:
+        AccountSweepExecutionDate:
           type: string
-        AccrualFeeCharge:
+    PositivePay:
+      type: object
+      properties:
+        PositivePayCheckRegisterReportingSchedule:
+          type: string
+        CheckRegister:
+          type: string
+        DateRange:
+          type: string
+        CheckDetails:
           type: string
     HTTPError:
       type: object
@@ -1518,16 +1518,8 @@ components:
       explode: false
       schema:
         type: string
-    IssuedDeviceID:
-      name: issueddeviceId
-      in: path
-      required: true
-      style: simple
-      explode: false
-      schema:
-        type: string
-    InterestID:
-      name: interestId
+    ServiceFeesID:
+      name: servicefeesId
       in: path
       required: true
       style: simple
@@ -1542,16 +1534,8 @@ components:
       explode: false
       schema:
         type: string
-    PositivePayID:
-      name: positivepayId
-      in: path
-      required: true
-      style: simple
-      explode: false
-      schema:
-        type: string
-    AccountSweepID:
-      name: accountsweepId
+    IssuedDeviceID:
+      name: issueddeviceId
       in: path
       required: true
       style: simple
@@ -1566,6 +1550,14 @@ components:
       explode: false
       schema:
         type: string
+    InterestID:
+      name: interestId
+      in: path
+      required: true
+      style: simple
+      explode: false
+      schema:
+        type: string
     AccountLienID:
       name: accountlienId
       in: path
@@ -1574,8 +1566,16 @@ components:
       explode: false
       schema:
         type: string
-    ServiceFeesID:
-      name: servicefeesId
+    AccountSweepID:
+      name: accountsweepId
+      in: path
+      required: true
+      style: simple
+      explode: false
+      schema:
+        type: string
+    PositivePayID:
+      name: positivepayId
       in: path
       required: true
       style: simple

@@ -383,6 +383,13 @@ components:
           type: object
         eCommerceTransactionAuthenticationResponse:
           type: string
+    TransactionAuthorization:
+      type: object
+      properties:
+        eCommerceTransactionInstanceReference:
+          type: object
+        eCommerceTransactionAuthorizationResponse:
+          type: string
     CardTransaction:
       type: object
       properties:
@@ -422,13 +429,6 @@ components:
         TransactionMerchantReference:
           type: object
         eCommerceBatchTransactionRecord:
-          type: string
-    TransactionAuthorization:
-      type: object
-      properties:
-        eCommerceTransactionInstanceReference:
-          type: object
-        eCommerceTransactionAuthorizationResponse:
           type: string
     HTTPError:
       type: object
@@ -924,6 +924,14 @@ components:
       explode: false
       schema:
         type: string
+    TransactionAuthorizationID:
+      name: transactionauthorizationId
+      in: path
+      required: true
+      style: simple
+      explode: false
+      schema:
+        type: string
     CardTransactionID:
       name: cardtransactionId
       in: path
@@ -934,14 +942,6 @@ components:
         type: string
     TransactionBatchID:
       name: transactionbatchId
-      in: path
-      required: true
-      style: simple
-      explode: false
-      schema:
-        type: string
-    TransactionAuthorizationID:
-      name: transactionauthorizationId
       in: path
       required: true
       style: simple

@@ -757,16 +757,16 @@ components:
           type: string
         Date:
           type: string
-    TestingSpecification:
+    UsageSpecification:
       type: object
       properties:
-        TestingSpecificationTaskDefinition:
+        UsageSpecificationTaskDefinition:
           type: string
-        TestingSpecificationTaskWorkProducts:
+        UsageSpecificationTaskWorkProducts:
           type: string
         DocumentDirectoryEntryInstanceReference:
           type: object
-        SystemTestingSpecification:
+        SystemFunctionalSpecification:
           type: string
     FunctionalSpecification:
       type: object
@@ -779,6 +779,17 @@ components:
           type: object
         SystemFunctionalSpecification:
           type: string
+    TestingSpecification:
+      type: object
+      properties:
+        TestingSpecificationTaskDefinition:
+          type: string
+        TestingSpecificationTaskWorkProducts:
+          type: string
+        DocumentDirectoryEntryInstanceReference:
+          type: object
+        SystemTestingSpecification:
+          type: string
     SoftwareandDataSpecification:
       type: object
       properties:
@@ -789,17 +800,6 @@ components:
         DocumentDirectoryEntryInstanceReference:
           type: object
         SystemSoftwareandDataSpecification:
-          type: string
-    UsageSpecification:
-      type: object
-      properties:
-        UsageSpecificationTaskDefinition:
-          type: string
-        UsageSpecificationTaskWorkProducts:
-          type: string
-        DocumentDirectoryEntryInstanceReference:
-          type: object
-        SystemFunctionalSpecification:
           type: string
     TechnicalSpecification:
       type: object
@@ -1165,8 +1165,8 @@ components:
       explode: false
       schema:
         type: string
-    TestingSpecificationID:
-      name: testingspecificationId
+    UsageSpecificationID:
+      name: usagespecificationId
       in: path
       required: true
       style: simple
@@ -1181,16 +1181,16 @@ components:
       explode: false
       schema:
         type: string
-    SoftwareandDataSpecificationID:
-      name: softwareanddataspecificationId
+    TestingSpecificationID:
+      name: testingspecificationId
       in: path
       required: true
       style: simple
       explode: false
       schema:
         type: string
-    UsageSpecificationID:
-      name: usagespecificationId
+    SoftwareandDataSpecificationID:
+      name: softwareanddataspecificationId
       in: path
       required: true
       style: simple

@@ -851,65 +851,24 @@ components:
           type: string
         StatementReport:
           type: string
-    DepositsandWithdrawals:
+    IssuedDevice:
       type: object
       properties:
-        DepositType:
+        IssuedDeviceType:
           type: string
-        WithdrawalType:
+        IssuedDeviceDescription:
           type: string
-        AccountLimitBreachResponse:
+        IssuedDeviceOptionDefinition:
           type: string
-        DepositTransaction:
+        IssuedDeviceOptionSetting:
           type: string
-        DepositTransactionSourceReference:
-          type: object
-        DepositTransactionDepositType:
+        IssuedDeviceProperty:
           type: string
-        DepositTransactionDescription:
+        IssuedDevicePropertyType:
           type: string
-        DepositTransactionAmount:
-          type: number
-        DepositTransactionDate:
+        IssuedDevicePropertyValue:
           type: string
-        WithdrawalTransaction:
-          type: string
-        WithdrawalTransactionSourceReference:
-          type: object
-        WithdrawalTransactionWithdrawalType:
-          type: string
-        WithdrawalTransactionDescription:
-          type: string
-        WithdrawalTransactionAmount:
-          type: number
-        WithdrawalTransactionDate:
-          type: string
-    Interest:
-      type: object
-      properties:
-        InterestRateType:
-          type: string
-        InterestRateApplicationSchedule:
-          type: object
-        InterestRateConfiguration:
-          type: object
-        Rate:
-          type: string
-        InterestApplicationRecord:
-          type: string
-        InterestTransaction:
-          type: string
-        TransactionDescription:
-          type: string
-        TransactionRateType:
-          type: string
-        TransactionInterestCharge:
-          type: string
-        InterestAccrualAmount:
-          type: number
-        InterestAccrualType:
-          type: string
-        InterestAccrualCharge:
+        IssuedDeviceStatus:
           type: string
     ServiceFees:
       type: object
@@ -943,6 +902,58 @@ components:
         AccrualFeeType:
           type: string
         AccrualFeeCharge:
+          type: string
+    AccountSweep:
+      type: object
+      properties:
+        AccountSweepType:
+          type: string
+        AccountSweepDefinition:
+          type: string
+        AccountSweepApplicationSchedule:
+          type: string
+        AccountSweepConfiguration:
+          type: string
+        TargetAccount:
+          type: string
+        SweepMandate:
+          type: string
+        SweepProcessingSchedule:
+          type: string
+        SweepApplicationRecord:
+          type: string
+        AccountSweepTargetAccount:
+          type: string
+        AccountSweepAmount:
+          type: number
+        AccountSweepExecutionDate:
+          type: string
+    Interest:
+      type: object
+      properties:
+        InterestRateType:
+          type: string
+        InterestRateApplicationSchedule:
+          type: object
+        InterestRateConfiguration:
+          type: object
+        Rate:
+          type: string
+        InterestApplicationRecord:
+          type: string
+        InterestTransaction:
+          type: string
+        TransactionDescription:
+          type: string
+        TransactionRateType:
+          type: string
+        TransactionInterestCharge:
+          type: string
+        InterestAccrualAmount:
+          type: number
+        InterestAccrualType:
+          type: string
+        InterestAccrualCharge:
           type: string
     Payments:
       type: object
@@ -1016,49 +1027,38 @@ components:
           type: string
         LienStatus:
           type: string
-    IssuedDevice:
+    DepositsandWithdrawals:
       type: object
       properties:
-        IssuedDeviceType:
+        DepositType:
           type: string
-        IssuedDeviceDescription:
+        WithdrawalType:
           type: string
-        IssuedDeviceOptionDefinition:
+        AccountLimitBreachResponse:
           type: string
-        IssuedDeviceOptionSetting:
+        DepositTransaction:
           type: string
-        IssuedDeviceProperty:
+        DepositTransactionSourceReference:
+          type: object
+        DepositTransactionDepositType:
           type: string
-        IssuedDevicePropertyType:
+        DepositTransactionDescription:
           type: string
-        IssuedDevicePropertyValue:
-          type: string
-        IssuedDeviceStatus:
-          type: string
-    AccountSweep:
-      type: object
-      properties:
-        AccountSweepType:
-          type: string
-        AccountSweepDefinition:
-          type: string
-        AccountSweepApplicationSchedule:
-          type: string
-        AccountSweepConfiguration:
-          type: string
-        TargetAccount:
-          type: string
-        SweepMandate:
-          type: string
-        SweepProcessingSchedule:
-          type: string
-        SweepApplicationRecord:
-          type: string
-        AccountSweepTargetAccount:
-          type: string
-        AccountSweepAmount:
+        DepositTransactionAmount:
           type: number
-        AccountSweepExecutionDate:
+        DepositTransactionDate:
+          type: string
+        WithdrawalTransaction:
+          type: string
+        WithdrawalTransactionSourceReference:
+          type: object
+        WithdrawalTransactionWithdrawalType:
+          type: string
+        WithdrawalTransactionDescription:
+          type: string
+        WithdrawalTransactionAmount:
+          type: number
+        WithdrawalTransactionDate:
           type: string
     HTTPError:
       type: object
@@ -1477,16 +1477,8 @@ components:
       explode: false
       schema:
         type: string
-    DepositsandWithdrawalsID:
-      name: depositsandwithdrawalsId
-      in: path
-      required: true
-      style: simple
-      explode: false
-      schema:
-        type: string
-    InterestID:
-      name: interestId
+    IssuedDeviceID:
+      name: issueddeviceId
       in: path
       required: true
       style: simple
@@ -1495,6 +1487,22 @@ components:
         type: string
     ServiceFeesID:
       name: servicefeesId
+      in: path
+      required: true
+      style: simple
+      explode: false
+      schema:
+        type: string
+    AccountSweepID:
+      name: accountsweepId
+      in: path
+      required: true
+      style: simple
+      explode: false
+      schema:
+        type: string
+    InterestID:
+      name: interestId
       in: path
       required: true
       style: simple
@@ -1517,16 +1525,8 @@ components:
       explode: false
       schema:
         type: string
-    IssuedDeviceID:
-      name: issueddeviceId
-      in: path
-      required: true
-      style: simple
-      explode: false
-      schema:
-        type: string
-    AccountSweepID:
-      name: accountsweepId
+    DepositsandWithdrawalsID:
+      name: depositsandwithdrawalsId
       in: path
       required: true
       style: simple

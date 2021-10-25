@@ -1111,19 +1111,6 @@ components:
           type: string
         CorporateFinanceServicesAdviceReference:
           type: object
-    CorporateFinanceOutcome:
-      type: object
-      properties:
-        CorporateFinanceTask:
-          type: string
-        CorporateFinanceProject:
-          type: string
-        CorporateFinanceWorkProduct:
-          type: object
-        CorporateFinanceWorkforceAnalysis:
-          type: string
-        CorporateFinanceWorkforceAssignment:
-          type: string
     CapitalStructuringTopic:
       type: object
       properties:
@@ -1200,6 +1187,19 @@ components:
           type: object
         Schedule:
           type: object
+    CorporateFinanceOutcome:
+      type: object
+      properties:
+        CorporateFinanceTask:
+          type: string
+        CorporateFinanceProject:
+          type: string
+        CorporateFinanceWorkProduct:
+          type: object
+        CorporateFinanceWorkforceAnalysis:
+          type: string
+        CorporateFinanceWorkforceAssignment:
+          type: string
     HTTPError:
       type: object
       properties:
@@ -1212,14 +1212,6 @@ components:
   parameters:
     CorporateFinanceID:
       name: corporatefinanceId
-      in: path
-      required: true
-      style: simple
-      explode: false
-      schema:
-        type: string
-    CorporateFinanceOutcomeID:
-      name: corporatefinanceoutcomeId
       in: path
       required: true
       style: simple
@@ -1252,6 +1244,14 @@ components:
         type: string
     TacticalFundingTopicID:
       name: tacticalfundingtopicId
+      in: path
+      required: true
+      style: simple
+      explode: false
+      schema:
+        type: string
+    CorporateFinanceOutcomeID:
+      name: corporatefinanceoutcomeId
       in: path
       required: true
       style: simple

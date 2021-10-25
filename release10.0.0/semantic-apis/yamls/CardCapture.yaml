@@ -684,47 +684,26 @@ components:
           type: string
         CreditChargeCardFinancialCaptureTransactionTransaction:
           type: string
-    TransactionAuthorization:
+    TransactionCapture:
       type: object
       properties:
-        TransactionAuthorizationPreconditions:
+        TransactionCapturePreconditions:
           type: string
-        TransactionAuthorizationTaskSchedule:
+        TransactionCaptureTaskSchedule:
           type: string
         BusinessService:
           type: object
-        TransactionAuthorizationPostconditions:
+        TransactionCapturePostconditions:
           type: string
-        TransactionAuthorizationServiceType:
+        TransactionCaptureServiceType:
           type: string
-        TransactionAuthorizationServiceDescription:
+        TransactionCaptureServiceDescription:
           type: string
-        TransactionAuthorizationServiceInputsandOuputs:
+        TransactionCaptureServiceInputsandOuputs:
           type: string
-        TransactionAuthorizationServiceWorkProduct:
+        TransactionCaptureServiceWorkProduct:
           type: string
-        TransactionAuthorizationServiceName:
-          type: string
-    TransactionConsolidation:
-      type: object
-      properties:
-        TransactionConsolidationPreconditions:
-          type: string
-        TransactionConsolidationTaskSchedule:
-          type: string
-        CardTransactionConsolidation:
-          type: object
-        TransactionConsolidationPostconditions:
-          type: string
-        TransactionConsolidationCardTransactionConsolidationServiceType:
-          type: string
-        TransactionConsolidationCardTransactionConsolidationServiceDescription:
-          type: string
-        TransactionConsolidationCardTransactionConsolidationServiceInputsandOuputs:
-          type: string
-        TransactionConsolidationCardTransactionConsolidationServiceWorkProduct:
-          type: string
-        TransactionConsolidationCardTransactionConsolidationServiceName:
+        TransactionCaptureServiceName:
           type: string
     TransactionReversal:
       type: object
@@ -746,27 +725,6 @@ components:
         TransactionReversalCardTransactionReversalServiceWorkProduct:
           type: string
         TransactionReversalCardTransactionReversalServiceName:
-          type: string
-    TransactionCapture:
-      type: object
-      properties:
-        TransactionCapturePreconditions:
-          type: string
-        TransactionCaptureTaskSchedule:
-          type: string
-        BusinessService:
-          type: object
-        TransactionCapturePostconditions:
-          type: string
-        TransactionCaptureServiceType:
-          type: string
-        TransactionCaptureServiceDescription:
-          type: string
-        TransactionCaptureServiceInputsandOuputs:
-          type: string
-        TransactionCaptureServiceWorkProduct:
-          type: string
-        TransactionCaptureServiceName:
           type: string
     CardCaptureOutcome:
       type: object
@@ -793,6 +751,48 @@ components:
           type: string
         CardCaptureWorkProduct:
           type: string
+    TransactionConsolidation:
+      type: object
+      properties:
+        TransactionConsolidationPreconditions:
+          type: string
+        TransactionConsolidationTaskSchedule:
+          type: string
+        CardTransactionConsolidation:
+          type: object
+        TransactionConsolidationPostconditions:
+          type: string
+        TransactionConsolidationCardTransactionConsolidationServiceType:
+          type: string
+        TransactionConsolidationCardTransactionConsolidationServiceDescription:
+          type: string
+        TransactionConsolidationCardTransactionConsolidationServiceInputsandOuputs:
+          type: string
+        TransactionConsolidationCardTransactionConsolidationServiceWorkProduct:
+          type: string
+        TransactionConsolidationCardTransactionConsolidationServiceName:
+          type: string
+    TransactionAuthorization:
+      type: object
+      properties:
+        TransactionAuthorizationPreconditions:
+          type: string
+        TransactionAuthorizationTaskSchedule:
+          type: string
+        BusinessService:
+          type: object
+        TransactionAuthorizationPostconditions:
+          type: string
+        TransactionAuthorizationServiceType:
+          type: string
+        TransactionAuthorizationServiceDescription:
+          type: string
+        TransactionAuthorizationServiceInputsandOuputs:
+          type: string
+        TransactionAuthorizationServiceWorkProduct:
+          type: string
+        TransactionAuthorizationServiceName:
+          type: string
     HTTPError:
       type: object
       properties:
@@ -811,16 +811,8 @@ components:
       explode: false
       schema:
         type: string
-    TransactionAuthorizationID:
-      name: transactionauthorizationId
-      in: path
-      required: true
-      style: simple
-      explode: false
-      schema:
-        type: string
-    TransactionConsolidationID:
-      name: transactionconsolidationId
+    TransactionCaptureID:
+      name: transactioncaptureId
       in: path
       required: true
       style: simple
@@ -835,16 +827,24 @@ components:
       explode: false
       schema:
         type: string
-    TransactionCaptureID:
-      name: transactioncaptureId
+    CardCaptureOutcomeID:
+      name: cardcaptureoutcomeId
       in: path
       required: true
       style: simple
       explode: false
       schema:
         type: string
-    CardCaptureOutcomeID:
-      name: cardcaptureoutcomeId
+    TransactionConsolidationID:
+      name: transactionconsolidationId
+      in: path
+      required: true
+      style: simple
+      explode: false
+      schema:
+        type: string
+    TransactionAuthorizationID:
+      name: transactionauthorizationId
       in: path
       required: true
       style: simple

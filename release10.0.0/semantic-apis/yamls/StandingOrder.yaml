@@ -10,21 +10,21 @@ paths:
   /StandingOrder/{standingorderId}/Control:
     put:
       tags:
-      - CR - StandingOrderArrangement
-      summary: CoCR Control the processing of Standing Order Arrangement
-      description: CoCR Control the processing of Standing Order Arrangement
+      - CR - StandingOrderFacility
+      summary: CoCR Control the processing of Standing Order Facility
+      description: CoCR Control the processing of Standing Order Facility
       operationId: Control
       parameters:
       - $ref: '#/components/parameters/StandingOrderID'
       requestBody:
-        $ref: '#/components/requestBodies/StandingOrderArrangement'
+        $ref: '#/components/requestBodies/StandingOrderFacility'
       responses:
         200:
           description: Success
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/StandingOrderArrangement'
+                $ref: '#/components/schemas/StandingOrderFacility'
         400:
           $ref: '#/components/responses/BadRequestError'
         401:
@@ -40,21 +40,21 @@ paths:
   /StandingOrder/{standingorderId}/Exchange:
     put:
       tags:
-      - CR - StandingOrderArrangement
-      summary: EcCR Accept, verify, etc. aspects of Standing Order Arrangement processing
-      description: EcCR Accept, verify, etc. aspects of Standing Order Arrangement processing
+      - CR - StandingOrderFacility
+      summary: EcCR Accept, verify, etc. aspects of Standing Order Facility processing
+      description: EcCR Accept, verify, etc. aspects of Standing Order Facility processing
       operationId: Exchange
       parameters:
       - $ref: '#/components/parameters/StandingOrderID'
       requestBody:
-        $ref: '#/components/requestBodies/StandingOrderArrangement'
+        $ref: '#/components/requestBodies/StandingOrderFacility'
       responses:
         200:
           description: Success
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/StandingOrderArrangement'
+                $ref: '#/components/schemas/StandingOrderFacility'
         400:
           $ref: '#/components/responses/BadRequestError'
         401:
@@ -70,21 +70,21 @@ paths:
   /StandingOrder/{standingorderId}/Execute:
     put:
       tags:
-      - CR - StandingOrderArrangement
-      summary: ExCR Execute an available automated action for Standing Order Arrangement
-      description: ExCR Execute an available automated action for Standing Order Arrangement
+      - CR - StandingOrderFacility
+      summary: ExCR Execute an available automated action for Standing Order Facility
+      description: ExCR Execute an available automated action for Standing Order Facility
       operationId: Execute
       parameters:
       - $ref: '#/components/parameters/StandingOrderID'
       requestBody:
-        $ref: '#/components/requestBodies/StandingOrderArrangement'
+        $ref: '#/components/requestBodies/StandingOrderFacility'
       responses:
         200:
           description: Success
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/StandingOrderArrangement'
+                $ref: '#/components/schemas/StandingOrderFacility'
         400:
           $ref: '#/components/responses/BadRequestError'
         401:
@@ -100,20 +100,20 @@ paths:
   /StandingOrder/Initiate:
     post:
       tags:
-      - CR - StandingOrderArrangement
-      summary: InCR Instantiate a new Standing Order Arrangement
-      description: InCR Instantiate a new Standing Order Arrangement
+      - CR - StandingOrderFacility
+      summary: InCR Instantiate a new Standing Order Facility
+      description: InCR Instantiate a new Standing Order Facility
       operationId: Initiate
       parameters: []
       requestBody:
-        $ref: '#/components/requestBodies/StandingOrderArrangement'
+        $ref: '#/components/requestBodies/StandingOrderFacility'
       responses:
         200:
           description: Success
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/StandingOrderArrangement'
+                $ref: '#/components/schemas/StandingOrderFacility'
         400:
           $ref: '#/components/responses/BadRequestError'
         401:
@@ -129,9 +129,9 @@ paths:
   /StandingOrder/{standingorderId}/Retrieve:
     get:
       tags:
-      - CR - StandingOrderArrangement
-      summary: ReCR Retrieve details about any aspect of Standing Order Arrangement
-      description: ReCR Retrieve details about any aspect of Standing Order Arrangement
+      - CR - StandingOrderFacility
+      summary: ReCR Retrieve details about any aspect of Standing Order Facility
+      description: ReCR Retrieve details about any aspect of Standing Order Facility
       operationId: Retrieve
       parameters:
       - $ref: '#/components/parameters/StandingOrderID'
@@ -141,7 +141,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/StandingOrderArrangement'
+                $ref: '#/components/schemas/StandingOrderFacility'
         400:
           $ref: '#/components/responses/BadRequestError'
         401:
@@ -157,21 +157,21 @@ paths:
   /StandingOrder/{standingorderId}/Request:
     put:
       tags:
-      - CR - StandingOrderArrangement
-      summary: RqCR Request manual intervention or a decision with respect to Standing Order Arrangement
-      description: RqCR Request manual intervention or a decision with respect to Standing Order Arrangement
+      - CR - StandingOrderFacility
+      summary: RqCR Request manual intervention or a decision with respect to Standing Order Facility
+      description: RqCR Request manual intervention or a decision with respect to Standing Order Facility
       operationId: Request
       parameters:
       - $ref: '#/components/parameters/StandingOrderID'
       requestBody:
-        $ref: '#/components/requestBodies/StandingOrderArrangement'
+        $ref: '#/components/requestBodies/StandingOrderFacility'
       responses:
         200:
           description: Success
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/StandingOrderArrangement'
+                $ref: '#/components/schemas/StandingOrderFacility'
         400:
           $ref: '#/components/responses/BadRequestError'
         401:
@@ -187,21 +187,21 @@ paths:
   /StandingOrder/{standingorderId}/Update:
     put:
       tags:
-      - CR - StandingOrderArrangement
-      summary: UpCR Update details relating to Standing Order Arrangement
-      description: UpCR Update details relating to Standing Order Arrangement
+      - CR - StandingOrderFacility
+      summary: UpCR Update details relating to Standing Order Facility
+      description: UpCR Update details relating to Standing Order Facility
       operationId: Update
       parameters:
       - $ref: '#/components/parameters/StandingOrderID'
       requestBody:
-        $ref: '#/components/requestBodies/StandingOrderArrangement'
+        $ref: '#/components/requestBodies/StandingOrderFacility'
       responses:
         200:
           description: Success
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/StandingOrderArrangement'
+                $ref: '#/components/schemas/StandingOrderFacility'
         400:
           $ref: '#/components/responses/BadRequestError'
         401:
@@ -337,42 +337,42 @@ paths:
           $ref: '#/components/responses/InternalServerError'
 components:
   schemas:
-    StandingOrderArrangement:
+    StandingOrderFacility:
       type: object
       properties:
-        StandingOrderArrangementParameterType:
+        StandingOrderFacilityParameterType:
           type: string
-        StandingOrderArrangementSelectedOption:
+        StandingOrderFacilitySelectedOption:
           type: string
-        StandingOrderArrangementType:
+        StandingOrderFacilityType:
           type: string
-        StandingOrderArrangementCalendar:
+        StandingOrderFacilityCalendar:
           type: string
-        StandingOrderArrangementStatus:
+        StandingOrderFacilityStatus:
           type: string
-        StandingOrderArrangementAssociatedParty:
+        StandingOrderFacilityAssociatedParty:
           type: object
-        StandingOrderArrangementCurrency:
+        StandingOrderFacilityCurrency:
           type: string
-        StandingOrderArrangementRegulationReference:
+        StandingOrderFacilityRegulationReference:
           type: string
-        StandingOrderArrangementRegulationType:
+        StandingOrderFacilityRegulationType:
           type: string
-        StandingOrderArrangementJurisdiction:
+        StandingOrderFacilityJurisdiction:
           type: object
-        StandingOrderArrangementBookingLocation:
+        StandingOrderFacilityBookingLocation:
           type: object
-        StandingOrderArrangementAccountType:
+        StandingOrderFacilityAccountType:
           type: string
-        StandingOrderArrangementAccountReference:
+        StandingOrderFacilityAccountReference:
           type: string
-        StandingOrderArrangementCustomerReference:
+        StandingOrderFacilityCustomerReference:
           type: object
-        StandingOrderArrangementPosition:
+        StandingOrderFacilityPosition:
           type: string
-        StandingOrderArrangementProductReference:
+        StandingOrderFacilityProductReference:
           type: string
-        StandingOrderArrangementPositionLimit:
+        StandingOrderFacilityPositionLimit:
           type: string
         FeeAccountReference:
           type: string
@@ -395,6 +395,30 @@ components:
         PeriodicityDescription:
           type: string
         DayNumberInPeriodicityDescription:
+          type: string
+    StandingOrderFulfillment:
+      type: object
+      properties:
+        Preconditions:
+          type: object
+        Schedule:
+          type: object
+        BusinessService:
+          type: object
+        Postconditions:
+          type: object
+        StandingOrderFacilityReference:
+          type: string
+        StandingOrderFulfillmentReference:
+          type: object
+        StandingOrderFulfillmentType:
+          type: string
+    StandingOrderOutcome:
+      type: object
+      properties:
+        StandingOrderFinancialFacility:
+          type: string
+        StandingOrderWorkProduct:
           type: string
     StandingOrderPayment:
       type: object
@@ -427,13 +451,6 @@ components:
           type: string
         StandingOrderExecutionFeeAmount:
           type: string
-    StandingOrderOutcome:
-      type: object
-      properties:
-        StandingOrderFinancialFacility:
-          type: string
-        StandingOrderWorkProduct:
-          type: string
     HTTPError:
       type: object
       properties:
@@ -452,8 +469,8 @@ components:
       explode: false
       schema:
         type: string
-    StandingOrderPaymentID:
-      name: standingorderpaymentId
+    StandingOrderFulfillmentID:
+      name: standingorderfulfillmentId
       in: path
       required: true
       style: simple
@@ -468,13 +485,21 @@ components:
       explode: false
       schema:
         type: string
+    StandingOrderPaymentID:
+      name: standingorderpaymentId
+      in: path
+      required: true
+      style: simple
+      explode: false
+      schema:
+        type: string
   requestBodies:
-    StandingOrderArrangement:
+    StandingOrderFacility:
       required: true
       content:
         application/json:
           schema:
-            $ref: '#/components/schemas/StandingOrderArrangement'
+            $ref: '#/components/schemas/StandingOrderFacility'
     StandingOrderPayment:
       required: true
       content:

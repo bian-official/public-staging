@@ -925,6 +925,32 @@ components:
           type: string
         MarketAssetValuationProcedureReference:
           type: string
+    FinancialInstrumentValuationOutcome:
+      type: object
+      properties:
+        FinancialInstrumentValuationWorkProduct:
+          type: object
+        FinancialInstrumentValuationProcedure:
+          type: string
+    AssetValuationInformationConsolidationWorkstep:
+      type: object
+      properties:
+        Preconditions:
+          type: object
+        BusinessUnit/EmployeeReference:
+          type: object
+        Schedule:
+          type: object
+        BusinessService:
+          type: object
+        Postconditions:
+          type: object
+        MarketAssetValuationProcedureReference:
+          type: string
+        AssetValuationInformationConsolidationWorkstepReference:
+          type: string
+        AssetValuationInformationConsolidationWorkstepType:
+          type: string
     AssetValuationWorkstep:
       type: object
       properties:
@@ -963,32 +989,6 @@ components:
           type: string
         AssetValuationApproachSelectionWorkstepType:
           type: string
-    AssetValuationInformationConsolidationWorkstep:
-      type: object
-      properties:
-        Preconditions:
-          type: object
-        BusinessUnit/EmployeeReference:
-          type: object
-        Schedule:
-          type: object
-        BusinessService:
-          type: object
-        Postconditions:
-          type: object
-        MarketAssetValuationProcedureReference:
-          type: string
-        AssetValuationInformationConsolidationWorkstepReference:
-          type: string
-        AssetValuationInformationConsolidationWorkstepType:
-          type: string
-    FinancialInstrumentValuationOutcome:
-      type: object
-      properties:
-        FinancialInstrumentValuationWorkProduct:
-          type: object
-        FinancialInstrumentValuationProcedure:
-          type: string
     HTTPError:
       type: object
       properties:
@@ -1007,16 +1007,8 @@ components:
       explode: false
       schema:
         type: string
-    AssetValuationWorkstepID:
-      name: assetvaluationworkstepId
-      in: path
-      required: true
-      style: simple
-      explode: false
-      schema:
-        type: string
-    AssetValuationApproachSelectionWorkstepID:
-      name: assetvaluationapproachselectionworkstepId
+    FinancialInstrumentValuationOutcomeID:
+      name: financialinstrumentvaluationoutcomeId
       in: path
       required: true
       style: simple
@@ -1031,8 +1023,16 @@ components:
       explode: false
       schema:
         type: string
-    FinancialInstrumentValuationOutcomeID:
-      name: financialinstrumentvaluationoutcomeId
+    AssetValuationWorkstepID:
+      name: assetvaluationworkstepId
+      in: path
+      required: true
+      style: simple
+      explode: false
+      schema:
+        type: string
+    AssetValuationApproachSelectionWorkstepID:
+      name: assetvaluationapproachselectionworkstepId
       in: path
       required: true
       style: simple

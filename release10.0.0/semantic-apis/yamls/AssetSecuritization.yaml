@@ -687,47 +687,26 @@ components:
           type: string
         AssetSecuritizationTransactionTransaction:
           type: string
-    Placement:
+    Securitization:
       type: object
       properties:
-        PlacementPreconditions:
+        SecuritizationPreconditions:
           type: string
-        PlacementTaskSchedule:
+        SecuritizationTaskSchedule:
           type: string
         BusinessService:
           type: object
-        PlacementPostconditions:
+        SecuritizationPostconditions:
           type: string
-        PlacementServiceType:
+        SecuritizationServiceType:
           type: string
-        PlacementServiceDescription:
+        SecuritizationServiceDescription:
           type: string
-        PlacementServiceInputsandOuputs:
+        SecuritizationServiceInputsandOuputs:
           type: string
-        PlacementServiceWorkProduct:
+        SecuritizationServiceWorkProduct:
           type: string
-        PlacementServiceName:
-          type: string
-    Selection:
-      type: object
-      properties:
-        SelectionPreconditions:
-          type: string
-        SelectionTaskSchedule:
-          type: string
-        AssetSelection:
-          type: object
-        SelectionPostconditions:
-          type: string
-        SelectionAssetSelectionServiceType:
-          type: string
-        SelectionAssetSelectionServiceDescription:
-          type: string
-        SelectionAssetSelectionServiceInputsandOuputs:
-          type: string
-        SelectionAssetSelectionServiceWorkProduct:
-          type: string
-        SelectionAssetSelectionServiceName:
+        SecuritizationServiceName:
           type: string
     AssetSecuritizationOutcome:
       type: object
@@ -754,26 +733,47 @@ components:
           type: string
         AssetSecuritizationWorkProduct:
           type: string
-    Securitization:
+    Selection:
       type: object
       properties:
-        SecuritizationPreconditions:
+        SelectionPreconditions:
           type: string
-        SecuritizationTaskSchedule:
+        SelectionTaskSchedule:
+          type: string
+        AssetSelection:
+          type: object
+        SelectionPostconditions:
+          type: string
+        SelectionAssetSelectionServiceType:
+          type: string
+        SelectionAssetSelectionServiceDescription:
+          type: string
+        SelectionAssetSelectionServiceInputsandOuputs:
+          type: string
+        SelectionAssetSelectionServiceWorkProduct:
+          type: string
+        SelectionAssetSelectionServiceName:
+          type: string
+    Placement:
+      type: object
+      properties:
+        PlacementPreconditions:
+          type: string
+        PlacementTaskSchedule:
           type: string
         BusinessService:
           type: object
-        SecuritizationPostconditions:
+        PlacementPostconditions:
           type: string
-        SecuritizationServiceType:
+        PlacementServiceType:
           type: string
-        SecuritizationServiceDescription:
+        PlacementServiceDescription:
           type: string
-        SecuritizationServiceInputsandOuputs:
+        PlacementServiceInputsandOuputs:
           type: string
-        SecuritizationServiceWorkProduct:
+        PlacementServiceWorkProduct:
           type: string
-        SecuritizationServiceName:
+        PlacementServiceName:
           type: string
     HTTPError:
       type: object
@@ -793,16 +793,8 @@ components:
       explode: false
       schema:
         type: string
-    PlacementID:
-      name: placementId
-      in: path
-      required: true
-      style: simple
-      explode: false
-      schema:
-        type: string
-    SelectionID:
-      name: selectionId
+    SecuritizationID:
+      name: securitizationId
       in: path
       required: true
       style: simple
@@ -817,8 +809,16 @@ components:
       explode: false
       schema:
         type: string
-    SecuritizationID:
-      name: securitizationId
+    SelectionID:
+      name: selectionId
+      in: path
+      required: true
+      style: simple
+      explode: false
+      schema:
+        type: string
+    PlacementID:
+      name: placementId
       in: path
       required: true
       style: simple

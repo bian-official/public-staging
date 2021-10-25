@@ -762,30 +762,6 @@ components:
           type: string
         RepaymentTransactionValueDate:
           type: string
-    Restructuring:
-      type: object
-      properties:
-        RestructuringTask:
-          type: string
-        RestructuringEvaluation:
-          type: string
-        RestructuringWriteDown:
-          type: string
-    Maintenance:
-      type: object
-      properties:
-        MaintenanceReportType:
-          type: string
-        LoanTaxReport:
-          type: string
-        LoanFeeType:
-          type: string
-        LoanFees:
-          type: string
-        Penalties:
-          type: string
-        CollateralValuation:
-          type: string
     ServiceFees:
       type: object
       properties:
@@ -819,6 +795,45 @@ components:
           type: string
         AccrualFeeCharge:
           type: string
+    Restructuring:
+      type: object
+      properties:
+        RestructuringTask:
+          type: string
+        RestructuringEvaluation:
+          type: string
+        RestructuringWriteDown:
+          type: string
+    Maintenance:
+      type: object
+      properties:
+        MaintenanceReportType:
+          type: string
+        LoanTaxReport:
+          type: string
+        LoanFeeType:
+          type: string
+        LoanFees:
+          type: string
+        Penalties:
+          type: string
+        CollateralValuation:
+          type: string
+    Disbursement:
+      type: object
+      properties:
+        DisbursementPayeeReference:
+          type: object
+        DisbursementPayeeProductInstanceReference:
+          type: object
+        DisbursementPayeeBankReference:
+          type: object
+        DisbursementAmount:
+          type: number
+        DisbursementCurrency:
+          type: string
+        DisbursementValueDate:
+          type: string
     Withdrawal:
       type: object
       properties:
@@ -847,21 +862,6 @@ components:
         PaymentTransactionBankBranch/LocationReference:
           type: object
         PaymentTransactionStatus:
-          type: string
-    Disbursement:
-      type: object
-      properties:
-        DisbursementPayeeReference:
-          type: object
-        DisbursementPayeeProductInstanceReference:
-          type: object
-        DisbursementPayeeBankReference:
-          type: object
-        DisbursementAmount:
-          type: number
-        DisbursementCurrency:
-          type: string
-        DisbursementValueDate:
           type: string
     HTTPError:
       type: object
@@ -1686,6 +1686,14 @@ components:
       explode: false
       schema:
         type: string
+    ServiceFeesID:
+      name: servicefeesId
+      in: path
+      required: true
+      style: simple
+      explode: false
+      schema:
+        type: string
     RestructuringID:
       name: restructuringId
       in: path
@@ -1702,8 +1710,8 @@ components:
       explode: false
       schema:
         type: string
-    ServiceFeesID:
-      name: servicefeesId
+    DisbursementID:
+      name: disbursementId
       in: path
       required: true
       style: simple
@@ -1712,14 +1720,6 @@ components:
         type: string
     WithdrawalID:
       name: withdrawalId
-      in: path
-      required: true
-      style: simple
-      explode: false
-      schema:
-        type: string
-    DisbursementID:
-      name: disbursementId
       in: path
       required: true
       style: simple

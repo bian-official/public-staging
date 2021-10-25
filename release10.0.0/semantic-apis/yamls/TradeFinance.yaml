@@ -2568,37 +2568,6 @@ components:
           type: object
         InterestTransactionType:
           type: string
-    WithdrawalFulfillment:
-      type: object
-      properties:
-        Preconditions:
-          type: object
-        Schedule:
-          type: object
-        BusinessService:
-          type: object
-        Postconditions:
-          type: object
-        TradeFinanceFacilityReference:
-          type: string
-        WithdrawalFulfillmentReference:
-          type: object
-        WithdrawalFulfillmentType:
-          type: string
-        WithdrawalType:
-          type: string
-        WithdrawalTransactionSourceReference:
-          type: object
-        WithdrawalTransactionWithdrawalType:
-          type: string
-        WithdrawalTransactionDescription:
-          type: string
-        WithdrawalTransactionAmount:
-          type: number
-        WithdrawalTransactionDate:
-          type: string
-        WithdrawalFulfillmentInstanceReference:
-          type: object
     DepositFulfillment:
       type: object
       properties:
@@ -2629,6 +2598,37 @@ components:
         DepositTransactionDate:
           type: string
         DepositFulfillmentInstanceReference:
+          type: object
+    WithdrawalFulfillment:
+      type: object
+      properties:
+        Preconditions:
+          type: object
+        Schedule:
+          type: object
+        BusinessService:
+          type: object
+        Postconditions:
+          type: object
+        TradeFinanceFacilityReference:
+          type: string
+        WithdrawalFulfillmentReference:
+          type: object
+        WithdrawalFulfillmentType:
+          type: string
+        WithdrawalType:
+          type: string
+        WithdrawalTransactionSourceReference:
+          type: object
+        WithdrawalTransactionWithdrawalType:
+          type: string
+        WithdrawalTransactionDescription:
+          type: string
+        WithdrawalTransactionAmount:
+          type: number
+        WithdrawalTransactionDate:
+          type: string
+        WithdrawalFulfillmentInstanceReference:
           type: object
     PaymentFulfillment:
       type: object
@@ -2830,16 +2830,16 @@ components:
       explode: false
       schema:
         type: string
-    WithdrawalFulfillmentID:
-      name: withdrawalfulfillmentId
+    DepositFulfillmentID:
+      name: depositfulfillmentId
       in: path
       required: true
       style: simple
       explode: false
       schema:
         type: string
-    DepositFulfillmentID:
-      name: depositfulfillmentId
+    WithdrawalFulfillmentID:
+      name: withdrawalfulfillmentId
       in: path
       required: true
       style: simple

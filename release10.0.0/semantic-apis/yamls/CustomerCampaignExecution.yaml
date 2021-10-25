@@ -399,15 +399,6 @@ components:
           type: string
         LeadandOpportunityProcedureInstanceReference:
           type: object
-    CandidateSelection:
-      type: object
-      properties:
-        CustomerCampaignSelectionCriteria:
-          type: string
-        CustomerCampaignCandidateEmployee/BusinessUnitReference:
-          type: object
-        CustomerCampaignCandidateReference:
-          type: object
     Execution:
       type: object
       properties:
@@ -430,6 +421,15 @@ components:
           type: string
         CustomerCampaignProcedureAnalysisFeedbackResult:
           type: string
+    CandidateSelection:
+      type: object
+      properties:
+        CustomerCampaignSelectionCriteria:
+          type: string
+        CustomerCampaignCandidateEmployee/BusinessUnitReference:
+          type: object
+        CustomerCampaignCandidateReference:
+          type: object
     HTTPError:
       type: object
       properties:
@@ -923,14 +923,6 @@ components:
       explode: false
       schema:
         type: string
-    CandidateSelectionID:
-      name: candidateselectionId
-      in: path
-      required: true
-      style: simple
-      explode: false
-      schema:
-        type: string
     ExecutionID:
       name: executionId
       in: path
@@ -941,6 +933,14 @@ components:
         type: string
     AnalysisFeedbackID:
       name: analysisfeedbackId
+      in: path
+      required: true
+      style: simple
+      explode: false
+      schema:
+        type: string
+    CandidateSelectionID:
+      name: candidateselectionId
       in: path
       required: true
       style: simple

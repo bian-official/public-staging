@@ -233,15 +233,6 @@ components:
       properties:
         PaymentTransactionFundingCheckResult:
           type: string
-    Compliance:
-      type: object
-      properties:
-        PaymentTransactionComplianceCheckType:
-          type: string
-        PaymentTransactionComplianceCheckResult:
-          type: string
-        PaymentTransactionComplianceTaskResult:
-          type: string
     OrderInitiation:
       type: object
       properties:
@@ -250,6 +241,15 @@ components:
         PaymentOrderProcedureInstanceStatus:
           type: string
         OrderInitiationTaskResult:
+          type: string
+    Compliance:
+      type: object
+      properties:
+        PaymentTransactionComplianceCheckType:
+          type: string
+        PaymentTransactionComplianceCheckResult:
+          type: string
+        PaymentTransactionComplianceTaskResult:
           type: string
     HTTPError:
       type: object
@@ -396,16 +396,16 @@ components:
       explode: false
       schema:
         type: string
-    ComplianceID:
-      name: complianceId
+    OrderInitiationID:
+      name: orderinitiationId
       in: path
       required: true
       style: simple
       explode: false
       schema:
         type: string
-    OrderInitiationID:
-      name: orderinitiationId
+    ComplianceID:
+      name: complianceId
       in: path
       required: true
       style: simple

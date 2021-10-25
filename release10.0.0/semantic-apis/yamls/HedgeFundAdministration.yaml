@@ -1905,6 +1905,25 @@ components:
           type: string
         HedgeFundAdministrativePlanDescription:
           type: string
+    FundPerformanceFeeRoutine:
+      type: object
+      properties:
+        Preconditions:
+          type: object
+        BusinessUnit/EmployeeReference:
+          type: object
+        Schedule:
+          type: object
+        BusinessService:
+          type: object
+        Postconditions:
+          type: object
+        HedgeFundAdministrativePlanReference:
+          type: string
+        FundPerformanceFeeRoutineReference:
+          type: string
+        FundPerformanceFeeRoutineType:
+          type: string
     FundManagementRoutine:
       type: object
       properties:
@@ -1942,25 +1961,6 @@ components:
         FundFinancialReportingRoutineReference:
           type: string
         FundFinancialReportingRoutineType:
-          type: string
-    FundPerformanceFeeRoutine:
-      type: object
-      properties:
-        Preconditions:
-          type: object
-        BusinessUnit/EmployeeReference:
-          type: object
-        Schedule:
-          type: object
-        BusinessService:
-          type: object
-        Postconditions:
-          type: object
-        HedgeFundAdministrativePlanReference:
-          type: string
-        FundPerformanceFeeRoutineReference:
-          type: string
-        FundPerformanceFeeRoutineType:
           type: string
     FundAccountingRoutine:
       type: object
@@ -2105,6 +2105,14 @@ components:
       explode: false
       schema:
         type: string
+    FundPerformanceFeeRoutineID:
+      name: fundperformancefeeroutineId
+      in: path
+      required: true
+      style: simple
+      explode: false
+      schema:
+        type: string
     FundManagementRoutineID:
       name: fundmanagementroutineId
       in: path
@@ -2115,14 +2123,6 @@ components:
         type: string
     FundFinancialReportingRoutineID:
       name: fundfinancialreportingroutineId
-      in: path
-      required: true
-      style: simple
-      explode: false
-      schema:
-        type: string
-    FundPerformanceFeeRoutineID:
-      name: fundperformancefeeroutineId
       in: path
       required: true
       style: simple

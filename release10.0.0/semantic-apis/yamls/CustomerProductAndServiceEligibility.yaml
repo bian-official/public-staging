@@ -260,6 +260,11 @@ components:
           type: string
         Date:
           type: string
+    EligibilityCheck:
+      type: object
+      properties:
+        CustomerProductandServiceEligibilityAssessmentResult:
+          type: string
     NextBest:
       type: object
       properties:
@@ -268,11 +273,6 @@ components:
         ProductServiceType:
           type: string
         CustomerProductandServiceNextBestAssessmentResult:
-          type: string
-    EligibilityCheck:
-      type: object
-      properties:
-        CustomerProductandServiceEligibilityAssessmentResult:
           type: string
     HTTPError:
       type: object
@@ -292,16 +292,16 @@ components:
       explode: false
       schema:
         type: string
-    NextBestID:
-      name: nextbestId
+    EligibilityCheckID:
+      name: eligibilitycheckId
       in: path
       required: true
       style: simple
       explode: false
       schema:
         type: string
-    EligibilityCheckID:
-      name: eligibilitycheckId
+    NextBestID:
+      name: nextbestId
       in: path
       required: true
       style: simple

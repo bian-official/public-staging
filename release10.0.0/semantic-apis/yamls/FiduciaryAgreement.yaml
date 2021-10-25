@@ -638,6 +638,27 @@ components:
           type: string
         FiduciaryRelationshipFacilityAccountReference:
           type: object
+    AssessmentandReporting:
+      type: object
+      properties:
+        AssessmentandReportingPreconditions:
+          type: string
+        AssessmentandReportingFeatureSchedule:
+          type: string
+        AnalysisandReporting:
+          type: object
+        AssessmentandReportingPostconditions:
+          type: string
+        AssessmentandReportingAnalysisandReportingServiceType:
+          type: string
+        AssessmentandReportingAnalysisandReportingServiceDescription:
+          type: string
+        AssessmentandReportingAnalysisandReportingServiceInputsandOuputs:
+          type: string
+        AssessmentandReportingAnalysisandReportingServiceWorkProduct:
+          type: string
+        AssessmentandReportingAnalysisandReportingServiceName:
+          type: string
     Agreement:
       type: object
       properties:
@@ -658,6 +679,27 @@ components:
         AgreementServiceWorkProduct:
           type: string
         AgreementServiceName:
+          type: string
+    Fees:
+      type: object
+      properties:
+        FeesPreconditions:
+          type: string
+        FeesFeatureSchedule:
+          type: string
+        BusinessService:
+          type: object
+        FeesPostconditions:
+          type: string
+        FeesServiceType:
+          type: string
+        FeesServiceDescription:
+          type: string
+        FeesServiceInputsandOuputs:
+          type: string
+        FeesServiceWorkProduct:
+          type: string
+        FeesServiceName:
           type: string
     Fulfillment:
       type: object
@@ -687,48 +729,6 @@ components:
           type: string
         FiduciaryAgreementWorkProduct:
           type: string
-    AssessmentandReporting:
-      type: object
-      properties:
-        AssessmentandReportingPreconditions:
-          type: string
-        AssessmentandReportingFeatureSchedule:
-          type: string
-        AnalysisandReporting:
-          type: object
-        AssessmentandReportingPostconditions:
-          type: string
-        AssessmentandReportingAnalysisandReportingServiceType:
-          type: string
-        AssessmentandReportingAnalysisandReportingServiceDescription:
-          type: string
-        AssessmentandReportingAnalysisandReportingServiceInputsandOuputs:
-          type: string
-        AssessmentandReportingAnalysisandReportingServiceWorkProduct:
-          type: string
-        AssessmentandReportingAnalysisandReportingServiceName:
-          type: string
-    Fees:
-      type: object
-      properties:
-        FeesPreconditions:
-          type: string
-        FeesFeatureSchedule:
-          type: string
-        BusinessService:
-          type: object
-        FeesPostconditions:
-          type: string
-        FeesServiceType:
-          type: string
-        FeesServiceDescription:
-          type: string
-        FeesServiceInputsandOuputs:
-          type: string
-        FeesServiceWorkProduct:
-          type: string
-        FeesServiceName:
-          type: string
     HTTPError:
       type: object
       properties:
@@ -747,8 +747,24 @@ components:
       explode: false
       schema:
         type: string
+    AssessmentandReportingID:
+      name: assessmentandreportingId
+      in: path
+      required: true
+      style: simple
+      explode: false
+      schema:
+        type: string
     AgreementID:
       name: agreementId
+      in: path
+      required: true
+      style: simple
+      explode: false
+      schema:
+        type: string
+    FeesID:
+      name: feesId
       in: path
       required: true
       style: simple
@@ -765,22 +781,6 @@ components:
         type: string
     FiduciaryAgreementOutcomeID:
       name: fiduciaryagreementoutcomeId
-      in: path
-      required: true
-      style: simple
-      explode: false
-      schema:
-        type: string
-    AssessmentandReportingID:
-      name: assessmentandreportingId
-      in: path
-      required: true
-      style: simple
-      explode: false
-      schema:
-        type: string
-    FeesID:
-      name: feesId
       in: path
       required: true
       style: simple

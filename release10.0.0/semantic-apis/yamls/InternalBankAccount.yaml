@@ -1175,6 +1175,13 @@ components:
           type: string
         InternalBankAccountLogReference:
           type: string
+    InternalBankAccountOutcome:
+      type: object
+      properties:
+        InternalBankAccountIncident:
+          type: string
+        InternalBankAccountLog:
+          type: string
     InterestFulfillment:
       type: object
       properties:
@@ -1311,13 +1318,6 @@ components:
           type: string
         AccountFulfillmentType:
           type: string
-    InternalBankAccountOutcome:
-      type: object
-      properties:
-        InternalBankAccountIncident:
-          type: string
-        InternalBankAccountLog:
-          type: string
     HTTPError:
       type: object
       properties:
@@ -1330,6 +1330,14 @@ components:
   parameters:
     InternalBankAccountID:
       name: internalbankaccountId
+      in: path
+      required: true
+      style: simple
+      explode: false
+      schema:
+        type: string
+    InternalBankAccountOutcomeID:
+      name: internalbankaccountoutcomeId
       in: path
       required: true
       style: simple
@@ -1394,14 +1402,6 @@ components:
         type: string
     AccountFulfillmentID:
       name: accountfulfillmentId
-      in: path
-      required: true
-      style: simple
-      explode: false
-      schema:
-        type: string
-    InternalBankAccountOutcomeID:
-      name: internalbankaccountoutcomeId
       in: path
       required: true
       style: simple

@@ -434,6 +434,21 @@ components:
           type: string
         Proxy/Representative/PowerofAttorneyReference:
           type: object
+    Demographics:
+      type: object
+      properties:
+        Socio-EconomicClassification:
+          type: string
+        Ethnicity/Religion:
+          type: string
+        Employment:
+          type: string
+        EmploymentHistory:
+          type: string
+        EducationHistory:
+          type: string
+        ServicingConstraints:
+          type: string
     Reference:
       type: object
       properties:
@@ -476,21 +491,6 @@ components:
         CompanyOfficerRole:
           type: string
         CustomerSinceDate:
-          type: string
-    Demographics:
-      type: object
-      properties:
-        Socio-EconomicClassification:
-          type: string
-        Ethnicity/Religion:
-          type: string
-        Employment:
-          type: string
-        EmploymentHistory:
-          type: string
-        EducationHistory:
-          type: string
-        ServicingConstraints:
           type: string
     HTTPError:
       type: object
@@ -961,16 +961,16 @@ components:
       explode: false
       schema:
         type: string
-    ReferenceID:
-      name: referenceId
+    DemographicsID:
+      name: demographicsId
       in: path
       required: true
       style: simple
       explode: false
       schema:
         type: string
-    DemographicsID:
-      name: demographicsId
+    ReferenceID:
+      name: referenceId
       in: path
       required: true
       style: simple

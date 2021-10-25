@@ -325,13 +325,6 @@ components:
           type: string
         FinancialMarketAnalysisRequesterReference:
           type: object
-    FinancialMarketAnalysisOutcome:
-      type: object
-      properties:
-        FinancialMarketAnalysisWorkProduct:
-          type: string
-        FinancialMarketAnalysisAnalysisType:
-          type: string
     FinancialMarketInsight:
       type: object
       properties:
@@ -353,6 +346,13 @@ components:
           type: string
         FinancialMarketAnalysisServiceName:
           type: string
+    FinancialMarketAnalysisOutcome:
+      type: object
+      properties:
+        FinancialMarketAnalysisWorkProduct:
+          type: string
+        FinancialMarketAnalysisAnalysisType:
+          type: string
     HTTPError:
       type: object
       properties:
@@ -371,16 +371,16 @@ components:
       explode: false
       schema:
         type: string
-    FinancialMarketAnalysisOutcomeID:
-      name: financialmarketanalysisoutcomeId
+    FinancialMarketInsightID:
+      name: financialmarketinsightId
       in: path
       required: true
       style: simple
       explode: false
       schema:
         type: string
-    FinancialMarketInsightID:
-      name: financialmarketinsightId
+    FinancialMarketAnalysisOutcomeID:
+      name: financialmarketanalysisoutcomeId
       in: path
       required: true
       style: simple

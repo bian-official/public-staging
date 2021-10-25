@@ -747,6 +747,29 @@ components:
           type: string
         ITSystemAdministrativePlanReference:
           type: object
+    Configuration:
+      type: object
+      properties:
+        ConfigurationPreconditions:
+          type: string
+        ConfigurationBusinessUnit/EmployeeReference:
+          type: object
+        ConfigurationWorkSchedule:
+          type: string
+        SystemsConfigurationAdministration:
+          type: object
+        ConfigurationPostconditions:
+          type: string
+        ConfigurationSystemsConfigurationAdministrationServiceType:
+          type: string
+        ConfigurationSystemsConfigurationAdministrationServiceDescription:
+          type: string
+        ConfigurationSystemsConfigurationAdministrationServiceInputsandOuputs:
+          type: string
+        ConfigurationSystemsConfigurationAdministrationServiceWorkProduct:
+          type: string
+        ConfigurationSystemsConfigurationAdministrationServiceName:
+          type: string
     Inventory:
       type: object
       properties:
@@ -769,29 +792,6 @@ components:
         InventoryServiceWorkProduct:
           type: string
         InventoryServiceName:
-          type: string
-    Assurance:
-      type: object
-      properties:
-        AssurancePreconditions:
-          type: string
-        AssuranceBusinessUnit/EmployeeReference:
-          type: object
-        AssuranceWorkSchedule:
-          type: string
-        CollateralItemAssurance:
-          type: object
-        AssurancePostconditions:
-          type: string
-        AssuranceCollateralItemAssuranceServiceType:
-          type: string
-        AssuranceCollateralItemAssuranceServiceDescription:
-          type: string
-        AssuranceCollateralItemAssuranceServiceInputsandOuputs:
-          type: string
-        AssuranceCollateralItemAssuranceServiceWorkProduct:
-          type: string
-        AssuranceCollateralItemAssuranceServiceName:
           type: string
     CapacityPlanningandResilience:
       type: object
@@ -816,29 +816,6 @@ components:
           type: string
         CapacityPlanningandResilienceCapacityPlanningandResilienceServiceName:
           type: string
-    Configuration:
-      type: object
-      properties:
-        ConfigurationPreconditions:
-          type: string
-        ConfigurationBusinessUnit/EmployeeReference:
-          type: object
-        ConfigurationWorkSchedule:
-          type: string
-        SystemsConfigurationAdministration:
-          type: object
-        ConfigurationPostconditions:
-          type: string
-        ConfigurationSystemsConfigurationAdministrationServiceType:
-          type: string
-        ConfigurationSystemsConfigurationAdministrationServiceDescription:
-          type: string
-        ConfigurationSystemsConfigurationAdministrationServiceInputsandOuputs:
-          type: string
-        ConfigurationSystemsConfigurationAdministrationServiceWorkProduct:
-          type: string
-        ConfigurationSystemsConfigurationAdministrationServiceName:
-          type: string
     SystemsAdministrationOutcome:
       type: object
       properties:
@@ -849,6 +826,29 @@ components:
         SystemsAdministrationAdministrativePlan:
           type: string
         SystemsAdministrationAdministrationTask:
+          type: string
+    Assurance:
+      type: object
+      properties:
+        AssurancePreconditions:
+          type: string
+        AssuranceBusinessUnit/EmployeeReference:
+          type: object
+        AssuranceWorkSchedule:
+          type: string
+        CollateralItemAssurance:
+          type: object
+        AssurancePostconditions:
+          type: string
+        AssuranceCollateralItemAssuranceServiceType:
+          type: string
+        AssuranceCollateralItemAssuranceServiceDescription:
+          type: string
+        AssuranceCollateralItemAssuranceServiceInputsandOuputs:
+          type: string
+        AssuranceCollateralItemAssuranceServiceWorkProduct:
+          type: string
+        AssuranceCollateralItemAssuranceServiceName:
           type: string
     HTTPError:
       type: object
@@ -868,16 +868,16 @@ components:
       explode: false
       schema:
         type: string
-    InventoryID:
-      name: inventoryId
+    ConfigurationID:
+      name: configurationId
       in: path
       required: true
       style: simple
       explode: false
       schema:
         type: string
-    AssuranceID:
-      name: assuranceId
+    InventoryID:
+      name: inventoryId
       in: path
       required: true
       style: simple
@@ -892,16 +892,16 @@ components:
       explode: false
       schema:
         type: string
-    ConfigurationID:
-      name: configurationId
+    SystemsAdministrationOutcomeID:
+      name: systemsadministrationoutcomeId
       in: path
       required: true
       style: simple
       explode: false
       schema:
         type: string
-    SystemsAdministrationOutcomeID:
-      name: systemsadministrationoutcomeId
+    AssuranceID:
+      name: assuranceId
       in: path
       required: true
       style: simple

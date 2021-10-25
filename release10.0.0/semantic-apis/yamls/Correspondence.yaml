@@ -539,15 +539,6 @@ components:
           type: string
         Date:
           type: string
-    OutboundWithResponse:
-      type: object
-      properties:
-        ResponseDueDate:
-          type: string
-        ResponseCorrespondenceReference:
-          type: object
-        ResponseCorrespondenceRecord:
-          type: string
     Inbound:
       type: object
       properties:
@@ -568,6 +559,15 @@ components:
         DateType:
           type: string
         Date:
+          type: string
+    OutboundWithResponse:
+      type: object
+      properties:
+        ResponseDueDate:
+          type: string
+        ResponseCorrespondenceReference:
+          type: object
+        ResponseCorrespondenceRecord:
           type: string
     HTTPError:
       type: object
@@ -1371,16 +1371,16 @@ components:
       explode: false
       schema:
         type: string
-    OutboundWithResponseID:
-      name: outboundwithresponseId
+    InboundID:
+      name: inboundId
       in: path
       required: true
       style: simple
       explode: false
       schema:
         type: string
-    InboundID:
-      name: inboundId
+    OutboundWithResponseID:
+      name: outboundwithresponseId
       in: path
       required: true
       style: simple

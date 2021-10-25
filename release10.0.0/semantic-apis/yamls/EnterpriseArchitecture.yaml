@@ -845,26 +845,26 @@ components:
           type: string
         EnterpriseArchitectureSpecificationServiceProviderReference:
           type: object
-    BusinessArchitecture:
+    Organization:
       type: object
       properties:
-        BusinessArchitecturePreconditions:
+        OrganizationPreconditions:
           type: string
-        BusinessArchitectureSpecificationSchedule:
+        OrganizationSpecificationSchedule:
           type: string
-        BusinessArchitectureVersionNumber:
+        OrganizationVersionNumber:
           type: string
-        BusinessArchitecture:
+        OrganizationalModel:
           type: object
-        BusinessArchitectureServiceType:
+        OrganizationalModelServiceType:
           type: string
-        BusinessArchitectureServiceDescription:
+        OrganizationalModelServiceDescription:
           type: string
-        BusinessArchitectureServiceInputsandOuputs:
+        OrganizationalModelServiceInputsandOuputs:
           type: string
-        BusinessArchitectureServiceWorkProduct:
+        OrganizationalModelServiceWorkProduct:
           type: string
-        BusinessArchitectureServiceName:
+        OrganizationalModelServiceName:
           type: string
     ApplicationArchitecture:
       type: object
@@ -908,27 +908,6 @@ components:
           type: string
         InformationArchitectureServiceName:
           type: string
-    Organization:
-      type: object
-      properties:
-        OrganizationPreconditions:
-          type: string
-        OrganizationSpecificationSchedule:
-          type: string
-        OrganizationVersionNumber:
-          type: string
-        OrganizationalModel:
-          type: object
-        OrganizationalModelServiceType:
-          type: string
-        OrganizationalModelServiceDescription:
-          type: string
-        OrganizationalModelServiceInputsandOuputs:
-          type: string
-        OrganizationalModelServiceWorkProduct:
-          type: string
-        OrganizationalModelServiceName:
-          type: string
     EnterpriseArchitectureOutcome:
       type: object
       properties:
@@ -939,6 +918,27 @@ components:
         EnterpriseArchitectureWorkProduct:
           type: string
         EnterpriseArchitectureImpactAnalysis:
+          type: string
+    BusinessArchitecture:
+      type: object
+      properties:
+        BusinessArchitecturePreconditions:
+          type: string
+        BusinessArchitectureSpecificationSchedule:
+          type: string
+        BusinessArchitectureVersionNumber:
+          type: string
+        BusinessArchitecture:
+          type: object
+        BusinessArchitectureServiceType:
+          type: string
+        BusinessArchitectureServiceDescription:
+          type: string
+        BusinessArchitectureServiceInputsandOuputs:
+          type: string
+        BusinessArchitectureServiceWorkProduct:
+          type: string
+        BusinessArchitectureServiceName:
           type: string
     TechnologyInfrastructure:
       type: object
@@ -979,8 +979,8 @@ components:
       explode: false
       schema:
         type: string
-    BusinessArchitectureID:
-      name: businessarchitectureId
+    OrganizationID:
+      name: organizationId
       in: path
       required: true
       style: simple
@@ -1003,16 +1003,16 @@ components:
       explode: false
       schema:
         type: string
-    OrganizationID:
-      name: organizationId
+    EnterpriseArchitectureOutcomeID:
+      name: enterprisearchitectureoutcomeId
       in: path
       required: true
       style: simple
       explode: false
       schema:
         type: string
-    EnterpriseArchitectureOutcomeID:
-      name: enterprisearchitectureoutcomeId
+    BusinessArchitectureID:
+      name: businessarchitectureId
       in: path
       required: true
       style: simple

@@ -456,6 +456,21 @@ components:
           type: string
         CustomerProfitability:
           type: string
+    Incident:
+      type: object
+      properties:
+        RelationshipIncidentRecord:
+          type: string
+        Employee/BusinessUnitReference:
+          type: object
+        ProductandServiceActivityReference:
+          type: object
+        CustomerIncidentType:
+          type: string
+        CustomerIncidentDescription:
+          type: string
+        CustomerIncidentResolution:
+          type: string
     Development:
       type: object
       properties:
@@ -489,21 +504,6 @@ components:
         CustomerRelationshipContactType:
           type: string
         CustomerRelationshipContactResult:
-          type: string
-    Incident:
-      type: object
-      properties:
-        RelationshipIncidentRecord:
-          type: string
-        Employee/BusinessUnitReference:
-          type: object
-        ProductandServiceActivityReference:
-          type: object
-        CustomerIncidentType:
-          type: string
-        CustomerIncidentDescription:
-          type: string
-        CustomerIncidentResolution:
           type: string
     HTTPError:
       type: object
@@ -738,6 +738,14 @@ components:
       explode: false
       schema:
         type: string
+    IncidentID:
+      name: incidentId
+      in: path
+      required: true
+      style: simple
+      explode: false
+      schema:
+        type: string
     DevelopmentID:
       name: developmentId
       in: path
@@ -748,14 +756,6 @@ components:
         type: string
     ContactID:
       name: contactId
-      in: path
-      required: true
-      style: simple
-      explode: false
-      schema:
-        type: string
-    IncidentID:
-      name: incidentId
       in: path
       required: true
       style: simple

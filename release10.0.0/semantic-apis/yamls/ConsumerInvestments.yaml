@@ -245,10 +245,14 @@ components:
           type: string
         Date:
           type: string
-    FundingCheck:
+    OrderInitiation:
       type: object
       properties:
-        ConsumerSecuritiesOrderTransactionFundingCheckResult:
+        ConsumerSecuritiesOrderTransactionInstanceReference:
+          type: object
+        ConsumerSecuritiesOrderTransactionInstanceStatus:
+          type: string
+        ConsumerSecuritiesOrderInitiationTaskResult:
           type: string
     Compliance:
       type: object
@@ -264,14 +268,10 @@ components:
       properties:
         SecuritiesPrice:
           type: string
-    OrderInitiation:
+    FundingCheck:
       type: object
       properties:
-        ConsumerSecuritiesOrderTransactionInstanceReference:
-          type: object
-        ConsumerSecuritiesOrderTransactionInstanceStatus:
-          type: string
-        ConsumerSecuritiesOrderInitiationTaskResult:
+        ConsumerSecuritiesOrderTransactionFundingCheckResult:
           type: string
     HTTPError:
       type: object
@@ -447,8 +447,8 @@ components:
       explode: false
       schema:
         type: string
-    FundingCheckID:
-      name: fundingcheckId
+    OrderInitiationID:
+      name: orderinitiationId
       in: path
       required: true
       style: simple
@@ -471,8 +471,8 @@ components:
       explode: false
       schema:
         type: string
-    OrderInitiationID:
-      name: orderinitiationId
+    FundingCheckID:
+      name: fundingcheckId
       in: path
       required: true
       style: simple

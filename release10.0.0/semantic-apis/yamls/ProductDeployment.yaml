@@ -814,49 +814,16 @@ components:
           type: string
         Date:
           type: string
-    ProductionSupport:
+    HROperations:
       type: object
       properties:
-        ProductandServiceDeploymentProductionSupportRequirements:
+        ProductandServiceDeploymentHROperationsRequirements:
           type: string
-        ProductandServiceDeploymentProductionSupportRequirementsWorkProducts:
+        ProductandServiceDeploymentHROperationsRequirementsWorkProducts:
           type: string
         DocumentDirectoryEntryInstanceReference:
           type: object
-        ProductandServiceDeploymentProductionSupportRequirementsTaskSpecification:
-          type: string
-    ITOperations:
-      type: object
-      properties:
-        ProductandServiceDeploymentITOperationsRequirements:
-          type: string
-        ProductandServiceDeploymentITOperationsRequirementsWorkProducts:
-          type: string
-        DocumentDirectoryEntryInstanceReference:
-          type: object
-        ProductandServiceDeploymentITOperationsRequirementsTaskSpecification:
-          type: string
-    Production:
-      type: object
-      properties:
-        ProductandServiceDeploymentProductionRequirements:
-          type: string
-        ProductandServiceDeploymentProductionRequirementsWorkProducts:
-          type: string
-        DocumentDirectoryEntryInstanceReference:
-          type: object
-        ProductandServiceDeploymentProductionRequirementsTaskSpecification:
-          type: string
-    SalesandMarketing:
-      type: object
-      properties:
-        ProductandServiceDeploymentSalesandMarketingRequirements:
-          type: string
-        ProductandServiceDeploymentSalesandMarketingRequirementsWorkProducts:
-          type: string
-        DocumentDirectoryEntryInstanceReference:
-          type: object
-        ProductandServiceDeploymentSalesandMarketingRequirementsTaskSpecification:
+        ProductandServiceDeploymentHROperationsRequirementsTaskSpecification:
           type: string
     Systems:
       type: object
@@ -869,16 +836,38 @@ components:
           type: object
         ProductandServiceDeploymentSystemsRequirementsTaskSpecification:
           type: string
-    HROperations:
+    ProductionSupport:
       type: object
       properties:
-        ProductandServiceDeploymentHROperationsRequirements:
+        ProductandServiceDeploymentProductionSupportRequirements:
           type: string
-        ProductandServiceDeploymentHROperationsRequirementsWorkProducts:
+        ProductandServiceDeploymentProductionSupportRequirementsWorkProducts:
           type: string
         DocumentDirectoryEntryInstanceReference:
           type: object
-        ProductandServiceDeploymentHROperationsRequirementsTaskSpecification:
+        ProductandServiceDeploymentProductionSupportRequirementsTaskSpecification:
+          type: string
+    SalesandMarketing:
+      type: object
+      properties:
+        ProductandServiceDeploymentSalesandMarketingRequirements:
+          type: string
+        ProductandServiceDeploymentSalesandMarketingRequirementsWorkProducts:
+          type: string
+        DocumentDirectoryEntryInstanceReference:
+          type: object
+        ProductandServiceDeploymentSalesandMarketingRequirementsTaskSpecification:
+          type: string
+    Production:
+      type: object
+      properties:
+        ProductandServiceDeploymentProductionRequirements:
+          type: string
+        ProductandServiceDeploymentProductionRequirementsWorkProducts:
+          type: string
+        DocumentDirectoryEntryInstanceReference:
+          type: object
+        ProductandServiceDeploymentProductionRequirementsTaskSpecification:
           type: string
     Servicing:
       type: object
@@ -890,6 +879,17 @@ components:
         DocumentDirectoryEntryInstanceReference:
           type: object
         ProductandServiceDeploymentServicingRequirementsTaskSpecification:
+          type: string
+    ITOperations:
+      type: object
+      properties:
+        ProductandServiceDeploymentITOperationsRequirements:
+          type: string
+        ProductandServiceDeploymentITOperationsRequirementsWorkProducts:
+          type: string
+        DocumentDirectoryEntryInstanceReference:
+          type: object
+        ProductandServiceDeploymentITOperationsRequirementsTaskSpecification:
           type: string
     HTTPError:
       type: object
@@ -1854,32 +1854,8 @@ components:
       explode: false
       schema:
         type: string
-    ProductionSupportID:
-      name: productionsupportId
-      in: path
-      required: true
-      style: simple
-      explode: false
-      schema:
-        type: string
-    ITOperationsID:
-      name: itoperationsId
-      in: path
-      required: true
-      style: simple
-      explode: false
-      schema:
-        type: string
-    ProductionID:
-      name: productionId
-      in: path
-      required: true
-      style: simple
-      explode: false
-      schema:
-        type: string
-    SalesandMarketingID:
-      name: salesandmarketingId
+    HROperationsID:
+      name: hroperationsId
       in: path
       required: true
       style: simple
@@ -1894,8 +1870,24 @@ components:
       explode: false
       schema:
         type: string
-    HROperationsID:
-      name: hroperationsId
+    ProductionSupportID:
+      name: productionsupportId
+      in: path
+      required: true
+      style: simple
+      explode: false
+      schema:
+        type: string
+    SalesandMarketingID:
+      name: salesandmarketingId
+      in: path
+      required: true
+      style: simple
+      explode: false
+      schema:
+        type: string
+    ProductionID:
+      name: productionId
       in: path
       required: true
       style: simple
@@ -1904,6 +1896,14 @@ components:
         type: string
     ServicingID:
       name: servicingId
+      in: path
+      required: true
+      style: simple
+      explode: false
+      schema:
+        type: string
+    ITOperationsID:
+      name: itoperationsId
       in: path
       required: true
       style: simple

@@ -1723,44 +1723,6 @@ components:
           type: string
         MutualFundAdministrativePlanDescription:
           type: string
-    FundManagementFeeRoutine:
-      type: object
-      properties:
-        Preconditions:
-          type: object
-        BusinessUnit/EmployeeReference:
-          type: object
-        Schedule:
-          type: object
-        BusinessService:
-          type: object
-        Postconditions:
-          type: object
-        MutualFundAdministrativePlanReference:
-          type: string
-        FundManagementFeeRoutineReference:
-          type: string
-        FundManagementFeeRoutineType:
-          type: string
-    FundInflowsandOutflowRoutine:
-      type: object
-      properties:
-        Preconditions:
-          type: object
-        BusinessUnit/EmployeeReference:
-          type: object
-        Schedule:
-          type: object
-        BusinessService:
-          type: object
-        Postconditions:
-          type: object
-        MutualFundAdministrativePlanReference:
-          type: string
-        FundInflowsandOutflowRoutineReference:
-          type: string
-        FundInflowsandOutflowRoutineType:
-          type: string
     FundInvestor,MiddleandBackOfficeServiceRoutine:
       type: object
       properties:
@@ -1798,6 +1760,44 @@ components:
         FundDevelopmentRoutineReference:
           type: string
         FundDevelopmentRoutineType:
+          type: string
+    FundManagementFeeRoutine:
+      type: object
+      properties:
+        Preconditions:
+          type: object
+        BusinessUnit/EmployeeReference:
+          type: object
+        Schedule:
+          type: object
+        BusinessService:
+          type: object
+        Postconditions:
+          type: object
+        MutualFundAdministrativePlanReference:
+          type: string
+        FundManagementFeeRoutineReference:
+          type: string
+        FundManagementFeeRoutineType:
+          type: string
+    FundInflowsandOutflowRoutine:
+      type: object
+      properties:
+        Preconditions:
+          type: object
+        BusinessUnit/EmployeeReference:
+          type: object
+        Schedule:
+          type: object
+        BusinessService:
+          type: object
+        Postconditions:
+          type: object
+        MutualFundAdministrativePlanReference:
+          type: string
+        FundInflowsandOutflowRoutineReference:
+          type: string
+        FundInflowsandOutflowRoutineType:
           type: string
     FundTaxAdministrationRoutine:
       type: object
@@ -1904,22 +1904,6 @@ components:
       explode: false
       schema:
         type: string
-    FundManagementFeeRoutineID:
-      name: fundmanagementfeeroutineId
-      in: path
-      required: true
-      style: simple
-      explode: false
-      schema:
-        type: string
-    FundInflowsandOutflowRoutineID:
-      name: fundinflowsandoutflowroutineId
-      in: path
-      required: true
-      style: simple
-      explode: false
-      schema:
-        type: string
     FundInvestor,MiddleandBackOfficeServiceRoutineID:
       name: fundinvestor,middleandbackofficeserviceroutineId
       in: path
@@ -1930,6 +1914,22 @@ components:
         type: string
     FundDevelopmentRoutineID:
       name: funddevelopmentroutineId
+      in: path
+      required: true
+      style: simple
+      explode: false
+      schema:
+        type: string
+    FundManagementFeeRoutineID:
+      name: fundmanagementfeeroutineId
+      in: path
+      required: true
+      style: simple
+      explode: false
+      schema:
+        type: string
+    FundInflowsandOutflowRoutineID:
+      name: fundinflowsandoutflowroutineId
       in: path
       required: true
       style: simple

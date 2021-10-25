@@ -903,21 +903,6 @@ components:
           type: string
         ArchiveOperatingSessionReference:
           type: string
-    DocumentCaptureFunction:
-      type: object
-      properties:
-        Preconditions:
-          type: object
-        Schedule:
-          type: object
-        BusinessService:
-          type: object
-        ArchiveOperatingSessionReference:
-          type: string
-        DocumentCaptureFunctionReference:
-          type: string
-        DocumentCaptureFunctionType:
-          type: string
     DocumentRetrievalFunction:
       type: object
       properties:
@@ -948,6 +933,21 @@ components:
           type: string
         DocumentMaintenanceFunctionType:
           type: string
+    DocumentCaptureFunction:
+      type: object
+      properties:
+        Preconditions:
+          type: object
+        Schedule:
+          type: object
+        BusinessService:
+          type: object
+        ArchiveOperatingSessionReference:
+          type: string
+        DocumentCaptureFunctionReference:
+          type: string
+        DocumentCaptureFunctionType:
+          type: string
     ArchiveServicesOutcome:
       type: object
       properties:
@@ -973,14 +973,6 @@ components:
       explode: false
       schema:
         type: string
-    DocumentCaptureFunctionID:
-      name: documentcapturefunctionId
-      in: path
-      required: true
-      style: simple
-      explode: false
-      schema:
-        type: string
     DocumentRetrievalFunctionID:
       name: documentretrievalfunctionId
       in: path
@@ -991,6 +983,14 @@ components:
         type: string
     DocumentMaintenanceFunctionID:
       name: documentmaintenancefunctionId
+      in: path
+      required: true
+      style: simple
+      explode: false
+      schema:
+        type: string
+    DocumentCaptureFunctionID:
+      name: documentcapturefunctionId
       in: path
       required: true
       style: simple

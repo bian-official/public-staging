@@ -291,10 +291,18 @@ components:
           type: string
         CustomerTaxReportingSchedule:
           type: string
-    Analysis:
+    Reporting:
       type: object
       properties:
-        CustomerTaxHandlingAnalysisWorkProducts:
+        CustomerTaxReportInstanceReference:
+          type: object
+        CustomerTaxReportType:
+          type: string
+        CustomerTaxReportPeriod:
+          type: string
+        CustomerTaxReportReport:
+          type: string
+        CustomerTaxHandlingReportingWorkProducts:
           type: string
     Consolidation:
       type: object
@@ -315,18 +323,10 @@ components:
           type: string
         CustomerTaxHandlingConsolidationWorkProducts:
           type: string
-    Reporting:
+    Analysis:
       type: object
       properties:
-        CustomerTaxReportInstanceReference:
-          type: object
-        CustomerTaxReportType:
-          type: string
-        CustomerTaxReportPeriod:
-          type: string
-        CustomerTaxReportReport:
-          type: string
-        CustomerTaxHandlingReportingWorkProducts:
+        CustomerTaxHandlingAnalysisWorkProducts:
           type: string
     HTTPError:
       type: object
@@ -493,8 +493,8 @@ components:
       explode: false
       schema:
         type: string
-    AnalysisID:
-      name: analysisId
+    ReportingID:
+      name: reportingId
       in: path
       required: true
       style: simple
@@ -509,8 +509,8 @@ components:
       explode: false
       schema:
         type: string
-    ReportingID:
-      name: reportingId
+    AnalysisID:
+      name: analysisId
       in: path
       required: true
       style: simple

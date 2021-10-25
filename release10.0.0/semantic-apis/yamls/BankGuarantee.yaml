@@ -1529,6 +1529,23 @@ components:
           type: string
         BankGuaranteeTransactionReference:
           type: string
+    BankGuaranteeIssuanceandBookingTask:
+      type: object
+      properties:
+        Preconditions:
+          type: object
+        Schedule:
+          type: object
+        BusinessService:
+          type: object
+        Postconditions:
+          type: object
+        BankGuaranteeTransactionReference:
+          type: string
+        BankGuaranteeIssuanceandBookingTaskReference:
+          type: string
+        BankGuaranteeIssuanceandBookingTaskType:
+          type: string
     BankGuaranteeCollectionsTask:
       type: object
       properties:
@@ -1579,23 +1596,6 @@ components:
         BankGuaranteeDefinitionandPricingTaskReference:
           type: string
         BankGuaranteeDefinitionandPricingTaskType:
-          type: string
-    BankGuaranteeIssuanceandBookingTask:
-      type: object
-      properties:
-        Preconditions:
-          type: object
-        Schedule:
-          type: object
-        BusinessService:
-          type: object
-        Postconditions:
-          type: object
-        BankGuaranteeTransactionReference:
-          type: string
-        BankGuaranteeIssuanceandBookingTaskReference:
-          type: string
-        BankGuaranteeIssuanceandBookingTaskType:
           type: string
     CustomerPaymentTask:
       type: object
@@ -1674,6 +1674,14 @@ components:
       explode: false
       schema:
         type: string
+    BankGuaranteeIssuanceandBookingTaskID:
+      name: bankguaranteeissuanceandbookingtaskId
+      in: path
+      required: true
+      style: simple
+      explode: false
+      schema:
+        type: string
     BankGuaranteeCollectionsTaskID:
       name: bankguaranteecollectionstaskId
       in: path
@@ -1692,14 +1700,6 @@ components:
         type: string
     BankGuaranteeDefinitionandPricingTaskID:
       name: bankguaranteedefinitionandpricingtaskId
-      in: path
-      required: true
-      style: simple
-      explode: false
-      schema:
-        type: string
-    BankGuaranteeIssuanceandBookingTaskID:
-      name: bankguaranteeissuanceandbookingtaskId
       in: path
       required: true
       style: simple

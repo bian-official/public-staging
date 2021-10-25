@@ -603,12 +603,24 @@ components:
           type: string
         ServicingPositionOperatingSessionReport:
           type: string
-    Assisted:
+    Automated:
       type: object
       properties:
-        Employee/BusinessUnitReference:
+        BusinessUnitReference:
           type: object
-        CustomerContactReference:
+    Inventory:
+      type: object
+      properties:
+        ServicingInventoryType:
+          type: string
+        ServicingPositionInventoryRecord:
+          type: string
+        ServicingInventoryTransactionRecord:
+          type: string
+    Interaction:
+      type: object
+      properties:
+        CustomerSessionDialogueReference:
           type: object
     CashPosition:
       type: object
@@ -623,25 +635,13 @@ components:
           type: string
         ProductInstanceReference:
           type: object
-    Automated:
+    Assisted:
       type: object
       properties:
-        BusinessUnitReference:
+        Employee/BusinessUnitReference:
           type: object
-    Interaction:
-      type: object
-      properties:
-        CustomerSessionDialogueReference:
+        CustomerContactReference:
           type: object
-    Inventory:
-      type: object
-      properties:
-        ServicingInventoryType:
-          type: string
-        ServicingPositionInventoryRecord:
-          type: string
-        ServicingInventoryTransactionRecord:
-          type: string
     HTTPError:
       type: object
       properties:
@@ -745,24 +745,16 @@ components:
       explode: false
       schema:
         type: string
-    AssistedID:
-      name: assistedId
-      in: path
-      required: true
-      style: simple
-      explode: false
-      schema:
-        type: string
-    CashPositionID:
-      name: cashpositionId
-      in: path
-      required: true
-      style: simple
-      explode: false
-      schema:
-        type: string
     AutomatedID:
       name: automatedId
+      in: path
+      required: true
+      style: simple
+      explode: false
+      schema:
+        type: string
+    InventoryID:
+      name: inventoryId
       in: path
       required: true
       style: simple
@@ -777,8 +769,16 @@ components:
       explode: false
       schema:
         type: string
-    InventoryID:
-      name: inventoryId
+    CashPositionID:
+      name: cashpositionId
+      in: path
+      required: true
+      style: simple
+      explode: false
+      schema:
+        type: string
+    AssistedID:
+      name: assistedId
       in: path
       required: true
       style: simple

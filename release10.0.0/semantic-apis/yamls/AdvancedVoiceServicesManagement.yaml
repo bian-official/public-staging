@@ -382,13 +382,6 @@ components:
           type: string
         VChannelServiceSchedule:
           type: string
-    CapacityPlanning:
-      type: object
-      properties:
-        VChannelPlatformUtilization:
-          type: string
-        VChannelLoadingProjections:
-          type: string
     MaintenanceAndUpgrades:
       type: object
       properties:
@@ -403,6 +396,13 @@ components:
         VChannelMaintenanceandUpgradeWorkTaskResult:
           type: string
         VChannelMaintenanceandUpgradeWorkTaskDate-Time:
+          type: string
+    CapacityPlanning:
+      type: object
+      properties:
+        VChannelPlatformUtilization:
+          type: string
+        VChannelLoadingProjections:
           type: string
     Troubleshooting:
       type: object
@@ -511,16 +511,16 @@ components:
       explode: false
       schema:
         type: string
-    CapacityPlanningID:
-      name: capacityplanningId
+    MaintenanceAndUpgradesID:
+      name: maintenanceandupgradesId
       in: path
       required: true
       style: simple
       explode: false
       schema:
         type: string
-    MaintenanceAndUpgradesID:
-      name: maintenanceandupgradesId
+    CapacityPlanningID:
+      name: capacityplanningId
       in: path
       required: true
       style: simple

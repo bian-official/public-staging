@@ -350,16 +350,16 @@ components:
           type: string
         SecuritizationTask:
           type: string
-    TacticalFunding:
+    Liquidity:
       type: object
       properties:
-        CapitalAdequacyRequirements:
+        EnterpriseLiquidity/CashManagementAnalysis:
           type: string
-        BankPositionsandHedgingRequirements:
+        EnterpriseLargePaymentTransactionRecords:
           type: string
-        EnterpriseBalanceSheetPositions:
+        BusinessUnitFinancialReports:
           type: string
-        TacticalFundingResolutionTask:
+        LiquidityResolutionTask:
           type: string
     BankRates:
       type: object
@@ -378,16 +378,16 @@ components:
           type: object
         BankRateRecordDate:
           type: string
-    Liquidity:
+    TacticalFunding:
       type: object
       properties:
-        EnterpriseLiquidity/CashManagementAnalysis:
+        CapitalAdequacyRequirements:
           type: string
-        EnterpriseLargePaymentTransactionRecords:
+        BankPositionsandHedgingRequirements:
           type: string
-        BusinessUnitFinancialReports:
+        EnterpriseBalanceSheetPositions:
           type: string
-        LiquidityResolutionTask:
+        TacticalFundingResolutionTask:
           type: string
     HTTPError:
       type: object
@@ -444,8 +444,8 @@ components:
       explode: false
       schema:
         type: string
-    TacticalFundingID:
-      name: tacticalfundingId
+    LiquidityID:
+      name: liquidityId
       in: path
       required: true
       style: simple
@@ -460,8 +460,8 @@ components:
       explode: false
       schema:
         type: string
-    LiquidityID:
-      name: liquidityId
+    TacticalFundingID:
+      name: tacticalfundingId
       in: path
       required: true
       style: simple

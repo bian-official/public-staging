@@ -325,6 +325,19 @@ components:
           type: string
         CustomerCaseTrainingPlan:
           type: string
+    Rules:
+      type: object
+      properties:
+        CustomerCaseDecisionCriterion:
+          type: string
+        CustomerCaseDecisionCriterionDefinition:
+          type: string
+        CustomerCaseDecisionCriterionRules:
+          type: string
+        CustomerCaseDecisionCriterionAnalysis:
+          type: string
+        CustomerCaseDecisionCriterionHistory:
+          type: string
     Performance:
       type: object
       properties:
@@ -341,19 +354,6 @@ components:
         CustomerCaseServiceStatisticInterpretation:
           type: string
         CustomerCaseServiceStatisticRecommendation:
-          type: string
-    Rules:
-      type: object
-      properties:
-        CustomerCaseDecisionCriterion:
-          type: string
-        CustomerCaseDecisionCriterionDefinition:
-          type: string
-        CustomerCaseDecisionCriterionRules:
-          type: string
-        CustomerCaseDecisionCriterionAnalysis:
-          type: string
-        CustomerCaseDecisionCriterionHistory:
           type: string
     HTTPError:
       type: object
@@ -373,16 +373,16 @@ components:
       explode: false
       schema:
         type: string
-    PerformanceID:
-      name: performanceId
+    RulesID:
+      name: rulesId
       in: path
       required: true
       style: simple
       explode: false
       schema:
         type: string
-    RulesID:
-      name: rulesId
+    PerformanceID:
+      name: performanceId
       in: path
       required: true
       style: simple

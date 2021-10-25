@@ -1529,23 +1529,6 @@ components:
           type: string
         LetterOfCreditTransactionReference:
           type: string
-    LetterofCreditIssuanceandBookingTask:
-      type: object
-      properties:
-        Preconditions:
-          type: object
-        Schedule:
-          type: object
-        BusinessService:
-          type: object
-        Postconditions:
-          type: object
-        LetterOfCreditTransactionReference:
-          type: string
-        LetterofCreditIssuanceandBookingTaskReference:
-          type: string
-        LetterofCreditIssuanceandBookingTaskType:
-          type: string
     LetterofCreditDefinitionandPricingTask:
       type: object
       properties:
@@ -1562,6 +1545,23 @@ components:
         LetterofCreditDefinitionandPricingTaskReference:
           type: string
         LetterofCreditDefinitionandPricingTaskType:
+          type: string
+    LetterofCreditIssuanceandBookingTask:
+      type: object
+      properties:
+        Preconditions:
+          type: object
+        Schedule:
+          type: object
+        BusinessService:
+          type: object
+        Postconditions:
+          type: object
+        LetterOfCreditTransactionReference:
+          type: string
+        LetterofCreditIssuanceandBookingTaskReference:
+          type: string
+        LetterofCreditIssuanceandBookingTaskType:
           type: string
     LetterofCreditPayoutTask:
       type: object
@@ -1674,16 +1674,16 @@ components:
       explode: false
       schema:
         type: string
-    LetterofCreditIssuanceandBookingTaskID:
-      name: letterofcreditissuanceandbookingtaskId
+    LetterofCreditDefinitionandPricingTaskID:
+      name: letterofcreditdefinitionandpricingtaskId
       in: path
       required: true
       style: simple
       explode: false
       schema:
         type: string
-    LetterofCreditDefinitionandPricingTaskID:
-      name: letterofcreditdefinitionandpricingtaskId
+    LetterofCreditIssuanceandBookingTaskID:
+      name: letterofcreditissuanceandbookingtaskId
       in: path
       required: true
       style: simple

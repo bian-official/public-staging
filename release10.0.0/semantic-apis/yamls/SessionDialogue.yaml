@@ -931,6 +931,15 @@ components:
           type: string
         SessionDialogueResult:
           type: string
+    Case:
+      type: object
+      properties:
+        ProductInstanceReference:
+          type: object
+        CustomerCaseType:
+          type: string
+        CaseTaskResult:
+          type: string
     Query:
       type: object
       properties:
@@ -938,19 +947,16 @@ components:
           type: string
         QueryTaskResult:
           type: string
-    ProductorService:
+    Intelligence:
       type: object
       properties:
-        ProductInstanceReference:
-          type: object
-        ProductandServiceTaskResult:
+        IntelligenceRecord:
           type: string
-    Offer:
-      type: object
-      properties:
-        ProductandServiceType:
+        CustomerInsightType:
           type: string
-        OfferTaskResult:
+        CustomerInsight:
+          type: string
+        InsightTaskResult:
           type: string
     Order:
       type: object
@@ -963,6 +969,18 @@ components:
           type: string
         OrderTaskWorkResult:
           type: string
+    Offer:
+      type: object
+      properties:
+        ProductandServiceType:
+          type: string
+        OfferTaskResult:
+          type: string
+    History:
+      type: object
+      properties:
+        HistoryTaskResult:
+          type: string
     Sales:
       type: object
       properties:
@@ -972,30 +990,12 @@ components:
           type: string
         SalesTaskResult:
           type: string
-    History:
-      type: object
-      properties:
-        HistoryTaskResult:
-          type: string
-    Case:
+    ProductorService:
       type: object
       properties:
         ProductInstanceReference:
           type: object
-        CustomerCaseType:
-          type: string
-        CaseTaskResult:
-          type: string
-    Intelligence:
-      type: object
-      properties:
-        IntelligenceRecord:
-          type: string
-        CustomerInsightType:
-          type: string
-        CustomerInsight:
-          type: string
-        InsightTaskResult:
+        ProductandServiceTaskResult:
           type: string
     Authentication:
       type: object
@@ -2053,6 +2053,14 @@ components:
       explode: false
       schema:
         type: string
+    CaseID:
+      name: caseId
+      in: path
+      required: true
+      style: simple
+      explode: false
+      schema:
+        type: string
     QueryID:
       name: queryId
       in: path
@@ -2061,16 +2069,8 @@ components:
       explode: false
       schema:
         type: string
-    ProductorServiceID:
-      name: productorserviceId
-      in: path
-      required: true
-      style: simple
-      explode: false
-      schema:
-        type: string
-    OfferID:
-      name: offerId
+    IntelligenceID:
+      name: intelligenceId
       in: path
       required: true
       style: simple
@@ -2085,8 +2085,8 @@ components:
       explode: false
       schema:
         type: string
-    SalesID:
-      name: salesId
+    OfferID:
+      name: offerId
       in: path
       required: true
       style: simple
@@ -2101,16 +2101,16 @@ components:
       explode: false
       schema:
         type: string
-    CaseID:
-      name: caseId
+    SalesID:
+      name: salesId
       in: path
       required: true
       style: simple
       explode: false
       schema:
         type: string
-    IntelligenceID:
-      name: intelligenceId
+    ProductorServiceID:
+      name: productorserviceId
       in: path
       required: true
       style: simple

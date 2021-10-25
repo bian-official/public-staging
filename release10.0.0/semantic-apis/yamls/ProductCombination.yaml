@@ -671,6 +671,13 @@ components:
           type: string
         ProductCombinationFacilityAccountReference:
           type: object
+    ProductCombinationOutcome:
+      type: object
+      properties:
+        ProductCombinationFinancialFacility:
+          type: string
+        ProductCombinationWorkProduct:
+          type: string
     Fulfillment:
       type: object
       properties:
@@ -691,27 +698,6 @@ components:
         FulfillmentFiduciaryArrangementFulfillmentServiceWorkProduct:
           type: string
         FulfillmentFiduciaryArrangementFulfillmentServiceName:
-          type: string
-    TransferPricing:
-      type: object
-      properties:
-        TransferPricingPreconditions:
-          type: string
-        TransferPricingFeatureSchedule:
-          type: string
-        ProductTransferPricing:
-          type: object
-        TransferPricingPostconditions:
-          type: string
-        TransferPricingProductTransferPricingServiceType:
-          type: string
-        TransferPricingProductTransferPricingServiceDescription:
-          type: string
-        TransferPricingProductTransferPricingServiceInputsandOuputs:
-          type: string
-        TransferPricingProductTransferPricingServiceWorkProduct:
-          type: string
-        TransferPricingProductTransferPricingServiceName:
           type: string
     EmbeddedProductControl:
       type: object
@@ -734,12 +720,26 @@ components:
           type: string
         EmbeddedProductControlCombinedProductControlServiceName:
           type: string
-    ProductCombinationOutcome:
+    TransferPricing:
       type: object
       properties:
-        ProductCombinationFinancialFacility:
+        TransferPricingPreconditions:
           type: string
-        ProductCombinationWorkProduct:
+        TransferPricingFeatureSchedule:
+          type: string
+        ProductTransferPricing:
+          type: object
+        TransferPricingPostconditions:
+          type: string
+        TransferPricingProductTransferPricingServiceType:
+          type: string
+        TransferPricingProductTransferPricingServiceDescription:
+          type: string
+        TransferPricingProductTransferPricingServiceInputsandOuputs:
+          type: string
+        TransferPricingProductTransferPricingServiceWorkProduct:
+          type: string
+        TransferPricingProductTransferPricingServiceName:
           type: string
     HTTPError:
       type: object
@@ -759,16 +759,16 @@ components:
       explode: false
       schema:
         type: string
-    FulfillmentID:
-      name: fulfillmentId
+    ProductCombinationOutcomeID:
+      name: productcombinationoutcomeId
       in: path
       required: true
       style: simple
       explode: false
       schema:
         type: string
-    TransferPricingID:
-      name: transferpricingId
+    FulfillmentID:
+      name: fulfillmentId
       in: path
       required: true
       style: simple
@@ -783,8 +783,8 @@ components:
       explode: false
       schema:
         type: string
-    ProductCombinationOutcomeID:
-      name: productcombinationoutcomeId
+    TransferPricingID:
+      name: transferpricingId
       in: path
       required: true
       style: simple

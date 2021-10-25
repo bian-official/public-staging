@@ -1391,6 +1391,27 @@ components:
           type: string
         LeasingFacilityAccountReference:
           type: object
+    Fees:
+      type: object
+      properties:
+        FeesPreconditions:
+          type: string
+        FeesFeatureSchedule:
+          type: string
+        BusinessService:
+          type: object
+        FeesPostconditions:
+          type: string
+        FeesServiceType:
+          type: string
+        FeesServiceDescription:
+          type: string
+        FeesServiceInputsandOuputs:
+          type: string
+        FeesServiceWorkProduct:
+          type: string
+        FeesServiceName:
+          type: string
     FinancialAccounting:
       type: object
       properties:
@@ -1411,27 +1432,6 @@ components:
         FinancialAccountingFinancialAccountingServiceWorkProduct:
           type: string
         FinancialAccountingFinancialAccountingServiceName:
-          type: string
-    Collateral:
-      type: object
-      properties:
-        CollateralPreconditions:
-          type: string
-        CollateralFeatureSchedule:
-          type: string
-        BusinessService:
-          type: object
-        CollateralPostconditions:
-          type: string
-        CollateralServiceType:
-          type: string
-        CollateralServiceDescription:
-          type: string
-        CollateralServiceInputsandOuputs:
-          type: string
-        CollateralServiceWorkProduct:
-          type: string
-        CollateralServiceName:
           type: string
     Deposits:
       type: object
@@ -1454,90 +1454,6 @@ components:
           type: string
         DepositsDepositProcessingServiceName:
           type: string
-    FinancialInstrument:
-      type: object
-      properties:
-        FinancialInstrumentPreconditions:
-          type: string
-        FinancialInstrumentFeatureSchedule:
-          type: string
-        FinancialInstrument:
-          type: object
-        FinancialInstrumentPostconditions:
-          type: string
-        FinancialInstrumentFinancialInstrumentServiceType:
-          type: string
-        FinancialInstrumentFinancialInstrumentServiceDescription:
-          type: string
-        FinancialInstrumentFinancialInstrumentServiceInputsandOuputs:
-          type: string
-        FinancialInstrumentFinancialInstrumentServiceWorkProduct:
-          type: string
-        FinancialInstrumentFinancialInstrumentServiceName:
-          type: string
-    Payments:
-      type: object
-      properties:
-        PaymentsPreconditions:
-          type: string
-        PaymentsFeatureSchedule:
-          type: string
-        BusinessService:
-          type: object
-        PaymentsPostconditions:
-          type: string
-        PaymentsServiceType:
-          type: string
-        PaymentsServiceDescription:
-          type: string
-        PaymentsServiceInputsandOuputs:
-          type: string
-        PaymentsServiceWorkProduct:
-          type: string
-        PaymentsServiceName:
-          type: string
-    Fees:
-      type: object
-      properties:
-        FeesPreconditions:
-          type: string
-        FeesFeatureSchedule:
-          type: string
-        BusinessService:
-          type: object
-        FeesPostconditions:
-          type: string
-        FeesServiceType:
-          type: string
-        FeesServiceDescription:
-          type: string
-        FeesServiceInputsandOuputs:
-          type: string
-        FeesServiceWorkProduct:
-          type: string
-        FeesServiceName:
-          type: string
-    CorporateAction:
-      type: object
-      properties:
-        CorporateActionPreconditions:
-          type: string
-        CorporateActionFeatureSchedule:
-          type: string
-        BS-CorporateActionProcessing:
-          type: object
-        CorporateActionPostconditions:
-          type: string
-        CorporateActionBS-CorporateActionProcessingServiceType:
-          type: string
-        CorporateActionBS-CorporateActionProcessingServiceDescription:
-          type: string
-        CorporateActionBS-CorporateActionProcessingServiceInputsandOuputs:
-          type: string
-        CorporateActionBS-CorporateActionProcessingServiceWorkProduct:
-          type: string
-        CorporateActionBS-CorporateActionProcessingServiceName:
-          type: string
     IssuedDevice:
       type: object
       properties:
@@ -1559,54 +1475,20 @@ components:
           type: string
         IssuedDeviceServiceName:
           type: string
-    LeasingOutcome:
+    ClearingandSettlement:
       type: object
       properties:
-        LeasingFinancialFacility:
-          type: string
-        LeasingWorkProduct:
-          type: string
-    Interest:
-      type: object
-      properties:
-        InterestPreconditions:
-          type: string
-        InterestFeatureSchedule:
-          type: string
-        BusinessService:
+        CorrespondentBankClearingArrangementReference:
           type: object
-        InterestPostconditions:
+        CorrespondentBankClearingArrangementClearingInstructions:
           type: string
-        InterestServiceType:
+        CorrespondentBankClearingArrangementSettlementInstructions:
           type: string
-        InterestServiceDescription:
-          type: string
-        InterestServiceInputsandOuputs:
-          type: string
-        InterestServiceWorkProduct:
-          type: string
-        InterestServiceName:
-          type: string
-    Lien:
-      type: object
-      properties:
-        LienPreconditions:
-          type: string
-        LienFeatureSchedule:
-          type: string
-        BusinessService:
+        MirrorNostroAccountReference:
           type: object
-        LienPostconditions:
+        ClearingTransaction:
           type: string
-        LienServiceType:
-          type: string
-        LienServiceDescription:
-          type: string
-        LienServiceInputsandOuputs:
-          type: string
-        LienServiceWorkProduct:
-          type: string
-        LienServiceName:
+        SettlementTransaction:
           type: string
     Sweep:
       type: object
@@ -1629,6 +1511,48 @@ components:
           type: string
         SweepServiceName:
           type: string
+    Interest:
+      type: object
+      properties:
+        InterestPreconditions:
+          type: string
+        InterestFeatureSchedule:
+          type: string
+        BusinessService:
+          type: object
+        InterestPostconditions:
+          type: string
+        InterestServiceType:
+          type: string
+        InterestServiceDescription:
+          type: string
+        InterestServiceInputsandOuputs:
+          type: string
+        InterestServiceWorkProduct:
+          type: string
+        InterestServiceName:
+          type: string
+    FinancialInstrument:
+      type: object
+      properties:
+        FinancialInstrumentPreconditions:
+          type: string
+        FinancialInstrumentFeatureSchedule:
+          type: string
+        FinancialInstrument:
+          type: object
+        FinancialInstrumentPostconditions:
+          type: string
+        FinancialInstrumentFinancialInstrumentServiceType:
+          type: string
+        FinancialInstrumentFinancialInstrumentServiceDescription:
+          type: string
+        FinancialInstrumentFinancialInstrumentServiceInputsandOuputs:
+          type: string
+        FinancialInstrumentFinancialInstrumentServiceWorkProduct:
+          type: string
+        FinancialInstrumentFinancialInstrumentServiceName:
+          type: string
     Withdrawals:
       type: object
       properties:
@@ -1650,20 +1574,96 @@ components:
           type: string
         WithdrawalsWithdrawalProcessingServiceName:
           type: string
-    ClearingandSettlement:
+    Lien:
       type: object
       properties:
-        CorrespondentBankClearingArrangementReference:
+        LienPreconditions:
+          type: string
+        LienFeatureSchedule:
+          type: string
+        BusinessService:
           type: object
-        CorrespondentBankClearingArrangementClearingInstructions:
+        LienPostconditions:
           type: string
-        CorrespondentBankClearingArrangementSettlementInstructions:
+        LienServiceType:
           type: string
-        MirrorNostroAccountReference:
+        LienServiceDescription:
+          type: string
+        LienServiceInputsandOuputs:
+          type: string
+        LienServiceWorkProduct:
+          type: string
+        LienServiceName:
+          type: string
+    Payments:
+      type: object
+      properties:
+        PaymentsPreconditions:
+          type: string
+        PaymentsFeatureSchedule:
+          type: string
+        BusinessService:
           type: object
-        ClearingTransaction:
+        PaymentsPostconditions:
           type: string
-        SettlementTransaction:
+        PaymentsServiceType:
+          type: string
+        PaymentsServiceDescription:
+          type: string
+        PaymentsServiceInputsandOuputs:
+          type: string
+        PaymentsServiceWorkProduct:
+          type: string
+        PaymentsServiceName:
+          type: string
+    LeasingOutcome:
+      type: object
+      properties:
+        LeasingFinancialFacility:
+          type: string
+        LeasingWorkProduct:
+          type: string
+    Collateral:
+      type: object
+      properties:
+        CollateralPreconditions:
+          type: string
+        CollateralFeatureSchedule:
+          type: string
+        BusinessService:
+          type: object
+        CollateralPostconditions:
+          type: string
+        CollateralServiceType:
+          type: string
+        CollateralServiceDescription:
+          type: string
+        CollateralServiceInputsandOuputs:
+          type: string
+        CollateralServiceWorkProduct:
+          type: string
+        CollateralServiceName:
+          type: string
+    CorporateAction:
+      type: object
+      properties:
+        CorporateActionPreconditions:
+          type: string
+        CorporateActionFeatureSchedule:
+          type: string
+        BS-CorporateActionProcessing:
+          type: object
+        CorporateActionPostconditions:
+          type: string
+        CorporateActionBS-CorporateActionProcessingServiceType:
+          type: string
+        CorporateActionBS-CorporateActionProcessingServiceDescription:
+          type: string
+        CorporateActionBS-CorporateActionProcessingServiceInputsandOuputs:
+          type: string
+        CorporateActionBS-CorporateActionProcessingServiceWorkProduct:
+          type: string
+        CorporateActionBS-CorporateActionProcessingServiceName:
           type: string
     HTTPError:
       type: object
@@ -1683,16 +1683,16 @@ components:
       explode: false
       schema:
         type: string
-    FinancialAccountingID:
-      name: financialaccountingId
+    FeesID:
+      name: feesId
       in: path
       required: true
       style: simple
       explode: false
       schema:
         type: string
-    CollateralID:
-      name: collateralId
+    FinancialAccountingID:
+      name: financialaccountingId
       in: path
       required: true
       style: simple
@@ -1707,38 +1707,6 @@ components:
       explode: false
       schema:
         type: string
-    FinancialInstrumentID:
-      name: financialinstrumentId
-      in: path
-      required: true
-      style: simple
-      explode: false
-      schema:
-        type: string
-    PaymentsID:
-      name: paymentsId
-      in: path
-      required: true
-      style: simple
-      explode: false
-      schema:
-        type: string
-    FeesID:
-      name: feesId
-      in: path
-      required: true
-      style: simple
-      explode: false
-      schema:
-        type: string
-    CorporateActionID:
-      name: corporateactionId
-      in: path
-      required: true
-      style: simple
-      explode: false
-      schema:
-        type: string
     IssuedDeviceID:
       name: issueddeviceId
       in: path
@@ -1747,24 +1715,8 @@ components:
       explode: false
       schema:
         type: string
-    LeasingOutcomeID:
-      name: leasingoutcomeId
-      in: path
-      required: true
-      style: simple
-      explode: false
-      schema:
-        type: string
-    InterestID:
-      name: interestId
-      in: path
-      required: true
-      style: simple
-      explode: false
-      schema:
-        type: string
-    LienID:
-      name: lienId
+    ClearingandSettlementID:
+      name: clearingandsettlementId
       in: path
       required: true
       style: simple
@@ -1779,6 +1731,22 @@ components:
       explode: false
       schema:
         type: string
+    InterestID:
+      name: interestId
+      in: path
+      required: true
+      style: simple
+      explode: false
+      schema:
+        type: string
+    FinancialInstrumentID:
+      name: financialinstrumentId
+      in: path
+      required: true
+      style: simple
+      explode: false
+      schema:
+        type: string
     WithdrawalsID:
       name: withdrawalsId
       in: path
@@ -1787,8 +1755,40 @@ components:
       explode: false
       schema:
         type: string
-    ClearingandSettlementID:
-      name: clearingandsettlementId
+    LienID:
+      name: lienId
+      in: path
+      required: true
+      style: simple
+      explode: false
+      schema:
+        type: string
+    PaymentsID:
+      name: paymentsId
+      in: path
+      required: true
+      style: simple
+      explode: false
+      schema:
+        type: string
+    LeasingOutcomeID:
+      name: leasingoutcomeId
+      in: path
+      required: true
+      style: simple
+      explode: false
+      schema:
+        type: string
+    CollateralID:
+      name: collateralId
+      in: path
+      required: true
+      style: simple
+      explode: false
+      schema:
+        type: string
+    CorporateActionID:
+      name: corporateactionId
       in: path
       required: true
       style: simple

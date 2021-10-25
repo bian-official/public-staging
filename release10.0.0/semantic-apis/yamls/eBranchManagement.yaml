@@ -382,19 +382,19 @@ components:
           type: string
         eBranchChannelServiceSchedule:
           type: string
-    CapacityPlanning:
-      type: object
-      properties:
-        eBranchChannelPlatformUtilization:
-          type: string
-        eBranchChannelLoadingProjections:
-          type: string
     Troubleshooting:
       type: object
       properties:
         eBranchChannelProductionIssueRecord:
           type: string
         eBranchChannelIssueAnalysisAndRecommendedResponse:
+          type: string
+    CapacityPlanning:
+      type: object
+      properties:
+        eBranchChannelPlatformUtilization:
+          type: string
+        eBranchChannelLoadingProjections:
           type: string
     MaintenanceAndUpgrades:
       type: object
@@ -511,16 +511,16 @@ components:
       explode: false
       schema:
         type: string
-    CapacityPlanningID:
-      name: capacityplanningId
+    TroubleshootingID:
+      name: troubleshootingId
       in: path
       required: true
       style: simple
       explode: false
       schema:
         type: string
-    TroubleshootingID:
-      name: troubleshootingId
+    CapacityPlanningID:
+      name: capacityplanningId
       in: path
       required: true
       style: simple

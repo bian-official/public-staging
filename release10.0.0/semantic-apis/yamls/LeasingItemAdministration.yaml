@@ -622,28 +622,16 @@ components:
           type: string
         LeasingItemAdministrativePlanReference:
           type: object
-    Valuation:
+    LeasingItemAdministrationOutcome:
       type: object
       properties:
-        ValuationPreconditions:
+        LeasingItemAdministrationPerformanceAnalysis:
           type: string
-        ValuationBusinessUnit/EmployeeReference:
-          type: object
-        ValuationWorkSchedule:
+        LeasingItemAdministrationActivityAnalysis:
           type: string
-        BusinessService:
-          type: object
-        ValuationPostconditions:
+        LeasingItemAdministrationAdministrativePlan:
           type: string
-        ValuationServiceType:
-          type: string
-        ValuationServiceDescription:
-          type: string
-        ValuationServiceInputsandOuputs:
-          type: string
-        ValuationServiceWorkProduct:
-          type: string
-        ValuationServiceName:
+        LeasingItemAdministrationAdministrationTask:
           type: string
     Assurance:
       type: object
@@ -691,16 +679,28 @@ components:
           type: string
         RegistrationCollateralRegistrationServiceName:
           type: string
-    LeasingItemAdministrationOutcome:
+    Valuation:
       type: object
       properties:
-        LeasingItemAdministrationPerformanceAnalysis:
+        ValuationPreconditions:
           type: string
-        LeasingItemAdministrationActivityAnalysis:
+        ValuationBusinessUnit/EmployeeReference:
+          type: object
+        ValuationWorkSchedule:
           type: string
-        LeasingItemAdministrationAdministrativePlan:
+        BusinessService:
+          type: object
+        ValuationPostconditions:
           type: string
-        LeasingItemAdministrationAdministrationTask:
+        ValuationServiceType:
+          type: string
+        ValuationServiceDescription:
+          type: string
+        ValuationServiceInputsandOuputs:
+          type: string
+        ValuationServiceWorkProduct:
+          type: string
+        ValuationServiceName:
           type: string
     HTTPError:
       type: object
@@ -720,8 +720,8 @@ components:
       explode: false
       schema:
         type: string
-    ValuationID:
-      name: valuationId
+    LeasingItemAdministrationOutcomeID:
+      name: leasingitemadministrationoutcomeId
       in: path
       required: true
       style: simple
@@ -744,8 +744,8 @@ components:
       explode: false
       schema:
         type: string
-    LeasingItemAdministrationOutcomeID:
-      name: leasingitemadministrationoutcomeId
+    ValuationID:
+      name: valuationId
       in: path
       required: true
       style: simple

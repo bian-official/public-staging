@@ -654,40 +654,6 @@ components:
       properties:
         CustomerReference:
           type: object
-    Servicing:
-      type: object
-      properties:
-        CustomerServicingEventType:
-          type: string
-        CustomerContactRecordReference:
-          type: object
-        AccessedProductandService:
-          type: string
-        Channel/DeviceType:
-          type: string
-        ContactPurpose:
-          type: string
-        ContactResult:
-          type: string
-        Employee/UnitReference:
-          type: object
-        CustomerServicingEventRecord:
-          type: string
-        Date/Time/Location:
-          type: string
-    Relationship:
-      type: object
-      properties:
-        CustomerRelationshipEventType:
-          type: string
-        Employee/UnitReference:
-          type: object
-        CustomerRelationshipEventRecord:
-          type: string
-        CustomerRelationshipEventAction:
-          type: string
-        Date/Time/Location:
-          type: string
     Life:
       type: object
       properties:
@@ -735,6 +701,19 @@ components:
           type: object
         Date/Time/Location:
           type: string
+    Relationship:
+      type: object
+      properties:
+        CustomerRelationshipEventType:
+          type: string
+        Employee/UnitReference:
+          type: object
+        CustomerRelationshipEventRecord:
+          type: string
+        CustomerRelationshipEventAction:
+          type: string
+        Date/Time/Location:
+          type: string
     Fraud:
       type: object
       properties:
@@ -750,6 +729,27 @@ components:
           type: object
         Date/Time/Location:
           type: string
+    Servicing:
+      type: object
+      properties:
+        CustomerServicingEventType:
+          type: string
+        CustomerContactRecordReference:
+          type: object
+        AccessedProductandService:
+          type: string
+        Channel/DeviceType:
+          type: string
+        ContactPurpose:
+          type: string
+        ContactResult:
+          type: string
+        Employee/UnitReference:
+          type: object
+        CustomerServicingEventRecord:
+          type: string
+        Date/Time/Location:
+          type: string
     HTTPError:
       type: object
       properties:
@@ -762,22 +762,6 @@ components:
   parameters:
     CustomerEventHistoryID:
       name: customereventhistoryId
-      in: path
-      required: true
-      style: simple
-      explode: false
-      schema:
-        type: string
-    ServicingID:
-      name: servicingId
-      in: path
-      required: true
-      style: simple
-      explode: false
-      schema:
-        type: string
-    RelationshipID:
-      name: relationshipId
       in: path
       required: true
       style: simple
@@ -808,8 +792,24 @@ components:
       explode: false
       schema:
         type: string
+    RelationshipID:
+      name: relationshipId
+      in: path
+      required: true
+      style: simple
+      explode: false
+      schema:
+        type: string
     FraudID:
       name: fraudId
+      in: path
+      required: true
+      style: simple
+      explode: false
+      schema:
+        type: string
+    ServicingID:
+      name: servicingId
       in: path
       required: true
       style: simple

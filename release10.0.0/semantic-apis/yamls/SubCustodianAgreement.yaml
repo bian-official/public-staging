@@ -828,6 +828,27 @@ components:
           type: string
         SubCustodianAgreementAssociatedAgreementReference:
           type: string
+    RegulatoryTerm:
+      type: object
+      properties:
+        Preconditions:
+          type: object
+        Schedule:
+          type: object
+        BusinessService:
+          type: object
+        SubCustodianAgreementReference:
+          type: string
+        RegulatoryTermReference:
+          type: string
+        RegulatoryTermType:
+          type: string
+        RegulatoryAuthority:
+          type: string
+        ApplicableRegulationReference:
+          type: object
+        ApplicableRegulationInterpretation:
+          type: string
     LegalTerm:
       type: object
       properties:
@@ -870,27 +891,6 @@ components:
           type: object
         ApplicableBankPolicy-RuleInterpretation:
           type: string
-    RegulatoryTerm:
-      type: object
-      properties:
-        Preconditions:
-          type: object
-        Schedule:
-          type: object
-        BusinessService:
-          type: object
-        SubCustodianAgreementReference:
-          type: string
-        RegulatoryTermReference:
-          type: string
-        RegulatoryTermType:
-          type: string
-        RegulatoryAuthority:
-          type: string
-        ApplicableRegulationReference:
-          type: object
-        ApplicableRegulationInterpretation:
-          type: string
     SubCustodianAgreementOutcome:
       type: object
       properties:
@@ -918,6 +918,14 @@ components:
       explode: false
       schema:
         type: string
+    RegulatoryTermID:
+      name: regulatorytermId
+      in: path
+      required: true
+      style: simple
+      explode: false
+      schema:
+        type: string
     LegalTermID:
       name: legaltermId
       in: path
@@ -928,14 +936,6 @@ components:
         type: string
     PolicyTermID:
       name: policytermId
-      in: path
-      required: true
-      style: simple
-      explode: false
-      schema:
-        type: string
-    RegulatoryTermID:
-      name: regulatorytermId
       in: path
       required: true
       style: simple

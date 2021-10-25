@@ -524,11 +524,6 @@ components:
           type: object
         ACHAccessSchedule:
           type: string
-    Reconciliation:
-      type: object
-      properties:
-        ACHReconciliationTaskResult:
-          type: string
     ClearingandSettlement:
       type: object
       properties:
@@ -542,11 +537,11 @@ components:
           type: string
         MirrorNostroAccountReference:
           type: object
-    OutboundACH:
+    Reconciliation:
       type: object
       properties:
-        OutboundACHTransactionBatchReference:
-          type: object
+        ACHReconciliationTaskResult:
+          type: string
     InboundACH:
       type: object
       properties:
@@ -580,6 +575,11 @@ components:
           type: string
         Date:
           type: string
+    OutboundACH:
+      type: object
+      properties:
+        OutboundACHTransactionBatchReference:
+          type: object
     Warehousing:
       type: object
       properties:
@@ -1328,14 +1328,6 @@ components:
       explode: false
       schema:
         type: string
-    ReconciliationID:
-      name: reconciliationId
-      in: path
-      required: true
-      style: simple
-      explode: false
-      schema:
-        type: string
     ClearingandSettlementID:
       name: clearingandsettlementId
       in: path
@@ -1344,8 +1336,8 @@ components:
       explode: false
       schema:
         type: string
-    OutboundACHID:
-      name: outboundachId
+    ReconciliationID:
+      name: reconciliationId
       in: path
       required: true
       style: simple
@@ -1354,6 +1346,14 @@ components:
         type: string
     InboundACHID:
       name: inboundachId
+      in: path
+      required: true
+      style: simple
+      explode: false
+      schema:
+        type: string
+    OutboundACHID:
+      name: outboundachId
       in: path
       required: true
       style: simple

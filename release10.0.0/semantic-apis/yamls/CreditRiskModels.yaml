@@ -601,27 +601,6 @@ components:
           type: string
         CreditRiskModelSpecificationServiceProviderReference:
           type: object
-    FunctionalRequirements:
-      type: object
-      properties:
-        FunctionalRequirementsPreconditions:
-          type: string
-        FunctionalRequirementsSpecificationSchedule:
-          type: string
-        FunctionalRequirementsVersionNumber:
-          type: string
-        BusinessService:
-          type: object
-        ServiceType:
-          type: string
-        ServiceDescription:
-          type: string
-        ServiceInputsandOuputs:
-          type: string
-        ServiceWorkProduct:
-          type: string
-        ServiceName:
-          type: string
     Testing:
       type: object
       properties:
@@ -643,14 +622,14 @@ components:
           type: string
         ServiceName:
           type: string
-    Production:
+    FunctionalRequirements:
       type: object
       properties:
-        ProductionPreconditions:
+        FunctionalRequirementsPreconditions:
           type: string
-        ProductionSpecificationSchedule:
+        FunctionalRequirementsSpecificationSchedule:
           type: string
-        ProductionVersionNumber:
+        FunctionalRequirementsVersionNumber:
           type: string
         BusinessService:
           type: object
@@ -675,6 +654,27 @@ components:
           type: string
         CreditRiskModelsImpactAnalysis:
           type: string
+    Production:
+      type: object
+      properties:
+        ProductionPreconditions:
+          type: string
+        ProductionSpecificationSchedule:
+          type: string
+        ProductionVersionNumber:
+          type: string
+        BusinessService:
+          type: object
+        ServiceType:
+          type: string
+        ServiceDescription:
+          type: string
+        ServiceInputsandOuputs:
+          type: string
+        ServiceWorkProduct:
+          type: string
+        ServiceName:
+          type: string
     HTTPError:
       type: object
       properties:
@@ -693,14 +693,6 @@ components:
       explode: false
       schema:
         type: string
-    FunctionalRequirementsID:
-      name: functionalrequirementsId
-      in: path
-      required: true
-      style: simple
-      explode: false
-      schema:
-        type: string
     TestingID:
       name: testingId
       in: path
@@ -709,8 +701,8 @@ components:
       explode: false
       schema:
         type: string
-    ProductionID:
-      name: productionId
+    FunctionalRequirementsID:
+      name: functionalrequirementsId
       in: path
       required: true
       style: simple
@@ -719,6 +711,14 @@ components:
         type: string
     CreditRiskModelsOutcomeID:
       name: creditriskmodelsoutcomeId
+      in: path
+      required: true
+      style: simple
+      explode: false
+      schema:
+        type: string
+    ProductionID:
+      name: productionId
       in: path
       required: true
       style: simple

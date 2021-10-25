@@ -246,10 +246,22 @@ components:
           type: string
         FraudCaseStatus:
           type: string
-    CaseAnalysis:
+    CaseDetermination:
       type: object
       properties:
-        FraudCaseRootCause:
+        CustomerAgreementReference:
+          type: object
+        CustomerAgreement:
+          type: string
+        MerchantAgreementReference:
+          type: object
+        MerchantAgreement:
+          type: string
+        InterestedPartyAgreementReference:
+          type: object
+        InterestedPartyAgreement:
+          type: string
+        FraudCaseDeterminationRecord:
           type: string
     CaseResolution:
       type: object
@@ -268,22 +280,10 @@ components:
           type: object
         PaymentOrderReference:
           type: object
-    CaseDetermination:
+    CaseAnalysis:
       type: object
       properties:
-        CustomerAgreementReference:
-          type: object
-        CustomerAgreement:
-          type: string
-        MerchantAgreementReference:
-          type: object
-        MerchantAgreement:
-          type: string
-        InterestedPartyAgreementReference:
-          type: object
-        InterestedPartyAgreement:
-          type: string
-        FraudCaseDeterminationRecord:
+        FraudCaseRootCause:
           type: string
     HTTPError:
       type: object
@@ -412,8 +412,8 @@ components:
       explode: false
       schema:
         type: string
-    CaseAnalysisID:
-      name: caseanalysisId
+    CaseDeterminationID:
+      name: casedeterminationId
       in: path
       required: true
       style: simple
@@ -428,8 +428,8 @@ components:
       explode: false
       schema:
         type: string
-    CaseDeterminationID:
-      name: casedeterminationId
+    CaseAnalysisID:
+      name: caseanalysisId
       in: path
       required: true
       style: simple

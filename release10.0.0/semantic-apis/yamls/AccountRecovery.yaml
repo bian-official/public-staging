@@ -431,10 +431,12 @@ components:
           type: string
         AccountRecoveryCaseRestructuringTaskRecord:
           type: string
-    Assessment:
+    Writedown:
       type: object
       properties:
-        AccountRecoveryCaseAssessmentTaskRecord:
+        Accountwrite-downtransaction:
+          type: string
+        AccountRecoveryCaseWrite-downTaskRecord:
           type: string
     Negotiation:
       type: object
@@ -451,19 +453,17 @@ components:
           type: string
         AccountRecoveryCaseNegotiationTaskRecord:
           type: string
+    Assessment:
+      type: object
+      properties:
+        AccountRecoveryCaseAssessmentTaskRecord:
+          type: string
     Planning:
       type: object
       properties:
         AccountRecoveryPlan:
           type: string
         AccountRecoveryCasePlanningTaskRecord:
-          type: string
-    Writedown:
-      type: object
-      properties:
-        Accountwrite-downtransaction:
-          type: string
-        AccountRecoveryCaseWrite-downTaskRecord:
           type: string
     HTTPError:
       type: object
@@ -778,8 +778,8 @@ components:
       explode: false
       schema:
         type: string
-    AssessmentID:
-      name: assessmentId
+    WritedownID:
+      name: writedownId
       in: path
       required: true
       style: simple
@@ -794,16 +794,16 @@ components:
       explode: false
       schema:
         type: string
-    PlanningID:
-      name: planningId
+    AssessmentID:
+      name: assessmentId
       in: path
       required: true
       style: simple
       explode: false
       schema:
         type: string
-    WritedownID:
-      name: writedownId
+    PlanningID:
+      name: planningId
       in: path
       required: true
       style: simple

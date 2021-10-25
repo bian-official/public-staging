@@ -357,6 +357,15 @@ components:
           type: object
         PartyLife-cycleManagementReference:
           type: object
+    RegulatoryTerms:
+      type: object
+      properties:
+        RegulatoryAuthority:
+          type: string
+        ApplicableRegulationReference:
+          type: object
+        ApplicableRegulationInterpretation:
+          type: string
     PolicyTerms:
       type: object
       properties:
@@ -374,15 +383,6 @@ components:
         ApplicableLawReference:
           type: object
         ApplicableLawInterpretation:
-          type: string
-    RegulatoryTerms:
-      type: object
-      properties:
-        RegulatoryAuthority:
-          type: string
-        ApplicableRegulationReference:
-          type: object
-        ApplicableRegulationInterpretation:
           type: string
     HTTPError:
       type: object
@@ -524,6 +524,14 @@ components:
       explode: false
       schema:
         type: string
+    RegulatoryTermsID:
+      name: regulatorytermsId
+      in: path
+      required: true
+      style: simple
+      explode: false
+      schema:
+        type: string
     PolicyTermsID:
       name: policytermsId
       in: path
@@ -534,14 +542,6 @@ components:
         type: string
     LegalTermsID:
       name: legaltermsId
-      in: path
-      required: true
-      style: simple
-      explode: false
-      schema:
-        type: string
-    RegulatoryTermsID:
-      name: regulatorytermsId
       in: path
       required: true
       style: simple

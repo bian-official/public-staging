@@ -394,13 +394,6 @@ components:
           type: string
         ProjectedPortfolioImpact:
           type: string
-    MarketOpportunities:
-      type: object
-      properties:
-        MarketOpportunityDescription:
-          type: string
-        SecuritiesComparison:
-          type: string
     TradeInitiation:
       type: object
       properties:
@@ -409,6 +402,13 @@ components:
         InvestmentPortfolioTradeSecurityType:
           type: string
         InvestmentPortfolioTradeSecurityTradeDescription:
+          type: string
+    MarketOpportunities:
+      type: object
+      properties:
+        MarketOpportunityDescription:
+          type: string
+        SecuritiesComparison:
           type: string
     HTTPError:
       type: object
@@ -459,16 +459,16 @@ components:
       explode: false
       schema:
         type: string
-    MarketOpportunitiesID:
-      name: marketopportunitiesId
+    TradeInitiationID:
+      name: tradeinitiationId
       in: path
       required: true
       style: simple
       explode: false
       schema:
         type: string
-    TradeInitiationID:
-      name: tradeinitiationId
+    MarketOpportunitiesID:
+      name: marketopportunitiesId
       in: path
       required: true
       style: simple

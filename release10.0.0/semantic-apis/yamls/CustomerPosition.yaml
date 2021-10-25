@@ -283,17 +283,6 @@ components:
           type: object
         CustomerPositionStateRecord:
           type: string
-    Credit:
-      type: object
-      properties:
-        CustomerCreditRatingAssessment:
-          type: string
-        CustomerCreditRatingAssessmentType:
-          type: string
-        CustomerCreditRatingNarrative:
-          type: string
-        CustomerCreditPositionAnalysisRecord:
-          type: string
     Collateral:
       type: object
       properties:
@@ -318,6 +307,17 @@ components:
         CollateralAssetLoantoValueRatio:
           type: string
         CustomerCollateralPositionAnalysisRecord:
+          type: string
+    Credit:
+      type: object
+      properties:
+        CustomerCreditRatingAssessment:
+          type: string
+        CustomerCreditRatingAssessmentType:
+          type: string
+        CustomerCreditRatingNarrative:
+          type: string
+        CustomerCreditPositionAnalysisRecord:
           type: string
     Cashflow:
       type: object
@@ -414,16 +414,16 @@ components:
       explode: false
       schema:
         type: string
-    CreditID:
-      name: creditId
+    CollateralID:
+      name: collateralId
       in: path
       required: true
       style: simple
       explode: false
       schema:
         type: string
-    CollateralID:
-      name: collateralId
+    CreditID:
+      name: creditId
       in: path
       required: true
       style: simple

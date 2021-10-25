@@ -893,23 +893,6 @@ components:
           type: string
         RepoTransactionReference:
           type: string
-    RepoTransactionInitiationTask:
-      type: object
-      properties:
-        Preconditions:
-          type: object
-        Schedule:
-          type: object
-        BusinessService:
-          type: object
-        Postconditions:
-          type: object
-        RepoTransactionReference:
-          type: string
-        RepoTransactionInitiationTaskReference:
-          type: string
-        RepoTransactionInitiationTaskType:
-          type: string
     RepoTransactionSecurityTransferTask:
       type: object
       properties:
@@ -926,6 +909,23 @@ components:
         RepoTransactionSecurityTransferTaskReference:
           type: string
         RepoTransactionSecurityTransferTaskType:
+          type: string
+    RepoTransactionInitiationTask:
+      type: object
+      properties:
+        Preconditions:
+          type: object
+        Schedule:
+          type: object
+        BusinessService:
+          type: object
+        Postconditions:
+          type: object
+        RepoTransactionReference:
+          type: string
+        RepoTransactionInitiationTaskReference:
+          type: string
+        RepoTransactionInitiationTaskType:
           type: string
     RepoTransactionCashTransferTask:
       type: object
@@ -987,16 +987,16 @@ components:
       explode: false
       schema:
         type: string
-    RepoTransactionInitiationTaskID:
-      name: repotransactioninitiationtaskId
+    RepoTransactionSecurityTransferTaskID:
+      name: repotransactionsecuritytransfertaskId
       in: path
       required: true
       style: simple
       explode: false
       schema:
         type: string
-    RepoTransactionSecurityTransferTaskID:
-      name: repotransactionsecuritytransfertaskId
+    RepoTransactionInitiationTaskID:
+      name: repotransactioninitiationtaskId
       in: path
       required: true
       style: simple

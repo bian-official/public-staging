@@ -713,6 +713,13 @@ components:
           type: string
         SecurityTradingFailsProcedureReference:
           type: string
+    SecuritiesFailsProcessingOutcome:
+      type: object
+      properties:
+        SecuritiesFailsProcessingWorkProduct:
+          type: object
+        SecuritiesFailsProcessingProcedure:
+          type: string
     SecuritiesFailDeterminationWorkstep:
       type: object
       properties:
@@ -751,13 +758,6 @@ components:
           type: string
         SecuritiesFailAnalysisWorkstepType:
           type: string
-    SecuritiesFailsProcessingOutcome:
-      type: object
-      properties:
-        SecuritiesFailsProcessingWorkProduct:
-          type: object
-        SecuritiesFailsProcessingProcedure:
-          type: string
     HTTPError:
       type: object
       properties:
@@ -776,6 +776,14 @@ components:
       explode: false
       schema:
         type: string
+    SecuritiesFailsProcessingOutcomeID:
+      name: securitiesfailsprocessingoutcomeId
+      in: path
+      required: true
+      style: simple
+      explode: false
+      schema:
+        type: string
     SecuritiesFailDeterminationWorkstepID:
       name: securitiesfaildeterminationworkstepId
       in: path
@@ -786,14 +794,6 @@ components:
         type: string
     SecuritiesFailAnalysisWorkstepID:
       name: securitiesfailanalysisworkstepId
-      in: path
-      required: true
-      style: simple
-      explode: false
-      schema:
-        type: string
-    SecuritiesFailsProcessingOutcomeID:
-      name: securitiesfailsprocessingoutcomeId
       in: path
       required: true
       style: simple

@@ -875,70 +875,6 @@ components:
           type: string
         ATMNetworkOperatingSessionServiceConfiguration:
           type: string
-    FinancialTransactionCapture:
-      type: object
-      properties:
-        FinancialTransactionCapturePreconditions:
-          type: string
-        FinancialTransactionCaptureFunctionSchedule:
-          type: string
-        BusinessService:
-          type: object
-        ServiceType:
-          type: string
-        ServiceDescription:
-          type: string
-        ServiceInputsandOuputs:
-          type: string
-        ServiceWorkProduct:
-          type: string
-        ServiceName:
-          type: string
-    CashDistribution:
-      type: object
-      properties:
-        CashDistributionPreconditions:
-          type: string
-        CashDistributionFunctionSchedule:
-          type: string
-        CashDistribution:
-          type: object
-        CashDistributionServiceType:
-          type: string
-        CashDistributionServiceDescription:
-          type: string
-        CashDistributionServiceInputsandOuputs:
-          type: string
-        CashDistributionServiceWorkProduct:
-          type: string
-        CashDistributionServiceName:
-          type: string
-    DeviceTracking:
-      type: object
-      properties:
-        DeviceTrackingPreconditions:
-          type: string
-        DeviceTrackingFunctionSchedule:
-          type: string
-        DeviceTracking:
-          type: object
-        DeviceTrackingServiceType:
-          type: string
-        DeviceTrackingServiceDescription:
-          type: string
-        DeviceTrackingServiceInputsandOuputs:
-          type: string
-        DeviceTrackingServiceWorkProduct:
-          type: string
-        DeviceTrackingServiceName:
-          type: string
-    ATMNetworkOperationsOutcome:
-      type: object
-      properties:
-        ATMNetworkOperationsIncident:
-          type: string
-        ATMNetworkOperationsProvision:
-          type: string
     FinancialDocumentHandling:
       type: object
       properties:
@@ -957,6 +893,13 @@ components:
         DocumentGenerationandHandlingServiceWorkProduct:
           type: string
         DocumentGenerationandHandlingServiceName:
+          type: string
+    ATMNetworkOperationsOutcome:
+      type: object
+      properties:
+        ATMNetworkOperationsIncident:
+          type: string
+        ATMNetworkOperationsProvision:
           type: string
     NetworkOperation:
       type: object
@@ -977,6 +920,63 @@ components:
           type: string
         NetworkOperationServiceName:
           type: string
+    FinancialTransactionCapture:
+      type: object
+      properties:
+        FinancialTransactionCapturePreconditions:
+          type: string
+        FinancialTransactionCaptureFunctionSchedule:
+          type: string
+        BusinessService:
+          type: object
+        ServiceType:
+          type: string
+        ServiceDescription:
+          type: string
+        ServiceInputsandOuputs:
+          type: string
+        ServiceWorkProduct:
+          type: string
+        ServiceName:
+          type: string
+    DeviceTracking:
+      type: object
+      properties:
+        DeviceTrackingPreconditions:
+          type: string
+        DeviceTrackingFunctionSchedule:
+          type: string
+        DeviceTracking:
+          type: object
+        DeviceTrackingServiceType:
+          type: string
+        DeviceTrackingServiceDescription:
+          type: string
+        DeviceTrackingServiceInputsandOuputs:
+          type: string
+        DeviceTrackingServiceWorkProduct:
+          type: string
+        DeviceTrackingServiceName:
+          type: string
+    CashDistribution:
+      type: object
+      properties:
+        CashDistributionPreconditions:
+          type: string
+        CashDistributionFunctionSchedule:
+          type: string
+        CashDistribution:
+          type: object
+        CashDistributionServiceType:
+          type: string
+        CashDistributionServiceDescription:
+          type: string
+        CashDistributionServiceInputsandOuputs:
+          type: string
+        CashDistributionServiceWorkProduct:
+          type: string
+        CashDistributionServiceName:
+          type: string
     HTTPError:
       type: object
       properties:
@@ -995,24 +995,8 @@ components:
       explode: false
       schema:
         type: string
-    FinancialTransactionCaptureID:
-      name: financialtransactioncaptureId
-      in: path
-      required: true
-      style: simple
-      explode: false
-      schema:
-        type: string
-    CashDistributionID:
-      name: cashdistributionId
-      in: path
-      required: true
-      style: simple
-      explode: false
-      schema:
-        type: string
-    DeviceTrackingID:
-      name: devicetrackingId
+    FinancialDocumentHandlingID:
+      name: financialdocumenthandlingId
       in: path
       required: true
       style: simple
@@ -1027,16 +1011,32 @@ components:
       explode: false
       schema:
         type: string
-    FinancialDocumentHandlingID:
-      name: financialdocumenthandlingId
+    NetworkOperationID:
+      name: networkoperationId
       in: path
       required: true
       style: simple
       explode: false
       schema:
         type: string
-    NetworkOperationID:
-      name: networkoperationId
+    FinancialTransactionCaptureID:
+      name: financialtransactioncaptureId
+      in: path
+      required: true
+      style: simple
+      explode: false
+      schema:
+        type: string
+    DeviceTrackingID:
+      name: devicetrackingId
+      in: path
+      required: true
+      style: simple
+      explode: false
+      schema:
+        type: string
+    CashDistributionID:
+      name: cashdistributionId
       in: path
       required: true
       style: simple

@@ -601,26 +601,12 @@ components:
           type: object
         ProductandServiceAssessmentRequesterReference:
           type: object
-    UsabilityChecks:
+    ProductQualityAssuranceOutcome:
       type: object
       properties:
-        UsabilityChecksPreconditions:
+        ProductQualityAssuranceWorkProduct:
           type: string
-        UsabilityChecksAnalysisSchedule:
-          type: string
-        UsabilityChecksVersionNumber:
-          type: string
-        UsabilityChecks:
-          type: object
-        UsabilityChecksServiceType:
-          type: string
-        UsabilityChecksServiceDescription:
-          type: string
-        UsabilityChecksServiceInputsandOuputs:
-          type: string
-        UsabilityChecksServiceWorkProduct:
-          type: string
-        UsabilityChecksServiceName:
+        ProductQualityAssuranceAssessmentType:
           type: string
     ResiliencyandPerformanceChecks:
       type: object
@@ -643,26 +629,26 @@ components:
           type: string
         ResiliencyandPerformanceChecksServiceName:
           type: string
-    ProcessingErrorandIntegrityChecks:
+    UsabilityChecks:
       type: object
       properties:
-        ProcessingErrorandIntegrityChecksPreconditions:
+        UsabilityChecksPreconditions:
           type: string
-        ProcessingErrorandIntegrityChecksAnalysisSchedule:
+        UsabilityChecksAnalysisSchedule:
           type: string
-        ProcessingErrorandIntegrityChecksVersionNumber:
+        UsabilityChecksVersionNumber:
           type: string
-        ProcessingErrorandIntegrityChecks:
+        UsabilityChecks:
           type: object
-        ProcessingErrorandIntegrityChecksServiceType:
+        UsabilityChecksServiceType:
           type: string
-        ProcessingErrorandIntegrityChecksServiceDescription:
+        UsabilityChecksServiceDescription:
           type: string
-        ProcessingErrorandIntegrityChecksServiceInputsandOuputs:
+        UsabilityChecksServiceInputsandOuputs:
           type: string
-        ProcessingErrorandIntegrityChecksServiceWorkProduct:
+        UsabilityChecksServiceWorkProduct:
           type: string
-        ProcessingErrorandIntegrityChecksServiceName:
+        UsabilityChecksServiceName:
           type: string
     FunctionalConsistencyChecks:
       type: object
@@ -685,12 +671,26 @@ components:
           type: string
         FunctionalConsistencyChecksServiceName:
           type: string
-    ProductQualityAssuranceOutcome:
+    ProcessingErrorandIntegrityChecks:
       type: object
       properties:
-        ProductQualityAssuranceWorkProduct:
+        ProcessingErrorandIntegrityChecksPreconditions:
           type: string
-        ProductQualityAssuranceAssessmentType:
+        ProcessingErrorandIntegrityChecksAnalysisSchedule:
+          type: string
+        ProcessingErrorandIntegrityChecksVersionNumber:
+          type: string
+        ProcessingErrorandIntegrityChecks:
+          type: object
+        ProcessingErrorandIntegrityChecksServiceType:
+          type: string
+        ProcessingErrorandIntegrityChecksServiceDescription:
+          type: string
+        ProcessingErrorandIntegrityChecksServiceInputsandOuputs:
+          type: string
+        ProcessingErrorandIntegrityChecksServiceWorkProduct:
+          type: string
+        ProcessingErrorandIntegrityChecksServiceName:
           type: string
     HTTPError:
       type: object
@@ -710,8 +710,8 @@ components:
       explode: false
       schema:
         type: string
-    UsabilityChecksID:
-      name: usabilitychecksId
+    ProductQualityAssuranceOutcomeID:
+      name: productqualityassuranceoutcomeId
       in: path
       required: true
       style: simple
@@ -726,8 +726,8 @@ components:
       explode: false
       schema:
         type: string
-    ProcessingErrorandIntegrityChecksID:
-      name: processingerrorandintegritychecksId
+    UsabilityChecksID:
+      name: usabilitychecksId
       in: path
       required: true
       style: simple
@@ -742,8 +742,8 @@ components:
       explode: false
       schema:
         type: string
-    ProductQualityAssuranceOutcomeID:
-      name: productqualityassuranceoutcomeId
+    ProcessingErrorandIntegrityChecksID:
+      name: processingerrorandintegritychecksId
       in: path
       required: true
       style: simple

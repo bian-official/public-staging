@@ -606,34 +606,6 @@ components:
           type: string
         DirectDebitFacilityAccountReference:
           type: object
-    DirectDebitOutcome:
-      type: object
-      properties:
-        DirectDebitFinancialFacility:
-          type: string
-        DirectDebitWorkProduct:
-          type: string
-    PaymentInitiation:
-      type: object
-      properties:
-        PaymentInitiationPreconditions:
-          type: string
-        PaymentInitiationFeatureSchedule:
-          type: string
-        DirectDebitPaymentInitiation:
-          type: object
-        PaymentInitiationPostconditions:
-          type: string
-        PaymentInitiationDirectDebitPaymentInitiationServiceType:
-          type: string
-        PaymentInitiationDirectDebitPaymentInitiationServiceDescription:
-          type: string
-        PaymentInitiationDirectDebitPaymentInitiationServiceInputsandOuputs:
-          type: string
-        PaymentInitiationDirectDebitPaymentInitiationServiceWorkProduct:
-          type: string
-        PaymentInitiationDirectDebitPaymentInitiationServiceName:
-          type: string
     PaymentTracking:
       type: object
       properties:
@@ -654,48 +626,6 @@ components:
         PaymentTrackingDirectDebitPaymentTrackingServiceWorkProduct:
           type: string
         PaymentTrackingDirectDebitPaymentTrackingServiceName:
-          type: string
-    Reporting:
-      type: object
-      properties:
-        ReportingPreconditions:
-          type: string
-        ReportingFeatureSchedule:
-          type: string
-        BusinessService:
-          type: object
-        ReportingPostconditions:
-          type: string
-        ReportingServiceType:
-          type: string
-        ReportingServiceDescription:
-          type: string
-        ReportingServiceInputsandOuputs:
-          type: string
-        ReportingServiceWorkProduct:
-          type: string
-        ReportingServiceName:
-          type: string
-    FundsAvailableCheck:
-      type: object
-      properties:
-        FundsAvailableCheckPreconditions:
-          type: string
-        FundsAvailableCheckFeatureSchedule:
-          type: string
-        FundsAvailableCheck:
-          type: object
-        FundsAvailableCheckPostconditions:
-          type: string
-        FundsAvailableCheckFundsAvailableCheckServiceType:
-          type: string
-        FundsAvailableCheckFundsAvailableCheckServiceDescription:
-          type: string
-        FundsAvailableCheckFundsAvailableCheckServiceInputsandOuputs:
-          type: string
-        FundsAvailableCheckFundsAvailableCheckServiceWorkProduct:
-          type: string
-        FundsAvailableCheckFundsAvailableCheckServiceName:
           type: string
     VerifyMandate:
       type: object
@@ -718,6 +648,76 @@ components:
           type: string
         VerifyMandateDirectDebitMandateCheckServiceName:
           type: string
+    Reporting:
+      type: object
+      properties:
+        ReportingPreconditions:
+          type: string
+        ReportingFeatureSchedule:
+          type: string
+        BusinessService:
+          type: object
+        ReportingPostconditions:
+          type: string
+        ReportingServiceType:
+          type: string
+        ReportingServiceDescription:
+          type: string
+        ReportingServiceInputsandOuputs:
+          type: string
+        ReportingServiceWorkProduct:
+          type: string
+        ReportingServiceName:
+          type: string
+    DirectDebitOutcome:
+      type: object
+      properties:
+        DirectDebitFinancialFacility:
+          type: string
+        DirectDebitWorkProduct:
+          type: string
+    FundsAvailableCheck:
+      type: object
+      properties:
+        FundsAvailableCheckPreconditions:
+          type: string
+        FundsAvailableCheckFeatureSchedule:
+          type: string
+        FundsAvailableCheck:
+          type: object
+        FundsAvailableCheckPostconditions:
+          type: string
+        FundsAvailableCheckFundsAvailableCheckServiceType:
+          type: string
+        FundsAvailableCheckFundsAvailableCheckServiceDescription:
+          type: string
+        FundsAvailableCheckFundsAvailableCheckServiceInputsandOuputs:
+          type: string
+        FundsAvailableCheckFundsAvailableCheckServiceWorkProduct:
+          type: string
+        FundsAvailableCheckFundsAvailableCheckServiceName:
+          type: string
+    PaymentInitiation:
+      type: object
+      properties:
+        PaymentInitiationPreconditions:
+          type: string
+        PaymentInitiationFeatureSchedule:
+          type: string
+        DirectDebitPaymentInitiation:
+          type: object
+        PaymentInitiationPostconditions:
+          type: string
+        PaymentInitiationDirectDebitPaymentInitiationServiceType:
+          type: string
+        PaymentInitiationDirectDebitPaymentInitiationServiceDescription:
+          type: string
+        PaymentInitiationDirectDebitPaymentInitiationServiceInputsandOuputs:
+          type: string
+        PaymentInitiationDirectDebitPaymentInitiationServiceWorkProduct:
+          type: string
+        PaymentInitiationDirectDebitPaymentInitiationServiceName:
+          type: string
     HTTPError:
       type: object
       properties:
@@ -736,24 +736,16 @@ components:
       explode: false
       schema:
         type: string
-    DirectDebitOutcomeID:
-      name: directdebitoutcomeId
-      in: path
-      required: true
-      style: simple
-      explode: false
-      schema:
-        type: string
-    PaymentInitiationID:
-      name: paymentinitiationId
-      in: path
-      required: true
-      style: simple
-      explode: false
-      schema:
-        type: string
     PaymentTrackingID:
       name: paymenttrackingId
+      in: path
+      required: true
+      style: simple
+      explode: false
+      schema:
+        type: string
+    VerifyMandateID:
+      name: verifymandateId
       in: path
       required: true
       style: simple
@@ -768,6 +760,14 @@ components:
       explode: false
       schema:
         type: string
+    DirectDebitOutcomeID:
+      name: directdebitoutcomeId
+      in: path
+      required: true
+      style: simple
+      explode: false
+      schema:
+        type: string
     FundsAvailableCheckID:
       name: fundsavailablecheckId
       in: path
@@ -776,8 +776,8 @@ components:
       explode: false
       schema:
         type: string
-    VerifyMandateID:
-      name: verifymandateId
+    PaymentInitiationID:
+      name: paymentinitiationId
       in: path
       required: true
       style: simple

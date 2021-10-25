@@ -601,27 +601,6 @@ components:
           type: object
         ProductOrCustomerCombinationAssessmentRequesterReference:
           type: object
-    ProductEligibility:
-      type: object
-      properties:
-        ProductEligibilityPreconditions:
-          type: string
-        ProductEligibilityAnalysisSchedule:
-          type: string
-        ProductEligibilityVersionNumber:
-          type: string
-        ProductEligibility:
-          type: object
-        ProductEligibilityServiceType:
-          type: string
-        ProductEligibilityServiceDescription:
-          type: string
-        ProductEligibilityServiceInputsandOuputs:
-          type: string
-        ProductEligibilityServiceWorkProduct:
-          type: string
-        ProductEligibilityServiceName:
-          type: string
     ContextCriteria:
       type: object
       properties:
@@ -664,13 +643,6 @@ components:
           type: string
         BankandCampaignAlignmentServiceName:
           type: string
-    ProductMatchingOutcome:
-      type: object
-      properties:
-        ProductMatchingWorkProduct:
-          type: string
-        ProductMatchingAssessmentType:
-          type: string
     ProductTypeSelection:
       type: object
       properties:
@@ -692,6 +664,34 @@ components:
           type: string
         ProductTypeSelectionServiceName:
           type: string
+    ProductEligibility:
+      type: object
+      properties:
+        ProductEligibilityPreconditions:
+          type: string
+        ProductEligibilityAnalysisSchedule:
+          type: string
+        ProductEligibilityVersionNumber:
+          type: string
+        ProductEligibility:
+          type: object
+        ProductEligibilityServiceType:
+          type: string
+        ProductEligibilityServiceDescription:
+          type: string
+        ProductEligibilityServiceInputsandOuputs:
+          type: string
+        ProductEligibilityServiceWorkProduct:
+          type: string
+        ProductEligibilityServiceName:
+          type: string
+    ProductMatchingOutcome:
+      type: object
+      properties:
+        ProductMatchingWorkProduct:
+          type: string
+        ProductMatchingAssessmentType:
+          type: string
     HTTPError:
       type: object
       properties:
@@ -704,28 +704,28 @@ components:
     RetrieveProduct/CustomerCombinationAssessmentResponse:
       type: object
       properties:
-        rwc:973a94b2-aa0e-5879-cd94-93b577cadb99/273091:
+        rwc:973a94b2-aa0e-5879-cd94-93b577cadb99/301222:
           type: object
           properties:
-            rwc:973a94b2-aa0e-5879-cd94-93b577cadb99Or273095:
+            rwc:973a94b2-aa0e-5879-cd94-93b577cadb99Or301219:
               type: string
-            rwc:973a94b2-aa0e-5879-cd94-93b577cadb99Or273090:
+            rwc:973a94b2-aa0e-5879-cd94-93b577cadb99Or301224:
               type: string
-            rwc:973a94b2-aa0e-5879-cd94-93b577cadb99Or273092:
+            rwc:973a94b2-aa0e-5879-cd94-93b577cadb99Or301221:
               type: string
-            rwc:973a94b2-aa0e-5879-cd94-93b577cadb99Or273088:
+            rwc:973a94b2-aa0e-5879-cd94-93b577cadb99Or301226:
               type: string
-            rwc:973a94b2-aa0e-5879-cd94-93b577cadb99Or273089:
+            rwc:973a94b2-aa0e-5879-cd94-93b577cadb99Or301225:
               type: string
-            rwc:973a94b2-aa0e-5879-cd94-93b577cadb99Or273094:
+            rwc:973a94b2-aa0e-5879-cd94-93b577cadb99Or301218:
               type: string
-            rwc:973a94b2-aa0e-5879-cd94-93b577cadb99Or273096:
+            rwc:973a94b2-aa0e-5879-cd94-93b577cadb99Or301217:
               type: string
-            rwc:973a94b2-aa0e-5879-cd94-93b577cadb99Or273093:
+            rwc:973a94b2-aa0e-5879-cd94-93b577cadb99Or301220:
               type: string
-            rwc:973a94b2-aa0e-5879-cd94-93b577cadb99Or273086:
+            rwc:973a94b2-aa0e-5879-cd94-93b577cadb99Or301227:
               type: string
-            rwc:973a94b2-aa0e-5879-cd94-93b577cadb99Or273087:
+            rwc:973a94b2-aa0e-5879-cd94-93b577cadb99Or301223:
               type: string
         Product/CustomerCombinationAssessment:
           type: object
@@ -759,14 +759,6 @@ components:
       explode: false
       schema:
         type: string
-    ProductEligibilityID:
-      name: producteligibilityId
-      in: path
-      required: true
-      style: simple
-      explode: false
-      schema:
-        type: string
     ContextCriteriaID:
       name: contextcriteriaId
       in: path
@@ -783,16 +775,24 @@ components:
       explode: false
       schema:
         type: string
-    ProductMatchingOutcomeID:
-      name: productmatchingoutcomeId
+    ProductTypeSelectionID:
+      name: producttypeselectionId
       in: path
       required: true
       style: simple
       explode: false
       schema:
         type: string
-    ProductTypeSelectionID:
-      name: producttypeselectionId
+    ProductEligibilityID:
+      name: producteligibilityId
+      in: path
+      required: true
+      style: simple
+      explode: false
+      schema:
+        type: string
+    ProductMatchingOutcomeID:
+      name: productmatchingoutcomeId
       in: path
       required: true
       style: simple

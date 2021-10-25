@@ -534,6 +534,48 @@ components:
           type: string
         CommissionTransactionTransaction:
           type: string
+    Calculation:
+      type: object
+      properties:
+        CalculationPreconditions:
+          type: string
+        CalculationTaskSchedule:
+          type: string
+        CommissionCalculation:
+          type: object
+        CalculationPostconditions:
+          type: string
+        CalculationCommissionCalculationServiceType:
+          type: string
+        CalculationCommissionCalculationServiceDescription:
+          type: string
+        CalculationCommissionCalculationServiceInputsandOuputs:
+          type: string
+        CalculationCommissionCalculationServiceWorkProduct:
+          type: string
+        CalculationCommissionCalculationServiceName:
+          type: string
+    Check:
+      type: object
+      properties:
+        CheckPreconditions:
+          type: string
+        CheckTaskSchedule:
+          type: string
+        BusinessService:
+          type: object
+        CheckPostconditions:
+          type: string
+        CheckServiceType:
+          type: string
+        CheckServiceDescription:
+          type: string
+        CheckServiceInputsandOuputs:
+          type: string
+        CheckServiceWorkProduct:
+          type: string
+        CheckServiceName:
+          type: string
     CommissionsOutcome:
       type: object
       properties:
@@ -580,48 +622,6 @@ components:
           type: string
         PaymentServiceName:
           type: string
-    Check:
-      type: object
-      properties:
-        CheckPreconditions:
-          type: string
-        CheckTaskSchedule:
-          type: string
-        BusinessService:
-          type: object
-        CheckPostconditions:
-          type: string
-        CheckServiceType:
-          type: string
-        CheckServiceDescription:
-          type: string
-        CheckServiceInputsandOuputs:
-          type: string
-        CheckServiceWorkProduct:
-          type: string
-        CheckServiceName:
-          type: string
-    Calculation:
-      type: object
-      properties:
-        CalculationPreconditions:
-          type: string
-        CalculationTaskSchedule:
-          type: string
-        CommissionCalculation:
-          type: object
-        CalculationPostconditions:
-          type: string
-        CalculationCommissionCalculationServiceType:
-          type: string
-        CalculationCommissionCalculationServiceDescription:
-          type: string
-        CalculationCommissionCalculationServiceInputsandOuputs:
-          type: string
-        CalculationCommissionCalculationServiceWorkProduct:
-          type: string
-        CalculationCommissionCalculationServiceName:
-          type: string
     HTTPError:
       type: object
       properties:
@@ -640,16 +640,8 @@ components:
       explode: false
       schema:
         type: string
-    CommissionsOutcomeID:
-      name: commissionsoutcomeId
-      in: path
-      required: true
-      style: simple
-      explode: false
-      schema:
-        type: string
-    PaymentID:
-      name: paymentId
+    CalculationID:
+      name: calculationId
       in: path
       required: true
       style: simple
@@ -664,8 +656,16 @@ components:
       explode: false
       schema:
         type: string
-    CalculationID:
-      name: calculationId
+    CommissionsOutcomeID:
+      name: commissionsoutcomeId
+      in: path
+      required: true
+      style: simple
+      explode: false
+      schema:
+        type: string
+    PaymentID:
+      name: paymentId
       in: path
       required: true
       style: simple

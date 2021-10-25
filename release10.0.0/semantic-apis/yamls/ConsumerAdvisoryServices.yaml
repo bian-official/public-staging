@@ -545,26 +545,6 @@ components:
           type: string
         Date:
           type: string
-    ServiceFees:
-      type: object
-      properties:
-        FeeApplicationRecord:
-          type: string
-        FeeTransaction:
-          type: string
-        FeeTransactionDescription:
-          type: string
-        FeeTransactionType:
-          type: string
-        FeeTransactionCharge:
-          type: string
-    TaxOptimization:
-      type: object
-      properties:
-        ProductandServiceReference:
-          type: object
-        TaxOptimizationAdviceResult:
-          type: string
     ProductGuidance:
       type: object
       properties:
@@ -586,6 +566,26 @@ components:
         ProductandServiceReference:
           type: object
         FinancialPlanningAdviceResult:
+          type: string
+    TaxOptimization:
+      type: object
+      properties:
+        ProductandServiceReference:
+          type: object
+        TaxOptimizationAdviceResult:
+          type: string
+    ServiceFees:
+      type: object
+      properties:
+        FeeApplicationRecord:
+          type: string
+        FeeTransaction:
+          type: string
+        FeeTransactionDescription:
+          type: string
+        FeeTransactionType:
+          type: string
+        FeeTransactionCharge:
           type: string
     HTTPError:
       type: object
@@ -797,8 +797,16 @@ components:
       explode: false
       schema:
         type: string
-    ServiceFeesID:
-      name: servicefeesId
+    ProductGuidanceID:
+      name: productguidanceId
+      in: path
+      required: true
+      style: simple
+      explode: false
+      schema:
+        type: string
+    FinancialPlanningID:
+      name: financialplanningId
       in: path
       required: true
       style: simple
@@ -813,16 +821,8 @@ components:
       explode: false
       schema:
         type: string
-    ProductGuidanceID:
-      name: productguidanceId
-      in: path
-      required: true
-      style: simple
-      explode: false
-      schema:
-        type: string
-    FinancialPlanningID:
-      name: financialplanningId
+    ServiceFeesID:
+      name: servicefeesId
       in: path
       required: true
       style: simple

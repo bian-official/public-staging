@@ -265,16 +265,16 @@ components:
           type: string
         Date:
           type: string
-    BusinessRisk:
+    ProductionRisk:
       type: object
       properties:
-        BusinessRiskSystemTestType:
+        ProductionRiskSystemTestType:
           type: string
-        BusinessRiskSystemTestDescription:
+        ProductionRiskSystemTestDescription:
           type: string
-        BusinessRiskTestWorkProduct:
+        ProductionRiskSystemTestWorkProduct:
           type: string
-        BusinessRiskTestResult:
+        ProductionRiskSystemTestResult:
           type: string
     FunctionalRisk:
       type: object
@@ -298,16 +298,16 @@ components:
           type: string
         OperationalRiskSystemTestResult:
           type: string
-    ProductionRisk:
+    BusinessRisk:
       type: object
       properties:
-        ProductionRiskSystemTestType:
+        BusinessRiskSystemTestType:
           type: string
-        ProductionRiskSystemTestDescription:
+        BusinessRiskSystemTestDescription:
           type: string
-        ProductionRiskSystemTestWorkProduct:
+        BusinessRiskTestWorkProduct:
           type: string
-        ProductionRiskSystemTestResult:
+        BusinessRiskTestResult:
           type: string
     HTTPError:
       type: object
@@ -467,8 +467,8 @@ components:
       explode: false
       schema:
         type: string
-    BusinessRiskID:
-      name: businessriskId
+    ProductionRiskID:
+      name: productionriskId
       in: path
       required: true
       style: simple
@@ -491,8 +491,8 @@ components:
       explode: false
       schema:
         type: string
-    ProductionRiskID:
-      name: productionriskId
+    BusinessRiskID:
+      name: businessriskId
       in: path
       required: true
       style: simple

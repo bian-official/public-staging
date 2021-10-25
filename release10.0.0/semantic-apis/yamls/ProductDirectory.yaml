@@ -498,15 +498,6 @@ components:
           type: string
         ProductDirectoryEntryConfiguration:
           type: string
-    Production:
-      type: object
-      properties:
-        ProductandServiceLocationAvailability:
-          type: string
-        ProductandServiceTimeAvailability:
-          type: string
-        ProductandServiceAccessAvailability:
-          type: string
     SalesandMarketing:
       type: object
       properties:
@@ -548,6 +539,15 @@ components:
           type: string
         ProductandServiceConfigurationParameterSetting:
           type: string
+    Production:
+      type: object
+      properties:
+        ProductandServiceLocationAvailability:
+          type: string
+        ProductandServiceTimeAvailability:
+          type: string
+        ProductandServiceAccessAvailability:
+          type: string
     HTTPError:
       type: object
       properties:
@@ -560,14 +560,6 @@ components:
   parameters:
     ProductDirectoryID:
       name: productdirectoryId
-      in: path
-      required: true
-      style: simple
-      explode: false
-      schema:
-        type: string
-    ProductionID:
-      name: productionId
       in: path
       required: true
       style: simple
@@ -592,6 +584,14 @@ components:
         type: string
     OperationsID:
       name: operationsId
+      in: path
+      required: true
+      style: simple
+      explode: false
+      schema:
+        type: string
+    ProductionID:
+      name: productionId
       in: path
       required: true
       style: simple

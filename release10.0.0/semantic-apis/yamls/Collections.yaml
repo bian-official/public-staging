@@ -772,58 +772,28 @@ components:
           type: string
         CollateralAssetLiquidationProcedureCustomerAgreementReference:
           type: object
-    DebtFactoring:
+    CollateralValuation:
       type: object
       properties:
-        DebtFactoringPreconditions:
+        CollateralValuationPreconditions:
           type: string
-        DebtFactoringBusinessUnit/EmployeeReference:
+        CollateralValuationBusinessUnit/EmployeeReference:
           type: object
-        DebtFactoringWorkSchedule:
+        CollateralValuationWorkSchedule:
           type: string
-        Factoring:
+        CollateralValuation:
           type: object
-        DebtFactoringPostconditions:
+        CollateralValuationPostconditions:
           type: string
-        DebtFactoringFactoringServiceType:
+        CollateralValuationCollateralValuationServiceType:
           type: string
-        DebtFactoringFactoringServiceDescription:
+        CollateralValuationCollateralValuationServiceDescription:
           type: string
-        DebtFactoringFactoringServiceInputsandOuputs:
+        CollateralValuationCollateralValuationServiceInputsandOuputs:
           type: string
-        DebtFactoringFactoringServiceWorkProduct:
+        CollateralValuationCollateralValuationServiceWorkProduct:
           type: string
-        DebtFactoringFactoringServiceName:
-          type: string
-    CollateralLiquidation:
-      type: object
-      properties:
-        CollateralLiquidationPreconditions:
-          type: string
-        CollateralLiquidationBusinessUnit/EmployeeReference:
-          type: object
-        CollateralLiquidationWorkSchedule:
-          type: string
-        CollateralLiquidation:
-          type: object
-        CollateralLiquidationPostconditions:
-          type: string
-        CollateralLiquidationCollateralLiquidationServiceType:
-          type: string
-        CollateralLiquidationCollateralLiquidationServiceDescription:
-          type: string
-        CollateralLiquidationCollateralLiquidationServiceInputsandOuputs:
-          type: string
-        CollateralLiquidationCollateralLiquidationServiceWorkProduct:
-          type: string
-        CollateralLiquidationCollateralLiquidationServiceName:
-          type: string
-    CollectionsOutcome:
-      type: object
-      properties:
-        CollectionsWorkProduct:
-          type: string
-        CollectionsProcedure:
+        CollateralValuationCollateralValuationServiceName:
           type: string
     CollectionsAssessment:
       type: object
@@ -848,6 +818,59 @@ components:
           type: string
         CollectionsAssessmentCollectionsAssessmentServiceName:
           type: string
+    DebtFactoring:
+      type: object
+      properties:
+        DebtFactoringPreconditions:
+          type: string
+        DebtFactoringBusinessUnit/EmployeeReference:
+          type: object
+        DebtFactoringWorkSchedule:
+          type: string
+        Factoring:
+          type: object
+        DebtFactoringPostconditions:
+          type: string
+        DebtFactoringFactoringServiceType:
+          type: string
+        DebtFactoringFactoringServiceDescription:
+          type: string
+        DebtFactoringFactoringServiceInputsandOuputs:
+          type: string
+        DebtFactoringFactoringServiceWorkProduct:
+          type: string
+        DebtFactoringFactoringServiceName:
+          type: string
+    CollectionsOutcome:
+      type: object
+      properties:
+        CollectionsWorkProduct:
+          type: string
+        CollectionsProcedure:
+          type: string
+    CollateralLiquidation:
+      type: object
+      properties:
+        CollateralLiquidationPreconditions:
+          type: string
+        CollateralLiquidationBusinessUnit/EmployeeReference:
+          type: object
+        CollateralLiquidationWorkSchedule:
+          type: string
+        CollateralLiquidation:
+          type: object
+        CollateralLiquidationPostconditions:
+          type: string
+        CollateralLiquidationCollateralLiquidationServiceType:
+          type: string
+        CollateralLiquidationCollateralLiquidationServiceDescription:
+          type: string
+        CollateralLiquidationCollateralLiquidationServiceInputsandOuputs:
+          type: string
+        CollateralLiquidationCollateralLiquidationServiceWorkProduct:
+          type: string
+        CollateralLiquidationCollateralLiquidationServiceName:
+          type: string
     CollectionsAccountUpdate:
       type: object
       properties:
@@ -871,29 +894,6 @@ components:
           type: string
         CollectionsAccountUpdateCollectionsAccountUpdateServiceName:
           type: string
-    CollateralValuation:
-      type: object
-      properties:
-        CollateralValuationPreconditions:
-          type: string
-        CollateralValuationBusinessUnit/EmployeeReference:
-          type: object
-        CollateralValuationWorkSchedule:
-          type: string
-        CollateralValuation:
-          type: object
-        CollateralValuationPostconditions:
-          type: string
-        CollateralValuationCollateralValuationServiceType:
-          type: string
-        CollateralValuationCollateralValuationServiceDescription:
-          type: string
-        CollateralValuationCollateralValuationServiceInputsandOuputs:
-          type: string
-        CollateralValuationCollateralValuationServiceWorkProduct:
-          type: string
-        CollateralValuationCollateralValuationServiceName:
-          type: string
     HTTPError:
       type: object
       properties:
@@ -912,24 +912,8 @@ components:
       explode: false
       schema:
         type: string
-    DebtFactoringID:
-      name: debtfactoringId
-      in: path
-      required: true
-      style: simple
-      explode: false
-      schema:
-        type: string
-    CollateralLiquidationID:
-      name: collateralliquidationId
-      in: path
-      required: true
-      style: simple
-      explode: false
-      schema:
-        type: string
-    CollectionsOutcomeID:
-      name: collectionsoutcomeId
+    CollateralValuationID:
+      name: collateralvaluationId
       in: path
       required: true
       style: simple
@@ -944,16 +928,32 @@ components:
       explode: false
       schema:
         type: string
-    CollectionsAccountUpdateID:
-      name: collectionsaccountupdateId
+    DebtFactoringID:
+      name: debtfactoringId
       in: path
       required: true
       style: simple
       explode: false
       schema:
         type: string
-    CollateralValuationID:
-      name: collateralvaluationId
+    CollectionsOutcomeID:
+      name: collectionsoutcomeId
+      in: path
+      required: true
+      style: simple
+      explode: false
+      schema:
+        type: string
+    CollateralLiquidationID:
+      name: collateralliquidationId
+      in: path
+      required: true
+      style: simple
+      explode: false
+      schema:
+        type: string
+    CollectionsAccountUpdateID:
+      name: collectionsaccountupdateId
       in: path
       required: true
       style: simple

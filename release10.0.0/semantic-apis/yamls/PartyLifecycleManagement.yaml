@@ -386,15 +386,6 @@ components:
           type: string
         CustomerPrecedentProfileUpdateLog:
           type: string
-    Documentation:
-      type: object
-      properties:
-        PartyLife-cycleRequiredDocumentation:
-          type: string
-        PartyLife-cycleDocumentSchedule:
-          type: string
-        DocumentDirectoryEntryInstanceReference:
-          type: object
     Authentication:
       type: object
       properties:
@@ -416,17 +407,6 @@ components:
           type: string
         AuthenticationTaskResult:
           type: string
-    Precedents:
-      type: object
-      properties:
-        PrecedentType:
-          type: string
-        CustomerPrecedentReference:
-          type: object
-        CustomerPrecedentValue:
-          type: string
-        CustomerPrecedentValueDate:
-          type: string
     Qualification:
       type: object
       properties:
@@ -447,6 +427,26 @@ components:
         QualificationTaskWorkProducts:
           type: string
         QualificationTaskResult:
+          type: string
+    Documentation:
+      type: object
+      properties:
+        PartyLife-cycleRequiredDocumentation:
+          type: string
+        PartyLife-cycleDocumentSchedule:
+          type: string
+        DocumentDirectoryEntryInstanceReference:
+          type: object
+    Precedents:
+      type: object
+      properties:
+        PrecedentType:
+          type: string
+        CustomerPrecedentReference:
+          type: object
+        CustomerPrecedentValue:
+          type: string
+        CustomerPrecedentValueDate:
           type: string
     HTTPError:
       type: object
@@ -574,14 +574,6 @@ components:
       explode: false
       schema:
         type: string
-    DocumentationID:
-      name: documentationId
-      in: path
-      required: true
-      style: simple
-      explode: false
-      schema:
-        type: string
     AuthenticationID:
       name: authenticationId
       in: path
@@ -590,16 +582,24 @@ components:
       explode: false
       schema:
         type: string
-    PrecedentsID:
-      name: precedentsId
+    QualificationID:
+      name: qualificationId
       in: path
       required: true
       style: simple
       explode: false
       schema:
         type: string
-    QualificationID:
-      name: qualificationId
+    DocumentationID:
+      name: documentationId
+      in: path
+      required: true
+      style: simple
+      explode: false
+      schema:
+        type: string
+    PrecedentsID:
+      name: precedentsId
       in: path
       required: true
       style: simple

@@ -10,9 +10,9 @@ paths:
   /VirtualAccount/{virtualaccountId}/Capture:
     put:
       tags:
-      - CR - VirtualAccountArrangement
-      summary: CaCR Capture Virtual Account Arrangement activity or event related information
-      description: CaCR Capture Virtual Account Arrangement activity or event related information
+      - CR - VirtualAccountFacility
+      summary: CaCR Capture Virtual Account Facility activity or event related information
+      description: CaCR Capture Virtual Account Facility activity or event related information
       operationId: Capture
       parameters:
       - $ref: '#/components/parameters/VirtualAccountID'
@@ -40,9 +40,9 @@ paths:
   /VirtualAccount/{virtualaccountId}/Control:
     put:
       tags:
-      - CR - VirtualAccountArrangement
-      summary: CoCR Control the processing of Virtual Account Arrangement
-      description: CoCR Control the processing of Virtual Account Arrangement
+      - CR - VirtualAccountFacility
+      summary: CoCR Control the processing of Virtual Account Facility
+      description: CoCR Control the processing of Virtual Account Facility
       operationId: Control
       parameters:
       - $ref: '#/components/parameters/VirtualAccountID'
@@ -70,9 +70,9 @@ paths:
   /VirtualAccount/{virtualaccountId}/Exchange:
     put:
       tags:
-      - CR - VirtualAccountArrangement
-      summary: EcCR Accept, verify, etc. aspects of Virtual Account Arrangement processing
-      description: EcCR Accept, verify, etc. aspects of Virtual Account Arrangement processing
+      - CR - VirtualAccountFacility
+      summary: EcCR Accept, verify, etc. aspects of Virtual Account Facility processing
+      description: EcCR Accept, verify, etc. aspects of Virtual Account Facility processing
       operationId: Exchange
       parameters:
       - $ref: '#/components/parameters/VirtualAccountID'
@@ -100,9 +100,9 @@ paths:
   /VirtualAccount/{virtualaccountId}/Execute:
     put:
       tags:
-      - CR - VirtualAccountArrangement
-      summary: ExCR Execute an available automated action for Virtual Account Arrangement
-      description: ExCR Execute an available automated action for Virtual Account Arrangement
+      - CR - VirtualAccountFacility
+      summary: ExCR Execute an available automated action for Virtual Account Facility
+      description: ExCR Execute an available automated action for Virtual Account Facility
       operationId: Execute
       parameters:
       - $ref: '#/components/parameters/VirtualAccountID'
@@ -130,9 +130,9 @@ paths:
   /VirtualAccount/{virtualaccountId}/Grant:
     put:
       tags:
-      - CR - VirtualAccountArrangement
-      summary: GrCR Obtain permission to act in relation to Virtual Account Arrangement
-      description: GrCR Obtain permission to act in relation to Virtual Account Arrangement
+      - CR - VirtualAccountFacility
+      summary: GrCR Obtain permission to act in relation to Virtual Account Facility
+      description: GrCR Obtain permission to act in relation to Virtual Account Facility
       operationId: Grant
       parameters:
       - $ref: '#/components/parameters/VirtualAccountID'
@@ -160,9 +160,9 @@ paths:
   /VirtualAccount/Initiate:
     post:
       tags:
-      - CR - VirtualAccountArrangement
-      summary: InCR Instantiate a new Virtual Account Arrangement
-      description: InCR Instantiate a new Virtual Account Arrangement
+      - CR - VirtualAccountFacility
+      summary: InCR Instantiate a new Virtual Account Facility
+      description: InCR Instantiate a new Virtual Account Facility
       operationId: Initiate
       parameters: []
       requestBody:
@@ -189,9 +189,9 @@ paths:
   /VirtualAccount/{virtualaccountId}/Retrieve:
     get:
       tags:
-      - CR - VirtualAccountArrangement
-      summary: ReCR Retrieve details about any aspect of Virtual Account Arrangement
-      description: ReCR Retrieve details about any aspect of Virtual Account Arrangement
+      - CR - VirtualAccountFacility
+      summary: ReCR Retrieve details about any aspect of Virtual Account Facility
+      description: ReCR Retrieve details about any aspect of Virtual Account Facility
       operationId: Retrieve
       parameters:
       - $ref: '#/components/parameters/VirtualAccountID'
@@ -217,9 +217,9 @@ paths:
   /VirtualAccount/{virtualaccountId}/Request:
     put:
       tags:
-      - CR - VirtualAccountArrangement
-      summary: RqCR Request manual intervention or a decision with respect to Virtual Account Arrangement
-      description: RqCR Request manual intervention or a decision with respect to Virtual Account Arrangement
+      - CR - VirtualAccountFacility
+      summary: RqCR Request manual intervention or a decision with respect to Virtual Account Facility
+      description: RqCR Request manual intervention or a decision with respect to Virtual Account Facility
       operationId: Request
       parameters:
       - $ref: '#/components/parameters/VirtualAccountID'
@@ -247,9 +247,9 @@ paths:
   /VirtualAccount/{virtualaccountId}/Update:
     put:
       tags:
-      - CR - VirtualAccountArrangement
-      summary: UpCR Update details relating to Virtual Account Arrangement
-      description: UpCR Update details relating to Virtual Account Arrangement
+      - CR - VirtualAccountFacility
+      summary: UpCR Update details relating to Virtual Account Facility
+      description: UpCR Update details relating to Virtual Account Facility
       operationId: Update
       parameters:
       - $ref: '#/components/parameters/VirtualAccountID'
@@ -1222,106 +1222,70 @@ paths:
           $ref: '#/components/responses/InternalServerError'
 components:
   schemas:
-    VirtualAccountArrangement:
+    VirtualAccountFacility:
       type: object
       properties:
-        VirtualAccountArrangementParameterType:
+        VirtualAccountFacilityParameterType:
           type: string
-        VirtualAccountArrangementSelectedOption:
+        VirtualAccountFacilitySelectedOption:
           type: string
-        VirtualAccountArrangement<SubjectArea>Type:
+        VirtualAccountFacility<SubjectArea>Type:
           type: string
-        VirtualAccountArrangement<SubjectArea>Reference:
+        VirtualAccountFacility<SubjectArea>Reference:
           type: object
-        VirtualAccountArrangementSchedule:
+        VirtualAccountFacilitySchedule:
           type: string
-        VirtualAccountArrangementStatus:
+        VirtualAccountFacilityStatus:
           type: string
-        VirtualAccountArrangementReference:
+        VirtualAccountFacilityReference:
           type: object
-        VirtualAccountArrangementCurrency:
+        VirtualAccountFacilityCurrency:
           type: string
-        VirtualAccountArrangementRegulationReference:
+        VirtualAccountFacilityRegulationReference:
           type: object
-        VirtualAccountArrangementRegulationType:
+        VirtualAccountFacilityRegulationType:
           type: string
-        VirtualAccountArrangementJurisdiction:
+        VirtualAccountFacilityJurisdiction:
           type: string
-        VirtualAccountArrangementBookingLocation:
+        VirtualAccountFacilityBookingLocation:
           type: string
-        VirtualAccountArrangementAccountType:
+        VirtualAccountFacilityAccountType:
           type: string
-        VirtualAccountArrangementAccountReference:
+        VirtualAccountFacilityAccountReference:
           type: object
-    Fee:
+    VirtualAccountConfigurationFulfillment:
       type: object
       properties:
-        FeePreconditions:
-          type: string
-        FeeFeatureSchedule:
-          type: string
+        Preconditions:
+          type: object
+        Schedule:
+          type: object
         BusinessService:
           type: object
-        FeePostconditions:
+        Postconditions:
+          type: object
+        VirtualAccountFacilityReference:
           type: string
-        FeeServiceType:
+        VirtualAccountConfigurationFulfillmentReference:
+          type: object
+        VirtualAccountConfigurationFulfillmentType:
           type: string
-        FeeServiceDescription:
-          type: string
-        FeeServiceInputsandOuputs:
-          type: string
-        FeeServiceWorkProduct:
-          type: string
-        FeeServiceName:
-          type: string
-    StandingOrder:
+    VirtualAccountMaintenanceFulfillment:
       type: object
       properties:
-        StandingOrderPreconditions:
-          type: string
-        StandingOrderFeatureSchedule:
-          type: string
+        Preconditions:
+          type: object
+        Schedule:
+          type: object
         BusinessService:
           type: object
-        StandingOrderPostconditions:
-          type: string
-        StandingOrderServiceType:
-          type: string
-        StandingOrderServiceDescription:
-          type: string
-        StandingOrderServiceInputsandOuputs:
-          type: string
-        StandingOrderServiceWorkProduct:
-          type: string
-        StandingOrderServiceName:
-          type: string
-    VirtualAccountOutcome:
-      type: object
-      properties:
-        VirtualAccountFinancialFacility:
-          type: string
-        VirtualAccountWorkProduct:
-          type: string
-    Statement:
-      type: object
-      properties:
-        StatementPreconditions:
-          type: string
-        StatementFeatureSchedule:
-          type: string
-        BusinessService:
+        Postconditions:
           type: object
-        StatementPostconditions:
+        VirtualAccountFacilityReference:
           type: string
-        StatementServiceType:
-          type: string
-        StatementServiceDescription:
-          type: string
-        StatementServiceInputsandOuputs:
-          type: string
-        StatementServiceWorkProduct:
-          type: string
-        StatementServiceName:
+        VirtualAccountMaintenanceFulfillmentReference:
+          type: object
+        VirtualAccountMaintenanceFulfillmentType:
           type: string
     Interest:
       type: object
@@ -1344,26 +1308,33 @@ components:
           type: string
         InterestServiceName:
           type: string
-    CreditTransfer:
+    VirtualAccountOutcome:
       type: object
       properties:
-        CreditTransferPreconditions:
+        VirtualAccountFinancialFacility:
           type: string
-        CreditTransferFeatureSchedule:
+        VirtualAccountWorkProduct:
+          type: string
+    Fee:
+      type: object
+      properties:
+        FeePreconditions:
+          type: string
+        FeeFeatureSchedule:
           type: string
         BusinessService:
           type: object
-        CreditTransferPostconditions:
+        FeePostconditions:
           type: string
-        CreditTransferServiceType:
+        FeeServiceType:
           type: string
-        CreditTransferServiceDescription:
+        FeeServiceDescription:
           type: string
-        CreditTransferServiceInputsandOuputs:
+        FeeServiceInputsandOuputs:
           type: string
-        CreditTransferServiceWorkProduct:
+        FeeServiceWorkProduct:
           type: string
-        CreditTransferServiceName:
+        FeeServiceName:
           type: string
     DirectDebit:
       type: object
@@ -1386,6 +1357,69 @@ components:
           type: string
         DirectDebitServiceName:
           type: string
+    Statement:
+      type: object
+      properties:
+        StatementPreconditions:
+          type: string
+        StatementFeatureSchedule:
+          type: string
+        BusinessService:
+          type: object
+        StatementPostconditions:
+          type: string
+        StatementServiceType:
+          type: string
+        StatementServiceDescription:
+          type: string
+        StatementServiceInputsandOuputs:
+          type: string
+        StatementServiceWorkProduct:
+          type: string
+        StatementServiceName:
+          type: string
+    StandingOrder:
+      type: object
+      properties:
+        StandingOrderPreconditions:
+          type: string
+        StandingOrderFeatureSchedule:
+          type: string
+        BusinessService:
+          type: object
+        StandingOrderPostconditions:
+          type: string
+        StandingOrderServiceType:
+          type: string
+        StandingOrderServiceDescription:
+          type: string
+        StandingOrderServiceInputsandOuputs:
+          type: string
+        StandingOrderServiceWorkProduct:
+          type: string
+        StandingOrderServiceName:
+          type: string
+    CreditTransfer:
+      type: object
+      properties:
+        CreditTransferPreconditions:
+          type: string
+        CreditTransferFeatureSchedule:
+          type: string
+        BusinessService:
+          type: object
+        CreditTransferPostconditions:
+          type: string
+        CreditTransferServiceType:
+          type: string
+        CreditTransferServiceDescription:
+          type: string
+        CreditTransferServiceInputsandOuputs:
+          type: string
+        CreditTransferServiceWorkProduct:
+          type: string
+        CreditTransferServiceName:
+          type: string
     HTTPError:
       type: object
       properties:
@@ -1404,32 +1438,16 @@ components:
       explode: false
       schema:
         type: string
-    FeeID:
-      name: feeId
+    VirtualAccountConfigurationFulfillmentID:
+      name: virtualaccountconfigurationfulfillmentId
       in: path
       required: true
       style: simple
       explode: false
       schema:
         type: string
-    StandingOrderID:
-      name: standingorderId
-      in: path
-      required: true
-      style: simple
-      explode: false
-      schema:
-        type: string
-    VirtualAccountOutcomeID:
-      name: virtualaccountoutcomeId
-      in: path
-      required: true
-      style: simple
-      explode: false
-      schema:
-        type: string
-    StatementID:
-      name: statementId
+    VirtualAccountMaintenanceFulfillmentID:
+      name: virtualaccountmaintenancefulfillmentId
       in: path
       required: true
       style: simple
@@ -1444,8 +1462,16 @@ components:
       explode: false
       schema:
         type: string
-    CreditTransferID:
-      name: credittransferId
+    VirtualAccountOutcomeID:
+      name: virtualaccountoutcomeId
+      in: path
+      required: true
+      style: simple
+      explode: false
+      schema:
+        type: string
+    FeeID:
+      name: feeId
       in: path
       required: true
       style: simple
@@ -1454,6 +1480,30 @@ components:
         type: string
     DirectDebitID:
       name: directdebitId
+      in: path
+      required: true
+      style: simple
+      explode: false
+      schema:
+        type: string
+    StatementID:
+      name: statementId
+      in: path
+      required: true
+      style: simple
+      explode: false
+      schema:
+        type: string
+    StandingOrderID:
+      name: standingorderId
+      in: path
+      required: true
+      style: simple
+      explode: false
+      schema:
+        type: string
+    CreditTransferID:
+      name: credittransferId
       in: path
       required: true
       style: simple

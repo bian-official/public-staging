@@ -608,6 +608,21 @@ components:
           type: string
         CustomerSurveyProcedureResult:
           type: string
+    Execution:
+      type: object
+      properties:
+        CustomerSurveyExecutionWorkTaskType:
+          type: string
+        CustomerSurveyExecutionWorkTaskDescription:
+          type: string
+        CustomerSurveyExecutionWorkTaskWorkProducts:
+          type: string
+        DocumentDirectoryEntryInstanceReference:
+          type: object
+        CustomerSurveyExecutionWorkTaskResult:
+          type: string
+        CustomerSurveyExecutionWorkTaskDate-Time:
+          type: string
     SurveyAnalysis:
       type: object
       properties:
@@ -631,21 +646,6 @@ components:
           type: string
         CustomerSurveyCandidateReference:
           type: object
-    Execution:
-      type: object
-      properties:
-        CustomerSurveyExecutionWorkTaskType:
-          type: string
-        CustomerSurveyExecutionWorkTaskDescription:
-          type: string
-        CustomerSurveyExecutionWorkTaskWorkProducts:
-          type: string
-        DocumentDirectoryEntryInstanceReference:
-          type: object
-        CustomerSurveyExecutionWorkTaskResult:
-          type: string
-        CustomerSurveyExecutionWorkTaskDate-Time:
-          type: string
     HTTPError:
       type: object
       properties:
@@ -979,6 +979,14 @@ components:
       explode: false
       schema:
         type: string
+    ExecutionID:
+      name: executionId
+      in: path
+      required: true
+      style: simple
+      explode: false
+      schema:
+        type: string
     SurveyAnalysisID:
       name: surveyanalysisId
       in: path
@@ -997,14 +1005,6 @@ components:
         type: string
     ReviewerSelectionID:
       name: reviewerselectionId
-      in: path
-      required: true
-      style: simple
-      explode: false
-      schema:
-        type: string
-    ExecutionID:
-      name: executionId
       in: path
       required: true
       style: simple

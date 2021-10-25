@@ -428,6 +428,15 @@ components:
           type: string
         CustomerBehaviorModel:
           type: string
+    Production:
+      type: object
+      properties:
+        CustomerBehaviorModelOperationalRequirements:
+          type: string
+        CustomerBehaviorModelAllowedUsage:
+          type: string
+        CustomerBehaviorModelUsageGuidelines:
+          type: string
     FunctionalRequirements:
       type: object
       properties:
@@ -465,15 +474,6 @@ components:
         CustomerBehaviorModelComplianceTestReference:
           type: object
         CustomerBehaviorModelComplianceTestType:
-          type: string
-    Production:
-      type: object
-      properties:
-        CustomerBehaviorModelOperationalRequirements:
-          type: string
-        CustomerBehaviorModelAllowedUsage:
-          type: string
-        CustomerBehaviorModelUsageGuidelines:
           type: string
     HTTPError:
       type: object
@@ -761,6 +761,14 @@ components:
       explode: false
       schema:
         type: string
+    ProductionID:
+      name: productionId
+      in: path
+      required: true
+      style: simple
+      explode: false
+      schema:
+        type: string
     FunctionalRequirementsID:
       name: functionalrequirementsId
       in: path
@@ -771,14 +779,6 @@ components:
         type: string
     TestingID:
       name: testingId
-      in: path
-      required: true
-      style: simple
-      explode: false
-      schema:
-        type: string
-    ProductionID:
-      name: productionId
       in: path
       required: true
       style: simple

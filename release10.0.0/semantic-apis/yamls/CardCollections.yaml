@@ -341,20 +341,14 @@ components:
           type: object
         CardCollectionsProcessingSchedule:
           type: string
-    Assignment:
+    Payment:
       type: object
       properties:
-        CustomerCreditRatingAssessmentInstanceReference:
+        PaymentTransactionReference:
           type: object
-        CustomerCreditRatingAssessment:
+        PaymentTransaction:
           type: string
-        CollectionAgencyReference:
-          type: object
-        CollectionAgencyAgreement:
-          type: string
-        CardCollectionsAssignmentDecision:
-          type: string
-        CardCollectionsAssignmentWorkProduct:
+        CardCollectionsPaymentNotificationRecord:
           type: string
     Resolution:
       type: object
@@ -386,14 +380,20 @@ components:
           type: string
         CardCollectionsPaymentTermsWorkProduct:
           type: string
-    Payment:
+    Assignment:
       type: object
       properties:
-        PaymentTransactionReference:
+        CustomerCreditRatingAssessmentInstanceReference:
           type: object
-        PaymentTransaction:
+        CustomerCreditRatingAssessment:
           type: string
-        CardCollectionsPaymentNotificationRecord:
+        CollectionAgencyReference:
+          type: object
+        CollectionAgencyAgreement:
+          type: string
+        CardCollectionsAssignmentDecision:
+          type: string
+        CardCollectionsAssignmentWorkProduct:
           type: string
     HTTPError:
       type: object
@@ -520,8 +520,8 @@ components:
       explode: false
       schema:
         type: string
-    AssignmentID:
-      name: assignmentId
+    PaymentID:
+      name: paymentId
       in: path
       required: true
       style: simple
@@ -544,8 +544,8 @@ components:
       explode: false
       schema:
         type: string
-    PaymentID:
-      name: paymentId
+    AssignmentID:
+      name: assignmentId
       in: path
       required: true
       style: simple

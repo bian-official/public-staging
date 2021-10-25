@@ -509,6 +509,19 @@ components:
           type: string
         PromotionalEventPerformanceRecord:
           type: string
+    ImpactAssessment:
+      type: object
+      properties:
+        ImpactAssessmentWorkTaskType:
+          type: string
+        ImpactAssessmentWorkTask:
+          type: string
+        ImpactAssessmentWorkTaskWorkProducts:
+          type: string
+        ImpactAssessmentWorkTaskResult:
+          type: string
+        ImpactAssessmentWorkTaskDate-Time:
+          type: string
     Participation:
       type: object
       properties:
@@ -536,19 +549,6 @@ components:
         MarketTrackingWorkTaskResult:
           type: string
         MarketTrackingWorkTaskDate-Time:
-          type: string
-    ImpactAssessment:
-      type: object
-      properties:
-        ImpactAssessmentWorkTaskType:
-          type: string
-        ImpactAssessmentWorkTask:
-          type: string
-        ImpactAssessmentWorkTaskWorkProducts:
-          type: string
-        ImpactAssessmentWorkTaskResult:
-          type: string
-        ImpactAssessmentWorkTaskDate-Time:
           type: string
     HTTPError:
       type: object
@@ -1018,6 +1018,14 @@ components:
       explode: false
       schema:
         type: string
+    ImpactAssessmentID:
+      name: impactassessmentId
+      in: path
+      required: true
+      style: simple
+      explode: false
+      schema:
+        type: string
     ParticipationID:
       name: participationId
       in: path
@@ -1028,14 +1036,6 @@ components:
         type: string
     MarketTrackingID:
       name: markettrackingId
-      in: path
-      required: true
-      style: simple
-      explode: false
-      schema:
-        type: string
-    ImpactAssessmentID:
-      name: impactassessmentId
       in: path
       required: true
       style: simple

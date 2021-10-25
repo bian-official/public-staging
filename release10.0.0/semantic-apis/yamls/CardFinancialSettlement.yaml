@@ -351,6 +351,13 @@ components:
           type: object
         ParticipantIssuerBankReference:
           type: object
+    Processing:
+      type: object
+      properties:
+        ParticipantAcquirerBankSettlementTerms:
+          type: string
+        ParticipantIssuerBankSettlementTerms:
+          type: string
     Consolidation:
       type: object
       properties:
@@ -380,24 +387,17 @@ components:
           type: object
         CardTransactionDate/Time:
           type: string
+    Payment:
+      type: object
+      properties:
+        ParticipantPaymentTransaction:
+          type: string
     Instruction:
       type: object
       properties:
         ParticipantAcquirerBankSettlementAccountStatement:
           type: string
         ParticipantIssuerBankSettlementAccountStatement:
-          type: string
-    Payment:
-      type: object
-      properties:
-        ParticipantPaymentTransaction:
-          type: string
-    Processing:
-      type: object
-      properties:
-        ParticipantAcquirerBankSettlementTerms:
-          type: string
-        ParticipantIssuerBankSettlementTerms:
           type: string
     HTTPError:
       type: object
@@ -605,16 +605,16 @@ components:
       explode: false
       schema:
         type: string
-    ConsolidationID:
-      name: consolidationId
+    ProcessingID:
+      name: processingId
       in: path
       required: true
       style: simple
       explode: false
       schema:
         type: string
-    InstructionID:
-      name: instructionId
+    ConsolidationID:
+      name: consolidationId
       in: path
       required: true
       style: simple
@@ -629,8 +629,8 @@ components:
       explode: false
       schema:
         type: string
-    ProcessingID:
-      name: processingId
+    InstructionID:
+      name: instructionId
       in: path
       required: true
       style: simple
