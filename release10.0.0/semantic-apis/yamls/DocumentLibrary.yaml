@@ -70,8 +70,8 @@ paths:
     put:
       tags:
       - CR - DocumentDirectoryEntry
-      summary: RqCR Request provisioning of a document (from arranging initial capture to subsequent access)
-      description: RqCR Request provisioning of a document (from arranging initial capture to subsequent access)
+      summary: Request Document Directory Entry
+      description: Request Document Directory Entry
       operationId: Request
       parameters:
       - $ref: '#/components/parameters/DocumentLibraryID'

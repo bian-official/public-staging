@@ -7,34 +7,6 @@ servers:
 - description: SwaggerHub API Auto Mocking
   url: https://virtserver.swaggerhub.com/B154/ProductMatching/10.0.0
 paths:
-  /ProductMatching/{productmatchingId}/Retrieve:
-    get:
-      tags:
-      - CR - Product/CustomerCombinationAssessment
-      summary: ReCR Retrieve details about a product matching analysis
-      description: ReCR Retrieve details about a product matching analysis
-      operationId: Retrieve
-      parameters:
-      - $ref: '#/components/parameters/ProductMatchingID'
-      responses:
-        200:
-          description: Success
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/RetrieveProduct/CustomerCombinationAssessmentResponse'
-        400:
-          $ref: '#/components/responses/BadRequestError'
-        401:
-          $ref: '#/components/responses/UnauthorizedError'
-        403:
-          $ref: '#/components/responses/ForbiddenError'
-        404:
-          $ref: '#/components/responses/NotFoundError'
-        429:
-          $ref: '#/components/responses/TooManyRequestsError'
-        500:
-          $ref: '#/components/responses/InternalServerError'
   /ProductMatching/{productmatchingId}/Exchange:
     put:
       tags:
@@ -135,6 +107,34 @@ paths:
       parameters: []
       requestBody:
         $ref: '#/components/requestBodies/Product/CustomerCombinationAssessment'
+      responses:
+        200:
+          description: Success
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Product/CustomerCombinationAssessment'
+        400:
+          $ref: '#/components/responses/BadRequestError'
+        401:
+          $ref: '#/components/responses/UnauthorizedError'
+        403:
+          $ref: '#/components/responses/ForbiddenError'
+        404:
+          $ref: '#/components/responses/NotFoundError'
+        429:
+          $ref: '#/components/responses/TooManyRequestsError'
+        500:
+          $ref: '#/components/responses/InternalServerError'
+  /ProductMatching/{productmatchingId}/Retrieve:
+    get:
+      tags:
+      - CR - Product/CustomerCombinationAssessment
+      summary: ReCR Retrieve details about any aspect of Product/Customer Combination Assessment
+      description: ReCR Retrieve details about any aspect of Product/Customer Combination Assessment
+      operationId: Retrieve
+      parameters:
+      - $ref: '#/components/parameters/ProductMatchingID'
       responses:
         200:
           description: Success
@@ -701,55 +701,6 @@ components:
           type: string
         message:
           type: string
-    RetrieveProduct/CustomerCombinationAssessmentResponse:
-      type: object
-      properties:
-        rwc:973a94b2-aa0e-5879-cd94-93b577cadb99/301222:
-          type: object
-          properties:
-            rwc:973a94b2-aa0e-5879-cd94-93b577cadb99Or301219:
-              type: string
-            rwc:973a94b2-aa0e-5879-cd94-93b577cadb99Or301224:
-              type: string
-            rwc:973a94b2-aa0e-5879-cd94-93b577cadb99Or301221:
-              type: string
-            rwc:973a94b2-aa0e-5879-cd94-93b577cadb99Or301226:
-              type: string
-            rwc:973a94b2-aa0e-5879-cd94-93b577cadb99Or301225:
-              type: string
-            rwc:973a94b2-aa0e-5879-cd94-93b577cadb99Or301218:
-              type: string
-            rwc:973a94b2-aa0e-5879-cd94-93b577cadb99Or301217:
-              type: string
-            rwc:973a94b2-aa0e-5879-cd94-93b577cadb99Or301220:
-              type: string
-            rwc:973a94b2-aa0e-5879-cd94-93b577cadb99Or301227:
-              type: string
-            rwc:973a94b2-aa0e-5879-cd94-93b577cadb99Or301223:
-              type: string
-        Product/CustomerCombinationAssessment:
-          type: object
-          properties:
-            ProductOrCustomerCombinationAssessmentParameterType:
-              type: string
-            ProductOrCustomerCombinationAssessmentSelectedOption:
-              type: string
-            ProductOrCustomerCombinationAssessmentType:
-              type: string
-            ProductOrCustomerCombinationAssessmentReference:
-              type: object
-            ProductOrCustomerCombinationAssessmentRequest:
-              type: string
-            ProductOrCustomerCombinationAssessmentSchedule:
-              type: string
-            ProductOrCustomerCombinationAssessmentStatus:
-              type: string
-            ProductOrCustomerCombinationAssessmentUsageLog:
-              type: string
-            ProductOrCustomerCombinationAssessmentServiceProviderReference:
-              type: object
-            ProductOrCustomerCombinationAssessmentRequesterReference:
-              type: object
   parameters:
     ProductMatchingID:
       name: productmatchingId
